@@ -1,0 +1,87 @@
+# SILKNOW Knowledge Base
+
+This repository contains scripts to deploy the Knowledge Base for project SILKNOW.
+
+## Initializing the Knowledge Base
+
+This section covers the steps required to set up a new Knowlede Base for the first time.
+
+1. Clone this repository.
+
+    ```bash
+    git clone https://github.com/silknow/knowledge-base.git
+    cd knowledge-base
+    ```
+
+2. Build the docker image.
+
+    ```bash
+    cd docker-virtuoso
+    docker build -t silknow/virtuoso .
+    ```
+
+3. Run the docker image.
+
+    **Note:** make sure to replace `/var/docker/virtuoso/silknow/data` with the volume path where you want the Virtuoso database to be stored. It is also the path which will be used to copy the RDF files you wish to load into the Knowledge Base.
+
+    ```bash
+    docker run --name silknow-virtuoso \
+      -p 8890:8890 -p 1111:1111 \
+      -e DBA_PASSWORD=myDbaPassword \
+      -e SPARQL_UPDATE=true \
+      -v /var/docker/virtuoso/silknow/data:/data \
+      -d silknow/virtuoso
+    ```
+
+## Loading data into the Knowledge base
+
+1. Copy all your RDF files into the `dumps` folder inside the data directory (e.g., `/var/docker/virtuoso/silknow/data/dumps`).
+
+    Directory structure example:
+
+    - `/var/docker/virtuoso/silknow/data/dumps/`
+      - `ontologies/*.ttl`
+      - `commons/*.ttl`
+      - `thesaurus/*.ttl`
+      - `vocabulary_aat/*.ttl`
+      - `garin/*.ttl`
+        - `geonames/*.rdf`
+      - `imatex/*.ttl`
+        - `geonames/*.rdf`
+      - `vam/*.ttl`
+        - `geonames/*.rdf`
+
+2. Run the following scripts to load the commons vocabularies, and/or the museum sources into the Knowledge Base.
+
+### Commons
+
+The script [load_commons.sh](script/load_commons.sh) will load the `ontologies`, `commons`, `thesaurus`, and `vocabulary_aat` folders which have been placed inside the `dumps` directory (see Step 1.)
+
+```bash
+cd scripts
+./load_commons.sh
+```
+
+### Dump
+
+The script [load_dump.sh](script/load_dump.sh) will load a specific source (e.g., garin, vam, risd, ...) into the Knowledge Base, including:
+
+* any .ttl file inside the source folder.
+* any .rdf file inside the `geonames` directory in the source folder.
+
+Examples:
+
+```bash
+cd scripts
+./load_dump.sh imatex
+./load_dump.sh mad
+./load_dump.sh mfa
+./load_dump.sh risd
+./load_dump.sh unipa
+./load_dump.sh cer
+./load_dump.sh garin
+./load_dump.sh joconde
+./load_dump.sh met
+./load_dump.sh mtmad
+./load_dump.sh vam
+```
