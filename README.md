@@ -55,7 +55,7 @@ This section covers the steps required to set up a new Knowlede Base for the fir
 
 ### Commons
 
-The script [load_commons.sh](script/load_commons.sh) will load the `ontologies`, `commons`, `thesaurus`, and `vocabulary_aat` folders which have been placed inside the `dumps` directory (see Step 1.)
+The script [load_commons.sh](scripts/load_commons.sh) will load the `ontologies`, `commons`, `thesaurus`, and `vocabulary_aat` folders which have been placed inside the `dumps` directory (see Step 1.)
 
 ```bash
 cd scripts
@@ -64,7 +64,7 @@ cd scripts
 
 ### Dump
 
-The script [load_dump.sh](script/load_dump.sh) will load a specific source (e.g., garin, vam, risd, ...) into the Knowledge Base, including:
+The script [load_dump.sh](scripts/load_dump.sh) will load a specific source (e.g., garin, vam, risd, ...) into the Knowledge Base, including:
 
 * any .ttl file inside the source folder.
 * any .rdf file inside the `geonames` directory in the source folder.
