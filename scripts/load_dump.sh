@@ -2,7 +2,7 @@
 
 # Constants
 CONTAINER_NAME=${CONTAINER_NAME:-"silknow-virtuoso"}
-LOG_FILE=${LOG_FILE:-"load_commons.log"}
+LOG_FILE=${LOG_FILE:-"load_dump.log"}
 
 # Parameters
 name="${1}" # Graph name (e.g., "garin")
