@@ -35,7 +35,7 @@ echo "Copying SQL file to the Docker container"
 docker cp "${temp_file}" "${containerId}:/load_dump.sql"
 
 echo "Executing SQL file through isql-v inside the Docker container"
-docker exec -i "${containerId}" sh -c "isql-v -U dba -P \${DBA_PASSWORD} < /load_commons.sql" &>> "${LOG_FILE}"
+docker exec -i "${containerId}" sh -c "isql-v -U dba -P \${DBA_PASSWORD} < /load_dump.sql" &>> "${LOG_FILE}"
 echo "Query output saved to ${LOG_FILE}"
 
 echo "Removing temp file: ${temp_file}"
