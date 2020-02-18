@@ -6,18 +6,17 @@ This repository contains scripts to deploy the Knowledge Base for project SILKNO
 
 This section covers the steps required to set up a new Knowlede Base for the first time.
 
-1. Clone this repository.
+1. Clone [D2KLab/docker-virtuoso](https://github.com/D2KLab/docker-virtuoso) repository.
 
     ```bash
-    git clone https://github.com/silknow/knowledge-base.git
-    cd knowledge-base
+    git clone https://github.com/D2KLab/docker-virtuoso.git
+    cd docker-virtuoso
     ```
 
 2. Build the docker image.
 
     ```bash
-    cd docker-virtuoso
-    docker build -t silknow/virtuoso .
+    docker build -t d2klab/virtuoso .
     ```
 
 3. Run the docker image.
