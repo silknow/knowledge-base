@@ -84,3 +84,27 @@ cd scripts
 ./load_dump.sh mtmad
 ./load_dump.sh vam
 ```
+
+## List of RDF namespaces
+
+These prefixes are commonly used on this project:
+
+| Prefix | URI |
+| - | - |
+| aat | http://vocab.getty.edu/aat/
+| crmdig | http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/ |
+| crmsci | http://www.ics.forth.gr/isl/CRMsci/ |
+| ecrm | http://erlangen-crm.org/current/ |
+| efrbroo | http://erlangen-crm.org/efrbroo/ |
+| time | http://www.w3.org/2006/time# |
+
+They can be imported into Virtuoso through the isql interface:
+
+```
+DB.DBA.XML_SET_NS_DECL ('aat', 'http://vocab.getty.edu/aat/', 2);
+DB.DBA.XML_SET_NS_DECL ('crmdig', 'http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/', 2);
+DB.DBA.XML_SET_NS_DECL ('crmsci', 'http://www.ics.forth.gr/isl/CRMsci/', 2);
+DB.DBA.XML_SET_NS_DECL ('ecrm', 'http://erlangen-crm.org/current/', 2);
+DB.DBA.XML_SET_NS_DECL ('efrbroo', 'http://erlangen-crm.org/efrbroo/', 2);
+DB.DBA.XML_SET_NS_DECL ('time', 'http://www.w3.org/2006/time#', 2);
+```
