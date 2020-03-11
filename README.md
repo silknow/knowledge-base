@@ -97,6 +97,7 @@ These prefixes are commonly used on this project:
 | ecrm | http://erlangen-crm.org/current/ |
 | efrbroo | http://erlangen-crm.org/efrbroo/ |
 | time | http://www.w3.org/2006/time# |
+| schema | http://schema.org/ |
 
 They can be imported into Virtuoso through the isql interface:
 
