@@ -109,3 +109,16 @@ DB.DBA.XML_SET_NS_DECL ('ecrm', 'http://erlangen-crm.org/current/', 2);
 DB.DBA.XML_SET_NS_DECL ('efrbroo', 'http://erlangen-crm.org/efrbroo/', 2);
 DB.DBA.XML_SET_NS_DECL ('time', 'http://www.w3.org/2006/time#', 2);
 ```
+
+## Dereferencing
+
+The list of path to be dereferenced is in `dereferencing/config.yml`.
+
+For exporting the apache config and the script for adding them to virtuoso, run:
+
+```
+  cd dereferencing
+  npx list2dereference config.yml
+```
+
+Read more at https://github.com/pasqLisena/list2dereference
