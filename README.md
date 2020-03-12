@@ -114,11 +114,13 @@ DB.DBA.XML_SET_NS_DECL ('time', 'http://www.w3.org/2006/time#', 2);
 
 The list of path to be dereferenced is in `dereferencing/config.yml`.
 
-For exporting the apache config and the script for adding them to virtuoso, run:
+For exporting the apache config and the script for adding them to Virtuoso, run:
 
 ```
-  cd dereferencing
-  npx list2dereference config.yml
+cd dereferencing
+npx list2dereference config.yml
+docker cp "insert_vhost.sql" "virtuoso_silknow:/insert_vhost.sql"
+docker exec -i "virtuoso_silknow" sh -c "isql-v -U dba -P \${DBA_PASSWORD} < /insert_vhost.sql"
 ```
 
 Read more at https://github.com/pasqLisena/list2dereference
