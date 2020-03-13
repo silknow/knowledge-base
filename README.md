@@ -39,16 +39,18 @@ This section covers the steps required to set up a new Knowlede Base for the fir
     Directory structure example:
 
     - `/var/docker/virtuoso/silknow/data/dumps/`
-      - `ontologies/*.ttl`
-      - `commons/*.ttl`
-      - `thesaurus/*.ttl`
-      - `vocabulary_aat/*.ttl`
-      - `garin/*.ttl`
-        - `geonames/*.rdf`
-      - `imatex/*.ttl`
-        - `geonames/*.rdf`
-      - `vam/*.ttl`
-        - `geonames/*.rdf`
+      - `vocabularies/`
+        - `ontologies/*.ttl`
+        - `commons/*.ttl`
+        - `thesaurus/*.ttl`
+        - `vocabulary_aat/*.ttl`
+      - `museums/`
+        - `garin/*.ttl`
+          - `geonames/*.rdf`
+        - `imatex/*.ttl`
+          - `geonames/*.rdf`
+        - `vam/*.ttl`
+          - `geonames/*.rdf`
 
 2. Run the following scripts to load the commons vocabularies, and/or the museum sources into the Knowledge Base.
 
