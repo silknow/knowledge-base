@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Constants
-CONTAINER_NAME=${CONTAINER_NAME:-"silknow-virtuoso"}
+CONTAINER_NAME=${CONTAINER_NAME:-"silknow_virtuoso"}
 LOG_FILE=${LOG_FILE:-"load_commons.log"}
 
 containerId=$(docker ps -aqf "name=${CONTAINER_NAME}")
