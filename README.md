@@ -24,12 +24,12 @@ This section covers the steps required to set up a new Knowlede Base for the fir
     **Note:** make sure to replace `/var/docker/virtuoso/silknow/data` with the volume path where you want the Virtuoso database to be stored. It is also the path which will be used to copy the RDF files you wish to load into the Knowledge Base.
 
     ```bash
-    docker run --name silknow-virtuoso \
+    docker run --name silknow_virtuoso \
       -p 8890:8890 -p 1111:1111 \
       -e DBA_PASSWORD=myDbaPassword \
       -e SPARQL_UPDATE=true \
       -v /var/docker/virtuoso/silknow/data:/data \
-      -d silknow/virtuoso
+      -d d2klab/virtuoso
     ```
 
 ## Loading data into the Knowledge base
@@ -121,8 +121,8 @@ For exporting the apache config and the script for adding them to Virtuoso, run:
 ```
 cd dereferencing
 npx list2dereference config.yml
-docker cp "insert_vhost.sql" "virtuoso_silknow:/insert_vhost.sql"
-docker exec -i "virtuoso_silknow" sh -c "isql-v -U dba -P \${DBA_PASSWORD} < /insert_vhost.sql"
+docker cp "insert_vhost.sql" "silknow_virtuoso:/insert_vhost.sql"
+docker exec -i "silknow_virtuoso" sh -c "isql-v -U dba -P \${DBA_PASSWORD} < /insert_vhost.sql"
 ```
 
 Read more at https://github.com/pasqLisena/list2dereference
