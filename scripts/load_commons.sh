@@ -85,7 +85,7 @@ delete_rdf "${VIRTUOSO_VOCABULARIES_PATH}/commons"
 cp -r "${KB_PATH}/vocabularies/commons" "${VIRTUOSO_VOCABULARIES_PATH}/"
 
 # Load files
-load "ontologies" "ontology"
-load "commons" "commons"
-load "thesaurus" "vocabulary"
-load "vocabulary_aat" "vocabulary_aat"
+load "vocabularies/ontologies" "ontology"
+load "vocabularies/commons" "commons"
+load "vocabularies/thesaurus" "vocabulary"
+load "vocabularies/vocabulary_aat" "vocabulary_aat"
