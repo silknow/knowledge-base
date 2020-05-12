@@ -28,6 +28,9 @@ This section covers the steps required to set up a new Knowlede Base for the fir
       -p 8890:8890 -p 1111:1111 \
       -e DBA_PASSWORD=myDbaPassword \
       -e SPARQL_UPDATE=true \
+      -e VIRT_SPARQL_ResultSetMaxRows=-1 \
+      -e VIRT_SPARQL_MaxQueryCostEstimationTime=-1 \
+      -e VIRT_SPARQL_MaxQueryExecutionTime=-1 \
       -v /var/docker/virtuoso/silknow/data:/data \
       -d d2klab/virtuoso
     ```
