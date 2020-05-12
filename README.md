@@ -126,3 +126,25 @@ docker exec -i "silknow_virtuoso" sh -c "isql-v -U dba -P \${DBA_PASSWORD} < /in
 ```
 
 Read more at https://github.com/pasqLisena/list2dereference
+
+## URL Shortening
+
+The service can be accessed at https://data.silknow.org/c/.
+
+To install the URL shortening service, run the following commands:
+
+```
+cd scripts
+docker cp "c_uri_dav.vad" "silknow_virtuoso:/usr/local/virtuoso-opensource/share/virtuoso/vad/c_uri_dav.vad"
+docker exec -i "silknow_virtuoso" sh -c "isql-v -U dba -P \${DBA_PASSWORD} exec=\"DB.DBA.VAD_INSTALL('/usr/local/virtuoso-opensource/share/virtuoso/vad/c_uri_dav.vad');\""
+```
+
+The service is hosted on the route `/c`. You may have to update the apache2 Virtual Host configuration to map the route, for example:
+
+```
+<Location /c>
+    ProxyPreserveHost On
+    ProxyPass http://localhost:8890/c
+    ProxyPassReverse http://localhost:8890/c
+</Location>
+```
