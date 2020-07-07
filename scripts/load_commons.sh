@@ -66,36 +66,17 @@ echo "Updating knowledge-base repository"
 cd "${KB_PATH}" || exit 1
 git pull --rebase
 
-# Copy files from ontologies
-echo "Copying ontologies vocabularies"
-mkdir -p "${VIRTUOSO_VOCABULARIES_PATH}/ontologies"
-delete_rdf "${VIRTUOSO_VOCABULARIES_PATH}/ontologies"
-cp -r "${KB_PATH}/vocabularies/ontologies" "${VIRTUOSO_VOCABULARIES_PATH}/"
-
-# Copy files from vocabulary_aat
-echo "Copying aat vocabularies"
-mkdir -p "${VIRTUOSO_VOCABULARIES_PATH}/vocabulary_aat"
-delete_rdf "${VIRTUOSO_VOCABULARIES_PATH}/vocabulary_aat"
-cp -r "${KB_PATH}/vocabularies/vocabulary_aat" "${VIRTUOSO_VOCABULARIES_PATH}/"
-
-# Copy new files from commons
-echo "Copying commons vocabularies"
-mkdir -p "${VIRTUOSO_VOCABULARIES_PATH}/commons"
-delete_rdf "${VIRTUOSO_VOCABULARIES_PATH}/commons"
-cp -r "${KB_PATH}/vocabularies/commons" "${VIRTUOSO_VOCABULARIES_PATH}/"
-
-# Copy new files from contr_vocab
-echo "Copying controlled vocabularies"
-mkdir -p "${VIRTUOSO_VOCABULARIES_PATH}/control_vocab"
-delete_rdf "${VIRTUOSO_VOCABULARIES_PATH}/control_vocab"
-cp -r "${KB_PATH}/vocabularies/control_vocab" "${VIRTUOSO_VOCABULARIES_PATH}/"
-
-
-
+# Copy files from vocabularies
+for folder in "${KB_PATH}/vocabularies/"*; do
+  folderName=$(basename "$folder")
+  echo "Copying vocabularies from: ${folderName}"
+  mkdir -p "${VIRTUOSO_VOCABULARIES_PATH}/${folderName}"
+  delete_rdf "${VIRTUOSO_VOCABULARIES_PATH}/${folderName}"
+  cp -r "${KB_PATH}/vocabularies/${folderName}" "${VIRTUOSO_VOCABULARIES_PATH}/"
+done
 
 # Load files
-load "vocabularies/ontologies" "ontology"
-load "vocabularies/commons" "commons"
-load "vocabularies/thesaurus" "vocabulary"
-load "vocabularies/vocabulary_aat" "vocabulary_aat"
-load "vocabularies/control_vocab" "control_vocab"
+for folder in "${KB_PATH}/vocabularies/"*; do
+  folderName=$(basename "$folder")
+  load "vocabularies/${folderName}" "${folderName}"
+done
