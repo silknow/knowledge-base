@@ -84,8 +84,18 @@ mkdir -p "${VIRTUOSO_VOCABULARIES_PATH}/commons"
 delete_rdf "${VIRTUOSO_VOCABULARIES_PATH}/commons"
 cp -r "${KB_PATH}/vocabularies/commons" "${VIRTUOSO_VOCABULARIES_PATH}/"
 
+# Copy new files from contr_vocab
+echo "Copying controlled vocabularies"
+mkdir -p "${VIRTUOSO_VOCABULARIES_PATH}/control_vocab"
+delete_rdf "${VIRTUOSO_VOCABULARIES_PATH}/control_vocab"
+cp -r "${KB_PATH}/vocabularies/control_vocab" "${VIRTUOSO_VOCABULARIES_PATH}/"
+
+
+
+
 # Load files
 load "vocabularies/ontologies" "ontology"
 load "vocabularies/commons" "commons"
 load "vocabularies/thesaurus" "vocabulary"
 load "vocabularies/vocabulary_aat" "vocabulary_aat"
+load "vocabularies/control_vocab" "control_vocab"
