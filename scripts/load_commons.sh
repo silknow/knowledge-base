@@ -34,6 +34,7 @@ load() {
   echo "ld_dir('dumps/${folderName}/', '*.*', 'http://data.silknow.org/${graphPart}');" >> "${temp_file}"
   echo "rdf_loader_run();" >> "${temp_file}"
   echo "cl_exec('checkpoint');" >> "${temp_file}"
+  echo "SELECT * FROM DB.DBA.load_list WHERE ll_error IS NOT NULL;" >> "${temp_file}"
   echo "DELETE FROM DB.DBA.load_list;" >> "${temp_file}"
 
   echo "Copying SQL file to the Docker container"
