@@ -41,7 +41,7 @@ git pull --rebase
 echo "Removing previous RDF files in ${VIRTUOSO_MUSEUMS_PATH}/${name}/"
 delete_rdf "${VIRTUOSO_MUSEUMS_PATH}/${name}/"
 echo "Extracting ${name}.tar.gz into ${VIRTUOSO_MUSEUMS_PATH}/"
-tar -C "${VIRTUOSO_MUSEUMS_PATH}/" -zxvf "${name}.tar.gz"
+tar -C "${VIRTUOSO_MUSEUMS_PATH}/" -zxf "${name}.tar.gz"
 
 # Create SQL file
 temp_file=$(mktemp)
