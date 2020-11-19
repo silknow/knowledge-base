@@ -128,6 +128,8 @@ docker cp "insert_vhost.sql" "silknow_virtuoso:/insert_vhost.sql"
 docker exec -i "silknow_virtuoso" sh -c "isql-v -U dba -P \${DBA_PASSWORD} < /insert_vhost.sql"
 ```
 
+**Note:** the apache2 configuration file has to be manually updated on the server. Fortunately, list2dereference also generates a file which contains the rules of the new VirtualHost. Copy the new rules to the existing configuration file (default location: `/etc/apache2/sites-available/data.silknow.org.conf`), then reload apache2 (ie. with `service apache2 reload`).
+
 Read more at https://github.com/pasqLisena/list2dereference
 
 ## URL Shortening
