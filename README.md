@@ -43,10 +43,11 @@ This section covers the steps required to set up a new Knowlede Base for the fir
 
     - `/var/docker/virtuoso/silknow/data/dumps/`
       - `vocabularies/`
-        - `ontologies/*.ttl`
+        - `aat/*.ttl`
+        - `category/*.ttl`
         - `commons/*.ttl`
-        - `thesaurus/*.ttl`
-        - `vocabulary_aat/*.ttl`
+        - `temp/*.ttl`
+        - `vocabulary/*.ttl`
       - `museums/`
         - `garin/*.ttl`
           - `geonames/*.rdf`
