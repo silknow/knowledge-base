@@ -9,13 +9,13 @@ VIRTUOSO_MUSEUMS_PATH=${VIRTUOSO_MUSEUMS_PATH:-"${VIRTUOSO_DUMPS_PATH}/museums"}
 CONTAINER_NAME=${CONTAINER_NAME:-"silknow_virtuoso"}
 LOG_FILE=${LOG_FILE:-"patches.log"}
 
-# # Get container ID
-# containerId=$(docker ps -aqf "name=${CONTAINER_NAME}")
-# if [[ ! "${containerId}" ]]; then
-#   echo "${CONTAINER_NAME}: Container not found"
-#   exit 1
-# fi
-# echo "Docker container ID: ${containerId}"
+# Get container ID
+containerId=$(docker ps -aqf "name=${CONTAINER_NAME}")
+if [[ ! "${containerId}" ]]; then
+  echo "${CONTAINER_NAME}: Container not found"
+  exit 1
+fi
+echo "Docker container ID: ${containerId}"
 
 for file in "${KB_PATH}/patches/"*; do
   # Create SQL file
