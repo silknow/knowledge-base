@@ -2,6 +2,8 @@
 @prefix ecrm:  <http://erlangen-crm.org/current/> .
 @prefix time:  <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 # 8th century
 aat:300404500 a ecrm:E52_Time_Span,  time:TimeInterval ;
@@ -71,4 +73,73 @@ aat:300404514 a ecrm:E52_Time_Span,  time:TimeInterval ;
       time:hasBeginning [a time:Instant ; time:inXSDDate "1901"^^xsd:gYear ];
       time:hasEnd [a time:Instant; time:inXSDDate "2000"^^xsd:gYear ].
 
+<http://data.silknow.org/timespan/periods> a skos:ConceptScheme .
 
+<http://data.silknow.org/timespan/middle_ages> a ecrm:E52_Time_Span,  time:TimeInterval, skos:Concept ;
+       rdfs:label "Middle Ages"@en, "Medioevo"@it, "Moyen Âge"@fr, "Edad Media"@es, "Edat mitjana"@ca;
+       skos:prefLabel "Middle Ages"@en, "Medioevo"@it, "Moyen Âge"@fr, "Edad Media"@es, "Edat mitjana"@ca;
+       skos:altLabel "Medieval Period"@en, "Medieval Times"@en, "Período Medieval"@es, "Període Medieval"@ca;
+       skos:topConceptOf <http://data.silknow.org/timespan/periods>;
+       time:hasBeginning [a time:Instant ; time:inXSDDate "1901"^^xsd:gYear ];
+       time:hasEnd [a time:Instant; time:inXSDDate "2000"^^xsd:gYear ].
+
+<http://data.silknow.org/timespan/fatimid_period> a ecrm:E52_Time_Span,  time:TimeInterval, skos:Concept ;
+       rdfs:label "Fatimid Period"@en, "Periodo Fatimide"@it, "Période Fatimide"@fr, "Período Fatimita"@es, "Període Fatimita"@ca;
+       skos:prefLabel "Fatimid Period"@en, "Periodo Fatimide"@it, "Période Fatimide"@fr, "Período Fatimita"@es, "Període Fatimita"@ca;
+       skos:altLabel "Període Fatimita 969"@ca;
+       skos:topConceptOf <http://data.silknow.org/timespan/periods>;
+       time:hasBeginning [a time:Instant ; time:inXSDDate "0909"^^xsd:gYear ];
+       time:hasEnd [a time:Instant; time:inXSDDate "1171"^^xsd:gYear ].
+
+<http://data.silknow.org/timespan/nasrid_period> a ecrm:E52_Time_Span,  time:TimeInterval, skos:Concept ;
+       rdfs:label "Nasrid Period"@en, "Periodo Nasride"@it, "Période Fatimide"@fr, "Período Nazarita"@es, "Període Nassarita"@ca;
+       skos:prefLabel  "Nasrid Period"@en, "Periodo Nasride"@it, "Période Fatimide"@fr, "Período Nazarita"@es, "Període Nassarita"@ca;
+       skos:altLabel "Nazari Period"@en;
+       skos:topConceptOf <http://data.silknow.org/timespan/periods>;
+       time:hasBeginning [a time:Instant ; time:inXSDDate "1230"^^xsd:gYear ];
+       time:hasEnd [a time:Instant; time:inXSDDate "1492-01-02"^^xsd:date ].
+
+<http://data.silknow.org/timespan/qing_period> a ecrm:E52_Time_Span,  time:TimeInterval, skos:Concept ;
+       rdfs:label "Qing Period"@en, "Periodo Qing"@it, "Période Qing"@fr, "Período Qing"@es, "Període Qing"@ca;
+       skos:prefLabel  "Qing Period"@en, "Periodo Qing"@it, "Période Qing"@fr, "Período Qing"@es, "Període Qing"@ca;
+       skos:altLabel "Qing Dynasty"@en, "Període Qing 1644 d"@ca;
+       skos:topConceptOf <http://data.silknow.org/timespan/periods>;
+       time:hasBeginning [a time:Instant ; time:inXSDDate "1644"^^xsd:gYear ];
+       time:hasEnd [a time:Instant; time:inXSDDate "1912-02-12"^^xsd:date ].
+
+<http://data.silknow.org/timespan/tang_period> a ecrm:E52_Time_Span,  time:TimeInterval, skos:Concept ;
+       rdfs:label "Tang Period"@en, "Periodo Tang"@it, "Période Tang"@fr, "Período Tang"@es, "Període Tang"@ca;
+       skos:prefLabel  "Tang Period"@en, "Periodo Tang"@it, "Période Tang"@fr, "Período Tang"@es, "Període Tang"@ca;
+       skos:altLabel "Tang Dynasty"@en, "Període Tang 618 d"@ca;
+       time:hasBeginning [a time:Instant ; time:inXSDDate "0618"^^xsd:gYear ];
+       time:hasEnd [a time:Instant; time:inXSDDate "0905"^^xsd:gYear ].
+
+<http://data.silknow.org/timespan/almohad_period> a ecrm:E52_Time_Span,  time:TimeInterval, skos:Concept ;
+       rdfs:label "Almohad Period"@en, "Periodo Almohade"@it, "Période Almohade"@fr, "Período Almohade"@es, "Període Almohade"@ca;
+       skos:prefLabel "Almohad Period"@en, "Periodo Almohade"@it, "Période Almohade"@fr, "Período Almohade"@es, "Període Almohade"@ca;
+       skos:topConceptOf <http://data.silknow.org/timespan/periods>;
+       time:hasBeginning [a time:Instant ; time:inXSDDate "1147"^^xsd:gYear ];
+       time:hasEnd [a time:Instant; time:inXSDDate "1269"^^xsd:gYear ].
+
+<http://data.silknow.org/timespan/late_intermediate_period> a ecrm:E52_Time_Span,  time:TimeInterval, skos:Concept ;
+       rdfs:label "Late Intermediate Period"@en, "Período Intermedio Tardío"@es, "Període Intermedi Tardà"@ca;
+       skos:prefLabel "Late Intermediate Period"@en, "Período Intermedio Tardío"@es, "Període Intermedi Tardà"@ca;
+       skos:topConceptOf <http://data.silknow.org/timespan/periods>;
+       time:hasBeginning [a time:Instant ; time:inXSDDate "1000"^^xsd:gYear ];
+       time:hasEnd [a time:Instant; time:inXSDDate "1476"^^xsd:gYear ].
+
+<http://data.silknow.org/timespan/early_intermediate_period> a ecrm:E52_Time_Span,  time:TimeInterval, skos:Concept ;
+       rdfs:label "Early Intermediate Period"@en, "Período Intermedio Antiguo"@es, "Període Intermedi Antic"@ca;
+       skos:prefLabel "Early Intermediate Period"@en, "Período Intermedio Tardío"@es, "Període Intermedi Tardà"@ca;
+       skos:topConceptOf <http://data.silknow.org/timespan/periods>;
+       time:hasBeginning [a time:Instant ; time:inXSDDate "-0200"^^xsd:gYear ];
+       time:hasEnd [a time:Instant; time:inXSDDate "0600"^^xsd:gYear ].
+
+
+
+<http://data.silknow.org/timespan/almoravid_period> a ecrm:E52_Time_Span,  time:TimeInterval, skos:Concept ;
+       rdfs:label "Almoravid Period"@en, "Periodo Almoravide"@it, "Période Almoravide"@fr, "Período Almorávide"@es, "Període Almoràvit"@ca;
+       skos:prefLabel "Almoravid Period"@en, "Periodo Almoravide"@it, "Période Almoravide"@fr, "Período Almorávide"@es, "Període Almoràvit"@ca;
+       skos:topConceptOf <http://data.silknow.org/timespan/periods>;
+       time:hasBeginning [a time:Instant ; time:inXSDDate "1040"^^xsd:gYear ];
+       time:hasEnd [a time:Instant; time:inXSDDate "1147"^^xsd:gYear ].
