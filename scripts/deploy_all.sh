@@ -20,3 +20,7 @@ for f in "${CONVERTER_PATH}/output/"*.tar.gz; do
   echo "Loading dumps for ${base}..."
   (cd "${SCRIPTPATH}" && ./load_dump.sh "${base}")
 done
+
+# Load patches
+echo "Loading patches..."
+(cd "${SCRIPTPATH}" && ./load_patches.sh)

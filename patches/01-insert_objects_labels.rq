@@ -1,0 +1,42 @@
+INSERT {
+  ?object rdfs:label ?constructedLabel .
+}
+WHERE {
+  ?object a ecrm:E22_Man-Made_Object .
+  MINUS { ?object rdfs:label ?objectLabel . }
+  ?production ecrm:P108_has_produced ?object .
+
+  OPTIONAL {
+    SELECT DISTINCT ?object (GROUP_CONCAT(DISTINCT ?assignedLabel; separator=", ") AS ?assignmentLabel) WHERE {
+      ?assignment ecrm:P41_classified ?object .
+      ?assignment ecrm:P2_has_type <http://data.silknow.org/has_type_P2/1> .
+      { ?assignment ecrm:P42_assigned ?assignedLabel . FILTER(ISLITERAL(?assignedLabel)) }
+      UNION
+      { ?assignment ecrm:P42_assigned/skos:prefLabel ?assignedLabel }
+    }
+  }
+  OPTIONAL {
+    SELECT DISTINCT ?production (GROUP_CONCAT(DISTINCT ?timeSpanLabel; separator=", ") AS ?timeLabel) WHERE {
+      ?production ecrm:P4_has_time-span ?timeSpan .
+      { ?timeSpan a <http://vocab.getty.edu/ontology#Concept> . ?timeSpan skos:prefLabel ?timeSpanLabel . FILTER(LANG(?timeSpanLabel) = "en") }
+      UNION
+      { MINUS { ?timeSpan a <http://vocab.getty.edu/ontology#Concept> . } ?timeSpan rdfs:label ?timeSpanLabel . }
+    }
+  }
+  OPTIONAL {
+    SELECT DISTINCT ?production (GROUP_CONCAT(DISTINCT ?placeLabel; separator=", ") AS ?placeLabel) WHERE {
+      ?production ecrm:P8_took_place_on_or_within/geonames:name ?placeLabel .
+    }
+  }
+
+  BIND(
+    CONCAT(
+      ?assignmentLabel,
+      IF(BOUND(?assignmentLabel) AND BOUND(?timeLabel), ", ", ""),
+      ?timeLabel,
+      IF(BOUND(?placeLabel) AND (BOUND(?assignmentLabel) OR BOUND(?timeLabel)), ", ", ""),
+      ?placeLabel
+    )
+    AS ?constructedLabel
+  )
+}
