@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
 # Constants
 SILKNOW_PATH=${SILKNOW_PATH:-"/home/semantic/silknow"}
 KB_PATH=${KB_PATH:-"${SILKNOW_PATH}/knowledge-base"}
@@ -70,3 +72,6 @@ echo "Query output saved to ${LOG_FILE}"
 # Cleanup
 echo "Removing temp file: ${temp_file}"
 rm "${temp_file}"
+
+# Load patches
+(cd "${SCRIPTPATH}" && ./load_patches.sh)

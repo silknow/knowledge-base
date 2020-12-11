@@ -91,6 +91,10 @@ cd scripts
 ./load_dump.sh vam
 ```
 
+### Patches
+
+The script [load_patches.sh](scripts/load_patches.sh) will load all execute all SPARQL queries files which have been placed inside the `patches` directory.
+
 ## List of RDF namespaces
 
 These prefixes are commonly used on this project:
