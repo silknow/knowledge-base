@@ -14,9 +14,10 @@ WHERE {
       SELECT DISTINCT ?object (GROUP_CONCAT(DISTINCT ?assignedLabel; separator=", ") AS ?assignmentLabel) WHERE {
         ?assignment ecrm:P41_classified ?object .
         ?assignment ecrm:P2_has_type <http://data.silknow.org/has_type_P2/1> .
-        { ?assignment ecrm:P42_assigned ?assignedLabel . FILTER(ISLITERAL(?assignedLabel)) }
+        { ?assignment ecrm:P42_assigned ?assignedLabel . }
         UNION
-        { ?assignment ecrm:P42_assigned/skos:prefLabel ?assignedLabel }
+        { ?assignment ecrm:P42_assigned ?assigned . GRAPH ?x { ?assigned skos:prefLabel ?assignedLabel . } }
+        FILTER(ISLITERAL(?assignedLabel))
       }
     }
     OPTIONAL {
@@ -25,11 +26,13 @@ WHERE {
         { ?timeSpan a <http://vocab.getty.edu/ontology#Concept> . ?timeSpan skos:prefLabel ?timeSpanLabel . FILTER(LANG(?timeSpanLabel) = "en") }
         UNION
         { MINUS { ?timeSpan a <http://vocab.getty.edu/ontology#Concept> . } ?timeSpan rdfs:label ?timeSpanLabel . }
+        FILTER(ISLITERAL(?timeSpanLabel))
       }
     }
     OPTIONAL {
       SELECT DISTINCT ?production (GROUP_CONCAT(DISTINCT ?placeLabel; separator=", ") AS ?placeLabel) WHERE {
         ?production ecrm:P8_took_place_on_or_within/geonames:name ?placeLabel .
+        FILTER(ISLITERAL(?placeLabel))
       }
     }
 
