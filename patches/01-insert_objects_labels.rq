@@ -22,11 +22,8 @@ WHERE {
     }
     OPTIONAL {
       SELECT DISTINCT ?production (GROUP_CONCAT(DISTINCT ?timeSpanLabel; separator=", ") AS ?timeLabel) WHERE {
-        ?production ecrm:P4_has_time-span ?timeSpan .
-        { ?timeSpan a <http://vocab.getty.edu/ontology#Concept> . ?timeSpan skos:prefLabel ?timeSpanLabel . FILTER(LANG(?timeSpanLabel) = "en") }
-        UNION
-        { MINUS { ?timeSpan a <http://vocab.getty.edu/ontology#Concept> . } ?timeSpan rdfs:label ?timeSpanLabel . }
-        FILTER(ISLITERAL(?timeSpanLabel))
+        ?production ecrm:P4_has_time-span/skos:prefLabel ?timeSpanLabel .
+        FILTER(ISLITERAL(?timeSpanLabel) && (LANG(?timeSpanLabel) = "en" || LANG(?timeSpanLabel) = ""))
       }
     }
     OPTIONAL {
