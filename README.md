@@ -2,6 +2,9 @@
 
 This repository contains scripts to deploy the Knowledge Base for project SILKNOW.
 
+## NOTE BEFORE DEPLOYMENT
+There is now a staging/pre-production environment for the KG and ADA! Please don't run any steps before reading every chapter of this readme before "Dereferencing", especially "Stage and Production environment"!
+
 ## Initializing the Knowledge Base
 
 This section covers the steps required to set up a new Knowlede Base for the first time.
@@ -90,6 +93,18 @@ cd scripts
 ./load_dump.sh mtmad
 ./load_dump.sh vam
 ```
+
+## Stage and Production environment
+1. When deploying to the KG, make sure to prefix the command with the targeted environment container name, 
+eg. CONTAINER_NAME=silknow-staging_virtuoso ./load_commons.sh
+
+- Staging: silknow-staging_virtuoso
+- Production: silknow_virtuoso
+
+2. Or you can also use https://rundeck.tools.eurecom.fr/project/Silknow (domain name has been moved from nerd.eurecom.fr!) which now has a "Deployment Environment" option when running a job.
+
+3. The Staging environment is accesible at https://ada-preprod.silknow.org/ and https://ada-preprod.silknow.org/sparql .
+
 
 ### Patches
 
