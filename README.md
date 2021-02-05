@@ -96,7 +96,7 @@ cd scripts
 
 ## Stage and Production environment
 1. When deploying to the KG, make sure to prefix the command with the targeted environment container name, 
-eg. CONTAINER_NAME=silknow-staging_virtuoso ./load_commons.sh
+eg. CONTAINER_NAME=silknow-staging_virtuoso VIRTUOSO_DUMPS_PATH="/var/docker/virtuoso/silknow-staging/data/dumps" ./load_commons.sh
 
 - Staging: silknow-staging_virtuoso
 - Production: silknow_virtuoso
