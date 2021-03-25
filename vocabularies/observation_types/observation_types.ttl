@@ -1,0 +1,80 @@
+@prefix d: <http://data.silknow.org/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sil: <http://silknow.eu/> .
+@prefix silknow_observation_types: <http://data.silknow.org/observation/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+d:SILKNOW a foaf:Project ;
+    rdfs:label "SILKNOW" ;
+    rdfs:comment "SILKNOW is a research project that improves the understanding, conservation and dissemination of European silk heritage from the 15th to the 19th century." ;
+    foaf:homepage sil: ;
+    foaf:logo <http://silknow.org/wp-content/uploads/2018/06/cropped-silknow-1.png> .
+
+<http://data.silknow.org/observation/general-observation> a skos:Concept ;
+    skos:altLabel "Clasificación Razonada"@es,
+        "Descripción"@es,
+        "Description"@en,
+        "Description"@ef,
+        "Descriptive Line"@en,
+        "Labels and date"@en,
+        "Summary"@en;
+    skos:inScheme silknow_observation_types:silk-O4-P2-vocabulary ;
+    skos:prefLabel "General Observation"@en ;
+    skos:topConceptOf silknow_observation_types:silk-O4-P2-vocabulary .
+
+<http://data.silknow.org/observation/technical-observation> a skos:Concept ;
+    skos:altLabel "Descripción técnica"@es,
+        "Technical description"@en,
+        "Weft"@en,
+        "Warp"@en,
+        "Construction"@en,
+        "Physical description"@en,
+        "Indicazioni sull'oggetto"@it;
+    skos:inScheme silknow_observation_types:silk-O4-P2-vocabulary ;
+    skos:prefLabel "Technical Observation"@en ;
+    skos:topConceptOf silknow_observation_types:silk-O4-P2-vocabulary .
+    
+    <http://data.silknow.org/observation/iconographical-observation> a skos:Concept ;
+    skos:altLabel "note"@en,
+        "Description of the pattern"@en;
+    skos:inScheme silknow_observation_types:silk-O4-P2-vocabulary ;
+    skos:prefLabel "Inconographical Observation"@en ;
+    skos:topConceptOf ssilknow_observation_types:silk-O4-P2-vocabulary .
+
+<http://data.silknow.org/observation/historical-observation> a skos:Concept  ;
+    skos:altLabel "Historique"@fr,
+        "Historical Context Note"@en,
+        "Contexto Cultural/Estilo"@es,
+        "Historical Critical Information"@en;
+    skos:inScheme silknow_observation_types:silk-O4-P2-vocabulary ;
+    skos:prefLabel "Historical Observation"@en ;
+    skos:topConceptOf silknow_observation_types:silk-O4-P2-vocabulary .
+    
+    <http://data.silknow.org/observation/dimension> a skos:Concept ;
+    skos:altLabel "Width"@en,
+        "Pattern unit"@en;
+    skos:inScheme silknow_observation_types:silk-O4-P2-vocabulary ;
+    skos:prefLabel "Dimension"@en ;
+    skos:topConceptOf silknow_observation_types:silk-O4-P2-vocabulary .
+
+silknow_observation_types:silk-O4-P2-vocabulary a skos:ConceptScheme ;
+    rdfs:label "Controlled vocabulary for P2_has_type of O4_observation"@en ;
+    dct:created "2018-11-09"^^xsd:date ;
+    dct:creator d:SILKNOW ;
+    dct:modified "2021-2-07"^^xsd:date ;
+    pav:createdOn "2021-2-07"^^xsd:date ;
+    pav:version "1.0" ;
+    skos:hasTopConcept <http://data.silknow.org/observation/general-observation>,
+        <http://data.silknow.org/observation/technical-observation>,
+        <http://data.silknow.org/observation/iconographical-observation>,
+        <http://data.silknow.org/observation/historical-observation>,
+        <http://data.silknow.org/observation/dimension> .
+
