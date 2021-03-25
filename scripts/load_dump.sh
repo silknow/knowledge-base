@@ -57,6 +57,7 @@ echo "ld_dir('dumps/museums/${name}/timespan', '*.ttl', 'http://data.silknow.org
 echo "ld_dir('dumps/museums/${name}/', '*.ttl', 'http://data.silknow.org/graph/${name}');" >> "${temp_file}"
 echo "rdf_loader_run();" >> "${temp_file}"
 echo "cl_exec('checkpoint');" >> "${temp_file}"
+echo "DB.DBA.VT_INC_INDEX_DB_DBA_RDF_OBJ ();" >> "${temp_file}"
 echo "SELECT * FROM DB.DBA.load_list WHERE ll_error IS NOT NULL;" >> "${temp_file}"
 echo "DELETE FROM DB.DBA.load_list;" >> "${temp_file}"
 
