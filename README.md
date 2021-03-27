@@ -49,6 +49,7 @@ This section covers the steps required to set up a new Knowlede Base for the fir
         - `aat/*.ttl`
         - `category/*.ttl`
         - `commons/*.ttl`
+        - `observation/*.ttl`
         - `temp/*.ttl`
         - `vocabulary/*.ttl`
       - `museums/`
@@ -58,6 +59,7 @@ This section covers the steps required to set up a new Knowlede Base for the fir
           - `geonames/*.rdf`
         - `vam/*.ttl`
           - `geonames/*.rdf`
+        - etc.
 
 2. Run the following scripts to load the commons vocabularies, and/or the museum sources into the Knowledge Base.
 
@@ -126,6 +128,7 @@ These prefixes are commonly used on this project:
 | efrbroo | http://erlangen-crm.org/efrbroo/ |
 | time | http://www.w3.org/2006/time# |
 | schema | http://schema.org/ |
+| silk | http://data.silknow.org/ontology/ |
 
 They can be imported into Virtuoso through the isql interface:
 
@@ -136,6 +139,7 @@ DB.DBA.XML_SET_NS_DECL ('crmsci', 'http://www.ics.forth.gr/isl/CRMsci/', 2);
 DB.DBA.XML_SET_NS_DECL ('ecrm', 'http://erlangen-crm.org/current/', 2);
 DB.DBA.XML_SET_NS_DECL ('efrbroo', 'http://erlangen-crm.org/efrbroo/', 2);
 DB.DBA.XML_SET_NS_DECL ('time', 'http://www.w3.org/2006/time#', 2);
+DB.DBA.XML_SET_NS_DECL ('silk', 'http://data.silknow.org/ontology/', 2);
 ```
 
 ## Dereferencing
