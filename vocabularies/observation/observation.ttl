@@ -1,4 +1,4 @@
-prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -6,7 +6,7 @@ prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@previx obs: <http://data.silknow.org/observation/> .
+@prefix obs: <http://data.silknow.org/observation/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -20,7 +20,8 @@ prefix dc: <http://purl.org/dc/elements/1.1/> .
     skos:altLabel "Clasificación Razonada"@es,
         "Descripción"@es,
         "Description"@en,
-        "Description"@ef,
+        "Description"@fr,
+        "Inscription"@fr,
         "Descriptive Line"@en,
         "Labels and date"@en,
         "Summary"@en;
@@ -33,6 +34,8 @@ prefix dc: <http://purl.org/dc/elements/1.1/> .
         "Technical description"@en,
         "Weft"@en,
         "Warp"@en,
+        "Medium"@en,
+        "Production Type"@en,
         "Construction"@en,
         "Physical description"@en,
         "Indicazioni sull'oggetto"@it;
@@ -42,10 +45,11 @@ prefix dc: <http://purl.org/dc/elements/1.1/> .
     
     <http://data.silknow.org/observation/iconographical-observation> a skos:Concept ;
     skos:altLabel "note"@en,
-        "Description of the pattern"@en;
+                  "Description iconographique"@fr,
+                  "Description of the pattern"@en;
     skos:inScheme obs:observation-vocabulary ;
     skos:prefLabel "Inconographical Observation"@en ;
-    skos:topConceptOf sobs:observation-vocabulary .
+    skos:topConceptOf obs:observation-vocabulary .
 
 <http://data.silknow.org/observation/historical-observation> a skos:Concept  ;
     skos:altLabel "Historique"@fr,
@@ -67,8 +71,8 @@ obs:observation-vocabulary a skos:ConceptScheme ;
     rdfs:label "Controlled vocabulary for the different type of observations"@en ;
     dct:created "2018-11-09"^^xsd:date ;
     dct:creator <http://data.silknow.org/SILKNOW> ;
-    dct:modified "2021-2-07"^^xsd:date ;
-    pav:createdOn "2021-2-07"^^xsd:date ;
+    dct:modified "2021-02-07"^^xsd:date ;
+    pav:createdOn "2021-02-07"^^xsd:date ;
     pav:version "1.0" ;
     skos:hasTopConcept <http://data.silknow.org/observation/general-observation>,
         <http://data.silknow.org/observation/technical-observation>,
