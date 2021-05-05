@@ -2,8 +2,6 @@
 
 This repository contains scripts to deploy the Knowledge Base for project SILKNOW.
 
-## NOTE BEFORE DEPLOYMENT
-There is now a staging/pre-production environment for the KG and ADA! Please don't run any steps before reading every chapter of this readme before "Dereferencing", especially "Stage and Production environment"!
 
 ## Initializing the Knowledge Base
 
@@ -96,19 +94,12 @@ cd scripts
 ./load_dump.sh vam
 ```
 
-## Stage and Production environment
-1. When deploying to the KG, make sure to prefix the command with the targeted environment container name, eg.
+## Removing a single museum or graph
 
-      ```bash
-      CONTAINER_NAME=silknow-staging_virtuoso VIRTUOSO_DUMPS_PATH="/var/docker/virtuoso/silknow-staging/data/dumps" ./load_commons.sh
-      ```
-
-      - Staging: silknow-staging_virtuoso
-      - Production: silknow_virtuoso
-
-      Or you can also use https://rundeck.tools.eurecom.fr/project/Silknow which has a "Deployment Environment" option when running jobs.
-
-1. The Staging environment is accesible at https://ada-preprod.silknow.org/ and https://ada-preprod.silknow.org/sparql .
+When you want to remove a single museum / dataset or graph just run the following command and replace "museumname" accordingly:
+```
+docker exec -i silknow_virtuoso sh -c "isql-v -U dba -P \${DBA_PASSWORD} exec='sparql CLEAR SILENT GRAPH <http://data.silknow.org/graph/museumname>;'"
+```
 
 
 ### Patches
