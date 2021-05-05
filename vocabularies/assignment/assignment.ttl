@@ -3,9 +3,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix pav: <http://purl.org/pav/>.
-@prefix d: <http://data.silknow.org/>.
+@prefix silk-assign: <http://data.silknow.org/assignment/> .
 
-<http://data.silknow.org/assignment/object_type_assignment>
+silk-assign:object_type_assignment
     a skos:Concept;
     skos:altLabel
         "CLASSIFICACI\u00d3 GEN\u00c8RICA"@es, "Description"@en,
@@ -16,7 +16,7 @@
         "Object Type Assignment"@en;
     skos:topConceptOf <http://data.silknow.org/assignment/>.
     
-<http://data.silknow.org/assignment/object_domain_assignment>
+silk-assign:object_domain_assignment
     a skos:Concept;
     skos:altLabel
         "Clasificaci\u00f3n Gen\u00e9rica"@es, "Classification"@en,
@@ -26,8 +26,8 @@
     skos:prefLabel
         "Object Domain Assignment"@en;
     skos:topConceptOf <http://data.silknow.org/assignment/>.
-    
-    
+
+
 <http://data.silknow.org/assignment/>
     a skos:ConceptScheme;
     dct:created "2020-12-08"^^xsd:date;
@@ -35,9 +35,10 @@
     pav:createdOn "2021-05-04"^^xsd:date;
     pav:version "1.0";
     rdfs:label
-    "Controlled vocabulary for P2_has_type of E17_Type_Assignments"@en.
+    "Controlled vocabulary for P2_has_type of E17_Type_Assignments"@en;
     skos:hasTopConcept 
-            <http://data.silknow.org/assignment/object_domain_assignment>,
-            <http://data.silknow.org/assignment/object_type_assignment>.
+            silk-assign:object_domain_assignment,
+            silk-assign:object_type_assignment.
             
     
+
