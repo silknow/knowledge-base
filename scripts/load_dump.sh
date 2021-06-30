@@ -30,7 +30,7 @@ fi
 echo "Dump name: ${name}"
 
 # Get container ID
-containerId=$(docker ps -aqf "name=${CONTAINER_NAME}")
+containerId=$(docker ps -aqf "name=^${CONTAINER_NAME}$")
 if [[ ! "${containerId}" ]]; then
   echo "${CONTAINER_NAME}: Container not found"
   exit 1
