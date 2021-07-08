@@ -1,10 +1,10 @@
 #!/bin/bash
 
 SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
-CONVERTER_PATH=${CONVERTER_PATH:-"${SILKNOW_PATH}/converter"}
 
 # Constants
 SILKNOW_PATH=${SILKNOW_PATH:-"/home/semantic/silknow"}
+CONVERTER_PATH=${CONVERTER_PATH:-"${SILKNOW_PATH}/converter"}
 
 # Load prefixes
 echo "Loading prefixes..."
