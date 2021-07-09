@@ -11,10 +11,10 @@ LOG_FILE=${LOG_FILE:-"load_dump.log"}
 
 # $1 = path to directory which contains RDF files
 delete_rdf() {
-  find "$1" -name "*.rdf" -type f -delete
-  find "$1" -name "*.rdfs" -type f -delete
-  find "$1" -name "*.ttl" -type f -delete
-  find "$1" -name "*.n3" -type f -delete
+  find "$1" -name "*.rdf" -or -name "*.rdf.gz" -type f -delete
+  find "$1" -name "*.rdfs" -or -name "*.rdfs.gz" -type f -delete
+  find "$1" -name "*.ttl" -or -name "*.ttl.gz" -type f -delete
+  find "$1" -name "*.n3" -or -name "*.n3.gz" -type f -delete
 }
 
 # Parameters
