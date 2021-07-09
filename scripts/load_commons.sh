@@ -16,8 +16,8 @@ delete_rdf() {
 }
 
 load() {
-  VIRTUOSO_VOCABULARIES_PATH=${VIRTUOSO_VOCABULARIES_PATH:-"${VIRTUOSO_DUMPS_PATH}/vocabularies"}
-  VIRTUOSO_MUSEUMS_PATH=${VIRTUOSO_MUSEUMS_PATH:-"${VIRTUOSO_DUMPS_PATH}/museums"}
+  VIRTUOSO_VOCABULARIES_PATH="${VIRTUOSO_DUMPS_PATH}/vocabularies"
+  VIRTUOSO_MUSEUMS_PATH="${VIRTUOSO_DUMPS_PATH}/museums"
 
   # Get container ID
   containerId=$(docker ps -aqf "name=^${CONTAINER_NAME}$")
