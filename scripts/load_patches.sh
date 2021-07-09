@@ -6,8 +6,8 @@ KB_PATH=${KB_PATH:-"${SILKNOW_PATH}/knowledge-base"}
 LOG_FILE=${LOG_FILE:-"patches.log"}
 
 load() {
-  VIRTUOSO_VOCABULARIES_PATH=${VIRTUOSO_VOCABULARIES_PATH:-"${VIRTUOSO_DUMPS_PATH}/vocabularies"}
-  VIRTUOSO_MUSEUMS_PATH=${VIRTUOSO_MUSEUMS_PATH:-"${VIRTUOSO_DUMPS_PATH}/museums"}
+  VIRTUOSO_VOCABULARIES_PATH="${VIRTUOSO_DUMPS_PATH}/vocabularies"
+  VIRTUOSO_MUSEUMS_PATH="${VIRTUOSO_DUMPS_PATH}/museums"
 
   # Get container ID
   containerId=$(docker ps -aqf "name=^${CONTAINER_NAME}$")
