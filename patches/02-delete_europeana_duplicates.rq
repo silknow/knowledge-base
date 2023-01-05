@@ -1,0 +1,29 @@
+DELETE {
+  GRAPH <http://data.silknow.org/graph/europeana> {
+    ?dupe ?p ?o .
+    ?s1 ?p1 ?o1 .
+    ?s2 ?p2 ?o2 .
+    ?s3 ?p3 ?o3 .
+  }
+}
+WHERE {
+  GRAPH <http://data.silknow.org/graph/europeana> {
+    ?dupe a ecrm:E22_Man-Made_Object .
+    ?dupe dc:identifier ?identifier .
+    OPTIONAL { ?dupe ?p ?o . }
+    OPTIONAL { ?s1 ?y ?dupe . OPTIONAL { ?s1 ?p1 ?o1 .} }
+    OPTIONAL {
+      ?s2 ecrm:P129_is_about ?dupe .
+      OPTIONAL { ?s2 ?p2 ?o2 . }
+      OPTIONAL {
+        ?s2 ecrm:P129_is_about ?s3 .
+        OPTIONAL { ?s3 ?p3 ?o3 . }
+      }
+     }
+  }
+  GRAPH ?g {
+    ?object a ecrm:E22_Man-Made_Object .
+    ?object dc:identifier ?identifier .
+    FILTER(?g != <http://data.silknow.org/graph/europeana>)
+  }
+}
