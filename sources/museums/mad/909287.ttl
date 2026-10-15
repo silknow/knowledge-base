@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/8efc5736-1166-3983-b724-3866e8bd3a1e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8efc5736-1166-3983-b724-3866e8bd3a1e> .
+
+<http://data.silknow.org/production/85145f2c-3408-3d5e-add2-62038230d8ba>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1720 (vers), Régence, Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8efc5736-1166-3983-b724-3866e8bd3a1e> ;
+        ecrm:P126_employed      "Lampas fond satin de 8, liseré, broché"@fr ;
+        ecrm:P3_has_note        "France, 1720 (vers), Régence, Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/f6d21a5f-6eef-3210-84f5-753744ed809e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> , <https://sws.geonames.org/6475292/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/83121ba5-f8f5-3294-b842-b3de32d1d6fa>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1900" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8efc5736-1166-3983-b724-3866e8bd3a1e> .
+
+<http://data.silknow.org/image/bef1dd06-9611-3f81-9c36-85b28a54ae26>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909287_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/7cdceeef-0bb8-49b7-8ef3-ce7dbf3f57e3.jpg> .
+
+<http://data.silknow.org/object/5b832e18-3d9b-3ec0-9a4a-d7668acdf4ba>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 9491" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/bef1dd06-9611-3f81-9c36-85b28a54ae26> , <http://data.silknow.org/production/85145f2c-3408-3d5e-add2-62038230d8ba> , <http://data.silknow.org/object/8efc5736-1166-3983-b724-3866e8bd3a1e/category/1> , <http://data.silknow.org/event/83121ba5-f8f5-3294-b842-b3de32d1d6fa> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/8efc5736-1166-3983-b724-3866e8bd3a1e> ;
+        dc:identifier       "909287.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<https://sws.geonames.org/6475292/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5b832e18-3d9b-3ec0-9a4a-d7668acdf4ba> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/8efc5736-1166-3983-b724-3866e8bd3a1e> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/8efc5736-1166-3983-b724-3866e8bd3a1e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, 1720 (vers), Régence, Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bef1dd06-9611-3f81-9c36-85b28a54ae26> ;
+        dc:identifier                  "9491" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909287> .

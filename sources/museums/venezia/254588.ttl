@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "42" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "42"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/a4c42d17-7759-30bd-a278-aa8d6de0eb32>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/254588_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5AcRMRHGQD8QLaah%2fGtRu0T5GQT8oMtSJpzvn37zB2LNa9BChuu12fugGyjndVR%2bYtSyFl4e8Dv1KPtKjB795jATM9QZ8IetwvK9jrhba9CBVNFLY%2bU6EhA%3d%3d> .
+
+<http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2> .
+
+<http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Velluto tagliato a un corpo in cotone misto seta in  rosso brunito, passamanerie in filo cotone di sfumature rosso/marrone, bottoni in metallo d'argento."@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a4c42d17-7759-30bd-a278-aa8d6de0eb32> ;
+        ecrm:P3_has_note               "Velluto tagliato a un corpo in cotone misto seta in  rosso brunito, passamanerie in filo cotone di sfumature rosso/marrone, bottoni in metallo d'argento."@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2/dimension/1> , <http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2/dimension/2> ;
+        dc:identifier                  "Cl. XXIV n. 1331" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/254588/?WEB=MuseiVE> .
+
+<https://sws.geonames.org/3164602/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2/dimension/1>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/width> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5ce0f25b-e650-3aae-b04d-47d2a07f83ff> .
+
+<http://data.silknow.org/event/38a0ae77-844a-367b-859a-9b0b723b8581>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2> .
+
+<http://data.silknow.org/production/7278719c-77ff-3e72-a1aa-1bf669a54f71>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2> ;
+        ecrm:P126_employed      "Velluto tagliato a un corpo in cotone misto seta"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1850_1910> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3164602/> .
+
+<http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Velluto tagliato a un corpo in cotone misto seta in  rosso brunito, passamanerie in filo cotone di sfumature rosso/marrone, bottoni in metallo d'argento."@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Marsina" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2> .
+
+<http://data.silknow.org/object/5ce0f25b-e650-3aae-b04d-47d2a07f83ff>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 254588" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/7278719c-77ff-3e72-a1aa-1bf669a54f71> , <http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2/observation/1> , <http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2> , <http://data.silknow.org/event/38a0ae77-844a-367b-859a-9b0b723b8581> , <http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2/category/1> , <http://data.silknow.org/object/93f463f7-4d26-3b5b-ab4e-0d5499627fa2/domain/1> , <http://data.silknow.org/image/a4c42d17-7759-30bd-a278-aa8d6de0eb32> ;
+        dc:identifier       "254588.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .

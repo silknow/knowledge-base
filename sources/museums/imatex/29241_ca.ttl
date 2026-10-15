@@ -1,0 +1,69 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3bf55a85-7a77-39d3-942f-dfc4429abbb1> .
+
+<http://data.silknow.org/object/32b0ea4a-8a59-3677-ad64-e04354de0718>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bc26a865-0f08-3500-bc23-179674989045> ;
+        dc:identifier                  "4390" .
+
+<http://data.silknow.org/event/1e392d52-a0d3-3ee8-8760-f3befe7a7517>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f> ;
+        ecrm:P23_transferred_title_from
+                "Viñas Geis, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/32b0ea4a-8a59-3677-ad64-e04354de0718> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/object/32b0ea4a-8a59-3677-ad64-e04354de0718/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/32b0ea4a-8a59-3677-ad64-e04354de0718> .
+
+<http://data.silknow.org/object/3bf55a85-7a77-39d3-942f-dfc4429abbb1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29241" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/32b0ea4a-8a59-3677-ad64-e04354de0718> , <http://data.silknow.org/event/506d6b6c-9da0-316e-a451-e64c8b88e07a> , <http://data.silknow.org/object/32b0ea4a-8a59-3677-ad64-e04354de0718/category/1> , <http://data.silknow.org/object/32b0ea4a-8a59-3677-ad64-e04354de0718/domain/1> , <http://data.silknow.org/production/f635ab02-395e-37bb-811e-2e6172647cac> , <http://data.silknow.org/event/1e392d52-a0d3-3ee8-8760-f3befe7a7517> , <http://data.silknow.org/image/bc26a865-0f08-3500-bc23-179674989045> ;
+        dc:identifier       "29241.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/32b0ea4a-8a59-3677-ad64-e04354de0718/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/32b0ea4a-8a59-3677-ad64-e04354de0718> .
+
+<http://data.silknow.org/event/506d6b6c-9da0-316e-a451-e64c8b88e07a>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/32b0ea4a-8a59-3677-ad64-e04354de0718> .
+
+<http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas Geis, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas Geis, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/160946453> , <https://isni.org/isni/0000000108433220> .
+
+<http://data.silknow.org/production/f635ab02-395e-37bb-811e-2e6172647cac>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/32b0ea4a-8a59-3677-ad64-e04354de0718> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/image/bc26a865-0f08-3500-bc23-179674989045>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000034973" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29241_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000034973.jpg> .

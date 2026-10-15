@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/aa5e15fb-4539-3978-a713-142ad4d6e197> .
+
+<http://data.silknow.org/image/9e3c7f72-d6c2-384a-8331-cc5f064f10b9>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033744" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/28005_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033744.jpg> .
+
+<http://data.silknow.org/object/3c54f167-6003-3632-a5b2-2c99bbb435f2/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3c54f167-6003-3632-a5b2-2c99bbb435f2> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/3c54f167-6003-3632-a5b2-2c99bbb435f2>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9e3c7f72-d6c2-384a-8331-cc5f064f10b9> ;
+        dc:identifier                  "16400" .
+
+<http://data.silknow.org/event/7b494a99-a9ca-3a8d-a19b-86064775aaeb>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3c54f167-6003-3632-a5b2-2c99bbb435f2> .
+
+<http://data.silknow.org/production/2799c084-7803-3735-acdb-67e3b22073ea>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3c54f167-6003-3632-a5b2-2c99bbb435f2> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> , <http://data.silknow.org/vocabulary/379> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/object/3c54f167-6003-3632-a5b2-2c99bbb435f2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3c54f167-6003-3632-a5b2-2c99bbb435f2> .
+
+<http://data.silknow.org/object/aa5e15fb-4539-3978-a713-142ad4d6e197>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 28005" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3c54f167-6003-3632-a5b2-2c99bbb435f2/category/1> , <http://data.silknow.org/production/2799c084-7803-3735-acdb-67e3b22073ea> , <http://data.silknow.org/event/7b494a99-a9ca-3a8d-a19b-86064775aaeb> , <http://data.silknow.org/image/9e3c7f72-d6c2-384a-8331-cc5f064f10b9> , <http://data.silknow.org/object/3c54f167-6003-3632-a5b2-2c99bbb435f2> , <http://data.silknow.org/event/87ab9aa2-e336-3799-8ff8-596183cf49e1> , <http://data.silknow.org/object/3c54f167-6003-3632-a5b2-2c99bbb435f2/domain/1> ;
+        dc:identifier       "28005.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/87ab9aa2-e336-3799-8ff8-596183cf49e1>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3c54f167-6003-3632-a5b2-2c99bbb435f2> .

@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/1cd45cae-5627-36bf-8905-e75a32b1d9ff/category/1>
+        a                    silk:T35 ;
+        silk:L1              "échantillon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1cd45cae-5627-36bf-8905-e75a32b1d9ff> .
+
+<http://data.silknow.org/image/14003eab-dbf6-3c56-8d83-325c536c1a0e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934254_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/6d8cc54b-abb2-41cc-bde0-fb08ee1c1cab.jpg> .
+
+<http://data.silknow.org/event/0755bfcc-f899-36c5-a250-b533b823f1f9>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don de Monsieur Delaunay, en souvenir de sa mère, madame Sonia Delaunay, 1981" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1cd45cae-5627-36bf-8905-e75a32b1d9ff> .
+
+<http://data.silknow.org/object/1aeb791a-fee0-3ffe-abb8-11c1606341b1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 47723.B" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/c26b958f-6217-3b90-87c0-cc07922d5483> , <http://data.silknow.org/image/14003eab-dbf6-3c56-8d83-325c536c1a0e> , <http://data.silknow.org/object/1cd45cae-5627-36bf-8905-e75a32b1d9ff/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/1cd45cae-5627-36bf-8905-e75a32b1d9ff> , <http://data.silknow.org/event/0755bfcc-f899-36c5-a250-b533b823f1f9> ;
+        dc:identifier       "934254.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/1cd45cae-5627-36bf-8905-e75a32b1d9ff>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "échantillon, Sonia Delaunay, France, 1927 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/14003eab-dbf6-3c56-8d83-325c536c1a0e> ;
+        dc:identifier                  "47723.B" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934254> .
+
+<http://data.silknow.org/production/c26b958f-6217-3b90-87c0-cc07922d5483>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Sonia Delaunay, France, 1927 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1cd45cae-5627-36bf-8905-e75a32b1d9ff> ;
+        ecrm:P126_employed      "Coton mercerisé"@fr ;
+        ecrm:P3_has_note        "Sonia Delaunay, France, 1927 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/b44d8efb-3e7e-3440-a18e-3008d3799540> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1aeb791a-fee0-3ffe-abb8-11c1606341b1> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/1cd45cae-5627-36bf-8905-e75a32b1d9ff> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

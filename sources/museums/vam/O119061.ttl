@@ -1,0 +1,142 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd> .
+
+<http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "repeat" ;
+        rdfs:label          "Length: 17.5 in repeat" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "repeat" ;
+        ecrm:P90_has_value  "44.45"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Limited edition"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd> .
+
+<http://data.silknow.org/image/cce0732a-423b-3351-8154-74a9b5f3941a>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006BD3577" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O119061_2.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006BD/2006BD3577.jpg> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/image/333e1552-a1b8-345e-974f-fcb73cca011e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AP3827" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O119061_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AP/2006AP3827.jpg> .
+
+<http://data.silknow.org/event/947bf9e5-434c-32f4-b73b-0ad46a8f4d9a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd> .
+
+<http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 21.5 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "54.61"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/dimension/pattern/1>
+        a                       silk:T24 ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/dimension/2> .
+
+<http://data.silknow.org/production/0486ad0a-739a-3ccc-a6ba-ddbea6646d8d>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Dating based on the lack of points rentrés in the creation of rounded motifs and on the width of the textile.\n\nAttribution note: On the basis that this type of silk was not woven purely to commission nor mass-produced" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd> ;
+        ecrm:P126_employed      "Brocaded silk, silver and silk threads"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/277> , <http://data.silknow.org/vocabulary/628> ;
+        ecrm:P32_used_general_technique
+                "weft patterning"@en ;
+        ecrm:P3_has_note        "Dating based on the lack of points rentrés in the creation of rounded motifs and on the width of the textile.\n\nAttribution note: On the basis that this type of silk was not woven purely to commission nor mass-produced" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1730_1735> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2996944/> .
+
+<http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Woven silk panel with dark green ground, France, ca. 1730-1735"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd> .
+
+<http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Limited edition"@en , "Woven silk panel with dark green ground, France, ca. 1730-1735"@en , "This silk panel combines the most expensive of materials with the most complex of weaving techniques. It is a brocaded silk which makes use of polychrome silk and real silver thread to create the pattern on a dark green ground. The technique of brocading allowed different colours to be introduced into the pattern of a fabric in specific, sometimes very small areas. It was laborious work for the weaver.\n\nThis is probably a French silk because its width conforms to the regulations laid down for the silk weavers of Tours in the late 17th century and subsequently adopted by the guild of silk weavers (Grande Fabrique) in Lyon. Such regulations attempted to control the composition and quality of all products.  \n\nThe style of motif corresponds to the early 1730s when designers were gradually developing more naturalistic motifs which were often combined with fantastical elements. The Lyonnais designer Courtois was credited with attempting to create three-dimensional effects in the 1720s, and in the following decade Jean Revel (1684—1751) found a method of dovetailing colours which took these attempts further."@en , "This silk panel has a dark green ground and a bold pattern of fanciful fruits and leaves standing in a bowl which rests on a ledge around which is hung a swag of pendant husks. The pattern is brocaded in coloured silks in reds, greens and browns, and black emphasises the outline of certain flowers. Much of the pattern is brocaded in plain and frost silver thread. The ground is woven in gros de Tours (a ribbed effect). The pattern is a point repeat (i.e. is symmetrical about a vertical axis). The repeat is 17.5 inches (47.5 centimetres) in length and 21.5 inches (58 centimetres) wide."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3b10d01e-5b33-366f-befd-9e2b2c4fde22> , <http://data.silknow.org/image/333e1552-a1b8-345e-974f-fcb73cca011e> , <http://data.silknow.org/image/cce0732a-423b-3351-8154-74a9b5f3941a> ;
+        ecrm:P3_has_note               "Limited edition"@en , "Woven silk panel with dark green ground, France, ca. 1730-1735"@en , "This silk panel has a dark green ground and a bold pattern of fanciful fruits and leaves standing in a bowl which rests on a ledge around which is hung a swag of pendant husks. The pattern is brocaded in coloured silks in reds, greens and browns, and black emphasises the outline of certain flowers. Much of the pattern is brocaded in plain and frost silver thread. The ground is woven in gros de Tours (a ribbed effect). The pattern is a point repeat (i.e. is symmetrical about a vertical axis). The repeat is 17.5 inches (47.5 centimetres) in length and 21.5 inches (58 centimetres) wide."@en , "This silk panel combines the most expensive of materials with the most complex of weaving techniques. It is a brocaded silk which makes use of polychrome silk and real silver thread to create the pattern on a dark green ground. The technique of brocading allowed different colours to be introduced into the pattern of a fabric in specific, sometimes very small areas. It was laborious work for the weaver.\n\nThis is probably a French silk because its width conforms to the regulations laid down for the silk weavers of Tours in the late 17th century and subsequently adopted by the guild of silk weavers (Grande Fabrique) in Lyon. Such regulations attempted to control the composition and quality of all products.  \n\nThe style of motif corresponds to the early 1730s when designers were gradually developing more naturalistic motifs which were often combined with fantastical elements. The Lyonnais designer Courtois was credited with attempting to create three-dimensional effects in the 1720s, and in the following decade Jean Revel (1684—1751) found a method of dovetailing colours which took these attempts further."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/dimension/1> , <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/dimension/2> , <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/dimension/3> ;
+        ecrm:P58_has_section_definition
+                <http://data.silknow.org/vocabulary/444> , <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/dimension/pattern/1> ;
+        dc:identifier                  "T.330-1970" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O119061> .
+
+<http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 26.5 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "67.31"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c3289327-c0af-39f2-aa80-f91a3b5bbc79> .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/3b10d01e-5b33-366f-befd-9e2b2c4fde22>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MT7085" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O119061_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2020MT/2020MT7085.jpg> .
+
+<http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd> .
+
+<http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "This silk panel has a dark green ground and a bold pattern of fanciful fruits and leaves standing in a bowl which rests on a ledge around which is hung a swag of pendant husks. The pattern is brocaded in coloured silks in reds, greens and browns, and black emphasises the outline of certain flowers. Much of the pattern is brocaded in plain and frost silver thread. The ground is woven in gros de Tours (a ribbed effect). The pattern is a point repeat (i.e. is symmetrical about a vertical axis). The repeat is 17.5 inches (47.5 centimetres) in length and 21.5 inches (58 centimetres) wide."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd> .
+
+<http://data.silknow.org/object/c3289327-c0af-39f2-aa80-f91a3b5bbc79>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O119061" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/observation/4> , <http://data.silknow.org/event/947bf9e5-434c-32f4-b73b-0ad46a8f4d9a> , <http://data.silknow.org/image/333e1552-a1b8-345e-974f-fcb73cca011e> , <http://data.silknow.org/production/0486ad0a-739a-3ccc-a6ba-ddbea6646d8d> , <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/observation/3> , <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/observation/1> , <http://data.silknow.org/image/cce0732a-423b-3351-8154-74a9b5f3941a> , <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/observation/2> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/domain/1> , <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd> , <http://data.silknow.org/image/3b10d01e-5b33-366f-befd-9e2b2c4fde22> ;
+        dc:identifier       "O119061.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd/observation/4>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "This silk panel combines the most expensive of materials with the most complex of weaving techniques. It is a brocaded silk which makes use of polychrome silk and real silver thread to create the pattern on a dark green ground. The technique of brocading allowed different colours to be introduced into the pattern of a fabric in specific, sometimes very small areas. It was laborious work for the weaver.\n\nThis is probably a French silk because its width conforms to the regulations laid down for the silk weavers of Tours in the late 17th century and subsequently adopted by the guild of silk weavers (Grande Fabrique) in Lyon. Such regulations attempted to control the composition and quality of all products.  \n\nThe style of motif corresponds to the early 1730s when designers were gradually developing more naturalistic motifs which were often combined with fantastical elements. The Lyonnais designer Courtois was credited with attempting to create three-dimensional effects in the 1720s, and in the following decade Jean Revel (1684—1751) found a method of dovetailing colours which took these attempts further."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e10f825e-0cb4-3f13-b28b-6d42cdd938fd> .

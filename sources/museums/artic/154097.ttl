@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/19a5848c-f9e9-3afe-9f38-9647bce40a99>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1890_1899> , <http://data.silknow.org/timespan/1899> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk and cotton, complementary warp, warp-float faced 7:1 and 4:1 satin weaves with supplementary brocading wefts and with plain and twill interlacings of secondary binding warps and supplementary patterning wefts; incomplete panel and half panel joined"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/75ad56d7-853e-351e-981a-c792d43c95cb> ;
+        ecrm:P3_has_note               "Silk and cotton, complementary warp, warp-float faced 7:1 and 4:1 satin weaves with supplementary brocading wefts and with plain and twill interlacings of secondary binding warps and supplementary patterning wefts; incomplete panel and half panel joined"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf/dimension/1> , <http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf/dimension/2> ;
+        dc:identifier                  "2000.139" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/154097/panel> .
+
+<http://data.silknow.org/image/75ad56d7-853e-351e-981a-c792d43c95cb>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/154097_0.jpg> , <https://www.artic.edu/iiif/2/b798ddec-b025-f51d-2719-f0d63c40f366/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/event/15ef4965-0ca5-3189-baf7-37412c40af2d>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/2e9937ad-2716-343f-91e4-91871c730564> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Louise Lutz Endowment" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/actor/2e9937ad-2716-343f-91e4-91871c730564>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Louise Lutz Endowment" ;
+        ecrm:P1_is_identified_by  "Louise Lutz Endowment" .
+
+<http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk and cotton, complementary warp, warp-float faced 7:1 and 4:1 satin weaves with supplementary brocading wefts and with plain and twill interlacings of secondary binding warps and supplementary patterning wefts; incomplete panel and half panel joined"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf> .
+
+<http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf> .
+
+<http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "255" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "255"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "126" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "126"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/218a56ae-46b7-34a9-9c20-ff717f15a03f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2000.139" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/75ad56d7-853e-351e-981a-c792d43c95cb> , <http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf> , <http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf/category/1> , <http://data.silknow.org/production/19a5848c-f9e9-3afe-9f38-9647bce40a99> , <http://data.silknow.org/object/a86dd3e9-d263-365c-93c5-a2eec3518aaf/observation/1> , <http://data.silknow.org/event/15ef4965-0ca5-3189-baf7-37412c40af2d> ;
+        dc:identifier       "154097.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/218a56ae-46b7-34a9-9c20-ff717f15a03f> .

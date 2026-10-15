@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "135.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "135.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/b657a80c-0b50-34f2-86c9-0c1982e77fc0>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1825_1835> , <http://data.silknow.org/timespan/1835> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/22237dc0-dc75-3f03-bf68-46edf2252a07> , <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/event/604fe5f3-703b-354d-88db-cbfe2af984eb>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/53053641-bfcb-385b-94e3-2aa4c1c0b169> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Potter Palmer II" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5> .
+
+<http://data.silknow.org/image/af28ef71-d854-3dc2-afb3-791435b22bbc>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/7496_0.jpg> , <https://www.artic.edu/iiif/2/9027177f-b13d-7d02-3dfe-56a6d865dd1f/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, wool, and cotton, warp-float faced 3:1 twill weave with supplementary patterning wefts bound in plain interlacings; attached wool fringe; woven on loom with Jacquard attachment"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5> .
+
+<http://data.silknow.org/object/bc5a4d2c-c916-31ff-bd18-2e36c9b06677>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1930.1287" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/af28ef71-d854-3dc2-afb3-791435b22bbc> , <http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5/category/1> , <http://data.silknow.org/production/b657a80c-0b50-34f2-86c9-0c1982e77fc0> , <http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5> , <http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5/observation/1> , <http://data.silknow.org/event/604fe5f3-703b-354d-88db-cbfe2af984eb> ;
+        dc:identifier       "7496.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/place/22237dc0-dc75-3f03-bf68-46edf2252a07>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "France or Austria" ;
+        ecrm:P87_is_identified_by  "France or Austria" .
+
+<http://data.silknow.org/actor/53053641-bfcb-385b-94e3-2aa4c1c0b169>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Potter Palmer II" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Potter Palmer II" .
+
+<http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, wool, and cotton, warp-float faced 3:1 twill weave with supplementary patterning wefts bound in plain interlacings; attached wool fringe; woven on loom with Jacquard attachment"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/af28ef71-d854-3dc2-afb3-791435b22bbc> ;
+        ecrm:P3_has_note               "Silk, wool, and cotton, warp-float faced 3:1 twill weave with supplementary patterning wefts bound in plain interlacings; attached wool fringe; woven on loom with Jacquard attachment"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5/dimension/1> , <http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5/dimension/2> ;
+        dc:identifier                  "1930.1287" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/7496/long-shawl> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Long Shawl" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5> .
+
+<http://data.silknow.org/object/e13f6335-3c51-3f9f-b37c-d636f38de0d5/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "276.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "276.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bc5a4d2c-c916-31ff-bd18-2e36c9b06677> .

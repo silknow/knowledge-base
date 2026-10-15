@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bd6b54dd-4026-3d84-a40f-a822a931274c> .
+
+<http://data.silknow.org/assessment/509cec9e-47d0-397e-a50d-bd3e91bf72f3/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Malo. No apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Malo. No apto para su uso."@es .
+
+<http://data.silknow.org/assessment/509cec9e-47d0-397e-a50d-bd3e91bf72f3>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/0555817f-205d-349a-b997-c14329ed1cc3> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/509cec9e-47d0-397e-a50d-bd3e91bf72f3/condition/1> .
+
+<http://data.silknow.org/object/0555817f-205d-349a-b997-c14329ed1cc3/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0555817f-205d-349a-b997-c14329ed1cc3> ;
+        ecrm:P42_assigned    "Terno (Capa pluvial)" .
+
+<http://data.silknow.org/object/bd6b54dd-4026-3d84-a40f-a822a931274c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.46.3" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/52bf179f-388c-3692-9fe0-d36ea241320a> , <http://data.silknow.org/object/0555817f-205d-349a-b997-c14329ed1cc3> , <http://data.silknow.org/assessment/509cec9e-47d0-397e-a50d-bd3e91bf72f3> , <http://data.silknow.org/image/4a84321e-c919-3097-8b45-f92ac5c06d09> , <http://data.silknow.org/object/0555817f-205d-349a-b997-c14329ed1cc3/type/1> ;
+        dc:identifier       "5.46.3.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/production/52bf179f-388c-3692-9fe0-d36ea241320a/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/0555817f-205d-349a-b997-c14329ed1cc3>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4a84321e-c919-3097-8b45-f92ac5c06d09> ;
+        dc:identifier                  "5.46.3" .
+
+<http://data.silknow.org/image/4a84321e-c919-3097-8b45-f92ac5c06d09>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.46.3" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.46.3_0.jpg> .
+
+<http://data.silknow.org/production/52bf179f-388c-3692-9fe0-d36ea241320a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0555817f-205d-349a-b997-c14329ed1cc3> ;
+        ecrm:P126_employed      "Hilo de oro, plata y seda. Galón de oro. Fleco."@es ;
+        ecrm:P32_used_general_technique
+                "Brocado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/52bf179f-388c-3692-9fe0-d36ea241320a/activity/1> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .

@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/044acd5d-5505-3035-905f-4986463b7dce> .
+
+<http://data.silknow.org/event/f52cf09e-b9b8-393d-97fc-2287b0d3c28d>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f> ;
+        ecrm:P23_transferred_title_from
+                "Viñas Geis, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/production/98dbe08a-efb4-37f8-a60a-4722f75d692e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "sarja"@ca , "setí"@ca , "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1750> .
+
+<http://data.silknow.org/image/d58a0cd4-f39a-3e52-9951-073a77bfe722>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000041842" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/33130_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000041842.jpg> .
+
+<http://data.silknow.org/object/044acd5d-5505-3035-905f-4986463b7dce>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 33130" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469/domain/1> , <http://data.silknow.org/event/4492f0e2-8f63-3e26-9438-8e04310cfecc> , <http://data.silknow.org/image/d58a0cd4-f39a-3e52-9951-073a77bfe722> , <http://data.silknow.org/event/f52cf09e-b9b8-393d-97fc-2287b0d3c28d> , <http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469/observation/1> , <http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469/category/1> , <http://data.silknow.org/production/98dbe08a-efb4-37f8-a60a-4722f75d692e> , <http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469> ;
+        dc:identifier       "33130.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469> .
+
+<http://data.silknow.org/image/aa204533-dc2d-3433-92ea-a3231735ab94>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "motius florals"@ca ;
+        ecrm:P3_has_note  "motius florals"@ca .
+
+<http://data.silknow.org/event/4492f0e2-8f63-3e26-9438-8e04310cfecc>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469> .
+
+<http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469> .
+
+<http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas Geis, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas Geis, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/160946453> , <https://isni.org/isni/0000000108433220> .
+
+<http://data.silknow.org/image/b3ad076b-d87d-3a55-b0dd-e188bfb9c119>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "decoració vegetal estilitzada"@ca ;
+        ecrm:P3_has_note  "decoració vegetal estilitzada"@ca .
+
+<http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Teixit de seda llavorat, bicolor, format per dos fragments units per costura. Decoració de motius florals d’estil bizarre en color blanc sobre fons vermell."@ca ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d58a0cd4-f39a-3e52-9951-073a77bfe722> ;
+        ecrm:P3_has_note               "Teixit de seda llavorat, bicolor, format per dos fragments units per costura. Decoració de motius florals d’estil bizarre en color blanc sobre fons vermell."@ca ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/aa204533-dc2d-3433-92ea-a3231735ab94> , <http://data.silknow.org/image/b3ad076b-d87d-3a55-b0dd-e188bfb9c119> ;
+        dc:identifier                  "5129" .
+
+<http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Teixit de seda llavorat, bicolor, format per dos fragments units per costura. Decoració de motius florals d’estil bizarre en color blanc sobre fons vermell."@ca ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b2acb47c-37e5-3acb-8792-f4864acdb469> .

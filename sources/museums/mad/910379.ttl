@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/0cc10216-49e4-3cbc-8ab2-1e5f2baed2ed>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 999.6.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/979d94b2-3b9a-3918-82ca-722d446e8b63> , <http://data.silknow.org/object/415c2428-ab77-3811-9cb3-93433daef519> , <http://data.silknow.org/event/65cf33f6-be84-3cce-bc4d-058d6d0f736b> , <http://data.silknow.org/object/415c2428-ab77-3811-9cb3-93433daef519/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/d19c6f3f-551c-3c5c-a282-a6d7c9d2fc7f> ;
+        dc:identifier       "910379.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/d19c6f3f-551c-3c5c-a282-a6d7c9d2fc7f>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1735 (vers), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/415c2428-ab77-3811-9cb3-93433daef519> ;
+        ecrm:P126_employed      "Lampas de soie fond gros de Tours, broché de soie  et métal avec effet de berclé"@fr ;
+        ecrm:P3_has_note        "France, 1735 (vers), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/57f680a0-7c72-37b7-b943-578eb036094e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/image/979d94b2-3b9a-3918-82ca-722d446e8b63>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910379_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/3d0fea14-c8a3-4646-af29-8f52e4c64d24.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/415c2428-ab77-3811-9cb3-93433daef519/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/415c2428-ab77-3811-9cb3-93433daef519> .
+
+<http://data.silknow.org/event/65cf33f6-be84-3cce-bc4d-058d6d0f736b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Les Amis des Arts décoratifs, 1999" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/415c2428-ab77-3811-9cb3-93433daef519> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0cc10216-49e4-3cbc-8ab2-1e5f2baed2ed> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/415c2428-ab77-3811-9cb3-93433daef519> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/415c2428-ab77-3811-9cb3-93433daef519>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1735 (vers), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/979d94b2-3b9a-3918-82ca-722d446e8b63> ;
+        dc:identifier                  "999.6.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910379> .

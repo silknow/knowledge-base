@@ -1,0 +1,103 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/db3043bb-818f-33af-8391-c07aaf154178>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/81904614-657e-3fc5-944a-8d301a929b7b> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "Lent by Miss Elizabeth Day McCormick, February 15, 1943; gift of Elizabeth Day McCormick to MFA, 1943 / The Elizabeth Day McCormick Collection" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01> .
+
+<http://data.silknow.org/event/3a4e7b3a-0b74-3ba7-afdd-26bd8e9ac383>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01> .
+
+<http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "33.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "33.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c03d4ace-3d13-3d08-851f-82462e0f1db0> , <http://data.silknow.org/image/16d56fd5-f388-3578-b079-bd9ec4fc1b56> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01/dimension/2> , <http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01/dimension/1> ;
+        dc:identifier                  "43.284" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/116944> .
+
+<http://data.silknow.org/image/16d56fd5-f388-3578-b079-bd9ec4fc1b56>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "583129" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/116944_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/583129/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/image/c03d4ace-3d13-3d08-851f-82462e0f1db0>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "583130" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/116944_1.jpg> , <https://collections.mfa.org/internal/media/dispatcher/583130/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7302908d-1a88-3f4b-8300-80e31ad90927> .
+
+<http://data.silknow.org/actor/81904614-657e-3fc5-944a-8d301a929b7b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Lent by Miss Elizabeth Day McCormick, February 15; gift of Elizabeth Day McCormick to MFA / The Elizabeth Day McCormick Collection" ;
+        ecrm:P1_is_identified_by  "Lent by Miss Elizabeth Day McCormick, February 15; gift of Elizabeth Day McCormick to MFA / The Elizabeth Day McCormick Collection" .
+
+<http://data.silknow.org/production/e27ccc2b-d466-3208-85fd-623b674a430d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01> ;
+        ecrm:P126_employed      "Linen plain weave embroidered with silk and wool"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/51476914-822d-3319-8713-7319527993a8> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/7302908d-1a88-3f4b-8300-80e31ad90927>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 43.284" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01/domain/1> , <http://data.silknow.org/event/3a4e7b3a-0b74-3ba7-afdd-26bd8e9ac383> , <http://data.silknow.org/event/db3043bb-818f-33af-8391-c07aaf154178> , <http://data.silknow.org/production/e27ccc2b-d466-3208-85fd-623b674a430d> , <http://data.silknow.org/image/16d56fd5-f388-3578-b079-bd9ec4fc1b56> , <http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01> , <http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01/category/1> , <http://data.silknow.org/image/c03d4ace-3d13-3d08-851f-82462e0f1db0> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "116944.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "46" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "46"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Sampler" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01> .
+
+<http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/da9082ad-baa1-346b-9247-7f8ea1b71c01> .

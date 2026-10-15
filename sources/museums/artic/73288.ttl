@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/ae0c5288-9d96-3386-a767-4ee626f47f10>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/521b22b7-6b01-34d4-a2cf-20532146167e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Chauncey McCormick and Mrs. Richard Ely Danielson" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128> .
+
+<http://data.silknow.org/object/0bc00af0-d639-3445-a23a-1f13a41bc91e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1950.1646" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/358bd65a-4bf7-3535-b652-fb6b71c47ad6> , <http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128/observation/1> , <http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128/category/1> , <http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128> , <http://data.silknow.org/image/5c0f6466-7f79-3f81-a0c4-b7095c963217> , <http://data.silknow.org/event/ae0c5288-9d96-3386-a767-4ee626f47f10> ;
+        dc:identifier       "73288.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/production/358bd65a-4bf7-3535-b652-fb6b71c47ad6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/ec3f52a2-8a9d-3f4e-9848-bef36f5afeac> , <http://data.silknow.org/timespan/1718> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/3cb81344-a2a3-3e21-a18b-b59a43952c12> , <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, gilt-metal-strip-wrapped silk, 4:1 satin weave with supplementary brocading wefts and self-patterned by reversing of faces"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5c0f6466-7f79-3f81-a0c4-b7095c963217> ;
+        ecrm:P3_has_note               "Silk, gilt-metal-strip-wrapped silk, 4:1 satin weave with supplementary brocading wefts and self-patterned by reversing of faces"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128/dimension/1> , <http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128/dimension/2> ;
+        dc:identifier                  "1950.1646" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/73288/panel> .
+
+<http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128> .
+
+<http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "70.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "70.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/place/3cb81344-a2a3-3e21-a18b-b59a43952c12>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "England or France" ;
+        ecrm:P87_is_identified_by  "England or France" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "53" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "53"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/521b22b7-6b01-34d4-a2cf-20532146167e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Chauncey McCormick and Mrs. Richard Ely Danielson" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Chauncey McCormick and Mrs. Richard Ely Danielson" .
+
+<http://data.silknow.org/image/5c0f6466-7f79-3f81-a0c4-b7095c963217>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/73288_0.jpg> , <https://www.artic.edu/iiif/2/50161b72-9b56-ba43-6350-12d3ef4f676a/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, gilt-metal-strip-wrapped silk, 4:1 satin weave with supplementary brocading wefts and self-patterned by reversing of faces"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b2bbc7ef-d8e7-352b-b452-12fa0c815128> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0bc00af0-d639-3445-a23a-1f13a41bc91e> .

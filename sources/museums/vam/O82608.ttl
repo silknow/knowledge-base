@@ -1,0 +1,61 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/ec940625-e756-31c5-ba4a-617d526c2cb6/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Access_to_Images 2003" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ec940625-e756-31c5-ba4a-617d526c2cb6> .
+
+<http://data.silknow.org/object/ec940625-e756-31c5-ba4a-617d526c2cb6>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3773bdc2-87c3-3b27-b06d-82174c5fae56> ;
+        dc:identifier                  "T.76:16-2003" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O82608> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/dd4a0ef3-7ecd-3fa0-9ec0-f82916bfaac7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O82608" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/ec940625-e756-31c5-ba4a-617d526c2cb6/domain/2> , <http://data.silknow.org/image/3773bdc2-87c3-3b27-b06d-82174c5fae56> , <http://data.silknow.org/object/ec940625-e756-31c5-ba4a-617d526c2cb6> , <http://data.silknow.org/object/ec940625-e756-31c5-ba4a-617d526c2cb6/domain/1> , <http://data.silknow.org/production/82ca4bb5-74b0-37cd-a812-1d2c3e1ef192> , <http://data.silknow.org/event/d8e8e043-6df6-32fa-b778-0a786a825a69> ;
+        dc:identifier       "O82608.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/image/3773bdc2-87c3-3b27-b06d-82174c5fae56>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2021MW9954" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O82608_0.jpg> , <https://framemark.vam.ac.uk/collections/2021MW9954/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dd4a0ef3-7ecd-3fa0-9ec0-f82916bfaac7> .
+
+<http://data.silknow.org/object/ec940625-e756-31c5-ba4a-617d526c2cb6/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ec940625-e756-31c5-ba4a-617d526c2cb6> .
+
+<http://data.silknow.org/production/82ca4bb5-74b0-37cd-a812-1d2c3e1ef192>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ec940625-e756-31c5-ba4a-617d526c2cb6> ;
+        ecrm:P126_employed      "rag paper"@en , "silk (textile)"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> .
+
+<http://data.silknow.org/event/d8e8e043-6df6-32fa-b778-0a786a825a69>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ec940625-e756-31c5-ba4a-617d526c2cb6> .

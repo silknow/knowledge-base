@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce> .
+
+<http://data.silknow.org/production/c6a3bfa4-405b-3336-adc5-f22578000141>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce> ;
+        ecrm:P126_employed      "Cotton print"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/19578d8c-9f7c-3731-bd91-a326334f6271> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Warp, linen; weft, cotton. Printed in red from copper plate. Design: dancers around a maypole, village in background; sheep in the foreground. Silk tabs have been applied to the reverse top edge."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce> .
+
+<http://data.silknow.org/image/4575ffcf-aba6-3e7b-afd1-47ffb86ec253>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "802682" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/66981_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/802682/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Printed cotton" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce> .
+
+<http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "210" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "210"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/05231f16-b864-36ae-91f5-04602d861177>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27.545" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/4575ffcf-aba6-3e7b-afd1-47ffb86ec253> , <http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce/observation/1> , <http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce/domain/1> , <http://data.silknow.org/production/c6a3bfa4-405b-3336-adc5-f22578000141> , <http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce> , <http://data.silknow.org/event/9efb8c74-f228-3aac-8e2c-25eae8a697c3> , <http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce/category/1> ;
+        dc:identifier       "66981.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "81.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "81.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Warp, linen; weft, cotton. Printed in red from copper plate. Design: dancers around a maypole, village in background; sheep in the foreground. Silk tabs have been applied to the reverse top edge."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4575ffcf-aba6-3e7b-afd1-47ffb86ec253> ;
+        ecrm:P3_has_note               "Warp, linen; weft, cotton. Printed in red from copper plate. Design: dancers around a maypole, village in background; sheep in the foreground. Silk tabs have been applied to the reverse top edge."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce/dimension/2> , <http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce/dimension/1> ;
+        dc:identifier                  "27.545" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/66981> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/05231f16-b864-36ae-91f5-04602d861177> .
+
+<http://data.silknow.org/event/9efb8c74-f228-3aac-8e2c-25eae8a697c3>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2e47a043-2398-3e25-ad2a-111f2ddb2cce> .

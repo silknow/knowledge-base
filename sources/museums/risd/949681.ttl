@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/947fbabd-e857-37ce-8f3b-4d262c402c72>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a40bf587-4f24-3b65-a25d-62e5665caf1d> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/a40bf587-4f24-3b65-a25d-62e5665caf1d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a40bf587-4f24-3b65-a25d-62e5665caf1d> .
+
+<http://data.silknow.org/object/a40bf587-4f24-3b65-a25d-62e5665caf1d>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/502ef157-5bff-3e7a-8c04-7c5b9f6ead08> ;
+        dc:identifier                  "05.092" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-05092> .
+
+<http://data.silknow.org/actor/c524ce2b-8505-3515-a6d7-9316dd648c93>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Sogo Matsumoto" ;
+        ecrm:P1_is_identified_by  "Gift of Sogo Matsumoto" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000459965544> .
+
+<http://data.silknow.org/event/0d228927-3978-35db-84db-4ba438d17a33>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c524ce2b-8505-3515-a6d7-9316dd648c93> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Sogo Matsumoto" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a40bf587-4f24-3b65-a25d-62e5665caf1d> .
+
+<http://data.silknow.org/object/a40bf587-4f24-3b65-a25d-62e5665caf1d/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a40bf587-4f24-3b65-a25d-62e5665caf1d> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/image/502ef157-5bff-3e7a-8c04-7c5b9f6ead08>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/949681_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/12702.jpg> .
+
+<http://data.silknow.org/object/41bf7fe5-ecd4-3261-ab79-e641e713c897>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 05.092" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/502ef157-5bff-3e7a-8c04-7c5b9f6ead08> , <http://data.silknow.org/production/503740fb-1906-3a9b-85ec-74409f6d2cdd> , <http://data.silknow.org/object/a40bf587-4f24-3b65-a25d-62e5665caf1d> , <http://data.silknow.org/event/0d228927-3978-35db-84db-4ba438d17a33> , <http://data.silknow.org/event/947fbabd-e857-37ce-8f3b-4d262c402c72> , <http://data.silknow.org/object/a40bf587-4f24-3b65-a25d-62e5665caf1d/domain/1> , <http://data.silknow.org/object/a40bf587-4f24-3b65-a25d-62e5665caf1d/category/1> ;
+        dc:identifier       "949681.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/41bf7fe5-ecd4-3261-ab79-e641e713c897> .
+
+<http://data.silknow.org/production/503740fb-1906-3a9b-85ec-74409f6d2cdd>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a40bf587-4f24-3b65-a25d-62e5665caf1d> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .

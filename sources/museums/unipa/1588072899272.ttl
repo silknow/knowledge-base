@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/368be411-aa62-34de-967c-3a719310d857>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1588074375_acireale15" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1588072899272_0.jpg> .
+
+<http://data.silknow.org/object/83a0f0f2-c5cd-3c87-82da-6a38ca5190ad>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Assente"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c6d136a8-0ed1-37b8-9ab5-300924c85655> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Assente"@it .
+
+<http://data.silknow.org/object/34e95bcd-e39c-3de8-b04c-3266fc727167>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1588072899272" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/a1a41be6-5bed-3095-aae3-f939c24a2eb7> , <http://data.silknow.org/image/368be411-aa62-34de-967c-3a719310d857> , <http://data.silknow.org/object/c6d136a8-0ed1-37b8-9ab5-300924c85655> , <http://data.silknow.org/object/c6d136a8-0ed1-37b8-9ab5-300924c85655/type/1> , <http://data.silknow.org/production/1b41d0dd-caa9-32ce-b339-6b0addffe895> , <http://data.silknow.org/object/83a0f0f2-c5cd-3c87-82da-6a38ca5190ad> ;
+        dc:identifier       "1588072899272.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/object/c6d136a8-0ed1-37b8-9ab5-300924c85655/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c6d136a8-0ed1-37b8-9ab5-300924c85655> ;
+        ecrm:P42_assigned    "Fondale di crocifisso" .
+
+<http://data.silknow.org/object/c6d136a8-0ed1-37b8-9ab5-300924c85655>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Fine XVIII secolo"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/368be411-aa62-34de-967c-3a719310d857> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/c6d136a8-0ed1-37b8-9ab5-300924c85655/dimension/2> , <http://data.silknow.org/object/c6d136a8-0ed1-37b8-9ab5-300924c85655/dimension/1> ;
+        dc:identifier                  "1588072899272" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/c6d136a8-0ed1-37b8-9ab5-300924c85655/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "265" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "265"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/1b41d0dd-caa9-32ce-b339-6b0addffe895>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c6d136a8-0ed1-37b8-9ab5-300924c85655> ;
+        ecrm:P32_used_general_technique
+                "Raso da 8 ricamato"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1776_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2523118/> .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/34e95bcd-e39c-3de8-b04c-3266fc727167> .
+
+<http://data.silknow.org/actor/5d9495a8-17c8-3124-8993-29bf90ea9225>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Acireale, Museo della Basilica di San Sebastiano" ;
+        ecrm:P1_is_identified_by  "Acireale, Museo della Basilica di San Sebastiano" .
+
+<http://data.silknow.org/event/a1a41be6-5bed-3095-aae3-f939c24a2eb7>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/5d9495a8-17c8-3124-8993-29bf90ea9225> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c6d136a8-0ed1-37b8-9ab5-300924c85655> .
+
+<https://sws.geonames.org/2523118/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/c6d136a8-0ed1-37b8-9ab5-300924c85655/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "69" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "69"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

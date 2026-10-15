@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ea04e0cc-320e-3db2-92f5-47040d9af026> .
+
+<http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8> .
+
+<http://data.silknow.org/production/a71acbac-9b9e-3ac5-9623-e3518cd102e2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "estampación mecánica"@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> , <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8> .
+
+<http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Estampat singular amb la representació de l'esglèsia de Notre-Dame de París."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8> .
+
+<http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Estampat singular amb la representació de l'esglèsia de Notre-Dame de París."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d55d2f1b-312d-3d20-a6d4-daf96aa03e6a> ;
+        ecrm:P3_has_note               "Estampat singular amb la representació de l'esglèsia de Notre-Dame de París."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/1c1f2921-0790-3133-a43f-ade18ebd6a73> ;
+        dc:identifier                  "10766" .
+
+<http://data.silknow.org/image/1c1f2921-0790-3133-a43f-ade18ebd6a73>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "catedral de Notre-Dame, París"@es ;
+        ecrm:P3_has_note  "catedral de Notre-Dame, París"@es .
+
+<http://data.silknow.org/actor/1f39da6d-df1b-3af3-89b7-695223d70c50>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Padrós, Conrado" ;
+        ecrm:P1_is_identified_by  "Padrós, Conrado" .
+
+<http://data.silknow.org/event/c6a8cd5e-93af-338c-ad0b-88674aadd00f>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8> .
+
+<http://data.silknow.org/event/acf923a6-70c8-366e-92e9-872f2bdce92e>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/1f39da6d-df1b-3af3-89b7-695223d70c50> ;
+        ecrm:P23_transferred_title_from
+                "Padrós, Conrado" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8> ;
+        ecrm:P3_has_note               "donacions" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/d55d2f1b-312d-3d20-a6d4-daf96aa03e6a>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033160" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27493_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033160.jpg> .
+
+<http://data.silknow.org/object/ea04e0cc-320e-3db2-92f5-47040d9af026>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27493" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/d55d2f1b-312d-3d20-a6d4-daf96aa03e6a> , <http://data.silknow.org/event/acf923a6-70c8-366e-92e9-872f2bdce92e> , <http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8> , <http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8/observation/1> , <http://data.silknow.org/event/c6a8cd5e-93af-338c-ad0b-88674aadd00f> , <http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8/domain/1> , <http://data.silknow.org/production/a71acbac-9b9e-3ac5-9623-e3518cd102e2> , <http://data.silknow.org/object/dfd2bfe8-a6a1-30a5-baa9-8710a3fd46e8/category/1> ;
+        dc:identifier       "27493.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

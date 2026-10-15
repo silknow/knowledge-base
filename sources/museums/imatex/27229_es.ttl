@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dfd05850-c0c4-3e5e-9750-16c24cb33e40> .
+
+<http://data.silknow.org/image/51b69ae4-351f-3088-a67f-530e49cdbcae>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "cuadrúpedos"@es ;
+        ecrm:P3_has_note  "cuadrúpedos"@es .
+
+<http://data.silknow.org/production/86865e8c-edbc-3a44-9d00-e84d57d14907>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/97> , <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> , <http://vocab.getty.edu/aat/300404514> .
+
+<http://data.silknow.org/image/9a97d22c-8a66-32c9-adf4-785be8aca17e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000032892" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27229_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000032892.jpg> .
+
+<http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b> .
+
+<http://data.silknow.org/event/11d2d3ca-0f31-30cc-aff8-7b9d11573979>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b> .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "sembla que conserva els 2 voravius"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9a97d22c-8a66-32c9-adf4-785be8aca17e> ;
+        ecrm:P3_has_note               "sembla que conserva els 2 voravius"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/747> , <http://data.silknow.org/image/51b69ae4-351f-3088-a67f-530e49cdbcae> , <http://data.silknow.org/image/94fec64a-4995-3d30-8499-9d6a895a4c4f> , <http://data.silknow.org/image/e92f096f-a383-3968-ab1c-aaad319abda0> ;
+        dc:identifier                  "15921" .
+
+<http://data.silknow.org/event/486c87b0-5daa-38d6-aece-8dceaac453f5>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- sembla que conserva els 2 voravius"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b> .
+
+<http://data.silknow.org/object/dfd05850-c0c4-3e5e-9750-16c24cb33e40>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27229" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b> , <http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b/observation/1> , <http://data.silknow.org/event/11d2d3ca-0f31-30cc-aff8-7b9d11573979> , <http://data.silknow.org/event/486c87b0-5daa-38d6-aece-8dceaac453f5> , <http://data.silknow.org/image/9a97d22c-8a66-32c9-adf4-785be8aca17e> , <http://data.silknow.org/production/86865e8c-edbc-3a44-9d00-e84d57d14907> , <http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b/domain/1> , <http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b/category/1> ;
+        dc:identifier       "27229.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/94fec64a-4995-3d30-8499-9d6a895a4c4f>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "fuentes"@es ;
+        ecrm:P3_has_note  "fuentes"@es .
+
+<http://data.silknow.org/image/e92f096f-a383-3968-ab1c-aaad319abda0>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "decoración vegetal estilizada"@es ;
+        ecrm:P3_has_note  "decoración vegetal estilizada"@es .
+
+<http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b1e62e5e-9840-324e-9e89-c435d4524a3b> .

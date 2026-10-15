@@ -1,0 +1,61 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/f1d40a47-a842-3089-beb0-067fc8e25ac2>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c1f26f47-bf30-3529-908c-27d39beb673f> .
+
+<http://data.silknow.org/image/dc34f104-fdd7-3028-8e7b-fc9e31baae9d>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2012FP4629" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O257972_0.jpg> , <https://framemark.vam.ac.uk/collections/2012FP4629/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/object/553b33f1-44af-35ba-9d84-e101945b5476>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O257972" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/f1d40a47-a842-3089-beb0-067fc8e25ac2> , <http://data.silknow.org/object/c1f26f47-bf30-3529-908c-27d39beb673f> , <http://data.silknow.org/object/c1f26f47-bf30-3529-908c-27d39beb673f/domain/2> , <http://data.silknow.org/production/c9c10a6a-5805-3210-8b16-f1a109979390> , <http://data.silknow.org/object/c1f26f47-bf30-3529-908c-27d39beb673f/domain/1> , <http://data.silknow.org/image/dc34f104-fdd7-3028-8e7b-fc9e31baae9d> ;
+        dc:identifier       "O257972.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/c1f26f47-bf30-3529-908c-27d39beb673f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c1f26f47-bf30-3529-908c-27d39beb673f> .
+
+<http://data.silknow.org/production/c9c10a6a-5805-3210-8b16-f1a109979390>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c1f26f47-bf30-3529-908c-27d39beb673f> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> .
+
+<http://data.silknow.org/object/c1f26f47-bf30-3529-908c-27d39beb673f>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/dc34f104-fdd7-3028-8e7b-fc9e31baae9d> ;
+        dc:identifier                  "T.401-1993" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O257972> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/553b33f1-44af-35ba-9d84-e101945b5476> .
+
+<http://data.silknow.org/object/c1f26f47-bf30-3529-908c-27d39beb673f/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Interiors" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c1f26f47-bf30-3529-908c-27d39beb673f> .

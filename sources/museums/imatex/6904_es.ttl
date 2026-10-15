@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dfa6147f-e881-376f-a0b0-e5ad42cfb88d> .
+
+<http://data.silknow.org/event/8dd53beb-22d9-3988-a262-9a375188ed51>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086> .
+
+<http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Reproducció estampada d'un teixit sicilià del s. XII, segons consta en el catàleg d'Isabelle Errera \"Catalogue d'etoffes anciennes et modernes\", Brussel·les, 1927. pàg.28."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086> .
+
+<http://data.silknow.org/production/3cfb15cb-34e5-3f15-8bb4-8435638a2db6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086> ;
+        ecrm:P126_employed      "... sin confirmar"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "técnica de estampación"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/e67ca962-cfd0-3502-87cd-877b7776a08b> .
+
+<http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086> .
+
+<http://data.silknow.org/image/b285bc0a-cac4-3b31-a9b2-eb920871cb6a>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000004029" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/6904_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000004029.jpg> .
+
+<http://data.silknow.org/event/b6b65409-c1b5-3cb6-8f75-712e74ff42b3>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/image/25abe062-41e5-3edb-9ab6-6db362258258>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "disposición en retícula"@es ;
+        ecrm:P3_has_note  "disposición en retícula"@es .
+
+<http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086> .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/object/dfa6147f-e881-376f-a0b0-e5ad42cfb88d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 6904" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086/observation/1> , <http://data.silknow.org/event/8dd53beb-22d9-3988-a262-9a375188ed51> , <http://data.silknow.org/image/b285bc0a-cac4-3b31-a9b2-eb920871cb6a> , <http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086> , <http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086/category/1> , <http://data.silknow.org/production/3cfb15cb-34e5-3f15-8bb4-8435638a2db6> , <http://data.silknow.org/event/b6b65409-c1b5-3cb6-8f75-712e74ff42b3> , <http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086/domain/1> ;
+        dc:identifier       "6904.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/19178ffc-c461-321c-b52b-56c7d273c086>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Reproducció estampada d'un teixit sicilià del s. XII, segons consta en el catàleg d'Isabelle Errera \"Catalogue d'etoffes anciennes et modernes\", Brussel·les, 1927. pàg.28."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b285bc0a-cac4-3b31-a9b2-eb920871cb6a> ;
+        ecrm:P3_has_note               "Reproducció estampada d'un teixit sicilià del s. XII, segons consta en el catàleg d'Isabelle Errera \"Catalogue d'etoffes anciennes et modernes\", Brussel·les, 1927. pàg.28."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/25abe062-41e5-3edb-9ab6-6db362258258> , <http://data.silknow.org/image/15b7ad82-577a-31af-8e0f-a0ad026aa6ba> , <http://data.silknow.org/vocabulary/848> ;
+        dc:identifier                  "5756" .
+
+<http://data.silknow.org/image/15b7ad82-577a-31af-8e0f-a0ad026aa6ba>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "imitación diseño medieval"@es ;
+        ecrm:P3_has_note  "imitación diseño medieval"@es .

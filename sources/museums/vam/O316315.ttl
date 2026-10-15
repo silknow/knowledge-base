@@ -1,0 +1,125 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 67 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "170.18"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/dimension/4>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "border maximum" ;
+        rdfs:label          "Depth: 13 in border maximum" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/depth> ;
+        ecrm:P3_has_note    "border maximum" ;
+        ecrm:P90_has_value  "33.02"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/4e40fc10-2b44-385f-82b5-1f7a1692340c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O316315" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/domain/1> , <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/domain/2> , <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/observation/1> , <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5> , <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/observation/2> , <http://data.silknow.org/event/52895550-eba7-3040-8a74-887f7f47bec3> , <http://data.silknow.org/image/d95d3157-779f-3678-9677-20f8d5a85407> , <http://data.silknow.org/production/067e8956-2cab-3735-8885-1212aa0e2548> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> ;
+        dc:identifier       "O316315.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Bed cover of block-printed cotton, made in Europe, 1730-1769"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5> .
+
+<http://data.silknow.org/production/067e8956-2cab-3735-8885-1212aa0e2548>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5> ;
+        ecrm:P126_employed      "Block-printed cotton, backed with linen, silk ribbon"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1730_1769> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6255148/> .
+
+<http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Bed cover" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5> .
+
+<http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "top" ;
+        rdfs:label          "Width: 47 in top" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "top" ;
+        ecrm:P90_has_value  "119.38"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/52895550-eba7-3040-8a74-887f7f47bec3>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5> .
+
+<http://data.silknow.org/image/d95d3157-779f-3678-9677-20f8d5a85407>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2012FP9045" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O316315_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2012FP/2012FP9045.jpg> .
+
+<https://sws.geonames.org/6255148/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Interiors" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4e40fc10-2b44-385f-82b5-1f7a1692340c> .
+
+<http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Bed cover of block-printed cotton. With stems of an exotic flower reserved in white, with a horseshoe-shaped half calyx in red and pink, and long leaves in pencilled blue, all set in a deep madder ground of purple-maroon. Made up from narrow strips, the widest being approximately 21 inches, on a very coarse backing of unbleached linen. The scalloped hanging side of the cover are backed with a finer white linen. Scalloped and the join of the top and sides are bound with yellow silk ribbon."@en , "Bed cover of block-printed cotton, made in Europe, 1730-1769"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d95d3157-779f-3678-9677-20f8d5a85407> ;
+        ecrm:P3_has_note               "Bed cover of block-printed cotton, made in Europe, 1730-1769"@en , "Bed cover of block-printed cotton. With stems of an exotic flower reserved in white, with a horseshoe-shaped half calyx in red and pink, and long leaves in pencilled blue, all set in a deep madder ground of purple-maroon. Made up from narrow strips, the widest being approximately 21 inches, on a very coarse backing of unbleached linen. The scalloped hanging side of the cover are backed with a finer white linen. Scalloped and the join of the top and sides are bound with yellow silk ribbon."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/dimension/3> , <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/dimension/4> , <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/dimension/1> , <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/dimension/2> ;
+        dc:identifier                  "T.198-1965" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O316315> .
+
+<http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "border minimum" ;
+        rdfs:label          "Depth: 12 in border minimum" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/depth> ;
+        ecrm:P3_has_note    "border minimum" ;
+        ecrm:P90_has_value  "30.48"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Bed cover of block-printed cotton. With stems of an exotic flower reserved in white, with a horseshoe-shaped half calyx in red and pink, and long leaves in pencilled blue, all set in a deep madder ground of purple-maroon. Made up from narrow strips, the widest being approximately 21 inches, on a very coarse backing of unbleached linen. The scalloped hanging side of the cover are backed with a finer white linen. Scalloped and the join of the top and sides are bound with yellow silk ribbon."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9ea83aff-ff91-3024-bdbd-09eb7ad310e5> .

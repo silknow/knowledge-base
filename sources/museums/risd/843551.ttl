@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/edfa929e-cc2d-3ea2-a4b5-f2e7b3437fd8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/edfa929e-cc2d-3ea2-a4b5-f2e7b3437fd8> .
+
+<http://data.silknow.org/object/edfa929e-cc2d-3ea2-a4b5-f2e7b3437fd8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "ohi" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/edfa929e-cc2d-3ea2-a4b5-f2e7b3437fd8> .
+
+<http://data.silknow.org/actor/50655d27-5fd6-32b1-bd26-5ca6ad8f026a>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Marshall H. Gould" ;
+        ecrm:P1_is_identified_by  "Gift of Marshall H. Gould" .
+
+<http://data.silknow.org/event/ab1fa809-94ac-31f2-847b-80d21276c3e2>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/edfa929e-cc2d-3ea2-a4b5-f2e7b3437fd8> .
+
+<http://data.silknow.org/event/80a9b6f7-febd-39a8-8e5d-4223bd5b97ef>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/50655d27-5fd6-32b1-bd26-5ca6ad8f026a> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Marshall H. Gould" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/edfa929e-cc2d-3ea2-a4b5-f2e7b3437fd8> .
+
+<http://data.silknow.org/image/38e9616f-94ab-3a6e-a859-ffaec705cbbf>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/843551_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/28765.jpg> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/edfa929e-cc2d-3ea2-a4b5-f2e7b3437fd8>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/38e9616f-94ab-3a6e-a859-ffaec705cbbf> ;
+        dc:identifier                  "46.141" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/ohi-46141> .
+
+<http://data.silknow.org/production/ce803582-3847-3ab4-aa90-04109b5c2ed5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/edfa929e-cc2d-3ea2-a4b5-f2e7b3437fd8> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/51476914-822d-3319-8713-7319527993a8> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .
+
+<http://data.silknow.org/object/1fe18d39-3610-31b0-a08c-c2782497d2de>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 46.141" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/80a9b6f7-febd-39a8-8e5d-4223bd5b97ef> , <http://data.silknow.org/object/edfa929e-cc2d-3ea2-a4b5-f2e7b3437fd8> , <http://data.silknow.org/image/38e9616f-94ab-3a6e-a859-ffaec705cbbf> , <http://data.silknow.org/object/edfa929e-cc2d-3ea2-a4b5-f2e7b3437fd8/category/1> , <http://data.silknow.org/production/ce803582-3847-3ab4-aa90-04109b5c2ed5> , <http://data.silknow.org/event/ab1fa809-94ac-31f2-847b-80d21276c3e2> , <http://data.silknow.org/object/edfa929e-cc2d-3ea2-a4b5-f2e7b3437fd8/domain/1> ;
+        dc:identifier       "843551.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1fe18d39-3610-31b0-a08c-c2782497d2de> .

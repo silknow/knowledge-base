@@ -1,0 +1,100 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/101> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552> .
+
+<http://data.silknow.org/production/665001bf-ace2-36ce-ad4c-9e686760e0b9/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/bbf74fa4-b1b9-3796-96d5-ed81c4b57063> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/production/665001bf-ace2-36ce-ad4c-9e686760e0b9>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552> ;
+        ecrm:P126_employed      "Crocheted in silk thread with silver metal restraining rings"@en , "Silk (thread)"@en ;
+        ecrm:P32_used_general_technique
+                "Crocheting"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1804_1884> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/665001bf-ace2-36ce-ad4c-9e686760e0b9/activity/1> .
+
+<http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Stocking purse made by ballerina Marie Taglioni (1804-1884) for her husband, Count Gilbert de Voisins.   Croched in silk with metal decorative rings."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 440 mm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "44.0"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/bbf74fa4-b1b9-3796-96d5-ed81c4b57063>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Taglioni, Marie" ;
+        ecrm:P1_is_identified_by  "Taglioni, Marie" .
+
+<http://data.silknow.org/actor/08e106e4-fe51-3faa-a111-9ad1f67138a4>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Cyril W Beaumont Bequest" ;
+        ecrm:P1_is_identified_by  "Cyril W Beaumont Bequest" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3b56a983-457b-3212-b00e-2bc6d89eb96e> .
+
+<http://data.silknow.org/collection/4d5eb4be-51a1-3b4b-b061-6688e54a3c37>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Theatre and Performance Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552> ;
+        ecrm:P78_is_identified_by  "Theatre and Performance Collection" .
+
+<http://data.silknow.org/object/3b56a983-457b-3212-b00e-2bc6d89eb96e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O63759" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552> , <http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552/observation/1> , <http://data.silknow.org/event/a51bbc7b-3f18-354e-a475-b23bf88dac6b> , <http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552/observation/2> , <http://data.silknow.org/collection/4d5eb4be-51a1-3b4b-b061-6688e54a3c37> , <http://data.silknow.org/production/665001bf-ace2-36ce-ad4c-9e686760e0b9> ;
+        dc:identifier       "O63759.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/event/a51bbc7b-3f18-354e-a475-b23bf88dac6b>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "One of several bags and accessories made by Marie Taglioni in the Cyril Beaumont Collection. The purse was made by Taglioni for her husband, Count Gilbert de Voisins and came with a note in Margaret Rolfe's hand: \"This purse was made by Marie Taglioni for the Comte de Voisins it was given to Danny by Princess Troubetzkoi.  Mrs Phelps said it was to (sic) old to clean or wash and was droping (sic) into holes - It belongs to me Margaret.\"  Danny was Margaret Rolfe's grandmother.  \nThe purse is part of a unique collection of memorabilia and personal effects which evoke  Marie Taglioni in the last decades of her life.  She was a keen needlewoman and the collection contains both examples of her own work and her personal sewing accessories.  A collection of Taglioni memorabilia was amassed by Margaret Rolfe, the granddaughter of Taglioni's closest friend in London, Mrs Boggs Rolfe; she attended Taglioni's dancing classes and received many gifts of Taglioni memorabilia, both from Taglioni herself and from her grandmother.  These she passed to Cyril Beaumont, probably for the London Archives of the Dance (a number of the objects were referred to in \"The London Archives of the Dance and some of its Treasures\" by Cyril Beaumont, Ballet Annual, first issue, Adam & Charles Black, London, 1947, p110); the Archives never achieved an independent home and part of the collection, including the Taglioni memorabilia, was stored with Cyril Beaumont, where it became inextricably mixed with his own collection and came to the Museum as part of the Cyril Beaumont Bequest."@en ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/08e106e4-fe51-3faa-a111-9ad1f67138a4> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Cyril W Beaumont Bequest" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552> ;
+        ecrm:P3_has_note               "One of several bags and accessories made by Marie Taglioni in the Cyril Beaumont Collection. The purse was made by Taglioni for her husband, Count Gilbert de Voisins and came with a note in Margaret Rolfe's hand: \"This purse was made by Marie Taglioni for the Comte de Voisins it was given to Danny by Princess Troubetzkoi.  Mrs Phelps said it was to (sic) old to clean or wash and was droping (sic) into holes - It belongs to me Margaret.\"  Danny was Margaret Rolfe's grandmother.  \nThe purse is part of a unique collection of memorabilia and personal effects which evoke  Marie Taglioni in the last decades of her life.  She was a keen needlewoman and the collection contains both examples of her own work and her personal sewing accessories.  A collection of Taglioni memorabilia was amassed by Margaret Rolfe, the granddaughter of Taglioni's closest friend in London, Mrs Boggs Rolfe; she attended Taglioni's dancing classes and received many gifts of Taglioni memorabilia, both from Taglioni herself and from her grandmother.  These she passed to Cyril Beaumont, probably for the London Archives of the Dance (a number of the objects were referred to in \"The London Archives of the Dance and some of its Treasures\" by Cyril Beaumont, Ballet Annual, first issue, Adam & Charles Black, London, 1947, p110); the Archives never achieved an independent home and part of the collection, including the Taglioni memorabilia, was stored with Cyril Beaumont, where it became inextricably mixed with his own collection and came to the Museum as part of the Cyril Beaumont Bequest."@en .
+
+<http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552>
+        a                       ecrm:E22_Man-Made_Object ;
+        rdfs:comment            "Stocking purse made by ballerina Marie Taglioni (1804-1884) for her husband, Count Gilbert de Voisins.   Croched in silk with metal decorative rings."@en , "Stocking purse croched in stripes of sand, red and brown silk, ending in self tassels, with silver star-pierced rings at either end."@en ;
+        ecrm:P3_has_note        "Stocking purse made by ballerina Marie Taglioni (1804-1884) for her husband, Count Gilbert de Voisins.   Croched in silk with metal decorative rings."@en , "Stocking purse croched in stripes of sand, red and brown silk, ending in self tassels, with silver star-pierced rings at either end."@en ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552/dimension/1> ;
+        dc:identifier           "S.814-2001" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O63759> .
+
+<http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Stocking purse croched in stripes of sand, red and brown silk, ending in self tassels, with silver star-pierced rings at either end."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f5b5db55-9f47-32e5-9d32-279b3d5c2552> .

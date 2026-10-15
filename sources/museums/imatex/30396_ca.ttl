@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e1a0847d-2688-3c4b-996e-29d9e9a03c25> .
+
+<http://data.silknow.org/production/e2f55a25-3c0b-33cc-a53a-2d2e854eb87b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e3ea0755-f917-33e0-b7e4-fb6aa95dcc98> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "domàs"@ca , "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> .
+
+<http://data.silknow.org/object/e3ea0755-f917-33e0-b7e4-fb6aa95dcc98>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/06aef9fd-9ae3-388a-b5ab-e87a0e422b94> ;
+        dc:identifier                  "21770" .
+
+<http://data.silknow.org/object/e3ea0755-f917-33e0-b7e4-fb6aa95dcc98/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e3ea0755-f917-33e0-b7e4-fb6aa95dcc98> .
+
+<http://data.silknow.org/image/06aef9fd-9ae3-388a-b5ab-e87a0e422b94>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000036602" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/30396_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000036602.jpg> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/e3ea0755-f917-33e0-b7e4-fb6aa95dcc98/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e3ea0755-f917-33e0-b7e4-fb6aa95dcc98> .
+
+<http://data.silknow.org/event/dd898bf1-50f4-341c-9d85-8bf78175972a>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e3ea0755-f917-33e0-b7e4-fb6aa95dcc98> .
+
+<http://data.silknow.org/object/e1a0847d-2688-3c4b-996e-29d9e9a03c25>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 30396" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e3ea0755-f917-33e0-b7e4-fb6aa95dcc98/domain/1> , <http://data.silknow.org/event/dd898bf1-50f4-341c-9d85-8bf78175972a> , <http://data.silknow.org/production/e2f55a25-3c0b-33cc-a53a-2d2e854eb87b> , <http://data.silknow.org/object/e3ea0755-f917-33e0-b7e4-fb6aa95dcc98> , <http://data.silknow.org/object/e3ea0755-f917-33e0-b7e4-fb6aa95dcc98/category/1> , <http://data.silknow.org/image/06aef9fd-9ae3-388a-b5ab-e87a0e422b94> , <http://data.silknow.org/event/d8d98d32-3ee1-39d4-8198-f1019b6aca9d> ;
+        dc:identifier       "30396.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/d8d98d32-3ee1-39d4-8198-f1019b6aca9d>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e3ea0755-f917-33e0-b7e4-fb6aa95dcc98> .

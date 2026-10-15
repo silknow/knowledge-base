@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/d35bc6cf-b49f-3786-8d9e-c28fe905b986/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d35bc6cf-b49f-3786-8d9e-c28fe905b986> .
+
+<http://data.silknow.org/object/d35bc6cf-b49f-3786-8d9e-c28fe905b986>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Tony Selmersheim, 1920 (vers), Cornille Frères"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5bfebdd6-5570-3550-aec4-9e37158f4d5b> ;
+        dc:identifier                  "22009" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/915202> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/cd7cfcc9-0288-3d9a-b980-7577c7b4f604>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat Cornille Frères, 1920" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d35bc6cf-b49f-3786-8d9e-c28fe905b986> .
+
+<http://data.silknow.org/production/ae9da2a0-73b5-370f-a6bd-ac290994032c>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Tony Selmersheim, 1920 (vers), Cornille Frères" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d35bc6cf-b49f-3786-8d9e-c28fe905b986> ;
+        ecrm:P126_employed      "Velours fond satin."@fr ;
+        ecrm:P3_has_note        "Tony Selmersheim, 1920 (vers), Cornille Frères" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/ce751466-09f8-37d9-a181-bfa8a6fb513c> .
+
+<http://data.silknow.org/image/5bfebdd6-5570-3550-aec4-9e37158f4d5b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/915202_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/fef24ad5-d99c-40b3-b5e4-6c616a78e730.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a7ba53e6-1617-38ca-b2c5-f23710b7802a> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/d35bc6cf-b49f-3786-8d9e-c28fe905b986> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/a7ba53e6-1617-38ca-b2c5-f23710b7802a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 22009" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/d35bc6cf-b49f-3786-8d9e-c28fe905b986/category/1> , <http://data.silknow.org/image/5bfebdd6-5570-3550-aec4-9e37158f4d5b> , <http://data.silknow.org/object/d35bc6cf-b49f-3786-8d9e-c28fe905b986> , <http://data.silknow.org/event/cd7cfcc9-0288-3d9a-b980-7577c7b4f604> , <http://data.silknow.org/production/ae9da2a0-73b5-370f-a6bd-ac290994032c> ;
+        dc:identifier       "915202.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

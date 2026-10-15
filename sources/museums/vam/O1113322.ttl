@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/99fe270c-e341-32da-96c8-3559520cdf16/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Silk programme on cream silk in black typography.  Produced for Mozart's 'Don Juan', musical director Herr Strauss, also advertising Monday's performance of 'Der Freischutz', The Prince's Theatre, 1st May 1840."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/99fe270c-e341-32da-96c8-3559520cdf16> .
+
+<http://data.silknow.org/collection/4d5eb4be-51a1-3b4b-b061-6688e54a3c37>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Theatre and Performance Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/99fe270c-e341-32da-96c8-3559520cdf16> ;
+        ecrm:P78_is_identified_by  "Theatre and Performance Collection" .
+
+<http://data.silknow.org/object/10504f77-b306-34b8-b422-627ad1baeeb3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O1113322" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/99fe270c-e341-32da-96c8-3559520cdf16/observation/1> , <http://data.silknow.org/production/0c5de5df-08dd-3749-aa34-2e59f9565e95> , <http://data.silknow.org/image/d5996359-77ab-398a-b481-a93dc7b52278> , <http://data.silknow.org/collection/4d5eb4be-51a1-3b4b-b061-6688e54a3c37> , <http://data.silknow.org/object/99fe270c-e341-32da-96c8-3559520cdf16> , <http://data.silknow.org/event/73c31248-7147-3904-b30b-239215aa5ace> ;
+        dc:identifier       "O1113322.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/event/73c31248-7147-3904-b30b-239215aa5ace>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/99fe270c-e341-32da-96c8-3559520cdf16> .
+
+<http://data.silknow.org/object/99fe270c-e341-32da-96c8-3559520cdf16>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk programme on cream silk in black typography.  Produced for Mozart's 'Don Juan', musical director Herr Strauss, also advertising Monday's performance of 'Der Freischutz', The Prince's Theatre, 1st May 1840."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d5996359-77ab-398a-b481-a93dc7b52278> ;
+        ecrm:P3_has_note               "Silk programme on cream silk in black typography.  Produced for Mozart's 'Don Juan', musical director Herr Strauss, also advertising Monday's performance of 'Der Freischutz', The Prince's Theatre, 1st May 1840."@en ;
+        dc:identifier                  "S.236-1981" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O1113322> .
+
+<http://data.silknow.org/production/0c5de5df-08dd-3749-aa34-2e59f9565e95>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/99fe270c-e341-32da-96c8-3559520cdf16> ;
+        ecrm:P126_employed      "Printed silk"@en , "silk (textile)"@en , "ink"@en ;
+        ecrm:P32_used_general_technique
+                "printed"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1840_05_01> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/image/d5996359-77ab-398a-b481-a93dc7b52278>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2014GX0327" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O1113322_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2014GX/2014GX0327.jpg> .
+
+<http://data.silknow.org/object/99fe270c-e341-32da-96c8-3559520cdf16/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Silk programme" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/99fe270c-e341-32da-96c8-3559520cdf16> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/10504f77-b306-34b8-b422-627ad1baeeb3> .

@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/8581696/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/ed8714af-34df-3ba1-a7da-0bd6bf4d865a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Henri Labauge, 1917" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/bc5c14f1-24d9-37c6-9e98-9571114ce3ae> .
+
+<http://data.silknow.org/object/bc5c14f1-24d9-37c6-9e98-9571114ce3ae>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Benito, 1916 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8b3c992c-9c88-36bc-99bd-c8ff91301a23> ;
+        dc:identifier                  "20685.A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/902088> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/8b3c992c-9c88-36bc-99bd-c8ff91301a23>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/902088_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/6e33d12b-f29d-4774-a8b7-8c1d8d722f36.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3e500254-8131-3183-80f3-888da81a347d> .
+
+<http://data.silknow.org/production/74395bb2-4df2-3258-9d5c-756be5615092>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Benito, 1916 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bc5c14f1-24d9-37c6-9e98-9571114ce3ae> ;
+        ecrm:P126_employed      "toile de soie, impression à la planche de bois,"@fr ;
+        ecrm:P3_has_note        "Benito, 1916 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/a49c1d9f-8695-3886-aad0-3ea214a9e7e5> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/8581696/> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/bc5c14f1-24d9-37c6-9e98-9571114ce3ae> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/3e500254-8131-3183-80f3-888da81a347d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 20685.A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/74395bb2-4df2-3258-9d5c-756be5615092> , <http://data.silknow.org/event/ed8714af-34df-3ba1-a7da-0bd6bf4d865a> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/8b3c992c-9c88-36bc-99bd-c8ff91301a23> , <http://data.silknow.org/object/bc5c14f1-24d9-37c6-9e98-9571114ce3ae> ;
+        dc:identifier       "902088.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

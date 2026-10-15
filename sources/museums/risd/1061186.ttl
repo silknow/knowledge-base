@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/a518d448-956a-3edb-b848-5198b3d786ac>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1061186_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/38593.jpg> .
+
+<http://data.silknow.org/object/7e2c3191-532d-35c5-a096-20784cd89f04>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 51.556.7" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c9ca6b3c-be44-3674-9ded-20f95ed731cc/domain/1> , <http://data.silknow.org/production/593ed8da-2f8a-3e6f-9804-baea727f4c91> , <http://data.silknow.org/event/caad97cd-6b58-3861-98ac-815c10c9d269> , <http://data.silknow.org/event/cf7aae2e-4693-346c-84c7-7e7c2d6c93d4> , <http://data.silknow.org/image/a518d448-956a-3edb-b848-5198b3d786ac> , <http://data.silknow.org/object/c9ca6b3c-be44-3674-9ded-20f95ed731cc/category/1> , <http://data.silknow.org/object/c9ca6b3c-be44-3674-9ded-20f95ed731cc> ;
+        dc:identifier       "1061186.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/c9ca6b3c-be44-3674-9ded-20f95ed731cc>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a518d448-956a-3edb-b848-5198b3d786ac> ;
+        dc:identifier                  "51.556.7" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/ribbon-515567> .
+
+<http://data.silknow.org/event/cf7aae2e-4693-346c-84c7-7e7c2d6c93d4>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a9ba197c-6f38-3f5f-abc0-673345958c16> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Thora Buckley" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c9ca6b3c-be44-3674-9ded-20f95ed731cc> .
+
+<http://data.silknow.org/actor/a9ba197c-6f38-3f5f-abc0-673345958c16>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Thora Buckley" ;
+        ecrm:P1_is_identified_by  "Gift of Thora Buckley" .
+
+<http://data.silknow.org/object/c9ca6b3c-be44-3674-9ded-20f95ed731cc/category/1>
+        a                    silk:T35 ;
+        silk:L1              "ribbon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c9ca6b3c-be44-3674-9ded-20f95ed731cc> .
+
+<http://data.silknow.org/object/c9ca6b3c-be44-3674-9ded-20f95ed731cc/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c9ca6b3c-be44-3674-9ded-20f95ed731cc> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7e2c3191-532d-35c5-a096-20784cd89f04> .
+
+<http://data.silknow.org/production/593ed8da-2f8a-3e6f-9804-baea727f4c91>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c9ca6b3c-be44-3674-9ded-20f95ed731cc> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1700_1809> .
+
+<http://data.silknow.org/event/caad97cd-6b58-3861-98ac-815c10c9d269>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c9ca6b3c-be44-3674-9ded-20f95ed731cc> .

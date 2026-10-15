@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/f6d1313b-9a8e-3dfe-8119-e6da726bcea8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "PR 2010.10" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/15138923-e5eb-364f-8078-39794e696549> .
+
+<http://data.silknow.org/object/15138923-e5eb-364f-8078-39794e696549/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/15138923-e5eb-364f-8078-39794e696549> .
+
+<http://data.silknow.org/object/15138923-e5eb-364f-8078-39794e696549>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1770-1780, Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/846b05d9-e61e-3d20-92c8-2bee8f34b1de> ;
+        dc:identifier                  "PR 2010.10.31" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910803> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/19ace874-ee07-38d6-bed6-3602757cb1a7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record PR 2010.10.31" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/15138923-e5eb-364f-8078-39794e696549> , <http://data.silknow.org/image/846b05d9-e61e-3d20-92c8-2bee8f34b1de> , <http://data.silknow.org/object/15138923-e5eb-364f-8078-39794e696549/category/1> , <http://data.silknow.org/production/645af335-02c6-3b1a-b28f-0b1bc3b858ee> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/f6d1313b-9a8e-3dfe-8119-e6da726bcea8> ;
+        dc:identifier       "910803.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/645af335-02c6-3b1a-b28f-0b1bc3b858ee>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1770-1780, Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/15138923-e5eb-364f-8078-39794e696549> ;
+        ecrm:P126_employed      "Taffetas de soie broché"@fr ;
+        ecrm:P3_has_note        "France, 1770-1780, Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1770_1780> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/19ace874-ee07-38d6-bed6-3602757cb1a7> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/15138923-e5eb-364f-8078-39794e696549> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/image/846b05d9-e61e-3d20-92c8-2bee8f34b1de>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910803_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/65c8cdbe-a30a-4c00-974f-0687290b95ad.jpg> .

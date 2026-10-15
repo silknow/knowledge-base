@@ -1,0 +1,91 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1694008/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9> .
+
+<http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9> .
+
+<http://data.silknow.org/actor/9d4076c5-48eb-3a7e-9c1f-5c501538ce4e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of the estate of Margarethe L. Dwight" ;
+        ecrm:P1_is_identified_by  "Gift of the estate of Margarethe L. Dwight" .
+
+<http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "68.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "68.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "116.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "116.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9336c5af-d118-392f-946f-05fba7ec4024> .
+
+<http://data.silknow.org/image/567c5fdf-f125-39ac-88f7-7dba1bb1814f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/955036_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/12725.jpg> .
+
+<http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/567c5fdf-f125-39ac-88f7-7dba1bb1814f> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9/dimension/1> , <http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9/dimension/2> ;
+        dc:identifier                  "66.016.51" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-6601651> .
+
+<http://data.silknow.org/production/1a20d22d-9a1c-3017-9e73-f902cb53f407>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9> ;
+        ecrm:P126_employed      "piña fiber"@en , "Piña (pineapple-leaf fiber), silk, brocade"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1694008/> .
+
+<http://data.silknow.org/event/2823c2a5-741d-38cf-afb5-74a3d763054e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/9d4076c5-48eb-3a7e-9c1f-5c501538ce4e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of the estate of Margarethe L. Dwight" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9> .
+
+<http://data.silknow.org/event/0fbcabc3-1de2-3222-b770-3443427aed90>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9> .
+
+<http://data.silknow.org/object/9336c5af-d118-392f-946f-05fba7ec4024>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 66.016.51" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9> , <http://data.silknow.org/event/2823c2a5-741d-38cf-afb5-74a3d763054e> , <http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9/category/1> , <http://data.silknow.org/event/0fbcabc3-1de2-3222-b770-3443427aed90> , <http://data.silknow.org/image/567c5fdf-f125-39ac-88f7-7dba1bb1814f> , <http://data.silknow.org/production/1a20d22d-9a1c-3017-9e73-f902cb53f407> , <http://data.silknow.org/object/1a4e56ef-64c7-3906-836f-8be96f59bcb9/domain/1> ;
+        dc:identifier       "955036.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

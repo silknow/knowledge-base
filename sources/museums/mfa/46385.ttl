@@ -1,0 +1,98 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/2264397/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/5f107044-92d0-3159-850c-b5583124493e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "1938, sold by Amy M. Pleadwell, Boston, to the MFA for $7. (Accession Date: January 13) / Textile Special Fund" ;
+        ecrm:P1_is_identified_by  "1938, sold by Amy M. Pleadwell, Boston, to the MFA for $7. (Accession Date: January 13) / Textile Special Fund" .
+
+<http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "84.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "84.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/987396f6-1793-318b-980d-5f5970d7dbed>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6> ;
+        ecrm:P126_employed      "Cotton print"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/c8685870-b921-3688-95e6-dedb0910e71a> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2264397/> .
+
+<http://data.silknow.org/image/73744f1b-2f6e-3f50-8a10-27190eda1710>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "817826" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/46385_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/817826/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/event/ab3f1948-2cf7-3170-83c9-d46a40369a38>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6> .
+
+<http://data.silknow.org/object/9bd95157-00b5-3360-b640-3fb16b7f3fe9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 38.9" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6> , <http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6/domain/1> , <http://data.silknow.org/event/ab3f1948-2cf7-3170-83c9-d46a40369a38> , <http://data.silknow.org/image/73744f1b-2f6e-3f50-8a10-27190eda1710> , <http://data.silknow.org/production/987396f6-1793-318b-980d-5f5970d7dbed> , <http://data.silknow.org/event/e8cfde1c-b99f-391d-8349-f9cd2fb2bc48> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6/category/1> ;
+        dc:identifier       "46385.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Printed cotton: Le Charmeur d'oiseaux" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/73744f1b-2f6e-3f50-8a10-27190eda1710> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6/dimension/2> , <http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6/dimension/1> ;
+        dc:identifier                  "38.9" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/46385> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9bd95157-00b5-3360-b640-3fb16b7f3fe9> .
+
+<http://data.silknow.org/event/e8cfde1c-b99f-391d-8349-f9cd2fb2bc48>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/5f107044-92d0-3159-850c-b5583124493e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "1938, sold by Amy M. Pleadwell, Boston, to the MFA for $7.  (Accession Date: January 13, 1938) / Textile Special Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6> .
+
+<http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "123" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "123"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/95bd9ab0-2983-3396-83e4-2484db56d7e6> .

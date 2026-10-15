@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/a099bdaf-fb2b-3370-a8fa-d7c7d7f224f3>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e20dba78-5f13-3523-aa3a-6d601dfdafee> .
+
+<http://data.silknow.org/production/137020cd-5185-3702-bd80-8b9ab162f5de>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e20dba78-5f13-3523-aa3a-6d601dfdafee> ;
+        ecrm:P126_employed      "silk and metallic thread and wire, compound weave"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1774_1792> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/3f5b6d40-be60-3006-bd64-ef020a622883>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 11.251" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/b9b0ba9d-b4d1-3842-843e-024e9ed24b97> , <http://data.silknow.org/image/eb197ed7-4579-374e-bdd3-52dc3a79dfdd> , <http://data.silknow.org/object/e20dba78-5f13-3523-aa3a-6d601dfdafee> , <http://data.silknow.org/event/a099bdaf-fb2b-3370-a8fa-d7c7d7f224f3> , <http://data.silknow.org/object/e20dba78-5f13-3523-aa3a-6d601dfdafee/domain/1> , <http://data.silknow.org/production/137020cd-5185-3702-bd80-8b9ab162f5de> , <http://data.silknow.org/object/e20dba78-5f13-3523-aa3a-6d601dfdafee/category/1> ;
+        dc:identifier       "775316.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/e20dba78-5f13-3523-aa3a-6d601dfdafee/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e20dba78-5f13-3523-aa3a-6d601dfdafee> .
+
+<http://data.silknow.org/object/e20dba78-5f13-3523-aa3a-6d601dfdafee/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Galloon fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e20dba78-5f13-3523-aa3a-6d601dfdafee> .
+
+<http://data.silknow.org/image/eb197ed7-4579-374e-bdd3-52dc3a79dfdd>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/775316_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/44756.jpg> .
+
+<http://data.silknow.org/event/b9b0ba9d-b4d1-3842-843e-024e9ed24b97>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e20dba78-5f13-3523-aa3a-6d601dfdafee> .
+
+<http://data.silknow.org/object/e20dba78-5f13-3523-aa3a-6d601dfdafee>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/eb197ed7-4579-374e-bdd3-52dc3a79dfdd> ;
+        dc:identifier                  "11.251" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/galloon-fragment-11251> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Gustav Radeke" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3f5b6d40-be60-3006-bd64-ef020a622883> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .

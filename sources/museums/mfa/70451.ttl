@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of brocade" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe> .
+
+<http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "67" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "67"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/59b39e63-968e-319a-b09e-bb5e8f79a6bb>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "815979" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/70451_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/815979/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/ef5c99c1-7857-38aa-bdf5-a15c447e5232>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe> ;
+        ecrm:P126_employed      "Linen and cotton brocade (brocatelle)"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1700> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/3bc1e684-ab9f-30cd-a55e-c0e10b8f5d28> .
+
+<http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "54.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "54.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/46557ac9-6d42-3c35-b510-8e31fd03e02f> .
+
+<http://data.silknow.org/object/46557ac9-6d42-3c35-b510-8e31fd03e02f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 96.640" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe/category/1> , <http://data.silknow.org/image/59b39e63-968e-319a-b09e-bb5e8f79a6bb> , <http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe/observation/1> , <http://data.silknow.org/event/22bb2003-17bb-3ac5-a33b-7e5b0698b18f> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe/domain/1> , <http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe> , <http://data.silknow.org/production/ef5c99c1-7857-38aa-bdf5-a15c447e5232> ;
+        dc:identifier       "70451.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/event/22bb2003-17bb-3ac5-a33b-7e5b0698b18f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe> .
+
+<http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe> .
+
+<http://data.silknow.org/place/3bc1e684-ab9f-30cd-a55e-c0e10b8f5d28>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Italian or Spanish" ;
+        ecrm:P87_is_identified_by  "Italian or Spanish" .
+
+<http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "White silk ground. The design of an ogival frame work, composed of large leaves, connected by forms detailed by squares and triangles, and enclosing graceful vases filled with carnations and other flowers, is of white silk and dark red satin."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/59b39e63-968e-319a-b09e-bb5e8f79a6bb> ;
+        ecrm:P3_has_note               "White silk ground. The design of an ogival frame work, composed of large leaves, connected by forms detailed by squares and triangles, and enclosing graceful vases filled with carnations and other flowers, is of white silk and dark red satin."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe/dimension/2> , <http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe/dimension/1> ;
+        dc:identifier                  "96.640" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/70451> .
+
+<http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "White silk ground. The design of an ogival frame work, composed of large leaves, connected by forms detailed by squares and triangles, and enclosing graceful vases filled with carnations and other flowers, is of white silk and dark red satin."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/bc0330df-5a90-3d2a-b642-5efb9ac7e9fe> .

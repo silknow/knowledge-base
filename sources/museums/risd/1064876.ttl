@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "66" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "66"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/19899078-739b-3b38-a1ea-ff5562b2fe4f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6255148/> .
+
+<http://data.silknow.org/actor/965c159f-f2fd-3207-b991-c1651c6c4214>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mr. and Mrs. Archer Iselin" ;
+        ecrm:P1_is_identified_by  "Gift of Mr. and Mrs. Archer Iselin" .
+
+<http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9> .
+
+<https://sws.geonames.org/6255148/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/dc7570a9-73e2-3a36-ba9c-ff673e521136>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/965c159f-f2fd-3207-b991-c1651c6c4214> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mr. and Mrs. Archer Iselin" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9> .
+
+<http://data.silknow.org/object/1743e1b4-9549-36c3-9266-bb07b61b037b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 81.286.2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9/domain/1> , <http://data.silknow.org/event/dc7570a9-73e2-3a36-ba9c-ff673e521136> , <http://data.silknow.org/production/19899078-739b-3b38-a1ea-ff5562b2fe4f> , <http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9> , <http://data.silknow.org/event/752734b6-9b88-304f-8a30-4554b3def609> , <http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9/category/1> ;
+        dc:identifier       "1064876.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9>
+        a                       ecrm:E22_Man-Made_Object ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9/dimension/1> , <http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9/dimension/2> ;
+        dc:identifier           "81.286.2" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/pillow-812862> .
+
+<http://data.silknow.org/event/752734b6-9b88-304f-8a30-4554b3def609>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9> .
+
+<http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "pillow" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1743e1b4-9549-36c3-9266-bb07b61b037b> .
+
+<http://data.silknow.org/object/ac57c842-f4a8-3bde-852f-802fd7ce10b9/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "43.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "43.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

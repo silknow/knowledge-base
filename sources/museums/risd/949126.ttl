@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/c277d5b2-75b4-3a6a-b39a-375686d529a7/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c277d5b2-75b4-3a6a-b39a-375686d529a7> .
+
+<http://data.silknow.org/object/c277d5b2-75b4-3a6a-b39a-375686d529a7/category/1>
+        a                    silk:T35 ;
+        silk:L1              "textile sample" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c277d5b2-75b4-3a6a-b39a-375686d529a7> .
+
+<http://data.silknow.org/actor/2ef6f93c-7127-392d-9fca-c39b72ff84c0>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of General Tire and Rubber Company" ;
+        ecrm:P1_is_identified_by  "Gift of General Tire and Rubber Company" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000121851435> .
+
+<http://data.silknow.org/event/3f127489-1246-3e4c-a2bf-bd21c7ae7a2d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c277d5b2-75b4-3a6a-b39a-375686d529a7> .
+
+<http://data.silknow.org/image/dc416191-4463-383d-b014-58d7fe4ee541>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/949126_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/17476.jpg> .
+
+<http://data.silknow.org/production/b149fc30-a104-38b6-9d9d-f6c63a406e0b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c277d5b2-75b4-3a6a-b39a-375686d529a7> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6252001/> .
+
+<http://data.silknow.org/object/e2bff790-e54d-30b9-967f-81fdea76a923>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 83.218.829" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c277d5b2-75b4-3a6a-b39a-375686d529a7/domain/1> , <http://data.silknow.org/production/b149fc30-a104-38b6-9d9d-f6c63a406e0b> , <http://data.silknow.org/object/c277d5b2-75b4-3a6a-b39a-375686d529a7> , <http://data.silknow.org/event/3f127489-1246-3e4c-a2bf-bd21c7ae7a2d> , <http://data.silknow.org/event/1e66d5ee-19b8-3019-8369-69225e3c8daa> , <http://data.silknow.org/image/dc416191-4463-383d-b014-58d7fe4ee541> , <http://data.silknow.org/object/c277d5b2-75b4-3a6a-b39a-375686d529a7/category/1> ;
+        dc:identifier       "949126.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<https://sws.geonames.org/6252001/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/c277d5b2-75b4-3a6a-b39a-375686d529a7>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/dc416191-4463-383d-b014-58d7fe4ee541> ;
+        dc:identifier                  "83.218.829" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-sample-83218829> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e2bff790-e54d-30b9-967f-81fdea76a923> .
+
+<http://data.silknow.org/event/1e66d5ee-19b8-3019-8369-69225e3c8daa>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/2ef6f93c-7127-392d-9fca-c39b72ff84c0> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of General Tire and Rubber Company" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c277d5b2-75b4-3a6a-b39a-375686d529a7> .

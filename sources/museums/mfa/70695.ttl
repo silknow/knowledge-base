@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/d3869367-eda9-3e8d-bd39-f0866037df2c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c> ;
+        ecrm:P126_employed      "Silk and chenille brocade with gold-colored spangles"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1725> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/3bc1e684-ab9f-30cd-a55e-c0e10b8f5d28> .
+
+<http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "102" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "102"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c> .
+
+<http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "50.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "50.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of brocade" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c> .
+
+<http://data.silknow.org/event/2b96c233-e6e4-3cbe-942d-ecdca969e533>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c> .
+
+<http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Faded salmon pink ground, on which is a design of various birds and flowers, woven with light blue, light green, brown, white and  pink silk and chenille.  Spangles have been sewed on in places.  Pieced many times."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/fc8e925d-e2ec-3fc0-b9af-50d4486ded8a> ;
+        ecrm:P3_has_note               "Faded salmon pink ground, on which is a design of various birds and flowers, woven with light blue, light green, brown, white and  pink silk and chenille.  Spangles have been sewed on in places.  Pieced many times."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c/dimension/2> , <http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c/dimension/1> ;
+        dc:identifier                  "96.419" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/70695> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Faded salmon pink ground, on which is a design of various birds and flowers, woven with light blue, light green, brown, white and  pink silk and chenille.  Spangles have been sewed on in places.  Pieced many times."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3bd68977-ae68-30df-956b-8c1bcaa2f404> .
+
+<http://data.silknow.org/object/3bd68977-ae68-30df-956b-8c1bcaa2f404>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 96.419" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/2b96c233-e6e4-3cbe-942d-ecdca969e533> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/production/d3869367-eda9-3e8d-bd39-f0866037df2c> , <http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c/category/1> , <http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c/observation/1> , <http://data.silknow.org/image/fc8e925d-e2ec-3fc0-b9af-50d4486ded8a> , <http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c> , <http://data.silknow.org/object/40825bbe-7c03-3d08-bea2-d64f2157cf8c/domain/1> ;
+        dc:identifier       "70695.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/image/fc8e925d-e2ec-3fc0-b9af-50d4486ded8a>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "817891" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/70695_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/817891/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/place/3bc1e684-ab9f-30cd-a55e-c0e10b8f5d28>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Italian or Spanish" ;
+        ecrm:P87_is_identified_by  "Italian or Spanish" .

@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/event/c0ecd8a0-bf1e-3e5b-8d12-ad6c01544e51>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b> .
+
+<http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Arte Nazarí   Baja Edad Media"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b> .
+
+<http://data.silknow.org/image/cd582307-876c-30eb-b00c-bf9710a09475>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Motivos geométricos; Motivos vegetales"@es ;
+        ecrm:P3_has_note  "Motivos geométricos; Motivos vegetales"@es .
+
+<http://data.silknow.org/production/ff2f4ab3-4d94-39f0-bb23-dc775538693a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "Lampás [Tejido de base: raso de 4 tramas.]"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1401_1500> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/event/e1379fd8-926b-33f4-bee4-9609c28d5f50>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b> .
+
+<http://data.silknow.org/image/b206112d-27ef-3ca9-9180-754825a40623>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE20982/2" ;
+        schema:contentUrl  <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE20982%2F2&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/814a96cc-55b0-3cf3-8405-f7fea95572b7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE20982/2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b/observation/2> , <http://data.silknow.org/event/e1379fd8-926b-33f4-bee4-9609c28d5f50> , <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b/observation/1> , <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b/category/1> , <http://data.silknow.org/event/c0ecd8a0-bf1e-3e5b-8d12-ad6c01544e51> , <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b/domain/1> , <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b> , <http://data.silknow.org/image/b206112d-27ef-3ca9-9180-754825a40623> , <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b/observation/3> , <http://data.silknow.org/production/ff2f4ab3-4d94-39f0-bb23-dc775538693a> ;
+        dc:identifier       "CE20982!2_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Se compone de dos fragmentos textiles decorados con lacería en base a estrellas de ocho puntas, con inclusiones de ataurique. Franja con almenas. Doble urdimbre en rojo y amarillo.  Motivos geométricos como decoración.  \nLos dos pequeños fragmentos pertenecen a un mismo tejido, por  la decoración que conservan el motivo de estrella octogonal sería el centro de toda una sucesión de lacerías. Un fragmento casi completo se conserva en la Fundación Lázaro Galdiano de Madrid y otro en la Fundación Abegg de Berna (Suiza), en ambos, la decoración de estrellas octogonales es la franja  más ancha  de un tejido formado por varias bandas decoradas con motivos geométricos y vegetales, una de ellas con una inscripción en árabe ( und Glück und Prosperitat).  \nDe este tejido existen fragmentos en varios museos de Barcelona, Tarrasa París, Cleveland, Nueva York, Berlín y Tarrasa, además de los ya citados en Madrid y Berna.  \nLa funcionalidad de este tipo de tejidos, de gran lujo, sería la decoración de las estancias a modo de cortinas o paramentos."@es , "Arte Nazarí   Baja Edad Media"@es , "Paralelos: Otavski, K y Abbas, M, 1995: Mittealterliche Textilien I. Ägypten, Persien un Mesopotamien, Sapnien und Nordafrika, pp. 1236-237, nº 137."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b206112d-27ef-3ca9-9180-754825a40623> ;
+        ecrm:P3_has_note               "Se compone de dos fragmentos textiles decorados con lacería en base a estrellas de ocho puntas, con inclusiones de ataurique. Franja con almenas. Doble urdimbre en rojo y amarillo.  Motivos geométricos como decoración.  \nLos dos pequeños fragmentos pertenecen a un mismo tejido, por  la decoración que conservan el motivo de estrella octogonal sería el centro de toda una sucesión de lacerías. Un fragmento casi completo se conserva en la Fundación Lázaro Galdiano de Madrid y otro en la Fundación Abegg de Berna (Suiza), en ambos, la decoración de estrellas octogonales es la franja  más ancha  de un tejido formado por varias bandas decoradas con motivos geométricos y vegetales, una de ellas con una inscripción en árabe ( und Glück und Prosperitat).  \nDe este tejido existen fragmentos en varios museos de Barcelona, Tarrasa París, Cleveland, Nueva York, Berlín y Tarrasa, además de los ya citados en Madrid y Berna.  \nLa funcionalidad de este tipo de tejidos, de gran lujo, sería la decoración de las estancias a modo de cortinas o paramentos."@es , "Paralelos: Otavski, K y Abbas, M, 1995: Mittealterliche Textilien I. Ägypten, Persien un Mesopotamien, Sapnien und Nordafrika, pp. 1236-237, nº 137."@es , "Arte Nazarí   Baja Edad Media"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/cd582307-876c-30eb-b00c-bf9710a09475> ;
+        dc:identifier                  "CE20982/2" .
+
+<http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Paralelos: Otavski, K y Abbas, M, 1995: Mittealterliche Textilien I. Ägypten, Persien un Mesopotamien, Sapnien und Nordafrika, pp. 1236-237, nº 137."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b> .
+
+<http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragmento de tejido" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b> .
+
+<http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Se compone de dos fragmentos textiles decorados con lacería en base a estrellas de ocho puntas, con inclusiones de ataurique. Franja con almenas. Doble urdimbre en rojo y amarillo.  Motivos geométricos como decoración.  \nLos dos pequeños fragmentos pertenecen a un mismo tejido, por  la decoración que conservan el motivo de estrella octogonal sería el centro de toda una sucesión de lacerías. Un fragmento casi completo se conserva en la Fundación Lázaro Galdiano de Madrid y otro en la Fundación Abegg de Berna (Suiza), en ambos, la decoración de estrellas octogonales es la franja  más ancha  de un tejido formado por varias bandas decoradas con motivos geométricos y vegetales, una de ellas con una inscripción en árabe ( und Glück und Prosperitat).  \nDe este tejido existen fragmentos en varios museos de Barcelona, Tarrasa París, Cleveland, Nueva York, Berlín y Tarrasa, además de los ya citados en Madrid y Berna.  \nLa funcionalidad de este tipo de tejidos, de gran lujo, sería la decoración de las estancias a modo de cortinas o paramentos."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8388f9c6-2370-363f-bff5-fa28bd97c81b> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/814a96cc-55b0-3cf3-8405-f7fea95572b7> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

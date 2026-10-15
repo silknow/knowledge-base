@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "3.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "3.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "54" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "54"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303> .
+
+<http://data.silknow.org/image/e242441b-d615-392b-84ec-99649d308538>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "895220" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/69407_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/895220/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/ebb45d31-00ff-36dc-b4d2-8e126f99793b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303> ;
+        ecrm:P126_employed      "Linen and silk"@en ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/594d387e-eb81-3cc6-b46d-2b9e9cfbc935> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Woven with strips of gilt, silver thread, and gold silk. The silver thread is wound with cream colored linen, which shows through. In the middle is a strip of fancy weaving, done with silver thread; beyond this are strips of gilt and yellow and silver thread.  On the edges are looped yellow threads."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e242441b-d615-392b-84ec-99649d308538> ;
+        ecrm:P3_has_note               "Woven with strips of gilt, silver thread, and gold silk. The silver thread is wound with cream colored linen, which shows through. In the middle is a strip of fancy weaving, done with silver thread; beyond this are strips of gilt and yellow and silver thread.  On the edges are looped yellow threads."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303/dimension/2> , <http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303/dimension/1> ;
+        dc:identifier                  "99.199" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/69407> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1bd5cd9e-e9cb-30e8-8548-a7eeb8f9ed95> .
+
+<http://data.silknow.org/object/1bd5cd9e-e9cb-30e8-8548-a7eeb8f9ed95>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 99.199" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303/observation/1> , <http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303> , <http://data.silknow.org/image/e242441b-d615-392b-84ec-99649d308538> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303/domain/1> , <http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303/category/1> , <http://data.silknow.org/production/ebb45d31-00ff-36dc-b4d2-8e126f99793b> , <http://data.silknow.org/event/946bfc11-bfe1-3034-861a-548f3a87a7c8> ;
+        dc:identifier       "69407.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/place/594d387e-eb81-3cc6-b46d-2b9e9cfbc935>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Italian, Spanish or French" ;
+        ecrm:P87_is_identified_by  "Italian, Spanish or French" .
+
+<http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Gimp" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303> .
+
+<http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Woven with strips of gilt, silver thread, and gold silk. The silver thread is wound with cream colored linen, which shows through. In the middle is a strip of fancy weaving, done with silver thread; beyond this are strips of gilt and yellow and silver thread.  On the edges are looped yellow threads."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303> .
+
+<http://data.silknow.org/event/946bfc11-bfe1-3034-861a-548f3a87a7c8>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9eb7bbb6-67ab-3334-bbf5-0503bab12303> .

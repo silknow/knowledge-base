@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/078fb688-76ab-3761-adef-2e1a9a8e4dac>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1f0ffdd6-1ad7-3ed0-814d-5b980109d311> ;
+        ecrm:P126_employed      "fibres vegetals"@ca ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "brocatell"@ca , "trama llançada"@ca , "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a3b0fce9-3e04-30ed-8962-6bd219439845> .
+
+<http://data.silknow.org/event/2ea2c5e6-6b6a-34a6-8462-603810d1cee4>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/1f0ffdd6-1ad7-3ed0-814d-5b980109d311> .
+
+<http://data.silknow.org/event/4d47bed6-86e0-31f3-b877-f32a50e8d4a4>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b> ;
+        ecrm:P23_transferred_title_from
+                "Tórtola Valencia, Carmen" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1f0ffdd6-1ad7-3ed0-814d-5b980109d311> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/object/1f0ffdd6-1ad7-3ed0-814d-5b980109d311/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1f0ffdd6-1ad7-3ed0-814d-5b980109d311> .
+
+<http://data.silknow.org/image/b65aea40-5aa2-3d3c-b3cb-c612c73fcc8f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000000630" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/3633_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000000630.jpg> .
+
+<http://data.silknow.org/object/1f0ffdd6-1ad7-3ed0-814d-5b980109d311/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1f0ffdd6-1ad7-3ed0-814d-5b980109d311> .
+
+<http://data.silknow.org/object/a3b0fce9-3e04-30ed-8962-6bd219439845>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 3633" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/4d47bed6-86e0-31f3-b877-f32a50e8d4a4> , <http://data.silknow.org/object/1f0ffdd6-1ad7-3ed0-814d-5b980109d311/domain/1> , <http://data.silknow.org/image/b65aea40-5aa2-3d3c-b3cb-c612c73fcc8f> , <http://data.silknow.org/object/1f0ffdd6-1ad7-3ed0-814d-5b980109d311/category/1> , <http://data.silknow.org/production/078fb688-76ab-3761-adef-2e1a9a8e4dac> , <http://data.silknow.org/object/1f0ffdd6-1ad7-3ed0-814d-5b980109d311> , <http://data.silknow.org/event/2ea2c5e6-6b6a-34a6-8462-603810d1cee4> ;
+        dc:identifier       "3633.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/aa204533-dc2d-3433-92ea-a3231735ab94>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "motius florals"@ca ;
+        ecrm:P3_has_note  "motius florals"@ca .
+
+<http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Tórtola Valencia, Carmen" ;
+        ecrm:P1_is_identified_by  "Tórtola Valencia, Carmen" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Carmen_Tórtola_Valencia> , <https://viaf.org/viaf/47896092> , <https://isni.org/isni/0000000038570077> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Carmen_Tórtola_Valencia> .
+
+<http://data.silknow.org/image/b3ad076b-d87d-3a55-b0dd-e188bfb9c119>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "decoració vegetal estilitzada"@ca ;
+        ecrm:P3_has_note  "decoració vegetal estilitzada"@ca .
+
+<http://data.silknow.org/object/1f0ffdd6-1ad7-3ed0-814d-5b980109d311>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b65aea40-5aa2-3d3c-b3cb-c612c73fcc8f> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/aa204533-dc2d-3433-92ea-a3231735ab94> , <http://data.silknow.org/image/b3ad076b-d87d-3a55-b0dd-e188bfb9c119> , <http://data.silknow.org/image/6b40f54d-1a4f-3ef1-84c3-d64d6d4a0f56> ;
+        dc:identifier                  "8000" .
+
+<http://data.silknow.org/image/6b40f54d-1a4f-3ef1-84c3-d64d6d4a0f56>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "magranes"@ca ;
+        ecrm:P3_has_note  "magranes"@ca .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

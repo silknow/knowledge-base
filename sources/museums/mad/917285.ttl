@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/65c8a4d7-763a-3549-a36c-937f50839562>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/917285_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/0e7b7282-93cb-4f45-a3e4-48e49d95c6de.jpg> .
+
+<http://data.silknow.org/object/3bc6d0cb-99a6-3359-914f-087ccef3242e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3bc6d0cb-99a6-3359-914f-087ccef3242e> .
+
+<http://data.silknow.org/event/5a450590-1f38-3899-af8d-48b41ade6cf3>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "don François Ducharne, 1925" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3bc6d0cb-99a6-3359-914f-087ccef3242e> .
+
+<http://data.silknow.org/object/3bc6d0cb-99a6-3359-914f-087ccef3242e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, François Ducharne, Lyon, 1925, Michel Dubost, 1925"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/65c8a4d7-763a-3549-a36c-937f50839562> ;
+        dc:identifier                  "25142" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/917285> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/1b9135d5-80b1-352d-8620-ced72f0403a5>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "François Ducharne, Lyon, 1925, Michel Dubost, 1925" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3bc6d0cb-99a6-3359-914f-087ccef3242e> ;
+        ecrm:P3_has_note        "François Ducharne, Lyon, 1925, Michel Dubost, 1925" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1925> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2996944/> .
+
+<http://data.silknow.org/object/be5c38da-befc-3e23-8716-7abc0c470e3c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 25142" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/5a450590-1f38-3899-af8d-48b41ade6cf3> , <http://data.silknow.org/object/3bc6d0cb-99a6-3359-914f-087ccef3242e> , <http://data.silknow.org/production/1b9135d5-80b1-352d-8620-ced72f0403a5> , <http://data.silknow.org/object/3bc6d0cb-99a6-3359-914f-087ccef3242e/category/1> , <http://data.silknow.org/image/65c8a4d7-763a-3549-a36c-937f50839562> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "917285.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/be5c38da-befc-3e23-8716-7abc0c470e3c> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/3bc6d0cb-99a6-3359-914f-087ccef3242e> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .

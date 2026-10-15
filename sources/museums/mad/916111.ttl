@@ -1,0 +1,62 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/3d49e652-2ec9-39cf-8e78-560959055b12>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 22001" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d56668e1-26aa-3160-93c8-41bf82669f94/category/1> , <http://data.silknow.org/object/d56668e1-26aa-3160-93c8-41bf82669f94> , <http://data.silknow.org/production/42f48909-1917-37c7-b3d9-cb0cc630f11a> , <http://data.silknow.org/event/3035d95c-c3e2-314f-8b3c-f545a1515d39> , <http://data.silknow.org/image/76f75217-fb80-356c-8792-f865a101ad21> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "916111.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/d56668e1-26aa-3160-93c8-41bf82669f94>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Maurice Dufrêne, 1920 (vers), Cornille Frères"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/76f75217-fb80-356c-8792-f865a101ad21> ;
+        dc:identifier                  "22001" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/916111> .
+
+<http://data.silknow.org/event/3035d95c-c3e2-314f-8b3c-f545a1515d39>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat Cornille Frères, 1920" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d56668e1-26aa-3160-93c8-41bf82669f94> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/76f75217-fb80-356c-8792-f865a101ad21>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/916111_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/51d29362-0728-442e-996b-7a6fa6dcbf34.jpg> .
+
+<http://data.silknow.org/production/42f48909-1917-37c7-b3d9-cb0cc630f11a>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Maurice Dufrêne, 1920 (vers), Cornille Frères" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d56668e1-26aa-3160-93c8-41bf82669f94> ;
+        ecrm:P3_has_note        "Maurice Dufrêne, 1920 (vers), Cornille Frères" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/ce751466-09f8-37d9-a181-bfa8a6fb513c> .
+
+<http://data.silknow.org/object/d56668e1-26aa-3160-93c8-41bf82669f94/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d56668e1-26aa-3160-93c8-41bf82669f94> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3d49e652-2ec9-39cf-8e78-560959055b12> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/d56668e1-26aa-3160-93c8-41bf82669f94> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

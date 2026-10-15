@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "170" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "170"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Tessuto doppio. Su fondo bianco in nocciola, in comparti verdi di due tipi, due tipi di palmetta. I comparti sono formati da virgulti stilizzati"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8f054688-31bb-3047-8bd9-517546b28088> ;
+        ecrm:P3_has_note               "Tessuto doppio. Su fondo bianco in nocciola, in comparti verdi di due tipi, due tipi di palmetta. I comparti sono formati da virgulti stilizzati"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c/dimension/1> , <http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c/dimension/2> ;
+        dc:identifier                  "0998" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/11140/?WEB=MuseiVE> .
+
+<http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c> .
+
+<http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Tessuto doppio. Su fondo bianco in nocciola, in comparti verdi di due tipi, due tipi di palmetta. I comparti sono formati da virgulti stilizzati"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/36b35cd0-8bf6-3622-a60d-c34d6d233a0e> .
+
+<http://data.silknow.org/event/76d90bd2-0038-3791-bfaa-19ecb61a6c24>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c> .
+
+<http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto operato" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c> .
+
+<http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "470" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "470"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/2feb1ef5-25d2-3da0-b55d-dbf0b1df355d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1540_1560> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/36b35cd0-8bf6-3622-a60d-c34d6d233a0e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 11140" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/8f054688-31bb-3047-8bd9-517546b28088> , <http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c/observation/1> , <http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c/category/1> , <http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c/domain/1> , <http://data.silknow.org/production/2feb1ef5-25d2-3da0-b55d-dbf0b1df355d> , <http://data.silknow.org/object/b2b5ed58-842e-3fab-937c-dbb47119165c> , <http://data.silknow.org/event/76d90bd2-0038-3791-bfaa-19ecb61a6c24> ;
+        dc:identifier       "11140.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/image/8f054688-31bb-3047-8bd9-517546b28088>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/11140_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5QXno8UZzBEE09RSoYU8iTtqD8ilTJ8KvuTxbtptyk6BCEdnnxj34Mp1Z0mJqUxhQ2d8nDewtuf0l8Gt4jjnPeURSTwgxJeisQ2RXcg%2bge3bvQ3qtaNWoVQ%3d%3d> .

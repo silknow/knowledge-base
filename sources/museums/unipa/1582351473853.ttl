@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/43ded824-0032-3e75-9b76-621135d7eae6/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "66" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "66"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/43ded824-0032-3e75-9b76-621135d7eae6>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Seconda metà del XVIII"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0c2c2515-edf6-3183-b04e-8aa3c0d99488> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/43ded824-0032-3e75-9b76-621135d7eae6/dimension/2> , <http://data.silknow.org/object/43ded824-0032-3e75-9b76-621135d7eae6/dimension/1> ;
+        dc:identifier                  "1582351473853" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/43ded824-0032-3e75-9b76-621135d7eae6/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/43ded824-0032-3e75-9b76-621135d7eae6> ;
+        ecrm:P42_assigned    "Pianeta" .
+
+<http://data.silknow.org/object/43ded824-0032-3e75-9b76-621135d7eae6/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "88" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "88"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/e026095d-1e45-3aba-ab3a-b7dea9d8cd4e>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/5fabb663-8af7-3cfe-b52f-2ead0fc802d2> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/43ded824-0032-3e75-9b76-621135d7eae6> .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0bd0c261-34d0-3626-8615-0fbb822f3e9c> .
+
+<http://data.silknow.org/object/0bd0c261-34d0-3626-8615-0fbb822f3e9c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1582351473853" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/e026095d-1e45-3aba-ab3a-b7dea9d8cd4e> , <http://data.silknow.org/image/0c2c2515-edf6-3183-b04e-8aa3c0d99488> , <http://data.silknow.org/object/43ded824-0032-3e75-9b76-621135d7eae6/type/1> , <http://data.silknow.org/object/43ded824-0032-3e75-9b76-621135d7eae6> , <http://data.silknow.org/production/86a8b5d2-2979-3302-89fd-5b06ddeab072> , <http://data.silknow.org/object/e914ba99-6568-3015-bfdd-7cebe4c85bae> ;
+        dc:identifier       "1582351473853.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/production/86a8b5d2-2979-3302-89fd-5b06ddeab072>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/43ded824-0032-3e75-9b76-621135d7eae6> ;
+        ecrm:P32_used_general_technique
+                "Taffetas laminato a liage répris ricamato"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1751_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2523118/> .
+
+<http://data.silknow.org/image/0c2c2515-edf6-3183-b04e-8aa3c0d99488>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1582351979_caltanissetta211" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1582351473853_0.jpg> .
+
+<https://sws.geonames.org/2523118/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/e914ba99-6568-3015-bfdd-7cebe4c85bae>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "R. Civiletto, n. 211, in Il Museo Diocesano di Caltanissetta, a cura di S. Rizzo, F. Brucchieri, F. Ciancimino, Palermo - Caltanissetta 2001, p. 267."@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/43ded824-0032-3e75-9b76-621135d7eae6> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "R. Civiletto, n. 211, in Il Museo Diocesano di Caltanissetta, a cura di S. Rizzo, F. Brucchieri, F. Ciancimino, Palermo - Caltanissetta 2001, p. 267."@it .
+
+<http://data.silknow.org/actor/5fabb663-8af7-3cfe-b52f-2ead0fc802d2>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Caltanissetta, Museo Diocesano \"Monsignor Giovanni Speciale\"" ;
+        ecrm:P1_is_identified_by  "Caltanissetta, Museo Diocesano \"Monsignor Giovanni Speciale\"" .

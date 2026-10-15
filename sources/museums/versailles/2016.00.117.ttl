@@ -1,0 +1,58 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/7312385e-de67-37a4-9beb-a3b93fbcda1d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/0881c50b-8c5c-3453-92c1-e1e05620b4e6> .
+
+<http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "66" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "66"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/31632b12-a654-3635-9365-d743dad2abc9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2016.00.117" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/7312385e-de67-37a4-9beb-a3b93fbcda1d> , <http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8> , <http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8/domain/1> , <http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8/type/1> ;
+        dc:identifier       "2016.00.117.json" ;
+        dc:publisher        "http://data.silknow.org/organization/versailles" .
+
+<http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "107.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "107.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8> ;
+        ecrm:P42_assigned    <http://data.silknow.org/category/97> .
+
+<http://data.silknow.org/versailles>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/31632b12-a654-3635-9365-d743dad2abc9> .
+
+<http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8> .
+
+<http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8>
+        a                       ecrm:E22_Man-Made_Object ;
+        rdfs:label              "chasuble"@fr ;
+        ecrm:P102_has_title     "chasuble"@fr ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8/dimension/1> , <http://data.silknow.org/object/b9ede35c-654d-3521-ae4b-672726577dd8/dimension/2> ;
+        dc:identifier           "2016.00.117" .

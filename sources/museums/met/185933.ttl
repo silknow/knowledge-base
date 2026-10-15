@@ -1,0 +1,104 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/b66d0be8-f9da-3287-b6bb-e34c5b1c78d4>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Cornelius Vanderbilt" ;
+        ecrm:P1_is_identified_by  "Gift of Cornelius Vanderbilt" .
+
+<http://data.silknow.org/production/bbea9433-543d-3c33-8bdb-061d95d82eba>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e> ;
+        ecrm:P126_employed      "Oil on wood, chiaroscuro"@en , "Paintings"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1401_1600> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3165048/> .
+
+<http://data.silknow.org/met>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/13058ac2-0b31-3286-9349-3bc2b9d40b10> .
+
+<https://sws.geonames.org/3165048/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/f5fde7cd-f3ee-3cfc-ab4b-53a7dfcd5127>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b66d0be8-f9da-3287-b6bb-e34c5b1c78d4> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Cornelius Vanderbilt, 1880" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e> .
+
+<http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Classical design" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e> .
+
+<http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "European Sculpture and Decorative Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e> ;
+        ecrm:P78_is_identified_by  "European Sculpture and Decorative Arts" .
+
+<http://data.silknow.org/image/80c8e77f-e14e-31e0-9d92-1fa73412cd3a>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/185933_0.jpg> , <https://collectionapi.metmuseum.org/api/collection/v1/iiif/185933/1381507/main-image> .
+
+<http://data.silknow.org/event/d1345280-0846-3b85-b4fa-c59d8f642cdf>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Paintings-Decorative" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e> .
+
+<http://data.silknow.org/object/00023122-ee40-367c-a1d7-eff25f350de9>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/d083e0d9-3d5c-3f57-81d5-12e70fa98445> .
+
+<http://data.silknow.org/object/c522e956-aa00-3438-8280-e37987e024ef>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/76873dc4-65b8-3628-a42e-ac3121764241> .
+
+<http://data.silknow.org/object/5adb4b25-baf1-314a-a96d-0b640337a6d0>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/084dddf5-fb19-32a5-b566-3a7231be4ce0> .
+
+<http://data.silknow.org/object/ae8a3491-f4b3-3d7c-96c0-4fe24fe75103>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/2c275822-c9a6-38b9-ac01-041c70e8d03d> .
+
+<http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/80c8e77f-e14e-31e0-9d92-1fa73412cd3a> ;
+        dc:identifier                  "80.3.682" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.metmuseum.org/art/collection/search/185933> .
+
+<http://data.silknow.org/object/13058ac2-0b31-3286-9349-3bc2b9d40b10>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 185933" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/bbea9433-543d-3c33-8bdb-061d95d82eba> , <http://data.silknow.org/object/ae8a3491-f4b3-3d7c-96c0-4fe24fe75103> , <http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5> , <http://data.silknow.org/image/80c8e77f-e14e-31e0-9d92-1fa73412cd3a> , <http://data.silknow.org/object/c522e956-aa00-3438-8280-e37987e024ef> , <http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e/category/1> , <http://data.silknow.org/event/d1345280-0846-3b85-b4fa-c59d8f642cdf> , <http://data.silknow.org/object/00023122-ee40-367c-a1d7-eff25f350de9> , <http://data.silknow.org/object/5adb4b25-baf1-314a-a96d-0b640337a6d0> , <http://data.silknow.org/object/0ee3cd61-8900-3095-a6df-c0a881da505e> , <http://data.silknow.org/event/f5fde7cd-f3ee-3cfc-ab4b-53a7dfcd5127> ;
+        dc:identifier       "185933.json" ;
+        dc:publisher        "http://data.silknow.org/organization/met" .

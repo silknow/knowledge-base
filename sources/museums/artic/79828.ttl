@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/5391ba6b-ca37-3e25-99c1-63f5a66b16d9>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_75> , <http://data.silknow.org/timespan/1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/event/95676b6a-ee90-3c18-a4f8-ed2ef3909386>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/13e91dde-eece-3b4b-ba1d-92cd94b9bf77> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Robert McComb" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e> .
+
+<http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "101.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "101.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/bcb47f62-94df-3d35-935c-4f6a4af33c0e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/79828_0.jpg> , <https://www.artic.edu/iiif/2/1d0fa296-54f1-5b93-30f1-36f5f14945f6/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "48.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "48.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, brocaded"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e> .
+
+<http://data.silknow.org/actor/13e91dde-eece-3b4b-ba1d-92cd94b9bf77>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Robert McComb" ;
+        ecrm:P1_is_identified_by  "Gift of Robert McComb" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/120055304> , <https://isni.org/isni/0000000106789020> .
+
+<http://data.silknow.org/object/d16b8b95-2c25-3f62-873f-5dc785eec14d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1953.493" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e> , <http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e/observation/1> , <http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e/category/1> , <http://data.silknow.org/production/5391ba6b-ca37-3e25-99c1-63f5a66b16d9> , <http://data.silknow.org/image/bcb47f62-94df-3d35-935c-4f6a4af33c0e> , <http://data.silknow.org/event/95676b6a-ee90-3c18-a4f8-ed2ef3909386> ;
+        dc:identifier       "79828.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, brocaded"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bcb47f62-94df-3d35-935c-4f6a4af33c0e> ;
+        ecrm:P3_has_note               "Silk, brocaded"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e/dimension/1> , <http://data.silknow.org/object/5ac79aa0-d990-3668-bbf4-690ffbe5604e/dimension/2> ;
+        dc:identifier                  "1953.493" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/79828/fragment> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d16b8b95-2c25-3f62-873f-5dc785eec14d> .

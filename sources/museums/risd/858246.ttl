@@ -1,0 +1,73 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/4830ab5c-4f19-3992-819f-bf7a82dcd4f0>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Christopher Monkhouse" ;
+        ecrm:P1_is_identified_by  "Gift of Christopher Monkhouse" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/75202259> , <https://isni.org/isni/000000002374912X> .
+
+<http://data.silknow.org/event/a7e59190-30be-3a1a-a994-a27a9d3a369b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4830ab5c-4f19-3992-819f-bf7a82dcd4f0> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Christopher Monkhouse" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2722ce00-ce08-38bd-b340-149aea7f516d> .
+
+<http://data.silknow.org/object/2722ce00-ce08-38bd-b340-149aea7f516d>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2252280e-eae5-306b-b9dc-6fb685611a5d> ;
+        dc:identifier                  "1991.113" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/valance-1991113> .
+
+<http://data.silknow.org/event/8b106ae2-119c-3303-8cea-c072b06bad05>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2722ce00-ce08-38bd-b340-149aea7f516d> .
+
+<http://data.silknow.org/image/2252280e-eae5-306b-b9dc-6fb685611a5d>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/858246_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/27282.jpg> .
+
+<http://data.silknow.org/object/2722ce00-ce08-38bd-b340-149aea7f516d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "valance" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2722ce00-ce08-38bd-b340-149aea7f516d> .
+
+<http://data.silknow.org/object/2722ce00-ce08-38bd-b340-149aea7f516d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2722ce00-ce08-38bd-b340-149aea7f516d> .
+
+<http://data.silknow.org/production/e754cc48-05bd-3f19-8f66-5231d899a5fb>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2722ce00-ce08-38bd-b340-149aea7f516d> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1875_1899> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/18219193-d373-3c77-92b9-3ff2a337b58b> .
+
+<http://data.silknow.org/object/18219193-d373-3c77-92b9-3ff2a337b58b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1991.113" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2722ce00-ce08-38bd-b340-149aea7f516d/category/1> , <http://data.silknow.org/object/2722ce00-ce08-38bd-b340-149aea7f516d/domain/1> , <http://data.silknow.org/object/2722ce00-ce08-38bd-b340-149aea7f516d> , <http://data.silknow.org/production/e754cc48-05bd-3f19-8f66-5231d899a5fb> , <http://data.silknow.org/image/2252280e-eae5-306b-b9dc-6fb685611a5d> , <http://data.silknow.org/event/8b106ae2-119c-3303-8cea-c072b06bad05> , <http://data.silknow.org/event/a7e59190-30be-3a1a-a994-a27a9d3a369b> ;
+        dc:identifier       "858246.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

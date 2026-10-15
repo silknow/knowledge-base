@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c71526bc-2880-3ed0-a138-175c760c0733> .
+
+<http://data.silknow.org/event/9adc195f-fd5a-39ff-a816-b05b3524d53e>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/4df7d230-87c3-31a9-a580-1600a49ee8a0> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/production/44e3aaa1-d75f-3322-8894-8127f145066e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4df7d230-87c3-31a9-a580-1600a49ee8a0> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca , "vellut"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/object/4df7d230-87c3-31a9-a580-1600a49ee8a0/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4df7d230-87c3-31a9-a580-1600a49ee8a0> .
+
+<http://data.silknow.org/object/4df7d230-87c3-31a9-a580-1600a49ee8a0>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f097f050-49a7-3212-a4ef-72cffec05531> ;
+        dc:identifier                  "16423" .
+
+<http://data.silknow.org/image/f097f050-49a7-3212-a4ef-72cffec05531>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033767" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/28028_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033767.jpg> .
+
+<http://data.silknow.org/object/c71526bc-2880-3ed0-a138-175c760c0733>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 28028" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/02d89276-ca97-39ef-bd6c-2b14f0545e11> , <http://data.silknow.org/event/9adc195f-fd5a-39ff-a816-b05b3524d53e> , <http://data.silknow.org/object/4df7d230-87c3-31a9-a580-1600a49ee8a0/category/1> , <http://data.silknow.org/object/4df7d230-87c3-31a9-a580-1600a49ee8a0> , <http://data.silknow.org/production/44e3aaa1-d75f-3322-8894-8127f145066e> , <http://data.silknow.org/image/f097f050-49a7-3212-a4ef-72cffec05531> , <http://data.silknow.org/object/4df7d230-87c3-31a9-a580-1600a49ee8a0/domain/1> ;
+        dc:identifier       "28028.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/4df7d230-87c3-31a9-a580-1600a49ee8a0/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4df7d230-87c3-31a9-a580-1600a49ee8a0> .
+
+<http://data.silknow.org/event/02d89276-ca97-39ef-bd6c-2b14f0545e11>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/4df7d230-87c3-31a9-a580-1600a49ee8a0> .

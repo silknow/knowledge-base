@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/4e33e584-41a5-32fa-84e4-039b7dfbc12e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat de l'Etat ; attribution à l'établissement d'utilité publique dit Les Arts Décoratifs en 2008." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/572b0142-c5de-3a30-abe6-e379c33eca40> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/572b0142-c5de-3a30-abe6-e379c33eca40>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Pierre Chareau, France, 20e siècle, Hélène Henry, France, 1925 (vers), 1930 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/55458d57-b068-30b9-9abe-89e6c7f2d6f8> ;
+        dc:identifier                  "2008.56.138" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/920427> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/231f9f2a-e6cc-33c9-a46d-5553baeb48d1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2008.56.138" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/5aa5cefb-b1a2-36be-abf0-78290e5f2299> , <http://data.silknow.org/event/4e33e584-41a5-32fa-84e4-039b7dfbc12e> , <http://data.silknow.org/object/572b0142-c5de-3a30-abe6-e379c33eca40/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/572b0142-c5de-3a30-abe6-e379c33eca40> , <http://data.silknow.org/image/55458d57-b068-30b9-9abe-89e6c7f2d6f8> ;
+        dc:identifier       "920427.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/5aa5cefb-b1a2-36be-abf0-78290e5f2299>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Pierre Chareau, France, 20e siècle, Hélène Henry, France, 1925 (vers), 1930 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/572b0142-c5de-3a30-abe6-e379c33eca40> ;
+        ecrm:P126_employed      "Soie artificielle."@fr ;
+        ecrm:P3_has_note        "Pierre Chareau, France, 20e siècle, Hélène Henry, France, 1925 (vers), 1930 (vers)" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> , <http://data.silknow.org/timespan/3715027c-aac1-3498-abe4-23974c89b573> , <http://data.silknow.org/timespan/60d53528-42dd-395f-8000-f7fb90d790c1> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/572b0142-c5de-3a30-abe6-e379c33eca40/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/572b0142-c5de-3a30-abe6-e379c33eca40> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/231f9f2a-e6cc-33c9-a46d-5553baeb48d1> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/572b0142-c5de-3a30-abe6-e379c33eca40> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/image/55458d57-b068-30b9-9abe-89e6c7f2d6f8>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/920427_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/afed4fc4-1f79-423c-91aa-abafff561fcc.jpg> .

@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/assessment/23fd1ab1-3182-3325-b11c-821a8eca2d3f>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/baae6b68-3f92-396f-bad5-e265d5f193e2> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/23fd1ab1-3182-3325-b11c-821a8eca2d3f/condition/1> .
+
+<http://data.silknow.org/assessment/23fd1ab1-3182-3325-b11c-821a8eca2d3f/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/994df1d0-0d7a-35aa-b358-1abd62d3fddd> .
+
+<http://data.silknow.org/production/386f2d12-e5d7-3d6f-9139-9630862da034/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/28725087-4375-3f1d-8275-86d5ddb1b552> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/production/386f2d12-e5d7-3d6f-9139-9630862da034>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/baae6b68-3f92-396f-bad5-e265d5f193e2> ;
+        ecrm:P126_employed      "Hilo de seda, plata y oro. Encaje de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Espolín."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/386f2d12-e5d7-3d6f-9139-9630862da034/activity/1> .
+
+<http://data.silknow.org/actor/28725087-4375-3f1d-8275-86d5ddb1b552>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo. Valencia" ;
+        ecrm:P1_is_identified_by  "Anónimo. Valencia" .
+
+<http://data.silknow.org/image/d927a7fe-375d-3dbd-b1de-75a81e31e481>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.100" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.100_0.jpg> .
+
+<http://data.silknow.org/object/994df1d0-0d7a-35aa-b358-1abd62d3fddd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.100" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/386f2d12-e5d7-3d6f-9139-9630862da034> , <http://data.silknow.org/object/baae6b68-3f92-396f-bad5-e265d5f193e2/type/1> , <http://data.silknow.org/assessment/23fd1ab1-3182-3325-b11c-821a8eca2d3f> , <http://data.silknow.org/image/d927a7fe-375d-3dbd-b1de-75a81e31e481> , <http://data.silknow.org/object/baae6b68-3f92-396f-bad5-e265d5f193e2> , <http://data.silknow.org/object/baae6b68-3f92-396f-bad5-e265d5f193e2/observation/1> ;
+        dc:identifier       "5.100.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/object/baae6b68-3f92-396f-bad5-e265d5f193e2/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/baae6b68-3f92-396f-bad5-e265d5f193e2> ;
+        ecrm:P42_assigned    "Traje procesional" .
+
+<http://data.silknow.org/object/baae6b68-3f92-396f-bad5-e265d5f193e2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Pertenece a la imagen de Ntra. Sra. del Tránsito."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d927a7fe-375d-3dbd-b1de-75a81e31e481> ;
+        ecrm:P3_has_note               "*Pertenece a la imagen de Ntra. Sra. del Tránsito."@es ;
+        dc:identifier                  "5.100" .
+
+<http://data.silknow.org/object/baae6b68-3f92-396f-bad5-e265d5f193e2/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Pertenece a la imagen de Ntra. Sra. del Tránsito."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/baae6b68-3f92-396f-bad5-e265d5f193e2> .

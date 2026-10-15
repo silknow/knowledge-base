@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d> .
+
+<http://data.silknow.org/production/1d16bad4-a2d2-33cf-a21b-997421ba96f2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d> ;
+        ecrm:P126_employed      "Fils d’or et d’argent"@fr ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/857> , <http://data.silknow.org/vocabulary/369> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1812> .
+
+<http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tissu précieux" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d> .
+
+<http://data.silknow.org/object/b9e98495-b7da-3ca3-bc2b-389fa0589046>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record GMMP-80-001" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d/observation/1> , <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d> , <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d/domain/2> , <http://data.silknow.org/object/028cd562-fb12-3683-9cc0-6df55c8cea3c> , <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d/category/1> , <http://data.silknow.org/production/1d16bad4-a2d2-33cf-a21b-997421ba96f2> , <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d/domain/1> ;
+        dc:identifier       "80155.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mobilier" .
+
+<http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "SOIERIE" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d> .
+
+<http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Elément de bordure pour sièges et écran. De section rectangulaire. Une lisière est toujours en place. Brocart or fond gros de Tours vert jaune n°2 broché 2 ors. Le dessin représente un double rinceau avec palmettes et rosettes. Largeur du motif : 81 mm.\n\nHistorique : \nInitialement créé pour un cabinet de l'appartement de l'Empereur au château de Vesrailles, ce brocart n'a pas été utilisé durant l'Empire. C'est seulement en 1827 que le tapissier Hellant  utilisera des bordures pour les Tuileries, puis le tapissier Ternisien en 1836 pour cette même demeure."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d> .
+
+<http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d/dimension/2>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/height> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/mobilier>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b9e98495-b7da-3ca3-bc2b-389fa0589046> .
+
+<http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "0.538" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "0.538"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d>
+        a                       ecrm:E22_Man-Made_Object ;
+        rdfs:comment            "Elément de bordure pour sièges et écran. De section rectangulaire. Une lisière est toujours en place. Brocart or fond gros de Tours vert jaune n°2 broché 2 ors. Le dessin représente un double rinceau avec palmettes et rosettes. Largeur du motif : 81 mm.\n\nHistorique : \nInitialement créé pour un cabinet de l'appartement de l'Empereur au château de Vesrailles, ce brocart n'a pas été utilisé durant l'Empire. C'est seulement en 1827 que le tapissier Hellant  utilisera des bordures pour les Tuileries, puis le tapissier Ternisien en 1836 pour cette même demeure."@fr ;
+        rdfs:label              "Bordure pour sièges et écran destinés au cabinet de l'appartement de l'Empereur Napoléon à Versailles"@fr ;
+        ecrm:P102_has_title     "Bordure pour sièges et écran destinés au cabinet de l'appartement de l'Empereur Napoléon à Versailles"@fr ;
+        ecrm:P3_has_note        "Elément de bordure pour sièges et écran. De section rectangulaire. Une lisière est toujours en place. Brocart or fond gros de Tours vert jaune n°2 broché 2 ors. Le dessin représente un double rinceau avec palmettes et rosettes. Largeur du motif : 81 mm.\n\nHistorique : \nInitialement créé pour un cabinet de l'appartement de l'Empereur au château de Vesrailles, ce brocart n'a pas été utilisé durant l'Empire. C'est seulement en 1827 que le tapissier Hellant  utilisera des bordures pour les Tuileries, puis le tapissier Ternisien en 1836 pour cette même demeure."@fr ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d/dimension/2> , <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d/dimension/1> ;
+        dc:identifier           "GMMP-80-001" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collection.mobiliernational.culture.gouv.fr/objet/GMMP-80-001> .
+
+<http://data.silknow.org/object/028cd562-fb12-3683-9cc0-6df55c8cea3c>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Coural (Jean), Gastinel-Coural (Chantal), Paris, Mobilier national. Soieries Empire, 1980, n°14, p.83-84."@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bbb1eaf0-0840-38ee-b204-891c74c5033d> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Coural (Jean), Gastinel-Coural (Chantal), Paris, Mobilier national. Soieries Empire, 1980, n°14, p.83-84."@fr .

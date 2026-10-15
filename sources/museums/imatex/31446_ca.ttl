@@ -1,0 +1,91 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7cebe285-62c3-376a-8dfc-bfb7337780a3> .
+
+<http://data.silknow.org/image/4e4dd20f-0b89-3af5-9bf3-b639cf995acc>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000039006" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/31446_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000039006.jpg> .
+
+<http://data.silknow.org/event/df532887-67f0-3d01-b15d-82e9a42f1cc2>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/59ad8bb7-ee80-3a9e-b783-1c7616291d78> .
+
+<http://data.silknow.org/production/0b2e1dd6-541c-3022-af31-b9ad335401c7>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/59ad8bb7-ee80-3a9e-b783-1c7616291d78> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "setí"@ca , "trama llançada"@ca , "tafetà"@ca ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/305> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/nasrid_period> , <http://vocab.getty.edu/aat/300404465> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/34788e52-c904-311c-872e-c89af879a0d0> .
+
+<http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Biosca, Josep" ;
+        ecrm:P1_is_identified_by  "Biosca, Josep" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Josep_Huguet_i_Biosca> , <https://viaf.org/viaf/95599143> , <https://isni.org/isni/000000007829170X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Josep_Huguet_i_Biosca> .
+
+<http://data.silknow.org/place/34788e52-c904-311c-872e-c89af879a0d0>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Al-Andalus" ;
+        ecrm:P87_is_identified_by  "Al-Andalus" .
+
+<http://data.silknow.org/image/b3ad076b-d87d-3a55-b0dd-e188bfb9c119>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "decoració vegetal estilitzada"@ca ;
+        ecrm:P3_has_note  "decoració vegetal estilitzada"@ca .
+
+<http://data.silknow.org/event/5df3a955-d2ff-3d2b-91a2-c66ea8ea47cb>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2> ;
+        ecrm:P23_transferred_title_from
+                "Biosca, Josep" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/59ad8bb7-ee80-3a9e-b783-1c7616291d78> ;
+        ecrm:P3_has_note               "donacions" .
+
+<http://data.silknow.org/object/7cebe285-62c3-376a-8dfc-bfb7337780a3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 31446" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/59ad8bb7-ee80-3a9e-b783-1c7616291d78/category/1> , <http://data.silknow.org/event/5df3a955-d2ff-3d2b-91a2-c66ea8ea47cb> , <http://data.silknow.org/image/4e4dd20f-0b89-3af5-9bf3-b639cf995acc> , <http://data.silknow.org/image/06f19b50-da06-3c20-bb16-912779f7b8fb> , <http://data.silknow.org/object/59ad8bb7-ee80-3a9e-b783-1c7616291d78> , <http://data.silknow.org/production/0b2e1dd6-541c-3022-af31-b9ad335401c7> , <http://data.silknow.org/event/df532887-67f0-3d01-b15d-82e9a42f1cc2> , <http://data.silknow.org/object/59ad8bb7-ee80-3a9e-b783-1c7616291d78/domain/1> ;
+        dc:identifier       "31446.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/06f19b50-da06-3c20-bb16-912779f7b8fb>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000039007" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/31446_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000039007.jpg> .
+
+<http://data.silknow.org/object/59ad8bb7-ee80-3a9e-b783-1c7616291d78>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/06f19b50-da06-3c20-bb16-912779f7b8fb> , <http://data.silknow.org/image/4e4dd20f-0b89-3af5-9bf3-b639cf995acc> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/b3ad076b-d87d-3a55-b0dd-e188bfb9c119> ;
+        dc:identifier                  "11798" .
+
+<http://data.silknow.org/object/59ad8bb7-ee80-3a9e-b783-1c7616291d78/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/59ad8bb7-ee80-3a9e-b783-1c7616291d78> .
+
+<http://data.silknow.org/object/59ad8bb7-ee80-3a9e-b783-1c7616291d78/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/59ad8bb7-ee80-3a9e-b783-1c7616291d78> .

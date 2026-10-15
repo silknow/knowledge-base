@@ -1,0 +1,75 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Taillé dans le brocard commandé à Lyon à la maison Bissardon et Bony en 1810 par Napoléon pour la chambre de l'Impératrice à Versailles ; employé pour tendre la chambre de la Duchesse d'Angoulême à Saint-Cloud ; réalisé par le chasublier Biais (Paris) et offert par Louis-Philippe en 1837 à la cathédrale Saint-Louis de Versailles, à l'occasion du Te Deum chanté pour la Prise de Constantine (13 octobre 1837).\nDépôt de la cathédrale Saint-Louis de Versailles, 18 novembre 1976."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376> .
+
+<http://data.silknow.org/versailles>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d710f1e5-a7ae-31bb-b1b1-84f28855414d> .
+
+<http://data.silknow.org/production/eba1cb32-9672-3b26-87e0-ba97a4dd58a2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/0881c50b-8c5c-3453-92c1-e1e05620b4e6> .
+
+<http://data.silknow.org/object/d710f1e5-a7ae-31bb-b1b1-84f28855414d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record SSN 882.17" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/eba1cb32-9672-3b26-87e0-ba97a4dd58a2> , <http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376/observation/1> , <http://data.silknow.org/image/a5bbe9f6-90a2-3270-aa3e-f6faf8b4134a> , <http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376> , <http://data.silknow.org/image/6350c420-508a-3f02-b3c2-4ae3606babee> , <http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376/domain/1> , <http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376/type/1> ;
+        dc:identifier       "SSN 882.17.json" ;
+        dc:publisher        "http://data.silknow.org/organization/versailles" .
+
+<http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "80.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "80.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/a5bbe9f6-90a2-3270-aa3e-f6faf8b4134a>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/versailles/SSN%20882.17_0.jpg> , <http://collections.chateauversailles.fr/cc/imageproxy.aspx?server=10.0.10.13&port=14456&filename=objectimages%2FSSN+882.17_001.cci> .
+
+<http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "290" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "290"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/6350c420-508a-3f02-b3c2-4ae3606babee>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/versailles/SSN%20882.17_1.jpg> , <http://collections.chateauversailles.fr/cc/imageproxy.aspx?server=10.0.10.13&port=14456&filename=objectimages%2FSSN+882.17_004.cci> .
+
+<http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376> ;
+        ecrm:P42_assigned    "voile huméral" .
+
+<http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376> .
+
+<http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Taillé dans le brocard commandé à Lyon à la maison Bissardon et Bony en 1810 par Napoléon pour la chambre de l'Impératrice à Versailles ; employé pour tendre la chambre de la Duchesse d'Angoulême à Saint-Cloud ; réalisé par le chasublier Biais (Paris) et offert par Louis-Philippe en 1837 à la cathédrale Saint-Louis de Versailles, à l'occasion du Te Deum chanté pour la Prise de Constantine (13 octobre 1837).\nDépôt de la cathédrale Saint-Louis de Versailles, 18 novembre 1976."@fr ;
+        rdfs:label                     "voile huméral"@fr ;
+        ecrm:P102_has_title            "voile huméral"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a5bbe9f6-90a2-3270-aa3e-f6faf8b4134a> , <http://data.silknow.org/image/6350c420-508a-3f02-b3c2-4ae3606babee> ;
+        ecrm:P3_has_note               "Taillé dans le brocard commandé à Lyon à la maison Bissardon et Bony en 1810 par Napoléon pour la chambre de l'Impératrice à Versailles ; employé pour tendre la chambre de la Duchesse d'Angoulême à Saint-Cloud ; réalisé par le chasublier Biais (Paris) et offert par Louis-Philippe en 1837 à la cathédrale Saint-Louis de Versailles, à l'occasion du Te Deum chanté pour la Prise de Constantine (13 octobre 1837).\nDépôt de la cathédrale Saint-Louis de Versailles, 18 novembre 1976."@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376/dimension/2> , <http://data.silknow.org/object/4f7aa6aa-a2f2-391a-8016-b6038119b376/dimension/1> ;
+        dc:identifier                  "SSN 882.17" .

@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Wax portrait of General Monk, Duke of Albermarle, about 1650."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a0cab659-4c2d-3da8-bd6d-0ef043c9b198> ;
+        ecrm:P3_has_note               "Wax portrait of General Monk, Duke of Albermarle, about 1650."@en ;
+        dc:identifier                  "47.107" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/122304> .
+
+<http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Portrait" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe> .
+
+<http://data.silknow.org/event/443a394c-db56-316e-8eca-4b196a3ecfb2>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe> .
+
+<http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Wax portrait of General Monk, Duke of Albermarle, about 1650."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe> .
+
+<http://data.silknow.org/object/0084e96b-b8da-36ce-9c00-9091d906957a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 47.107" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe/domain/1> , <http://data.silknow.org/image/a0cab659-4c2d-3da8-bd6d-0ef043c9b198> , <http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe> , <http://data.silknow.org/production/46fb0142-69e5-3155-ae3a-05ec89e4885e> , <http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe/observation/1> , <http://data.silknow.org/event/443a394c-db56-316e-8eca-4b196a3ecfb2> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe/category/1> ;
+        dc:identifier       "122304.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0084e96b-b8da-36ce-9c00-9091d906957a> .
+
+<http://data.silknow.org/image/a0cab659-4c2d-3da8-bd6d-0ef043c9b198>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "736093" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/122304_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/736093/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/46fb0142-69e5-3155-ae3a-05ec89e4885e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/045600b4-792f-3d4c-b10c-bdbfbfdf4dbe> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/ebb23aba-b4fb-3b14-9330-c1e3f7fbfb73> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .

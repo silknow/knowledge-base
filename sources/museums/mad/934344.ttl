@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/6b47e47f-4b04-33eb-a371-e59c0fca8b75>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Japon, 17e siècle"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/fd8ea156-4bda-3c36-bb74-1bedf3555b6e> ;
+        dc:identifier                  "13990" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934344> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/be159b4a-2185-395e-8e97-d180154ad06c>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Japon, 17e siècle" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6b47e47f-4b04-33eb-a371-e59c0fca8b75> ;
+        ecrm:P3_has_note        "Japon, 17e siècle" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/a9362574-00b9-397d-af9f-afbea0f38ec3>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1907" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6b47e47f-4b04-33eb-a371-e59c0fca8b75> .
+
+<http://data.silknow.org/object/6b47e47f-4b04-33eb-a371-e59c0fca8b75/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6b47e47f-4b04-33eb-a371-e59c0fca8b75> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6b47e47f-4b04-33eb-a371-e59c0fca8b75> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e4daa415-70ba-37fd-836f-c769def42da4> .
+
+<http://data.silknow.org/object/e4daa415-70ba-37fd-836f-c769def42da4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13990" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6b47e47f-4b04-33eb-a371-e59c0fca8b75/category/1> , <http://data.silknow.org/object/6b47e47f-4b04-33eb-a371-e59c0fca8b75> , <http://data.silknow.org/image/fd8ea156-4bda-3c36-bb74-1bedf3555b6e> , <http://data.silknow.org/event/a9362574-00b9-397d-af9f-afbea0f38ec3> , <http://data.silknow.org/production/be159b4a-2185-395e-8e97-d180154ad06c> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "934344.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/image/fd8ea156-4bda-3c36-bb74-1bedf3555b6e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934344_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/d2840dbb-140e-4c13-87f5-9472750f4509.jpg> .

@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/666d02b8-b823-3298-85cc-16b9f1cbed90>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1900" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7f8094b1-1153-3932-8ed9-b97f343a3a03> .
+
+<http://data.silknow.org/production/247f7074-549b-3295-9192-81ce1bacbfe0>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1700-1720, Louis XIV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7f8094b1-1153-3932-8ed9-b97f343a3a03> ;
+        ecrm:P126_employed      "Satin de 5, liseré, effet taffetas"@fr ;
+        ecrm:P3_has_note        "France, 1700-1720, Louis XIV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1700_1720> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/d1344d2b-9b51-39e7-a2f2-59608e55f216>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 9495" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/7f8094b1-1153-3932-8ed9-b97f343a3a03/category/1> , <http://data.silknow.org/image/7b4d4cce-180f-395b-b875-7e084acf1ac0> , <http://data.silknow.org/event/666d02b8-b823-3298-85cc-16b9f1cbed90> , <http://data.silknow.org/production/247f7074-549b-3295-9192-81ce1bacbfe0> , <http://data.silknow.org/object/7f8094b1-1153-3932-8ed9-b97f343a3a03> ;
+        dc:identifier       "908199.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/image/7b4d4cce-180f-395b-b875-7e084acf1ac0>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908199_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/bd27d1f1-e2b8-4a0d-8dcb-ad8e20b5de59.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/7f8094b1-1153-3932-8ed9-b97f343a3a03/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7f8094b1-1153-3932-8ed9-b97f343a3a03> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/7f8094b1-1153-3932-8ed9-b97f343a3a03>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1700-1720, Louis XIV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7b4d4cce-180f-395b-b875-7e084acf1ac0> ;
+        dc:identifier                  "9495" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908199> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d1344d2b-9b51-39e7-a2f2-59608e55f216> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/7f8094b1-1153-3932-8ed9-b97f343a3a03> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

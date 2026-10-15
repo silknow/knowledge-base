@@ -1,0 +1,69 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/1f9ac544-8625-3aa2-b653-2fcfee75b99e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/93646950-1d9b-35af-9e46-50fdd39f14b8> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3173435/> .
+
+<http://data.silknow.org/image/66e875ab-2998-31e2-b25c-6ffd08f95832>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "710087" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/47014_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/710087/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/93646950-1d9b-35af-9e46-50fdd39f14b8>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/66e875ab-2998-31e2-b25c-6ffd08f95832> ;
+        dc:identifier                  "41.26" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/47014> .
+
+<https://sws.geonames.org/3173435/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/93646950-1d9b-35af-9e46-50fdd39f14b8> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/6c707a54-0158-3e9f-abbe-ad3996b6f441>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 41.26" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/66e875ab-2998-31e2-b25c-6ffd08f95832> , <http://data.silknow.org/object/93646950-1d9b-35af-9e46-50fdd39f14b8/category/1> , <http://data.silknow.org/object/93646950-1d9b-35af-9e46-50fdd39f14b8> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/event/71a5b62f-d72c-391f-8a75-693b0ecf53dd> , <http://data.silknow.org/production/1f9ac544-8625-3aa2-b653-2fcfee75b99e> , <http://data.silknow.org/object/93646950-1d9b-35af-9e46-50fdd39f14b8/domain/1> ;
+        dc:identifier       "47014.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/93646950-1d9b-35af-9e46-50fdd39f14b8/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/5> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/93646950-1d9b-35af-9e46-50fdd39f14b8> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6c707a54-0158-3e9f-abbe-ad3996b6f441> .
+
+<http://data.silknow.org/object/93646950-1d9b-35af-9e46-50fdd39f14b8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/93646950-1d9b-35af-9e46-50fdd39f14b8> .
+
+<http://data.silknow.org/event/71a5b62f-d72c-391f-8a75-693b0ecf53dd>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/93646950-1d9b-35af-9e46-50fdd39f14b8> .

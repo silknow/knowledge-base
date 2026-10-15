@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/4d5e66f3-b9d8-384b-b131-c3c09bda973d>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. William Sutherland" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. William Sutherland" .
+
+<http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, plain weave with supplementary patterning warps and self-patterned by two-color complementary ground weft floats; woven on loom with Jacquard attachment"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c2d9deca-a68f-3fc1-8e01-682d1c1d1b22> ;
+        ecrm:P3_has_note               "Silk, plain weave with supplementary patterning warps and self-patterned by two-color complementary ground weft floats; woven on loom with Jacquard attachment"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4/dimension/1> , <http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4/dimension/2> ;
+        dc:identifier                  "1947.203" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/60114/fragment> .
+
+<http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/event/8c867eec-8424-3c15-b949-dc7ad8a1e664>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4d5e66f3-b9d8-384b-b131-c3c09bda973d> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. William Sutherland" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4> .
+
+<http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, plain weave with supplementary patterning warps and self-patterned by two-color complementary ground weft floats; woven on loom with Jacquard attachment"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4> .
+
+<http://data.silknow.org/object/b3bf66d0-f20d-3ec7-9a85-8494a50fe9b4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1947.203" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/c2d9deca-a68f-3fc1-8e01-682d1c1d1b22> , <http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4/category/1> , <http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4> , <http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4/observation/1> , <http://data.silknow.org/production/f3f805dd-812d-3242-bd50-db2789d9514d> , <http://data.silknow.org/event/8c867eec-8424-3c15-b949-dc7ad8a1e664> ;
+        dc:identifier       "60114.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "52.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "52.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "30.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "30.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b3bf66d0-f20d-3ec7-9a85-8494a50fe9b4> .
+
+<http://data.silknow.org/image/c2d9deca-a68f-3fc1-8e01-682d1c1d1b22>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/60114_0.jpg> , <https://www.artic.edu/iiif/2/72e8613c-d78a-9776-f619-51bab91b93c1/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/production/f3f805dd-812d-3242-bd50-db2789d9514d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/64a1cb39-599f-3ea0-864d-95ef58d8bfe4> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1840_1850> , <http://data.silknow.org/timespan/1850> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .

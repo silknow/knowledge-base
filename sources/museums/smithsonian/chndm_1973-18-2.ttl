@@ -1,0 +1,75 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/d5cee538-faea-3827-a8ad-98336c39675f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556> ;
+        ecrm:P126_employed      "silk"@en ;
+        ecrm:P32_used_general_technique
+                "satin weave"@en , "twill weave"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1825> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e07a3a1c-b0f9-3ad9-911e-5d817f7e7b8d> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556> .
+
+<http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556> .
+
+<http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Continuous stripe pattern in yellow, tan and red on red ground showing symmetrical leaf clusters and rosettes in the Empire style. Compound weave of two structures: 5-harness satin weave foundation with 3/1 twill pattern. The twist is interconnected with the foundation satin in plain weave. Floats of the foundation weft to pattern are bound in 3/1 twill, by the twill warp. Cut from a larger fabric to be used as a trimming band."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/e07a3a1c-b0f9-3ad9-911e-5d817f7e7b8d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1973-18-2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556/observation/1> , <http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556/domain/1> , <http://data.silknow.org/event/1389676b-a615-3101-a7db-032953c7de2e> , <http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556> , <http://data.silknow.org/production/d5cee538-faea-3827-a8ad-98336c39675f> , <http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556/category/1> , <http://data.silknow.org/image/096d767a-752d-3cc0-9691-2d22e5f5e0af> ;
+        dc:identifier       "chndm_1973-18-2.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/event/1389676b-a615-3101-a7db-032953c7de2e>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556> .
+
+<http://data.silknow.org/image/096d767a-752d-3cc0-9691-2d22e5f5e0af>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1973-18-2_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-150908_01> .
+
+<http://data.silknow.org/object/d9b8c369-7152-3722-b17b-a0677f9d2556>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Continuous stripe pattern in yellow, tan and red on red ground showing symmetrical leaf clusters and rosettes in the Empire style. Compound weave of two structures: 5-harness satin weave foundation with 3/1 twill pattern. The twist is interconnected with the foundation satin in plain weave. Floats of the foundation weft to pattern are bound in 3/1 twill, by the twill warp. Cut from a larger fabric to be used as a trimming band."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/096d767a-752d-3cc0-9691-2d22e5f5e0af> ;
+        ecrm:P3_has_note               "Continuous stripe pattern in yellow, tan and red on red ground showing symmetrical leaf clusters and rosettes in the Empire style. Compound weave of two structures: 5-harness satin weave foundation with 3/1 twill pattern. The twist is interconnected with the foundation satin in plain weave. Floats of the foundation weft to pattern are bound in 3/1 twill, by the twill warp. Cut from a larger fabric to be used as a trimming band."@en ;
+        dc:identifier                  "chndm_1973-18-2" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1973-18-2> .

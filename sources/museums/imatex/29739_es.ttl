@@ -1,0 +1,80 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/466c4d43-e30f-33ec-8207-45a72db710de> .
+
+<http://data.silknow.org/image/16a455eb-9baf-3058-9955-13aff043b74c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035583" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29739_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000035583.jpg> .
+
+<http://data.silknow.org/production/15506b6d-2023-300b-8d11-76b62f777900>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "sarga"@es , "trama llançada"@es , "trama interrompuda"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> , <http://data.silknow.org/vocabulary/259> , <http://data.silknow.org/vocabulary/168> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/466c4d43-e30f-33ec-8207-45a72db710de>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29739" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158> , <http://data.silknow.org/event/726f97c9-4a34-3fb0-bb3a-8a07db2a7df2> , <http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158/observation/1> , <http://data.silknow.org/event/d5a4ad7b-eea3-312d-9161-8d29f8582d5a> , <http://data.silknow.org/image/16a455eb-9baf-3058-9955-13aff043b74c> , <http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158/category/1> , <http://data.silknow.org/production/15506b6d-2023-300b-8d11-76b62f777900> , <http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158/domain/1> ;
+        dc:identifier       "29739.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/726f97c9-4a34-3fb0-bb3a-8a07db2a7df2>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158> .
+
+<http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "conserva fragments dels 2 voravius"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/16a455eb-9baf-3058-9955-13aff043b74c> ;
+        ecrm:P3_has_note               "conserva fragments dels 2 voravius"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> ;
+        dc:identifier                  "5083" .
+
+<http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158> .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158> .
+
+<http://data.silknow.org/event/d5a4ad7b-eea3-312d-9161-8d29f8582d5a>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- conserva fragments dels 2 voravius"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/fdfa9807-5f91-3735-b0d6-8767b9b7a158> .

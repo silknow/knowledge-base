@@ -1,0 +1,122 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/6f650f35-d99d-3ed6-961d-b48b59be3106>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811> ;
+        ecrm:P126_employed      "Silk, linen"@en , "linen thread"@en , "silk (textile)"@en , "hand-woven, hand-embroidered"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/277> ;
+        ecrm:P32_used_general_technique
+                "satin weave"@en , "hand embroidery"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1570_1629> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/image/2a5d108a-076c-30d9-b7b2-739c6294b820>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MT9629" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O363854_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2020MT/2020MT9629.jpg> .
+
+<http://data.silknow.org/event/afa833b1-45b5-3498-881a-267801f2a5b3>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811> .
+
+<http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "1570-1629, French; white silk satin, embroidered and couched with green thread and cord"@en , "Embroidery fragment made of white silk satin couched with green cords of  various thickness and embroidered with green silk floss over linen under-padding in a pattern of undulating horizontal lines and floral motifs"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1d4b61e1-6761-3447-9576-0fbf62d68533> , <http://data.silknow.org/image/2a5d108a-076c-30d9-b7b2-739c6294b820> , <http://data.silknow.org/image/fc3a83ca-4fc5-3781-99f2-2045b640211b> ;
+        ecrm:P3_has_note               "1570-1629, French; white silk satin, embroidered and couched with green thread and cord"@en , "Embroidery fragment made of white silk satin couched with green cords of  various thickness and embroidered with green silk floss over linen under-padding in a pattern of undulating horizontal lines and floral motifs"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/dimension/1> , <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/dimension/2> ;
+        dc:identifier                  "584-1897" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O363854> .
+
+<http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "approx, :, :" ;
+        rdfs:label          "Length: 25.0 cm  approx, :, :" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "approx, :, :" ;
+        ecrm:P90_has_value  "25.0"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Embroidery fragment made of white silk satin couched with green cords of  various thickness and embroidered with green silk floss over linen under-padding in a pattern of undulating horizontal lines and floral motifs"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/image/1d4b61e1-6761-3447-9576-0fbf62d68533>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MT9628" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O363854_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2020MT/2020MT9628.jpg> .
+
+<http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/2> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811> .
+
+<http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Embroidery fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811> .
+
+<http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "approx" ;
+        rdfs:label          "Width: 24.5 cm  approx" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "approx" ;
+        ecrm:P90_has_value  "24.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3f5903b9-d74e-39b9-9944-faea610854c7> .
+
+<http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "1570-1629, French; white silk satin, embroidered and couched with green thread and cord"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811> .
+
+<http://data.silknow.org/image/fc3a83ca-4fc5-3781-99f2-2045b640211b>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2011ER8488" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O363854_2.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2011ER/2011ER8488.jpg> .
+
+<http://data.silknow.org/object/3f5903b9-d74e-39b9-9944-faea610854c7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O363854" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/domain/1> , <http://data.silknow.org/production/6f650f35-d99d-3ed6-961d-b48b59be3106> , <http://data.silknow.org/image/fc3a83ca-4fc5-3781-99f2-2045b640211b> , <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/observation/2> , <http://data.silknow.org/event/afa833b1-45b5-3498-881a-267801f2a5b3> , <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/observation/1> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/image/2a5d108a-076c-30d9-b7b2-739c6294b820> , <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811> , <http://data.silknow.org/object/6d967e27-f5ee-394e-b2fb-fadf93b52811/domain/2> , <http://data.silknow.org/image/1d4b61e1-6761-3447-9576-0fbf62d68533> ;
+        dc:identifier       "O363854.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .

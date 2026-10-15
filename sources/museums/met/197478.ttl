@@ -1,0 +1,129 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/98beebc5-1152-339c-8680-f4d73ab99e98>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/901ba325-feff-3817-9df2-eca29caad708> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Dodge Fund, 1934" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> .
+
+<http://data.silknow.org/event/df6855b1-158b-33f7-b190-efe398041d33>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> .
+
+<http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Sculpture-Bronze" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> .
+
+<http://data.silknow.org/met>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/30323df2-4417-3c79-aee4-b72bd3e0eb2d> .
+
+<http://data.silknow.org/image/ea0bcb56-42fe-3890-8f28-d30a74d4ef82>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/197478_1.jpg> , <https://images.metmuseum.org/CRDImages/es/original/DP-925-002.jpg> .
+
+<http://data.silknow.org/image/7f6d9e92-5388-399c-bf2b-c022b3fd8e5e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/197478_2.jpg> , <https://images.metmuseum.org/CRDImages/es/original/DP-925-003.jpg> .
+
+<http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "European Sculpture and Decorative Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> ;
+        ecrm:P78_is_identified_by  "European Sculpture and Decorative Arts" .
+
+<http://data.silknow.org/object/679b5723-4d5c-3f2b-9389-6f7f46a1e87c>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/bb133831-8c63-3fec-878b-b2550f9be264> .
+
+<http://data.silknow.org/production/7ae7f64d-7434-3e00-9278-fe897448db0c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> ;
+        ecrm:P126_employed      "Bronze with dark brown patina"@en , "Copper alloy"@en , "Patina"@en , "Sculpture"@en , "Statues"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1626_1675> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3169070/> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "The model was first created by Algardi for a version in silver, which was presented to Pope Innocent X in 1646."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/21926e70-87d9-3a2c-9e80-aee580ce91de> , <http://data.silknow.org/image/7f6d9e92-5388-399c-bf2b-c022b3fd8e5e> , <http://data.silknow.org/image/ea0bcb56-42fe-3890-8f28-d30a74d4ef82> , <http://data.silknow.org/image/61251ccb-2db9-306d-9690-874e45805f78> ;
+        ecrm:P3_has_note               "The model was first created by Algardi for a version in silver, which was presented to Pope Innocent X in 1646."@en ;
+        dc:identifier                  "34.111" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.metmuseum.org/art/collection/search/197478> .
+
+<http://data.silknow.org/image/21926e70-87d9-3a2c-9e80-aee580ce91de>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/197478_3.jpg> , <https://images.metmuseum.org/CRDImages/es/original/167509.jpg> .
+
+<http://data.silknow.org/object/03267f2b-4a52-38d2-9c3d-d8593a3e13e9>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/bad3810c-ce08-3c22-a5b5-efc60472bb2d> .
+
+<http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Baptism of Christ" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> .
+
+<http://data.silknow.org/object/30323df2-4417-3c79-aee4-b72bd3e0eb2d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 197478" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/61251ccb-2db9-306d-9690-874e45805f78> , <http://data.silknow.org/production/7ae7f64d-7434-3e00-9278-fe897448db0c> , <http://data.silknow.org/event/98beebc5-1152-339c-8680-f4d73ab99e98> , <http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5> , <http://data.silknow.org/image/ea0bcb56-42fe-3890-8f28-d30a74d4ef82> , <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc/observation/1> , <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> , <http://data.silknow.org/image/7f6d9e92-5388-399c-bf2b-c022b3fd8e5e> , <http://data.silknow.org/object/679b5723-4d5c-3f2b-9389-6f7f46a1e87c> , <http://data.silknow.org/object/b17d2559-8dc6-3653-9aed-f7023b0420d4> , <http://data.silknow.org/image/21926e70-87d9-3a2c-9e80-aee580ce91de> , <http://data.silknow.org/object/a17f2678-bf11-3fd8-8a8b-1b7d09b08533> , <http://data.silknow.org/object/93ef824d-9b82-304c-98d6-70a9a408769e> , <http://data.silknow.org/event/df6855b1-158b-33f7-b190-efe398041d33> , <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc/category/1> , <http://data.silknow.org/object/03267f2b-4a52-38d2-9c3d-d8593a3e13e9> ;
+        dc:identifier       "197478.json" ;
+        dc:publisher        "http://data.silknow.org/organization/met" .
+
+<http://data.silknow.org/object/b17d2559-8dc6-3653-9aed-f7023b0420d4>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/9d092dc9-6b9d-30c4-8934-80d29afe5386> .
+
+<http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "The model was first created by Algardi for a version in silver, which was presented to Pope Innocent X in 1646."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> .
+
+<http://data.silknow.org/actor/901ba325-feff-3817-9df2-eca29caad708>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Dodge Fund" ;
+        ecrm:P1_is_identified_by  "Dodge Fund" .
+
+<https://sws.geonames.org/3169070/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/93ef824d-9b82-304c-98d6-70a9a408769e>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/50874fdc-e5b8-3d5a-81e3-8d304439c457> .
+
+<http://data.silknow.org/image/61251ccb-2db9-306d-9690-874e45805f78>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/197478_0.jpg> , <https://images.metmuseum.org/CRDImages/es/original/DP-925-001.jpg> .
+
+<http://data.silknow.org/object/a17f2678-bf11-3fd8-8a8b-1b7d09b08533>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0cd2d9a2-4fec-33bf-bc82-d6a29cf369fc> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/6941b7c5-4ce1-345d-a3cf-7eedb16165f6> .

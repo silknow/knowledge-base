@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/1b82da51-a6e7-34db-b1d4-d8b819cb7cfc>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 03.1338" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/bb89a169-0018-3c66-9b51-6b5e34b395bc> , <http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28/domain/1> , <http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28/observation/1> , <http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28/category/1> , <http://data.silknow.org/production/d543aee0-6463-3588-98ca-d57876d47664> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/2aedfd50-ad4a-3adb-9451-65419fcdad80> , <http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28> ;
+        dc:identifier       "73329.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "42" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "42"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28> .
+
+<http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "164" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "164"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/2aedfd50-ad4a-3adb-9451-65419fcdad80>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "730209" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/73329_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/730209/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/d543aee0-6463-3588-98ca-d57876d47664>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "The design of the main strip is outlined with a heavy cord.  This is one half of a long piece of buratto, the other half of which is owned by Mrs. Linder's daughter, Mrs. Godwin.  They are exact duplicates with the exception of the figure with hands raised.  Lacis or punto a magli, twisted net, Byzantine."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1b82da51-a6e7-34db-b1d4-d8b819cb7cfc> .
+
+<http://data.silknow.org/event/bb89a169-0018-3c66-9b51-6b5e34b395bc>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28> .
+
+<http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Buratto lace" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28> .
+
+<http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "The design of the main strip is outlined with a heavy cord.  This is one half of a long piece of buratto, the other half of which is owned by Mrs. Linder's daughter, Mrs. Godwin.  They are exact duplicates with the exception of the figure with hands raised.  Lacis or punto a magli, twisted net, Byzantine."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2aedfd50-ad4a-3adb-9451-65419fcdad80> ;
+        ecrm:P3_has_note               "The design of the main strip is outlined with a heavy cord.  This is one half of a long piece of buratto, the other half of which is owned by Mrs. Linder's daughter, Mrs. Godwin.  They are exact duplicates with the exception of the figure with hands raised.  Lacis or punto a magli, twisted net, Byzantine."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28/dimension/2> , <http://data.silknow.org/object/a027802f-691b-3b3a-bb73-a0737c75fa28/dimension/1> ;
+        dc:identifier                  "03.1338" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/73329> .

@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/04e39fae-2758-35cf-bfd4-c0255608665e>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8> .
+
+<http://data.silknow.org/production/c299d734-a5f5-3169-b895-787562438784>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1755> .
+
+<http://data.silknow.org/image/a86628e0-d062-3a38-9792-56fb4991f410>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/278546_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5buXVwcWVEj9FUFsChkOzWkXTkig49r6sorRFNXTmmLaAkJBJ8AorId9wCp39q3QBVfpNd6JQHJi45ha7H9ATjNApfawwlng7rAzBPOT8t5%2fxGVhsrn7m2Q%3d%3d> .
+
+<http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8> .
+
+<http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "226" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "226"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/04bf26be-2254-35f1-8c41-832d9812e59d> .
+
+<http://data.silknow.org/object/04bf26be-2254-35f1-8c41-832d9812e59d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 278546" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8> , <http://data.silknow.org/production/c299d734-a5f5-3169-b895-787562438784> , <http://data.silknow.org/event/04e39fae-2758-35cf-bfd4-c0255608665e> , <http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8/observation/1> , <http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8/category/1> , <http://data.silknow.org/image/a86628e0-d062-3a38-9792-56fb4991f410> , <http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8/domain/1> ;
+        dc:identifier       "278546.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Taffetas broccato"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8> .
+
+<http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8> .
+
+<http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Taffetas broccato"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a86628e0-d062-3a38-9792-56fb4991f410> ;
+        ecrm:P3_has_note               "Taffetas broccato"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8/dimension/1> , <http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 0421" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/278546/?WEB=MuseiVE> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/09b7cb9c-7149-362d-8fb1-23fb334fe4f8/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "132" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "132"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

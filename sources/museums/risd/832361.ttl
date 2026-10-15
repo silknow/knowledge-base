@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/2549bad9-41ec-3f48-9d98-bcdb481f1af8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2549bad9-41ec-3f48-9d98-bcdb481f1af8> .
+
+<http://data.silknow.org/event/1e07276a-8e6e-3656-8990-2a3b26bf1a76>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2549bad9-41ec-3f48-9d98-bcdb481f1af8> .
+
+<http://data.silknow.org/object/5088fc66-a3fb-3f54-b383-411a90622dda>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 11.512" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/ca4f959f-bd96-3022-81f6-f776f011c479> , <http://data.silknow.org/image/e3a24378-bbad-323a-a201-2f9f7dde247f> , <http://data.silknow.org/object/2549bad9-41ec-3f48-9d98-bcdb481f1af8> , <http://data.silknow.org/event/1e07276a-8e6e-3656-8990-2a3b26bf1a76> , <http://data.silknow.org/object/2549bad9-41ec-3f48-9d98-bcdb481f1af8/category/1> , <http://data.silknow.org/object/2549bad9-41ec-3f48-9d98-bcdb481f1af8/domain/1> , <http://data.silknow.org/event/468cd7bb-ce02-3053-85b5-265df3991246> ;
+        dc:identifier       "832361.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<https://sws.geonames.org/6255148/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/e3a24378-bbad-323a-a201-2f9f7dde247f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/832361_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/38334.jpg> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/2549bad9-41ec-3f48-9d98-bcdb481f1af8>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e3a24378-bbad-323a-a201-2f9f7dde247f> ;
+        dc:identifier                  "11.512" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/trimming-material-11512> .
+
+<http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Gustav Radeke" .
+
+<http://data.silknow.org/object/2549bad9-41ec-3f48-9d98-bcdb481f1af8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "trimming (material)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2549bad9-41ec-3f48-9d98-bcdb481f1af8> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5088fc66-a3fb-3f54-b383-411a90622dda> .
+
+<http://data.silknow.org/event/468cd7bb-ce02-3053-85b5-265df3991246>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2549bad9-41ec-3f48-9d98-bcdb481f1af8> .
+
+<http://data.silknow.org/production/ca4f959f-bd96-3022-81f6-f776f011c479>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2549bad9-41ec-3f48-9d98-bcdb481f1af8> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6255148/> .

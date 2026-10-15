@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/object/24463727-f761-3059-b191-00cedc282a96>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.81" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/cb4bdda9-25d6-3d63-9f96-a4615dd4bbd3/right> , <http://data.silknow.org/object/39b2da12-1209-34c2-99e2-c66f3c9ce90d> , <http://data.silknow.org/assessment/979d4ea2-0bbf-37e0-97da-93632636a50e> , <http://data.silknow.org/object/cb4bdda9-25d6-3d63-9f96-a4615dd4bbd3/type/1> , <http://data.silknow.org/event/f0bd8a95-e4d9-391d-abf1-5e31f32dd0de> , <http://data.silknow.org/image/e8b63442-348b-398c-a37d-4849c8adceea> , <http://data.silknow.org/production/754c438b-6dc2-3fbe-8323-edfe36ad839f> , <http://data.silknow.org/object/cb4bdda9-25d6-3d63-9f96-a4615dd4bbd3> ;
+        dc:identifier       "95.71.81.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/24463727-f761-3059-b191-00cedc282a96> .
+
+<http://data.silknow.org/production/754c438b-6dc2-3fbe-8323-edfe36ad839f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/cb4bdda9-25d6-3d63-9f96-a4615dd4bbd3> .
+
+<http://data.silknow.org/event/f0bd8a95-e4d9-391d-abf1-5e31f32dd0de>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/cb4bdda9-25d6-3d63-9f96-a4615dd4bbd3> .
+
+<http://data.silknow.org/assessment/979d4ea2-0bbf-37e0-97da-93632636a50e>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/cb4bdda9-25d6-3d63-9f96-a4615dd4bbd3> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/979d4ea2-0bbf-37e0-97da-93632636a50e/condition/1> .
+
+<http://data.silknow.org/assessment/979d4ea2-0bbf-37e0-97da-93632636a50e/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "pas de défaut d'intégrité"@fr ;
+        ecrm:P2_has_type  "Intégrité" ;
+        ecrm:P3_has_note  "pas de défaut d'intégrité"@fr .
+
+<http://data.silknow.org/image/e8b63442-348b-398c-a37d-4849c8adceea>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.81_0.jpg> .
+
+<http://data.silknow.org/object/cb4bdda9-25d6-3d63-9f96-a4615dd4bbd3/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Gidon Marielle"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/cb4bdda9-25d6-3d63-9f96-a4615dd4bbd3> ;
+        ecrm:P3_has_note       "Gidon Marielle"@fr .
+
+<http://data.silknow.org/object/39b2da12-1209-34c2-99e2-c66f3c9ce90d>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.81.JPG"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/cb4bdda9-25d6-3d63-9f96-a4615dd4bbd3> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.81.JPG"@fr .
+
+<http://data.silknow.org/object/cb4bdda9-25d6-3d63-9f96-a4615dd4bbd3>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Oiseaux"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e8b63442-348b-398c-a37d-4849c8adceea> ;
+        dc:identifier                  "95.71.81" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/cb4bdda9-25d6-3d63-9f96-a4615dd4bbd3/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cb4bdda9-25d6-3d63-9f96-a4615dd4bbd3> ;
+        ecrm:P42_assigned    "Oiseaux" .

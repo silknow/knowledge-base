@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "30.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "30.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/e7213381-c28a-3e29-a09a-81fe3861416d>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/3b493381-b69c-3ea1-82df-46c6604a32b4> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Art Institute of Chicago Purchase Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12> .
+
+<http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12> .
+
+<http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "24.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "24.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/1f9c7b71-4814-3bd9-b680-a82b1e7e3d55>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1907.618" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12/observation/1> , <http://data.silknow.org/production/e24679d9-11dc-3ca2-8a69-e5f4f7199660> , <http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12/category/1> , <http://data.silknow.org/event/e7213381-c28a-3e29-a09a-81fe3861416d> , <http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12> , <http://data.silknow.org/image/b888d3bd-ffc9-379e-8d28-266a4e9242db> ;
+        dc:identifier       "62356.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/production/e24679d9-11dc-3ca2-8a69-e5f4f7199660>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://data.silknow.org/timespan/1600> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/image/b888d3bd-ffc9-379e-8d28-266a4e9242db>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/62356_0.jpg> , <https://www.artic.edu/iiif/2/9c3a236d-427a-4293-05f5-174b3c35e2ba/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "brocaded silk"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12> .
+
+<http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "brocaded silk"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b888d3bd-ffc9-379e-8d28-266a4e9242db> ;
+        ecrm:P3_has_note               "brocaded silk"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12/dimension/1> , <http://data.silknow.org/object/c1c43d59-bf82-381c-bce4-347ed3e5eb12/dimension/2> ;
+        dc:identifier                  "1907.618" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/62356/fragment> .
+
+<http://data.silknow.org/actor/3b493381-b69c-3ea1-82df-46c6604a32b4>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Art Institute of Chicago Purchase Fund" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago Purchase Fund" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1f9c7b71-4814-3bd9-b680-a82b1e7e3d55> .

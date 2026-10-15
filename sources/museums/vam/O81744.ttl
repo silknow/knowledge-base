@@ -1,0 +1,90 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/dc47a72e-c370-3c18-9443-5628c4a08ffc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b> ;
+        ecrm:P126_employed      "Woven linen embroidered in silk"@en , "Linen"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/277> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/146670/> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Bed valance" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 172 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "172"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Woven linen embroidered in silk in red long-legged cross-stitch, satin and double running stitches; design of trees standing on a border of leaves, having eagles and smaller birds in their branches."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4fbd13a4-2f39-3844-9095-11e05b71f57a> ;
+        ecrm:P3_has_note               "Woven linen embroidered in silk in red long-legged cross-stitch, satin and double running stitches; design of trees standing on a border of leaves, having eagles and smaller birds in their branches."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b/dimension/2> , <http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b/dimension/1> ;
+        dc:identifier                  "T.88-1950" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O81744> .
+
+<http://data.silknow.org/image/4fbd13a4-2f39-3844-9095-11e05b71f57a>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019MG0850" ;
+        schema:contentUrl  <http://media.vam.ac.uk/media/thira/collection_images/2019MG/2019MG0850.jpg> .
+
+<http://data.silknow.org/object/e0e27d6c-9649-3e10-9503-a1f17508815d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O81744" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b> , <http://data.silknow.org/image/4fbd13a4-2f39-3844-9095-11e05b71f57a> , <http://data.silknow.org/production/dc47a72e-c370-3c18-9443-5628c4a08ffc> , <http://data.silknow.org/event/4635ef8b-7f90-3d9c-b935-b5265c469d7b> , <http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b/observation/1> ;
+        dc:identifier       "O81744.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e0e27d6c-9649-3e10-9503-a1f17508815d> .
+
+<http://data.silknow.org/event/4635ef8b-7f90-3d9c-b935-b5265c469d7b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b> .
+
+<http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 40.6 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "40.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/146670/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Woven linen embroidered in silk in red long-legged cross-stitch, satin and double running stitches; design of trees standing on a border of leaves, having eagles and smaller birds in their branches."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0d5d9aab-ece6-34a0-8553-5ae63f2bd31b> .

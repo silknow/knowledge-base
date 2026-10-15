@@ -1,0 +1,91 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/ae240445-5b04-33a0-8ae2-6c2e901b54dd>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Edward Morris in memory of his wife" ;
+        ecrm:P1_is_identified_by  "Gift of Edward Morris in memory of his wife" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Isabella_Bird> , <https://viaf.org/viaf/54160720> , <https://isni.org/isni/0000000122800584> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Isabella_Bird> .
+
+<http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "silk brocaded"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa> .
+
+<http://data.silknow.org/event/ebb2980f-b0a2-3a2e-bdf5-0e3c2332d20c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/ae240445-5b04-33a0-8ae2-6c2e901b54dd> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Edward Morris in memory of his wife" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa> .
+
+<http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa> .
+
+<http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "silk brocaded"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8b275a64-3e5f-3f5b-8705-a00f3f4f2f1c> ;
+        ecrm:P3_has_note               "silk brocaded"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa/dimension/1> , <http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa/dimension/2> ;
+        dc:identifier                  "1961.541" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/86766/panel> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "254" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "254"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/8b275a64-3e5f-3f5b-8705-a00f3f4f2f1c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/86766_0.jpg> , <https://www.artic.edu/iiif/2/4a1f814e-7a8d-d386-a977-a0bb31f5ade5/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "46.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "46.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e1f43f66-aef9-3cef-9d92-ef134dbf3ecb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1961.541" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa/observation/1> , <http://data.silknow.org/image/8b275a64-3e5f-3f5b-8705-a00f3f4f2f1c> , <http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa> , <http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa/category/1> , <http://data.silknow.org/production/1de3edd7-f83a-3617-8fd0-1cc422d6a5d2> , <http://data.silknow.org/event/ebb2980f-b0a2-3a2e-bdf5-0e3c2332d20c> ;
+        dc:identifier       "86766.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/production/1de3edd7-f83a-3617-8fd0-1cc422d6a5d2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5b236dd3-0e23-3d14-aa05-69b777117eaa> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> , <http://data.silknow.org/timespan/1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e1f43f66-aef9-3cef-9d92-ef134dbf3ecb> .

@@ -1,0 +1,66 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/22c024aa-f038-3283-b0fa-b09e59eabe14> .
+
+<http://data.silknow.org/event/249c430b-09a7-3d88-9467-4688801a2152>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0bc6c901-622e-3442-ab4a-bf7e3328190b> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/image/1e39ee2a-82b3-3f5b-8196-d96a1dada9f5>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033005" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27339_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033005.jpg> .
+
+<http://data.silknow.org/event/8eff71fc-54e5-3296-b601-0fd402b11017>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0bc6c901-622e-3442-ab4a-bf7e3328190b> .
+
+<http://data.silknow.org/object/0bc6c901-622e-3442-ab4a-bf7e3328190b/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0bc6c901-622e-3442-ab4a-bf7e3328190b> .
+
+<http://data.silknow.org/object/0bc6c901-622e-3442-ab4a-bf7e3328190b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0bc6c901-622e-3442-ab4a-bf7e3328190b> .
+
+<http://data.silknow.org/production/e890a095-b7d4-3a53-83c4-65e509c05509>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0bc6c901-622e-3442-ab4a-bf7e3328190b> ;
+        ecrm:P126_employed      "... sense confirmar"@ca ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "vellut gofrat"@ca , "vellut tallat llis"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/object/0bc6c901-622e-3442-ab4a-bf7e3328190b>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1e39ee2a-82b3-3f5b-8196-d96a1dada9f5> ;
+        dc:identifier                  "16092" .
+
+<http://data.silknow.org/object/22c024aa-f038-3283-b0fa-b09e59eabe14>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27339" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/249c430b-09a7-3d88-9467-4688801a2152> , <http://data.silknow.org/image/1e39ee2a-82b3-3f5b-8196-d96a1dada9f5> , <http://data.silknow.org/object/0bc6c901-622e-3442-ab4a-bf7e3328190b/category/1> , <http://data.silknow.org/object/0bc6c901-622e-3442-ab4a-bf7e3328190b/domain/1> , <http://data.silknow.org/event/8eff71fc-54e5-3296-b601-0fd402b11017> , <http://data.silknow.org/production/e890a095-b7d4-3a53-83c4-65e509c05509> , <http://data.silknow.org/object/0bc6c901-622e-3442-ab4a-bf7e3328190b> ;
+        dc:identifier       "27339.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/3366bb25-b604-3336-8e48-ecd5bd5c417d>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "710055" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/46982_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/710055/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/event/8d671d66-a27f-3e0d-9019-9eaf949828a8>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480> .
+
+<http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "White ground, small floral clusters (pink, green, red, blue, brown); supplementary warp pattern stripe."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3366bb25-b604-3336-8e48-ecd5bd5c417d> ;
+        ecrm:P3_has_note               "White ground, small floral clusters (pink, green, red, blue, brown); supplementary warp pattern stripe."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480/dimension/2> , <http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480/dimension/1> ;
+        dc:identifier                  "40.594" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/46982> .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "White ground, small floral clusters (pink, green, red, blue, brown); supplementary warp pattern stripe."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480> .
+
+<http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "106" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "106"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e37f3ea3-3dab-331c-8a1a-5fb219aa20dd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 40.594" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/8d671d66-a27f-3e0d-9019-9eaf949828a8> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480/category/1> , <http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480> , <http://data.silknow.org/image/3366bb25-b604-3336-8e48-ecd5bd5c417d> , <http://data.silknow.org/production/003852f6-180f-3eb2-b4be-b50435db9217> , <http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480/domain/1> , <http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480/observation/1> ;
+        dc:identifier       "46982.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "48.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "48.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/production/003852f6-180f-3eb2-b4be-b50435db9217>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480> ;
+        ecrm:P126_employed      "Brocaded with polychrome silk threads on silk-taffeta ground with warp-float stripes"@en ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2996944/> .
+
+<http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480> .
+
+<http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37cc9cb2-0af4-31a6-8714-c2ba0d6b0480> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e37f3ea3-3dab-331c-8a1a-5fb219aa20dd> .

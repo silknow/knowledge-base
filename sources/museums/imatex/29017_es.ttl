@@ -1,0 +1,69 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/84aea2b9-4416-37b4-9cc1-d042669ba681> .
+
+<http://data.silknow.org/object/8b96d5c5-1ce9-30f6-b702-48b34fc3b62a>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/733d6e85-5d0e-3ed6-87cc-a53f1ec9b33f> ;
+        dc:identifier                  "4456" .
+
+<http://data.silknow.org/event/078d18c0-a6da-31a8-97b2-11f24fb71021>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8b96d5c5-1ce9-30f6-b702-48b34fc3b62a> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/event/1ca9579f-eaa7-33c1-a1fd-145ca41d00ee>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8b96d5c5-1ce9-30f6-b702-48b34fc3b62a> .
+
+<http://data.silknow.org/object/8b96d5c5-1ce9-30f6-b702-48b34fc3b62a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8b96d5c5-1ce9-30f6-b702-48b34fc3b62a> .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/production/c049495e-3b46-348f-8e29-51d3247e7c9f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8b96d5c5-1ce9-30f6-b702-48b34fc3b62a> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/8b96d5c5-1ce9-30f6-b702-48b34fc3b62a/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8b96d5c5-1ce9-30f6-b702-48b34fc3b62a> .
+
+<http://data.silknow.org/image/733d6e85-5d0e-3ed6-87cc-a53f1ec9b33f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000034707" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29017_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000034707.jpg> .
+
+<http://data.silknow.org/object/84aea2b9-4416-37b4-9cc1-d042669ba681>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29017" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8b96d5c5-1ce9-30f6-b702-48b34fc3b62a/category/1> , <http://data.silknow.org/image/733d6e85-5d0e-3ed6-87cc-a53f1ec9b33f> , <http://data.silknow.org/production/c049495e-3b46-348f-8e29-51d3247e7c9f> , <http://data.silknow.org/event/078d18c0-a6da-31a8-97b2-11f24fb71021> , <http://data.silknow.org/object/8b96d5c5-1ce9-30f6-b702-48b34fc3b62a/domain/1> , <http://data.silknow.org/object/8b96d5c5-1ce9-30f6-b702-48b34fc3b62a> , <http://data.silknow.org/event/1ca9579f-eaa7-33c1-a1fd-145ca41d00ee> ;
+        dc:identifier       "29017.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

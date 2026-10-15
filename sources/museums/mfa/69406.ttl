@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/07570366-09b8-31dd-80e9-b228a0ecf625>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "895183" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/69406_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/895183/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Woven with yellow silk and gilt thread. The design consists of a row of open four-petaled flowers."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/07570366-09b8-31dd-80e9-b228a0ecf625> ;
+        ecrm:P3_has_note               "Woven with yellow silk and gilt thread. The design consists of a row of open four-petaled flowers."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569/dimension/2> , <http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569/dimension/1> ;
+        dc:identifier                  "99.198" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/69406> .
+
+<http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Woven with yellow silk and gilt thread. The design consists of a row of open four-petaled flowers."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569> .
+
+<http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "3.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "3.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569> .
+
+<http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Gimp" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569> .
+
+<http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "53.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "53.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/event/f2cf14f4-839d-3d3a-9074-b60b80601f90>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b744c2f7-2f98-31ac-814b-009ad23f2338> .
+
+<http://data.silknow.org/place/594d387e-eb81-3cc6-b46d-2b9e9cfbc935>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Italian, Spanish or French" ;
+        ecrm:P87_is_identified_by  "Italian, Spanish or French" .
+
+<http://data.silknow.org/object/b744c2f7-2f98-31ac-814b-009ad23f2338>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 99.198" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569/domain/1> , <http://data.silknow.org/image/07570366-09b8-31dd-80e9-b228a0ecf625> , <http://data.silknow.org/event/f2cf14f4-839d-3d3a-9074-b60b80601f90> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569/category/1> , <http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569/observation/1> , <http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569> , <http://data.silknow.org/production/9a6fc6c9-809d-301f-a65d-e1549eff734a> ;
+        dc:identifier       "69406.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/production/9a6fc6c9-809d-301f-a65d-e1549eff734a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/57d2f8e9-a7bc-3173-bcd1-029f4e001569> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/594d387e-eb81-3cc6-b46d-2b9e9cfbc935> .

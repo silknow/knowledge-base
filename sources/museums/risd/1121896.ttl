@@ -1,0 +1,83 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/cfcd31dd-6ac4-36dd-8264-2ae71624bcb1/category/1>
+        a                    silk:T35 ;
+        silk:L1              "ribbon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cfcd31dd-6ac4-36dd-8264-2ae71624bcb1> .
+
+<http://data.silknow.org/production/997042ac-5990-3f74-adb4-0fafee49e03d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/cfcd31dd-6ac4-36dd-8264-2ae71624bcb1> ;
+        ecrm:P126_employed      "silk, double face satin"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1870_1920> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/997042ac-5990-3f74-adb4-0fafee49e03d/activity/1> .
+
+<http://data.silknow.org/production/997042ac-5990-3f74-adb4-0fafee49e03d/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/9f3946f3-6718-3339-b97a-d7d111b1cae0> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/cfcd31dd-6ac4-36dd-8264-2ae71624bcb1/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cfcd31dd-6ac4-36dd-8264-2ae71624bcb1> .
+
+<http://data.silknow.org/object/cfcd31dd-6ac4-36dd-8264-2ae71624bcb1>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b827fa38-0fe8-3e2c-8a87-df9993f0354c> ;
+        dc:identifier                  "2009.120.15" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/ribbon-200912015> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/9f3946f3-6718-3339-b97a-d7d111b1cae0>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Johnson Cowden & Company" ;
+        ecrm:P1_is_identified_by  "Johnson Cowden & Company" .
+
+<http://data.silknow.org/image/b827fa38-0fe8-3e2c-8a87-df9993f0354c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1121896_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/323433.jpg> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/29a330a5-2076-3aec-825a-41c96fd61ff1> .
+
+<http://data.silknow.org/event/118874f3-3fe0-3410-bc90-e8bd7964fa22>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/cfcd31dd-6ac4-36dd-8264-2ae71624bcb1> .
+
+<http://data.silknow.org/actor/49fbe987-9515-3187-a40a-ad07b609ecb2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Ted Milligan in memory of his grandmother Claire Elizabeth Carpenter" ;
+        ecrm:P1_is_identified_by  "Gift of Ted Milligan in memory of his grandmother Claire Elizabeth Carpenter" .
+
+<http://data.silknow.org/event/8fab61e7-6096-37c8-b7e2-a49ac3eb5c05>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/49fbe987-9515-3187-a40a-ad07b609ecb2> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Ted Milligan in memory of his grandmother Claire Elizabeth Carpenter" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/cfcd31dd-6ac4-36dd-8264-2ae71624bcb1> .
+
+<http://data.silknow.org/object/29a330a5-2076-3aec-825a-41c96fd61ff1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2009.120.15" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/cfcd31dd-6ac4-36dd-8264-2ae71624bcb1/category/1> , <http://data.silknow.org/event/8fab61e7-6096-37c8-b7e2-a49ac3eb5c05> , <http://data.silknow.org/image/b827fa38-0fe8-3e2c-8a87-df9993f0354c> , <http://data.silknow.org/event/118874f3-3fe0-3410-bc90-e8bd7964fa22> , <http://data.silknow.org/object/cfcd31dd-6ac4-36dd-8264-2ae71624bcb1> , <http://data.silknow.org/object/cfcd31dd-6ac4-36dd-8264-2ae71624bcb1/domain/1> , <http://data.silknow.org/production/997042ac-5990-3f74-adb4-0fafee49e03d> ;
+        dc:identifier       "1121896.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

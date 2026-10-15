@@ -1,0 +1,118 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1a52d268-35bd-3155-bbf8-32b1d86e879a> .
+
+<http://data.silknow.org/event/dc187546-8a21-3f2f-a850-55d6ca982acb>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "purchase - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc> ;
+        ecrm:P3_has_note               "purchase - Diputació de Barcelona" ;
+        ecrm:P4_has_time-span          <http://data.silknow.org/timespan/1957_01_01> .
+
+<http://data.silknow.org/image/ba59d55b-2ea5-3c9c-ba7b-b9e8baa1a3c5>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "stylized plant motifs"@en ;
+        ecrm:P3_has_note  "stylized plant motifs"@en .
+
+<http://data.silknow.org/event/55c47725-be05-3428-b8a5-9116f0ef5a27>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc> .
+
+<http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc> .
+
+<http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- conserva part d'un voraviu"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "conserva part d'un voraviu"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5b6f4d98-1248-3c57-af80-e313e8d9fbe9> ;
+        ecrm:P3_has_note               "conserva part d'un voraviu"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc/dimension/1> , <http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc/dimension/2> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/751> , <http://data.silknow.org/image/ba59d55b-2ea5-3c9c-ba7b-b9e8baa1a3c5> ;
+        dc:identifier                  "5430" .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/image/5b6f4d98-1248-3c57-af80-e313e8d9fbe9>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000000254" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/3336_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000000254.jpg> .
+
+<http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "30" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "30"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/3b85cfaa-439a-3760-b467-d605cf39f1ab>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "patterned fabric"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/168> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> , <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .
+
+<http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "39.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "39.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/1a52d268-35bd-3155-bbf8-32b1d86e879a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 3336" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc/observation/1> , <http://data.silknow.org/image/5b6f4d98-1248-3c57-af80-e313e8d9fbe9> , <http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc/category/1> , <http://data.silknow.org/event/55c47725-be05-3428-b8a5-9116f0ef5a27> , <http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc/domain/1> , <http://data.silknow.org/event/dc187546-8a21-3f2f-a850-55d6ca982acb> , <http://data.silknow.org/production/3b85cfaa-439a-3760-b467-d605cf39f1ab> , <http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc> ;
+        dc:identifier       "3336.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/60060b80-efb1-34c5-9d9d-990f2a8ab3cc> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

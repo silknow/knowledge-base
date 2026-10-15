@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/60d0302f-b6ba-3ba0-a1f0-ff64f5f828e4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bd33cb8b-ba7e-3241-8629-ae749ba5f939> ;
+        ecrm:P32_used_general_technique
+                "Lampasso lanciato"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1525> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3176959/> .
+
+<http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        ecrm:P1_is_identified_by  "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122951649> , <https://viaf.org/viaf/147524313> .
+
+<http://data.silknow.org/object/9673e3ac-afff-3243-aa40-13588cdb3ae5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1600842763834" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bd33cb8b-ba7e-3241-8629-ae749ba5f939> , <http://data.silknow.org/image/6ab3ef70-f5ae-3b09-a4df-fe3bdaf5a6a2> , <http://data.silknow.org/production/60d0302f-b6ba-3ba0-a1f0-ff64f5f828e4> , <http://data.silknow.org/object/bd33cb8b-ba7e-3241-8629-ae749ba5f939/type/1> , <http://data.silknow.org/object/40d3b682-f76f-3073-bf2d-5c22c4fc5765> , <http://data.silknow.org/event/f87daa9e-e982-3c52-aaba-2c97406d8e71> ;
+        dc:identifier       "1600842763834.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/object/bd33cb8b-ba7e-3241-8629-ae749ba5f939/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/6ab3ef70-f5ae-3b09-a4df-fe3bdaf5a6a2>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1600843633_79" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1600842763834_0.jpg> .
+
+<http://data.silknow.org/object/40d3b682-f76f-3073-bf2d-5c22c4fc5765>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Marta Cuoghi Costantini, scheda n. 79, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, p. 158"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bd33cb8b-ba7e-3241-8629-ae749ba5f939> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Marta Cuoghi Costantini, scheda n. 79, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, p. 158"@it .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9673e3ac-afff-3243-aa40-13588cdb3ae5> .
+
+<http://data.silknow.org/event/f87daa9e-e982-3c52-aaba-2c97406d8e71>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/bd33cb8b-ba7e-3241-8629-ae749ba5f939> .
+
+<http://data.silknow.org/object/bd33cb8b-ba7e-3241-8629-ae749ba5f939>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Inizi del XVI secolo"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6ab3ef70-f5ae-3b09-a4df-fe3bdaf5a6a2> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/bd33cb8b-ba7e-3241-8629-ae749ba5f939/dimension/2> , <http://data.silknow.org/object/bd33cb8b-ba7e-3241-8629-ae749ba5f939/dimension/1> ;
+        dc:identifier                  "1600842763834" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<https://sws.geonames.org/3176959/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/bd33cb8b-ba7e-3241-8629-ae749ba5f939/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "28" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "28"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/bd33cb8b-ba7e-3241-8629-ae749ba5f939/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bd33cb8b-ba7e-3241-8629-ae749ba5f939> ;
+        ecrm:P42_assigned    "Frammento di bordo" .

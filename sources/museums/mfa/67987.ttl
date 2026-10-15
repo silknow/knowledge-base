@@ -1,0 +1,91 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/b9b67ba3-9e13-34cb-8b0d-93876e8175f9>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1039598" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/67987_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/1039598/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/actor/b8b2e71d-26e3-32dd-af59-7482f582922e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Denman Waldo Ross Collection; Gift from Denman Waldo Ross to the MFA / Denman Waldo Ross Collection" ;
+        ecrm:P1_is_identified_by  "Denman Waldo Ross Collection; Gift from Denman Waldo Ross to the MFA / Denman Waldo Ross Collection" .
+
+<http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fragment of plain-weave cotton with brownish-red ground and overall repeating design of floral motifs in blue/white and green/yellow with alternating flowers surrounded by yellow dots."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e> .
+
+<http://data.silknow.org/event/e73c5f27-0b15-39e2-adcd-6bf8d7307a36>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e> .
+
+<http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Fragment of plain-weave cotton with brownish-red ground and overall repeating design of floral motifs in blue/white and green/yellow with alternating flowers surrounded by yellow dots."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b9b67ba3-9e13-34cb-8b0d-93876e8175f9> ;
+        ecrm:P3_has_note               "Fragment of plain-weave cotton with brownish-red ground and overall repeating design of floral motifs in blue/white and green/yellow with alternating flowers surrounded by yellow dots."@en ;
+        dc:identifier                  "20.2000" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/67987> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/75d89826-49cc-322a-960e-5676e479191a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e> ;
+        ecrm:P126_employed      "Cotton plain-weave, printed"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1825> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/event/d493caa0-b015-3c1a-b1e0-3cc60ff5e6af>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b8b2e71d-26e3-32dd-af59-7482f582922e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "Denman Waldo Ross Collection; Gift from Denman Waldo Ross to the MFA, 1920 / Denman Waldo Ross Collection" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4f183427-146c-37a8-a107-839fd19f1c00> .
+
+<http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Printed cotton fragment from Japanese sample book" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e> .
+
+<http://data.silknow.org/object/4f183427-146c-37a8-a107-839fd19f1c00>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 20.2000" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/d493caa0-b015-3c1a-b1e0-3cc60ff5e6af> , <http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e/domain/1> , <http://data.silknow.org/image/b9b67ba3-9e13-34cb-8b0d-93876e8175f9> , <http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e/observation/1> , <http://data.silknow.org/event/e73c5f27-0b15-39e2-adcd-6bf8d7307a36> , <http://data.silknow.org/production/75d89826-49cc-322a-960e-5676e479191a> , <http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e> , <http://data.silknow.org/object/77472115-f78e-35c5-a3bd-67232ef76e0e/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "67987.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

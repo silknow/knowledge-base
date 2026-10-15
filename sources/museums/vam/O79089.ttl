@@ -1,0 +1,106 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/96f9f085-1b15-347c-9681-bad644790702>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2> .
+
+<http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 14.5 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "36.83"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Personal accessories" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2> .
+
+<http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Gold necklace, Tamil Nadu (Vellore), 19th century"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2> .
+
+<http://data.silknow.org/image/275cf16f-eaab-3c5a-aa95-4ca08ad9c5ee>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AV2242" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O79089_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AV/2006AV2242.jpg> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<https://sws.geonames.org/1253286/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/6d9bb50c-1134-3170-be0a-3861a3006b6d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2> ;
+        ecrm:P126_employed      "Gold beads on a silk threads"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/277> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/ff411b36-6bdf-3975-8892-4e1fd4b9f513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1253286/> .
+
+<http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "South & South East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2> ;
+        ecrm:P78_is_identified_by  "South & South East Asia Collection" .
+
+<http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Gold necklace, Tamil Nadu (Vellore), 19th century"@en , "Gold necklace formed of two rows of long gold beads strung on red silk threads.  Each bead is separated from its fellow by flexible pendent ornaments."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/275cf16f-eaab-3c5a-aa95-4ca08ad9c5ee> ;
+        ecrm:P3_has_note               "Gold necklace, Tamil Nadu (Vellore), 19th century"@en , "Gold necklace formed of two rows of long gold beads strung on red silk threads.  Each bead is separated from its fellow by flexible pendent ornaments."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2/dimension/1> ;
+        dc:identifier                  "IS.1981-1883" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O79089> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/79224444-b560-313b-8d92-fdd79ff2fbb2> .
+
+<http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Necklace" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2> .
+
+<http://data.silknow.org/object/39f4c9b2-adfb-3bec-81f1-91546d283421>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "p.80\nSusan Stronge, Nima Smith, and J.C. Harle. <u>A Golden Treasury : Jewellery from the Indian Subcontinent</u> London : Victoria and Albert Museum in association with Mapin Publishing, Ahmedabad, 1988. ISBN: 0944142168"@en ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "p.80\nSusan Stronge, Nima Smith, and J.C. Harle. <u>A Golden Treasury : Jewellery from the Indian Subcontinent</u> London : Victoria and Albert Museum in association with Mapin Publishing, Ahmedabad, 1988. ISBN: 0944142168"@en .
+
+<http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Jewellery" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2> .
+
+<http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Gold necklace formed of two rows of long gold beads strung on red silk threads.  Each bead is separated from its fellow by flexible pendent ornaments."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2> .
+
+<http://data.silknow.org/object/79224444-b560-313b-8d92-fdd79ff2fbb2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O79089" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/96f9f085-1b15-347c-9681-bad644790702> , <http://data.silknow.org/object/39f4c9b2-adfb-3bec-81f1-91546d283421> , <http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217> , <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2> , <http://data.silknow.org/image/275cf16f-eaab-3c5a-aa95-4ca08ad9c5ee> , <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2/observation/2> , <http://data.silknow.org/production/6d9bb50c-1134-3170-be0a-3861a3006b6d> , <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2/domain/2> , <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2/observation/1> , <http://data.silknow.org/object/015a792d-983f-3a4f-8705-95b4abbed2f2/domain/1> ;
+        dc:identifier       "O79089.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .

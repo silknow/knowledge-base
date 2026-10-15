@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/522e1543-e07c-3241-9347-72caf6d13c8d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1650_1699> .
+
+<http://data.silknow.org/image/14cf6a62-d082-310a-af47-d8bebf7c51b0>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/279024_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5HHK84COMnKU711gIES3G7ZqJ0DXiyS8KoYDk%2bp8RyEXbYo1n6jdiCcaS%2bJ6tH5hzYvnLqCSzYf5ezHfe43tirCO2GYh%2b5jOLr7mXnRxA0ugdffMw7ew7iw%3d%3d> .
+
+<http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "25" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "25"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Velluto soprarizzo fondo raso"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/14cf6a62-d082-310a-af47-d8bebf7c51b0> ;
+        ecrm:P3_has_note               "Velluto soprarizzo fondo raso"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb/dimension/1> , <http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 1115" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/279024/?WEB=MuseiVE> .
+
+<http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb> .
+
+<http://data.silknow.org/event/d0531509-6917-32cf-aae1-a04dd78fa009>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e0f047aa-7522-3f30-8979-09d3596f7c09> .
+
+<http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Velluto soprarizzo fondo raso"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb> .
+
+<http://data.silknow.org/object/e0f047aa-7522-3f30-8979-09d3596f7c09>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 279024" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb/observation/1> , <http://data.silknow.org/event/d0531509-6917-32cf-aae1-a04dd78fa009> , <http://data.silknow.org/production/522e1543-e07c-3241-9347-72caf6d13c8d> , <http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb/category/1> , <http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb> , <http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb/domain/1> , <http://data.silknow.org/image/14cf6a62-d082-310a-af47-d8bebf7c51b0> ;
+        dc:identifier       "279024.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "11" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "11"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bc4c29e2-e38f-3646-9ccf-ae3eed4358eb> .

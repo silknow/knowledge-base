@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/07cb3c6c-c6b0-3ba6-846e-6d8a212588c9> .
+
+<http://data.silknow.org/image/b5617c00-cd0f-362b-a133-33b7ef450e25>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000029663" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/25031_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000029663.jpg> .
+
+<http://data.silknow.org/object/07cb3c6c-c6b0-3ba6-846e-6d8a212588c9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 25031" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/37745aa1-8c0d-390c-843f-06092c7b03bb> , <http://data.silknow.org/object/5f21249f-f974-3f67-98c3-81b8d1af559f> , <http://data.silknow.org/object/5f21249f-f974-3f67-98c3-81b8d1af559f/domain/1> , <http://data.silknow.org/image/b5617c00-cd0f-362b-a133-33b7ef450e25> , <http://data.silknow.org/object/5f21249f-f974-3f67-98c3-81b8d1af559f/category/1> , <http://data.silknow.org/event/265f4934-b8c6-37eb-951b-49fe356818b1> , <http://data.silknow.org/event/d1c25469-4141-3826-bea6-f31dbf5d8dd6> ;
+        dc:identifier       "25031.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/265f4934-b8c6-37eb-951b-49fe356818b1>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5f21249f-f974-3f67-98c3-81b8d1af559f> .
+
+<http://data.silknow.org/event/d1c25469-4141-3826-bea6-f31dbf5d8dd6>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5f21249f-f974-3f67-98c3-81b8d1af559f> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/5f21249f-f974-3f67-98c3-81b8d1af559f/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5f21249f-f974-3f67-98c3-81b8d1af559f> .
+
+<http://data.silknow.org/object/5f21249f-f974-3f67-98c3-81b8d1af559f>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b5617c00-cd0f-362b-a133-33b7ef450e25> ;
+        dc:identifier                  "21613" .
+
+<http://data.silknow.org/object/5f21249f-f974-3f67-98c3-81b8d1af559f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5f21249f-f974-3f67-98c3-81b8d1af559f> .
+
+<http://data.silknow.org/production/37745aa1-8c0d-390c-843f-06092c7b03bb>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5f21249f-f974-3f67-98c3-81b8d1af559f> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .

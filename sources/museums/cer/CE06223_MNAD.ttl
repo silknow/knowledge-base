@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Contemporánea"@es , "Forma rectangular, tapas unidas entre sí por el lomo con un tafilete negro. Cara superior más decorada que la posterior. Forrado con moaré en el interior, con bolsillo en el reverso de la tapa anterior para tarjetas (faltan el bloc de notas y el lapicero)."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9fedb227-b327-3ca9-9423-97043a59ffeb> ;
+        ecrm:P3_has_note               "Edad Contemporánea"@es , "Forma rectangular, tapas unidas entre sí por el lomo con un tafilete negro. Cara superior más decorada que la posterior. Forrado con moaré en el interior, con bolsillo en el reverso de la tapa anterior para tarjetas (faltan el bloc de notas y el lapicero)."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/759> ;
+        dc:identifier                  "CE06223" .
+
+<http://data.silknow.org/image/9fedb227-b327-3ca9-9423-97043a59ffeb>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE06223" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE06223_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE06223&txt_id_imagen=1> .
+
+<http://data.silknow.org/event/1e428137-7867-39bb-8587-5a9d244bc7cc>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Forma rectangular, tapas unidas entre sí por el lomo con un tafilete negro. Cara superior más decorada que la posterior. Forrado con moaré en el interior, con bolsillo en el reverso de la tapa anterior para tarjetas (faltan el bloc de notas y el lapicero)."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f> .
+
+<http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tarjetero" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f> .
+
+<http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/44> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f> .
+
+<http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Contemporánea"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f> .
+
+<http://data.silknow.org/event/a8b7db6e-6123-3569-953a-8e4fea76f13f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f> .
+
+<http://data.silknow.org/production/9abdaa43-e788-3bb1-b2c6-f647e1bb3302>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f> ;
+        ecrm:P126_employed      "Nácar"@es , "Plata"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "Cincelado"@es , "Tallado"@es , "Embutido"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/346> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/560dd408-3f95-3fd7-9991-75ecb99f4560> .
+
+<http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Platería" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f7ebba87-cc63-3f52-a369-6ab4c7a4f864> .
+
+<http://data.silknow.org/object/f7ebba87-cc63-3f52-a369-6ab4c7a4f864>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE06223" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/1e428137-7867-39bb-8587-5a9d244bc7cc> , <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f/observation/1> , <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f/observation/2> , <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f/domain/1> , <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f/category/1> , <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f/domain/2> , <http://data.silknow.org/object/046d2394-662e-3f38-8c0d-23df4b05663f> , <http://data.silknow.org/event/a8b7db6e-6123-3569-953a-8e4fea76f13f> , <http://data.silknow.org/production/9abdaa43-e788-3bb1-b2c6-f647e1bb3302> , <http://data.silknow.org/image/9fedb227-b327-3ca9-9423-97043a59ffeb> ;
+        dc:identifier       "CE06223_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .

@@ -1,0 +1,62 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/ae3053cf-80a9-3800-a75b-d2d4997a6434>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Victor Menu, 1920 (vers), Cornille Frères" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/cc923330-6cd4-37a6-a845-6bbcfe78c8b9> ;
+        ecrm:P3_has_note        "Victor Menu, 1920 (vers), Cornille Frères" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/ce751466-09f8-37d9-a181-bfa8a6fb513c> .
+
+<http://data.silknow.org/object/cc923330-6cd4-37a6-a845-6bbcfe78c8b9>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Victor Menu, 1920 (vers), Cornille Frères"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5986a9fc-f6c8-30a6-9a76-67fa3ef4d0b3> ;
+        dc:identifier                  "22010" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/915514> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/de59ad7e-4394-3d65-a8e4-0059ac6106d4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 22010" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/cc923330-6cd4-37a6-a845-6bbcfe78c8b9/category/1> , <http://data.silknow.org/object/cc923330-6cd4-37a6-a845-6bbcfe78c8b9> , <http://data.silknow.org/event/4aa0ff29-11d1-3f28-a16d-582dfb17d00a> , <http://data.silknow.org/image/5986a9fc-f6c8-30a6-9a76-67fa3ef4d0b3> , <http://data.silknow.org/production/ae3053cf-80a9-3800-a75b-d2d4997a6434> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "915514.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/cc923330-6cd4-37a6-a845-6bbcfe78c8b9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cc923330-6cd4-37a6-a845-6bbcfe78c8b9> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/de59ad7e-4394-3d65-a8e4-0059ac6106d4> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/cc923330-6cd4-37a6-a845-6bbcfe78c8b9> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/image/5986a9fc-f6c8-30a6-9a76-67fa3ef4d0b3>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/915514_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/4be10749-f85f-417e-8008-5cfda1ffb117.jpg> .
+
+<http://data.silknow.org/event/4aa0ff29-11d1-3f28-a16d-582dfb17d00a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat Cornille Frères, 1920" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/cc923330-6cd4-37a6-a845-6bbcfe78c8b9> .

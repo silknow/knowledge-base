@@ -1,0 +1,96 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/5bd06d70-731f-37b4-a036-c038833c85c5>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "857060" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/593244_1.jpg> , <https://collections.mfa.org/internal/media/dispatcher/857060/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Pear-shaped bottle with topsablé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56> .
+
+<http://data.silknow.org/event/873076bd-b22e-36f3-8650-61764a9b3836>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56> .
+
+<http://data.silknow.org/production/c366b63c-90a6-3ca7-8e2b-a72fe60fc692>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56> ;
+        ecrm:P126_employed      "Sablé"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1776_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/event/a635d116-5ca0-31da-98c8-a4f66540acc1>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/7132d6e4-1088-39e9-b74f-195ec4ff1331> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "The Elizabeth day McCormick Collection, to the MFA 1943 / The Elizabeth Day McCormick Collection" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56> .
+
+<http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Sablé, boy playing a flute, \"Vers L'Amerique\" Figure of America."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56> .
+
+<http://data.silknow.org/object/5f55e477-ef4f-3635-8b32-6018a8f8127c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 43.2299a-b" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/5bd06d70-731f-37b4-a036-c038833c85c5> , <http://data.silknow.org/production/c366b63c-90a6-3ca7-8e2b-a72fe60fc692> , <http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56> , <http://data.silknow.org/event/873076bd-b22e-36f3-8650-61764a9b3836> , <http://data.silknow.org/image/9a16e16a-7363-350a-98a5-ee9aead2cf8e> , <http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56/domain/1> , <http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56/category/1> , <http://data.silknow.org/event/a635d116-5ca0-31da-98c8-a4f66540acc1> , <http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56/observation/1> ;
+        dc:identifier       "593244.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/7132d6e4-1088-39e9-b74f-195ec4ff1331>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "The Elizabeth day McCormick Collection, to the MFA 1943 / The Elizabeth Day McCormick Collection" ;
+        ecrm:P1_is_identified_by  "The Elizabeth day McCormick Collection, to the MFA 1943 / The Elizabeth Day McCormick Collection" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/image/9a16e16a-7363-350a-98a5-ee9aead2cf8e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "857059" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/593244_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/857059/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5f55e477-ef4f-3635-8b32-6018a8f8127c> .
+
+<http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Sablé, boy playing a flute, \"Vers L'Amerique\" Figure of America."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5bd06d70-731f-37b4-a036-c038833c85c5> , <http://data.silknow.org/image/9a16e16a-7363-350a-98a5-ee9aead2cf8e> ;
+        ecrm:P3_has_note               "Sablé, boy playing a flute, \"Vers L'Amerique\" Figure of America."@en ;
+        dc:identifier                  "43.2299a-b" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/593244> .
+
+<http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/946cdfc1-23b5-3841-93e8-e2dd58872c56> .

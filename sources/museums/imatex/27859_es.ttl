@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/825aeafb-9988-3cd8-a1f9-0ce8fc19d750> .
+
+<http://data.silknow.org/production/47114429-bdfa-3d6c-b694-6dfe96ffc4ec>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8c80c580-6fd0-3566-b0ba-97540c28b67e> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> , <http://data.silknow.org/vocabulary/379> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/event/135717c3-6949-3c40-b421-8805aab75e48>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8c80c580-6fd0-3566-b0ba-97540c28b67e> .
+
+<http://data.silknow.org/event/fead1a68-4434-3b31-8fd2-7792a19b700d>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8c80c580-6fd0-3566-b0ba-97540c28b67e> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/825aeafb-9988-3cd8-a1f9-0ce8fc19d750>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27859" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8c80c580-6fd0-3566-b0ba-97540c28b67e> , <http://data.silknow.org/production/47114429-bdfa-3d6c-b694-6dfe96ffc4ec> , <http://data.silknow.org/object/8c80c580-6fd0-3566-b0ba-97540c28b67e/domain/1> , <http://data.silknow.org/event/fead1a68-4434-3b31-8fd2-7792a19b700d> , <http://data.silknow.org/event/135717c3-6949-3c40-b421-8805aab75e48> , <http://data.silknow.org/object/8c80c580-6fd0-3566-b0ba-97540c28b67e/category/1> , <http://data.silknow.org/image/98106706-4617-3b87-bf69-fc83760891b8> ;
+        dc:identifier       "27859.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/8c80c580-6fd0-3566-b0ba-97540c28b67e/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8c80c580-6fd0-3566-b0ba-97540c28b67e> .
+
+<http://data.silknow.org/object/8c80c580-6fd0-3566-b0ba-97540c28b67e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8c80c580-6fd0-3566-b0ba-97540c28b67e> .
+
+<http://data.silknow.org/image/98106706-4617-3b87-bf69-fc83760891b8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033578" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27859_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033578.jpg> .
+
+<http://data.silknow.org/object/8c80c580-6fd0-3566-b0ba-97540c28b67e>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/98106706-4617-3b87-bf69-fc83760891b8> ;
+        dc:identifier                  "16534" .

@@ -1,0 +1,97 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "22.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "22.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/1c10ea7d-4307-3d47-8009-ae20ad900df5>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/947096_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/30434.jpg> .
+
+<http://data.silknow.org/event/1f0eb5b2-d39f-3ebc-b060-4d5e3603d64e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/1edc5272-c9bf-376e-86c8-b868a8e5bd14> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Museum purchase with funds from the National Endowment for the Arts" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9> .
+
+<http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "West Lake Taffeta" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9> .
+
+<http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1c10ea7d-4307-3d47-8009-ae20ad900df5> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9/dimension/1> , <http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9/dimension/2> ;
+        dc:identifier                  "1987.143.1B" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/west-lake-taffeta-19871431b> .
+
+<http://data.silknow.org/production/52186638-380c-3dbc-a141-3d1fb146f0c4/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/5d8f88be-e460-3017-b6ce-a86fbb500efa> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/actor/5d8f88be-e460-3017-b6ce-a86fbb500efa>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Scalamandre Studio" ;
+        ecrm:P1_is_identified_by  "Scalamandre Studio" .
+
+<http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/event/43b073e1-5e59-399d-96c1-e4f779af43f5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bb3b7a0e-1ef5-3b6e-804f-e823838fdf66> .
+
+<http://data.silknow.org/object/bb3b7a0e-1ef5-3b6e-804f-e823838fdf66>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1987.143.1B" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/1c10ea7d-4307-3d47-8009-ae20ad900df5> , <http://data.silknow.org/event/43b073e1-5e59-399d-96c1-e4f779af43f5> , <http://data.silknow.org/production/52186638-380c-3dbc-a141-3d1fb146f0c4> , <http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9/category/1> , <http://data.silknow.org/event/1f0eb5b2-d39f-3ebc-b060-4d5e3603d64e> , <http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9/domain/1> , <http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9> ;
+        dc:identifier       "947096.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "30.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "30.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/1edc5272-c9bf-376e-86c8-b868a8e5bd14>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Museum purchase with funds from the National Endowment for the Arts" ;
+        ecrm:P1_is_identified_by  "Museum purchase with funds from the National Endowment for the Arts" .
+
+<http://data.silknow.org/production/52186638-380c-3dbc-a141-3d1fb146f0c4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/69013848-ea1e-3b17-93f7-d69ece024ef9> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1983> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/52186638-380c-3dbc-a141-3d1fb146f0c4/activity/1> .

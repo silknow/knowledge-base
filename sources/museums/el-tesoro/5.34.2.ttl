@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6e542ddf-0642-32f6-acc9-48126b8033a1> .
+
+<http://data.silknow.org/production/4ab45b05-710f-3ee3-bc2d-1696b986bf5a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a41ca28b-ea9a-3a81-bbcc-aa57bea28468> ;
+        ecrm:P126_employed      "Hilo de oro, plata y seda. Lentejuelas. Galón de oro. Fleco."@es ;
+        ecrm:P32_used_general_technique
+                "Brocado espolinado."@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1823> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/4ab45b05-710f-3ee3-bc2d-1696b986bf5a/activity/1> .
+
+<http://data.silknow.org/actor/f84e496c-4842-32bc-a43d-0ad413b70a41>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo. Lyon" ;
+        ecrm:P1_is_identified_by  "Anónimo. Lyon" .
+
+<http://data.silknow.org/assessment/b6899af0-a189-3ab9-bbe6-6d9f1555b2e8>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/a41ca28b-ea9a-3a81-bbcc-aa57bea28468> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/b6899af0-a189-3ab9-bbe6-6d9f1555b2e8/condition/1> .
+
+<http://data.silknow.org/object/6e542ddf-0642-32f6-acc9-48126b8033a1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.34.2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/4ab45b05-710f-3ee3-bc2d-1696b986bf5a> , <http://data.silknow.org/object/a41ca28b-ea9a-3a81-bbcc-aa57bea28468> , <http://data.silknow.org/assessment/b6899af0-a189-3ab9-bbe6-6d9f1555b2e8> , <http://data.silknow.org/image/d375b991-eb6a-3c1b-ad91-26b56ab62aef> , <http://data.silknow.org/object/a41ca28b-ea9a-3a81-bbcc-aa57bea28468/type/1> ;
+        dc:identifier       "5.34.2.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/production/4ab45b05-710f-3ee3-bc2d-1696b986bf5a/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/f84e496c-4842-32bc-a43d-0ad413b70a41> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/a41ca28b-ea9a-3a81-bbcc-aa57bea28468/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a41ca28b-ea9a-3a81-bbcc-aa57bea28468> ;
+        ecrm:P42_assigned    "Terno del Corpus (Dalmáticas)" .
+
+<http://data.silknow.org/object/a41ca28b-ea9a-3a81-bbcc-aa57bea28468>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d375b991-eb6a-3c1b-ad91-26b56ab62aef> ;
+        dc:identifier                  "5.34.2" .
+
+<http://data.silknow.org/image/d375b991-eb6a-3c1b-ad91-26b56ab62aef>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.34.2" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.34.2_0.jpg> .
+
+<http://data.silknow.org/assessment/b6899af0-a189-3ab9-bbe6-6d9f1555b2e8/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Malo. No se recomienda su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Malo. No se recomienda su uso."@es .

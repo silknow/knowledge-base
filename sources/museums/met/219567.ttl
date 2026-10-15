@@ -1,0 +1,125 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/558f5934-6049-3d40-882e-108883045492>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7> ;
+        ecrm:P126_employed      "Linen"@en , "Needlework"@en , "Linen and silk, bobbin lace"@en , "Lace"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/857> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1601_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6697802/> .
+
+<http://data.silknow.org/event/31cf8385-4b3a-3b4b-b8bf-d3801d241ea5>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4f293abb-df08-3f52-a78c-d47f9f6e2eb0> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Robert W. de Forest, 1913" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7> .
+
+<http://data.silknow.org/actor/4f293abb-df08-3f52-a78c-d47f9f6e2eb0>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Robert W. de Forest" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Robert W. de Forest" .
+
+<http://data.silknow.org/object/2a19c4de-8175-385a-afef-3255da2b362b>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/05ae6307-4345-3597-a8ae-82c57d99fe68> .
+
+<http://data.silknow.org/object/d14671a5-c6f8-3f12-99ff-f59a033da408>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/ecdbe5fe-c10d-3118-9b58-299da94cb10e> .
+
+<http://data.silknow.org/image/610610ff-11d1-3abe-99e4-53c81de43d60>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/219567_0.jpg> , <https://collectionapi.metmuseum.org/api/collection/v1/iiif/219567/449171/main-image> .
+
+<http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "European Sculpture and Decorative Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7> ;
+        ecrm:P78_is_identified_by  "European Sculpture and Decorative Arts" .
+
+<http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "4.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "4.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/610610ff-11d1-3abe-99e4-53c81de43d60> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7/dimension/2> , <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7/dimension/1> ;
+        dc:identifier                  "13.163.5" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.metmuseum.org/art/collection/search/219567> .
+
+<http://data.silknow.org/event/03f86d77-e978-3e1e-a786-d3b486809786>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7> .
+
+<http://data.silknow.org/met>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fb49aec8-5f4a-3654-be75-ba6d71ace9e8> .
+
+<http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "71.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "71.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/5> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7> .
+
+<http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7> .
+
+<http://data.silknow.org/object/53cb27e6-ec27-39bf-be13-dabd6e6ce109>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/aecd2bf7-fea2-3555-9ce7-1310dfe4a6e5> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/fb49aec8-5f4a-3654-be75-ba6d71ace9e8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 219567" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9836bf18-3871-3dd7-8f21-6d0acd1a05ed> , <http://data.silknow.org/object/2a19c4de-8175-385a-afef-3255da2b362b> , <http://data.silknow.org/event/03f86d77-e978-3e1e-a786-d3b486809786> , <http://data.silknow.org/image/610610ff-11d1-3abe-99e4-53c81de43d60> , <http://data.silknow.org/production/558f5934-6049-3d40-882e-108883045492> , <http://data.silknow.org/object/d14671a5-c6f8-3f12-99ff-f59a033da408> , <http://data.silknow.org/object/53cb27e6-ec27-39bf-be13-dabd6e6ce109> , <http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5> , <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7> , <http://data.silknow.org/object/d35e62a6-c044-3f22-ab0f-f652cac4cfa4> , <http://data.silknow.org/event/31cf8385-4b3a-3b4b-b8bf-d3801d241ea5> , <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7/category/1> ;
+        dc:identifier       "219567.json" ;
+        dc:publisher        "http://data.silknow.org/organization/met" .
+
+<https://sws.geonames.org/6697802/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/9836bf18-3871-3dd7-8f21-6d0acd1a05ed>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/dd96a77f-3e03-3402-a45b-67cac92aee93> .
+
+<http://data.silknow.org/object/d35e62a6-c044-3f22-ab0f-f652cac4cfa4>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e5863be2-e0f2-3223-96dd-faba389d14e7> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/d4563125-1ffb-351e-bcd9-b884d9e4f045> .

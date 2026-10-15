@@ -1,0 +1,79 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/cc4b57c0-4500-3699-9c9d-0dc1d3928c74>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/87279d14-d258-3ae3-a577-6aef0c4cc2b2> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "gauze weave"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> , <http://data.silknow.org/vocabulary/88> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<http://data.silknow.org/event/629014c3-b7df-337d-9e21-f8d0a64d62d0>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/87279d14-d258-3ae3-a577-6aef0c4cc2b2> .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/87279d14-d258-3ae3-a577-6aef0c4cc2b2>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "56.075.7" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/sari-border-560757> .
+
+<http://data.silknow.org/object/87279d14-d258-3ae3-a577-6aef0c4cc2b2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/87279d14-d258-3ae3-a577-6aef0c4cc2b2> .
+
+<http://data.silknow.org/object/87279d14-d258-3ae3-a577-6aef0c4cc2b2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Sari border" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/87279d14-d258-3ae3-a577-6aef0c4cc2b2> .
+
+<http://data.silknow.org/event/d760ac0e-a40c-3b48-8fee-be9b2073f11e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/f58102bd-bf0b-3d00-a9bb-5aac9ad804e1> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of the estate of Lucy Truman Aldrich" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/87279d14-d258-3ae3-a577-6aef0c4cc2b2> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/2fa47ffb-9db2-3d56-9892-c0733d92e69a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 56.075.7" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/87279d14-d258-3ae3-a577-6aef0c4cc2b2/category/1> , <http://data.silknow.org/object/87279d14-d258-3ae3-a577-6aef0c4cc2b2/domain/1> , <http://data.silknow.org/object/87279d14-d258-3ae3-a577-6aef0c4cc2b2> , <http://data.silknow.org/production/cc4b57c0-4500-3699-9c9d-0dc1d3928c74> , <http://data.silknow.org/event/d760ac0e-a40c-3b48-8fee-be9b2073f11e> , <http://data.silknow.org/event/629014c3-b7df-337d-9e21-f8d0a64d62d0> ;
+        dc:identifier       "807716.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/f58102bd-bf0b-3d00-a9bb-5aac9ad804e1>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of the estate of Lucy Truman Aldrich" ;
+        ecrm:P1_is_identified_by  "Gift of the estate of Lucy Truman Aldrich" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Lucy_Aldrich> , <https://viaf.org/viaf/6031430> , <https://isni.org/isni/0000000026055166> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Lucy_Aldrich> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2fa47ffb-9db2-3d56-9892-c0733d92e69a> .

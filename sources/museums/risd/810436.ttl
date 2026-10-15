@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/89673dab-d254-347d-bc5f-3c4af7e23209/category/1>
+        a                    silk:T35 ;
+        silk:L1              "train (costume component)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/89673dab-d254-347d-bc5f-3c4af7e23209> .
+
+<http://data.silknow.org/event/613bb138-6856-36b8-8730-ad5972ca5383>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/f9382a0a-2273-3086-a2e0-6ff15b1a4001> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mr. and Mrs. Henry D. Sharpe" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/89673dab-d254-347d-bc5f-3c4af7e23209> .
+
+<http://data.silknow.org/object/1ec854e6-bcee-3e18-93cb-75b17af394d7>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Florence Koehler as Collector" , "February 13 - March 29, 1981" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/89673dab-d254-347d-bc5f-3c4af7e23209> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "Florence Koehler as Collector" , "February 13 - March 29, 1981" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/florence-koehler-collector> .
+
+<http://data.silknow.org/event/21fe4a0e-ebe9-3077-a083-c3bbb83bd8c2>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/89673dab-d254-347d-bc5f-3c4af7e23209> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/f9382a0a-2273-3086-a2e0-6ff15b1a4001>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mr. and Mrs. Henry D. Sharpe" ;
+        ecrm:P1_is_identified_by  "Gift of Mr. and Mrs. Henry D. Sharpe" .
+
+<http://data.silknow.org/production/0233588f-29ad-31b4-99b3-2b4621a37eea>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/89673dab-d254-347d-bc5f-3c4af7e23209> ;
+        ecrm:P126_employed      "silk; metallic yarn; sequins"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> , <http://data.silknow.org/vocabulary/88> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/be890fb5-6d1b-3213-aeb2-a0b23368f593>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 26.182B" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/89673dab-d254-347d-bc5f-3c4af7e23209> , <http://data.silknow.org/object/89673dab-d254-347d-bc5f-3c4af7e23209/category/1> , <http://data.silknow.org/object/89673dab-d254-347d-bc5f-3c4af7e23209/domain/1> , <http://data.silknow.org/production/0233588f-29ad-31b4-99b3-2b4621a37eea> , <http://data.silknow.org/event/21fe4a0e-ebe9-3077-a083-c3bbb83bd8c2> , <http://data.silknow.org/event/613bb138-6856-36b8-8730-ad5972ca5383> , <http://data.silknow.org/object/1ec854e6-bcee-3e18-93cb-75b17af394d7> ;
+        dc:identifier       "810436.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/be890fb5-6d1b-3213-aeb2-a0b23368f593> .
+
+<http://data.silknow.org/object/89673dab-d254-347d-bc5f-3c4af7e23209/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/89673dab-d254-347d-bc5f-3c4af7e23209> .
+
+<http://data.silknow.org/object/89673dab-d254-347d-bc5f-3c4af7e23209>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "26.182B" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/train-costume-component-26182b> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "13.75" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "13.75"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, plain weave with supplementary pile warps forming cut and uncut voided velvet"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1a3daf88-f077-3eb2-ad69-c4c01e884efa> ;
+        ecrm:P3_has_note               "Silk, plain weave with supplementary pile warps forming cut and uncut voided velvet"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65/dimension/1> , <http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65/dimension/2> ;
+        dc:identifier                  "1907.378" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/88507/fragment> .
+
+<http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65> .
+
+<http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, plain weave with supplementary pile warps forming cut and uncut voided velvet"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65> .
+
+<http://data.silknow.org/object/4992e98e-c1b2-3557-a964-007347921663>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1907.378" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/4b96f280-6214-37f3-989f-0db054ce8c71> , <http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65> , <http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65/observation/1> , <http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65/category/1> , <http://data.silknow.org/event/b8b3f718-b3e1-3897-9548-2b9c528e3338> , <http://data.silknow.org/image/1a3daf88-f077-3eb2-ad69-c4c01e884efa> ;
+        dc:identifier       "88507.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/image/1a3daf88-f077-3eb2-ad69-c4c01e884efa>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/88507_0.jpg> , <https://www.artic.edu/iiif/2/8e9ce1a6-564b-307f-7980-dc85b31c8eb0/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/event/b8b3f718-b3e1-3897-9548-2b9c528e3338>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/3b493381-b69c-3ea1-82df-46c6604a32b4> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Art Institute of Chicago Purchase Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65> .
+
+<http://data.silknow.org/actor/3b493381-b69c-3ea1-82df-46c6604a32b4>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Art Institute of Chicago Purchase Fund" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago Purchase Fund" .
+
+<http://data.silknow.org/production/4b96f280-6214-37f3-989f-0db054ce8c71>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1601_1650> , <http://data.silknow.org/timespan/1650> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/09743568-8d10-3291-86dd-152535169c65/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "12.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "12.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4992e98e-c1b2-3557-a964-007347921663> .

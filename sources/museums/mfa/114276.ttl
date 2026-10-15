@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/987b201b-dde1-38e8-8828-5a9caffe2c27>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142> ;
+        ecrm:P126_employed      "Cotton print; quilted"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/02a15a45-7b54-33fe-8d2c-f88e0d2e55fb> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/a9eca632-d3ef-3f7a-9e34-544947dcce9b> .
+
+<http://data.silknow.org/place/a9eca632-d3ef-3f7a-9e34-544947dcce9b>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "American (French textile)" ;
+        ecrm:P87_is_identified_by  "American (French textile)" .
+
+<http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142> .
+
+<http://data.silknow.org/event/f4b0f0d1-b8c9-3d3d-9512-8848a914b998>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142> .
+
+<http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "297" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "297"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "300" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "300"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/bb676bff-7e56-3a51-920b-ae57d16091b4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 58.1174" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142/observation/1> , <http://data.silknow.org/event/f4b0f0d1-b8c9-3d3d-9512-8848a914b998> , <http://data.silknow.org/production/987b201b-dde1-38e8-8828-5a9caffe2c27> , <http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142/category/1> , <http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142> , <http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142/domain/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/f36b645c-ae8f-34ea-9430-613d687714e2> ;
+        dc:identifier       "114276.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bb676bff-7e56-3a51-920b-ae57d16091b4> .
+
+<http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Bedspread: Robinson CrusoeQuilt" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142> .
+
+<http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Quilted chintz bedspread \"Robinson Crusoe\". Natural cotton tabby-woven ground, printed with copper plate in mauve. Shows four scenes: Crusoe on raft, Crusoe at table, Crusoe watching one negro carrying another, Crusoe looking at footprints on ground. Bedspread shaped with pillow cover, scalloped side valances and foot valance. Plain cottom sewn to top. A few brown stains. Two holes. Chintz signed: \"F. Pieters\"."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142> .
+
+<http://data.silknow.org/image/f36b645c-ae8f-34ea-9430-613d687714e2>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "732983" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/114276_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/732983/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Quilted chintz bedspread \"Robinson Crusoe\". Natural cotton tabby-woven ground, printed with copper plate in mauve. Shows four scenes: Crusoe on raft, Crusoe at table, Crusoe watching one negro carrying another, Crusoe looking at footprints on ground. Bedspread shaped with pillow cover, scalloped side valances and foot valance. Plain cottom sewn to top. A few brown stains. Two holes. Chintz signed: \"F. Pieters\"."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f36b645c-ae8f-34ea-9430-613d687714e2> ;
+        ecrm:P3_has_note               "Quilted chintz bedspread \"Robinson Crusoe\". Natural cotton tabby-woven ground, printed with copper plate in mauve. Shows four scenes: Crusoe on raft, Crusoe at table, Crusoe watching one negro carrying another, Crusoe looking at footprints on ground. Bedspread shaped with pillow cover, scalloped side valances and foot valance. Plain cottom sewn to top. A few brown stains. Two holes. Chintz signed: \"F. Pieters\"."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142/dimension/2> , <http://data.silknow.org/object/7d70c9c3-2e80-35f3-aa70-2e93e15f4142/dimension/1> ;
+        dc:identifier                  "58.1174" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/114276> .

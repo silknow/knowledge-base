@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/33b0adb0-4fd4-338d-979a-94a0b7fc6928> .
+
+<http://data.silknow.org/object/6ffad463-6443-3ba2-8d4c-e7529da682c6>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ee359304-a561-3a44-b12f-2d081cb57382> , <http://data.silknow.org/image/a902f210-2306-3e89-98f7-68775d411b28> ;
+        dc:identifier                  "4693" .
+
+<http://data.silknow.org/event/986f3728-4abe-398f-afd4-189c6fc10db7>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6ffad463-6443-3ba2-8d4c-e7529da682c6> .
+
+<http://data.silknow.org/production/7d52ad21-4745-30be-9af7-5276749e1049>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6ffad463-6443-3ba2-8d4c-e7529da682c6> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/image/a902f210-2306-3e89-98f7-68775d411b28>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000036347" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/30297_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000036347.jpg> .
+
+<http://data.silknow.org/image/ee359304-a561-3a44-b12f-2d081cb57382>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000036348" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/30297_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000036348.jpg> .
+
+<http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas Geis, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas Geis, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/160946453> , <https://isni.org/isni/0000000108433220> .
+
+<http://data.silknow.org/object/33b0adb0-4fd4-338d-979a-94a0b7fc6928>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 30297" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/ee359304-a561-3a44-b12f-2d081cb57382> , <http://data.silknow.org/production/7d52ad21-4745-30be-9af7-5276749e1049> , <http://data.silknow.org/event/986f3728-4abe-398f-afd4-189c6fc10db7> , <http://data.silknow.org/object/6ffad463-6443-3ba2-8d4c-e7529da682c6/category/1> , <http://data.silknow.org/image/a902f210-2306-3e89-98f7-68775d411b28> , <http://data.silknow.org/object/6ffad463-6443-3ba2-8d4c-e7529da682c6> , <http://data.silknow.org/object/6ffad463-6443-3ba2-8d4c-e7529da682c6/domain/1> , <http://data.silknow.org/event/8d1ef450-c90e-38d8-aeed-d83601a7e013> ;
+        dc:identifier       "30297.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/8d1ef450-c90e-38d8-aeed-d83601a7e013>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f> ;
+        ecrm:P23_transferred_title_from
+                "Viñas Geis, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6ffad463-6443-3ba2-8d4c-e7529da682c6> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/object/6ffad463-6443-3ba2-8d4c-e7529da682c6/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6ffad463-6443-3ba2-8d4c-e7529da682c6> .
+
+<http://data.silknow.org/object/6ffad463-6443-3ba2-8d4c-e7529da682c6/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6ffad463-6443-3ba2-8d4c-e7529da682c6> .

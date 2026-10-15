@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/bac6ad84-6f80-39e5-9b58-721208c0b4dc/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bac6ad84-6f80-39e5-9b58-721208c0b4dc> ;
+        ecrm:P42_assigned    "Terno (Dalmáticas)" .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/18f1abd0-ce2c-3c47-9d67-c3e76febc20c> .
+
+<http://data.silknow.org/object/18f1abd0-ce2c-3c47-9d67-c3e76febc20c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.154.2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/8b1d4d49-f71d-39d7-a851-94e294acf9d1> , <http://data.silknow.org/object/bac6ad84-6f80-39e5-9b58-721208c0b4dc> , <http://data.silknow.org/assessment/363c82bb-371f-3f2a-a444-5f1e22b78a8e> , <http://data.silknow.org/image/279e7af1-3c31-359e-a9ed-98ed42f332e8> , <http://data.silknow.org/object/bac6ad84-6f80-39e5-9b58-721208c0b4dc/type/1> ;
+        dc:identifier       "5.154.2.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/assessment/363c82bb-371f-3f2a-a444-5f1e22b78a8e/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Regular. No se recomienda su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Regular. No se recomienda su uso."@es .
+
+<http://data.silknow.org/production/8b1d4d49-f71d-39d7-a851-94e294acf9d1/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/assessment/363c82bb-371f-3f2a-a444-5f1e22b78a8e>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/bac6ad84-6f80-39e5-9b58-721208c0b4dc> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/363c82bb-371f-3f2a-a444-5f1e22b78a8e/condition/1> .
+
+<http://data.silknow.org/production/8b1d4d49-f71d-39d7-a851-94e294acf9d1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bac6ad84-6f80-39e5-9b58-721208c0b4dc> ;
+        ecrm:P126_employed      "Hilo de seda morado. Galón de plata."@es ;
+        ecrm:P32_used_general_technique
+                "Damasco."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/8b1d4d49-f71d-39d7-a851-94e294acf9d1/activity/1> .
+
+<http://data.silknow.org/image/279e7af1-3c31-359e-a9ed-98ed42f332e8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.154.2" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.154.2_0.jpg> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .
+
+<http://data.silknow.org/object/bac6ad84-6f80-39e5-9b58-721208c0b4dc>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/279e7af1-3c31-359e-a9ed-98ed42f332e8> ;
+        dc:identifier                  "5.154.2" .

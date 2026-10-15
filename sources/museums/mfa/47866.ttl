@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "White and pale pink straight edges with rose, pink, blue flowers up the center on an off white background."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee> .
+
+<http://data.silknow.org/image/d9ebbbc0-63ed-3020-9c2d-450b9685e6ca>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "752945" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/47866_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/752945/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/2c56cba9-fa39-37d9-8920-fac584f97285>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee> ;
+        ecrm:P126_employed      "Silk, plain weave and satin with supplementary warp patterning"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/d91cd09f-a17b-36c2-8fe6-4154c669cb72> .
+
+<http://data.silknow.org/object/255cc361-f1b0-3f9f-bca6-2135ad992fb7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 44.743d" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee/domain/1> , <http://data.silknow.org/production/2c56cba9-fa39-37d9-8920-fac584f97285> , <http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee/category/1> , <http://data.silknow.org/image/d9ebbbc0-63ed-3020-9c2d-450b9685e6ca> , <http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee/observation/1> , <http://data.silknow.org/event/9552def1-7062-3eba-9fa5-b607709e5499> , <http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee> ;
+        dc:identifier       "47866.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Ribbon sample (one of six)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee> .
+
+<http://data.silknow.org/event/9552def1-7062-3eba-9fa5-b607709e5499>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee> .
+
+<http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "28" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "28"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "2.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "2.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/255cc361-f1b0-3f9f-bca6-2135ad992fb7> .
+
+<http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee> .
+
+<http://data.silknow.org/place/d91cd09f-a17b-36c2-8fe6-4154c669cb72>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "French or English" ;
+        ecrm:P87_is_identified_by  "French or English" .
+
+<http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "White and pale pink straight edges with rose, pink, blue flowers up the center on an off white background."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d9ebbbc0-63ed-3020-9c2d-450b9685e6ca> ;
+        ecrm:P3_has_note               "White and pale pink straight edges with rose, pink, blue flowers up the center on an off white background."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee/dimension/2> , <http://data.silknow.org/object/8ea38536-9191-3bcc-8c21-c6295bcab8ee/dimension/1> ;
+        dc:identifier                  "44.743d" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/47866> .

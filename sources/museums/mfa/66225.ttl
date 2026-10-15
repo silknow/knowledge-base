@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/4e2b2411-b774-3f60-b8cf-213fcc718491>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed> ;
+        ecrm:P126_employed      "Linen and cotton weaving"@en ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "96.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "96.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e59e6a18-b826-3d6d-98bc-166d55fa7725>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 33.464" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/4e2b2411-b774-3f60-b8cf-213fcc718491> , <http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed/domain/1> , <http://data.silknow.org/event/5423bb47-48f8-3127-830e-c893ca082b94> , <http://data.silknow.org/image/6ddb5851-1c88-30fc-b847-837decb7745c> , <http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed/observation/1> , <http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed/category/1> ;
+        dc:identifier       "66225.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/event/5423bb47-48f8-3127-830e-c893ca082b94>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed> .
+
+<http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "50.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "50.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/6ddb5851-1c88-30fc-b847-837decb7745c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "745333" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/66225_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/745333/resize%3Aformat%3Dfull> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Towel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed> .
+
+<http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Ground: cream white linen, woven at one end in a chevron pattern, at the other in \"goose-eye.\" Design: across the middle three ornamental bands woven with blue cotton; center band, stars in lozenges, on one side birds and castles on the other birds and rosettes. Woven lace sewed across each end."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6ddb5851-1c88-30fc-b847-837decb7745c> ;
+        ecrm:P3_has_note               "Ground: cream white linen, woven at one end in a chevron pattern, at the other in \"goose-eye.\" Design: across the middle three ornamental bands woven with blue cotton; center band, stars in lozenges, on one side birds and castles on the other birds and rosettes. Woven lace sewed across each end."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed/dimension/2> , <http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed/dimension/1> ;
+        dc:identifier                  "33.464" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/66225> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Ground: cream white linen, woven at one end in a chevron pattern, at the other in \"goose-eye.\" Design: across the middle three ornamental bands woven with blue cotton; center band, stars in lozenges, on one side birds and castles on the other birds and rosettes. Woven lace sewed across each end."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3e0fe068-f57a-3b18-95df-92c6fa653eed> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e59e6a18-b826-3d6d-98bc-166d55fa7725> .

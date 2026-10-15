@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "55.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "55.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "lé retissé vers 1970 par la Manufacture Prelle, d'après le modèle de broché livré par Olivier Desfarges en 1787 pour le \" meuble \" d'été de la chambre de Marie-Antoinette à Versailles."@fr ;
+        rdfs:label                     "lé de bordure"@fr ;
+        ecrm:P102_has_title            "lé de bordure"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c7028eff-b5bf-3704-adfd-88113254ec1f> ;
+        ecrm:P3_has_note               "lé retissé vers 1970 par la Manufacture Prelle, d'après le modèle de broché livré par Olivier Desfarges en 1787 pour le \" meuble \" d'été de la chambre de Marie-Antoinette à Versailles."@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb/dimension/1> , <http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb/dimension/2> ;
+        dc:identifier                  "2016.00.016" .
+
+<http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb> ;
+        ecrm:P42_assigned    "lé de bordure" .
+
+<http://data.silknow.org/object/e8e06bb8-3c9e-3744-830e-bdfae6ddbcc9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2016.00.016" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb/domain/1> , <http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb/type/1> , <http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb/observation/1> , <http://data.silknow.org/image/c7028eff-b5bf-3704-adfd-88113254ec1f> , <http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb> , <http://data.silknow.org/production/350dd0a4-3f49-34a3-bf41-81c572d834c5> ;
+        dc:identifier       "2016.00.016.json" ;
+        dc:publisher        "http://data.silknow.org/organization/versailles" .
+
+<http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "41" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "41"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb> .
+
+<http://data.silknow.org/versailles>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e8e06bb8-3c9e-3744-830e-bdfae6ddbcc9> .
+
+<http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "lé retissé vers 1970 par la Manufacture Prelle, d'après le modèle de broché livré par Olivier Desfarges en 1787 pour le \" meuble \" d'été de la chambre de Marie-Antoinette à Versailles."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb> .
+
+<http://data.silknow.org/production/350dd0a4-3f49-34a3-bf41-81c572d834c5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4ebe9cbc-3eab-31f9-9afe-57ca6ab5b3fb> ;
+        ecrm:P126_employed      "soie, lampas broché, fond carrelé"@fr ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/2370aec6-f279-37c3-ad71-a8bf99d7e3a0> .
+
+<http://data.silknow.org/image/c7028eff-b5bf-3704-adfd-88113254ec1f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/versailles/2016.00.016_0.jpg> , <http://collections.chateauversailles.fr/cc/imageproxy.aspx?server=10.0.10.13&port=14456&filename=objectimages%2F2016.00.016_002.cci> .

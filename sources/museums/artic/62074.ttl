@@ -1,0 +1,72 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/f71dac82-8ca2-377c-bc82-d1ca0f53bad7/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f71dac82-8ca2-377c-bc82-d1ca0f53bad7> .
+
+<http://data.silknow.org/image/3f72e581-1d84-3a78-ba4f-c4d8f9a15cf8>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/62074_0.jpg> , <https://www.artic.edu/iiif/2/e4ba2fd6-56df-ab59-6d2a-f3ea966d6023/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/production/c74eebc4-aff5-380c-9f6c-89289d52f8d7>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f71dac82-8ca2-377c-bc82-d1ca0f53bad7> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1725> , <http://data.silknow.org/timespan/1725> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/f71dac82-8ca2-377c-bc82-d1ca0f53bad7>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "brocaded silk"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3f72e581-1d84-3a78-ba4f-c4d8f9a15cf8> ;
+        ecrm:P3_has_note               "brocaded silk"@en ;
+        dc:identifier                  "1907.492" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/62074/fragment> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/fac26855-6e3b-3f1a-a28e-1e2c14426dff>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1907.492" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f71dac82-8ca2-377c-bc82-d1ca0f53bad7/category/1> , <http://data.silknow.org/object/f71dac82-8ca2-377c-bc82-d1ca0f53bad7> , <http://data.silknow.org/production/c74eebc4-aff5-380c-9f6c-89289d52f8d7> , <http://data.silknow.org/event/d3bc5fcc-1683-369d-848d-4b530785615b> , <http://data.silknow.org/object/f71dac82-8ca2-377c-bc82-d1ca0f53bad7/observation/1> , <http://data.silknow.org/image/3f72e581-1d84-3a78-ba4f-c4d8f9a15cf8> ;
+        dc:identifier       "62074.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/actor/3b493381-b69c-3ea1-82df-46c6604a32b4>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Art Institute of Chicago Purchase Fund" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago Purchase Fund" .
+
+<http://data.silknow.org/event/d3bc5fcc-1683-369d-848d-4b530785615b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/3b493381-b69c-3ea1-82df-46c6604a32b4> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Art Institute of Chicago Purchase Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f71dac82-8ca2-377c-bc82-d1ca0f53bad7> .
+
+<http://data.silknow.org/object/f71dac82-8ca2-377c-bc82-d1ca0f53bad7/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "brocaded silk"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f71dac82-8ca2-377c-bc82-d1ca0f53bad7> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fac26855-6e3b-3f1a-a28e-1e2c14426dff> .

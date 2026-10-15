@@ -1,0 +1,101 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/53102811-fbcd-3694-b0dc-cfbd561e6953>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34> ;
+        ecrm:P126_employed      "Leather, embroidered with silk thread."@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/277> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1876> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/36> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34> .
+
+<http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 8.125 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "20.6375"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/ab8eeae0-37c2-3ffa-a737-e5400e02600a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Red leather, embroidered with chain stitch with yellow and brown silk and gold thread with blossom and leaf device."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34> .
+
+<http://data.silknow.org/image/8ecb9995-b588-3c9a-962e-e27600ac2b77>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2016JF3416" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O331925_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2016JF/2016JF3416.jpg> .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/99> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34> .
+
+<http://data.silknow.org/object/680d362c-171e-31dd-a47d-76c588b1b1a9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O331925" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34/observation/2> , <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34/domain/2> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/image/8ecb9995-b588-3c9a-962e-e27600ac2b77> , <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34/observation/1> , <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34/domain/1> , <http://data.silknow.org/event/ab8eeae0-37c2-3ffa-a737-e5400e02600a> , <http://data.silknow.org/production/53102811-fbcd-3694-b0dc-cfbd561e6953> , <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34> ;
+        dc:identifier       "O331925.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/680d362c-171e-31dd-a47d-76c588b1b1a9> .
+
+<http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Red leather with embroidery; Iran, 1800 to 1876"@en , "Red leather, embroidered with chain stitch with yellow and brown silk and gold thread with blossom and leaf device."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8ecb9995-b588-3c9a-962e-e27600ac2b77> ;
+        ecrm:P3_has_note               "Red leather with embroidery; Iran, 1800 to 1876"@en , "Red leather, embroidered with chain stitch with yellow and brown silk and gold thread with blossom and leaf device."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34/dimension/1> ;
+        dc:identifier                  "848-1876" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O331925> .
+
+<http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Red leather with embroidery; Iran, 1800 to 1876"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34> .
+
+<http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/52> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34> .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/0c3c6ed1-2b2e-37f7-9c00-50be9b396d34> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .

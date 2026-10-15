@@ -1,0 +1,128 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Furnishing fabric of woven silk, cotton and cotton chenille, designed by C. F. A. Voysey for Alexander Morton & Co, Great Britain, 1890s."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b> .
+
+<http://data.silknow.org/image/2698537d-a7e8-3889-91ad-da130f47aa58>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006BF6632" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O288569_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006BF/2006BF6632.jpg> .
+
+<https://sws.geonames.org/2635167/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b> .
+
+<http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 24 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "60.96"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/b2ee0e44-8216-3347-8b00-37d5954e1515>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by J W F Morton and Courtaulds Ltd" ;
+        ecrm:P1_is_identified_by  "Given by J W F Morton and Courtaulds Ltd" .
+
+<http://data.silknow.org/production/4a5c260f-d689-31c5-8f9e-4643c184b122>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b> ;
+        ecrm:P126_employed      "Double cloth woven silk, cotton and cotton chenille"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1890_1899> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2635167/> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/4a5c260f-d689-31c5-8f9e-4643c184b122/activity/1> .
+
+<http://data.silknow.org/event/7b691d36-e00b-345f-be76-6717c4b62102>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b2ee0e44-8216-3347-8b00-37d5954e1515> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by J W F Morton and Courtaulds Ltd." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/fced21d4-40f0-3d7d-8e38-79dab20d3d83>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O288569" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/2698537d-a7e8-3889-91ad-da130f47aa58> , <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/observation/2> , <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/observation/1> , <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/domain/2> , <http://data.silknow.org/event/7b691d36-e00b-345f-be76-6717c4b62102> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b> , <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/domain/1> , <http://data.silknow.org/production/4a5c260f-d689-31c5-8f9e-4643c184b122> ;
+        dc:identifier       "O288569.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/production/4a5c260f-d689-31c5-8f9e-4643c184b122/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/f9547332-994e-3928-9143-28e37b18d339> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/4> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b> .
+
+<http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Furnishing fabric of double cloth, woven silk, cotton and cotton chenille. Large scale pattern of stylised blooms enclosed by large leaves and born on stems, with a small foliate sub-pattern. In green and blue silk and eau-de-nil chenille and a white and red cotton warp."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fced21d4-40f0-3d7d-8e38-79dab20d3d83> .
+
+<http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/4> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b> .
+
+<http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 27.75 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "70.485"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Furnishing fabric of woven silk, cotton and cotton chenille, designed by C. F. A. Voysey for Alexander Morton & Co, Great Britain, 1890s."@en , "Furnishing fabric of double cloth, woven silk, cotton and cotton chenille. Large scale pattern of stylised blooms enclosed by large leaves and born on stems, with a small foliate sub-pattern. In green and blue silk and eau-de-nil chenille and a white and red cotton warp."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2698537d-a7e8-3889-91ad-da130f47aa58> ;
+        ecrm:P3_has_note               "Furnishing fabric of woven silk, cotton and cotton chenille, designed by C. F. A. Voysey for Alexander Morton & Co, Great Britain, 1890s."@en , "Furnishing fabric of double cloth, woven silk, cotton and cotton chenille. Large scale pattern of stylised blooms enclosed by large leaves and born on stems, with a small foliate sub-pattern. In green and blue silk and eau-de-nil chenille and a white and red cotton warp."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/dimension/2> , <http://data.silknow.org/object/2fd90380-cca4-31f8-aab8-a62637f7bd6b/dimension/1> ;
+        dc:identifier                  "T.161-1977" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O288569> .
+
+<http://data.silknow.org/actor/f9547332-994e-3928-9143-28e37b18d339>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "C. F. A. Voysey" ;
+        ecrm:P1_is_identified_by  "C. F. A. Voysey" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000081998837> , <https://viaf.org/viaf/13110832> , <http://dbpedia.org/resource/Charles_Voysey_(architect)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Charles_Voysey_(architect)> .

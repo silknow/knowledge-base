@@ -1,0 +1,62 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/04e8ae64-3343-3b92-a338-7340dd3d85f1/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/04e8ae64-3343-3b92-a338-7340dd3d85f1> .
+
+<http://data.silknow.org/object/72aa5f66-f827-39ac-b27b-f5686835d7e5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 21831.A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/a0d2961e-d5fc-3e57-9a5d-a6d9bd5f2c26> , <http://data.silknow.org/production/e0a7bbf1-7800-3267-a54e-0f6e79cbc6a9> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/04e8ae64-3343-3b92-a338-7340dd3d85f1> , <http://data.silknow.org/image/73ab65e7-60b0-372c-a6aa-89d2e840a350> , <http://data.silknow.org/object/04e8ae64-3343-3b92-a338-7340dd3d85f1/category/1> ;
+        dc:identifier       "914839.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/image/73ab65e7-60b0-372c-a6aa-89d2e840a350>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/914839_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/d53e6692-fc21-4113-a74f-f7c9fab156da.jpg> .
+
+<http://data.silknow.org/object/04e8ae64-3343-3b92-a338-7340dd3d85f1>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Adrien Karbowsky, 1920 (vers), Tassinari et Chatel"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/73ab65e7-60b0-372c-a6aa-89d2e840a350> ;
+        dc:identifier                  "21831.A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/914839> .
+
+<http://data.silknow.org/production/e0a7bbf1-7800-3267-a54e-0f6e79cbc6a9>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Adrien Karbowsky, 1920 (vers), Tassinari et Chatel" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/04e8ae64-3343-3b92-a338-7340dd3d85f1> ;
+        ecrm:P3_has_note        "Adrien Karbowsky, 1920 (vers), Tassinari et Chatel" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/ce751466-09f8-37d9-a181-bfa8a6fb513c> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/72aa5f66-f827-39ac-b27b-f5686835d7e5> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/04e8ae64-3343-3b92-a338-7340dd3d85f1> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/event/a0d2961e-d5fc-3e57-9a5d-a6d9bd5f2c26>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "don Tassinari et Chatel, 1920" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/04e8ae64-3343-3b92-a338-7340dd3d85f1> .

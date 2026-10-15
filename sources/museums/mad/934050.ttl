@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/d10de62c-6381-33ee-b1b0-18f96e894ef5>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Atelier Martine, 1912, Paul Poiret"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/593c5015-2f41-3c62-b928-55e8819e3e45> ;
+        dc:identifier                  "58345" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934050> .
+
+<http://data.silknow.org/event/c06442aa-8465-34b3-b44b-41d78224e6ce>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "1986.1222" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d10de62c-6381-33ee-b1b0-18f96e894ef5> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/593c5015-2f41-3c62-b928-55e8819e3e45>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934050_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/7fc86d36-4b70-4678-8c79-5f41bf6fe4ef.jpg> .
+
+<http://data.silknow.org/production/0c41bd9e-4c0b-36ad-84eb-85c62744e154>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Atelier Martine, 1912, Paul Poiret" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d10de62c-6381-33ee-b1b0-18f96e894ef5> ;
+        ecrm:P126_employed      "Toile imprimée au rouleau, 8 cylindres dont une couleur de fond."@fr ;
+        ecrm:P3_has_note        "Atelier Martine, 1912, Paul Poiret" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1912> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3d345f62-3b13-3584-94d6-e2328db5079c> .
+
+<http://data.silknow.org/object/d10de62c-6381-33ee-b1b0-18f96e894ef5/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d10de62c-6381-33ee-b1b0-18f96e894ef5> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/d10de62c-6381-33ee-b1b0-18f96e894ef5> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/3d345f62-3b13-3584-94d6-e2328db5079c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 58345" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/593c5015-2f41-3c62-b928-55e8819e3e45> , <http://data.silknow.org/object/d10de62c-6381-33ee-b1b0-18f96e894ef5> , <http://data.silknow.org/object/d10de62c-6381-33ee-b1b0-18f96e894ef5/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/0c41bd9e-4c0b-36ad-84eb-85c62744e154> , <http://data.silknow.org/event/c06442aa-8465-34b3-b44b-41d78224e6ce> ;
+        dc:identifier       "934050.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

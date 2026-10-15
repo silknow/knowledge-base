@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/2844e284-2fb6-3707-a2c7-2c4e514abb96>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/857> .
+
+<http://data.silknow.org/object/82cce6cc-7d52-32c4-9fb7-b57c1fe54e0f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record GMTC-438-000" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06> , <http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06/category/1> , <http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06/domain/1> , <http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06/domain/2> , <http://data.silknow.org/production/2844e284-2fb6-3707-a2c7-2c4e514abb96> , <http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06/observation/1> ;
+        dc:identifier       "68391.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mobilier" .
+
+<http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "0.65" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "0.65"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Description du registre : 4 armoiries à médaillons ovales, l’un aux armes de France sur fond violet et l’autre aux armes de Marie-Antoinette, entourés de broderies à palmettes, glands et arabesques or mi fin sur gros de Tours blanc, couronne royale et branches de lis argent sur velours noir"@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06> .
+
+<http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "0.65" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "0.65"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/mobilier>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/82cce6cc-7d52-32c4-9fb7-b57c1fe54e0f> .
+
+<http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06> .
+
+<http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06/category/1>
+        a                    silk:T35 ;
+        silk:L1              "ARMOIRIES" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06> .
+
+<http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tissu précieux" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06> .
+
+<http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06>
+        a                       ecrm:E22_Man-Made_Object ;
+        rdfs:comment            "Description du registre : 4 armoiries à médaillons ovales, l’un aux armes de France sur fond violet et l’autre aux armes de Marie-Antoinette, entourés de broderies à palmettes, glands et arabesques or mi fin sur gros de Tours blanc, couronne royale et branches de lis argent sur velours noir"@fr ;
+        rdfs:label              "Aux armes de la France et de Marie-Antoinette"@fr ;
+        ecrm:P102_has_title     "Aux armes de la France et de Marie-Antoinette"@fr ;
+        ecrm:P3_has_note        "Description du registre : 4 armoiries à médaillons ovales, l’un aux armes de France sur fond violet et l’autre aux armes de Marie-Antoinette, entourés de broderies à palmettes, glands et arabesques or mi fin sur gros de Tours blanc, couronne royale et branches de lis argent sur velours noir"@fr ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06/dimension/1> , <http://data.silknow.org/object/e8912ca9-6bb8-32c9-9ea7-7eb7f4a8cc06/dimension/2> ;
+        dc:identifier           "GMTC-438-000" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collection.mobiliernational.culture.gouv.fr/objet/GMTC-438-000> .

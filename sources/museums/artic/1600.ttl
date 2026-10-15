@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, damask weave"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/561a43f1-6378-3ee7-acf8-4a0e83aa86f2> ;
+        ecrm:P3_has_note               "Silk, damask weave"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267/dimension/1> , <http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267/dimension/2> ;
+        dc:identifier                  "1895.147" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/1600/panel> .
+
+<http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/image/561a43f1-6378-3ee7-acf8-4a0e83aa86f2>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/1600_0.jpg> , <https://www.artic.edu/iiif/2/4a0ec1ac-7524-3ec1-e63f-39a62d3a1477/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "110.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "110.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, damask weave"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267> .
+
+<http://data.silknow.org/production/577c9ac5-b22c-3b03-bfeb-d10e36c3645f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1676_1700> , <http://data.silknow.org/timespan/1700> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "54.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "54.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/319aae60-0654-343c-b87a-80a0d47f36f0>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Martin A. Ryerson through the Antiquarian Society" ;
+        ecrm:P1_is_identified_by  "Gift of Martin A. Ryerson through the Antiquarian Society" .
+
+<http://data.silknow.org/event/16581b88-7cb1-3868-b4d8-ebf30e127158>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/319aae60-0654-343c-b87a-80a0d47f36f0> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Martin A. Ryerson through the Antiquarian Society" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d61185d6-aa5b-3d50-9d8c-13771e903f3a> .
+
+<http://data.silknow.org/object/d61185d6-aa5b-3d50-9d8c-13771e903f3a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1895.147" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267/category/1> , <http://data.silknow.org/image/561a43f1-6378-3ee7-acf8-4a0e83aa86f2> , <http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267> , <http://data.silknow.org/object/bdcd2ae0-ddf3-3381-a7e6-44f0e1284267/observation/1> , <http://data.silknow.org/production/577c9ac5-b22c-3b03-bfeb-d10e36c3645f> , <http://data.silknow.org/event/16581b88-7cb1-3868-b4d8-ebf30e127158> ;
+        dc:identifier       "1600.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .

@@ -1,0 +1,83 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/8e82502c-aa8a-362b-826e-761378403f57>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ffdbae9b-4a3d-37f3-a2f2-fac1b21af351> .
+
+<http://data.silknow.org/event/136da5d8-1cc8-30ae-81e6-2c5b6af18274>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a4a1d2a9-51a1-384f-a2de-b1cc74ecd20d> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Lois Bryant" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ffdbae9b-4a3d-37f3-a2f2-fac1b21af351> .
+
+<http://data.silknow.org/production/fd41ea0b-34e1-3510-90de-cc638ce3a852/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/f9a9157c-9bcf-3293-b858-1f7a9ec1a2fe> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/ffdbae9b-4a3d-37f3-a2f2-fac1b21af351/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Water/Bugs series #1" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ffdbae9b-4a3d-37f3-a2f2-fac1b21af351> .
+
+<http://data.silknow.org/actor/f9a9157c-9bcf-3293-b858-1f7a9ec1a2fe>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Lois Bryant" ;
+        ecrm:P1_is_identified_by  "Lois Bryant" .
+
+<http://data.silknow.org/object/ffdbae9b-4a3d-37f3-a2f2-fac1b21af351/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ffdbae9b-4a3d-37f3-a2f2-fac1b21af351> .
+
+<http://data.silknow.org/actor/a4a1d2a9-51a1-384f-a2de-b1cc74ecd20d>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Lois Bryant" ;
+        ecrm:P1_is_identified_by  "Gift of Lois Bryant" .
+
+<http://data.silknow.org/object/14d90518-b6b9-3e5f-96c9-a9034ee0763a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1987.140A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/1bebc9c4-c443-3c3c-be9f-f3c7a0792b3f> , <http://data.silknow.org/object/ffdbae9b-4a3d-37f3-a2f2-fac1b21af351/domain/1> , <http://data.silknow.org/event/136da5d8-1cc8-30ae-81e6-2c5b6af18274> , <http://data.silknow.org/object/ffdbae9b-4a3d-37f3-a2f2-fac1b21af351/category/1> , <http://data.silknow.org/production/fd41ea0b-34e1-3510-90de-cc638ce3a852> , <http://data.silknow.org/object/ffdbae9b-4a3d-37f3-a2f2-fac1b21af351> , <http://data.silknow.org/event/8e82502c-aa8a-362b-826e-761378403f57> ;
+        dc:identifier       "880471.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/production/fd41ea0b-34e1-3510-90de-cc638ce3a852>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ffdbae9b-4a3d-37f3-a2f2-fac1b21af351> ;
+        ecrm:P126_employed      "cotton; silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/617> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1984> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/fd41ea0b-34e1-3510-90de-cc638ce3a852/activity/1> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/image/1bebc9c4-c443-3c3c-be9f-f3c7a0792b3f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/880471_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/15985.jpg> .
+
+<http://data.silknow.org/object/ffdbae9b-4a3d-37f3-a2f2-fac1b21af351>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1bebc9c4-c443-3c3c-be9f-f3c7a0792b3f> ;
+        dc:identifier                  "1987.140A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/water-bugs-series-1-1987140a> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/14d90518-b6b9-3e5f-96c9-a9034ee0763a> .

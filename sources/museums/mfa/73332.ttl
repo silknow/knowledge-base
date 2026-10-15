@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/861dae11-c9ea-391f-ad5e-cee9070711ba>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf> .
+
+<http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "970" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "970"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "1480" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "1480"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/fbec06c8-7d3f-3d95-a816-7ec1a6a6086d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf> ;
+        ecrm:P126_employed      "Embroidered linen"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2523118/> .
+
+<http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf> .
+
+<http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Line-stitch and tent-stitch or long legged cross-stitch. A towel."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Punto Scritto and Punto a Spina PesceTowel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf> .
+
+<https://sws.geonames.org/2523118/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0aed98aa-9341-3a70-8b38-a3c0f0ab62b1> .
+
+<http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Line-stitch and tent-stitch or long legged cross-stitch. A towel."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1d72dace-00cf-30a3-8a30-6346cb031302> ;
+        ecrm:P3_has_note               "Line-stitch and tent-stitch or long legged cross-stitch. A towel."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf/dimension/2> , <http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf/dimension/1> ;
+        dc:identifier                  "83.242" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/73332> .
+
+<http://data.silknow.org/image/1d72dace-00cf-30a3-8a30-6346cb031302>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "730213" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/73332_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/730213/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/0aed98aa-9341-3a70-8b38-a3c0f0ab62b1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 83.242" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf/domain/1> , <http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf> , <http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf/observation/1> , <http://data.silknow.org/event/861dae11-c9ea-391f-ad5e-cee9070711ba> , <http://data.silknow.org/image/1d72dace-00cf-30a3-8a30-6346cb031302> , <http://data.silknow.org/object/2420bd2a-ab96-3e57-9479-b2832d5d3acf/category/1> , <http://data.silknow.org/production/fbec06c8-7d3f-3d95-a816-7ec1a6a6086d> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "73332.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

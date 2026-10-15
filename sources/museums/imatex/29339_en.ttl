@@ -1,0 +1,102 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/de0d9581-873a-37db-ba6f-359de4fa6461> .
+
+<http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "99" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "99"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- conserva els 2 voravius"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321> .
+
+<http://data.silknow.org/production/cc30f01a-fc5b-3de5-92b9-d98a4e58633b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                "patterned fabric"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/event/b8242d1c-e25e-37f2-9809-d1d2e977dcdc>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321> .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/image/cf1a71ac-9b3d-31ef-95d6-32ca007a0d59>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035094" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29339_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000035094.jpg> .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .
+
+<http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "56" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "56"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/f942b7e4-50e0-3024-b2cf-e30d14a4de46>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "purchase - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321> ;
+        ecrm:P3_has_note               "purchase - Diputació de Barcelona" ;
+        ecrm:P4_has_time-span          <http://data.silknow.org/timespan/1957_01_01> .
+
+<http://data.silknow.org/object/de0d9581-873a-37db-ba6f-359de4fa6461>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29339" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/cc30f01a-fc5b-3de5-92b9-d98a4e58633b> , <http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321/observation/1> , <http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321/domain/1> , <http://data.silknow.org/image/cf1a71ac-9b3d-31ef-95d6-32ca007a0d59> , <http://data.silknow.org/event/b8242d1c-e25e-37f2-9809-d1d2e977dcdc> , <http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321/category/1> , <http://data.silknow.org/event/f942b7e4-50e0-3024-b2cf-e30d14a4de46> , <http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321> ;
+        dc:identifier       "29339.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321> .
+
+<http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "conserva els 2 voravius"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/cf1a71ac-9b3d-31ef-95d6-32ca007a0d59> ;
+        ecrm:P3_has_note               "conserva els 2 voravius"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321/dimension/1> , <http://data.silknow.org/object/def608c2-c963-3fe4-90f1-47f01718e321/dimension/2> ;
+        dc:identifier                  "4622" .

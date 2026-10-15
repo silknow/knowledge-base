@@ -1,0 +1,97 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "17.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "17.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/b7cc7b2c-dea8-3f88-a004-42c4542fc759>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5> ;
+        ecrm:P126_employed      "Cotton and silk; embroidery"@en ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3057568/> .
+
+<http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Bands of embroidery, probably used to decorate the tops of sleeves.  White cotton worked with red silk in cross-stitch in a geometric design."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bcaf5034-b446-3ec2-b08a-c6e8d903aeec> , <http://data.silknow.org/image/8beb01fd-5fc8-3b86-bc85-ad395f70b569> ;
+        ecrm:P3_has_note               "Bands of embroidery, probably used to decorate the tops of sleeves.  White cotton worked with red silk in cross-stitch in a geometric design."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5/dimension/2> , <http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5/dimension/1> ;
+        dc:identifier                  "22.740" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/67522> .
+
+<https://sws.geonames.org/3057568/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Bands of embroidery, probably used to decorate the tops of sleeves.  White cotton worked with red silk in cross-stitch in a geometric design."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5> .
+
+<http://data.silknow.org/image/8beb01fd-5fc8-3b86-bc85-ad395f70b569>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "843983" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/67522_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/843983/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/2> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5> .
+
+<http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/image/bcaf5034-b446-3ec2-b08a-c6e8d903aeec>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "843982" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/67522_1.jpg> , <https://collections.mfa.org/internal/media/dispatcher/843982/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d236d377-e855-3dea-8a29-95df36ad6319> .
+
+<http://data.silknow.org/event/83e57e5b-58ee-3e23-a2c9-5c7d8eb210bb>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5> .
+
+<http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "12.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "12.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/d236d377-e855-3dea-8a29-95df36ad6319>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 22.740" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/83e57e5b-58ee-3e23-a2c9-5c7d8eb210bb> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/8beb01fd-5fc8-3b86-bc85-ad395f70b569> , <http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5> , <http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5/observation/1> , <http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5/domain/1> , <http://data.silknow.org/production/b7cc7b2c-dea8-3f88-a004-42c4542fc759> , <http://data.silknow.org/object/9ce46ec1-2ee0-38f6-bb92-ad60806b77c5/category/1> , <http://data.silknow.org/image/bcaf5034-b446-3ec2-b08a-c6e8d903aeec> ;
+        dc:identifier       "67522.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

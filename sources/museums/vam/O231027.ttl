@@ -1,0 +1,100 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 37.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "37.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "woven silk and metal thread backed with woven silk and cotton satin.\nThe border of a sash woven with a gold ground [silver-gilt strip close S-wound on yellow silk core] with a band of inward and outward facing pink carnations in profile alternating with a light blue flower with pink centre running along the bottom and top. The same design on a much smaller scale forms the side borders, each edged with a line of tiny white flowerheads. The main panel contains 4 white vases standing on a pink dish with a pair of light green leaves. A semi-circle of pink tri-lobed motifs, dark green leaves and white flowerheads is over each vase. Above this is a tall stem with a central pink flower, 2 pairs of pink flowers and a large fan-shaped pink carnation at the top.\nThis pattern on the left hand side is the same height but the width has been squashed-in down its left hand side. Not certain why.\nBacking: pieced; green satin ground woven with yellow silk warp and blue cotton weft; pattern of undulating parallel stems with flowers with a red centre."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368> .
+
+<http://data.silknow.org/event/bc2d82e6-3d03-31af-ac6d-7569e3bfcd96>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 52 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "52"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/044f97b5-c1c0-32bd-b625-4204b1b63f20>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368> ;
+        ecrm:P126_employed      "cotton yarn, silk thread, metal thread, weaving, sewing"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1870> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Middle East, Textile; woven silk, 1700s, Persian"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368> .
+
+<http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Sash border" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368> .
+
+<http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9d555f67-46ae-3a53-9e25-a9c72a6eed37> .
+
+<http://data.silknow.org/object/9d555f67-46ae-3a53-9e25-a9c72a6eed37>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O231027" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/bc2d82e6-3d03-31af-ac6d-7569e3bfcd96> , <http://data.silknow.org/image/b4aefeb0-89c1-3723-b135-b36c83f66447> , <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368/observation/1> , <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368/observation/2> , <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368/domain/1> , <http://data.silknow.org/production/044f97b5-c1c0-32bd-b625-4204b1b63f20> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368> ;
+        dc:identifier       "O231027.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Middle East, Textile; woven silk, 1700s, Persian"@en , "woven silk and metal thread backed with woven silk and cotton satin.\nThe border of a sash woven with a gold ground [silver-gilt strip close S-wound on yellow silk core] with a band of inward and outward facing pink carnations in profile alternating with a light blue flower with pink centre running along the bottom and top. The same design on a much smaller scale forms the side borders, each edged with a line of tiny white flowerheads. The main panel contains 4 white vases standing on a pink dish with a pair of light green leaves. A semi-circle of pink tri-lobed motifs, dark green leaves and white flowerheads is over each vase. Above this is a tall stem with a central pink flower, 2 pairs of pink flowers and a large fan-shaped pink carnation at the top.\nThis pattern on the left hand side is the same height but the width has been squashed-in down its left hand side. Not certain why.\nBacking: pieced; green satin ground woven with yellow silk warp and blue cotton weft; pattern of undulating parallel stems with flowers with a red centre."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b4aefeb0-89c1-3723-b135-b36c83f66447> ;
+        ecrm:P3_has_note               "woven silk and metal thread backed with woven silk and cotton satin.\nThe border of a sash woven with a gold ground [silver-gilt strip close S-wound on yellow silk core] with a band of inward and outward facing pink carnations in profile alternating with a light blue flower with pink centre running along the bottom and top. The same design on a much smaller scale forms the side borders, each edged with a line of tiny white flowerheads. The main panel contains 4 white vases standing on a pink dish with a pair of light green leaves. A semi-circle of pink tri-lobed motifs, dark green leaves and white flowerheads is over each vase. Above this is a tall stem with a central pink flower, 2 pairs of pink flowers and a large fan-shaped pink carnation at the top.\nThis pattern on the left hand side is the same height but the width has been squashed-in down its left hand side. Not certain why.\nBacking: pieced; green satin ground woven with yellow silk warp and blue cotton weft; pattern of undulating parallel stems with flowers with a red centre."@en , "Middle East, Textile; woven silk, 1700s, Persian"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368/dimension/1> , <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368/dimension/2> ;
+        dc:identifier                  "81-1877" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O231027> .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/9f82d773-72eb-3c72-804c-cddbe40ff368> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .
+
+<http://data.silknow.org/image/b4aefeb0-89c1-3723-b135-b36c83f66447>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019LX1394" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O231027_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2019LX/2019LX1394.jpg> .

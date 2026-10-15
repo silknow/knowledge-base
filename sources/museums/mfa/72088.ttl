@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/8133598/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/02c3396c-cfc6-3709-b4f9-30ad1f5d7172>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d> ;
+        ecrm:P126_employed      "Linen and cotton; embroidery"@en ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/8133598/> .
+
+<http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Coarse white linen.  Across the bottom is a deep border of conventional floral forms worked with red cotton and in cross stitch.  On two sides are worked, lines of red arranged in points.  Registered as German when given."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d> .
+
+<http://data.silknow.org/event/6142a3a6-0050-35eb-aae1-52a41bdae21c>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d> .
+
+<http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Cloth" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d> .
+
+<http://data.silknow.org/object/d8c36b42-92c1-33c4-a8d9-94aafb28bde9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 93.239" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/ec2a2c46-6ee9-360a-8073-a5609ea57a11> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d> , <http://data.silknow.org/production/02c3396c-cfc6-3709-b4f9-30ad1f5d7172> , <http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d/domain/1> , <http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d/category/1> , <http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d/observation/1> , <http://data.silknow.org/event/6142a3a6-0050-35eb-aae1-52a41bdae21c> ;
+        dc:identifier       "72088.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "49" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "49"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d> .
+
+<http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "44" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "44"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Coarse white linen.  Across the bottom is a deep border of conventional floral forms worked with red cotton and in cross stitch.  On two sides are worked, lines of red arranged in points.  Registered as German when given."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ec2a2c46-6ee9-360a-8073-a5609ea57a11> ;
+        ecrm:P3_has_note               "Coarse white linen.  Across the bottom is a deep border of conventional floral forms worked with red cotton and in cross stitch.  On two sides are worked, lines of red arranged in points.  Registered as German when given."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d/dimension/2> , <http://data.silknow.org/object/d1f51dff-d5e5-3d77-a916-4448f7294f7d/dimension/1> ;
+        dc:identifier                  "93.239" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/72088> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d8c36b42-92c1-33c4-a8d9-94aafb28bde9> .
+
+<http://data.silknow.org/image/ec2a2c46-6ee9-360a-8073-a5609ea57a11>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "729871" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/72088_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/729871/resize%3Aformat%3Dfull> .

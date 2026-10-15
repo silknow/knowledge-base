@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "21.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/cc887570-eeb9-3c21-99c4-0b87534be543>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1> .
+
+<https://sws.geonames.org/3176959/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1>
+        a                       ecrm:E22_Man-Made_Object ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1/dimension/1> , <http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1/dimension/2> ;
+        dc:identifier           "06.129" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-fragment-06129> .
+
+<http://data.silknow.org/production/ada88887-a8d4-3b30-bf9e-769e359372b8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1> ;
+        ecrm:P126_employed      "linen"@en , "silk; linen"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1525> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3176959/> .
+
+<http://data.silknow.org/object/9c4d14c4-923a-347c-981f-0dbb430f3e19>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 06.129" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1> , <http://data.silknow.org/event/433fc3b8-2d57-3764-8558-e09908507fcb> , <http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1/domain/1> , <http://data.silknow.org/production/ada88887-a8d4-3b30-bf9e-769e359372b8> , <http://data.silknow.org/event/cc887570-eeb9-3c21-99c4-0b87534be543> , <http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1/category/1> ;
+        dc:identifier       "802536.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Gustav Radeke" .
+
+<http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1> .
+
+<http://data.silknow.org/event/433fc3b8-2d57-3764-8558-e09908507fcb>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9c4d14c4-923a-347c-981f-0dbb430f3e19> .
+
+<http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "43.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "43.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a74980bf-1003-3ab7-ba3e-0ec70a5519c1> .

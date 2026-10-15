@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/7e67af95-962e-30b0-a09c-c415308b2b20>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "bande, Italie, 16e siècle"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/65ba52e3-59de-3f08-8beb-1f196f169bb8> ;
+        dc:identifier                  "2285" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/911188> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/7e67af95-962e-30b0-a09c-c415308b2b20/category/1>
+        a                    silk:T35 ;
+        silk:L1              "bande" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7e67af95-962e-30b0-a09c-c415308b2b20> .
+
+<http://data.silknow.org/image/65ba52e3-59de-3f08-8beb-1f196f169bb8>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/911188_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/a90de00e-c44d-4699-8f74-c17eefa34f20.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/c5f21c90-2ae3-3e57-bd55-835ee5039cd6>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1886" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7e67af95-962e-30b0-a09c-c415308b2b20> .
+
+<http://data.silknow.org/object/c9983e50-e047-383a-8d9b-335968f57c60>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2285" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/f15d642c-eb86-33e4-894d-ee5e481d23bd> , <http://data.silknow.org/image/65ba52e3-59de-3f08-8beb-1f196f169bb8> , <http://data.silknow.org/event/c5f21c90-2ae3-3e57-bd55-835ee5039cd6> , <http://data.silknow.org/object/7e67af95-962e-30b0-a09c-c415308b2b20/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/7e67af95-962e-30b0-a09c-c415308b2b20> ;
+        dc:identifier       "911188.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/f15d642c-eb86-33e4-894d-ee5e481d23bd>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Italie, 16e siècle" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7e67af95-962e-30b0-a09c-c415308b2b20> ;
+        ecrm:P126_employed      "Toile de lin ; broderie à fils comptés dite d'Assise en soie au point de croix et punto scritto."@fr ;
+        ecrm:P3_has_note        "Italie, 16e siècle" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c9983e50-e047-383a-8d9b-335968f57c60> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/7e67af95-962e-30b0-a09c-c415308b2b20> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

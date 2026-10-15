@@ -1,0 +1,75 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988/dimension/1>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/width> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Dépècement de siège, courte bande étroite, de section rectangulaire. Lampas broché, fond satin. Décor à fond bleu et fleurs colorées. Colombe blanche de profil en partie inférieure de la composition. Echantillon découpé à rapprocher des pièces GMMP 961-033 à GMMP 961-042."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988> .
+
+<http://data.silknow.org/production/e6297740-5411-367f-98e9-1e67fbf0ee49>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> , <http://data.silknow.org/vocabulary/857> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1780> .
+
+<http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988> .
+
+<http://data.silknow.org/mobilier>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/20dd4113-2e17-33ef-971e-cf19d7e5f240> .
+
+<http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tissu précieux" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988> .
+
+<http://data.silknow.org/image/dd3ac51c-2b1e-3dad-8f1d-56623be32a53>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mobilier/80249_0.jpg> , <https://collection.mobiliernational.culture.gouv.fr/media/xl/VALS/2020/02/gmmp-961-044_2019-1.JPG> .
+
+<http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988/category/1>
+        a                    silk:T35 ;
+        silk:L1              "SOIERIE" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988> .
+
+<http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "0.417" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "0.417"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/20dd4113-2e17-33ef-971e-cf19d7e5f240>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record GMMP-961-044" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988/domain/1> , <http://data.silknow.org/production/e6297740-5411-367f-98e9-1e67fbf0ee49> , <http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988/observation/1> , <http://data.silknow.org/image/dd3ac51c-2b1e-3dad-8f1d-56623be32a53> , <http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988/category/1> , <http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988/domain/2> , <http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988> ;
+        dc:identifier       "80249.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mobilier" .
+
+<http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Dépècement de siège, courte bande étroite, de section rectangulaire. Lampas broché, fond satin. Décor à fond bleu et fleurs colorées. Colombe blanche de profil en partie inférieure de la composition. Echantillon découpé à rapprocher des pièces GMMP 961-033 à GMMP 961-042."@fr ;
+        rdfs:label                     "Dépècement de siège à fond bleu et blanc à décor de bouquet de fleurs colorées et colombes"@fr ;
+        ecrm:P102_has_title            "Dépècement de siège à fond bleu et blanc à décor de bouquet de fleurs colorées et colombes"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/dd3ac51c-2b1e-3dad-8f1d-56623be32a53> ;
+        ecrm:P3_has_note               "Dépècement de siège, courte bande étroite, de section rectangulaire. Lampas broché, fond satin. Décor à fond bleu et fleurs colorées. Colombe blanche de profil en partie inférieure de la composition. Echantillon découpé à rapprocher des pièces GMMP 961-033 à GMMP 961-042."@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988/dimension/1> , <http://data.silknow.org/object/9b2e3aa2-d73e-3be4-b08d-4bc76f754988/dimension/2> ;
+        dc:identifier                  "GMMP-961-044" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collection.mobiliernational.culture.gouv.fr/objet/GMMP-961-044> .

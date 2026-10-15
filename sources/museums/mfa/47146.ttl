@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2> .
+
+<http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "87" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "87"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2> .
+
+<http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "97" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "97"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/ce556a39-ec79-3ae1-a8ee-38cd23ec4d3a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Piece of blue resist, printed with woodblocks."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/image/f9fb94da-f794-3f45-8676-505f86e5ef01>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "710220" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/47146_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/710220/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/775f9f30-fb4c-3a06-807a-b26a0595c070> .
+
+<http://data.silknow.org/object/775f9f30-fb4c-3a06-807a-b26a0595c070>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 42.181" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2/domain/1> , <http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2/category/1> , <http://data.silknow.org/image/f9fb94da-f794-3f45-8676-505f86e5ef01> , <http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2/observation/1> , <http://data.silknow.org/event/ce556a39-ec79-3ae1-a8ee-38cd23ec4d3a> , <http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/production/bb54d087-2f7e-3999-86d4-168e2eb9971e> ;
+        dc:identifier       "47146.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Piece of blue resist, printed with woodblocks."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f9fb94da-f794-3f45-8676-505f86e5ef01> ;
+        ecrm:P3_has_note               "Piece of blue resist, printed with woodblocks."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2/dimension/2> , <http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2/dimension/1> ;
+        dc:identifier                  "42.181" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/47146> .
+
+<http://data.silknow.org/production/bb54d087-2f7e-3999-86d4-168e2eb9971e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0e9a5488-789b-3ae6-9c8c-145add1325c2> ;
+        ecrm:P126_employed      "Cotton resist wood-block printed"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .

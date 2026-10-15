@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/46ac4770-03b2-36d5-8faa-22042c381ee4> .
+
+<http://data.silknow.org/production/bd911f11-34aa-3d5a-bd12-f5a0f32e92fe>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c5331c60-a6f5-38e8-a896-e9471a000bcc> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/214> , <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P32_used_general_technique
+                "técnica de bordado"@es , "bordado manual"@es , "tafetán"@es ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/c5331c60-a6f5-38e8-a896-e9471a000bcc/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c5331c60-a6f5-38e8-a896-e9471a000bcc> .
+
+<http://data.silknow.org/object/c5331c60-a6f5-38e8-a896-e9471a000bcc/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c5331c60-a6f5-38e8-a896-e9471a000bcc> .
+
+<http://data.silknow.org/image/239ed9ab-34e6-3f69-b019-69e9a0b93b1c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000003044" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/5922_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000003044.jpg> .
+
+<http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Biosca, Josep" ;
+        ecrm:P1_is_identified_by  "Biosca, Josep" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Josep_Huguet_i_Biosca> , <https://viaf.org/viaf/95599143> , <https://isni.org/isni/000000007829170X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Josep_Huguet_i_Biosca> .
+
+<http://data.silknow.org/object/c5331c60-a6f5-38e8-a896-e9471a000bcc>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/239ed9ab-34e6-3f69-b019-69e9a0b93b1c> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/97697242-3cea-358d-a26f-a9d2836aac5a> ;
+        dc:identifier                  "521" .
+
+<http://data.silknow.org/object/46ac4770-03b2-36d5-8faa-22042c381ee4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5922" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c5331c60-a6f5-38e8-a896-e9471a000bcc/domain/1> , <http://data.silknow.org/image/239ed9ab-34e6-3f69-b019-69e9a0b93b1c> , <http://data.silknow.org/object/c5331c60-a6f5-38e8-a896-e9471a000bcc/category/1> , <http://data.silknow.org/event/6323604a-e230-3399-ad48-dd35f46a9a2a> , <http://data.silknow.org/event/8d2c068f-35d6-3bc2-bc2e-7f776016bf66> , <http://data.silknow.org/object/c5331c60-a6f5-38e8-a896-e9471a000bcc> , <http://data.silknow.org/production/bd911f11-34aa-3d5a-bd12-f5a0f32e92fe> ;
+        dc:identifier       "5922.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/97697242-3cea-358d-a26f-a9d2836aac5a>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "trenzados"@es ;
+        ecrm:P3_has_note  "trenzados"@es .
+
+<http://data.silknow.org/event/6323604a-e230-3399-ad48-dd35f46a9a2a>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2> ;
+        ecrm:P23_transferred_title_from
+                "Biosca, Josep" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c5331c60-a6f5-38e8-a896-e9471a000bcc> ;
+        ecrm:P3_has_note               "donacions" .
+
+<http://data.silknow.org/event/8d2c068f-35d6-3bc2-bc2e-7f776016bf66>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c5331c60-a6f5-38e8-a896-e9471a000bcc> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

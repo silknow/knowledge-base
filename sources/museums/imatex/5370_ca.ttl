@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/168c831f-e2e8-3f01-936e-c8e437bd5abb> .
+
+<http://data.silknow.org/event/0e4442b6-667d-3c30-a4a9-d4671b9ab43a>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/22fe4289-67e2-35ef-ad52-107cd4af8b3a> .
+
+<http://data.silknow.org/object/22fe4289-67e2-35ef-ad52-107cd4af8b3a/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/22fe4289-67e2-35ef-ad52-107cd4af8b3a> .
+
+<http://data.silknow.org/event/3fbf58b3-ac06-3b29-8c46-2a236d20c37e>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2> ;
+        ecrm:P23_transferred_title_from
+                "Biosca, Josep" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/22fe4289-67e2-35ef-ad52-107cd4af8b3a> ;
+        ecrm:P3_has_note               "donacions" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/1ffb6ee6-4db3-319b-9893-46ff1572ab93>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000002478" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/5370_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000002478.jpg> .
+
+<http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Biosca, Josep" ;
+        ecrm:P1_is_identified_by  "Biosca, Josep" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Josep_Huguet_i_Biosca> , <https://viaf.org/viaf/95599143> , <https://isni.org/isni/000000007829170X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Josep_Huguet_i_Biosca> .
+
+<http://data.silknow.org/object/168c831f-e2e8-3f01-936e-c8e437bd5abb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5370" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/1ffb6ee6-4db3-319b-9893-46ff1572ab93> , <http://data.silknow.org/event/0e4442b6-667d-3c30-a4a9-d4671b9ab43a> , <http://data.silknow.org/object/22fe4289-67e2-35ef-ad52-107cd4af8b3a/domain/1> , <http://data.silknow.org/production/ded1fd06-ccf7-3f77-a522-97f91cb53bd8> , <http://data.silknow.org/event/3fbf58b3-ac06-3b29-8c46-2a236d20c37e> , <http://data.silknow.org/object/22fe4289-67e2-35ef-ad52-107cd4af8b3a> , <http://data.silknow.org/object/22fe4289-67e2-35ef-ad52-107cd4af8b3a/category/1> ;
+        dc:identifier       "5370.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/22fe4289-67e2-35ef-ad52-107cd4af8b3a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/22fe4289-67e2-35ef-ad52-107cd4af8b3a> .
+
+<http://data.silknow.org/object/22fe4289-67e2-35ef-ad52-107cd4af8b3a>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1ffb6ee6-4db3-319b-9893-46ff1572ab93> ;
+        dc:identifier                  "21392" .
+
+<http://data.silknow.org/production/ded1fd06-ccf7-3f77-a522-97f91cb53bd8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/22fe4289-67e2-35ef-ad52-107cd4af8b3a> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/88535e24-dcd5-3951-9e15-4bf6df30dde7> , <http://data.silknow.org/timespan/f6eb7198-f9d7-3145-bd51-0a0ca8a2a3d6> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> , <https://sws.geonames.org/2635167/> , <https://sws.geonames.org/6269131/> .
+
+<https://sws.geonames.org/2635167/>
+        a       ecrm:E53_Place .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

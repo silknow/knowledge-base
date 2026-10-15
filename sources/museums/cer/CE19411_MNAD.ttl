@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/event/0cae3ae1-2e0b-399a-95ba-5f52b903f09d>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/production/5712f7b2-681c-369f-9039-1f7781a6da76>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f> ;
+        ecrm:P126_employed      "Seda blanco [También seda roja]  Lino"@es ;
+        ecrm:P32_used_general_technique
+                "Brocatel [Dos urdimbres de seda (blanca y roja) y dos tramas (lino y seda blanca)]"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1600> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/8ecdabd1-c79d-3eb6-bd36-790bc0b508cb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE19411" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f> , <http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f/observation/2> , <http://data.silknow.org/event/4253d884-a9f8-3dfe-a45f-95923a799055> , <http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f/observation/1> , <http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f/domain/1> , <http://data.silknow.org/image/517fdf1b-0d78-31bd-afcb-4d1a3d51d51c> , <http://data.silknow.org/production/5712f7b2-681c-369f-9039-1f7781a6da76> , <http://data.silknow.org/event/0cae3ae1-2e0b-399a-95ba-5f52b903f09d> , <http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f/category/1> ;
+        dc:identifier       "CE19411_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Moderna"@es , "Fragmento de tejido de seda de forma cuadrada de color rojo.  Conserva, en uno de los extremos, orillo de color verde. Como decoración, motivos vegetales estilizados."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/517fdf1b-0d78-31bd-afcb-4d1a3d51d51c> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Fragmento de tejido de seda de forma cuadrada de color rojo.  Conserva, en uno de los extremos, orillo de color verde. Como decoración, motivos vegetales estilizados."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/744> ;
+        dc:identifier                  "CE19411" .
+
+<http://data.silknow.org/event/4253d884-a9f8-3dfe-a45f-95923a799055>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f> .
+
+<http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragmento de tejido" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f> .
+
+<http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fragmento de tejido de seda de forma cuadrada de color rojo.  Conserva, en uno de los extremos, orillo de color verde. Como decoración, motivos vegetales estilizados."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f> .
+
+<http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/886348a5-a14f-3c0a-9d9b-31f327dbe03f> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8ecdabd1-c79d-3eb6-bd36-790bc0b508cb> .
+
+<http://data.silknow.org/image/517fdf1b-0d78-31bd-afcb-4d1a3d51d51c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE19411" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE19411_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE19411&txt_id_imagen=1> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

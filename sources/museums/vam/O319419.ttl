@@ -1,0 +1,108 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/15eeb7b7-94f2-357d-a295-5b9ce0234c20>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225> .
+
+<http://data.silknow.org/production/256cec42-d559-30c3-bafe-e5cfdba733ef>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225> ;
+        ecrm:P126_employed      "Woven silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1650_1750> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/298795/> .
+
+<http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Woven silk, red ground with calligraphic decoration in white"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225> .
+
+<http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 44.2 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "44.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/298795/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225> .
+
+<http://data.silknow.org/image/fe66789d-d574-36c8-86e8-2e286175eed6>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018LG4118" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O319419_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018LG/2018LG4118.jpg> .
+
+<http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "woven silk, red ground with Qur'anic inscription in white; Turkey; 1700s"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225> .
+
+<http://data.silknow.org/object/9e26d79a-7666-341c-a595-4967cdecbedf>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O319419" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/fe66789d-d574-36c8-86e8-2e286175eed6> , <http://data.silknow.org/event/15eeb7b7-94f2-357d-a295-5b9ce0234c20> , <http://data.silknow.org/image/a3bee701-09fa-3edc-b102-85eb90ae0349> , <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225> , <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225/domain/1> , <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225/observation/2> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225/observation/1> , <http://data.silknow.org/production/256cec42-d559-30c3-bafe-e5cfdba733ef> ;
+        dc:identifier       "O319419.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "woven silk, red ground with Qur'anic inscription in white; Turkey; 1700s"@en , "Woven silk, red ground with calligraphic decoration in white"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a3bee701-09fa-3edc-b102-85eb90ae0349> , <http://data.silknow.org/image/fe66789d-d574-36c8-86e8-2e286175eed6> ;
+        ecrm:P3_has_note               "Woven silk, red ground with calligraphic decoration in white"@en , "woven silk, red ground with Qur'anic inscription in white; Turkey; 1700s"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225/dimension/2> , <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225/dimension/1> ;
+        dc:identifier                  "T.96-1910" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O319419> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9e26d79a-7666-341c-a595-4967cdecbedf> .
+
+<http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Islam" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225> .
+
+<http://data.silknow.org/image/a3bee701-09fa-3edc-b102-85eb90ae0349>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018LF7208" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O319419_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018LF/2018LF7208.jpg> .
+
+<http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 37.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "37.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/8627f182-9c21-3bfe-bf9d-0f3bb79de225> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .

@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/836bb748-e465-32a2-8929-6a382e205a31>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/916032_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/89d3f422-edc3-4e16-83b9-c42edd890590.jpg> .
+
+<http://data.silknow.org/object/c9adcb33-c105-35ae-a28a-11cb63683830>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Henri Gillet, 19e siècle, Manufacture de la Lampèze, Nîmes, 1900"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/836bb748-e465-32a2-8929-6a382e205a31> ;
+        dc:identifier                  "9232" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/916032> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/b771e8da-49aa-370a-a895-4f825fba0992>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1900" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c9adcb33-c105-35ae-a28a-11cb63683830> .
+
+<https://sws.geonames.org/2990363/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/b7aa7c28-b6c0-3719-8a6b-17018df7b4c2>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Henri Gillet, 19e siècle, Manufacture de la Lampèze, Nîmes, 1900" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c9adcb33-c105-35ae-a28a-11cb63683830> ;
+        ecrm:P126_employed      "effet tapisserie au petit point"@fr ;
+        ecrm:P3_has_note        "Henri Gillet, 19e siècle, Manufacture de la Lampèze, Nîmes, 1900" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> , <http://data.silknow.org/timespan/1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2990363/> .
+
+<http://data.silknow.org/object/c9adcb33-c105-35ae-a28a-11cb63683830/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c9adcb33-c105-35ae-a28a-11cb63683830> .
+
+<http://data.silknow.org/object/2ae04c0f-9406-3bb1-9fb3-bab6ca491d1e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 9232" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c9adcb33-c105-35ae-a28a-11cb63683830/category/1> , <http://data.silknow.org/image/836bb748-e465-32a2-8929-6a382e205a31> , <http://data.silknow.org/event/b771e8da-49aa-370a-a895-4f825fba0992> , <http://data.silknow.org/production/b7aa7c28-b6c0-3719-8a6b-17018df7b4c2> , <http://data.silknow.org/object/c9adcb33-c105-35ae-a28a-11cb63683830> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "916032.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2ae04c0f-9406-3bb1-9fb3-bab6ca491d1e> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/c9adcb33-c105-35ae-a28a-11cb63683830> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

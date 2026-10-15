@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/1d7c922d-1e11-3c9b-a9f2-48549edae687>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1902-1-605-a_c_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-1902-1-605-b_cMattFlynn> .
+
+<http://data.silknow.org/actor/8cf7c822-935f-32c1-a6fd-c8e2dcb3bb51>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of John Pierpont Morgan" ;
+        ecrm:P1_is_identified_by  "Gift of John Pierpont Morgan" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/J._P._Morgan> , <https://viaf.org/viaf/57410770> , <https://isni.org/isni/000000008385399X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/J._P._Morgan> .
+
+<http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Symmetrical floral sprays in half-drop alignment in blue, white and tan."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7> .
+
+<http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bd66cc62-626d-33aa-b1d3-3b085f42cb03> .
+
+<http://data.silknow.org/event/82c6d61e-7921-355c-aad2-b892f8d350c3>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/8cf7c822-935f-32c1-a6fd-c8e2dcb3bb51> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of John Pierpont Morgan" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7> .
+
+<http://data.silknow.org/production/56a2d3bd-5f74-3ae2-a112-89dad02d6314>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7> ;
+        ecrm:P126_employed      "linen"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "two integrated fabric structures"@en , "plain weave and plain weave"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Symmetrical floral sprays in half-drop alignment in blue, white and tan."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1d7c922d-1e11-3c9b-a9f2-48549edae687> ;
+        ecrm:P3_has_note               "Symmetrical floral sprays in half-drop alignment in blue, white and tan."@en ;
+        dc:identifier                  "chndm_1902-1-605-a_c" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1902-1-605-a_c> .
+
+<http://data.silknow.org/object/bd66cc62-626d-33aa-b1d3-3b085f42cb03>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1902-1-605-a_c" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7/category/1> , <http://data.silknow.org/event/82c6d61e-7921-355c-aad2-b892f8d350c3> , <http://data.silknow.org/event/7ec9b351-9ec0-390c-b426-79c72bbf94e1> , <http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7> , <http://data.silknow.org/image/1d7c922d-1e11-3c9b-a9f2-48549edae687> , <http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7/observation/1> , <http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7/domain/1> , <http://data.silknow.org/production/56a2d3bd-5f74-3ae2-a112-89dad02d6314> ;
+        dc:identifier       "chndm_1902-1-605-a_c.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7> .
+
+<http://data.silknow.org/event/7ec9b351-9ec0-390c-b426-79c72bbf94e1>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f0637eb6-8cd7-3bf5-8316-e5d775df1ab7> .

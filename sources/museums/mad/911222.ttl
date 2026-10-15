@@ -1,0 +1,83 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/53155100-fdbe-3c5a-94ef-e17625b89694>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/911222_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/ace26b02-de30-4d7d-8120-4bb7d51dc462.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/b11e00f8-ca58-3597-a1f8-7d0bf1e924ee/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b11e00f8-ca58-3597-a1f8-7d0bf1e924ee> .
+
+<http://data.silknow.org/object/b11e00f8-ca58-3597-a1f8-7d0bf1e924ee/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "55" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "55"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/b4e07848-5474-3b25-8f32-00774e7e1207>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1740 (vers), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b11e00f8-ca58-3597-a1f8-7d0bf1e924ee> ;
+        ecrm:P126_employed      "Lampas fond taffetas, lancé filé argent"@fr ;
+        ecrm:P3_has_note        "France, 1740 (vers), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/43a6247a-1363-3118-ad2d-b64ccd99445e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/3c3d30b0-dfa1-337c-9d8d-cab1e7799ead>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 14097" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/26302fbf-1d67-3dc5-b2ab-ae9eac101d82> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/b11e00f8-ca58-3597-a1f8-7d0bf1e924ee> , <http://data.silknow.org/image/53155100-fdbe-3c5a-94ef-e17625b89694> , <http://data.silknow.org/object/b11e00f8-ca58-3597-a1f8-7d0bf1e924ee/category/1> , <http://data.silknow.org/production/b4e07848-5474-3b25-8f32-00774e7e1207> ;
+        dc:identifier       "911222.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/b11e00f8-ca58-3597-a1f8-7d0bf1e924ee>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1740 (vers), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/53155100-fdbe-3c5a-94ef-e17625b89694> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b11e00f8-ca58-3597-a1f8-7d0bf1e924ee/dimension/2> , <http://data.silknow.org/object/b11e00f8-ca58-3597-a1f8-7d0bf1e924ee/dimension/1> ;
+        dc:identifier                  "14097" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/911222> .
+
+<http://data.silknow.org/object/b11e00f8-ca58-3597-a1f8-7d0bf1e924ee/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "108" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "108"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3c3d30b0-dfa1-337c-9d8d-cab1e7799ead> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/b11e00f8-ca58-3597-a1f8-7d0bf1e924ee> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/event/26302fbf-1d67-3dc5-b2ab-ae9eac101d82>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don marquise Arconati-Visconti, 1907" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b11e00f8-ca58-3597-a1f8-7d0bf1e924ee> .

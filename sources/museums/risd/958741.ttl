@@ -1,0 +1,80 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/d3f322f7-e35f-33e0-bef0-fe1ba9784dad>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/958741_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/270804.jpg> .
+
+<http://data.silknow.org/object/dbde491f-598f-3793-bd66-5477af3f3235/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dbde491f-598f-3793-bd66-5477af3f3235> .
+
+<http://data.silknow.org/event/d4835906-2080-3fdc-b998-d0aebe86444a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/dbde491f-598f-3793-bd66-5477af3f3235> .
+
+<http://data.silknow.org/event/0f4fb0f5-3396-39a3-a742-35619a5b0be5>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/dbde491f-598f-3793-bd66-5477af3f3235> .
+
+<https://sws.geonames.org/2017370/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/8da56926-e8bf-3cbf-80f4-48595c8f6eca>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/958741_1.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/39389.jpg> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/dbde491f-598f-3793-bd66-5477af3f3235>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d3f322f7-e35f-33e0-bef0-fe1ba9784dad> , <http://data.silknow.org/image/8da56926-e8bf-3cbf-80f4-48595c8f6eca> ;
+        dc:identifier                  "11.160" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/trim-fragment-11160> .
+
+<http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Gustav Radeke" .
+
+<http://data.silknow.org/object/18c196a6-c194-389a-888e-2ab8c18af7ad>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 11.160" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/d4835906-2080-3fdc-b998-d0aebe86444a> , <http://data.silknow.org/production/0f878e5d-ad7e-37bf-b2d6-e814c2b32ac8> , <http://data.silknow.org/object/dbde491f-598f-3793-bd66-5477af3f3235/category/1> , <http://data.silknow.org/image/8da56926-e8bf-3cbf-80f4-48595c8f6eca> , <http://data.silknow.org/event/0f4fb0f5-3396-39a3-a742-35619a5b0be5> , <http://data.silknow.org/object/dbde491f-598f-3793-bd66-5477af3f3235/domain/1> , <http://data.silknow.org/image/d3f322f7-e35f-33e0-bef0-fe1ba9784dad> , <http://data.silknow.org/object/dbde491f-598f-3793-bd66-5477af3f3235> ;
+        dc:identifier       "958741.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/18c196a6-c194-389a-888e-2ab8c18af7ad> .
+
+<http://data.silknow.org/object/dbde491f-598f-3793-bd66-5477af3f3235/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Trim fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dbde491f-598f-3793-bd66-5477af3f3235> .
+
+<http://data.silknow.org/production/0f878e5d-ad7e-37bf-b2d6-e814c2b32ac8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/dbde491f-598f-3793-bd66-5477af3f3235> ;
+        ecrm:P126_employed      "Gold and silver-wrapped silk yarn, Point d'Espagne"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2017370/> .

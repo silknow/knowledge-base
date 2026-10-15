@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/e9969151-820d-3eed-b6ff-dbe8b7d2358f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/917201_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/ef4d6413-e135-46e2-b141-5302f90e8ae3.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/46aba4a6-35da-3ec2-84a7-5c22854054fb/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/46aba4a6-35da-3ec2-84a7-5c22854054fb> .
+
+<http://data.silknow.org/production/1ab6767c-92e5-321c-b101-f3d4ad1fee1e>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Japon, 19e siècle" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/46aba4a6-35da-3ec2-84a7-5c22854054fb> ;
+        ecrm:P126_employed      "Velours ciselé 2 corps, fond filé or (lamelle de papier doré sur âme de soie rouge)"@fr ;
+        ecrm:P3_has_note        "Japon, 19e siècle" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .
+
+<http://data.silknow.org/object/fad4df59-11a6-35d9-ac88-551755bae9ae>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 4539" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/1ab6767c-92e5-321c-b101-f3d4ad1fee1e> , <http://data.silknow.org/event/3f788a06-d818-3c2b-adf3-f77ca06d758c> , <http://data.silknow.org/object/46aba4a6-35da-3ec2-84a7-5c22854054fb/category/1> , <http://data.silknow.org/object/46aba4a6-35da-3ec2-84a7-5c22854054fb> , <http://data.silknow.org/image/e9969151-820d-3eed-b6ff-dbe8b7d2358f> ;
+        dc:identifier       "917201.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/3f788a06-d818-3c2b-adf3-f77ca06d758c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat Siegfried Bing, 1888" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/46aba4a6-35da-3ec2-84a7-5c22854054fb> .
+
+<http://data.silknow.org/object/46aba4a6-35da-3ec2-84a7-5c22854054fb>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Japon, 19e siècle"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e9969151-820d-3eed-b6ff-dbe8b7d2358f> ;
+        dc:identifier                  "4539" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/917201> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fad4df59-11a6-35d9-ac88-551755bae9ae> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/46aba4a6-35da-3ec2-84a7-5c22854054fb> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

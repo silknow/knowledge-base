@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Gros de Tours liseré broccato"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a> .
+
+<http://data.silknow.org/event/999d7f72-70a3-3d91-94cc-ffa69e01cd44>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a> .
+
+<http://data.silknow.org/image/a58ea218-69fe-3340-9e0f-89b25c1ac907>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/282120_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5AyGCmfN26VSlb8pNVIAqQi4TgKvCAvzw1I5PMPUf9YYrn19JwkLEHKormYsyys2oJRKLd2i6GnmL6x%2fU9JLRKQ3bVU0Lbp3%2fw1a%2bJ3SavIOnvUUKuM5dMw%3d%3d> .
+
+<http://data.silknow.org/production/2ecb56cd-8480-3260-be52-1099136acf23>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a> ;
+        ecrm:P126_employed      "filo metallico"@it ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1700_1750> .
+
+<http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a/dimension/1>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/width> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a> .
+
+<http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f8f8bf3e-768f-3c35-a3f0-6c2bc92648ef> .
+
+<http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a/dimension/2>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/height> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/f8f8bf3e-768f-3c35-a3f0-6c2bc92648ef>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 282120" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a/domain/1> , <http://data.silknow.org/image/a58ea218-69fe-3340-9e0f-89b25c1ac907> , <http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a/observation/1> , <http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a/category/1> , <http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a> , <http://data.silknow.org/event/999d7f72-70a3-3d91-94cc-ffa69e01cd44> , <http://data.silknow.org/production/2ecb56cd-8480-3260-be52-1099136acf23> ;
+        dc:identifier       "282120.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Gros de Tours liseré broccato"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a58ea218-69fe-3340-9e0f-89b25c1ac907> ;
+        ecrm:P3_has_note               "Gros de Tours liseré broccato"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a/dimension/1> , <http://data.silknow.org/object/dad63a48-7cf6-3bad-990b-80608167ae3a/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 1040" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/282120/?WEB=MuseiVE> .

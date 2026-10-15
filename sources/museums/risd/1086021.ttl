@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/e51de7f6-b9cc-34dc-96d0-6a6b6a036a5d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/686f9aeb-51c5-37f2-9c96-06e7a233d9ba> .
+
+<http://data.silknow.org/image/f4e7ccf9-9789-3c17-9a33-c94988b599c4>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1086021_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/39096.jpg> .
+
+<http://data.silknow.org/object/955b4a89-f850-39ac-8472-9048609643c2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 52.238.4" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/686f9aeb-51c5-37f2-9c96-06e7a233d9ba> , <http://data.silknow.org/event/e51de7f6-b9cc-34dc-96d0-6a6b6a036a5d> , <http://data.silknow.org/object/686f9aeb-51c5-37f2-9c96-06e7a233d9ba/domain/1> , <http://data.silknow.org/image/f4e7ccf9-9789-3c17-9a33-c94988b599c4> , <http://data.silknow.org/event/78bea00e-7a1a-3e4d-b6f2-f2e12b71d12c> , <http://data.silknow.org/object/686f9aeb-51c5-37f2-9c96-06e7a233d9ba/category/1> , <http://data.silknow.org/production/70644e17-6e05-3c7e-9318-303958c3edde> ;
+        dc:identifier       "1086021.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/686f9aeb-51c5-37f2-9c96-06e7a233d9ba/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/686f9aeb-51c5-37f2-9c96-06e7a233d9ba> .
+
+<http://data.silknow.org/object/686f9aeb-51c5-37f2-9c96-06e7a233d9ba/category/1>
+        a                    silk:T35 ;
+        silk:L1              "swatchbook; album; textile sample" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/686f9aeb-51c5-37f2-9c96-06e7a233d9ba> .
+
+<http://data.silknow.org/production/70644e17-6e05-3c7e-9318-303958c3edde>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/686f9aeb-51c5-37f2-9c96-06e7a233d9ba> ;
+        ecrm:P126_employed      "paper (fiber product)"@en , "paper; silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/actor/c48c63d2-47aa-39e5-ac7f-6af70ba30780>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Mary B. Jackson Fund" ;
+        ecrm:P1_is_identified_by  "Mary B. Jackson Fund" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/686f9aeb-51c5-37f2-9c96-06e7a233d9ba>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f4e7ccf9-9789-3c17-9a33-c94988b599c4> ;
+        dc:identifier                  "52.238.4" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/swatchbook-album-textile-sample-522384> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/955b4a89-f850-39ac-8472-9048609643c2> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/78bea00e-7a1a-3e4d-b6f2-f2e12b71d12c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c48c63d2-47aa-39e5-ac7f-6af70ba30780> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Mary B. Jackson Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/686f9aeb-51c5-37f2-9c96-06e7a233d9ba> .

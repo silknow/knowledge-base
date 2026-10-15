@@ -1,0 +1,110 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "max" ;
+        rdfs:label          "Width: 2.75 in max" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "max" ;
+        ecrm:P90_has_value  "6.985"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Woven silk and silver braid, backed with canvas, with decoration of green, yellow and pink couched chenille. The braid has a straight upper border and scalloped lower border, with picots of silver thread."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/image/6660b38d-2f97-3a97-a554-809e595dbe83>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018KN5866" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O88371_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018KN/2018KN5866.jpg> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/actor/0eb660e5-8b91-34b3-b1b1-33a947c98a0d>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by John Fowler" ;
+        ecrm:P1_is_identified_by  "Given by John Fowler" .
+
+<http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Braid of woven silk and chenille, France, 1680-1700"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5> .
+
+<http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Braid of woven silk and chenille, France, 1680-1700"@en , "Woven silk and silver braid, backed with canvas, with decoration of green, yellow and pink couched chenille. The braid has a straight upper border and scalloped lower border, with picots of silver thread."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6660b38d-2f97-3a97-a554-809e595dbe83> ;
+        ecrm:P3_has_note               "Braid of woven silk and chenille, France, 1680-1700"@en , "Woven silk and silver braid, backed with canvas, with decoration of green, yellow and pink couched chenille. The braid has a straight upper border and scalloped lower border, with picots of silver thread."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5/dimension/1> , <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5/dimension/2> ;
+        dc:identifier                  "T.227-1978" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O88371> .
+
+<http://data.silknow.org/event/dc1b66e6-3ff1-37fc-9890-a51fa9b85a50>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/0eb660e5-8b91-34b3-b1b1-33a947c98a0d> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by John Fowler" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5> .
+
+<http://data.silknow.org/production/1e11ecc9-22f7-3c3a-9c7e-a667304e30a4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5> ;
+        ecrm:P126_employed      "Woven silk braid on canvas with couched chenille"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1680_1700> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 70 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "177.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/cddd09c7-4a57-3aa3-884b-dbf3a3fa5309>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O88371" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5/domain/1> , <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5/observation/1> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/event/dc1b66e6-3ff1-37fc-9890-a51fa9b85a50> , <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5> , <http://data.silknow.org/image/6660b38d-2f97-3a97-a554-809e595dbe83> , <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5/observation/2> , <http://data.silknow.org/production/1e11ecc9-22f7-3c3a-9c7e-a667304e30a4> ;
+        dc:identifier       "O88371.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/cddd09c7-4a57-3aa3-884b-dbf3a3fa5309> .
+
+<http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Braid" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5> .
+
+<http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c2fa8a75-3448-34d9-aee5-74d602624bf5> .

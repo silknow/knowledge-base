@@ -1,0 +1,56 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/7f2e6643-4ef1-3c6f-b9a7-1c8c6786355a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/52459b98-408c-3431-97d9-b858e98acc15> .
+
+<http://data.silknow.org/object/52459b98-408c-3431-97d9-b858e98acc15/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Scotland" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/52459b98-408c-3431-97d9-b858e98acc15> .
+
+<http://data.silknow.org/image/1d8d4567-b6b9-3f8e-8872-635cea1232f9>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019MG1306" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O63975_0.jpg> , <https://framemark.vam.ac.uk/collections/2019MG1306/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/52459b98-408c-3431-97d9-b858e98acc15>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1d8d4567-b6b9-3f8e-8872-635cea1232f9> ;
+        dc:identifier                  "T.2:1-2002" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O63975> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b86306a0-6bfe-38ba-bec1-5c2a4ed3ad0c> .
+
+<http://data.silknow.org/object/b86306a0-6bfe-38ba-bec1-5c2a4ed3ad0c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O63975" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/e19b9a7d-1b0a-3624-9dfc-e1b82ab3e9fa> , <http://data.silknow.org/image/1d8d4567-b6b9-3f8e-8872-635cea1232f9> , <http://data.silknow.org/event/7f2e6643-4ef1-3c6f-b9a7-1c8c6786355a> , <http://data.silknow.org/object/52459b98-408c-3431-97d9-b858e98acc15/domain/1> , <http://data.silknow.org/object/52459b98-408c-3431-97d9-b858e98acc15> ;
+        dc:identifier       "O63975.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/production/e19b9a7d-1b0a-3624-9dfc-e1b82ab3e9fa>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/52459b98-408c-3431-97d9-b858e98acc15> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/644> , <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> .

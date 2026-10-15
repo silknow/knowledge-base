@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/6667bd36-0252-3e81-8568-2911787222b1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7> ;
+        ecrm:P126_employed      "Cotton print"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1815> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/a5f99a8e-8e16-3a32-b1a3-172ff0a44243> .
+
+<http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "80.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "80.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/cec67707-cae5-33fe-b90f-8b1c41cac0ab>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 52.265" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7/domain/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7> , <http://data.silknow.org/event/6aba5965-f6c1-3141-a1da-7933783e765d> , <http://data.silknow.org/production/6667bd36-0252-3e81-8568-2911787222b1> , <http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7/observation/1> , <http://data.silknow.org/image/ba328ed6-dcd9-3386-9118-1450dad4715b> , <http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7/category/1> ;
+        dc:identifier       "93732.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/event/6aba5965-f6c1-3141-a1da-7933783e765d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7> .
+
+<http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "(Lower right corner cut) Engraved design printed in mauve on plain cotton shows four scenes with people and animals engaged in various activities, labeled Route de St. Cloud, Route de Poissy, Les Joueurs de Boules and Le Joueur de Cornemuse. On side of stone in center of composition: Delmès Sculpsit. Several breaks and tears have ben darned. Long yellow-brown stains."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7> .
+
+<http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Rectangular piece of printed cotton" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7> .
+
+<http://data.silknow.org/place/a5f99a8e-8e16-3a32-b1a3-172ff0a44243>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "French, Nantes" ;
+        ecrm:P87_is_identified_by  "French, Nantes" .
+
+<http://data.silknow.org/image/ba328ed6-dcd9-3386-9118-1450dad4715b>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "817033" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/93732_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/817033/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/cec67707-cae5-33fe-b90f-8b1c41cac0ab> .
+
+<http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "(Lower right corner cut) Engraved design printed in mauve on plain cotton shows four scenes with people and animals engaged in various activities, labeled Route de St. Cloud, Route de Poissy, Les Joueurs de Boules and Le Joueur de Cornemuse. On side of stone in center of composition: Delmès Sculpsit. Several breaks and tears have ben darned. Long yellow-brown stains."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ba328ed6-dcd9-3386-9118-1450dad4715b> ;
+        ecrm:P3_has_note               "(Lower right corner cut) Engraved design printed in mauve on plain cotton shows four scenes with people and animals engaged in various activities, labeled Route de St. Cloud, Route de Poissy, Les Joueurs de Boules and Le Joueur de Cornemuse. On side of stone in center of composition: Delmès Sculpsit. Several breaks and tears have ben darned. Long yellow-brown stains."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7/dimension/2> , <http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7/dimension/1> ;
+        dc:identifier                  "52.265" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/93732> .
+
+<http://data.silknow.org/object/6bf5fe43-3fbb-337a-a21f-c227489ba5b7/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "72" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "72"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

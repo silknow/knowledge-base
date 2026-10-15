@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e373a954-efdf-342c-8321-83790c891975> .
+
+<http://data.silknow.org/image/5c485267-27fc-393b-b431-9b05ef73bd1d>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "ratlles verticals"@ca ;
+        ecrm:P3_has_note  "ratlles verticals"@ca .
+
+<http://data.silknow.org/production/3afe6d2d-22a8-3cc2-80b4-d7fc0d745d16>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d5882d31-dbb2-3025-8792-a1bd43b749e5> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/215> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> , <https://sws.geonames.org/3336901/> .
+
+<http://data.silknow.org/event/22724000-f393-38e5-a24c-b2dcc38de3de>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Consorci CDMT" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b047db51-8233-31db-a285-ef958cd647f4> ;
+        ecrm:P23_transferred_title_from
+                "Viñas (L'Arca de l'Àvia), Carmina" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d5882d31-dbb2-3025-8792-a1bd43b749e5> ;
+        ecrm:P3_has_note               "compres - Consorci CDMT" .
+
+<https://sws.geonames.org/3336901/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/49990635-919e-3024-8fdf-45cc098477fc>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/d5882d31-dbb2-3025-8792-a1bd43b749e5> .
+
+<http://data.silknow.org/object/d5882d31-dbb2-3025-8792-a1bd43b749e5>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3b840bff-4d01-330f-80e8-a54991031e99> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/5c485267-27fc-393b-b431-9b05ef73bd1d> ;
+        dc:identifier                  "20019" .
+
+<http://data.silknow.org/image/3b840bff-4d01-330f-80e8-a54991031e99>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000020421" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/23288_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000020421.jpg> .
+
+<http://data.silknow.org/object/d5882d31-dbb2-3025-8792-a1bd43b749e5/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d5882d31-dbb2-3025-8792-a1bd43b749e5> .
+
+<http://data.silknow.org/object/e373a954-efdf-342c-8321-83790c891975>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 23288" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/49990635-919e-3024-8fdf-45cc098477fc> , <http://data.silknow.org/object/d5882d31-dbb2-3025-8792-a1bd43b749e5/domain/1> , <http://data.silknow.org/object/d5882d31-dbb2-3025-8792-a1bd43b749e5> , <http://data.silknow.org/object/d5882d31-dbb2-3025-8792-a1bd43b749e5/category/1> , <http://data.silknow.org/event/22724000-f393-38e5-a24c-b2dcc38de3de> , <http://data.silknow.org/production/3afe6d2d-22a8-3cc2-80b4-d7fc0d745d16> , <http://data.silknow.org/image/3b840bff-4d01-330f-80e8-a54991031e99> ;
+        dc:identifier       "23288.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/actor/b047db51-8233-31db-a285-ef958cd647f4>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas (L'Arca de l'Àvia), Carmina" ;
+        ecrm:P1_is_identified_by  "Viñas (L'Arca de l'Àvia), Carmina" .
+
+<http://data.silknow.org/object/d5882d31-dbb2-3025-8792-a1bd43b749e5/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d5882d31-dbb2-3025-8792-a1bd43b749e5> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

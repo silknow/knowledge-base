@@ -1,0 +1,60 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4b533d86-adeb-3d99-8601-8cf71ad69433> .
+
+<http://data.silknow.org/object/a05c9761-119e-3971-a9ff-ec9badd1c79e>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f74d1d1b-e2bf-3758-90fb-330cf84f9b9f> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> ;
+        dc:identifier                  "22323" .
+
+<http://data.silknow.org/event/b1984864-cd3d-3bd7-993c-8d565a1c8057>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a05c9761-119e-3971-a9ff-ec9badd1c79e> .
+
+<http://data.silknow.org/object/a05c9761-119e-3971-a9ff-ec9badd1c79e/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a05c9761-119e-3971-a9ff-ec9badd1c79e> .
+
+<http://data.silknow.org/object/4b533d86-adeb-3d99-8601-8cf71ad69433>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29989" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a05c9761-119e-3971-a9ff-ec9badd1c79e/category/1> , <http://data.silknow.org/production/410b6a11-1424-3c8c-b79e-747202bf81bc> , <http://data.silknow.org/event/b1984864-cd3d-3bd7-993c-8d565a1c8057> , <http://data.silknow.org/object/a05c9761-119e-3971-a9ff-ec9badd1c79e> , <http://data.silknow.org/event/9b383ffa-d30b-3b54-a642-9a94bca1259d> , <http://data.silknow.org/image/f74d1d1b-e2bf-3758-90fb-330cf84f9b9f> , <http://data.silknow.org/object/a05c9761-119e-3971-a9ff-ec9badd1c79e/domain/1> ;
+        dc:identifier       "29989.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/production/410b6a11-1424-3c8c-b79e-747202bf81bc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a05c9761-119e-3971-a9ff-ec9badd1c79e> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "pasamanería"@es , "tafetán"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/305> , <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/a05c9761-119e-3971-a9ff-ec9badd1c79e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a05c9761-119e-3971-a9ff-ec9badd1c79e> .
+
+<http://data.silknow.org/image/f74d1d1b-e2bf-3758-90fb-330cf84f9b9f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035891" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29989_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000035891.jpg> .
+
+<http://data.silknow.org/event/9b383ffa-d30b-3b54-a642-9a94bca1259d>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a05c9761-119e-3971-a9ff-ec9badd1c79e> .

@@ -1,0 +1,111 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "woven silk, 1800s, Persian"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e> .
+
+<http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 55.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "55.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/0fedda9b-5608-302e-b4f8-e1fd85ff2e24>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006BF7727" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O147128_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006BF/2006BF7727.jpg> .
+
+<http://data.silknow.org/object/08f8e0d4-d3f2-359c-8a7c-96e81429c24b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O147128" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/event/42f3ad80-b14b-3642-a552-969af4db2c73> , <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/domain/1> , <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/observation/2> , <http://data.silknow.org/image/0fedda9b-5608-302e-b4f8-e1fd85ff2e24> , <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/observation/1> , <http://data.silknow.org/production/111a8c02-3984-3ec2-80e0-bfb2c08af046> , <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e> ;
+        dc:identifier       "O147128.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/production/111a8c02-3984-3ec2-80e0-bfb2c08af046>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e> ;
+        ecrm:P126_employed      "silk thread, cotton yarn, metal thread, weaving, block printing, roller printing, resist dyeing, sewing."@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1870> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/103> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e> .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "cuff to cuff across the shoulders" ;
+        rdfs:label          "Width: 78 cm cuff to cuff across the shoulders" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "cuff to cuff across the shoulders" ;
+        ecrm:P90_has_value  "78"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/42f3ad80-b14b-3642-a552-969af4db2c73>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e> .
+
+<http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e> .
+
+<http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Short-sleeved jacket of woven silk and metal thread, trimmed with tablet woven silk and metal thread and lined with one block-printed plain weave cotton, one resist-dyed and block-printed plain weave cotton and  one roller-printed plain weave cotton.\nThe jacket opens down the front and the front panels overlap slightly at the bottom.  The sleeves are open under the arms, forming a diamond opening which continues along  the lower part of the sleeve.  \nAn extra piece of fabric has been attached underneath the sleeve at the end to create a wider opening at the wrist.  There is a pronounced flare over the hips and the side seam is open along this curve.  Seamed across the shoulders and the sleeves are set at right angles to the bodice.\nMain fabric: pink ground with ogival lattice formed by narrow green leaves outlined in yellow; each segment contains an oval of green dots and a central flower head in yellow and metal thread. At the back right hand side, along the edge of the right hip, is a loom or piece end of the woven silk in the form of undecorated pink satin.\nWarp: pink silk\nWeft: green silk, yellow silk; twill binding.\nMetal thread: silver strip open S-wound on yellow silk core. \nThe additional panels of woven silk underneath the wrist end of each sleeve have a pink warp and white weft.  The ground is pink with an indistinct pattern of large and small tree shapes filled with small foral motifs.\nTablet woven braid is applied around the hip seams, hem and the lower half of the central opening. It is made with grey, blue, mauve, white, light brown and yellow silk and copper [?] strip close S-wound on a white silk core.\nMain lining: white cotton ground with block printed swirling black stems and leaves with a variety of flower heads, some like stars, carnations, irises, in red and blue with green details.\nLining inside front flaps: white cotton ground roller-printed with small curving sprigs with small round buds and flowers.\nLining in left sleeve: blue cotton.\nLining in right sleeve: coarse resist-dyed blue cotton with pale blotches over-printed with mauve, black and little bits of yellow.\nThe ends of the sleeves are bound with black plain weave cotton."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/08f8e0d4-d3f2-359c-8a7c-96e81429c24b> .
+
+<http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "woven silk, 1800s, Persian"@en , "Short-sleeved jacket of woven silk and metal thread, trimmed with tablet woven silk and metal thread and lined with one block-printed plain weave cotton, one resist-dyed and block-printed plain weave cotton and  one roller-printed plain weave cotton.\nThe jacket opens down the front and the front panels overlap slightly at the bottom.  The sleeves are open under the arms, forming a diamond opening which continues along  the lower part of the sleeve.  \nAn extra piece of fabric has been attached underneath the sleeve at the end to create a wider opening at the wrist.  There is a pronounced flare over the hips and the side seam is open along this curve.  Seamed across the shoulders and the sleeves are set at right angles to the bodice.\nMain fabric: pink ground with ogival lattice formed by narrow green leaves outlined in yellow; each segment contains an oval of green dots and a central flower head in yellow and metal thread. At the back right hand side, along the edge of the right hip, is a loom or piece end of the woven silk in the form of undecorated pink satin.\nWarp: pink silk\nWeft: green silk, yellow silk; twill binding.\nMetal thread: silver strip open S-wound on yellow silk core. \nThe additional panels of woven silk underneath the wrist end of each sleeve have a pink warp and white weft.  The ground is pink with an indistinct pattern of large and small tree shapes filled with small foral motifs.\nTablet woven braid is applied around the hip seams, hem and the lower half of the central opening. It is made with grey, blue, mauve, white, light brown and yellow silk and copper [?] strip close S-wound on a white silk core.\nMain lining: white cotton ground with block printed swirling black stems and leaves with a variety of flower heads, some like stars, carnations, irises, in red and blue with green details.\nLining inside front flaps: white cotton ground roller-printed with small curving sprigs with small round buds and flowers.\nLining in left sleeve: blue cotton.\nLining in right sleeve: coarse resist-dyed blue cotton with pale blotches over-printed with mauve, black and little bits of yellow.\nThe ends of the sleeves are bound with black plain weave cotton."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0fedda9b-5608-302e-b4f8-e1fd85ff2e24> ;
+        ecrm:P3_has_note               "woven silk, 1800s, Persian"@en , "Short-sleeved jacket of woven silk and metal thread, trimmed with tablet woven silk and metal thread and lined with one block-printed plain weave cotton, one resist-dyed and block-printed plain weave cotton and  one roller-printed plain weave cotton.\nThe jacket opens down the front and the front panels overlap slightly at the bottom.  The sleeves are open under the arms, forming a diamond opening which continues along  the lower part of the sleeve.  \nAn extra piece of fabric has been attached underneath the sleeve at the end to create a wider opening at the wrist.  There is a pronounced flare over the hips and the side seam is open along this curve.  Seamed across the shoulders and the sleeves are set at right angles to the bodice.\nMain fabric: pink ground with ogival lattice formed by narrow green leaves outlined in yellow; each segment contains an oval of green dots and a central flower head in yellow and metal thread. At the back right hand side, along the edge of the right hip, is a loom or piece end of the woven silk in the form of undecorated pink satin.\nWarp: pink silk\nWeft: green silk, yellow silk; twill binding.\nMetal thread: silver strip open S-wound on yellow silk core. \nThe additional panels of woven silk underneath the wrist end of each sleeve have a pink warp and white weft.  The ground is pink with an indistinct pattern of large and small tree shapes filled with small foral motifs.\nTablet woven braid is applied around the hip seams, hem and the lower half of the central opening. It is made with grey, blue, mauve, white, light brown and yellow silk and copper [?] strip close S-wound on a white silk core.\nMain lining: white cotton ground with block printed swirling black stems and leaves with a variety of flower heads, some like stars, carnations, irises, in red and blue with green details.\nLining inside front flaps: white cotton ground roller-printed with small curving sprigs with small round buds and flowers.\nLining in left sleeve: blue cotton.\nLining in right sleeve: coarse resist-dyed blue cotton with pale blotches over-printed with mauve, black and little bits of yellow.\nThe ends of the sleeves are bound with black plain weave cotton."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/dimension/1> , <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/dimension/3> , <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/dimension/2> ;
+        dc:identifier                  "291-1884" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O147128> .
+
+<http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "Hem" ;
+        rdfs:label          "Circumference: 105.5 cm Hem" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/circumference> ;
+        ecrm:P3_has_note    "Hem" ;
+        ecrm:P90_has_value  "105.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/661267df-12b4-31e6-aedf-760054f0bd1e> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .

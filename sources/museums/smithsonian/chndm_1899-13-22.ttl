@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/1bbf5a5d-852d-3a3c-b689-60ec874c3546>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1899-13-22_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-564F465274BE2-000001> .
+
+<http://data.silknow.org/event/847729e4-b8d2-3f7e-b12f-bd6e8771b11a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d> .
+
+<http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Striped fabric with small designs in multicolor."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d> .
+
+<http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fa554cb5-8ffd-3493-b1bc-8ff831262342> .
+
+<http://data.silknow.org/event/ab64e18c-e365-3f9d-9105-46c075c02203>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/86b33f0d-5ea2-3078-8846-3dd4dff6e915> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Dikran Kelekian" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d> .
+
+<http://data.silknow.org/object/fa554cb5-8ffd-3493-b1bc-8ff831262342>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1899-13-22" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/1bbf5a5d-852d-3a3c-b689-60ec874c3546> , <http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d/domain/1> , <http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d> , <http://data.silknow.org/production/a5720b8d-3f98-3459-807c-4d845beb8d5a> , <http://data.silknow.org/event/847729e4-b8d2-3f7e-b12f-bd6e8771b11a> , <http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d/category/1> , <http://data.silknow.org/event/ab64e18c-e365-3f9d-9105-46c075c02203> , <http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d/observation/1> ;
+        dc:identifier       "chndm_1899-13-22.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Striped fabric with small designs in multicolor."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1bbf5a5d-852d-3a3c-b689-60ec874c3546> ;
+        ecrm:P3_has_note               "Striped fabric with small designs in multicolor."@en ;
+        dc:identifier                  "chndm_1899-13-22" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1899-13-22> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/place/ebd52a95-056f-3802-844f-9808e86c5545>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Near East" ;
+        ecrm:P87_is_identified_by  "Near East" .
+
+<http://data.silknow.org/actor/86b33f0d-5ea2-3078-8846-3dd4dff6e915>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Dikran Kelekian" ;
+        ecrm:P1_is_identified_by  "Gift of Dikran Kelekian" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Diran_Kelekian> , <https://viaf.org/viaf/166426822> , <https://isni.org/isni/0000000115834209> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Diran_Kelekian> .
+
+<http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d> .
+
+<http://data.silknow.org/production/a5720b8d-3f98-3459-807c-4d845beb8d5a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a4f9475d-249d-3dd7-ac35-90697a64d51d> ;
+        ecrm:P126_employed      "metallic"@en , "cotton"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "woven"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/ebd52a95-056f-3802-844f-9808e86c5545> .

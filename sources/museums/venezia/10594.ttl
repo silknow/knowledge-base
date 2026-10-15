@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/d072fe67-f8ea-3688-8cfc-24d54bc05961>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/10594_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5izEmtoZHHXmHbV%2flhAsNJE0XRZJQ3fWnUlJNhQvGU0ZlwNW0rGYLoKwGAouZjrHCTrrpcYj85qp0NpCEgawX5Bsi6sWkXSUghRru%2bp%2bQ9kTrIZIKw444eQ%3d%3d> .
+
+<http://data.silknow.org/event/4f21954b-3ed8-3119-a525-d4f55b97ca93>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf> .
+
+<http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "45" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "45"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3164602/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/18c3fa48-77e2-3afd-8012-aaab12e051d5> .
+
+<http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf> .
+
+<http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "20" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "20"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/18c3fa48-77e2-3afd-8012-aaab12e051d5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10594" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf/domain/1> , <http://data.silknow.org/image/d072fe67-f8ea-3688-8cfc-24d54bc05961> , <http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf/observation/1> , <http://data.silknow.org/production/f8999451-cce0-39c5-88f6-c304800612e4> , <http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf/category/1> , <http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf> , <http://data.silknow.org/event/4f21954b-3ed8-3119-a525-d4f55b97ca93> ;
+        dc:identifier       "10594.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/production/f8999451-cce0-39c5-88f6-c304800612e4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1680_1720> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3164602/> .
+
+<http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Armatura in taffetas prodotta da un ordito e una trama di fondo in seta rossa/opera per trama di legatura in oro fialto e anima in giallo legata  ad un ordito di legatura in rosso"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf> .
+
+<http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Armatura in taffetas prodotta da un ordito e una trama di fondo in seta rossa/opera per trama di legatura in oro fialto e anima in giallo legata  ad un ordito di legatura in rosso"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d072fe67-f8ea-3688-8cfc-24d54bc05961> ;
+        ecrm:P3_has_note               "Armatura in taffetas prodotta da un ordito e una trama di fondo in seta rossa/opera per trama di legatura in oro fialto e anima in giallo legata  ad un ordito di legatura in rosso"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf/dimension/1> , <http://data.silknow.org/object/df69f0df-3b00-32b4-b7b1-2822bb602dcf/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 491/67" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/10594/?WEB=MuseiVE> .

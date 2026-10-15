@@ -1,0 +1,73 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/a8393e02-2541-3439-936f-515c4bd9035e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Kenzo, Paris, Japon, 1975 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ffd3bc42-695b-3065-b5dd-9ca8652524ed> ;
+        dc:identifier                  "2010.129.26" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908359> .
+
+<http://data.silknow.org/production/f31c16b6-cf79-3559-ac4e-dff7cd8e1524>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Kenzo, Paris, Japon, 1975 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a8393e02-2541-3439-936f-515c4bd9035e> ;
+        ecrm:P3_has_note        "Kenzo, Paris, Japon, 1975 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/b65c574b-02fd-38ce-9155-54d0a91827d9> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/179068/> , <https://sws.geonames.org/2988507/> , <https://sws.geonames.org/1861060/> .
+
+<https://sws.geonames.org/179068/>
+        a       ecrm:E53_Place .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/a8393e02-2541-3439-936f-515c4bd9035e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a8393e02-2541-3439-936f-515c4bd9035e> .
+
+<http://data.silknow.org/object/47463682-2a8e-3ecf-86f1-7c74b896f914>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2010.129.26" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a8393e02-2541-3439-936f-515c4bd9035e> , <http://data.silknow.org/object/a8393e02-2541-3439-936f-515c4bd9035e/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/f31c16b6-cf79-3559-ac4e-dff7cd8e1524> , <http://data.silknow.org/image/ffd3bc42-695b-3065-b5dd-9ca8652524ed> , <http://data.silknow.org/event/92ffecfe-c2bd-3039-b800-c45b3e96d865> ;
+        dc:identifier       "908359.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/image/ffd3bc42-695b-3065-b5dd-9ca8652524ed>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908359_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/4a7d1806-1b78-434c-b6d7-340c97dd2ebf.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/47463682-2a8e-3ecf-86f1-7c74b896f914> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/a8393e02-2541-3439-936f-515c4bd9035e> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2988507/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/92ffecfe-c2bd-3039-b800-c45b3e96d865>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Brigitte Camelot-Raysse, 2010" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a8393e02-2541-3439-936f-515c4bd9035e> .

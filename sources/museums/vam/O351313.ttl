@@ -1,0 +1,112 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/81dc0cbd-dce9-35b6-beb0-3b064a8172da>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1770_1799> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Breeches of black silk stockinette."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007> .
+
+<http://data.silknow.org/image/c1110907-f284-3051-97f1-ee3310c74d59>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2014HE8038" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O351313_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2014HE/2014HE8038.jpg> .
+
+<http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Breeches" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/actor/8ff9b106-8e0e-3874-83e5-85281c3657eb>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Part of the Gorst collection, given by Mrs Katherine Rachael Thomas" ;
+        ecrm:P1_is_identified_by  "Part of the Gorst collection, given by Mrs Katherine Rachael Thomas" .
+
+<http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007> .
+
+<http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 33 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "83.82000000000001"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Breeches of black silk stockinette, England, 1770-1799"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007> .
+
+<http://data.silknow.org/event/add2ea2a-9132-3071-8b08-2ef50728a1be>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/8ff9b106-8e0e-3874-83e5-85281c3657eb> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Part of the Gorst collection, given by Mrs Katherine Rachael Thomas" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007> .
+
+<http://data.silknow.org/object/69e7424b-ac8e-36ad-92d1-69fd9d7245e4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O351313" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/observation/2> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/image/c1110907-f284-3051-97f1-ee3310c74d59> , <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/observation/1> , <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/domain/2> , <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007> , <http://data.silknow.org/event/add2ea2a-9132-3071-8b08-2ef50728a1be> , <http://data.silknow.org/production/81dc0cbd-dce9-35b6-beb0-3b064a8172da> , <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/observation/3> , <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/domain/1> ;
+        dc:identifier       "O351313.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/69e7424b-ac8e-36ad-92d1-69fd9d7245e4> .
+
+<http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007> .
+
+<http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "On long-term loan to National Museums Liverpool"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007> .
+
+<http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "On long-term loan to National Museums Liverpool"@en , "Breeches of black silk stockinette."@en , "Breeches of black silk stockinette, England, 1770-1799"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c1110907-f284-3051-97f1-ee3310c74d59> ;
+        ecrm:P3_has_note               "Breeches of black silk stockinette."@en , "On long-term loan to National Museums Liverpool"@en , "Breeches of black silk stockinette, England, 1770-1799"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/c33182df-88e6-3b30-92db-7338cc803007/dimension/1> ;
+        dc:identifier                  "CIRC.112-1963" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O351313> .

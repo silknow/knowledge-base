@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/b41cac28-c2a8-3c3f-9c86-7d7fcdab4e09>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Museum purchase from Smithsonian Institution Collections Acquisition Program and Sarah Cooper-Hewitt Funds" ;
+        ecrm:P1_is_identified_by  "Museum purchase from Smithsonian Institution Collections Acquisition Program and Sarah Cooper-Hewitt Funds" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/361667d5-7f57-37ea-ad74-8f64ead98345>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b> .
+
+<http://data.silknow.org/image/f4eca32f-7da5-3fff-aa17-66bf12b84059>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1995-90-1_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-1995-90-1MattFlynn> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/02dc5d22-57d5-3887-b78b-bcb366019f94> .
+
+<http://data.silknow.org/event/06201461-5224-3737-8ac7-29a66f5c7a55>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b41cac28-c2a8-3c3f-9c86-7d7fcdab4e09> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Museum purchase from Smithsonian Institution Collections Acquisition Program and Sarah Cooper-Hewitt Funds" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b> .
+
+<http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fragment of woven upholstery fabric with a design of alternating pattern bands: flowers in hexagonal tiles in gold on terra cotta, stylized palmette pattern in gold on olive green, narrower bands of egg and dart pattern in gold on maroon."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b> .
+
+<http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Fragment of woven upholstery fabric with a design of alternating pattern bands: flowers in hexagonal tiles in gold on terra cotta, stylized palmette pattern in gold on olive green, narrower bands of egg and dart pattern in gold on maroon."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f4eca32f-7da5-3fff-aa17-66bf12b84059> ;
+        ecrm:P3_has_note               "Fragment of woven upholstery fabric with a design of alternating pattern bands: flowers in hexagonal tiles in gold on terra cotta, stylized palmette pattern in gold on olive green, narrower bands of egg and dart pattern in gold on maroon."@en ;
+        dc:identifier                  "chndm_1995-90-1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1995-90-1> .
+
+<http://data.silknow.org/object/02dc5d22-57d5-3887-b78b-bcb366019f94>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1995-90-1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b/category/1> , <http://data.silknow.org/event/361667d5-7f57-37ea-ad74-8f64ead98345> , <http://data.silknow.org/event/06201461-5224-3737-8ac7-29a66f5c7a55> , <http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b/observation/1> , <http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b/domain/1> , <http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b> , <http://data.silknow.org/image/f4eca32f-7da5-3fff-aa17-66bf12b84059> , <http://data.silknow.org/production/5dc026ff-d95e-3c71-a0be-0a9414b0f760> ;
+        dc:identifier       "chndm_1995-90-1.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b> .
+
+<http://data.silknow.org/production/5dc026ff-d95e-3c71-a0be-0a9414b0f760>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5119452e-29c8-3ca7-91d2-bd810a3e090b> ;
+        ecrm:P126_employed      "wool"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "jacquard woven Label: jacquard woven silk and wool"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1873> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .

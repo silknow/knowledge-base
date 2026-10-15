@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "A scroll design of flowers and leaves. The stems and outlines done, in the stitch usually found in buratto."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5930f231-3a0a-323e-90d7-6f256914d50b> ;
+        ecrm:P3_has_note               "A scroll design of flowers and leaves. The stems and outlines done, in the stitch usually found in buratto."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799/dimension/2> , <http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799/dimension/1> ;
+        dc:identifier                  "95.998" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/71203> .
+
+<http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "A scroll design of flowers and leaves. The stems and outlines done, in the stitch usually found in buratto."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799> .
+
+<http://data.silknow.org/event/bad3f272-535e-3f89-a7f3-1b983a5ddaaf>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799> .
+
+<http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "20.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "20.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/5930f231-3a0a-323e-90d7-6f256914d50b>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "803105" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/71203_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/803105/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/6924e035-fbcb-38a5-af6d-c1d5b4b0bcea>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/d67c2140-386d-3d79-a470-10fb908cccdd> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "92.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "92.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/220f7f68-ad26-3ffb-91c1-35b80413e7bf>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.998" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/bad3f272-535e-3f89-a7f3-1b983a5ddaaf> , <http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799/observation/1> , <http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799/category/1> , <http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799/domain/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/5930f231-3a0a-323e-90d7-6f256914d50b> , <http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799> , <http://data.silknow.org/production/6924e035-fbcb-38a5-af6d-c1d5b4b0bcea> ;
+        dc:identifier       "71203.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Point lace" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799> .
+
+<http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1210ecc3-2b44-3b2f-bfb9-d3f9cb949799> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/220f7f68-ad26-3ffb-91c1-35b80413e7bf> .

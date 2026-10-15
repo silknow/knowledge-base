@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b41b3f8b-5548-3b67-936e-70aea835430a> .
+
+<http://data.silknow.org/image/c5d98771-0b32-375a-ab47-f16469a1fdc8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000003235" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/6113_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000003235.jpg> .
+
+<http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- conserva 1 voraviu\n- l'anima del fil entorxat és de fibre vegetal"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf> .
+
+<http://data.silknow.org/production/7e3c338a-07ff-3daa-9f15-be31def552b0>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf> ;
+        ecrm:P126_employed      "... sin confirmar"@es , "làmina de paper daurada entorxada"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404465> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/8d401042-5429-309c-8425-1afa42f650f2> .
+
+<http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf> .
+
+<http://data.silknow.org/event/447d5810-4b80-33e4-b6a6-495444f68fcb>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2> ;
+        ecrm:P23_transferred_title_from
+                "Biosca, Josep" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf> ;
+        ecrm:P3_has_note               "donacions" .
+
+<http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Biosca, Josep" ;
+        ecrm:P1_is_identified_by  "Biosca, Josep" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Josep_Huguet_i_Biosca> , <https://viaf.org/viaf/95599143> , <https://isni.org/isni/000000007829170X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Josep_Huguet_i_Biosca> .
+
+<http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf> .
+
+<http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "conserva 1 voraviu\n- l'anima del fil entorxat és de fibre vegetal"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c5d98771-0b32-375a-ab47-f16469a1fdc8> , <http://data.silknow.org/image/ccb0f029-8dca-3573-8b4a-21b9d9f26e1a> ;
+        ecrm:P3_has_note               "conserva 1 voraviu\n- l'anima del fil entorxat és de fibre vegetal"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> ;
+        dc:identifier                  "1909" .
+
+<http://data.silknow.org/place/8d401042-5429-309c-8425-1afa42f650f2>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Extremo Oriente" ;
+        ecrm:P87_is_identified_by  "Extremo Oriente" .
+
+<http://data.silknow.org/event/bcb2686a-cb50-3834-82b1-eca00de0c81d>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf> .
+
+<http://data.silknow.org/image/ccb0f029-8dca-3573-8b4a-21b9d9f26e1a>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000021636" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/6113_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000021636.jpg> .
+
+<http://data.silknow.org/object/b41b3f8b-5548-3b67-936e-70aea835430a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 6113" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/447d5810-4b80-33e4-b6a6-495444f68fcb> , <http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf/domain/1> , <http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf/observation/1> , <http://data.silknow.org/image/c5d98771-0b32-375a-ab47-f16469a1fdc8> , <http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf/category/1> , <http://data.silknow.org/image/ccb0f029-8dca-3573-8b4a-21b9d9f26e1a> , <http://data.silknow.org/event/bcb2686a-cb50-3834-82b1-eca00de0c81d> , <http://data.silknow.org/object/f905195a-0406-3521-bd1f-957520da2edf> , <http://data.silknow.org/production/7e3c338a-07ff-3daa-9f15-be31def552b0> ;
+        dc:identifier       "6113.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

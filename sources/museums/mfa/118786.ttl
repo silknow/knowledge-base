@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/2921044/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/dfdcbd47-c6c3-31c0-bb33-08af22cf68de>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "583551" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/118786_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/583551/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/f5012788-3a3a-305b-96e9-5eaacd1cdb8c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 43.1020" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/2e4aed9d-09a0-3494-8ca7-b187b5dc40db> , <http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/dfdcbd47-c6c3-31c0-bb33-08af22cf68de> , <http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f/observation/1> , <http://data.silknow.org/event/22b9e488-f0ef-3a06-8ed7-cd36057d706b> , <http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f> , <http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f/domain/1> ;
+        dc:identifier       "118786.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/event/22b9e488-f0ef-3a06-8ed7-cd36057d706b>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "47.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "47.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f5012788-3a3a-305b-96e9-5eaacd1cdb8c> .
+
+<http://data.silknow.org/production/2e4aed9d-09a0-3494-8ca7-b187b5dc40db>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f> ;
+        ecrm:P126_employed      "Linen, Silk; embroidery - Silk embroidery on linen"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2921044/> .
+
+<http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Seat or cushion cover" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f> .
+
+<http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "48.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "48.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Possibly a seat or cushion cover. A yellow basket supporting a large naturalistic floral bunch including roses with various other blossoms and leaves. Polychrome silk yarns in tent stitch entirely covering a white cotton canvas. Slightly worn; some small hooles to ground. See: 43. 1021."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f> .
+
+<http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Possibly a seat or cushion cover. A yellow basket supporting a large naturalistic floral bunch including roses with various other blossoms and leaves. Polychrome silk yarns in tent stitch entirely covering a white cotton canvas. Slightly worn; some small hooles to ground. See: 43. 1021."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/dfdcbd47-c6c3-31c0-bb33-08af22cf68de> ;
+        ecrm:P3_has_note               "Possibly a seat or cushion cover. A yellow basket supporting a large naturalistic floral bunch including roses with various other blossoms and leaves. Polychrome silk yarns in tent stitch entirely covering a white cotton canvas. Slightly worn; some small hooles to ground. See: 43. 1021."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f/dimension/2> , <http://data.silknow.org/object/e2f9b3b1-cf1d-39a6-8f46-46fa00aab87f/dimension/1> ;
+        dc:identifier                  "43.1020" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/118786> .

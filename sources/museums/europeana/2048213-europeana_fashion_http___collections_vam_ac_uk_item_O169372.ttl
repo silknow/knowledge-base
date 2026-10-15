@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad/category/2>
+        a                    silk:T35 ;
+        silk:L1              "Object Type: fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad> .
+
+<http://data.silknow.org/event/1a32b10c-f3b5-3a79-b417-cb40620dd218>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> , <http://data.silknow.org/place/3dfbf716-f48d-3d9c-9652-1715a69e0a36> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad> .
+
+<http://data.silknow.org/production/ce5d8e68-0b23-3c76-a9ca-8654a2114857>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad> ;
+        ecrm:P126_employed      "Material: silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1855> .
+
+<http://data.silknow.org/object/ed9a3c03-df29-300f-b129-ad506480cd82>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2048213-europeana_fashion_http___collections_vam_ac_uk_item_O169372" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad/category/1> , <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad/observation/1> , <http://data.silknow.org/event/1a32b10c-f3b5-3a79-b417-cb40620dd218> , <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad/category/2> , <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad> , <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad/category/4> , <http://data.silknow.org/production/ce5d8e68-0b23-3c76-a9ca-8654a2114857> , <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad/category/3> , <http://data.silknow.org/image/41c94ab3-4938-3cae-9e52-1c29b55a4d10> ;
+        dc:identifier       "2048213-europeana_fashion_http___collections_vam_ac_uk_item_O169372.json" ;
+        dc:publisher        "http://data.silknow.org/organization/europeana" .
+
+<http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad/category/3>
+        a                    silk:T35 ;
+        silk:L1              "costume components" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad> .
+
+<http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Dress panel, brocaded silk, Godemar, Meynier et Cie, Lyon, 1855."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad> .
+
+<http://data.silknow.org/image/41c94ab3-4938-3cae-9e52-1c29b55a4d10>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/europeana/2048213-europeana_fashion_http___collections_vam_ac_uk_item_O169372_0.jpg> , <https://proxy.europeana.eu/2048213/europeana_fashion_http___collections_vam_ac_uk_item_O169372?view=http%3A%2F%2Fmedia.vam.ac.uk%2Fmedia%2Fthira%2Fcollection_images%2F2008BV%2F2008BV2561_jpg_l.jpg&disposition=inline&api_url=https%3A%2F%2Fapi.europeana.eu%2Fapi> .
+
+<http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Dress panel, brocaded silk, Godemar, Meynier et Cie, Lyon, 1855."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/41c94ab3-4938-3cae-9e52-1c29b55a4d10> ;
+        ecrm:P3_has_note               "Dress panel, brocaded silk, Godemar, Meynier et Cie, Lyon, 1855."@en ;
+        dc:identifier                  "AP.348" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.europeana.eu/en/item/2048213/europeana_fashion_http___collections_vam_ac_uk_item_O169372> .
+
+<http://data.silknow.org/europeana>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ed9a3c03-df29-300f-b129-ad506480cd82> .
+
+<http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Object Type: costume components" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad> .
+
+<http://data.silknow.org/place/3dfbf716-f48d-3d9c-9652-1715a69e0a36>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Europeana Fashion" ;
+        ecrm:P87_is_identified_by  "Europeana Fashion" .
+
+<http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad/category/4>
+        a                    silk:T35 ;
+        silk:L1              "fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e88af8f4-c2ec-3153-8805-5b88d40c3aad> .

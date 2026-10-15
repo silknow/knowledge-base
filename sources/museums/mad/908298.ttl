@@ -1,0 +1,62 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/865496f0-5c89-3be1-a6f6-28d51c830fc5>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, René Gabriel, 1940-1945"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7706a7bc-899f-388d-83b7-1ad43dc68fd5> ;
+        dc:identifier                  "44380.B" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908298> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/fc6b742c-130e-3e98-8b80-9ec700d7249d>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "René Gabriel, 1940-1945" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/865496f0-5c89-3be1-a6f6-28d51c830fc5> ;
+        ecrm:P3_has_note        "René Gabriel, 1940-1945" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1940_1945> .
+
+<http://data.silknow.org/event/a4071b14-41e7-3f0a-8949-9bb6fd4c58f1>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Renée Gabriel, 1973" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/865496f0-5c89-3be1-a6f6-28d51c830fc5> .
+
+<http://data.silknow.org/image/7706a7bc-899f-388d-83b7-1ad43dc68fd5>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908298_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/c71f5331-54d2-49a3-a9fd-77289be3aae1.jpg> .
+
+<http://data.silknow.org/object/865496f0-5c89-3be1-a6f6-28d51c830fc5/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/865496f0-5c89-3be1-a6f6-28d51c830fc5> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/532a795c-538f-3bd1-83df-aef9de998f7e> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/865496f0-5c89-3be1-a6f6-28d51c830fc5> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/532a795c-538f-3bd1-83df-aef9de998f7e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 44380.B" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/865496f0-5c89-3be1-a6f6-28d51c830fc5> , <http://data.silknow.org/image/7706a7bc-899f-388d-83b7-1ad43dc68fd5> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/fc6b742c-130e-3e98-8b80-9ec700d7249d> , <http://data.silknow.org/event/a4071b14-41e7-3f0a-8949-9bb6fd4c58f1> , <http://data.silknow.org/object/865496f0-5c89-3be1-a6f6-28d51c830fc5/category/1> ;
+        dc:identifier       "908298.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/d388687b-13b7-3b69-a5e8-96b25a72e61c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d388687b-13b7-3b69-a5e8-96b25a72e61c> .
+
+<http://data.silknow.org/image/6e81a878-9e08-330e-8402-28751d46bcaa>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/915319_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/92750297-c734-439c-839c-f2fdabd6c6d4.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/e4f90c9b-2061-3141-89ae-bc06dad6d101>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Marcel Bovis, 1925 (vers), Compagnie des Arts Français, Paris, 1925 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d388687b-13b7-3b69-a5e8-96b25a72e61c> ;
+        ecrm:P3_has_note        "Marcel Bovis, 1925 (vers), Compagnie des Arts Français, Paris, 1925 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/3715027c-aac1-3498-abe4-23974c89b573> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2988507/> .
+
+<http://data.silknow.org/object/d388687b-13b7-3b69-a5e8-96b25a72e61c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Marcel Bovis, 1925 (vers), Compagnie des Arts Français, Paris, 1925 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6e81a878-9e08-330e-8402-28751d46bcaa> ;
+        dc:identifier                  "47149.A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/915319> .
+
+<http://data.silknow.org/object/6965570b-038a-3078-a4b4-60621dc21d13>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 47149.A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d388687b-13b7-3b69-a5e8-96b25a72e61c/category/1> , <http://data.silknow.org/object/d388687b-13b7-3b69-a5e8-96b25a72e61c> , <http://data.silknow.org/event/b08e4776-ea89-3afa-9a63-a6070b2de3ec> , <http://data.silknow.org/production/e4f90c9b-2061-3141-89ae-bc06dad6d101> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/6e81a878-9e08-330e-8402-28751d46bcaa> ;
+        dc:identifier       "915319.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/b08e4776-ea89-3afa-9a63-a6070b2de3ec>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "don Anne-François Mare-Vene, 1981" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d388687b-13b7-3b69-a5e8-96b25a72e61c> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6965570b-038a-3078-a4b4-60621dc21d13> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/d388687b-13b7-3b69-a5e8-96b25a72e61c> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2988507/>
+        a       ecrm:E53_Place .

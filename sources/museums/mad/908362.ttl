@@ -1,0 +1,66 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/be356c22-914f-3834-8ecc-6be174211702>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6157129f-6032-3ff0-8bda-74a233908dd5> .
+
+<http://data.silknow.org/image/9806a19b-a141-3c83-8587-5f99cc3927b5>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908362_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/571ad07c-1b94-4750-9704-da39c87c8dc3.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/48d6b1e5-8933-3bdc-99a8-0ad8a4824dc2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record LOUVRE OA 10848.187" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/be356c22-914f-3834-8ecc-6be174211702> , <http://data.silknow.org/image/9806a19b-a141-3c83-8587-5f99cc3927b5> , <http://data.silknow.org/object/6157129f-6032-3ff0-8bda-74a233908dd5/category/1> , <http://data.silknow.org/object/6157129f-6032-3ff0-8bda-74a233908dd5> , <http://data.silknow.org/production/0e7e0e35-a04a-3a8e-8ceb-88b6bf98f6fb> ;
+        dc:identifier       "908362.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/0e7e0e35-a04a-3a8e-8ceb-88b6bf98f6fb>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Italie, 17e siècle" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6157129f-6032-3ff0-8bda-74a233908dd5> ;
+        ecrm:P126_employed      "Taffetas doublé, lamé or, liseré (liage sergé Z), broché filé argent (liage par découpure)"@fr ;
+        ecrm:P3_has_note        "Italie, 17e siècle" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/48d6b1e5-8933-3bdc-99a8-0ad8a4824dc2> .
+
+<http://data.silknow.org/object/6157129f-6032-3ff0-8bda-74a233908dd5/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6157129f-6032-3ff0-8bda-74a233908dd5> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6157129f-6032-3ff0-8bda-74a233908dd5> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/6157129f-6032-3ff0-8bda-74a233908dd5>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Italie, 17e siècle"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9806a19b-a141-3c83-8587-5f99cc3927b5> ;
+        dc:identifier                  "LOUVRE OA 10848.187" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908362> .

@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Scattered over the field are poly-lobed compartments arranged in a scale-like pattern; grounds are of several colors, predominately yellow. In each compartment, polychrome flowers, coral branches, scales and other fillings."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/dc22b270-2f35-3611-86fe-2d01889a2913>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1> .
+
+<http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1> .
+
+<http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Printed cotton" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1> .
+
+<http://data.silknow.org/image/b897e64d-463f-38b2-9bd2-60d357a98d38>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "751868" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/47077_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/751868/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/6ec07b5d-3c09-3fc0-9d51-d734c891d507>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1> ;
+        ecrm:P126_employed      "Cotton Printed"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1825> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/14ad76c5-920e-35ca-891f-e2c886f73db0>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 40.776" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1/category/1> , <http://data.silknow.org/image/b897e64d-463f-38b2-9bd2-60d357a98d38> , <http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1/observation/1> , <http://data.silknow.org/production/6ec07b5d-3c09-3fc0-9d51-d734c891d507> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1/domain/1> , <http://data.silknow.org/event/dc22b270-2f35-3611-86fe-2d01889a2913> , <http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1> ;
+        dc:identifier       "47077.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "20.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "20.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "23.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "23.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/14ad76c5-920e-35ca-891f-e2c886f73db0> .
+
+<http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Scattered over the field are poly-lobed compartments arranged in a scale-like pattern; grounds are of several colors, predominately yellow. In each compartment, polychrome flowers, coral branches, scales and other fillings."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b897e64d-463f-38b2-9bd2-60d357a98d38> ;
+        ecrm:P3_has_note               "Scattered over the field are poly-lobed compartments arranged in a scale-like pattern; grounds are of several colors, predominately yellow. In each compartment, polychrome flowers, coral branches, scales and other fillings."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1/dimension/2> , <http://data.silknow.org/object/46f4ab0e-3776-3e71-9039-2392458b7fd1/dimension/1> ;
+        dc:identifier                  "40.776" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/47077> .

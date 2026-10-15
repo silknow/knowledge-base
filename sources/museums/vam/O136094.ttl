@@ -1,0 +1,134 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/bb950375-a836-354b-b9a8-e9c8e593328c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Messrs Harrods Ltd" ;
+        ecrm:P1_is_identified_by  "Given by Messrs Harrods Ltd" .
+
+<http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 11 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "11"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Pale blue silk baby's boot with silk ribbon and white silk lining, hand stitched; England, early 19th century."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/6374fd53-0a68-365a-80ff-09bd8fad115c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087> ;
+        ecrm:P126_employed      "Hand-stitched, embroidered and quilted silk"@en , "ribbon"@en , "cotton thread"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1825> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Height: 8.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "8.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/52> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Pair of baby boots" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087> .
+
+<http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "This pair of baby's boots is made of pale blue silk embroidered with white thread.  They are laced with three separate pale blue silk ribbons and lined with white silk.  The outside is decorated in chain stitch with flowers and leaves set within borders.  The sole is quilted with four parallel lines of satin stitch running from toe to heel.  \n\nThe boots are thought to have been made during the early nineteenth century.  The use of silk both inside and out along with ribbons and elaborate embroidery means that the boots would not have been cheap to produce.  We do not know who owned them originally but it is possible that they may have been given to an expectant mother or newborn baby."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087> .
+
+<http://data.silknow.org/object/b3424aa5-4c02-312d-b4c3-bee232fbb19f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O136094" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/domain/1> , <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/domain/2> , <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/domain/3> , <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/observation/1> , <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/observation/3> , <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/observation/2> , <http://data.silknow.org/event/43ee44df-dc6e-3554-b3d1-6da85f6e94b1> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/production/6374fd53-0a68-365a-80ff-09bd8fad115c> , <http://data.silknow.org/image/7c0fbf3c-acb5-3271-92a8-09e8b0e0ce69> , <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087> ;
+        dc:identifier       "O136094.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Pale blue silk baby's boot with silk ribbon and white silk lining, hand stitched; England, early 19th century."@en , "This pair of baby's boots is made of pale blue silk embroidered with white thread.  They are laced with three separate pale blue silk ribbons and lined with white silk.  The outside is decorated in chain stitch with flowers and leaves set within borders.  The sole is quilted with four parallel lines of satin stitch running from toe to heel.  \n\nThe boots are thought to have been made during the early nineteenth century.  The use of silk both inside and out along with ribbons and elaborate embroidery means that the boots would not have been cheap to produce.  We do not know who owned them originally but it is possible that they may have been given to an expectant mother or newborn baby."@en , "Baby's boot; pale blue silk embroidered in satin stitch and chain stitch; white silk lining and pale blue ribbon laces."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7c0fbf3c-acb5-3271-92a8-09e8b0e0ce69> ;
+        ecrm:P3_has_note               "Pale blue silk baby's boot with silk ribbon and white silk lining, hand stitched; England, early 19th century."@en , "This pair of baby's boots is made of pale blue silk embroidered with white thread.  They are laced with three separate pale blue silk ribbons and lined with white silk.  The outside is decorated in chain stitch with flowers and leaves set within borders.  The sole is quilted with four parallel lines of satin stitch running from toe to heel.  \n\nThe boots are thought to have been made during the early nineteenth century.  The use of silk both inside and out along with ribbons and elaborate embroidery means that the boots would not have been cheap to produce.  We do not know who owned them originally but it is possible that they may have been given to an expectant mother or newborn baby."@en , "Baby's boot; pale blue silk embroidered in satin stitch and chain stitch; white silk lining and pale blue ribbon laces."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/dimension/3> , <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/dimension/1> , <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/dimension/2> ;
+        dc:identifier                  "T.536&A-1913" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O136094> .
+
+<http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 3.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "3.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/domain/3>
+        a                    silk:T19 ;
+        silk:L4              "Europeana Fashion Project" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087> .
+
+<http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Baby's boot; pale blue silk embroidered in satin stitch and chain stitch; white silk lining and pale blue ribbon laces."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b3424aa5-4c02-312d-b4c3-bee232fbb19f> .
+
+<http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Children & Childhood" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087> .
+
+<http://data.silknow.org/event/43ee44df-dc6e-3554-b3d1-6da85f6e94b1>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/bb950375-a836-354b-b9a8-e9c8e593328c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Messrs Harrods Ltd." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/45aaf23b-17d1-3c5d-a4f0-002ff9ad2087> .
+
+<http://data.silknow.org/image/7c0fbf3c-acb5-3271-92a8-09e8b0e0ce69>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2007BP8869" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O136094_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2007BP/2007BP8869.jpg> .

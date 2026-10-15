@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/387cb4ef-64db-3929-9777-5ed993219c92>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Nacimientos" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Figura de ángel, tiene los brazos abiertos. Va vestido con una túnica de color gris azulado y manto de color rojo. Larga cabellera castaña con rizos. Es una figura movible."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad> .
+
+<http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad> .
+
+<http://data.silknow.org/production/ad604479-3c16-3ea7-8fad-4aaf31e88df8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad> ;
+        ecrm:P126_employed      "Pasta cerámica"@es , "Traje: Seda"@es ;
+        ecrm:P32_used_general_technique
+                "Moldeado (Cerámica)"@es , "Traje: Raso"@es , "Pintado"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3172395/> .
+
+<https://sws.geonames.org/3172395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/42aecc57-5fe7-3cbf-b75f-897df37f18cd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE08900" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad/observation/1> , <http://data.silknow.org/event/a191814f-30e7-3c1a-b6a5-51b6d2eec802> , <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad/domain/2> , <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad/category/1> , <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad/domain/1> , <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad> , <http://data.silknow.org/production/ad604479-3c16-3ea7-8fad-4aaf31e88df8> , <http://data.silknow.org/event/387cb4ef-64db-3929-9777-5ed993219c92> , <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad/observation/2> , <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad/domain/3> , <http://data.silknow.org/image/61730d63-5e22-38b9-b681-f4d146757bea> ;
+        dc:identifier       "CE08900_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/event/a191814f-30e7-3c1a-b6a5-51b6d2eec802>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad> .
+
+<http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Moderna"@es , "Figura de ángel, tiene los brazos abiertos. Va vestido con una túnica de color gris azulado y manto de color rojo. Larga cabellera castaña con rizos. Es una figura movible."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/61730d63-5e22-38b9-b681-f4d146757bea> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Figura de ángel, tiene los brazos abiertos. Va vestido con una túnica de color gris azulado y manto de color rojo. Larga cabellera castaña con rizos. Es una figura movible."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/773> ;
+        dc:identifier                  "CE08900" .
+
+<http://data.silknow.org/image/61730d63-5e22-38b9-b681-f4d146757bea>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE08900" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE08900_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE08900&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad/domain/3>
+        a                    silk:T19 ;
+        silk:L4              "Cerámica" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad> .
+
+<http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/42aecc57-5fe7-3cbf-b75f-897df37f18cd> .
+
+<http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Figura de Nacimiento" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6e55faf2-b095-30c0-a8a8-0236a0dc97ad> .

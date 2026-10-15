@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/4bf3db8d-f96c-390c-88a2-72eb01410325>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9d58f9fa-46f0-3af9-8345-8245dfed7414> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/2e650b69-179f-3d98-8957-79714be81086>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 26.200" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9d58f9fa-46f0-3af9-8345-8245dfed7414/category/1> , <http://data.silknow.org/event/d4f0548b-120a-3878-bccd-7a43d5d643e4> , <http://data.silknow.org/image/331d88cd-a916-3560-85b0-0d6fcce500bb> , <http://data.silknow.org/event/8ec84ea9-cf74-3f8e-a395-986cd0f3f37a> , <http://data.silknow.org/production/4bf3db8d-f96c-390c-88a2-72eb01410325> , <http://data.silknow.org/object/9d58f9fa-46f0-3af9-8345-8245dfed7414/domain/1> , <http://data.silknow.org/object/9d58f9fa-46f0-3af9-8345-8245dfed7414> ;
+        dc:identifier       "886816.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/event/d4f0548b-120a-3878-bccd-7a43d5d643e4>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9d58f9fa-46f0-3af9-8345-8245dfed7414> .
+
+<http://data.silknow.org/object/9d58f9fa-46f0-3af9-8345-8245dfed7414>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/331d88cd-a916-3560-85b0-0d6fcce500bb> ;
+        dc:identifier                  "26.200" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/trimming-material-26200> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/event/8ec84ea9-cf74-3f8e-a395-986cd0f3f37a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/f9382a0a-2273-3086-a2e0-6ff15b1a4001> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mr. and Mrs. Henry D. Sharpe" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9d58f9fa-46f0-3af9-8345-8245dfed7414> .
+
+<http://data.silknow.org/actor/f9382a0a-2273-3086-a2e0-6ff15b1a4001>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mr. and Mrs. Henry D. Sharpe" ;
+        ecrm:P1_is_identified_by  "Gift of Mr. and Mrs. Henry D. Sharpe" .
+
+<http://data.silknow.org/object/9d58f9fa-46f0-3af9-8345-8245dfed7414/category/1>
+        a                    silk:T35 ;
+        silk:L1              "trimming (material)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9d58f9fa-46f0-3af9-8345-8245dfed7414> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2e650b69-179f-3d98-8957-79714be81086> .
+
+<http://data.silknow.org/image/331d88cd-a916-3560-85b0-0d6fcce500bb>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/886816_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/38577.jpg> .
+
+<http://data.silknow.org/object/9d58f9fa-46f0-3af9-8345-8245dfed7414/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9d58f9fa-46f0-3af9-8345-8245dfed7414> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

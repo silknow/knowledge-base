@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/90ce2907-8cc9-358e-be97-8ab7da530067>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/277b4848-4d6f-3d54-82f5-981663790f06> ;
+        ecrm:P126_employed      "Hilo de seda rojo y amarillo. Galón de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Brocado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/90ce2907-8cc9-358e-be97-8ab7da530067/activity/1> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/29105d57-3ebd-33c0-9b8f-bfc657477266> .
+
+<http://data.silknow.org/assessment/ba9e434a-b7b4-377c-92b8-07a69766207d/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Regular. No se recomienda su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Regular. No se recomienda su uso."@es .
+
+<http://data.silknow.org/object/277b4848-4d6f-3d54-82f5-981663790f06>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Se compone de estola."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b2df8734-7fca-32aa-a6f4-ac94b36d3015> ;
+        ecrm:P3_has_note               "*Se compone de estola."@es ;
+        dc:identifier                  "5.63" .
+
+<http://data.silknow.org/object/29105d57-3ebd-33c0-9b8f-bfc657477266>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.63" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/b2df8734-7fca-32aa-a6f4-ac94b36d3015> , <http://data.silknow.org/assessment/ba9e434a-b7b4-377c-92b8-07a69766207d> , <http://data.silknow.org/object/277b4848-4d6f-3d54-82f5-981663790f06/type/1> , <http://data.silknow.org/production/90ce2907-8cc9-358e-be97-8ab7da530067> , <http://data.silknow.org/object/277b4848-4d6f-3d54-82f5-981663790f06> , <http://data.silknow.org/object/277b4848-4d6f-3d54-82f5-981663790f06/observation/1> ;
+        dc:identifier       "5.63.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/image/b2df8734-7fca-32aa-a6f4-ac94b36d3015>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.63" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.63_0.jpg> .
+
+<http://data.silknow.org/assessment/ba9e434a-b7b4-377c-92b8-07a69766207d>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/277b4848-4d6f-3d54-82f5-981663790f06> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/ba9e434a-b7b4-377c-92b8-07a69766207d/condition/1> .
+
+<http://data.silknow.org/object/277b4848-4d6f-3d54-82f5-981663790f06/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/277b4848-4d6f-3d54-82f5-981663790f06> ;
+        ecrm:P42_assigned    <http://data.silknow.org/category/97> .
+
+<http://data.silknow.org/production/90ce2907-8cc9-358e-be97-8ab7da530067/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .
+
+<http://data.silknow.org/object/277b4848-4d6f-3d54-82f5-981663790f06/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Se compone de estola."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/277b4848-4d6f-3d54-82f5-981663790f06> .

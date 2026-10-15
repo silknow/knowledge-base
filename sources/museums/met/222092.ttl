@@ -1,0 +1,116 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/d30fe43f-9a90-3234-82a0-8f45c9d78878>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81> .
+
+<http://data.silknow.org/image/6b25e6cd-a91f-3a7d-af14-ff98df738829>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/222092_0.jpg> , <https://collectionapi.metmuseum.org/api/collection/v1/iiif/222092/450421/main-image> .
+
+<http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "European Sculpture and Decorative Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81> ;
+        ecrm:P78_is_identified_by  "European Sculpture and Decorative Arts" .
+
+<http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6b25e6cd-a91f-3a7d-af14-ff98df738829> ;
+        dc:identifier                  "27.110.2" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.metmuseum.org/art/collection/search/222092> .
+
+<http://data.silknow.org/event/9c3c9291-8108-343c-8f21-3afb3bd8e5a2>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/ccd28ff8-0749-3070-ba28-fafd49e862f7> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Gift of H. W. Bell, 1927" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81> .
+
+<http://data.silknow.org/object/cccdf7b3-4ead-3074-bc6c-5cad99fc8307>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/570beb1e-6d9f-3abd-9538-723c2ea6e64a> .
+
+<http://data.silknow.org/object/fcfa9180-9b13-381e-9bef-5c0db76e6f18>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/00596f58-e759-3309-b2c3-d25df313d256> .
+
+<http://data.silknow.org/met>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/59cacc9b-60de-3c53-b1ae-c4c4708608d9> .
+
+<http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81> .
+
+<http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81> .
+
+<http://data.silknow.org/actor/ccd28ff8-0749-3070-ba28-fafd49e862f7>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of H. W. Bell" ;
+        ecrm:P1_is_identified_by  "Gift of H. W. Bell" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/William_Henry_Bell> , <https://www.wikidata.org/wiki/Q178415> , <https://musicbrainz.org/artist/ca3f47a6-c592-4d93-b75d-5fe67f3a34a6> , <https://viaf.org/viaf/48797529> , <https://isni.org/isni/0000000082277003> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/William_Henry_Bell> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/bb9a1f44-66d2-3c87-8411-27e9ba92bbae>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/71e37459-c5a1-3b77-9641-247eebe36876> .
+
+<http://data.silknow.org/object/59cacc9b-60de-3c53-b1ae-c4c4708608d9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 222092" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/6b25e6cd-a91f-3a7d-af14-ff98df738829> , <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81> , <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81/category/1> , <http://data.silknow.org/object/a09e9be1-6206-3267-9e0d-9c179406b566> , <http://data.silknow.org/event/9c3c9291-8108-343c-8f21-3afb3bd8e5a2> , <http://data.silknow.org/event/d30fe43f-9a90-3234-82a0-8f45c9d78878> , <http://data.silknow.org/object/fcfa9180-9b13-381e-9bef-5c0db76e6f18> , <http://data.silknow.org/production/ff93faf8-dcd0-3888-a687-f603f9185533> , <http://data.silknow.org/object/cccdf7b3-4ead-3074-bc6c-5cad99fc8307> , <http://data.silknow.org/object/bb9a1f44-66d2-3c87-8411-27e9ba92bbae> , <http://data.silknow.org/object/4bb815fe-1922-3810-bc99-6ec065403890> , <http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5> ;
+        dc:identifier       "222092.json" ;
+        dc:publisher        "http://data.silknow.org/organization/met" .
+
+<http://data.silknow.org/object/a09e9be1-6206-3267-9e0d-9c179406b566>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/02cdecfb-e471-37d8-884d-aede2ec4c6ef> .
+
+<http://data.silknow.org/object/4bb815fe-1922-3810-bc99-6ec065403890>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/7d919383-a68f-36ec-ab3e-8342e9df3953> .
+
+<http://data.silknow.org/production/ff93faf8-dcd0-3888-a687-f603f9185533>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2257bc69-aea5-3733-a8ca-95f690b96d81> ;
+        ecrm:P126_employed      "Silk and metal thread"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/857> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1850_1875> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .

@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/e064e655-c08d-3c81-a062-618cf8c5e3f1>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a2925b64-daf6-3139-acce-15c4f84ad42f> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Chauncey B. Borland" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/place/425c6981-9511-33f5-8809-0a156251b499>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Designed by Romier Balançard Dtd. (French, active c. 19th century) After a painting and engraving by Jean-Claude Bonnefond (French, 1796–1860)Produced by PasselatFrance, St. Etienne" ;
+        ecrm:P87_is_identified_by  "Designed by Romier Balançard Dtd. (French, active c. 19th century) After a painting and engraving by Jean-Claude Bonnefond (French, 1796–1860)Produced by PasselatFrance, St. Etienne" .
+
+<http://data.silknow.org/image/593bb32d-ab47-3280-ab98-618b032bd9c4>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/84203_0.jpg> , <https://www.artic.edu/iiif/2/a46f754f-1b17-47c7-2ecb-694743d69a7a/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "16.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "16.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, warp float-faced 10:1 satin weave self-patterned by main warp and ground weft floats and by areas of twill weaves; woven on loom with Jacquard attachment"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80> .
+
+<http://data.silknow.org/object/f9eff269-45b2-3782-aa81-3a50ee2715c1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1955.804" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80/category/1> , <http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80/observation/1> , <http://data.silknow.org/production/540cd513-f1e2-30b9-816b-e478c95d36e6> , <http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80> , <http://data.silknow.org/event/e064e655-c08d-3c81-a062-618cf8c5e3f1> , <http://data.silknow.org/image/593bb32d-ab47-3280-ab98-618b032bd9c4> ;
+        dc:identifier       "84203.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/production/540cd513-f1e2-30b9-816b-e478c95d36e6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> , <http://data.silknow.org/timespan/1900> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/425c6981-9511-33f5-8809-0a156251b499> , <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "10.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "10.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/a2925b64-daf6-3139-acce-15c4f84ad42f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Chauncey B. Borland" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Chauncey B. Borland" .
+
+<http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, warp float-faced 10:1 satin weave self-patterned by main warp and ground weft floats and by areas of twill weaves; woven on loom with Jacquard attachment"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/593bb32d-ab47-3280-ab98-618b032bd9c4> ;
+        ecrm:P3_has_note               "Silk, warp float-faced 10:1 satin weave self-patterned by main warp and ground weft floats and by areas of twill weaves; woven on loom with Jacquard attachment"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80/dimension/1> , <http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80/dimension/2> ;
+        dc:identifier                  "1955.804" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/84203/portrait-of-joseph-marie-jacquard-1752-1834> .
+
+<http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Portrait of Joseph Marie Jacquard (1752–1834)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bb6cce31-f0e2-3f23-9123-cff6950bbf80> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f9eff269-45b2-3782-aa81-3a50ee2715c1> .

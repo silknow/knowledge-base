@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/5aca0147-53d6-3730-9a32-f2a5854f48cf>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Italie, 17e siècle" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b25c3c4f-e199-3f02-893b-28fc6c0bbdee> ;
+        ecrm:P126_employed      "Velours façonné ciselé."@fr ;
+        ecrm:P3_has_note        "Italie, 17e siècle" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/0fd9fae5-cfd1-3cfd-8cb6-409544989ae0>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/911303_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/7a12a202-72da-4d65-b7dc-3a2c295ef1f8.jpg> .
+
+<http://data.silknow.org/object/b9652c5f-c170-3909-b44e-85113ac946d3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 7029" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/5aca0147-53d6-3730-9a32-f2a5854f48cf> , <http://data.silknow.org/object/b25c3c4f-e199-3f02-893b-28fc6c0bbdee/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/b25c3c4f-e199-3f02-893b-28fc6c0bbdee> , <http://data.silknow.org/event/8d14fd9a-9b61-3824-9340-eb648f5b86a0> , <http://data.silknow.org/image/0fd9fae5-cfd1-3cfd-8cb6-409544989ae0> ;
+        dc:identifier       "911303.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/b25c3c4f-e199-3f02-893b-28fc6c0bbdee>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "fragment de tissu, Italie, 17e siècle"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0fd9fae5-cfd1-3cfd-8cb6-409544989ae0> ;
+        dc:identifier                  "7029" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/911303> .
+
+<http://data.silknow.org/object/b25c3c4f-e199-3f02-893b-28fc6c0bbdee/category/1>
+        a                    silk:T35 ;
+        silk:L1              "fragment de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b25c3c4f-e199-3f02-893b-28fc6c0bbdee> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/8d14fd9a-9b61-3824-9340-eb648f5b86a0>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Jules Maciet, 1891" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b25c3c4f-e199-3f02-893b-28fc6c0bbdee> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b9652c5f-c170-3909-b44e-85113ac946d3> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/b25c3c4f-e199-3f02-893b-28fc6c0bbdee> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

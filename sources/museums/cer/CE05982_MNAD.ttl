@@ -1,0 +1,103 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/28bfdf84-6eca-3c2d-8981-614ec1aac8c3>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Sofá" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134> .
+
+<http://data.silknow.org/production/737dba7e-7650-31b4-a60a-c747d7f680c7>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134> ;
+        ecrm:P126_employed      "Madera de ébano"@es , "Madera de limoncillo de Ceilán"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "Tapizado"@es , "Talla (madera)"@es , "Marquetería"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/560dd408-3f95-3fd7-9991-75ecb99f4560> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/event/172e01bc-8c2c-363e-a779-7bfb81908eeb>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Estilo Isabelino"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134> .
+
+<http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Sofá completamente tapizado en seda rayada en azul pálido y blanco. Respaldo curvilíneo, brazos con rodetes, uno en el arranque y otro en el enlace con el asiento. Patas macizas y molduradas con faldón. El delantero lleva un adorno en forma de concha."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134> .
+
+<http://data.silknow.org/image/b8bf5a43-bc6b-34eb-b030-955edf385ec7>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE05982" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE05982_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE05982&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Contemporánea"@es , "Estilo Isabelino"@es , "Sofá completamente tapizado en seda rayada en azul pálido y blanco. Respaldo curvilíneo, brazos con rodetes, uno en el arranque y otro en el enlace con el asiento. Patas macizas y molduradas con faldón. El delantero lleva un adorno en forma de concha."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b8bf5a43-bc6b-34eb-b030-955edf385ec7> ;
+        ecrm:P3_has_note               "Sofá completamente tapizado en seda rayada en azul pálido y blanco. Respaldo curvilíneo, brazos con rodetes, uno en el arranque y otro en el enlace con el asiento. Patas macizas y molduradas con faldón. El delantero lleva un adorno en forma de concha."@es , "Edad Contemporánea"@es , "Estilo Isabelino"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/744> ;
+        dc:identifier                  "CE05982" .
+
+<http://data.silknow.org/object/b0db535e-67a1-3cfb-8a59-cc6f724dc9ef>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE05982" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134/observation/1> , <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134/observation/2> , <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134/domain/2> , <http://data.silknow.org/production/737dba7e-7650-31b4-a60a-c747d7f680c7> , <http://data.silknow.org/object/9e67bdb9-2c75-31ef-8e3e-9694d5176329> , <http://data.silknow.org/event/172e01bc-8c2c-363e-a779-7bfb81908eeb> , <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134/category/1> , <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134> , <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134/domain/1> , <http://data.silknow.org/event/28bfdf84-6eca-3c2d-8981-614ec1aac8c3> , <http://data.silknow.org/image/b8bf5a43-bc6b-34eb-b030-955edf385ec7> , <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134/observation/3> ;
+        dc:identifier       "CE05982_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Contemporánea"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134> .
+
+<http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134> .
+
+<http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/4> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134> .
+
+<http://data.silknow.org/object/9e67bdb9-2c75-31ef-8e3e-9694d5176329>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "CONTRERAS Y LÓPEZ DE AYALA, Juan De. Muebles de estilo español : desde el gótico hasta el siglo XIX, con el mueble popular. Claret Rubira, José(il). Barcelona: Gustavo Gili, 1962. p. 342, il. 304; Barcelona: Gustavo Gili. Fondo antiguo"@es ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9e26dcb2-4ea0-3c66-8e43-4cb2ac537134> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "CONTRERAS Y LÓPEZ DE AYALA, Juan De. Muebles de estilo español : desde el gótico hasta el siglo XIX, con el mueble popular. Claret Rubira, José(il). Barcelona: Gustavo Gili, 1962. p. 342, il. 304; Barcelona: Gustavo Gili. Fondo antiguo"@es .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b0db535e-67a1-3cfb-8a59-cc6f724dc9ef> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

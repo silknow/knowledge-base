@@ -1,0 +1,105 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/499e4e1d-a730-3bff-9fd6-2393931c099c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e> ;
+        ecrm:P126_employed      "Silk warp ikat"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1855> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1254389/> .
+
+<http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Ikat textile, Trichinopoly, 1855."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e> .
+
+<http://data.silknow.org/image/86d0824d-a480-3ea9-9116-697accc2467e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AV8839" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O68599_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AV/2006AV8839.jpg> .
+
+<http://data.silknow.org/object/22b434a8-453d-3c1c-bd85-af73d2ccc870>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "p. 79, pl. 62\nIndian ikat textiles / Rosemary Crill. London: V&A Publications, 1998 Number: 1851772421"@en ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "p. 79, pl. 62\nIndian ikat textiles / Rosemary Crill. London: V&A Publications, 1998 Number: 1851772421"@en .
+
+<http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "India Museum" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e> .
+
+<http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Ikat textile, Trichinopoly, 1855."@en , "Detail of an Ikat textile."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/86d0824d-a480-3ea9-9116-697accc2467e> , <http://data.silknow.org/image/08e7601f-209a-3314-ae9e-87ce10feffa4> ;
+        ecrm:P3_has_note               "Ikat textile, Trichinopoly, 1855."@en , "Detail of an Ikat textile."@en ;
+        dc:identifier                  "8375(IS)" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O68599> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e> .
+
+<http://data.silknow.org/object/71e19b72-34e9-3366-b863-5e2a27dfe1ec>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O68599" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e/observation/2> , <http://data.silknow.org/image/08e7601f-209a-3314-ae9e-87ce10feffa4> , <http://data.silknow.org/event/c5e43e82-8dde-3134-9b29-e451507b96c0> , <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e/domain/1> , <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e> , <http://data.silknow.org/image/86d0824d-a480-3ea9-9116-697accc2467e> , <http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217> , <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e/observation/1> , <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e/domain/2> , <http://data.silknow.org/production/499e4e1d-a730-3bff-9fd6-2393931c099c> , <http://data.silknow.org/object/22b434a8-453d-3c1c-bd85-af73d2ccc870> ;
+        dc:identifier       "O68599.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "South & South East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e> ;
+        ecrm:P78_is_identified_by  "South & South East Asia Collection" .
+
+<http://data.silknow.org/event/c5e43e82-8dde-3134-9b29-e451507b96c0>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "Ikat is a type of weaving where the threads are tie-dyed before weaving to create designs on the finished fabric. The dyeing process begins with binding the resist areas with impermeable yarn or rubber bands. The precision of the wrapping determines the clarity of the design. After wrapping, the threads are dyed, but the areas under the ties retain their original colour. Numerous colours can be added after additional wrappings. When the dyeing process is complete, the warp threads are meticulously arranged on the loom to prepare the design. The natural movement during weaving gives ikat designs their characteristic feathered edge. Techniques with matching patterns on warp and weft are called double ikat."@en ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e> ;
+        ecrm:P3_has_note               "Ikat is a type of weaving where the threads are tie-dyed before weaving to create designs on the finished fabric. The dyeing process begins with binding the resist areas with impermeable yarn or rubber bands. The precision of the wrapping determines the clarity of the design. After wrapping, the threads are dyed, but the areas under the ties retain their original colour. Numerous colours can be added after additional wrappings. When the dyeing process is complete, the warp threads are meticulously arranged on the loom to prepare the design. The natural movement during weaving gives ikat designs their characteristic feathered edge. Techniques with matching patterns on warp and weft are called double ikat."@en .
+
+<https://sws.geonames.org/1254389/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/71e19b72-34e9-3366-b863-5e2a27dfe1ec> .
+
+<http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Detail of an Ikat textile."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e> .
+
+<http://data.silknow.org/image/08e7601f-209a-3314-ae9e-87ce10feffa4>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AN5690" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O68599_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AN/2006AN5690.jpg> .
+
+<http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ae87ec91-d9ac-36b7-862c-36f474b2775e> .

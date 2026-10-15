@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/30488028-eadf-39ca-be9f-e47f842ce690>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1900" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f7827d17-f539-38fa-a0ac-673d18dea18d> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/56bb6e7f-842a-35fd-9a3d-a942a0e58ae1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 9471" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f7827d17-f539-38fa-a0ac-673d18dea18d> , <http://data.silknow.org/image/be9f6842-2e9e-3c25-af28-c0cf20d370ac> , <http://data.silknow.org/event/30488028-eadf-39ca-be9f-e47f842ce690> , <http://data.silknow.org/production/29868df5-3bbf-3027-bb9a-6855b2002c0f> , <http://data.silknow.org/object/f7827d17-f539-38fa-a0ac-673d18dea18d/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "911537.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/29868df5-3bbf-3027-bb9a-6855b2002c0f>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1750 (vers), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f7827d17-f539-38fa-a0ac-673d18dea18d> ;
+        ecrm:P126_employed      "Gros de Tours, liseré, broché"@fr ;
+        ecrm:P3_has_note        "France, 1750 (vers), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/223dc152-e388-36a9-a6f8-2410abe2a50b> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/56bb6e7f-842a-35fd-9a3d-a942a0e58ae1> .
+
+<http://data.silknow.org/object/f7827d17-f539-38fa-a0ac-673d18dea18d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f7827d17-f539-38fa-a0ac-673d18dea18d> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/f7827d17-f539-38fa-a0ac-673d18dea18d> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/image/be9f6842-2e9e-3c25-af28-c0cf20d370ac>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/911537_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/055cb489-4c53-4b2b-a4a2-cb96c25386aa.jpg> .
+
+<http://data.silknow.org/object/f7827d17-f539-38fa-a0ac-673d18dea18d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1750 (vers), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/be9f6842-2e9e-3c25-af28-c0cf20d370ac> ;
+        dc:identifier                  "9471" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/911537> .

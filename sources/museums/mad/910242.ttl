@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/1328f18e-5998-33da-8af4-d91efa53be4d>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Guglielmo Ghidini, Turin, 1884 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d90455e5-352d-3718-818e-602131c4eda4> ;
+        ecrm:P3_has_note        "Guglielmo Ghidini, Turin, 1884 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/cf5db737-7c02-393a-af63-0e57f37a2818> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3165524/> .
+
+<https://sws.geonames.org/3165524/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/e8887aad-cc8f-3a41-9566-b71c17bbf210>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record UC 595" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/1328f18e-5998-33da-8af4-d91efa53be4d> , <http://data.silknow.org/event/1d0dc992-cb26-303d-bb1d-b0c973f6d6ee> , <http://data.silknow.org/image/61c543e0-9dad-36fe-85a7-878aa13feb6b> , <http://data.silknow.org/object/d90455e5-352d-3718-818e-602131c4eda4/category/1> , <http://data.silknow.org/object/d90455e5-352d-3718-818e-602131c4eda4> ;
+        dc:identifier       "910242.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/image/61c543e0-9dad-36fe-85a7-878aa13feb6b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910242_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/33d1420f-ec39-4a28-84dc-185ecab33317.jpg> .
+
+<http://data.silknow.org/event/1d0dc992-cb26-303d-bb1d-b0c973f6d6ee>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1884" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d90455e5-352d-3718-818e-602131c4eda4> .
+
+<http://data.silknow.org/object/d90455e5-352d-3718-818e-602131c4eda4/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d90455e5-352d-3718-818e-602131c4eda4> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e8887aad-cc8f-3a41-9566-b71c17bbf210> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/d90455e5-352d-3718-818e-602131c4eda4> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/d90455e5-352d-3718-818e-602131c4eda4>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Guglielmo Ghidini, Turin, 1884 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/61c543e0-9dad-36fe-85a7-878aa13feb6b> ;
+        dc:identifier                  "UC 595" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910242> .

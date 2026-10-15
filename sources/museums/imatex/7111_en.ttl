@@ -1,0 +1,129 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b04b69c5-a963-3eee-9103-b04f6cbc0e5a> .
+
+<http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "67" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "67"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/bac81c80-b1ea-3183-afa5-6441a10887a9>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf> .
+
+<http://data.silknow.org/production/46680ba7-9aeb-3bdf-9ee0-33962a75f0f4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf> ;
+        ecrm:P126_employed      "... unconfirmed"@en , "linen"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P32_used_general_technique
+                "footpower loom"@en , "openwork"@en , "patterned fabric"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/470> , <http://data.silknow.org/vocabulary/377> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> , <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- conserva els 2 voravius i l'inici i final de peça acabat amb serrell de macrame"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf> .
+
+<http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "24.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "24.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/7f6757c2-28da-32c5-9c31-05d1249dc286>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "ornamental borders"@en ;
+        ecrm:P3_has_note  "ornamental borders"@en .
+
+<http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf> .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/image/4222b584-67e7-3741-b2fc-574a7e29ea74>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000022244" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/7111_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000022244.jpg> .
+
+<http://data.silknow.org/event/1d01fd2f-b854-3b2b-a3ad-d802c4b4b28a>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "purchase - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf> ;
+        ecrm:P3_has_note               "purchase - Diputació de Barcelona" ;
+        ecrm:P4_has_time-span          <http://data.silknow.org/timespan/1957_01_01> .
+
+<http://data.silknow.org/object/b04b69c5-a963-3eee-9103-b04f6cbc0e5a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 7111" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf/domain/1> , <http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf> , <http://data.silknow.org/production/46680ba7-9aeb-3bdf-9ee0-33962a75f0f4> , <http://data.silknow.org/image/4222b584-67e7-3741-b2fc-574a7e29ea74> , <http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf/observation/1> , <http://data.silknow.org/image/0f877d8f-6b45-34a5-a7b5-ccb88d18c4c8> , <http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf/category/1> , <http://data.silknow.org/event/bac81c80-b1ea-3183-afa5-6441a10887a9> , <http://data.silknow.org/event/1d01fd2f-b854-3b2b-a3ad-d802c4b4b28a> ;
+        dc:identifier       "7111.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "conserva els 2 voravius i l'inici i final de peça acabat amb serrell de macrame"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0f877d8f-6b45-34a5-a7b5-ccb88d18c4c8> , <http://data.silknow.org/image/4222b584-67e7-3741-b2fc-574a7e29ea74> ;
+        ecrm:P3_has_note               "conserva els 2 voravius i l'inici i final de peça acabat amb serrell de macrame"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf/dimension/2> , <http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf/dimension/1> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/7f6757c2-28da-32c5-9c31-05d1249dc286> , <http://data.silknow.org/image/214c4898-a0cf-3e77-907b-845a332f9b35> , <http://data.silknow.org/vocabulary/840> ;
+        dc:identifier                  "6179" .
+
+<http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2a011da8-f5b5-3e98-8f74-e585e16faddf> .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .
+
+<http://data.silknow.org/image/214c4898-a0cf-3e77-907b-845a332f9b35>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "birds facing each other"@en ;
+        ecrm:P3_has_note  "birds facing each other"@en .
+
+<http://data.silknow.org/image/0f877d8f-6b45-34a5-a7b5-ccb88d18c4c8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000004238" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/7111_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000004238.jpg> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

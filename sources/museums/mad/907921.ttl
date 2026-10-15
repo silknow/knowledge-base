@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/866e38f2-a308-351d-b334-e649996cf558>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Tony Martel, 1906" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e593de6e-a5ec-3de3-991b-431e02079548> .
+
+<http://data.silknow.org/object/e0d4cf82-1c55-3ce2-a32a-1127fdd0953e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 12629" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/a4a4b611-99de-3f53-8621-dafe97e17861> , <http://data.silknow.org/event/866e38f2-a308-351d-b334-e649996cf558> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/e593de6e-a5ec-3de3-991b-431e02079548/category/1> , <http://data.silknow.org/image/e747dd08-c5e3-3eef-b312-73f766a8f7e9> , <http://data.silknow.org/object/e593de6e-a5ec-3de3-991b-431e02079548> ;
+        dc:identifier       "907921.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/e593de6e-a5ec-3de3-991b-431e02079548/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e593de6e-a5ec-3de3-991b-431e02079548> .
+
+<http://data.silknow.org/production/a4a4b611-99de-3f53-8621-dafe97e17861>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1750-1770, Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e593de6e-a5ec-3de3-991b-431e02079548> ;
+        ecrm:P126_employed      "Soie cannelée, brochée"@fr ;
+        ecrm:P3_has_note        "France, 1750-1770, Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1770> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e0d4cf82-1c55-3ce2-a32a-1127fdd0953e> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/e593de6e-a5ec-3de3-991b-431e02079548> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/image/e747dd08-c5e3-3eef-b312-73f766a8f7e9>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/907921_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/47cce059-47c8-4f95-8254-544c8e4c9405.jpg> .
+
+<http://data.silknow.org/object/e593de6e-a5ec-3de3-991b-431e02079548>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1750-1770, Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e747dd08-c5e3-3eef-b312-73f766a8f7e9> ;
+        dc:identifier                  "12629" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/907921> .

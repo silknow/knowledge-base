@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/b0af1ef3-586d-3574-af47-20d1413834e8/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "26" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "26"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/0cd94be5-24df-309c-b6c2-8f6e9664a5e4>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Lorenzo Lorenzini, scheda n. 179, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, p. 213"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b0af1ef3-586d-3574-af47-20d1413834e8> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Lorenzo Lorenzini, scheda n. 179, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, p. 213"@it .
+
+<http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        ecrm:P1_is_identified_by  "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122951649> , <https://viaf.org/viaf/147524313> .
+
+<http://data.silknow.org/production/6be9200f-16ab-3fbd-99a0-627156d6c7fa>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b0af1ef3-586d-3574-af47-20d1413834e8> ;
+        ecrm:P32_used_general_technique
+                "Raso liseré"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1551_1600> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/b0af1ef3-586d-3574-af47-20d1413834e8/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b0af1ef3-586d-3574-af47-20d1413834e8> ;
+        ecrm:P42_assigned    "Quindici frammenti cuciti insieme" .
+
+<http://data.silknow.org/event/718c3fed-e8ab-3a65-95b0-4fed4cdb8a2f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b0af1ef3-586d-3574-af47-20d1413834e8> .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d6883e7f-6b2b-3b2d-8618-ccd73a8253bf> .
+
+<http://data.silknow.org/object/d6883e7f-6b2b-3b2d-8618-ccd73a8253bf>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1601055801000" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/718c3fed-e8ab-3a65-95b0-4fed4cdb8a2f> , <http://data.silknow.org/object/0cd94be5-24df-309c-b6c2-8f6e9664a5e4> , <http://data.silknow.org/production/6be9200f-16ab-3fbd-99a0-627156d6c7fa> , <http://data.silknow.org/image/c1379823-7e7e-39fe-b418-1ff613299f59> , <http://data.silknow.org/object/b0af1ef3-586d-3574-af47-20d1413834e8/type/1> , <http://data.silknow.org/object/b0af1ef3-586d-3574-af47-20d1413834e8> ;
+        dc:identifier       "1601055801000.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/object/b0af1ef3-586d-3574-af47-20d1413834e8>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Seconda metà del XVI secolo"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c1379823-7e7e-39fe-b418-1ff613299f59> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b0af1ef3-586d-3574-af47-20d1413834e8/dimension/2> , <http://data.silknow.org/object/b0af1ef3-586d-3574-af47-20d1413834e8/dimension/1> ;
+        dc:identifier                  "1601055801000" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/b0af1ef3-586d-3574-af47-20d1413834e8/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "31" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "31"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/c1379823-7e7e-39fe-b418-1ff613299f59>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1601056715_179" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1601055801000_0.jpg> .

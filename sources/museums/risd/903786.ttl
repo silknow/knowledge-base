@@ -1,0 +1,72 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/65ed5468-903f-30af-8300-d50bcf407495>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0c00f396-447d-3467-b648-5050177dba3e> .
+
+<http://data.silknow.org/production/983b7f6e-9ca0-3789-804c-fa4feb1b076c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0c00f396-447d-3467-b648-5050177dba3e> ;
+        ecrm:P126_employed      "seed bead"@en , "silk; seed bead; paillette"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/142d5971-0d87-3f3d-ac54-dbb482e47894> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/0c00f396-447d-3467-b648-5050177dba3e>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "76.081.20" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-7608120> .
+
+<http://data.silknow.org/object/8037543c-e61e-3d61-a10c-07f8edd885c3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 76.081.20" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/983b7f6e-9ca0-3789-804c-fa4feb1b076c> , <http://data.silknow.org/object/0c00f396-447d-3467-b648-5050177dba3e/category/1> , <http://data.silknow.org/object/0c00f396-447d-3467-b648-5050177dba3e/domain/1> , <http://data.silknow.org/event/65ed5468-903f-30af-8300-d50bcf407495> , <http://data.silknow.org/object/0c00f396-447d-3467-b648-5050177dba3e> , <http://data.silknow.org/event/71336daa-79b2-3c5a-9131-7e51e39b970f> ;
+        dc:identifier       "903786.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8037543c-e61e-3d61-a10c-07f8edd885c3> .
+
+<http://data.silknow.org/object/0c00f396-447d-3467-b648-5050177dba3e/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0c00f396-447d-3467-b648-5050177dba3e> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/0c00f396-447d-3467-b648-5050177dba3e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0c00f396-447d-3467-b648-5050177dba3e> .
+
+<http://data.silknow.org/event/71336daa-79b2-3c5a-9131-7e51e39b970f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/040212a3-7d5b-3c03-8298-f28e5a73cdb0> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Edith T. Rowe, John H. Rowe and William Rowe" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0c00f396-447d-3467-b648-5050177dba3e> .
+
+<http://data.silknow.org/actor/040212a3-7d5b-3c03-8298-f28e5a73cdb0>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Edith T. Rowe, John H. Rowe and William Rowe" ;
+        ecrm:P1_is_identified_by  "Gift of Edith T. Rowe, John H. Rowe and William Rowe" .

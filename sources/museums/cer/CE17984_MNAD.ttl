@@ -1,0 +1,101 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/8a1f2611-42f1-33dc-a0dc-8e01478110e1>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Abanico plegable.  \n  \n País:  simple (a la inglesa), de tafetán de seda teñida de un color rojo amoratado. Pintado a la aguada, con encaje mecánico de algodón y seda en marrón.   \nVarillaje esqueleto: 18 varillas + 2 guardas, de madera (posiblemente de frutal), grabada y pintada.   \nClavillo: remachado sobre virola de asta y anilla de latón.   \n   \nCara: decoración floral con pájaros. En el centro  ramilletes con flores de diversas formas y tamaños, y dos pájaros sobre una rama,  flanqueado por encaje con motivos vegetales. En el extremo derecha:  ramillete floral y en el extremo  izquierda  ligeras pinceladas en verde a modo de juncos. Cenefa de encaje con hojas y flores.   \nRevés: guías o espigas al aire.  \n  \nFuente: decoración vegetal con flores rojas y doradas, y que también se repiten en las guardas."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e> .
+
+<https://sws.geonames.org/2509954/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/43> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e> .
+
+<http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/14> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e> .
+
+<http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Modernismo   Edad Contemporánea"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e> .
+
+<http://data.silknow.org/image/4174392b-b1f8-3c24-9058-2f56fa26cfe3>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE17984" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE17984_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE17984&txt_id_imagen=1> .
+
+<http://data.silknow.org/production/42eab734-deb6-3568-a5f6-5151fbaab73b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e> ;
+        ecrm:P126_employed      "Madera [De frutal]  Latón"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/617> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "Pintado"@es , "Tafetán"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/dc4b0a3f-7e03-3a58-a6ee-2687e672a33e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2509954/> .
+
+<http://data.silknow.org/event/fca7a53e-06d5-3240-b121-c6ec2aada10a>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Bibliografía comparada:   \n-Aleteos, Colección de abanos do Museo Provincial de Lugo. Lugo, Diputación Provincial de Lugo, 2002, nº 56  \n-FILIPPINI SACHETTO, Amalia; TESTONI SASSI, Lidia: Un soffio di vanità. Ventagli da collezione private italiane.Roma, De Luca Edizioni d´Arte,1989, nº 128  \n-RODRIGO ZARZOSA, Carmen. Colección de abanicos en el Museo Nacional de Cerámica. Catálogo - Exposición. Madrid, Ministerio de Educación y Cultura, 2000, nº 50, 60, 62 y 84."@es , "Abanico plegable.  \n  \n País:  simple (a la inglesa), de tafetán de seda teñida de un color rojo amoratado. Pintado a la aguada, con encaje mecánico de algodón y seda en marrón.   \nVarillaje esqueleto: 18 varillas + 2 guardas, de madera (posiblemente de frutal), grabada y pintada.   \nClavillo: remachado sobre virola de asta y anilla de latón.   \n   \nCara: decoración floral con pájaros. En el centro  ramilletes con flores de diversas formas y tamaños, y dos pájaros sobre una rama,  flanqueado por encaje con motivos vegetales. En el extremo derecha:  ramillete floral y en el extremo  izquierda  ligeras pinceladas en verde a modo de juncos. Cenefa de encaje con hojas y flores.   \nRevés: guías o espigas al aire.  \n  \nFuente: decoración vegetal con flores rojas y doradas, y que también se repiten en las guardas."@es , "Modernismo   Edad Contemporánea"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4174392b-b1f8-3c24-9058-2f56fa26cfe3> ;
+        ecrm:P3_has_note               "Abanico plegable.  \n  \n País:  simple (a la inglesa), de tafetán de seda teñida de un color rojo amoratado. Pintado a la aguada, con encaje mecánico de algodón y seda en marrón.   \nVarillaje esqueleto: 18 varillas + 2 guardas, de madera (posiblemente de frutal), grabada y pintada.   \nClavillo: remachado sobre virola de asta y anilla de latón.   \n   \nCara: decoración floral con pájaros. En el centro  ramilletes con flores de diversas formas y tamaños, y dos pájaros sobre una rama,  flanqueado por encaje con motivos vegetales. En el extremo derecha:  ramillete floral y en el extremo  izquierda  ligeras pinceladas en verde a modo de juncos. Cenefa de encaje con hojas y flores.   \nRevés: guías o espigas al aire.  \n  \nFuente: decoración vegetal con flores rojas y doradas, y que también se repiten en las guardas."@es , "Bibliografía comparada:   \n-Aleteos, Colección de abanos do Museo Provincial de Lugo. Lugo, Diputación Provincial de Lugo, 2002, nº 56  \n-FILIPPINI SACHETTO, Amalia; TESTONI SASSI, Lidia: Un soffio di vanità. Ventagli da collezione private italiane.Roma, De Luca Edizioni d´Arte,1989, nº 128  \n-RODRIGO ZARZOSA, Carmen. Colección de abanicos en el Museo Nacional de Cerámica. Catálogo - Exposición. Madrid, Ministerio de Educación y Cultura, 2000, nº 50, 60, 62 y 84."@es , "Modernismo   Edad Contemporánea"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/436645b4-8a56-3869-9979-6f049a059d21> ;
+        dc:identifier                  "CE17984" .
+
+<http://data.silknow.org/object/b9f0f3cf-04f9-3476-9a96-5090886ca5a5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE17984" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e> , <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e/domain/2> , <http://data.silknow.org/image/4174392b-b1f8-3c24-9058-2f56fa26cfe3> , <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e/observation/1> , <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e/category/1> , <http://data.silknow.org/production/42eab734-deb6-3568-a5f6-5151fbaab73b> , <http://data.silknow.org/event/fca7a53e-06d5-3240-b121-c6ec2aada10a> , <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e/domain/1> , <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e/observation/2> , <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e/observation/3> , <http://data.silknow.org/event/8a1f2611-42f1-33dc-a0dc-8e01478110e1> ;
+        dc:identifier       "CE17984_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/image/436645b4-8a56-3869-9979-6f049a059d21>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Motivos vegetales; Ramo; Motivos florales; Pájaros"@es ;
+        ecrm:P3_has_note  "Motivos vegetales; Ramo; Motivos florales; Pájaros"@es .
+
+<http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Bibliografía comparada:   \n-Aleteos, Colección de abanos do Museo Provincial de Lugo. Lugo, Diputación Provincial de Lugo, 2002, nº 56  \n-FILIPPINI SACHETTO, Amalia; TESTONI SASSI, Lidia: Un soffio di vanità. Ventagli da collezione private italiane.Roma, De Luca Edizioni d´Arte,1989, nº 128  \n-RODRIGO ZARZOSA, Carmen. Colección de abanicos en el Museo Nacional de Cerámica. Catálogo - Exposición. Madrid, Ministerio de Educación y Cultura, 2000, nº 50, 60, 62 y 84."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e> .
+
+<http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/14> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/76188fc1-c762-3379-9331-e7e2040b8f5e> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b9f0f3cf-04f9-3476-9a96-5090886ca5a5> .

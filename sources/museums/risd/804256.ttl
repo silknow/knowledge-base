@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/1123b47a-241a-3e9d-8708-a4cec57bfef7>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Miss Edith Wetmore" ;
+        ecrm:P1_is_identified_by  "Gift of Miss Edith Wetmore" .
+
+<http://data.silknow.org/object/4ec732ea-515d-368f-88fb-be302408f8b4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 32.237" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/6b821625-7d2a-32b1-b132-daf276417bdd> , <http://data.silknow.org/event/e2d8fb95-53b8-32bc-b82f-ac1dc68f1621> , <http://data.silknow.org/object/ee66c538-1362-30b0-a49a-2eca3f6c5aef/category/1> , <http://data.silknow.org/image/954cea6f-fb12-309b-8384-b37b6883943a> , <http://data.silknow.org/object/ee66c538-1362-30b0-a49a-2eca3f6c5aef/domain/1> , <http://data.silknow.org/event/953fed29-f2c0-322d-ac1c-0034996b64f8> , <http://data.silknow.org/object/ee66c538-1362-30b0-a49a-2eca3f6c5aef> ;
+        dc:identifier       "804256.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/ee66c538-1362-30b0-a49a-2eca3f6c5aef>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/954cea6f-fb12-309b-8384-b37b6883943a> ;
+        dc:identifier                  "32.237" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/valance-32237> .
+
+<http://data.silknow.org/production/6b821625-7d2a-32b1-b132-daf276417bdd>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ee66c538-1362-30b0-a49a-2eca3f6c5aef> ;
+        ecrm:P126_employed      "linen"@en , "linen; silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/event/e2d8fb95-53b8-32bc-b82f-ac1dc68f1621>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ee66c538-1362-30b0-a49a-2eca3f6c5aef> .
+
+<http://data.silknow.org/event/953fed29-f2c0-322d-ac1c-0034996b64f8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/1123b47a-241a-3e9d-8708-a4cec57bfef7> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Miss Edith Wetmore" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ee66c538-1362-30b0-a49a-2eca3f6c5aef> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/ee66c538-1362-30b0-a49a-2eca3f6c5aef/category/1>
+        a                    silk:T35 ;
+        silk:L1              "valance" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ee66c538-1362-30b0-a49a-2eca3f6c5aef> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4ec732ea-515d-368f-88fb-be302408f8b4> .
+
+<http://data.silknow.org/object/ee66c538-1362-30b0-a49a-2eca3f6c5aef/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ee66c538-1362-30b0-a49a-2eca3f6c5aef> .
+
+<http://data.silknow.org/image/954cea6f-fb12-309b-8384-b37b6883943a>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/804256_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/48713.jpg> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/70b5fd88-1ccb-31c1-aeeb-26edf79b2074>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/911506_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/3852a128-de47-4244-bcf2-baeba769fd44.jpg> .
+
+<http://data.silknow.org/object/83a87b3a-5120-3baf-aa3b-955e9d9666c1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2008.141.5" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a56f86f1-2f53-3449-9354-bcb5f38ce83b> , <http://data.silknow.org/object/a56f86f1-2f53-3449-9354-bcb5f38ce83b/category/1> , <http://data.silknow.org/production/a7eb137a-6e5a-372e-bea9-b8e09b2a249b> , <http://data.silknow.org/image/70b5fd88-1ccb-31c1-aeeb-26edf79b2074> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/4d52d081-797b-3c6a-a744-5bd1e538f5b7> ;
+        dc:identifier       "911506.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/a7eb137a-6e5a-372e-bea9-b8e09b2a249b>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Marimekko, Finlande, 2008, Marimekko, Finlande, 2006, Harri Koskinen, Finlande, 2006" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a56f86f1-2f53-3449-9354-bcb5f38ce83b> ;
+        ecrm:P126_employed      "Toile 100% coton, impression une couleur, un coup de fond, décor en réserve, blanc ?"@fr ;
+        ecrm:P3_has_note        "Marimekko, Finlande, 2008, Marimekko, Finlande, 2006, Harri Koskinen, Finlande, 2006" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/2008> , <http://data.silknow.org/timespan/2006> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/660013/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/660013/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/a56f86f1-2f53-3449-9354-bcb5f38ce83b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Marimekko, Finlande, 2008, Marimekko, Finlande, 2006, Harri Koskinen, Finlande, 2006"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/70b5fd88-1ccb-31c1-aeeb-26edf79b2074> ;
+        dc:identifier                  "2008.141.5" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/911506> .
+
+<http://data.silknow.org/object/a56f86f1-2f53-3449-9354-bcb5f38ce83b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a56f86f1-2f53-3449-9354-bcb5f38ce83b> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/83a87b3a-5120-3baf-aa3b-955e9d9666c1> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/a56f86f1-2f53-3449-9354-bcb5f38ce83b> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/event/4d52d081-797b-3c6a-a744-5bd1e538f5b7>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Marimekko, 2008" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a56f86f1-2f53-3449-9354-bcb5f38ce83b> .

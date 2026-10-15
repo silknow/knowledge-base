@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e04051a0-698c-3002-8e22-bc364f6f8e9f> .
+
+<http://data.silknow.org/production/073055b7-3e71-3d3c-897f-c15d3f9bb359>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7dfb8246-b008-3dfd-96c6-7abfe1ac9c54> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "patterned fabric"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/456> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/7dfb8246-b008-3dfd-96c6-7abfe1ac9c54/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7dfb8246-b008-3dfd-96c6-7abfe1ac9c54> .
+
+<http://data.silknow.org/object/7dfb8246-b008-3dfd-96c6-7abfe1ac9c54>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4847f2de-a1a7-39b9-bb4d-d36330973c8b> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> ;
+        dc:identifier                  "16371" .
+
+<http://data.silknow.org/object/e04051a0-698c-3002-8e22-bc364f6f8e9f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27977" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/7dfb8246-b008-3dfd-96c6-7abfe1ac9c54/domain/1> , <http://data.silknow.org/image/4847f2de-a1a7-39b9-bb4d-d36330973c8b> , <http://data.silknow.org/object/7dfb8246-b008-3dfd-96c6-7abfe1ac9c54> , <http://data.silknow.org/event/48304029-7d7f-3199-8059-afdce7782317> , <http://data.silknow.org/object/7dfb8246-b008-3dfd-96c6-7abfe1ac9c54/category/1> , <http://data.silknow.org/production/073055b7-3e71-3d3c-897f-c15d3f9bb359> , <http://data.silknow.org/event/a232a978-4b4f-30dc-af64-ff7f606d773a> ;
+        dc:identifier       "27977.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/a232a978-4b4f-30dc-af64-ff7f606d773a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7dfb8246-b008-3dfd-96c6-7abfe1ac9c54> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/event/48304029-7d7f-3199-8059-afdce7782317>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/7dfb8246-b008-3dfd-96c6-7abfe1ac9c54> .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .
+
+<http://data.silknow.org/image/4847f2de-a1a7-39b9-bb4d-d36330973c8b>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033713" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27977_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033713.jpg> .
+
+<http://data.silknow.org/object/7dfb8246-b008-3dfd-96c6-7abfe1ac9c54/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7dfb8246-b008-3dfd-96c6-7abfe1ac9c54> .

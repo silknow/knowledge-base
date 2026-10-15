@@ -1,0 +1,72 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/0ce0b180-6bff-3170-a414-9332a31ac959>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/80ffad95-035b-31ed-ae19-76788ab3424a> .
+
+<http://data.silknow.org/object/80ffad95-035b-31ed-ae19-76788ab3424a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Silk and gold weaving" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/80ffad95-035b-31ed-ae19-76788ab3424a> .
+
+<http://data.silknow.org/production/edfd9771-8765-3d9b-b623-ee08e7fba8fb>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/80ffad95-035b-31ed-ae19-76788ab3424a> ;
+        ecrm:P126_employed      "Silk and gold weaving"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1201_1400> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/90c8bb87-84f3-370d-998c-952e31547bbc> .
+
+<http://data.silknow.org/object/80ffad95-035b-31ed-ae19-76788ab3424a>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bcf7dd9b-2baf-37cf-9aa2-4845f39ab273> ;
+        dc:identifier                  "40.36" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/46860> .
+
+<http://data.silknow.org/object/80ffad95-035b-31ed-ae19-76788ab3424a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/80ffad95-035b-31ed-ae19-76788ab3424a> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/80ffad95-035b-31ed-ae19-76788ab3424a> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/image/bcf7dd9b-2baf-37cf-9aa2-4845f39ab273>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "709867" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/46860_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/709867/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e11ac421-a408-32ec-a951-f06230ba639c> .
+
+<http://data.silknow.org/object/e11ac421-a408-32ec-a951-f06230ba639c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 40.36" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/0ce0b180-6bff-3170-a414-9332a31ac959> , <http://data.silknow.org/object/80ffad95-035b-31ed-ae19-76788ab3424a/category/1> , <http://data.silknow.org/production/edfd9771-8765-3d9b-b623-ee08e7fba8fb> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/80ffad95-035b-31ed-ae19-76788ab3424a/domain/1> , <http://data.silknow.org/image/bcf7dd9b-2baf-37cf-9aa2-4845f39ab273> , <http://data.silknow.org/object/80ffad95-035b-31ed-ae19-76788ab3424a> ;
+        dc:identifier       "46860.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/place/90c8bb87-84f3-370d-998c-952e31547bbc>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Spanish (Arabic)" ;
+        ecrm:P87_is_identified_by  "Spanish (Arabic)" .

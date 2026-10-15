@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/event/a2fe1516-f8cd-3258-a697-5a3c68852717>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a> .
+
+<http://data.silknow.org/image/f5ffaff5-3f24-36b9-9531-7bf1f1607c60>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE24214" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE24214_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE24214&txt_id_imagen=1> .
+
+<http://data.silknow.org/image/55d05fc2-0bbe-39dd-b05a-ecd9e6653ba9>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Jarrón; Cenefa: Motivos florales;   De pequeño tamaño."@es ;
+        ecrm:P3_has_note  "Jarrón; Cenefa: Motivos florales;   De pequeño tamaño."@es .
+
+<http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fragmento textil en forma de tira, de hilo bordado con hilos de seda color rojo anaranjado. Decoración a base de jarrones contrapuestos y rodeados por una banda ondulante. En su parte inferior y superior va rodeada con una cenefa de pequeños motivos florales. Galón de flecos de varios tonos de marrón. Dos costuras, una en el centro y otra en uno de los lados."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a> .
+
+<http://data.silknow.org/production/997cb634-cfa0-386a-8166-31692b602b22>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a> ;
+        ecrm:P126_employed      "Fibra de seda"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1600> .
+
+<http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a> .
+
+<http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragmento de tejido" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a> .
+
+<http://data.silknow.org/object/f1c9b8ab-e1d3-396d-8b55-35e35620df2b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE24214" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/f5ffaff5-3f24-36b9-9531-7bf1f1607c60> , <http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a/observation/2> , <http://data.silknow.org/event/a2fe1516-f8cd-3258-a697-5a3c68852717> , <http://data.silknow.org/production/997cb634-cfa0-386a-8166-31692b602b22> , <http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a/category/1> , <http://data.silknow.org/event/98fb60dc-496d-36f8-9e22-d71428ed134a> , <http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a/domain/1> , <http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a/observation/1> , <http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a> ;
+        dc:identifier       "CE24214_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a> .
+
+<http://data.silknow.org/object/32ce9933-2a3c-3216-b706-f2b25439055a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Moderna"@es , "Fragmento textil en forma de tira, de hilo bordado con hilos de seda color rojo anaranjado. Decoración a base de jarrones contrapuestos y rodeados por una banda ondulante. En su parte inferior y superior va rodeada con una cenefa de pequeños motivos florales. Galón de flecos de varios tonos de marrón. Dos costuras, una en el centro y otra en uno de los lados."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f5ffaff5-3f24-36b9-9531-7bf1f1607c60> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Fragmento textil en forma de tira, de hilo bordado con hilos de seda color rojo anaranjado. Decoración a base de jarrones contrapuestos y rodeados por una banda ondulante. En su parte inferior y superior va rodeada con una cenefa de pequeños motivos florales. Galón de flecos de varios tonos de marrón. Dos costuras, una en el centro y otra en uno de los lados."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/55d05fc2-0bbe-39dd-b05a-ecd9e6653ba9> ;
+        dc:identifier                  "CE24214" .
+
+<http://data.silknow.org/event/98fb60dc-496d-36f8-9e22-d71428ed134a>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f1c9b8ab-e1d3-396d-8b55-35e35620df2b> .

@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/production/bb0027dc-ff94-3909-b5f3-2b23764c5fa6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c> ;
+        ecrm:P126_employed      "Seda blanco [probablemente sintética]  Seda verde [probablemente sintética]  Seda Carmesí [probablemente sintética]"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1900> .
+
+<http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c> .
+
+<http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragmento de tejido" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c> .
+
+<http://data.silknow.org/object/4f9444e3-09ce-3251-973c-0de5ee840624>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE24480" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c> , <http://data.silknow.org/image/edeeda32-2580-3e67-997d-2246f010ca2a> , <http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c/domain/1> , <http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c/category/1> , <http://data.silknow.org/event/42110269-645a-3dd7-84be-91789f56d851> , <http://data.silknow.org/event/18412735-6ae5-334d-ac9c-7f1a90ee8b3c> , <http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c/observation/2> , <http://data.silknow.org/production/bb0027dc-ff94-3909-b5f3-2b23764c5fa6> , <http://data.silknow.org/image/cf773742-047c-3d04-8fdb-f83d22c6d78e> , <http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c/observation/1> ;
+        dc:identifier       "CE24480_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/event/18412735-6ae5-334d-ac9c-7f1a90ee8b3c>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/event/42110269-645a-3dd7-84be-91789f56d851>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c> .
+
+<http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Aunque a primera vista podría incluirse dentro del grupo de tejidos \"de encaje\", los numerosos detalles que presenta la decoración y el hecho de que se trate de un tejido mecánico permiten datarlo en el siglo XIX."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c> .
+
+<http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Fragmento de tejido de forma semirectangular; de seda, que probablemente formaba parte de una pieza de indumentaria. Presenta una decoración de motivos florales y vegetales compartimentados por motivos de encaje de manera simétrica. Conserva un orillo (blanco y rojo en el anverso, y rojo y verde en el reverso, de 7 mm. de anchura). En el reverso presenta restos de papel, probablemente del soporte anterior al que estuvo pegado.  \n  \nLigamentos  \ngro [base]  \nsarga 1:4 [decoración]"@es , "Aunque a primera vista podría incluirse dentro del grupo de tejidos \"de encaje\", los numerosos detalles que presenta la decoración y el hecho de que se trate de un tejido mecánico permiten datarlo en el siglo XIX."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/edeeda32-2580-3e67-997d-2246f010ca2a> , <http://data.silknow.org/image/cf773742-047c-3d04-8fdb-f83d22c6d78e> ;
+        ecrm:P3_has_note               "Fragmento de tejido de forma semirectangular; de seda, que probablemente formaba parte de una pieza de indumentaria. Presenta una decoración de motivos florales y vegetales compartimentados por motivos de encaje de manera simétrica. Conserva un orillo (blanco y rojo en el anverso, y rojo y verde en el reverso, de 7 mm. de anchura). En el reverso presenta restos de papel, probablemente del soporte anterior al que estuvo pegado.  \n  \nLigamentos  \ngro [base]  \nsarga 1:4 [decoración]"@es , "Aunque a primera vista podría incluirse dentro del grupo de tejidos \"de encaje\", los numerosos detalles que presenta la decoración y el hecho de que se trate de un tejido mecánico permiten datarlo en el siglo XIX."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/88785468-a491-3e47-8968-61ae88e3d536> ;
+        dc:identifier                  "CE24480" .
+
+<http://data.silknow.org/image/88785468-a491-3e47-8968-61ae88e3d536>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Motivos vegetales; Motivos florales; Motivos de encaje"@es ;
+        ecrm:P3_has_note  "Motivos vegetales; Motivos florales; Motivos de encaje"@es .
+
+<http://data.silknow.org/image/cf773742-047c-3d04-8fdb-f83d22c6d78e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE24480_MNAD_1.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE24480&txt_id_imagen=2> .
+
+<http://data.silknow.org/image/edeeda32-2580-3e67-997d-2246f010ca2a>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE24480" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE24480_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE24480&txt_id_imagen=1> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4f9444e3-09ce-3251-973c-0de5ee840624> .
+
+<http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fragmento de tejido de forma semirectangular; de seda, que probablemente formaba parte de una pieza de indumentaria. Presenta una decoración de motivos florales y vegetales compartimentados por motivos de encaje de manera simétrica. Conserva un orillo (blanco y rojo en el anverso, y rojo y verde en el reverso, de 7 mm. de anchura). En el reverso presenta restos de papel, probablemente del soporte anterior al que estuvo pegado.  \n  \nLigamentos  \ngro [base]  \nsarga 1:4 [decoración]"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/fe4249e9-e524-3599-b34f-5e378996aa4c> .

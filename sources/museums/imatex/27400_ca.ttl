@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/e69d2932-99bc-39ac-a723-788051bc51a5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/35269a32-05af-3005-a6a2-0ac4f90a01ef> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca , "vellut"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6f28b434-af0d-386a-bd77-2ccc6b536804> .
+
+<http://data.silknow.org/object/35269a32-05af-3005-a6a2-0ac4f90a01ef>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/22f5bab3-1d03-30c8-b550-704cd8d96717> , <http://data.silknow.org/image/66c7f1e6-63f1-3612-9553-e82ede4e8cbe> ;
+        dc:identifier                  "16156" .
+
+<http://data.silknow.org/event/fcdfc2b2-6df6-34d0-8318-199f5310e22d>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/35269a32-05af-3005-a6a2-0ac4f90a01ef> .
+
+<http://data.silknow.org/event/0b9cc238-4061-3b3e-ae57-c0b336989eba>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f> ;
+        ecrm:P23_transferred_title_from
+                "Viñas Geis, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/35269a32-05af-3005-a6a2-0ac4f90a01ef> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/object/35269a32-05af-3005-a6a2-0ac4f90a01ef/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/35269a32-05af-3005-a6a2-0ac4f90a01ef> .
+
+<http://data.silknow.org/image/66c7f1e6-63f1-3612-9553-e82ede4e8cbe>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033071" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27400_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000033071.jpg> .
+
+<http://data.silknow.org/image/22f5bab3-1d03-30c8-b550-704cd8d96717>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033072" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27400_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033072.jpg> .
+
+<http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas Geis, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas Geis, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/160946453> , <https://isni.org/isni/0000000108433220> .
+
+<http://data.silknow.org/object/35269a32-05af-3005-a6a2-0ac4f90a01ef/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/35269a32-05af-3005-a6a2-0ac4f90a01ef> .
+
+<http://data.silknow.org/object/6f28b434-af0d-386a-bd77-2ccc6b536804>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27400" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/fcdfc2b2-6df6-34d0-8318-199f5310e22d> , <http://data.silknow.org/object/35269a32-05af-3005-a6a2-0ac4f90a01ef> , <http://data.silknow.org/image/66c7f1e6-63f1-3612-9553-e82ede4e8cbe> , <http://data.silknow.org/event/0b9cc238-4061-3b3e-ae57-c0b336989eba> , <http://data.silknow.org/object/35269a32-05af-3005-a6a2-0ac4f90a01ef/domain/1> , <http://data.silknow.org/image/22f5bab3-1d03-30c8-b550-704cd8d96717> , <http://data.silknow.org/production/e69d2932-99bc-39ac-a723-788051bc51a5> , <http://data.silknow.org/object/35269a32-05af-3005-a6a2-0ac4f90a01ef/category/1> ;
+        dc:identifier       "27400.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

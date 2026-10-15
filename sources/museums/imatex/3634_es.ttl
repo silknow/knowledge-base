@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/82587355-af77-3437-b81c-9d64b767dd11> .
+
+<http://data.silknow.org/image/6b765d61-ccc6-3644-805a-6c097ad0d579>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000000631" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/3634_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000000631.jpg> .
+
+<http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- conserva 1 voraviu"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8> .
+
+<http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "conserva 1 voraviu"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6b765d61-ccc6-3644-805a-6c097ad0d579> ;
+        ecrm:P3_has_note               "conserva 1 voraviu"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/227ba8b8-a593-3c32-84ef-2d7707bbf48e> , <http://data.silknow.org/vocabulary/744> ;
+        dc:identifier                  "8001" .
+
+<http://data.silknow.org/event/cfc4ebcd-85d5-344e-90b9-6c5e8a13808b>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8> .
+
+<http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8> .
+
+<http://data.silknow.org/event/c21c80d0-942e-3b67-a977-e23e7c6aa092>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b> ;
+        ecrm:P23_transferred_title_from
+                "Tórtola Valencia, Carmen" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/image/227ba8b8-a593-3c32-84ef-2d7707bbf48e>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "pavos reales"@es ;
+        ecrm:P3_has_note  "pavos reales"@es .
+
+<http://data.silknow.org/production/fb9a3743-62fa-3acf-a84e-3731f41a1ba2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/214> ;
+        ecrm:P32_used_general_technique
+                "trama llançada"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/103> , <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Tórtola Valencia, Carmen" ;
+        ecrm:P1_is_identified_by  "Tórtola Valencia, Carmen" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Carmen_Tórtola_Valencia> , <https://viaf.org/viaf/47896092> , <https://isni.org/isni/0000000038570077> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Carmen_Tórtola_Valencia> .
+
+<http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8> .
+
+<http://data.silknow.org/object/82587355-af77-3437-b81c-9d64b767dd11>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 3634" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/cfc4ebcd-85d5-344e-90b9-6c5e8a13808b> , <http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8/observation/1> , <http://data.silknow.org/image/6b765d61-ccc6-3644-805a-6c097ad0d579> , <http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8/domain/1> , <http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8> , <http://data.silknow.org/object/d869c637-4ce4-395c-9b38-8d4f05773de8/category/1> , <http://data.silknow.org/event/c21c80d0-942e-3b67-a977-e23e7c6aa092> , <http://data.silknow.org/production/fb9a3743-62fa-3acf-a84e-3731f41a1ba2> ;
+        dc:identifier       "3634.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

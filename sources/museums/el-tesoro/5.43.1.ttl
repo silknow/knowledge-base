@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/65596ab8-8594-3e46-870e-1bec39a1b3ee> .
+
+<http://data.silknow.org/object/df2855f2-d0d4-30df-9cf9-652fd61e9438/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Se compone de forro de manga, manípulo (2), estola (2) y cubre cáliz."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/df2855f2-d0d4-30df-9cf9-652fd61e9438> .
+
+<http://data.silknow.org/object/df2855f2-d0d4-30df-9cf9-652fd61e9438/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/df2855f2-d0d4-30df-9cf9-652fd61e9438> ;
+        ecrm:P42_assigned    "Terno (Casulla)" .
+
+<http://data.silknow.org/assessment/6bdcd266-f556-3b46-bf4d-9dec5c636d25>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/df2855f2-d0d4-30df-9cf9-652fd61e9438> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/6bdcd266-f556-3b46-bf4d-9dec5c636d25/condition/1> .
+
+<http://data.silknow.org/assessment/6bdcd266-f556-3b46-bf4d-9dec5c636d25/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Malo. No apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Malo. No apto para su uso."@es .
+
+<http://data.silknow.org/image/f0a66e4c-c74e-3afa-84b4-fc8449cb3586>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.43.1" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.43.1_0.jpg> .
+
+<http://data.silknow.org/production/6a7c9fb5-5155-301a-a991-c18c2d12e8ce/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/65596ab8-8594-3e46-870e-1bec39a1b3ee>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.43.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/assessment/6bdcd266-f556-3b46-bf4d-9dec5c636d25> , <http://data.silknow.org/production/6a7c9fb5-5155-301a-a991-c18c2d12e8ce> , <http://data.silknow.org/object/df2855f2-d0d4-30df-9cf9-652fd61e9438/type/1> , <http://data.silknow.org/object/df2855f2-d0d4-30df-9cf9-652fd61e9438> , <http://data.silknow.org/object/df2855f2-d0d4-30df-9cf9-652fd61e9438/observation/1> , <http://data.silknow.org/image/f0a66e4c-c74e-3afa-84b4-fc8449cb3586> ;
+        dc:identifier       "5.43.1.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/object/df2855f2-d0d4-30df-9cf9-652fd61e9438>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Se compone de forro de manga, manípulo (2), estola (2) y cubre cáliz."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f0a66e4c-c74e-3afa-84b4-fc8449cb3586> ;
+        ecrm:P3_has_note               "*Se compone de forro de manga, manípulo (2), estola (2) y cubre cáliz."@es ;
+        dc:identifier                  "5.43.1" .
+
+<http://data.silknow.org/production/6a7c9fb5-5155-301a-a991-c18c2d12e8ce>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/df2855f2-d0d4-30df-9cf9-652fd61e9438> ;
+        ecrm:P126_employed      "Hilo de oro y seda. Galón de oro. Fleco."@es ;
+        ecrm:P32_used_general_technique
+                "Brocado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/6a7c9fb5-5155-301a-a991-c18c2d12e8ce/activity/1> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .

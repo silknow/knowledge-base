@@ -1,0 +1,110 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/7df50af9-4444-3dcf-a228-ee8efa0db8ef>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e> .
+
+<http://data.silknow.org/image/769a725f-bb62-38fd-9bba-542c866a2dd7>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/227719_0.jpg> , <https://collectionapi.metmuseum.org/api/collection/v1/iiif/227719/455264/main-image> .
+
+<http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/769a725f-bb62-38fd-9bba-542c866a2dd7> ;
+        dc:identifier                  "53.211" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.metmuseum.org/art/collection/search/227719> .
+
+<http://data.silknow.org/object/8d78c52c-b596-3967-a582-96b414b165b7>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/5d157800-2219-3ab0-b4ad-4b92d1858dc9> .
+
+<http://data.silknow.org/object/5325d64c-d3c2-37ae-9dda-7345e4c422e6>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/49f91737-b50d-39e2-be12-e24e906a7893> .
+
+<http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "European Sculpture and Decorative Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e> ;
+        ecrm:P78_is_identified_by  "European Sculpture and Decorative Arts" .
+
+<http://data.silknow.org/production/2b3213bc-2999-384a-8647-d9790b9acb10>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e> ;
+        ecrm:P126_employed      "Wool, silk (21 warps per inch, 8 per cm.)"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/857> , <http://data.silknow.org/vocabulary/644> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1f60b3a0-bd23-3b92-9474-4b2bab9a1076> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3034006/> .
+
+<http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/3> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e> .
+
+<http://data.silknow.org/object/57b4d830-7330-3f7c-a9a8-623df1e8aafa>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/2d7c7965-0b26-33ba-a4b8-7b51e5e34a32> .
+
+<http://data.silknow.org/object/e654de23-080d-3d22-b42d-e344b5a35bf3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 227719" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e/category/1> , <http://data.silknow.org/image/769a725f-bb62-38fd-9bba-542c866a2dd7> , <http://data.silknow.org/event/de1caa17-ea56-3383-96a1-2fa880b33162> , <http://data.silknow.org/object/0fc2f522-3a5d-3cf9-af48-0d5551608c85> , <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e> , <http://data.silknow.org/event/7df50af9-4444-3dcf-a228-ee8efa0db8ef> , <http://data.silknow.org/object/5325d64c-d3c2-37ae-9dda-7345e4c422e6> , <http://data.silknow.org/object/ac9211c1-d947-378d-bc28-70eacce65182> , <http://data.silknow.org/object/8d78c52c-b596-3967-a582-96b414b165b7> , <http://data.silknow.org/production/2b3213bc-2999-384a-8647-d9790b9acb10> , <http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5> , <http://data.silknow.org/object/57b4d830-7330-3f7c-a9a8-623df1e8aafa> ;
+        dc:identifier       "227719.json" ;
+        dc:publisher        "http://data.silknow.org/organization/met" .
+
+<http://data.silknow.org/object/ac9211c1-d947-378d-bc28-70eacce65182>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/0fae1a11-b76a-3ddf-8428-9a0e4faa0861> .
+
+<https://sws.geonames.org/3034006/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f44aa81-9945-32c8-87b9-1494bcf64099>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Byron C. Foy" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Byron C. Foy" .
+
+<http://data.silknow.org/met>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e654de23-080d-3d22-b42d-e344b5a35bf3> .
+
+<http://data.silknow.org/object/0fc2f522-3a5d-3cf9-af48-0d5551608c85>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/1bcee7e6-a9f7-32b6-9a99-727a3a1922e6> .
+
+<http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "The Swing, The Harvest, and Cherry Picking from a set of the Pastorals with Blue Draperies" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e> .
+
+<http://data.silknow.org/event/de1caa17-ea56-3383-96a1-2fa880b33162>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/2f44aa81-9945-32c8-87b9-1494bcf64099> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Byron C. Foy, 1953" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/83d75a98-45fe-33ce-b8c4-841b5bd8775e> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .

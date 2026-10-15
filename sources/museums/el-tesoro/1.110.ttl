@@ -1,0 +1,80 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/7ae6e803-1837-34a0-b9ed-83603fa35a3c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1.110" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/1.110_0.jpg> .
+
+<http://data.silknow.org/el-tesoro>
+        a                         crmdig:D1_Digital_Object , <http://www.w3.org/ns/dcat#dataset> ;
+        rdfs:label                "el-tesoro" ;
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/131d72d4-8c7e-31b6-a9b6-a7272b3d1a11> .
+
+<http://data.silknow.org/assessment/5361fd1f-f28f-33c4-ae58-09c3e5060c9c/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Malo. No apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Malo. No apto para su uso."@es .
+
+<http://data.silknow.org/object/131d72d4-8c7e-31b6-a9b6-a7272b3d1a11>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1.110" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/dcfca337-c396-37b7-997c-543aaec736e2> , <http://data.silknow.org/image/7ae6e803-1837-34a0-b9ed-83603fa35a3c> , <http://data.silknow.org/assessment/5361fd1f-f28f-33c4-ae58-09c3e5060c9c> , <http://data.silknow.org/object/1637087d-8e11-31d4-8533-7bdb9a41758d> , <http://data.silknow.org/object/1637087d-8e11-31d4-8533-7bdb9a41758d/type/1> , <http://data.silknow.org/object/1637087d-8e11-31d4-8533-7bdb9a41758d/observation/1> ;
+        dc:identifier       "1.110.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/object/1637087d-8e11-31d4-8533-7bdb9a41758d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Se compone de cubre cáliz y bolsa de corporales."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/1637087d-8e11-31d4-8533-7bdb9a41758d> .
+
+<http://data.silknow.org/object/1637087d-8e11-31d4-8533-7bdb9a41758d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Se compone de cubre cáliz y bolsa de corporales."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "“Casa especial para ornamentos de la Iglesia. Casa Aranda. D. Alfonso XII y XV. Zaragoza.”"@es ;
+                                         ecrm:P3_has_note  "“Casa especial para ornamentos de la Iglesia. Casa Aranda. D. Alfonso XII y XV. Zaragoza.”"@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7ae6e803-1837-34a0-b9ed-83603fa35a3c> ;
+        ecrm:P3_has_note               "*Se compone de cubre cáliz y bolsa de corporales."@es ;
+        dc:identifier                  "1.110" .
+
+<http://data.silknow.org/actor/4d7dd3ec-d604-3735-8966-423b3cb4f779>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Casa Aranda" ;
+        ecrm:P1_is_identified_by  "Casa Aranda" .
+
+<http://data.silknow.org/production/dcfca337-c396-37b7-997c-543aaec736e2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1637087d-8e11-31d4-8533-7bdb9a41758d> ;
+        ecrm:P126_employed      "Hilo de seda. Galón de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Brocado y raso."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/dcfca337-c396-37b7-997c-543aaec736e2/activity/1> .
+
+<http://data.silknow.org/production/dcfca337-c396-37b7-997c-543aaec736e2/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/4d7dd3ec-d604-3735-8966-423b3cb4f779> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/1637087d-8e11-31d4-8533-7bdb9a41758d/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1637087d-8e11-31d4-8533-7bdb9a41758d> ;
+        ecrm:P42_assigned    <http://data.silknow.org/category/97> .
+
+<http://data.silknow.org/assessment/5361fd1f-f28f-33c4-ae58-09c3e5060c9c>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/1637087d-8e11-31d4-8533-7bdb9a41758d> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/5361fd1f-f28f-33c4-ae58-09c3e5060c9c/condition/1> .

@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/b730d722-618b-3933-8b8d-dd1a81d25edf>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219> .
+
+<http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "84" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "84"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "200" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "200"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/place/2e8495be-70d2-3357-9afc-5a20167eff22>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Turkish or Eastern European" ;
+        ecrm:P87_is_identified_by  "Turkish or Eastern European" .
+
+<http://data.silknow.org/image/61814e24-2cf9-3fa5-87e1-180527194e7f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1164156" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/123527_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/1164156/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/074ad096-b7de-3f9a-a5d4-c5fe0c1cfa51>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 48.1002" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/b730d722-618b-3933-8b8d-dd1a81d25edf> , <http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219/category/1> , <http://data.silknow.org/image/61814e24-2cf9-3fa5-87e1-180527194e7f> , <http://data.silknow.org/production/93ed7436-dee0-303d-ab40-8b0926a76492> , <http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219/observation/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219/domain/1> , <http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219> ;
+        dc:identifier       "123527.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Rectangular cover" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219> .
+
+<http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/074ad096-b7de-3f9a-a5d4-c5fe0c1cfa51> .
+
+<http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Central medallion of guilloche bands and a repeating floral motif, bearing an applied coat-of-arms(three lions rampant) backed by stylized acanthus leaves and surmounted by a crown. On either side a horizontal, symmetrical floral spray with inwardly curling leafy branches and leaves plus wheat stalks. All within a similar rectangular guilloche border. Outer border, a straight stalk with stylized leaves and blossoms within scalloped bands. Metal strips and coils, metallic yarns, sequins and spangles plus polychrome velvet and floss silk yarns on a red gold-shot ribbed silk ground. Metallic tape edging and metallic bottom fringe probably later additions. Ground worn, some missing yarns."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/61814e24-2cf9-3fa5-87e1-180527194e7f> ;
+        ecrm:P3_has_note               "Central medallion of guilloche bands and a repeating floral motif, bearing an applied coat-of-arms(three lions rampant) backed by stylized acanthus leaves and surmounted by a crown. On either side a horizontal, symmetrical floral spray with inwardly curling leafy branches and leaves plus wheat stalks. All within a similar rectangular guilloche border. Outer border, a straight stalk with stylized leaves and blossoms within scalloped bands. Metal strips and coils, metallic yarns, sequins and spangles plus polychrome velvet and floss silk yarns on a red gold-shot ribbed silk ground. Metallic tape edging and metallic bottom fringe probably later additions. Ground worn, some missing yarns."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219/dimension/2> , <http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219/dimension/1> ;
+        dc:identifier                  "48.1002" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/123527> .
+
+<http://data.silknow.org/production/93ed7436-dee0-303d-ab40-8b0926a76492>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219> ;
+        ecrm:P126_employed      "Silk and gilt metal-shot ribbed ground with gilt metallic thread, sequins, spangles, and floss silk embroidery, polychrome velvet applique, metal strips and coils, metallic tape and fringe, and linen backing"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1900> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/2e8495be-70d2-3357-9afc-5a20167eff22> .
+
+<http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Central medallion of guilloche bands and a repeating floral motif, bearing an applied coat-of-arms(three lions rampant) backed by stylized acanthus leaves and surmounted by a crown. On either side a horizontal, symmetrical floral spray with inwardly curling leafy branches and leaves plus wheat stalks. All within a similar rectangular guilloche border. Outer border, a straight stalk with stylized leaves and blossoms within scalloped bands. Metal strips and coils, metallic yarns, sequins and spangles plus polychrome velvet and floss silk yarns on a red gold-shot ribbed silk ground. Metallic tape edging and metallic bottom fringe probably later additions. Ground worn, some missing yarns."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/76a81299-8e0c-3cb1-9a8c-73685b1f9219> .

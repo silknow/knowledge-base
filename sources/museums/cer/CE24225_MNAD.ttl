@@ -1,0 +1,97 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/905a8aa7-ec67-397a-a139-8e66a0f4f178>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d> .
+
+<http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "55" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "55"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d> .
+
+<http://data.silknow.org/image/c9f05b64-0383-3426-84de-90c8c9096aba>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE24225" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE24225_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE24225&txt_id_imagen=1> .
+
+<http://data.silknow.org/production/a378394c-19cc-3ecd-9612-073eaab87824>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d> ;
+        ecrm:P126_employed      "Orillo: Seda"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/852> ;
+        ecrm:P32_used_general_technique
+                "Punto bucleado"@es , "Tafetán [Ligamento]  Brocado"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/379> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1600> .
+
+<http://data.silknow.org/object/bf3a6d77-2498-38d5-a9ca-50bed7d35717>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE24225" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/c9f05b64-0383-3426-84de-90c8c9096aba> , <http://data.silknow.org/event/236e386c-6f1e-3d19-b066-63fc22dbc926> , <http://data.silknow.org/event/905a8aa7-ec67-397a-a139-8e66a0f4f178> , <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d/observation/1> , <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d/observation/2> , <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d> , <http://data.silknow.org/production/a378394c-19cc-3ecd-9612-073eaab87824> , <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d/category/1> , <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d/domain/1> ;
+        dc:identifier       "CE24225_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "27" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "27"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/236e386c-6f1e-3d19-b066-63fc22dbc926>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Moderna"@es , "Fragmento textil de forma rectangular, de seda en su color. El fondo está realizado con brocado de hilos metálicos plateados y decoración floral de terciopelo bucleado de color salmón; toda la decoración está inscrita en grandes rombos de ramas. Orillo de seda en su color con rayas azul celeste."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c9f05b64-0383-3426-84de-90c8c9096aba> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Fragmento textil de forma rectangular, de seda en su color. El fondo está realizado con brocado de hilos metálicos plateados y decoración floral de terciopelo bucleado de color salmón; toda la decoración está inscrita en grandes rombos de ramas. Orillo de seda en su color con rayas azul celeste."@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d/dimension/2> , <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d/dimension/1> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> ;
+        dc:identifier                  "CE24225" .
+
+<http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fragmento textil de forma rectangular, de seda en su color. El fondo está realizado con brocado de hilos metálicos plateados y decoración floral de terciopelo bucleado de color salmón; toda la decoración está inscrita en grandes rombos de ramas. Orillo de seda en su color con rayas azul celeste."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d> .
+
+<http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragmento de tejido" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac48f463-44c6-39bb-b8cc-527867fcc84d> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bf3a6d77-2498-38d5-a9ca-50bed7d35717> .

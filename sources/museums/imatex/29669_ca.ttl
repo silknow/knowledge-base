@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/35e91426-1cdd-31a7-af99-09c9d09614fa> .
+
+<http://data.silknow.org/production/9f363ab6-d8f7-3d05-b8e4-edc104c1466a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8ead6c16-1213-383b-bdb7-74eba5faa3db> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "domàs"@ca , "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> , <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/8ead6c16-1213-383b-bdb7-74eba5faa3db>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1a693cc7-4c7c-34bd-89f5-26a93dcb3d2d> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/6d530c78-4311-319e-b5a2-58aff3f527ec> , <http://data.silknow.org/image/b3ad076b-d87d-3a55-b0dd-e188bfb9c119> , <http://data.silknow.org/image/736de741-8082-3e5a-ad47-b85c951c3495> ;
+        dc:identifier                  "2823" .
+
+<http://data.silknow.org/object/8ead6c16-1213-383b-bdb7-74eba5faa3db/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8ead6c16-1213-383b-bdb7-74eba5faa3db> .
+
+<http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Biosca, Josep" ;
+        ecrm:P1_is_identified_by  "Biosca, Josep" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Josep_Huguet_i_Biosca> , <https://viaf.org/viaf/95599143> , <https://isni.org/isni/000000007829170X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Josep_Huguet_i_Biosca> .
+
+<http://data.silknow.org/event/40a0af36-30f8-336d-aa5d-7aaab2b1d579>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8ead6c16-1213-383b-bdb7-74eba5faa3db> .
+
+<http://data.silknow.org/object/35e91426-1cdd-31a7-af99-09c9d09614fa>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29669" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/40a0af36-30f8-336d-aa5d-7aaab2b1d579> , <http://data.silknow.org/object/8ead6c16-1213-383b-bdb7-74eba5faa3db/domain/1> , <http://data.silknow.org/production/9f363ab6-d8f7-3d05-b8e4-edc104c1466a> , <http://data.silknow.org/image/1a693cc7-4c7c-34bd-89f5-26a93dcb3d2d> , <http://data.silknow.org/object/8ead6c16-1213-383b-bdb7-74eba5faa3db/category/1> , <http://data.silknow.org/object/8ead6c16-1213-383b-bdb7-74eba5faa3db> , <http://data.silknow.org/event/5fbde46b-534a-3f5a-b4b7-81c3229c3819> ;
+        dc:identifier       "29669.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/6d530c78-4311-319e-b5a2-58aff3f527ec>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "aus"@ca ;
+        ecrm:P3_has_note  "aus"@ca .
+
+<http://data.silknow.org/image/b3ad076b-d87d-3a55-b0dd-e188bfb9c119>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "decoració vegetal estilitzada"@ca ;
+        ecrm:P3_has_note  "decoració vegetal estilitzada"@ca .
+
+<http://data.silknow.org/image/1a693cc7-4c7c-34bd-89f5-26a93dcb3d2d>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035493" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29669_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000035493.jpg> .
+
+<http://data.silknow.org/object/8ead6c16-1213-383b-bdb7-74eba5faa3db/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8ead6c16-1213-383b-bdb7-74eba5faa3db> .
+
+<http://data.silknow.org/image/736de741-8082-3e5a-ad47-b85c951c3495>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "gerros"@ca ;
+        ecrm:P3_has_note  "gerros"@ca .
+
+<http://data.silknow.org/event/5fbde46b-534a-3f5a-b4b7-81c3229c3819>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2> ;
+        ecrm:P23_transferred_title_from
+                "Biosca, Josep" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8ead6c16-1213-383b-bdb7-74eba5faa3db> ;
+        ecrm:P3_has_note               "donacions" .

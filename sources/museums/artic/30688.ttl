@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/74eef7ff-88b9-36ac-9a14-d11421ae25a6>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/30688_0.jpg> , <https://www.artic.edu/iiif/2/20a4121a-239b-5ca3-9467-79dceb2fedc4/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, gilt-animal-substrate-wrapped linen, warp-float faced 4:1 satin weave with supplementary patterning wefts bound by secondary binding warps in twill interlacings"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729> .
+
+<http://data.silknow.org/actor/b998a024-7d63-3b2e-b346-b2fa2afbb775>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Hugh and Mary Adams Endowment" ;
+        ecrm:P1_is_identified_by  "Hugh and Mary Adams Endowment" .
+
+<http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, gilt-animal-substrate-wrapped linen, warp-float faced 4:1 satin weave with supplementary patterning wefts bound by secondary binding warps in twill interlacings"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/74eef7ff-88b9-36ac-9a14-d11421ae25a6> ;
+        ecrm:P3_has_note               "Silk, gilt-animal-substrate-wrapped linen, warp-float faced 4:1 satin weave with supplementary patterning wefts bound by secondary binding warps in twill interlacings"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729/dimension/1> , <http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729/dimension/2> ;
+        dc:identifier                  "1968.780" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/30688/fragment> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/production/e09adb73-373e-36cf-a788-3bd0d7a8b3fa>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1301_1500> , <http://data.silknow.org/timespan/1475> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729> .
+
+<http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "49.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "49.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/9ce5860c-bab7-3ef5-84d2-316696ee80cb>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b998a024-7d63-3b2e-b346-b2fa2afbb775> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Hugh and Mary Adams Endowment" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729> .
+
+<http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "21"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/b6ba0923-4697-38cc-814b-6d1c1df4ad81>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1968.780" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729> , <http://data.silknow.org/image/74eef7ff-88b9-36ac-9a14-d11421ae25a6> , <http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729/observation/1> , <http://data.silknow.org/event/9ce5860c-bab7-3ef5-84d2-316696ee80cb> , <http://data.silknow.org/object/8e94a3c8-11d8-37bb-be6c-1ea4353a2729/category/1> , <http://data.silknow.org/production/e09adb73-373e-36cf-a788-3bd0d7a8b3fa> ;
+        dc:identifier       "30688.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b6ba0923-4697-38cc-814b-6d1c1df4ad81> .

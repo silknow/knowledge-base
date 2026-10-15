@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/cdc87057-b82c-3b2c-82b8-a9d870cd8ff5>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/102145_0.jpg> , <https://www.artic.edu/iiif/2/cfc2905a-94bd-2fe5-d1d0-56732eeb0b44/full/600,/0/default.jpg> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/309d5adf-831d-3bd1-80cb-edf6d4fa2f83>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/43a6247a-1363-3118-ad2d-b64ccd99445e> , <http://data.silknow.org/timespan/1750> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/event/d1b6bfb0-d15e-3386-9abc-c64396475cae>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/776c1968-7949-33cb-996b-4d7b3ee75e80> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Mrs. John C. Murphy Memorial Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d> .
+
+<http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, plain weave with supplementary patterning wefts tied by supplementary binding in plain interlacings"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d> .
+
+<http://data.silknow.org/object/de478d22-6132-3eba-850a-0fc6c821df3a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1984.89" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d/category/1> , <http://data.silknow.org/event/d1b6bfb0-d15e-3386-9abc-c64396475cae> , <http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d> , <http://data.silknow.org/image/cdc87057-b82c-3b2c-82b8-a9d870cd8ff5> , <http://data.silknow.org/production/309d5adf-831d-3bd1-80cb-edf6d4fa2f83> , <http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d/observation/1> ;
+        dc:identifier       "102145.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/actor/776c1968-7949-33cb-996b-4d7b3ee75e80>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Mrs. John C. Murphy Memorial Fund" ;
+        ecrm:P1_is_identified_by  "Mrs. John C. Murphy Memorial Fund" .
+
+<http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "122.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "122.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, plain weave with supplementary patterning wefts tied by supplementary binding in plain interlacings"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/cdc87057-b82c-3b2c-82b8-a9d870cd8ff5> ;
+        ecrm:P3_has_note               "Silk, plain weave with supplementary patterning wefts tied by supplementary binding in plain interlacings"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d/dimension/1> , <http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d/dimension/2> ;
+        dc:identifier                  "1984.89" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/102145/panel> .
+
+<http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "57.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "57.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6cac7794-e659-32bf-a47c-f51aa82ad53d> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/de478d22-6132-3eba-850a-0fc6c821df3a> .

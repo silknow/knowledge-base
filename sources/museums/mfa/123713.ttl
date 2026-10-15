@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/445bcdc0-ac53-35ff-bc84-3eb0f93168be>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113> ;
+        ecrm:P126_employed      "Wool and linen tapestry"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/0701_0900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/357994/> .
+
+<http://data.silknow.org/image/a33d2741-5b35-38f0-8635-b2e096089684>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "817190" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/123713_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/817190/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Design of natural-colored linen and polychrome wool; represents three beaded medallions each enclosing a pair of horses (?) flanking a stylized tree; ground of purple wool; five pointed motifs border the fragment; woven with yellow, dark and light brown, red, and purple wool and natural-colored linen. Design shows Sasanian influence."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a33d2741-5b35-38f0-8635-b2e096089684> ;
+        ecrm:P3_has_note               "Design of natural-colored linen and polychrome wool; represents three beaded medallions each enclosing a pair of horses (?) flanking a stylized tree; ground of purple wool; five pointed motifs border the fragment; woven with yellow, dark and light brown, red, and purple wool and natural-colored linen. Design shows Sasanian influence."@en ;
+        dc:identifier                  "1974.557" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/123713> .
+
+<http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Design of natural-colored linen and polychrome wool; represents three beaded medallions each enclosing a pair of horses (?) flanking a stylized tree; ground of purple wool; five pointed motifs border the fragment; woven with yellow, dark and light brown, red, and purple wool and natural-colored linen. Design shows Sasanian influence."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113> .
+
+<http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/event/c5187a17-2599-3077-88aa-262767daca11>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113> .
+
+<http://data.silknow.org/object/888c48ca-f5fe-3856-9aa2-16ccc870a032>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1974.557" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/c5187a17-2599-3077-88aa-262767daca11> , <http://data.silknow.org/image/a33d2741-5b35-38f0-8635-b2e096089684> , <http://data.silknow.org/production/445bcdc0-ac53-35ff-bc84-3eb0f93168be> , <http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113/observation/1> , <http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113/domain/1> , <http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113> ;
+        dc:identifier       "123713.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment of a border" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0f23c641-dd63-39bd-b884-b2f510153113> .
+
+<https://sws.geonames.org/357994/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/888c48ca-f5fe-3856-9aa2-16ccc870a032> .

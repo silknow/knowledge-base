@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "16.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "16.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "23.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "23.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/8b159d5c-791c-3614-9140-5b086dd367a7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 51.2351" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2/domain/1> , <http://data.silknow.org/image/96e1a5df-505d-3534-a93d-b51199083938> , <http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2/observation/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2/category/1> , <http://data.silknow.org/production/b0ef3c4d-d4a6-369b-b3bc-7efa09e58d9e> , <http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2> , <http://data.silknow.org/event/900673b3-e8f1-3b68-a543-b7636d226336> ;
+        dc:identifier       "90059.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Armorial shield worked with gold and silver thread and blue, yellow, orange, and black silk, surmounted by a crown edged with foliage and scrolls."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Armorial shield" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2> .
+
+<http://data.silknow.org/event/900673b3-e8f1-3b68-a543-b7636d226336>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8b159d5c-791c-3614-9140-5b086dd367a7> .
+
+<http://data.silknow.org/production/b0ef3c4d-d4a6-369b-b3bc-7efa09e58d9e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2> ;
+        ecrm:P126_employed      "Silk; embroidery"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2> .
+
+<http://data.silknow.org/image/96e1a5df-505d-3534-a93d-b51199083938>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "890630" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/90059_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/890630/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Armorial shield worked with gold and silver thread and blue, yellow, orange, and black silk, surmounted by a crown edged with foliage and scrolls."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/96e1a5df-505d-3534-a93d-b51199083938> ;
+        ecrm:P3_has_note               "Armorial shield worked with gold and silver thread and blue, yellow, orange, and black silk, surmounted by a crown edged with foliage and scrolls."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2/dimension/2> , <http://data.silknow.org/object/cb3e3bad-f1b9-36fa-8241-0d78bb96ffe2/dimension/1> ;
+        dc:identifier                  "51.2351" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/90059> .

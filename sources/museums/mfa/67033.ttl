@@ -1,0 +1,106 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/de4b3255-db21-31d2-888a-b47e8303435f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb> ;
+        ecrm:P126_employed      "Linen and silk"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404506> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "28" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "28"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb> .
+
+<http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile fragment: Huntresses at Fountain" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "141.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "141.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/945d2c61-434d-399f-81a7-20f30807d6ec>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 26.290" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/de4b3255-db21-31d2-888a-b47e8303435f> , <http://data.silknow.org/event/ccb76473-f4fd-3c4f-97ca-c293cc10739e> , <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb> , <http://data.silknow.org/image/10130575-1c25-3266-b807-38bd905480ef> , <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb/category/1> , <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb/observation/1> , <http://data.silknow.org/event/e4c30597-491f-32f5-a0f2-d7f266066d8b> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb/domain/1> ;
+        dc:identifier       "67033.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/event/e4c30597-491f-32f5-a0f2-d7f266066d8b>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/945d2c61-434d-399f-81a7-20f30807d6ec> .
+
+<http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Ground of twilled silk once orange has faded to neutral yellow. Design of two hunting maidens with their dogs at a fountain is woven with linen wound with gilded skin, very much tarnished and worn. White silk used for faces and hands and blue silk used to represent water has almost entirely disappeared."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb> .
+
+<http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Ground of twilled silk once orange has faded to neutral yellow. Design of two hunting maidens with their dogs at a fountain is woven with linen wound with gilded skin, very much tarnished and worn. White silk used for faces and hands and blue silk used to represent water has almost entirely disappeared."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/10130575-1c25-3266-b807-38bd905480ef> ;
+        ecrm:P3_has_note               "Ground of twilled silk once orange has faded to neutral yellow. Design of two hunting maidens with their dogs at a fountain is woven with linen wound with gilded skin, very much tarnished and worn. White silk used for faces and hands and blue silk used to represent water has almost entirely disappeared."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb/dimension/2> , <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb/dimension/1> ;
+        dc:identifier                  "26.290" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/67033> .
+
+<http://data.silknow.org/image/10130575-1c25-3266-b807-38bd905480ef>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "727705" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/67033_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/727705/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/event/ccb76473-f4fd-3c4f-97ca-c293cc10739e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/abaf9468-f924-37b0-a65b-ea898fe1bfc8> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "1926, Adolfo Loewi, Venice; 1926, sold by Loewi to the MFA for $2070.43 [see note 1].  (Accession Date: December 2, 1926)\n\nNOTES:\n[1] Seven textiles were acquired from Loewi for this amount (MFA accession nos. 26.290-26.296). / Harriet Otis Cruft Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/abbb41db-c4fc-3739-8ee4-7ed6f768b8fb> .
+
+<http://data.silknow.org/actor/abaf9468-f924-37b0-a65b-ea898fe1bfc8>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "1926, Adolfo Loewi, Venice; 1926, sold by Loewi to the MFA for $2070.43 [see note 1]. (Accession Date: December 2) NOTES: [1] Seven textiles were acquired from Loewi for this amount (MFA accession nos. 26.290-26.296). / Harriet Otis Cruft Fund" ;
+        ecrm:P1_is_identified_by  "1926, Adolfo Loewi, Venice; 1926, sold by Loewi to the MFA for $2070.43 [see note 1]. (Accession Date: December 2) NOTES: [1] Seven textiles were acquired from Loewi for this amount (MFA accession nos. 26.290-26.296). / Harriet Otis Cruft Fund" .

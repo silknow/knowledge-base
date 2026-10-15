@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/45fa7cbc-6a69-3c68-9b2e-0665cad02484> .
+
+<http://data.silknow.org/image/37c61d81-8451-344d-a329-c531a5db270c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000000897" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/3830_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000000897.jpg> .
+
+<http://data.silknow.org/object/452e1a0c-69a3-3ffc-9a09-ce0ad6172cf7>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/37c61d81-8451-344d-a329-c531a5db270c> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/7b153115-7368-36f3-ac35-5d275b737d4e> , <http://data.silknow.org/vocabulary/753> , <http://data.silknow.org/vocabulary/750> ;
+        dc:identifier                  "21002" .
+
+<http://data.silknow.org/event/b6a649bd-5e12-3ada-b873-bf5631791f54>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/452e1a0c-69a3-3ffc-9a09-ce0ad6172cf7> .
+
+<http://data.silknow.org/event/49c071c0-f92a-3dc0-8015-927387a16a5a>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/452e1a0c-69a3-3ffc-9a09-ce0ad6172cf7> .
+
+<http://data.silknow.org/production/fabdf54b-eef8-3d7b-ad28-adaae47765cf>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/452e1a0c-69a3-3ffc-9a09-ce0ad6172cf7> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/497> , <http://data.silknow.org/vocabulary/214> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "trama llançada"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> , <http://data.silknow.org/vocabulary/103> , <http://data.silknow.org/vocabulary/97> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1551_1600> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> , <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/452e1a0c-69a3-3ffc-9a09-ce0ad6172cf7/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/452e1a0c-69a3-3ffc-9a09-ce0ad6172cf7> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/image/7b153115-7368-36f3-ac35-5d275b737d4e>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "zarcillos"@es ;
+        ecrm:P3_has_note  "zarcillos"@es .
+
+<http://data.silknow.org/object/452e1a0c-69a3-3ffc-9a09-ce0ad6172cf7/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/452e1a0c-69a3-3ffc-9a09-ce0ad6172cf7> .
+
+<http://data.silknow.org/object/45fa7cbc-6a69-3c68-9b2e-0665cad02484>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 3830" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/b6a649bd-5e12-3ada-b873-bf5631791f54> , <http://data.silknow.org/image/37c61d81-8451-344d-a329-c531a5db270c> , <http://data.silknow.org/event/49c071c0-f92a-3dc0-8015-927387a16a5a> , <http://data.silknow.org/object/452e1a0c-69a3-3ffc-9a09-ce0ad6172cf7/domain/1> , <http://data.silknow.org/object/452e1a0c-69a3-3ffc-9a09-ce0ad6172cf7/category/1> , <http://data.silknow.org/object/452e1a0c-69a3-3ffc-9a09-ce0ad6172cf7> , <http://data.silknow.org/production/fabdf54b-eef8-3d7b-ad28-adaae47765cf> ;
+        dc:identifier       "3830.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

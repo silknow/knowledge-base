@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/65f205ea-d566-38ab-b9df-6902958fe593>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909620_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/7af288d5-edbd-4976-a884-e1972c1ebc68.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/343e3ef0-b65b-35df-bc16-a745ca725157>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, 1730 (vers), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/65f205ea-d566-38ab-b9df-6902958fe593> ;
+        dc:identifier                  "13246" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909620> .
+
+<http://data.silknow.org/event/10ec8244-5e44-3543-9f15-52fbc7576ecd>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don monsieur Marquereau, 1907" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/343e3ef0-b65b-35df-bc16-a745ca725157> .
+
+<http://data.silknow.org/object/343e3ef0-b65b-35df-bc16-a745ca725157/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/343e3ef0-b65b-35df-bc16-a745ca725157> .
+
+<http://data.silknow.org/production/6776ab9d-b124-3b94-bcac-ae78fc0e0910>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1730 (vers), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/343e3ef0-b65b-35df-bc16-a745ca725157> ;
+        ecrm:P126_employed      "Lampas fond satin, à effet taffetas"@fr ;
+        ecrm:P3_has_note        "France, 1730 (vers), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/6ad819b1-3b10-3517-a6c2-403bca03d25b> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dc81abbe-d5c0-3160-8b6e-b08e59decb1f> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/343e3ef0-b65b-35df-bc16-a745ca725157> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/dc81abbe-d5c0-3160-8b6e-b08e59decb1f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13246" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/6776ab9d-b124-3b94-bcac-ae78fc0e0910> , <http://data.silknow.org/event/10ec8244-5e44-3543-9f15-52fbc7576ecd> , <http://data.silknow.org/image/65f205ea-d566-38ab-b9df-6902958fe593> , <http://data.silknow.org/object/343e3ef0-b65b-35df-bc16-a745ca725157> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/343e3ef0-b65b-35df-bc16-a745ca725157/category/1> ;
+        dc:identifier       "909620.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/event/eb235198-a4a2-398e-b27f-2168d20b198d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916> .
+
+<http://data.silknow.org/event/00732144-e5bc-3716-bb82-7df8317f86b3>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Contemporánea"@es , "Delantal de lana negra. En el extremo inferior se ha añadido un volante de seda negra. Se decora con aplicaciones al realce de terciopelo negro."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/705efdf5-e7de-337d-8cbd-c7ed8ad5b1e8> ;
+        ecrm:P3_has_note               "Edad Contemporánea"@es , "Delantal de lana negra. En el extremo inferior se ha añadido un volante de seda negra. Se decora con aplicaciones al realce de terciopelo negro."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/011e1eba-c6d9-3899-8414-b3b78ce31df3> ;
+        dc:identifier                  "CE23770" .
+
+<http://data.silknow.org/object/abf345cd-fd08-3966-9372-d1ea38e59bd0>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE23770" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916/observation/2> , <http://data.silknow.org/event/eb235198-a4a2-398e-b27f-2168d20b198d> , <http://data.silknow.org/event/00732144-e5bc-3716-bb82-7df8317f86b3> , <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916/observation/1> , <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916/category/1> , <http://data.silknow.org/image/705efdf5-e7de-337d-8cbd-c7ed8ad5b1e8> , <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916> , <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916/domain/1> , <http://data.silknow.org/production/b20289be-457d-357b-aae2-9454e1cf8140> , <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916/domain/2> ;
+        dc:identifier       "CE23770_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/image/705efdf5-e7de-337d-8cbd-c7ed8ad5b1e8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE23770" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE23770_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE23770&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916> .
+
+<http://data.silknow.org/image/011e1eba-c6d9-3899-8414-b3b78ce31df3>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "En el centro: Ramo; Pájaros; Cuadrúpedo;   Dos. Con los ojos de lentejuelas doradas."@es ;
+        ecrm:P3_has_note  "En el centro: Ramo; Pájaros; Cuadrúpedo;   Dos. Con los ojos de lentejuelas doradas."@es .
+
+<http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Delantal de lana negra. En el extremo inferior se ha añadido un volante de seda negra. Se decora con aplicaciones al realce de terciopelo negro."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916> .
+
+<http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916> .
+
+<http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Contemporánea"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916> .
+
+<http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Delantal" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916> .
+
+<http://data.silknow.org/production/b20289be-457d-357b-aae2-9454e1cf8140>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7e4e7c71-e432-3ed0-a10e-0f2ddd8f9916> ;
+        ecrm:P126_employed      "Volante (indumentaria): Seda negro"@es , "Lana negro"@es , "Lentejuela dorado"@es ;
+        ecrm:P32_used_general_technique
+                "Bordado a realce"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/abf345cd-fd08-3966-9372-d1ea38e59bd0> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

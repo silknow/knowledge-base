@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/82c92f95-c0f2-30b0-91fc-73b7e69b3c7b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "panneau, Italie, 18e siècle (1ère moitié)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ab12b520-d7ec-32bd-9f7d-f9f3245459cd> ;
+        dc:identifier                  "37656" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909943> .
+
+<http://data.silknow.org/object/82c92f95-c0f2-30b0-91fc-73b7e69b3c7b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "panneau" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/82c92f95-c0f2-30b0-91fc-73b7e69b3c7b> .
+
+<http://data.silknow.org/event/9ef64848-f9ed-3325-af5b-6b607c142e3c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Laura Dreyfus-Barney, 1956" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/82c92f95-c0f2-30b0-91fc-73b7e69b3c7b> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/ab12b520-d7ec-32bd-9f7d-f9f3245459cd>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909943_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/54b7e6ba-dc03-45e4-b39c-769dc6dada99.jpg> .
+
+<http://data.silknow.org/object/d1c23598-fab3-3a35-897d-cc7483d511e8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 37656" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/ab12b520-d7ec-32bd-9f7d-f9f3245459cd> , <http://data.silknow.org/object/82c92f95-c0f2-30b0-91fc-73b7e69b3c7b> , <http://data.silknow.org/object/82c92f95-c0f2-30b0-91fc-73b7e69b3c7b/category/1> , <http://data.silknow.org/event/9ef64848-f9ed-3325-af5b-6b607c142e3c> , <http://data.silknow.org/production/ef2fb6c0-fa50-37aa-85ca-2c3ca61f2f0a> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "909943.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/ef2fb6c0-fa50-37aa-85ca-2c3ca61f2f0a>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Italie, 18e siècle (1ère moitié)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/82c92f95-c0f2-30b0-91fc-73b7e69b3c7b> ;
+        ecrm:P126_employed      "Velours ciselé double corps"@fr ;
+        ecrm:P3_has_note        "Italie, 18e siècle (1ère moitié)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1750> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d1c23598-fab3-3a35-897d-cc7483d511e8> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/82c92f95-c0f2-30b0-91fc-73b7e69b3c7b> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

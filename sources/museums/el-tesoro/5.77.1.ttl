@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/assessment/78e4d42b-51c6-325c-bd18-6152e0886dab/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Malo. No apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Malo. No apto para su uso."@es .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d73808c0-dad6-3278-b5fa-a5feac6512b8> .
+
+<http://data.silknow.org/object/c932a041-3775-3617-87b6-aec384c44131>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Se compone de estola (2), manípulo (3), cubre cáliz, bolsa de corporales y paño de atril."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d2867e5e-c212-3be1-b817-312bde75b007> ;
+        ecrm:P3_has_note               "*Se compone de estola (2), manípulo (3), cubre cáliz, bolsa de corporales y paño de atril."@es ;
+        dc:identifier                  "5.77.1" .
+
+<http://data.silknow.org/assessment/78e4d42b-51c6-325c-bd18-6152e0886dab>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/c932a041-3775-3617-87b6-aec384c44131> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/78e4d42b-51c6-325c-bd18-6152e0886dab/condition/1> .
+
+<http://data.silknow.org/production/7391e567-21db-3c23-8c45-137b7a9c6728/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/d73808c0-dad6-3278-b5fa-a5feac6512b8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.77.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c932a041-3775-3617-87b6-aec384c44131/type/1> , <http://data.silknow.org/object/c932a041-3775-3617-87b6-aec384c44131> , <http://data.silknow.org/image/d2867e5e-c212-3be1-b817-312bde75b007> , <http://data.silknow.org/production/7391e567-21db-3c23-8c45-137b7a9c6728> , <http://data.silknow.org/assessment/78e4d42b-51c6-325c-bd18-6152e0886dab> , <http://data.silknow.org/object/c932a041-3775-3617-87b6-aec384c44131/observation/1> ;
+        dc:identifier       "5.77.1.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/image/d2867e5e-c212-3be1-b817-312bde75b007>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.77.1" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.77.1_0.jpg> .
+
+<http://data.silknow.org/production/7391e567-21db-3c23-8c45-137b7a9c6728>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c932a041-3775-3617-87b6-aec384c44131> ;
+        ecrm:P126_employed      "Hilo de seda verde. Galón de plata. Fleco."@es ;
+        ecrm:P32_used_general_technique
+                "Damasco."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/7391e567-21db-3c23-8c45-137b7a9c6728/activity/1> .
+
+<http://data.silknow.org/object/c932a041-3775-3617-87b6-aec384c44131/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c932a041-3775-3617-87b6-aec384c44131> ;
+        ecrm:P42_assigned    "Terno (Casulla)" .
+
+<http://data.silknow.org/object/c932a041-3775-3617-87b6-aec384c44131/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Se compone de estola (2), manípulo (3), cubre cáliz, bolsa de corporales y paño de atril."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c932a041-3775-3617-87b6-aec384c44131> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .

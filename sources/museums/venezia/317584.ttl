@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/cc0473e4-4061-335e-bfa5-d59b2f3edd0d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/52a94e5d-55d8-38fd-85cc-d309d5f3bee8> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338> .
+
+<http://data.silknow.org/production/c948ec8a-3921-35d4-a54b-075053656572>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1760_1765> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3164602/> .
+
+<http://data.silknow.org/actor/52a94e5d-55d8-38fd-85cc-d309d5f3bee8>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Fortuny, Venezia" ;
+        ecrm:P1_is_identified_by  "Museo Fortuny, Venezia" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122361075> , <https://viaf.org/viaf/168410339> .
+
+<https://sws.geonames.org/3164602/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338> .
+
+<http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "26" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "26"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/851e6d9f-16a1-3f84-acf6-b245d9188b3d>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/317584_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5idosGkczWnWUjK9UdS4sy53V2TzLfRP5nHZbK2wOEO5JIJEUd07SGQkrzJnHgelu4vcg6n7e8k%2fFOARoXmN8ONb%2fxe92qiT%2bZSbvu2ZzLDZVVARCCMcIQQ%3d%3d> .
+
+<http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "pékin liseré broccato: fondo verde, decorazioni in seta policroma, ciniglia di seta e seta bouclé; al verso rattoppi con seta in tinta"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338> .
+
+<http://data.silknow.org/object/30aee821-1755-3106-8216-5ab86f1e23b8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 317584" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/851e6d9f-16a1-3f84-acf6-b245d9188b3d> , <http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338/observation/1> , <http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338/domain/1> , <http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338/category/1> , <http://data.silknow.org/event/cc0473e4-4061-335e-bfa5-d59b2f3edd0d> , <http://data.silknow.org/production/c948ec8a-3921-35d4-a54b-075053656572> , <http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338> ;
+        dc:identifier       "317584.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "pékin liseré broccato: fondo verde, decorazioni in seta policroma, ciniglia di seta e seta bouclé; al verso rattoppi con seta in tinta"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/851e6d9f-16a1-3f84-acf6-b245d9188b3d> ;
+        ecrm:P3_has_note               "pékin liseré broccato: fondo verde, decorazioni in seta policroma, ciniglia di seta e seta bouclé; al verso rattoppi con seta in tinta"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338/dimension/1> , <http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338/dimension/2> ;
+        dc:identifier                  "T0350" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/317584/?WEB=MuseiVE> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/30aee821-1755-3106-8216-5ab86f1e23b8> .
+
+<http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338/category/1>
+        a                    silk:T35 ;
+        silk:L1              "tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338> .
+
+<http://data.silknow.org/object/3e6212a7-e1a8-39b4-9a18-71e38356f338/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "54" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "54"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

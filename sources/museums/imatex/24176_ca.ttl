@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3c0183b8-9fed-3da2-b92b-c1668cbd84e7> .
+
+<http://data.silknow.org/production/2de73b10-b188-36f2-9e68-aa67aa33ed40>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7500a2d7-2678-3472-bd2b-dd6e81ea6d14> ;
+        ecrm:P126_employed      "cotó"@ca ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca , "efecte de perdut per ordit"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> , <http://vocab.getty.edu/aat/300404510> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> , <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/7500a2d7-2678-3472-bd2b-dd6e81ea6d14>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/be85d890-68e1-3133-9b88-08b5ec2c69da> ;
+        dc:identifier                  "20608" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/7500a2d7-2678-3472-bd2b-dd6e81ea6d14/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7500a2d7-2678-3472-bd2b-dd6e81ea6d14> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/event/b53aee1b-4cc0-3a72-bc25-d66a537250c6>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/7500a2d7-2678-3472-bd2b-dd6e81ea6d14> .
+
+<http://data.silknow.org/object/3c0183b8-9fed-3da2-b92b-c1668cbd84e7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 24176" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/b53aee1b-4cc0-3a72-bc25-d66a537250c6> , <http://data.silknow.org/image/be85d890-68e1-3133-9b88-08b5ec2c69da> , <http://data.silknow.org/event/1819e616-319f-3865-ac97-b88972c36d5b> , <http://data.silknow.org/object/7500a2d7-2678-3472-bd2b-dd6e81ea6d14/domain/1> , <http://data.silknow.org/object/7500a2d7-2678-3472-bd2b-dd6e81ea6d14> , <http://data.silknow.org/production/2de73b10-b188-36f2-9e68-aa67aa33ed40> , <http://data.silknow.org/object/7500a2d7-2678-3472-bd2b-dd6e81ea6d14/category/1> ;
+        dc:identifier       "24176.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/be85d890-68e1-3133-9b88-08b5ec2c69da>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000021309" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/24176_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000021309.jpg> .
+
+<http://data.silknow.org/object/7500a2d7-2678-3472-bd2b-dd6e81ea6d14/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7500a2d7-2678-3472-bd2b-dd6e81ea6d14> .
+
+<http://data.silknow.org/event/1819e616-319f-3865-ac97-b88972c36d5b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7500a2d7-2678-3472-bd2b-dd6e81ea6d14> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

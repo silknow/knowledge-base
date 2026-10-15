@@ -1,0 +1,118 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/bb950375-a836-354b-b9a8-e9c8e593328c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Messrs Harrods Ltd" ;
+        ecrm:P1_is_identified_by  "Given by Messrs Harrods Ltd" .
+
+<http://data.silknow.org/event/2fd3e5be-7e4a-324b-80bc-00b66a715c97>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/bb950375-a836-354b-b9a8-e9c8e593328c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Messrs Harrods Ltd." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1> .
+
+<http://data.silknow.org/production/a3e1ba90-396f-3176-b48a-d6abe88dcef7>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1> ;
+        ecrm:P126_employed      "leather, silk braid"@en , "braid"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/3743b384-99cb-300a-a193-03f3a7b493e7> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/image/489ef9d4-7425-3630-9f5c-7aadec6cb9ed>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AV6205" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O139699_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AV/2006AV6205.jpg> .
+
+<http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/domain/5>
+        a                    silk:T19 ;
+        silk:L4              "Europeana Fashion Project" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/0967d0e2-e9da-3f5b-a331-c231c8a7074e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O139699" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/489ef9d4-7425-3630-9f5c-7aadec6cb9ed> , <http://data.silknow.org/image/6e688b9f-05e6-3ca4-837b-3717ea73abe7> , <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/domain/1> , <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/domain/3> , <http://data.silknow.org/production/a3e1ba90-396f-3176-b48a-d6abe88dcef7> , <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/observation/2> , <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/domain/2> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1> , <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/observation/1> , <http://data.silknow.org/event/2fd3e5be-7e4a-324b-80bc-00b66a715c97> , <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/domain/5> , <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/domain/4> ;
+        dc:identifier       "O139699.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Shoes, cream leather trimmed with fly braid"@en , "Cream leather shoes with low heel and pointed toe, vamp trimmed densely with cream silk fly braid"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6e688b9f-05e6-3ca4-837b-3717ea73abe7> , <http://data.silknow.org/image/489ef9d4-7425-3630-9f5c-7aadec6cb9ed> ;
+        ecrm:P3_has_note               "Shoes, cream leather trimmed with fly braid"@en , "Cream leather shoes with low heel and pointed toe, vamp trimmed densely with cream silk fly braid"@en ;
+        dc:identifier                  "T.484-1913" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O139699> .
+
+<http://data.silknow.org/image/6e688b9f-05e6-3ca4-837b-3717ea73abe7>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2014HE0108" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O139699_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2014HE/2014HE0108.jpg> .
+
+<http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Cream leather shoes with low heel and pointed toe, vamp trimmed densely with cream silk fly braid"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1> .
+
+<http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/domain/3>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/43> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0967d0e2-e9da-3f5b-a331-c231c8a7074e> .
+
+<http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Fashion" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1> .
+
+<http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/99> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1> .
+
+<http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Shoes, cream leather trimmed with fly braid"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1> .
+
+<http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1/domain/4>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/52> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8ad144f1-f2f0-3a85-addf-26dc8b739cf1> .

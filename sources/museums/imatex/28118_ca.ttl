@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fcbe22bf-327e-3399-865d-01910715a05c> .
+
+<http://data.silknow.org/image/0ac8971c-aadf-3b5b-aebe-62dcb9aa49f2>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033859" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/28118_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033859.jpg> .
+
+<http://data.silknow.org/event/784dca47-168d-3ff4-948b-118294bca62f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/4703f53b-8ba1-307a-98ee-47d623f7f9ab> .
+
+<http://data.silknow.org/object/4703f53b-8ba1-307a-98ee-47d623f7f9ab/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4703f53b-8ba1-307a-98ee-47d623f7f9ab> .
+
+<http://data.silknow.org/object/4703f53b-8ba1-307a-98ee-47d623f7f9ab>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0ac8971c-aadf-3b5b-aebe-62dcb9aa49f2> ;
+        dc:identifier                  "16582" .
+
+<http://data.silknow.org/production/bc938544-68ee-354a-8a2d-f1c05a37fdd8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4703f53b-8ba1-307a-98ee-47d623f7f9ab> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca , "vellut"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/object/fcbe22bf-327e-3399-865d-01910715a05c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 28118" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4703f53b-8ba1-307a-98ee-47d623f7f9ab> , <http://data.silknow.org/object/4703f53b-8ba1-307a-98ee-47d623f7f9ab/domain/1> , <http://data.silknow.org/production/bc938544-68ee-354a-8a2d-f1c05a37fdd8> , <http://data.silknow.org/event/a784fab8-c0ce-3f0d-9f8b-e6f52684e477> , <http://data.silknow.org/event/784dca47-168d-3ff4-948b-118294bca62f> , <http://data.silknow.org/object/4703f53b-8ba1-307a-98ee-47d623f7f9ab/category/1> , <http://data.silknow.org/image/0ac8971c-aadf-3b5b-aebe-62dcb9aa49f2> ;
+        dc:identifier       "28118.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/4703f53b-8ba1-307a-98ee-47d623f7f9ab/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4703f53b-8ba1-307a-98ee-47d623f7f9ab> .
+
+<http://data.silknow.org/event/a784fab8-c0ce-3f0d-9f8b-e6f52684e477>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/4703f53b-8ba1-307a-98ee-47d623f7f9ab> .

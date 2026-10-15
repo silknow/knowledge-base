@@ -1,0 +1,85 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dc570cd6-01c9-3ed5-86f3-bf13a9d0b28b> .
+
+<http://data.silknow.org/event/fb1fbce6-f92b-349f-8e39-08689ea316d4>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5d443fa5-920c-3163-bd6b-750d00c7cfcf> .
+
+<http://data.silknow.org/image/ed587136-1326-3eeb-9663-38042358c00d>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "efecte de color"@ca ;
+        ecrm:P3_has_note  "efecte de color"@ca .
+
+<http://data.silknow.org/event/656ebb59-e267-3fc0-9653-098446c2b2b9>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b> ;
+        ecrm:P23_transferred_title_from
+                "Tórtola Valencia, Carmen" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5d443fa5-920c-3163-bd6b-750d00c7cfcf> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/5d443fa5-920c-3163-bd6b-750d00c7cfcf/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5d443fa5-920c-3163-bd6b-750d00c7cfcf> .
+
+<http://data.silknow.org/object/5d443fa5-920c-3163-bd6b-750d00c7cfcf/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5d443fa5-920c-3163-bd6b-750d00c7cfcf> .
+
+<http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Tórtola Valencia, Carmen" ;
+        ecrm:P1_is_identified_by  "Tórtola Valencia, Carmen" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Carmen_Tórtola_Valencia> , <https://viaf.org/viaf/47896092> , <https://isni.org/isni/0000000038570077> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Carmen_Tórtola_Valencia> .
+
+<http://data.silknow.org/production/5bcf32e5-5212-3b7e-af0d-1b573f1882e9>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5d443fa5-920c-3163-bd6b-750d00c7cfcf> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "brodat manual"@ca , "tafetà"@ca , "tècnica de brodat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> , <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> , <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/5d443fa5-920c-3163-bd6b-750d00c7cfcf>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/550d5db8-d6d2-36e2-82e2-c83cf2fa19c1> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/ed587136-1326-3eeb-9663-38042358c00d> ;
+        dc:identifier                  "8151" .
+
+<http://data.silknow.org/object/dc570cd6-01c9-3ed5-86f3-bf13a9d0b28b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 7744" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/656ebb59-e267-3fc0-9653-098446c2b2b9> , <http://data.silknow.org/object/5d443fa5-920c-3163-bd6b-750d00c7cfcf/domain/1> , <http://data.silknow.org/image/550d5db8-d6d2-36e2-82e2-c83cf2fa19c1> , <http://data.silknow.org/event/fb1fbce6-f92b-349f-8e39-08689ea316d4> , <http://data.silknow.org/object/5d443fa5-920c-3163-bd6b-750d00c7cfcf/category/1> , <http://data.silknow.org/production/5bcf32e5-5212-3b7e-af0d-1b573f1882e9> , <http://data.silknow.org/object/5d443fa5-920c-3163-bd6b-750d00c7cfcf> ;
+        dc:identifier       "7744.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/550d5db8-d6d2-36e2-82e2-c83cf2fa19c1>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000004871" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/7744_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000004871.jpg> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

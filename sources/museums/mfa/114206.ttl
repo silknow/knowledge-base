@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/2accd998-2171-34f7-86ea-db517a17f923>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 52.1652" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/22c4867d-aa20-3bf2-aece-735acee1b75d> , <http://data.silknow.org/object/22c4867d-aa20-3bf2-aece-735acee1b75d/domain/1> , <http://data.silknow.org/object/22c4867d-aa20-3bf2-aece-735acee1b75d/category/1> , <http://data.silknow.org/production/f3330290-3698-392a-a770-8c1d8c976745> , <http://data.silknow.org/event/5b04025b-9c2d-3709-9bdb-a1420e34f516> , <http://data.silknow.org/image/850c1899-06f0-375e-8e49-ab05bfd54ebd> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "114206.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/event/5b04025b-9c2d-3709-9bdb-a1420e34f516>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/22c4867d-aa20-3bf2-aece-735acee1b75d> .
+
+<http://data.silknow.org/object/22c4867d-aa20-3bf2-aece-735acee1b75d>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/850c1899-06f0-375e-8e49-ab05bfd54ebd> ;
+        dc:identifier                  "52.1652" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/114206> .
+
+<http://data.silknow.org/object/22c4867d-aa20-3bf2-aece-735acee1b75d/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/22c4867d-aa20-3bf2-aece-735acee1b75d> .
+
+<http://data.silknow.org/image/850c1899-06f0-375e-8e49-ab05bfd54ebd>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "582142" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/114206_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/582142/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/22c4867d-aa20-3bf2-aece-735acee1b75d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/22c4867d-aa20-3bf2-aece-735acee1b75d> .
+
+<http://data.silknow.org/production/f3330290-3698-392a-a770-8c1d8c976745>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/22c4867d-aa20-3bf2-aece-735acee1b75d> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/97> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1725> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3164603/> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/22c4867d-aa20-3bf2-aece-735acee1b75d> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2accd998-2171-34f7-86ea-db517a17f923> .
+
+<https://sws.geonames.org/3164603/>
+        a       ecrm:E53_Place .

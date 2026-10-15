@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk and silvered-metal-strip-wrapped silk, plain weave with supplementary brocading wefts"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk and silvered-metal-strip-wrapped silk, plain weave with supplementary brocading wefts"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bd07417e-f40f-3904-943f-9fdcf41c25f8> ;
+        ecrm:P3_has_note               "Silk and silvered-metal-strip-wrapped silk, plain weave with supplementary brocading wefts"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce/dimension/1> , <http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce/dimension/2> ;
+        dc:identifier                  "2001.876" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/158746/uncut-waistcoat> .
+
+<http://data.silknow.org/image/bd07417e-f40f-3904-943f-9fdcf41c25f8>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/158746_0.jpg> , <https://www.artic.edu/iiif/2/7f03aeb3-cc24-9316-e5df-5a3c196bc4b1/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Uncut Waistcoat" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce> .
+
+<http://data.silknow.org/actor/9cc9f4cc-fa13-35f0-875a-911c2bee2d2e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. William J. Robertson" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. William J. Robertson" .
+
+<http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "131.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "131.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/3f8b768b-9315-30c3-8a8b-503da91b92e5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2001.876" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce> , <http://data.silknow.org/event/62401379-ec85-3668-89a3-12f76aedb078> , <http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce/observation/1> , <http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce/category/1> , <http://data.silknow.org/production/6d94bd69-2a83-35d6-bbf1-f08d2e4466f3> , <http://data.silknow.org/image/bd07417e-f40f-3904-943f-9fdcf41c25f8> ;
+        dc:identifier       "158746.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/event/62401379-ec85-3668-89a3-12f76aedb078>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/9cc9f4cc-fa13-35f0-875a-911c2bee2d2e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. William J. Robertson" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce> .
+
+<http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "56" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "56"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/6d94bd69-2a83-35d6-bbf1-f08d2e4466f3>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d37db89e-052f-331e-b363-c2d2479e6cce> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_0169> , <http://data.silknow.org/timespan/1769> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3f8b768b-9315-30c3-8a8b-503da91b92e5> .

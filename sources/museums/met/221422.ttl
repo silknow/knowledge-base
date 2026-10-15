@@ -1,0 +1,125 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/b365257d-d1c1-3758-9015-3eb676090769>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/3d46f7e6-1a77-3d55-bb85-adce0ff40d9f> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Bequest of Josephine van Deventer Smith, 1922" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548> .
+
+<http://data.silknow.org/image/369c8908-b589-3156-8ca6-258680cb33e7>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/221422_0.jpg> , <https://collectionapi.metmuseum.org/api/collection/v1/iiif/221422/450156/restricted> .
+
+<http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/369c8908-b589-3156-8ca6-258680cb33e7> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548/dimension/2> , <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548/dimension/1> ;
+        dc:identifier                  "22.73.6" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.metmuseum.org/art/collection/search/221422> .
+
+<http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "European Sculpture and Decorative Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548> ;
+        ecrm:P78_is_identified_by  "European Sculpture and Decorative Arts" .
+
+<http://data.silknow.org/production/f8f395ae-f713-3dcf-8fec-3f0b1eb98517>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548> ;
+        ecrm:P126_employed      "Lace"@en , "Silk, machine net"@en , "Needlework"@en , "Net"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/857> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "28.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "28.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e018306a-7fdb-365b-97c7-2a7c657fc961>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 221422" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548/category/1> , <http://data.silknow.org/object/28488481-1dba-3c24-be18-97821091f655> , <http://data.silknow.org/event/b365257d-d1c1-3758-9015-3eb676090769> , <http://data.silknow.org/object/76985c16-5251-3631-a147-64706b5ad18b> , <http://data.silknow.org/event/daa00fa4-544e-36ac-a807-eaec96e98181> , <http://data.silknow.org/image/369c8908-b589-3156-8ca6-258680cb33e7> , <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548> , <http://data.silknow.org/object/e4cd4141-19bb-37f6-95d0-0a783fb8471f> , <http://data.silknow.org/object/45b0bc3d-4706-3bae-9b0c-cf098733365c> , <http://data.silknow.org/object/293b09db-f999-306b-9903-2a628f4a8c90> , <http://data.silknow.org/production/f8f395ae-f713-3dcf-8fec-3f0b1eb98517> , <http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5> ;
+        dc:identifier       "221422.json" ;
+        dc:publisher        "http://data.silknow.org/organization/met" .
+
+<http://data.silknow.org/object/e4cd4141-19bb-37f6-95d0-0a783fb8471f>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/6e055b4e-ede7-38c7-9cb3-821b4c69be66> .
+
+<http://data.silknow.org/object/76985c16-5251-3631-a147-64706b5ad18b>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/63d6a7ca-8e05-3f80-be68-3fa5e2cfcea4> .
+
+<http://data.silknow.org/object/293b09db-f999-306b-9903-2a628f4a8c90>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/fcdaf738-e5ac-38bf-ace5-62a6ceab8338> .
+
+<http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "561.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "561.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Strip" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/met>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e018306a-7fdb-365b-97c7-2a7c657fc961> .
+
+<http://data.silknow.org/object/28488481-1dba-3c24-be18-97821091f655>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/3ea614f2-6e8e-35e5-8b98-76f3338b5d37> .
+
+<http://data.silknow.org/object/45b0bc3d-4706-3bae-9b0c-cf098733365c>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/73a555ae-0da3-3742-9326-6fba4008ef38> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/event/daa00fa4-544e-36ac-a807-eaec96e98181>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548> .
+
+<http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/5> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4d9a4889-07ab-3a95-ab92-f3d1dbebb548> .
+
+<http://data.silknow.org/actor/3d46f7e6-1a77-3d55-bb85-adce0ff40d9f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Bequest of Josephine van Deventer Smith" ;
+        ecrm:P1_is_identified_by  "Bequest of Josephine van Deventer Smith" .

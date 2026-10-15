@@ -1,0 +1,80 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/8b0078c7-2a9f-3f07-96cb-722d3cb842bc/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/78bed5d9-94de-3658-818f-d36ac2fc5fc6> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/production/8b0078c7-2a9f-3f07-96cb-722d3cb842bc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3ba73d60-ef9b-3b5e-b84e-8d6672ca19bf> ;
+        ecrm:P126_employed      "paint"@en , "cotton; silk; paint"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/617> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1983> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/8b0078c7-2a9f-3f07-96cb-722d3cb842bc/activity/1> .
+
+<http://data.silknow.org/actor/78bed5d9-94de-3658-818f-d36ac2fc5fc6>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Mark Feigenbaum" ;
+        ecrm:P1_is_identified_by  "Mark Feigenbaum" .
+
+<http://data.silknow.org/event/ef46133a-29c0-32ae-9bf7-be4a455e4489>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/bbdfc11b-58c8-3437-9806-252952536872> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Marc/Raymond Inc." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3ba73d60-ef9b-3b5e-b84e-8d6672ca19bf> .
+
+<http://data.silknow.org/object/3ba73d60-ef9b-3b5e-b84e-8d6672ca19bf/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3ba73d60-ef9b-3b5e-b84e-8d6672ca19bf> .
+
+<http://data.silknow.org/actor/bbdfc11b-58c8-3437-9806-252952536872>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Marc/Raymond Inc" ;
+        ecrm:P1_is_identified_by  "Gift of Marc/Raymond Inc" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000480388032> .
+
+<http://data.silknow.org/event/1e582781-97d8-3302-9b1f-50cc8968e5d8>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3ba73d60-ef9b-3b5e-b84e-8d6672ca19bf> .
+
+<http://data.silknow.org/object/3ba73d60-ef9b-3b5e-b84e-8d6672ca19bf>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "1987.139.1A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/dreamland-19871391a> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/3ba73d60-ef9b-3b5e-b84e-8d6672ca19bf/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dreamland" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3ba73d60-ef9b-3b5e-b84e-8d6672ca19bf> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4a00acbd-91b0-3d86-bf4c-1aaac03e31c0> .
+
+<http://data.silknow.org/object/4a00acbd-91b0-3d86-bf4c-1aaac03e31c0>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1987.139.1A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/8b0078c7-2a9f-3f07-96cb-722d3cb842bc> , <http://data.silknow.org/object/3ba73d60-ef9b-3b5e-b84e-8d6672ca19bf/domain/1> , <http://data.silknow.org/event/ef46133a-29c0-32ae-9bf7-be4a455e4489> , <http://data.silknow.org/object/3ba73d60-ef9b-3b5e-b84e-8d6672ca19bf> , <http://data.silknow.org/event/1e582781-97d8-3302-9b1f-50cc8968e5d8> , <http://data.silknow.org/object/3ba73d60-ef9b-3b5e-b84e-8d6672ca19bf/category/1> ;
+        dc:identifier       "906686.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

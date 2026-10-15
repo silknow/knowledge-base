@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/adf6120c-e0ec-3d34-980c-87bfd014fb69/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/adf6120c-e0ec-3d34-980c-87bfd014fb69> .
+
+<http://data.silknow.org/object/adf6120c-e0ec-3d34-980c-87bfd014fb69>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, 1720-1740, Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9b83c7e0-798b-3c5e-a4db-32fda36ed74c> ;
+        dc:identifier                  "DT 53" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909266> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/9b83c7e0-798b-3c5e-a4db-32fda36ed74c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909266_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/f3a75351-4cd5-4179-bfe4-69e61a5c6116.jpg> .
+
+<http://data.silknow.org/object/4e4e8041-d0f7-337c-bc51-f1233b18b9cf>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record DT 53" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/9b83c7e0-798b-3c5e-a4db-32fda36ed74c> , <http://data.silknow.org/event/361434bc-967b-31b1-aa4a-4d9b6c3377ec> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/adf6120c-e0ec-3d34-980c-87bfd014fb69> , <http://data.silknow.org/production/91598d2f-3035-3d68-ae0f-3dec86724549> , <http://data.silknow.org/object/adf6120c-e0ec-3d34-980c-87bfd014fb69/category/1> ;
+        dc:identifier       "909266.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/361434bc-967b-31b1-aa4a-4d9b6c3377ec>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Provenance inconnue, reversement de la Bibliothèque des Arts Décoratifs, 2010" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/adf6120c-e0ec-3d34-980c-87bfd014fb69> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4e4e8041-d0f7-337c-bc51-f1233b18b9cf> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/adf6120c-e0ec-3d34-980c-87bfd014fb69> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/production/91598d2f-3035-3d68-ae0f-3dec86724549>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1720-1740, Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/adf6120c-e0ec-3d34-980c-87bfd014fb69> ;
+        ecrm:P126_employed      "Taffetas broché soie polychrome"@fr ;
+        ecrm:P3_has_note        "France, 1720-1740, Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1720_1740> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .

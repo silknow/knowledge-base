@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1> .
+
+<http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "17" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "17"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/d92cce7c-fd36-3b34-ac99-7a162c9c321a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1> .
+
+<http://data.silknow.org/object/27028579-9ea4-39db-b9ea-cd993f509416>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 279309" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1> , <http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1/domain/1> , <http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1/observation/1> , <http://data.silknow.org/production/94b46858-2a6f-3dd8-833a-f37d487d964f> , <http://data.silknow.org/event/d92cce7c-fd36-3b34-ac99-7a162c9c321a> , <http://data.silknow.org/image/6c18c1e8-8cf5-3b8b-86a4-c66ca685c3c1> , <http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1/category/1> ;
+        dc:identifier       "279309.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Cannellato liseré a pelo strisciante lanciato broccato"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1> .
+
+<http://data.silknow.org/image/6c18c1e8-8cf5-3b8b-86a4-c66ca685c3c1>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/279309_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5HHK84COMnKWG6RU64SsrAHNqRmhzBWr9tDkcQ7GAzTprEKNsgMcU1V2tzTiEG4lYupibfn5CCUVjw1ROo418mdIqnuifkNxjtXa8S4d0Hd1lBektRR%2fO4w%3d%3d> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/27028579-9ea4-39db-b9ea-cd993f509416> .
+
+<http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1> .
+
+<http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Cannellato liseré a pelo strisciante lanciato broccato"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6c18c1e8-8cf5-3b8b-86a4-c66ca685c3c1> ;
+        ecrm:P3_has_note               "Cannellato liseré a pelo strisciante lanciato broccato"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1/dimension/1> , <http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 1159" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/279309/?WEB=MuseiVE> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "43" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "43"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/94b46858-2a6f-3dd8-833a-f37d487d964f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c9b747fe-b369-3fd2-99cb-972abb2947f1> ;
+        ecrm:P126_employed      "filo metallico"@it ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1799> .

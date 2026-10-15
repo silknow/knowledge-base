@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/77f8ab6f-6d20-3c17-967a-13f3447e8248> .
+
+<http://data.silknow.org/event/920d1db9-ab6d-3531-87ba-f0c3e5b7f174>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b> ;
+        ecrm:P23_transferred_title_from
+                "Tórtola Valencia, Carmen" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa> .
+
+<http://data.silknow.org/object/77f8ab6f-6d20-3c17-967a-13f3447e8248>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 8200" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/34cad1a6-62a4-3253-9545-aec1bd315d30> , <http://data.silknow.org/production/c200c1d8-ebfe-3827-bf54-2eb9bdbd62dd> , <http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa/domain/1> , <http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa/category/1> , <http://data.silknow.org/event/01d6b90a-7a95-3f69-8e1c-805e581396e9> , <http://data.silknow.org/event/920d1db9-ab6d-3531-87ba-f0c3e5b7f174> , <http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa/observation/1> , <http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa> ;
+        dc:identifier       "8200.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/4e4b4e12-a6ce-3003-b27c-f0581dbee674>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "uva"@es ;
+        ecrm:P3_has_note  "uva"@es .
+
+<http://data.silknow.org/production/c200c1d8-ebfe-3827-bf54-2eb9bdbd62dd>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "trama llançada"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/6> , <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- conserva 1 voraviu"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa> .
+
+<http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Tórtola Valencia, Carmen" ;
+        ecrm:P1_is_identified_by  "Tórtola Valencia, Carmen" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Carmen_Tórtola_Valencia> , <https://viaf.org/viaf/47896092> , <https://isni.org/isni/0000000038570077> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Carmen_Tórtola_Valencia> .
+
+<http://data.silknow.org/event/01d6b90a-7a95-3f69-8e1c-805e581396e9>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa> .
+
+<http://data.silknow.org/image/7b153115-7368-36f3-ac35-5d275b737d4e>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "zarcillos"@es ;
+        ecrm:P3_has_note  "zarcillos"@es .
+
+<http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa> .
+
+<http://data.silknow.org/image/34cad1a6-62a4-3253-9545-aec1bd315d30>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000005327" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/8200_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000005327.jpg> .
+
+<http://data.silknow.org/object/0d24ad33-6505-3d59-ba94-19d14948a8aa>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "conserva 1 voraviu"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/34cad1a6-62a4-3253-9545-aec1bd315d30> ;
+        ecrm:P3_has_note               "conserva 1 voraviu"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> , <http://data.silknow.org/image/7b153115-7368-36f3-ac35-5d275b737d4e> , <http://data.silknow.org/image/4e4b4e12-a6ce-3003-b27c-f0581dbee674> ;
+        dc:identifier                  "8703" .

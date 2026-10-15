@@ -1,0 +1,79 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/edf0662e-2d1d-3247-bd26-df545ddf32b8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/50655d27-5fd6-32b1-bd26-5ca6ad8f026a> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Marshall H. Gould" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169> .
+
+<http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "46.124" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/kesa-46124> .
+
+<http://data.silknow.org/actor/50655d27-5fd6-32b1-bd26-5ca6ad8f026a>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Marshall H. Gould" ;
+        ecrm:P1_is_identified_by  "Gift of Marshall H. Gould" .
+
+<http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/62> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169> .
+
+<http://data.silknow.org/event/8991c664-aaf9-3d21-a309-433db835d07d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169> .
+
+<http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169> .
+
+<http://data.silknow.org/object/654ecc22-67cc-3701-9bee-4a448111086e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 46.124" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169> , <http://data.silknow.org/event/edf0662e-2d1d-3247-bd26-df545ddf32b8> , <http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169/domain/2> , <http://data.silknow.org/production/a7295e29-bdc3-3db6-8c2b-5995d83f8553> , <http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169/domain/1> , <http://data.silknow.org/event/8991c664-aaf9-3d21-a309-433db835d07d> , <http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169/category/1> ;
+        dc:identifier       "879066.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Fashion" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/654ecc22-67cc-3701-9bee-4a448111086e> .
+
+<http://data.silknow.org/production/a7295e29-bdc3-3db6-8c2b-5995d83f8553>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f7521bf7-ea3b-3e92-8fa3-85a6d741f169> ;
+        ecrm:P126_employed      "gilt paper"@en , "silk; gilt paper"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/638> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/7d496396-4079-30f8-8cde-4b03883ee23e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .

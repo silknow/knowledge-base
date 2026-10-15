@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/22d69b4f-1623-30b3-bac5-0077e6fa92d2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b> ;
+        ecrm:P126_employed      "metallic"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "woven"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b> .
+
+<http://data.silknow.org/event/5d1c21b7-6b5d-3289-841d-dd74d69923b5>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/2a290bf9-dfc3-3c71-bb60-00ed520acd3a> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Eleanor and Sarah Hewitt" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b> .
+
+<http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b> .
+
+<http://data.silknow.org/image/c3f12b50-19f5-32e9-8eb0-696bc8706585>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1896-1-117_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-9F0C3F73B6C32-000001> .
+
+<http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Gold colored silk fabric with the design also in gold."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c3f12b50-19f5-32e9-8eb0-696bc8706585> ;
+        ecrm:P3_has_note               "Gold colored silk fabric with the design also in gold."@en ;
+        dc:identifier                  "chndm_1896-1-117" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1896-1-117> .
+
+<http://data.silknow.org/object/2d591f04-7c09-38f7-9d5f-28edda9fb561>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1896-1-117" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/22d69b4f-1623-30b3-bac5-0077e6fa92d2> , <http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b/observation/1> , <http://data.silknow.org/image/c3f12b50-19f5-32e9-8eb0-696bc8706585> , <http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b> , <http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b/category/1> , <http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b/domain/1> , <http://data.silknow.org/event/5d1c21b7-6b5d-3289-841d-dd74d69923b5> , <http://data.silknow.org/event/42a0b843-480f-3610-ac31-3d225c3e0a7c> ;
+        dc:identifier       "chndm_1896-1-117.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/smiths>
+        a                         crmdig:D1_Digital_Object , <http://www.w3.org/ns/dcat#dataset> ;
+        rdfs:label                "smiths" ;
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2d591f04-7c09-38f7-9d5f-28edda9fb561> .
+
+<http://data.silknow.org/event/42a0b843-480f-3610-ac31-3d225c3e0a7c>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b> .
+
+<http://data.silknow.org/actor/2a290bf9-dfc3-3c71-bb60-00ed520acd3a>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Eleanor and Sarah Hewitt" ;
+        ecrm:P1_is_identified_by  "Gift of Eleanor and Sarah Hewitt" .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Gold colored silk fabric with the design also in gold."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b16a9105-b679-3002-b8da-25f0528e0c1b> .

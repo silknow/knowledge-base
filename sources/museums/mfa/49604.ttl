@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/b874c780-6235-3fd6-9ce3-a1b2644c9d06>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340> ;
+        ecrm:P126_employed      "Silk brocade"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Warp figured ribbon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340> .
+
+<http://data.silknow.org/object/c9686cd2-503f-3ac8-a14b-bf711b64c1db>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 48.1195" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/7a22efde-9e2b-31e2-87b6-f53e0ef85df3> , <http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340/domain/1> , <http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340> , <http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340/observation/1> , <http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340/category/1> , <http://data.silknow.org/image/f7a41bfb-d40e-3196-9ad4-225bb7c78e78> , <http://data.silknow.org/production/b874c780-6235-3fd6-9ce3-a1b2644c9d06> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "49604.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "131.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "131.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Warp figured ribbon; white silk ground, central broad stripe of yellow flanked by narrower green stripes, over central yellow stripe repeat in extra pink, green, and white warps, of flowering plant with perching bird holding rosette-like blossom in beak; highly conventionalized angular small-scale plant forms, brocaded with yellow silk, flanking green stripes."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340> .
+
+<http://data.silknow.org/event/7a22efde-9e2b-31e2-87b6-f53e0ef85df3>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/f7a41bfb-d40e-3196-9ad4-225bb7c78e78>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "745058" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/49604_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/745058/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c9686cd2-503f-3ac8-a14b-bf711b64c1db> .
+
+<http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Warp figured ribbon; white silk ground, central broad stripe of yellow flanked by narrower green stripes, over central yellow stripe repeat in extra pink, green, and white warps, of flowering plant with perching bird holding rosette-like blossom in beak; highly conventionalized angular small-scale plant forms, brocaded with yellow silk, flanking green stripes."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f7a41bfb-d40e-3196-9ad4-225bb7c78e78> ;
+        ecrm:P3_has_note               "Warp figured ribbon; white silk ground, central broad stripe of yellow flanked by narrower green stripes, over central yellow stripe repeat in extra pink, green, and white warps, of flowering plant with perching bird holding rosette-like blossom in beak; highly conventionalized angular small-scale plant forms, brocaded with yellow silk, flanking green stripes."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340/dimension/2> , <http://data.silknow.org/object/0261409d-a731-34b2-a8cd-067c0e9e0340/dimension/1> ;
+        dc:identifier                  "48.1195" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/49604> .

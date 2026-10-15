@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "25" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "25"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Brocade" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19> .
+
+<http://data.silknow.org/event/e33d2782-815f-34a9-89c1-e6776c0e8471>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19> .
+
+<http://data.silknow.org/production/c54a2d91-8194-3931-a21a-c0522370a80b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19> ;
+        ecrm:P126_employed      "Silk; brocade"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404506> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Pinkish orange satin ground.  The design, of which only portions appear, consists of birds affronted, heads turned, within pointed ovals, surrounded by an ogival, arabesque framework; woven with silk wound with gold."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/67ef56b0-f9a4-3f46-9bab-04d73f2bfbfe> ;
+        ecrm:P3_has_note               "Pinkish orange satin ground.  The design, of which only portions appear, consists of birds affronted, heads turned, within pointed ovals, surrounded by an ogival, arabesque framework; woven with silk wound with gold."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19/dimension/2> , <http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19/dimension/1> ;
+        dc:identifier                  "04.1637" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/72954> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19> .
+
+<http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Pinkish orange satin ground.  The design, of which only portions appear, consists of birds affronted, heads turned, within pointed ovals, surrounded by an ogival, arabesque framework; woven with silk wound with gold."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/87b92e81-91a2-37f9-8d5e-4015ec35101e> .
+
+<http://data.silknow.org/object/87b92e81-91a2-37f9-8d5e-4015ec35101e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 04.1637" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19/domain/1> , <http://data.silknow.org/production/c54a2d91-8194-3931-a21a-c0522370a80b> , <http://data.silknow.org/event/e33d2782-815f-34a9-89c1-e6776c0e8471> , <http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19/observation/1> , <http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19/category/1> , <http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19> , <http://data.silknow.org/image/67ef56b0-f9a4-3f46-9bab-04d73f2bfbfe> ;
+        dc:identifier       "72954.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/image/67ef56b0-f9a4-3f46-9bab-04d73f2bfbfe>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "730096" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/72954_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/730096/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/3807dae0-597c-32d6-8041-eeb9dd163e19/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "19" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "19"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

@@ -1,0 +1,79 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/aa0fa1a6-8ed5-34e9-a0b1-0340fb7771ff/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/aa0fa1a6-8ed5-34e9-a0b1-0340fb7771ff> .
+
+<http://data.silknow.org/event/20832ae8-600b-3abb-b610-5c9b88afca59>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/444d0a8c-aa86-3251-8747-ec08f2c9009a> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mary Patterson" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/aa0fa1a6-8ed5-34e9-a0b1-0340fb7771ff> .
+
+<http://data.silknow.org/event/7f00ed73-38bd-3391-acda-6b6f38f3fb40>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/aa0fa1a6-8ed5-34e9-a0b1-0340fb7771ff> .
+
+<https://sws.geonames.org/732800/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/413537a7-3b7c-3680-bf2b-62dba45c7335>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/aa0fa1a6-8ed5-34e9-a0b1-0340fb7771ff> ;
+        ecrm:P126_employed      "linen"@en , "silk; linen"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1825> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/732800/> .
+
+<http://data.silknow.org/object/aa0fa1a6-8ed5-34e9-a0b1-0340fb7771ff/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/aa0fa1a6-8ed5-34e9-a0b1-0340fb7771ff> .
+
+<http://data.silknow.org/actor/444d0a8c-aa86-3251-8747-ec08f2c9009a>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mary Patterson" ;
+        ecrm:P1_is_identified_by  "Gift of Mary Patterson" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/190867189> , <https://isni.org/isni/0000000434893687> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/image/594b2b65-5761-3b77-8c50-d93c0b2f69f2>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/837596_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/14736.jpg> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f51a68cf-b45c-3243-ad43-d51125df6149> .
+
+<http://data.silknow.org/object/aa0fa1a6-8ed5-34e9-a0b1-0340fb7771ff>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/594b2b65-5761-3b77-8c50-d93c0b2f69f2> ;
+        dc:identifier                  "53.018" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-53018> .
+
+<http://data.silknow.org/object/f51a68cf-b45c-3243-ad43-d51125df6149>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 53.018" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/20832ae8-600b-3abb-b610-5c9b88afca59> , <http://data.silknow.org/image/594b2b65-5761-3b77-8c50-d93c0b2f69f2> , <http://data.silknow.org/production/413537a7-3b7c-3680-bf2b-62dba45c7335> , <http://data.silknow.org/object/aa0fa1a6-8ed5-34e9-a0b1-0340fb7771ff/domain/1> , <http://data.silknow.org/event/7f00ed73-38bd-3391-acda-6b6f38f3fb40> , <http://data.silknow.org/object/aa0fa1a6-8ed5-34e9-a0b1-0340fb7771ff> , <http://data.silknow.org/object/aa0fa1a6-8ed5-34e9-a0b1-0340fb7771ff/category/1> ;
+        dc:identifier       "837596.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

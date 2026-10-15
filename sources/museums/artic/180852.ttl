@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/2d1e3296-0cb0-3c12-a3fe-6f945bf5f7ec>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1937.1286a" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/30fa5ad5-c342-32f3-9c60-0905630f5e54> , <http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8/observation/1> , <http://data.silknow.org/production/cf0aeed0-6a13-3b0a-b8ac-6a6911bc4abd> , <http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8> , <http://data.silknow.org/image/e5b4dc85-1e5c-3105-b2d6-c03ad711f66c> , <http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8/category/1> ;
+        dc:identifier       "180852.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/event/30fa5ad5-c342-32f3-9c60-0905630f5e54>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/83d8e0dd-5c09-38ba-a935-17a84d5f14a1> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mr. and Mrs. Martin A. Ryerson" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8> .
+
+<http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk and gilt-metal strip, plain weave with supplementary patterning wefts bound in plain interlacings; two selvages present"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8> .
+
+<http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8> .
+
+<http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "100.0" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "100.0"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk and gilt-metal strip, plain weave with supplementary patterning wefts bound in plain interlacings; two selvages present"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e5b4dc85-1e5c-3105-b2d6-c03ad711f66c> ;
+        ecrm:P3_has_note               "Silk and gilt-metal strip, plain weave with supplementary patterning wefts bound in plain interlacings; two selvages present"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8/dimension/1> , <http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8/dimension/2> ;
+        dc:identifier                  "1937.1286a" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/180852/panel> .
+
+<http://data.silknow.org/production/cf0aeed0-6a13-3b0a-b8ac-6a6911bc4abd>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> , <http://data.silknow.org/timespan/1700> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/actor/83d8e0dd-5c09-38ba-a935-17a84d5f14a1>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mr. and Mrs. Martin A. Ryerson" ;
+        ecrm:P1_is_identified_by  "Gift of Mr. and Mrs. Martin A. Ryerson" .
+
+<http://data.silknow.org/image/e5b4dc85-1e5c-3105-b2d6-c03ad711f66c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/180852_0.jpg> , <https://www.artic.edu/iiif/2/d063342f-c29c-54d0-bd6b-850e0ec9732e/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2d1e3296-0cb0-3c12-a3fe-6f945bf5f7ec> .
+
+<http://data.silknow.org/object/bdc9291a-ad7a-3af2-ba1e-9fa316252ba8/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "53.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "53.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

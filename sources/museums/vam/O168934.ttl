@@ -1,0 +1,109 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 127 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "127"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/4f9e904e-8b2b-3122-95d2-86b005549f00>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a> ;
+        ecrm:P126_employed      "silk thread, metal thread, weaving."@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1840_1870> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/object/f8a86311-2203-32f3-a56c-377b96b1299d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O168934" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a/observation/1> , <http://data.silknow.org/production/4f9e904e-8b2b-3122-95d2-86b005549f00> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/object/842f040a-ce2a-36ed-bad8-db3794263260> , <http://data.silknow.org/event/79684e68-8eb5-3418-92ee-9f774a11a541> , <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a/observation/2> , <http://data.silknow.org/image/8acd358f-2261-3f6a-9af5-533f94a527c9> , <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a/domain/1> , <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a> ;
+        dc:identifier       "O168934.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "1800s, Persian; Flowers"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/event/79684e68-8eb5-3418-92ee-9f774a11a541>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a> .
+
+<http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "selvedge to selvedge" ;
+        rdfs:label          "Width: 67 cm selvedge to selvedge" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "selvedge to selvedge" ;
+        ecrm:P90_has_value  "67"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dress fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a> .
+
+<http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "1800s, Persian; Flowers"@en , "Description: Dress fabric of woven silk and metal thread; with weft floats on the back. Gold ground with rows of botehs facing the opposite direction in alternate rows.  The metal thread is silver-strip open S-wound on a yellow silk core and is the foundation weft.  The warp is orange silk. It is a loose sateen weave.  Each boteh is plump with red roots, a dark outline, dark green leaves, a central white blossom and red and light blue flowers. At the top of the piece is a band of red silk which marks a loom end or piece end. There are places in which red silk has been used instead of orange in the weft."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8acd358f-2261-3f6a-9af5-533f94a527c9> ;
+        ecrm:P3_has_note               "Description: Dress fabric of woven silk and metal thread; with weft floats on the back. Gold ground with rows of botehs facing the opposite direction in alternate rows.  The metal thread is silver-strip open S-wound on a yellow silk core and is the foundation weft.  The warp is orange silk. It is a loose sateen weave.  Each boteh is plump with red roots, a dark outline, dark green leaves, a central white blossom and red and light blue flowers. At the top of the piece is a band of red silk which marks a loom end or piece end. There are places in which red silk has been used instead of orange in the weft."@en , "1800s, Persian; Flowers"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a/dimension/2> , <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a/dimension/1> ;
+        dc:identifier                  "957-1889" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O168934> .
+
+<http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f8a86311-2203-32f3-a56c-377b96b1299d> .
+
+<http://data.silknow.org/object/842f040a-ce2a-36ed-bad8-db3794263260>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Illustrated in 'Iranian Textiles' by Jennifer Wearden and Patrcia L Baker, V&A Publishing, 2010, fig. 26 page 44 and plate 15 page 96."@en ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Illustrated in 'Iranian Textiles' by Jennifer Wearden and Patrcia L Baker, V&A Publishing, 2010, fig. 26 page 44 and plate 15 page 96."@en .
+
+<http://data.silknow.org/image/8acd358f-2261-3f6a-9af5-533f94a527c9>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2010CT4410" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O168934_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2010CT/2010CT4410.jpg> .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .
+
+<http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Description: Dress fabric of woven silk and metal thread; with weft floats on the back. Gold ground with rows of botehs facing the opposite direction in alternate rows.  The metal thread is silver-strip open S-wound on a yellow silk core and is the foundation weft.  The warp is orange silk. It is a loose sateen weave.  Each boteh is plump with red roots, a dark outline, dark green leaves, a central white blossom and red and light blue flowers. At the top of the piece is a band of red silk which marks a loom end or piece end. There are places in which red silk has been used instead of orange in the weft."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/eb2bb488-4aad-35b4-be01-479ad1936f1a> .

@@ -1,0 +1,122 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/dimension/4>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "minimum" ;
+        rdfs:label          "Width: 7 cm minimum" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "minimum" ;
+        ecrm:P90_has_value  "7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/98c3059c-a93d-328f-baa8-98675b4e6883>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2009CR5300" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O187016_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2009CR/2009CR5300.jpg> .
+
+<http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "embroidered leather, 1800-1860, Persian"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38> .
+
+<http://data.silknow.org/object/2d1bfb1d-4211-3e14-a292-494388374693>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Published in 'Iranian Textiles' by Jennifer Wearden and Patricia L Baker (V&A Publishing, 2010) Plate 70."@en ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Published in 'Iranian Textiles' by Jennifer Wearden and Patricia L Baker (V&A Publishing, 2010) Plate 70."@en .
+
+<http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "including strap" ;
+        rdfs:label          "Length: 53 cm including strap" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "including strap" ;
+        ecrm:P90_has_value  "53"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/820e4c82-97e0-30d9-ab04-7b1425f7207d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38> ;
+        ecrm:P126_employed      "silk thread, metal thread, cotton yarn, leather, weaving, embroidering, sewing."@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1860> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Holster" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38> .
+
+<http://data.silknow.org/event/1907b0bb-72ba-3cb0-9667-6e4b40472f22>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38> .
+
+<http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "embroidered leather, 1800-1860, Persian"@en , "Holster for a pistol or revolver, leather and silk velvet embroidered with silk in straight stitches, couched metal thread and cotton in chain stitch.\nBasically this is an elongated triangle with slightly curving sides.  The back is flat and is made from brown leather stamped with a pattern of pairs of vertical and diagonal lines forming a chevron design. At the bottom is an arch-shaped piece of green leather [into which a strap would have been inserted].  The lower edge is bound with a narrow strip of green leather.  A fine line of alternating black and white cotton in chain stitch goes down the sides and over the point of the green arch.  Towards the top of the back there is a larger downward pointing arch shape in green leather with the same black/white stitching.  Inserted into this are the two ends of a brown leather strap forming a loop and stitched in place with cotton twine.  These are further secured by a horizontal piece of brown leather which is stitched into 2 small horizontal arch-shaped pieces of green leather. \nThe front is formed by a curved piece of leather joined down the sides to the back but open at the bottom.  An arch-shaped flap of leather covers the upper half of the front.  The flap and the uncovered part of the front are covered with red velvet which must have been embroidered first and then glued [?] to the leather.  The sides have been reinforced and bound with a strip of green leather and the edges of the flap are worked into a chevron pattern using green, red, white, mauve [faded], light blue and yellow silk.\nThe flap is embroidered with the figure of a man on a horse, spearing an animal with a bird by his right hand. Poor drawing.  He is within an arch shape.  There is a border on 3 sides [not across the top] with a meander with flowers and leaves with details in red and green silk. The main embroidery is couched metal thread. The lower part of the front has a long, serrated cypress tree, stems and flowers and a pair of large birds. \nSilk: 2S, colours as above and also dark brown or black and pink in the lower part.\nMetal Thread: [1] silver strip open and close S-wound on white silk and couched over card shapes.\n[2] silver-gilt strip open and close S-wound on white silk and couched over card shapes."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/98c3059c-a93d-328f-baa8-98675b4e6883> ;
+        ecrm:P3_has_note               "Holster for a pistol or revolver, leather and silk velvet embroidered with silk in straight stitches, couched metal thread and cotton in chain stitch.\nBasically this is an elongated triangle with slightly curving sides.  The back is flat and is made from brown leather stamped with a pattern of pairs of vertical and diagonal lines forming a chevron design. At the bottom is an arch-shaped piece of green leather [into which a strap would have been inserted].  The lower edge is bound with a narrow strip of green leather.  A fine line of alternating black and white cotton in chain stitch goes down the sides and over the point of the green arch.  Towards the top of the back there is a larger downward pointing arch shape in green leather with the same black/white stitching.  Inserted into this are the two ends of a brown leather strap forming a loop and stitched in place with cotton twine.  These are further secured by a horizontal piece of brown leather which is stitched into 2 small horizontal arch-shaped pieces of green leather. \nThe front is formed by a curved piece of leather joined down the sides to the back but open at the bottom.  An arch-shaped flap of leather covers the upper half of the front.  The flap and the uncovered part of the front are covered with red velvet which must have been embroidered first and then glued [?] to the leather.  The sides have been reinforced and bound with a strip of green leather and the edges of the flap are worked into a chevron pattern using green, red, white, mauve [faded], light blue and yellow silk.\nThe flap is embroidered with the figure of a man on a horse, spearing an animal with a bird by his right hand. Poor drawing.  He is within an arch shape.  There is a border on 3 sides [not across the top] with a meander with flowers and leaves with details in red and green silk. The main embroidery is couched metal thread. The lower part of the front has a long, serrated cypress tree, stems and flowers and a pair of large birds. \nSilk: 2S, colours as above and also dark brown or black and pink in the lower part.\nMetal Thread: [1] silver strip open and close S-wound on white silk and couched over card shapes.\n[2] silver-gilt strip open and close S-wound on white silk and couched over card shapes."@en , "embroidered leather, 1800-1860, Persian"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/dimension/4> , <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/dimension/1> , <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/dimension/2> , <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/dimension/3> ;
+        dc:identifier                  "973-1889" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O187016> .
+
+<http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "maximum" ;
+        rdfs:label          "Width: 15.5 cm maximum" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "maximum" ;
+        ecrm:P90_has_value  "15.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/367e8895-7c39-3eb9-b156-395fdc1acce7> .
+
+<http://data.silknow.org/object/367e8895-7c39-3eb9-b156-395fdc1acce7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O187016" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/820e4c82-97e0-30d9-ab04-7b1425f7207d> , <http://data.silknow.org/object/2d1bfb1d-4211-3e14-a292-494388374693> , <http://data.silknow.org/event/1907b0bb-72ba-3cb0-9667-6e4b40472f22> , <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/observation/1> , <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/observation/2> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38> , <http://data.silknow.org/image/98c3059c-a93d-328f-baa8-98675b4e6883> ;
+        dc:identifier       "O187016.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Holster for a pistol or revolver, leather and silk velvet embroidered with silk in straight stitches, couched metal thread and cotton in chain stitch.\nBasically this is an elongated triangle with slightly curving sides.  The back is flat and is made from brown leather stamped with a pattern of pairs of vertical and diagonal lines forming a chevron design. At the bottom is an arch-shaped piece of green leather [into which a strap would have been inserted].  The lower edge is bound with a narrow strip of green leather.  A fine line of alternating black and white cotton in chain stitch goes down the sides and over the point of the green arch.  Towards the top of the back there is a larger downward pointing arch shape in green leather with the same black/white stitching.  Inserted into this are the two ends of a brown leather strap forming a loop and stitched in place with cotton twine.  These are further secured by a horizontal piece of brown leather which is stitched into 2 small horizontal arch-shaped pieces of green leather. \nThe front is formed by a curved piece of leather joined down the sides to the back but open at the bottom.  An arch-shaped flap of leather covers the upper half of the front.  The flap and the uncovered part of the front are covered with red velvet which must have been embroidered first and then glued [?] to the leather.  The sides have been reinforced and bound with a strip of green leather and the edges of the flap are worked into a chevron pattern using green, red, white, mauve [faded], light blue and yellow silk.\nThe flap is embroidered with the figure of a man on a horse, spearing an animal with a bird by his right hand. Poor drawing.  He is within an arch shape.  There is a border on 3 sides [not across the top] with a meander with flowers and leaves with details in red and green silk. The main embroidery is couched metal thread. The lower part of the front has a long, serrated cypress tree, stems and flowers and a pair of large birds. \nSilk: 2S, colours as above and also dark brown or black and pink in the lower part.\nMetal Thread: [1] silver strip open and close S-wound on white silk and couched over card shapes.\n[2] silver-gilt strip open and close S-wound on white silk and couched over card shapes."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38> .
+
+<http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 40.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "40.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6dd111aa-4c2a-390a-8f4e-66643a8e1f38> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .

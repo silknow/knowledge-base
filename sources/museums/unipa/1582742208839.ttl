@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/9eb10e66-c279-31c9-931c-6c4aadde5c2b>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Assente"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f5864516-5b76-3acb-b9d1-fac84a515346> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Assente"@it .
+
+<http://data.silknow.org/actor/ecef3a7f-77c0-3f8c-8784-b920720aef4d>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Catania, Museo Diocesano" ;
+        ecrm:P1_is_identified_by  "Catania, Museo Diocesano" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/5b4dd0dc-792d-308a-ab6f-31d56b4b8bd6>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/ecef3a7f-77c0-3f8c-8784-b920720aef4d> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f5864516-5b76-3acb-b9d1-fac84a515346> .
+
+<http://data.silknow.org/object/f5864516-5b76-3acb-b9d1-fac84a515346/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f5864516-5b76-3acb-b9d1-fac84a515346> ;
+        ecrm:P42_assigned    "Conopeo di tabernacolo" .
+
+<http://data.silknow.org/image/3f53dd35-da1d-394e-944c-9a9d07222ddb>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1582742584_catania22" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1582742208839_0.jpg> .
+
+<http://data.silknow.org/object/f5864516-5b76-3acb-b9d1-fac84a515346/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "50" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "50"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ad821595-d998-3a99-93f7-e81aec1151ad> .
+
+<http://data.silknow.org/production/dbc0d53f-83b9-382d-a461-db636420ee9a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f5864516-5b76-3acb-b9d1-fac84a515346> ;
+        ecrm:P32_used_general_technique
+                "Taffetas rigato lanciato a liage répris"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/9f64171c-b2fd-3022-97c6-fc4e07708cb0> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/ad821595-d998-3a99-93f7-e81aec1151ad>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1582742208839" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/5b4dd0dc-792d-308a-ab6f-31d56b4b8bd6> , <http://data.silknow.org/object/f5864516-5b76-3acb-b9d1-fac84a515346> , <http://data.silknow.org/object/f5864516-5b76-3acb-b9d1-fac84a515346/type/1> , <http://data.silknow.org/object/9eb10e66-c279-31c9-931c-6c4aadde5c2b> , <http://data.silknow.org/production/dbc0d53f-83b9-382d-a461-db636420ee9a> , <http://data.silknow.org/image/3f53dd35-da1d-394e-944c-9a9d07222ddb> ;
+        dc:identifier       "1582742208839.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/object/f5864516-5b76-3acb-b9d1-fac84a515346>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "1725 circa"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3f53dd35-da1d-394e-944c-9a9d07222ddb> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/f5864516-5b76-3acb-b9d1-fac84a515346/dimension/2> , <http://data.silknow.org/object/f5864516-5b76-3acb-b9d1-fac84a515346/dimension/1> ;
+        dc:identifier                  "1582742208839" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/f5864516-5b76-3acb-b9d1-fac84a515346/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "60" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "60"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

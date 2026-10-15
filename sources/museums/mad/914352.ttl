@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/8f8aff5d-64ea-3a16-b462-87a2dd9293b2>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Cornille et Cie, 1926" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b60b1e24-6a2d-3138-b72e-af3d709d1243> .
+
+<http://data.silknow.org/image/da9b4444-6314-3d91-9574-64e9fe1f167e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/914352_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/29cd6683-9ec9-4ff0-830e-27944ad1fb58.jpg> .
+
+<http://data.silknow.org/object/b60b1e24-6a2d-3138-b72e-af3d709d1243>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Cornille et Cie, Lyon, 1925, Englinger"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/da9b4444-6314-3d91-9574-64e9fe1f167e> ;
+        dc:identifier                  "25175" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/914352> .
+
+<http://data.silknow.org/object/7ede59d4-e8fe-35b4-8de4-e42ad661a850>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 25175" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b60b1e24-6a2d-3138-b72e-af3d709d1243/category/1> , <http://data.silknow.org/image/da9b4444-6314-3d91-9574-64e9fe1f167e> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/8f8aff5d-64ea-3a16-b462-87a2dd9293b2> , <http://data.silknow.org/production/af988aff-6db9-31df-a635-3dd38f4cc1c2> , <http://data.silknow.org/object/b60b1e24-6a2d-3138-b72e-af3d709d1243> ;
+        dc:identifier       "914352.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/af988aff-6db9-31df-a635-3dd38f4cc1c2>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Cornille et Cie, Lyon, 1925, Englinger" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b60b1e24-6a2d-3138-b72e-af3d709d1243> ;
+        ecrm:P3_has_note        "Cornille et Cie, Lyon, 1925, Englinger" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1925> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2996944/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7ede59d4-e8fe-35b4-8de4-e42ad661a850> .
+
+<http://data.silknow.org/object/b60b1e24-6a2d-3138-b72e-af3d709d1243/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b60b1e24-6a2d-3138-b72e-af3d709d1243> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/b60b1e24-6a2d-3138-b72e-af3d709d1243> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .

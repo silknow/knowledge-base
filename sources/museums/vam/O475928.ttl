@@ -1,0 +1,111 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/fd4e7738-057b-3489-9a1d-c1556c9dc863>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017KA0773" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O475928_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017KA/2017KA0773.jpg> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "Waist to ankle" ;
+        rdfs:label          "Length: 115 cm Waist to ankle" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "Waist to ankle" ;
+        ecrm:P90_has_value  "115"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Trousers, red silk with white and green stripes, with drawstring of green and red silk and metal-wrapped thread, Lahore, ca. 1855; Textiles"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d> .
+
+<http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "India Museum" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d> .
+
+<http://data.silknow.org/event/af6ac06e-b026-3833-866f-a4a2f6d0e2f5>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "Transferred from the India Museum in 1879. 1880 Register entry: '05,701. ROBE. White calico. Tunic, shot silk. \"Pyjamas,\" red striped silk. Muslin, piece of, for \"Pyjamas;\" Lahore. 3,746'. Slip book entry 3746: 'Clothing in 5 pieces / Lahore / Orange coloured Turban piece, White Robe - silk tunic, Silk trousers & White do / Worn by Hindoos / Orange coloured turban piece taken out'"@en ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d> ;
+        ecrm:P3_has_note               "Transferred from the India Museum in 1879. 1880 Register entry: '05,701. ROBE. White calico. Tunic, shot silk. \"Pyjamas,\" red striped silk. Muslin, piece of, for \"Pyjamas;\" Lahore. 3,746'. Slip book entry 3746: 'Clothing in 5 pieces / Lahore / Orange coloured Turban piece, White Robe - silk tunic, Silk trousers & White do / Worn by Hindoos / Orange coloured turban piece taken out'"@en .
+
+<http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "South & South East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d> ;
+        ecrm:P78_is_identified_by  "South & South East Asia Collection" .
+
+<http://data.silknow.org/production/998c4965-9182-3f85-b278-35582cd5d554>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d> ;
+        ecrm:P126_employed      "Woven silk"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1855> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1172451/> .
+
+<http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Red silk trousers, with white and green stripes"@en , "Trousers, red silk with white and green stripes, with drawstring of green and red silk and metal-wrapped thread, Lahore, ca. 1855; Textiles"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/fd4e7738-057b-3489-9a1d-c1556c9dc863> , <http://data.silknow.org/image/cc326f9b-9269-3c9b-8ebd-e4a2449518b1> ;
+        ecrm:P3_has_note               "Red silk trousers, with white and green stripes"@en , "Trousers, red silk with white and green stripes, with drawstring of green and red silk and metal-wrapped thread, Lahore, ca. 1855; Textiles"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d/dimension/2> , <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d/dimension/1> ;
+        dc:identifier                  "05701(IS)" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O475928> .
+
+<http://data.silknow.org/object/ecf62e36-30ea-3485-bb84-7c9cc2d5ddc9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O475928" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/fd4e7738-057b-3489-9a1d-c1556c9dc863> , <http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217> , <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d/domain/1> , <http://data.silknow.org/event/af6ac06e-b026-3833-866f-a4a2f6d0e2f5> , <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d/observation/2> , <http://data.silknow.org/production/998c4965-9182-3f85-b278-35582cd5d554> , <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d/observation/1> , <http://data.silknow.org/image/cc326f9b-9269-3c9b-8ebd-e4a2449518b1> , <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d> ;
+        dc:identifier       "O475928.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ecf62e36-30ea-3485-bb84-7c9cc2d5ddc9> .
+
+<https://sws.geonames.org/1172451/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Trousers" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d> .
+
+<http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "Waist" ;
+        rdfs:label          "Width: 102 cm Waist" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "Waist" ;
+        ecrm:P90_has_value  "102"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/cc326f9b-9269-3c9b-8ebd-e4a2449518b1>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017KA0774" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O475928_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017KA/2017KA0774.jpg> .
+
+<http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Red silk trousers, with white and green stripes"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/99caccb2-a6c8-3c3f-bbf3-86ab2d80452d> .

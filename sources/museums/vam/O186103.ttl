@@ -1,0 +1,96 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "velvet, 1470-1499, Italian"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3> .
+
+<http://data.silknow.org/object/641a3347-5682-34f6-a6a2-1dc12efe94c7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O186103" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3> , <http://data.silknow.org/production/be8847f7-35cc-3e98-823d-31c84ace0103> , <http://data.silknow.org/event/f50ecdf9-16b6-303c-8a2a-568209599833> , <http://data.silknow.org/image/efef8356-b605-3305-b131-f176b8808d25> , <http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3/domain/1> , <http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3/observation/1> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> ;
+        dc:identifier       "O186103.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 7.375 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "18.7325"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/f50ecdf9-16b6-303c-8a2a-568209599833>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3> .
+
+<http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Woven silk" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3> .
+
+<http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "velvet, 1470-1499, Italian"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/efef8356-b605-3305-b131-f176b8808d25> ;
+        ecrm:P3_has_note               "velvet, 1470-1499, Italian"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3/dimension/2> , <http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3/dimension/1> ;
+        dc:identifier                  "716-1907" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O186103> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/641a3347-5682-34f6-a6a2-1dc12efe94c7> .
+
+<http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 22.375 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "56.8325"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/be8847f7-35cc-3e98-823d-31c84ace0103>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/22cdb15c-c74b-38fa-a707-1522fdcbeab3> ;
+        ecrm:P126_employed      "Woven silk velvet"@en , "silk velvet"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1470_1499> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/efef8356-b605-3305-b131-f176b8808d25>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2010EH0013" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O186103_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2010EH/2010EH0013.jpg> .

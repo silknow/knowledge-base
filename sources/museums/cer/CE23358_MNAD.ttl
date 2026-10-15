@@ -1,0 +1,104 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/image/6385c043-305e-339d-af8d-26a2b5d9a8c1>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Clavel; Greca"@es ;
+        ecrm:P3_has_note  "Clavel; Greca"@es .
+
+<http://data.silknow.org/event/0161a286-e6dc-308e-bc8d-e0cc1c7dc3ab>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/f5b3d874-b520-3d97-b3bb-ad850193ed5d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE23358" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db/observation/1> , <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db/observation/2> , <http://data.silknow.org/production/f66549a0-3d3c-3246-8193-88e391054b51> , <http://data.silknow.org/event/6cb8546c-41e9-3725-aa9c-8502b0114f17> , <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db/category/1> , <http://data.silknow.org/image/8c81eefa-4100-3919-9723-2053a9c8eb1f> , <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db> , <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db/domain/1> , <http://data.silknow.org/event/0161a286-e6dc-308e-bc8d-e0cc1c7dc3ab> ;
+        dc:identifier       "CE23358_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/production/f66549a0-3d3c-3246-8193-88e391054b51>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/488> ;
+        ecrm:P32_used_general_technique
+                "Encaje de bolillos [La puntilla]  Bordado"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3109256/> .
+
+<http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Moderna"@es , "Es un tapete utilizado como paño de ofrendas. El motivo ornamental está bordado en color marrón, dispuesto en torno a un rectángulo: en el centro un motivo vegetal y una cenefa de motivos geométricos y claveles inclinados"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8c81eefa-4100-3919-9723-2053a9c8eb1f> ;
+        ecrm:P3_has_note               "Es un tapete utilizado como paño de ofrendas. El motivo ornamental está bordado en color marrón, dispuesto en torno a un rectángulo: en el centro un motivo vegetal y una cenefa de motivos geométricos y claveles inclinados"@es , "Edad Moderna"@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db/dimension/2> , <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db/dimension/1> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/6385c043-305e-339d-af8d-26a2b5d9a8c1> ;
+        dc:identifier                  "CE23358" .
+
+<https://sws.geonames.org/3109256/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/6cb8546c-41e9-3725-aa9c-8502b0114f17>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db> .
+
+<http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/13> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db> .
+
+<http://data.silknow.org/image/8c81eefa-4100-3919-9723-2053a9c8eb1f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE23358" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE23358_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE23358&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "154" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "154"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Es un tapete utilizado como paño de ofrendas. El motivo ornamental está bordado en color marrón, dispuesto en torno a un rectángulo: en el centro un motivo vegetal y una cenefa de motivos geométricos y claveles inclinados"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db> .
+
+<http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "64" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "64"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f5b3d874-b520-3d97-b3bb-ad850193ed5d> .
+
+<http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Paño de ofrendas" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/435e4865-b9c8-3505-8b94-b1576802c3db> .

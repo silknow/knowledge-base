@@ -1,0 +1,111 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/69> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5> .
+
+<http://data.silknow.org/production/13bb5aed-2063-3cd6-ab5d-fdcf89aa5f65>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5> ;
+        ecrm:P126_employed      "Jacquard-woven silk, wool and cotton"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1850_1865> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/13bb5aed-2063-3cd6-ab5d-fdcf89aa5f65/activity/1> .
+
+<http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Textile sample of Jacquard-woven silk, wool and cotton, made by Messrs. W.& C. Morley, England, 1850-1865"@en , "Textile sample of Jacquard-woven silk, wool and cotton. With a design of exotic floral motifs in dark blue and white silk on a khaki-coloured ground."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7144efda-36ab-3abf-b75d-ce665eb78901> ;
+        ecrm:P3_has_note               "Textile sample of Jacquard-woven silk, wool and cotton. With a design of exotic floral motifs in dark blue and white silk on a khaki-coloured ground."@en , "Textile sample of Jacquard-woven silk, wool and cotton, made by Messrs. W.& C. Morley, England, 1850-1865"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5/dimension/1> , <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5/dimension/2> ;
+        dc:identifier                  "T.38G-1959" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O290760> .
+
+<http://data.silknow.org/production/13bb5aed-2063-3cd6-ab5d-fdcf89aa5f65/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/ca55925b-c8ea-3cce-ae55-482a6bf55ea0> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 4 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "10.16"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Textile sample of Jacquard-woven silk, wool and cotton. With a design of exotic floral motifs in dark blue and white silk on a khaki-coloured ground."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/actor/ca55925b-c8ea-3cce-ae55-482a6bf55ea0>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Messrs. W.& C. Morley" ;
+        ecrm:P1_is_identified_by  "Messrs. W.& C. Morley" .
+
+<http://data.silknow.org/event/1b97aeb2-564d-33c0-95c0-12c808aea8ee>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5> .
+
+<http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Textile sample of Jacquard-woven silk, wool and cotton, made by Messrs. W.& C. Morley, England, 1850-1865"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0ae9248c-a854-34d5-8473-cc79a9b62622> .
+
+<http://data.silknow.org/object/0ae9248c-a854-34d5-8473-cc79a9b62622>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O290760" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5/observation/2> , <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5/observation/1> , <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5/domain/1> , <http://data.silknow.org/image/7144efda-36ab-3abf-b75d-ce665eb78901> , <http://data.silknow.org/event/1b97aeb2-564d-33c0-95c0-12c808aea8ee> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5> , <http://data.silknow.org/production/13bb5aed-2063-3cd6-ab5d-fdcf89aa5f65> ;
+        dc:identifier       "O290760.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/image/7144efda-36ab-3abf-b75d-ce665eb78901>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018LD1326" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O290760_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018LD/2018LD1326.jpg> .
+
+<http://data.silknow.org/object/29427dc1-0860-3962-881d-cae6310583d5/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Height: 6.5 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "16.51"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

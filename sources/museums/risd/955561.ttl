@@ -1,0 +1,103 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "105.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "105.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/de13d778-16ac-3cdb-a71d-6cac894b92ad> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58/dimension/1> , <http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58/dimension/2> ;
+        dc:identifier                  "1988.082.7" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-19880827> .
+
+<http://data.silknow.org/event/b870d073-715e-3e57-b86a-eb938a2c4a90>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58> .
+
+<http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "54.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "54.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/52f300de-95e3-3b29-b9da-97e8724c55d2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1988.082.7" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/c3e8d59b-47b6-3572-b08b-cf77e60dc881> , <http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58/domain/1> , <http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58> , <http://data.silknow.org/event/b870d073-715e-3e57-b86a-eb938a2c4a90> , <http://data.silknow.org/image/de13d778-16ac-3cdb-a71d-6cac894b92ad> , <http://data.silknow.org/production/449ee17c-d001-353b-81bc-33a56a5a2943> , <http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58/category/1> ;
+        dc:identifier       "955561.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/ec92c6b3-4913-3b17-964b-53bd41103d44>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of William McCue" ;
+        ecrm:P1_is_identified_by  "Gift of William McCue" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/4923516> , <https://isni.org/isni/0000000080837361> .
+
+<http://data.silknow.org/event/c3e8d59b-47b6-3572-b08b-cf77e60dc881>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/ec92c6b3-4913-3b17-964b-53bd41103d44> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of William McCue" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58> .
+
+<http://data.silknow.org/image/de13d778-16ac-3cdb-a71d-6cac894b92ad>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/955561_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/13856.jpg> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/3b1d62a2-ba51-39f3-940a-4db78b70215c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Jean Revel" ;
+        ecrm:P1_is_identified_by  "Jean Revel" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000083911694> , <https://viaf.org/viaf/68934958> , <http://dbpedia.org/resource/Jean-François_Revel> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Jean-François_Revel> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/52f300de-95e3-3b29-b9da-97e8724c55d2> .
+
+<http://data.silknow.org/production/449ee17c-d001-353b-81bc-33a56a5a2943>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1684_1751> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/449ee17c-d001-353b-81bc-33a56a5a2943/activity/1> .
+
+<http://data.silknow.org/production/449ee17c-d001-353b-81bc-33a56a5a2943/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/3b1d62a2-ba51-39f3-940a-4db78b70215c> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58> .
+
+<http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e1604e48-5598-395c-8cc2-d02057d56f58> .

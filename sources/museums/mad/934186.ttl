@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/0669a9d7-232a-3b1c-bc00-d6d86e04b35c>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, Nantes, 18e siècle" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d77e5986-f666-32e7-80bc-002893a139e6> ;
+        ecrm:P126_employed      "Toile de coton, imprimée, peinte,teinte par mordançage et réserve"@fr ;
+        ecrm:P3_has_note        "France, Nantes, 18e siècle" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> , <https://sws.geonames.org/2990969/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/21e109f7-55e2-34e8-9288-2bb9ca3f3902>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934186_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/9e76de22-64c1-4c6e-b5ad-d689b223dc1c.jpg> .
+
+<http://data.silknow.org/event/d680d2f2-31dd-3079-a4d2-98da2c139702>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Atelier Forrer, 2017" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d77e5986-f666-32e7-80bc-002893a139e6> .
+
+<https://sws.geonames.org/2990969/>
+        a       ecrm:E53_Place .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/d77e5986-f666-32e7-80bc-002893a139e6/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d77e5986-f666-32e7-80bc-002893a139e6> .
+
+<http://data.silknow.org/object/14d29abd-def4-3a6d-b2ac-f62af0f8b96f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2017.160.19" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d77e5986-f666-32e7-80bc-002893a139e6/category/1> , <http://data.silknow.org/object/d77e5986-f666-32e7-80bc-002893a139e6> , <http://data.silknow.org/production/0669a9d7-232a-3b1c-bc00-d6d86e04b35c> , <http://data.silknow.org/event/d680d2f2-31dd-3079-a4d2-98da2c139702> , <http://data.silknow.org/image/21e109f7-55e2-34e8-9288-2bb9ca3f3902> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "934186.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/14d29abd-def4-3a6d-b2ac-f62af0f8b96f> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/d77e5986-f666-32e7-80bc-002893a139e6> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/d77e5986-f666-32e7-80bc-002893a139e6>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, Nantes, 18e siècle"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/21e109f7-55e2-34e8-9288-2bb9ca3f3902> ;
+        dc:identifier                  "2017.160.19" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934186> .

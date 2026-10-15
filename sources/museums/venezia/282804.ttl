@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b> .
+
+<http://data.silknow.org/event/3ce23088-d967-3a0f-b11c-b5099e25f01d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b> .
+
+<http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "15" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "15"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/c5e6e407-eefa-3269-8c59-b5425a8877b2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b> ;
+        ecrm:P126_employed      "filo metallico"@it ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1640_1660> .
+
+<http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b> .
+
+<http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Velluto soprarizzo laminato"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b81a3103-e6ed-3f17-b2d7-b64315452b6a> ;
+        ecrm:P3_has_note               "Velluto soprarizzo laminato"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b/dimension/1> , <http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 1311" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/282804/?WEB=MuseiVE> .
+
+<http://data.silknow.org/image/b81a3103-e6ed-3f17-b2d7-b64315452b6a>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/282804_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5AyGCmfN26VQP6e2tpcUXGUQmHc5d3CfEWpNkgHy7dreX0hOYiLP3ddp2uc1nHWNnTIAvJ5mvk4EU0n8qyUBMpH8MgsOo3oVDXdnKb2%2bvXelGiiNoViaWGw%3d%3d> .
+
+<http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "81" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "81"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f31b872a-74f3-3587-928a-8106837f70dd> .
+
+<http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Velluto soprarizzo laminato"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b> .
+
+<http://data.silknow.org/object/f31b872a-74f3-3587-928a-8106837f70dd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 282804" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b/domain/1> , <http://data.silknow.org/production/c5e6e407-eefa-3269-8c59-b5425a8877b2> , <http://data.silknow.org/image/b81a3103-e6ed-3f17-b2d7-b64315452b6a> , <http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b/category/1> , <http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b/observation/1> , <http://data.silknow.org/event/3ce23088-d967-3a0f-b11c-b5099e25f01d> , <http://data.silknow.org/object/fa273304-1908-31ac-be8b-54e89addbe4b> ;
+        dc:identifier       "282804.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .

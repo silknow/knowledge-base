@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/e247cf47-4ba6-3df5-be7f-50eccf25fbfc>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Cristóbal Balenciaga" ;
+        ecrm:P1_is_identified_by  "Cristóbal Balenciaga" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000121285349> , <https://viaf.org/viaf/37715182> , <http://dbpedia.org/resource/Cristóbal_Balenciaga> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Cristóbal_Balenciaga> .
+
+<http://data.silknow.org/event/80fdb2a1-f39f-3c48-ad8f-9d8cb9d4eb5b>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f> .
+
+<http://data.silknow.org/production/84a01d7e-2bb6-37c0-80e2-f28b3db426cc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/c4d0b35e-8aff-3497-bbe7-3498f8b915a4> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/84a01d7e-2bb6-37c0-80e2-f28b3db426cc/activity/1> .
+
+<http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "1992.067.8" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/evening-dress-19920678> .
+
+<http://data.silknow.org/production/84a01d7e-2bb6-37c0-80e2-f28b3db426cc/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/e247cf47-4ba6-3df5-be7f-50eccf25fbfc> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/actor/5a2c8981-a211-3662-b890-5c6043dfa238>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. William C. Ford, Mrs. John F. Ball and Mrs. William Leatherman, The Elizabeth Parke Firestone Collection" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. William C. Ford, Mrs. John F. Ball and Mrs. William Leatherman, The Elizabeth Parke Firestone Collection" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/event/45275018-ea5f-35ea-8142-75b851e18988>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/5a2c8981-a211-3662-b890-5c6043dfa238> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. William C. Ford, Mrs. John F. Ball and Mrs. William Leatherman, The Elizabeth Parke Firestone Collection" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ac90798b-8dff-323d-9a2c-317fde2d96a7> .
+
+<http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "evening dress" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f> .
+
+<http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f> .
+
+<http://data.silknow.org/object/ac90798b-8dff-323d-9a2c-317fde2d96a7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1992.067.8" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/80fdb2a1-f39f-3c48-ad8f-9d8cb9d4eb5b> , <http://data.silknow.org/event/45275018-ea5f-35ea-8142-75b851e18988> , <http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f/category/1> , <http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f> , <http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f/domain/2> , <http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f/domain/1> , <http://data.silknow.org/production/84a01d7e-2bb6-37c0-80e2-f28b3db426cc> ;
+        dc:identifier       "764581.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Fashion" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9b1b78e9-e55e-37f4-819b-a24d5075be2f> .

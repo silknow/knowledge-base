@@ -1,0 +1,98 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/16ddcc74-3f56-378d-9e1a-983424207b48>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110> ;
+        ecrm:P126_employed      "Woven silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1826_1875> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1167710/> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Woven silk textile."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110> .
+
+<http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk fragment. Punjab, mid 19th Century."@en , "Woven silk textile."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e42c46a8-70c5-3fa3-a7ca-01c6fdfc23e8> , <http://data.silknow.org/image/3b7cb9e8-6833-3826-bcbe-dbdc9bc3680b> ;
+        ecrm:P3_has_note               "Silk fragment. Punjab, mid 19th Century."@en , "Woven silk textile."@en ;
+        dc:identifier                  "7910(IS)" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O68759> .
+
+<http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110> .
+
+<http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110> .
+
+<http://data.silknow.org/image/3b7cb9e8-6833-3826-bcbe-dbdc9bc3680b>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AW2824" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O68759_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AW/2006AW2824.jpg> .
+
+<http://data.silknow.org/image/e42c46a8-70c5-3fa3-a7ca-01c6fdfc23e8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MR6501" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O68759_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2020MR/2020MR6501.jpg> .
+
+<http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "South & South East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110> ;
+        ecrm:P78_is_identified_by  "South & South East Asia Collection" .
+
+<https://sws.geonames.org/1167710/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3211e84c-9c95-3db2-88fb-74cbb17536d5> .
+
+<http://data.silknow.org/object/3211e84c-9c95-3db2-88fb-74cbb17536d5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O68759" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/3b7cb9e8-6833-3826-bcbe-dbdc9bc3680b> , <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110> , <http://data.silknow.org/image/e42c46a8-70c5-3fa3-a7ca-01c6fdfc23e8> , <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110/observation/1> , <http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217> , <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110/domain/1> , <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110/observation/2> , <http://data.silknow.org/event/4d435eac-d484-3519-a8a2-40e02f84988b> , <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110/domain/2> , <http://data.silknow.org/production/16ddcc74-3f56-378d-9e1a-983424207b48> ;
+        dc:identifier       "O68759.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Silk fragment. Punjab, mid 19th Century."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110> .
+
+<http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "India Museum" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110> .
+
+<http://data.silknow.org/event/4d435eac-d484-3519-a8a2-40e02f84988b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/70f088b5-9070-317f-8005-17090e65a110> .

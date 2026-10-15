@@ -1,0 +1,69 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bf8ea609-568f-314b-a1ae-583e0ae1d243> .
+
+<http://data.silknow.org/production/d4396804-5a61-3ccc-9219-a5f87f9ac300>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7b05333c-1190-3cc8-bb8a-7d60b3dd99fe> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca , "vellut"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> .
+
+<http://data.silknow.org/object/7b05333c-1190-3cc8-bb8a-7d60b3dd99fe/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7b05333c-1190-3cc8-bb8a-7d60b3dd99fe> .
+
+<http://data.silknow.org/object/7b05333c-1190-3cc8-bb8a-7d60b3dd99fe/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7b05333c-1190-3cc8-bb8a-7d60b3dd99fe> .
+
+<http://data.silknow.org/image/2359602c-8a71-3416-a4a6-043676b246a8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033876" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/28135_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033876.jpg> .
+
+<http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas Geis, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas Geis, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/160946453> , <https://isni.org/isni/0000000108433220> .
+
+<http://data.silknow.org/event/3b5d692d-5220-3d1b-811e-1535e35292be>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/7b05333c-1190-3cc8-bb8a-7d60b3dd99fe> .
+
+<http://data.silknow.org/event/6e1486af-6029-3481-8d0a-373b07b2d5de>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f> ;
+        ecrm:P23_transferred_title_from
+                "Viñas Geis, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7b05333c-1190-3cc8-bb8a-7d60b3dd99fe> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/object/7b05333c-1190-3cc8-bb8a-7d60b3dd99fe>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2359602c-8a71-3416-a4a6-043676b246a8> ;
+        dc:identifier                  "16600" .
+
+<http://data.silknow.org/object/bf8ea609-568f-314b-a1ae-583e0ae1d243>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 28135" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/7b05333c-1190-3cc8-bb8a-7d60b3dd99fe/category/1> , <http://data.silknow.org/production/d4396804-5a61-3ccc-9219-a5f87f9ac300> , <http://data.silknow.org/event/3b5d692d-5220-3d1b-811e-1535e35292be> , <http://data.silknow.org/event/6e1486af-6029-3481-8d0a-373b07b2d5de> , <http://data.silknow.org/object/7b05333c-1190-3cc8-bb8a-7d60b3dd99fe> , <http://data.silknow.org/image/2359602c-8a71-3416-a4a6-043676b246a8> , <http://data.silknow.org/object/7b05333c-1190-3cc8-bb8a-7d60b3dd99fe/domain/1> ;
+        dc:identifier       "28135.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

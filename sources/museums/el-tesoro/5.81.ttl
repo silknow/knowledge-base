@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a0ebbb3e-f9b6-3d95-b419-1474651ad72d> .
+
+<http://data.silknow.org/image/4db6cc39-a754-390f-ac5b-231f70c3dad9>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.81" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.81_0.jpg> .
+
+<http://data.silknow.org/actor/28725087-4375-3f1d-8275-86d5ddb1b552>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo. Valencia" ;
+        ecrm:P1_is_identified_by  "Anónimo. Valencia" .
+
+<http://data.silknow.org/assessment/fec9cb25-9737-3187-baf5-71d697965b26>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/44576dc9-a25f-3b13-a973-af799d99d143> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/fec9cb25-9737-3187-baf5-71d697965b26/condition/1> .
+
+<http://data.silknow.org/assessment/fec9cb25-9737-3187-baf5-71d697965b26/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .
+
+<http://data.silknow.org/object/a0ebbb3e-f9b6-3d95-b419-1474651ad72d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.81" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/4db6cc39-a754-390f-ac5b-231f70c3dad9> , <http://data.silknow.org/object/44576dc9-a25f-3b13-a973-af799d99d143> , <http://data.silknow.org/object/44576dc9-a25f-3b13-a973-af799d99d143/observation/1> , <http://data.silknow.org/object/44576dc9-a25f-3b13-a973-af799d99d143/type/1> , <http://data.silknow.org/assessment/fec9cb25-9737-3187-baf5-71d697965b26> , <http://data.silknow.org/production/8c449d8d-594d-3d24-8ee2-804745a41d81> ;
+        dc:identifier       "5.81.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/object/44576dc9-a25f-3b13-a973-af799d99d143>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Pertenece a la imagen de Ntra. Sra. del Tránsito."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4db6cc39-a754-390f-ac5b-231f70c3dad9> ;
+        ecrm:P3_has_note               "*Pertenece a la imagen de Ntra. Sra. del Tránsito."@es ;
+        dc:identifier                  "5.81" .
+
+<http://data.silknow.org/object/44576dc9-a25f-3b13-a973-af799d99d143/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Pertenece a la imagen de Ntra. Sra. del Tránsito."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/44576dc9-a25f-3b13-a973-af799d99d143> .
+
+<http://data.silknow.org/object/44576dc9-a25f-3b13-a973-af799d99d143/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/44576dc9-a25f-3b13-a973-af799d99d143> ;
+        ecrm:P42_assigned    "Manto procesional" .
+
+<http://data.silknow.org/production/8c449d8d-594d-3d24-8ee2-804745a41d81/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/28725087-4375-3f1d-8275-86d5ddb1b552> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/production/8c449d8d-594d-3d24-8ee2-804745a41d81>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/44576dc9-a25f-3b13-a973-af799d99d143> ;
+        ecrm:P126_employed      "Hilo de oro, plata y seda. Encaje de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Espolín."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/8c449d8d-594d-3d24-8ee2-804745a41d81/activity/1> .

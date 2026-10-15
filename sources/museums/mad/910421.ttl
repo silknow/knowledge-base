@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/4da4b715-92bc-3baf-9f66-b6e1613ec46b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910421_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/bbd0e1c5-ae36-43a0-9054-991f6554be6b.jpg> .
+
+<http://data.silknow.org/production/02c87ae4-50e5-3d1f-9c7f-271148e87b25>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "16e siècle" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8f38e009-6605-300b-ac98-2dd9a82ed7ea> ;
+        ecrm:P126_employed      "Velours avec applications cernées en soie"@fr ;
+        ecrm:P3_has_note        "16e siècle" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> .
+
+<http://data.silknow.org/event/01d17611-a417-3d2b-8be8-e2431c3b7e95>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1912" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8f38e009-6605-300b-ac98-2dd9a82ed7ea> .
+
+<http://data.silknow.org/object/8f38e009-6605-300b-ac98-2dd9a82ed7ea/category/1>
+        a                    silk:T35 ;
+        silk:L1              "pente de lit" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8f38e009-6605-300b-ac98-2dd9a82ed7ea> .
+
+<http://data.silknow.org/object/b22f48eb-ac35-3963-afa4-6d1cc5e12c93>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 18476.AB" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/01d17611-a417-3d2b-8be8-e2431c3b7e95> , <http://data.silknow.org/production/02c87ae4-50e5-3d1f-9c7f-271148e87b25> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/8f38e009-6605-300b-ac98-2dd9a82ed7ea> , <http://data.silknow.org/image/4da4b715-92bc-3baf-9f66-b6e1613ec46b> , <http://data.silknow.org/object/8f38e009-6605-300b-ac98-2dd9a82ed7ea/category/1> ;
+        dc:identifier       "910421.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/8f38e009-6605-300b-ac98-2dd9a82ed7ea>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "pente de lit, 16e siècle"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4da4b715-92bc-3baf-9f66-b6e1613ec46b> ;
+        dc:identifier                  "18476.AB" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910421> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b22f48eb-ac35-3963-afa4-6d1cc5e12c93> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/8f38e009-6605-300b-ac98-2dd9a82ed7ea> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

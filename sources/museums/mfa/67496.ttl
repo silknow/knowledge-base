@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/2d88ca52-b822-3f09-a625-4314028918df>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "843992" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/67496_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/843992/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/event/c81cacc4-aea0-3eae-8032-a3ad3dfa8d01>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34> .
+
+<http://data.silknow.org/production/fc6fb453-4bc4-3f8b-8b64-a01e25f872d1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34> ;
+        ecrm:P126_employed      "Cotton and silk; embroidery"@en ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3057568/> .
+
+<http://data.silknow.org/object/2b6b354b-78b1-3cf3-ab10-5845abc94494>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 22.754" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34/observation/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/2d88ca52-b822-3f09-a625-4314028918df> , <http://data.silknow.org/event/c81cacc4-aea0-3eae-8032-a3ad3dfa8d01> , <http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34/category/1> , <http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34> , <http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34/domain/1> , <http://data.silknow.org/production/fc6fb453-4bc4-3f8b-8b64-a01e25f872d1> ;
+        dc:identifier       "67496.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<https://sws.geonames.org/3057568/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "12" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "12"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Cream white cotton on which is rectangular design, detailed with small geometric forms, embroidered with red, white, yellow, blue, and green silk. Torn and worn."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34> .
+
+<http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/2> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34> .
+
+<http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Cream white cotton on which is rectangular design, detailed with small geometric forms, embroidered with red, white, yellow, blue, and green silk. Torn and worn."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2d88ca52-b822-3f09-a625-4314028918df> ;
+        ecrm:P3_has_note               "Cream white cotton on which is rectangular design, detailed with small geometric forms, embroidered with red, white, yellow, blue, and green silk. Torn and worn."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34/dimension/2> , <http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34/dimension/1> ;
+        dc:identifier                  "22.754" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/67496> .
+
+<http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "46.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "46.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2b6b354b-78b1-3cf3-ab10-5845abc94494> .
+
+<http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cd4d2c68-60f8-380d-a940-cd92e33c7c34> .

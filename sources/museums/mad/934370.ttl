@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/d90a10b5-2856-3f9c-bbaf-3e84d6b91acd>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934370_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/642e54cb-13c5-464c-82ca-c062a16a0053.jpg> .
+
+<http://data.silknow.org/production/49c9e754-1163-3b3a-9cac-459850e79f12>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Rébé, Paris, 1948, Balenciaga, Paris, 1949" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f0556809-f3eb-377e-b1b9-60f71de003fd> ;
+        ecrm:P3_has_note        "Rébé, Paris, 1948, Balenciaga, Paris, 1949" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1948> , <http://data.silknow.org/timespan/1949> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2988507/> , <https://sws.geonames.org/11856731/> .
+
+<http://data.silknow.org/object/f0556809-f3eb-377e-b1b9-60f71de003fd>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "échantillon, Rébé, Paris, 1948, Balenciaga, Paris, 1949"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d90a10b5-2856-3f9c-bbaf-3e84d6b91acd> ;
+        dc:identifier                  "RI 2001.55.50" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934370> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/11856731/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/a4d3a358-aed5-3eb1-bae0-37d12e1ba2d5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record RI 2001.55.50" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/1bf3d2f2-1c0e-3623-b5d4-8e9aa08bb21f> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/49c9e754-1163-3b3a-9cac-459850e79f12> , <http://data.silknow.org/object/f0556809-f3eb-377e-b1b9-60f71de003fd> , <http://data.silknow.org/object/f0556809-f3eb-377e-b1b9-60f71de003fd/category/1> , <http://data.silknow.org/image/d90a10b5-2856-3f9c-bbaf-3e84d6b91acd> ;
+        dc:identifier       "934370.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/1bf3d2f2-1c0e-3623-b5d4-8e9aa08bb21f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "RI 2001.55" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f0556809-f3eb-377e-b1b9-60f71de003fd> .
+
+<http://data.silknow.org/object/f0556809-f3eb-377e-b1b9-60f71de003fd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "échantillon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f0556809-f3eb-377e-b1b9-60f71de003fd> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a4d3a358-aed5-3eb1-bae0-37d12e1ba2d5> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/f0556809-f3eb-377e-b1b9-60f71de003fd> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2988507/>
+        a       ecrm:E53_Place .

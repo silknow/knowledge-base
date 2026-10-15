@@ -1,0 +1,111 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "32" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "32"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/b07ab8ba-a7e6-3da3-aa07-582eb5122a45>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad> .
+
+<http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Esta representación de la huída a Egipto constituye la sexta de las seis escenas que decoran este teatrino en el que se han representado distintos episodios de la vida de la Virgen alojados en pequeñas hornacinas. Bajo un tejadillo de tejas rojas soportado por cuatro columnas aparecen las figuras de San José y la Virgen y el Niño, estos dos últimos a lomos de un asno. El suelo está recubierto de conchas y flores."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "22" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "22"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad> .
+
+<http://data.silknow.org/object/bfe232f9-dac4-33bd-a3f1-bbb2e6ee1d0b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE02011" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/observation/1> , <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/category/1> , <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad> , <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/observation/3> , <http://data.silknow.org/image/46d7bc0c-b9a8-345a-8921-0580f9eaa10f> , <http://data.silknow.org/event/98160280-7696-38db-b149-3f68067285a6> , <http://data.silknow.org/event/b07ab8ba-a7e6-3da3-aa07-582eb5122a45> , <http://data.silknow.org/production/5bca61db-2c76-36a6-913f-0ea7a0e78b1d> , <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/domain/1> , <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/observation/2> ;
+        dc:identifier       "CE02011_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bfe232f9-dac4-33bd-a3f1-bbb2e6ee1d0b> .
+
+<http://data.silknow.org/production/5bca61db-2c76-36a6-913f-0ea7a0e78b1d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad> ;
+        ecrm:P126_employed      "Madera de ébano"@es , "Marfil"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "Talla (madera)"@es , "Figura: Moldeado [Las figuras están realizadas en cera]"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1650_1699> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Esta representación de la huída a Egipto constituye la sexta de las seis escenas que decoran este teatrino en el que se han representado distintos episodios de la vida de la Virgen alojados en pequeñas hornacinas. Bajo un tejadillo de tejas rojas soportado por cuatro columnas aparecen las figuras de San José y la Virgen y el Niño, estos dos últimos a lomos de un asno. El suelo está recubierto de conchas y flores."@es , "Edad Moderna"@es , "Este teatrino forma parte de un mueble-relicario con 6 escenas de la vida de la Virgen en pequeñas hornacinas (Nº inv 2005-2011). Las figuras de cera son finas. Se ha atribuido a Eugenio de Torices por la semejanza con algunas de sus obras y el detallismo de las escenas, aunque este artista solía hacer figuras vestidas con trajes de cera, en vez de trajes de tela como las de este escaparate. Se conservan piezas similares en el Museo Marés y en el Museo Nacional de Escultura.   \nBIBLIOGRAFÍA: ESTELLA MARCOS, \"Obras maestras inéditas del arte de la cera en España\", Goya, núm. 237, 1993, pp. 156-157."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/46d7bc0c-b9a8-345a-8921-0580f9eaa10f> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Este teatrino forma parte de un mueble-relicario con 6 escenas de la vida de la Virgen en pequeñas hornacinas (Nº inv 2005-2011). Las figuras de cera son finas. Se ha atribuido a Eugenio de Torices por la semejanza con algunas de sus obras y el detallismo de las escenas, aunque este artista solía hacer figuras vestidas con trajes de cera, en vez de trajes de tela como las de este escaparate. Se conservan piezas similares en el Museo Marés y en el Museo Nacional de Escultura.   \nBIBLIOGRAFÍA: ESTELLA MARCOS, \"Obras maestras inéditas del arte de la cera en España\", Goya, núm. 237, 1993, pp. 156-157."@es , "Esta representación de la huída a Egipto constituye la sexta de las seis escenas que decoran este teatrino en el que se han representado distintos episodios de la vida de la Virgen alojados en pequeñas hornacinas. Bajo un tejadillo de tejas rojas soportado por cuatro columnas aparecen las figuras de San José y la Virgen y el Niño, estos dos últimos a lomos de un asno. El suelo está recubierto de conchas y flores."@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/dimension/2> , <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/dimension/1> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/60cad1cc-d7c3-3c49-aad3-838e1782fd94> ;
+        dc:identifier                  "CE02011" .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/60cad1cc-d7c3-3c49-aad3-838e1782fd94>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Huida a Egipto"@es ;
+        ecrm:P3_has_note  "Huida a Egipto"@es .
+
+<http://data.silknow.org/event/98160280-7696-38db-b149-3f68067285a6>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Nacimientos" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad> .
+
+<http://data.silknow.org/image/46d7bc0c-b9a8-345a-8921-0580f9eaa10f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE02011" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE02011_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE02011&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Escaparate" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad> .
+
+<http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Este teatrino forma parte de un mueble-relicario con 6 escenas de la vida de la Virgen en pequeñas hornacinas (Nº inv 2005-2011). Las figuras de cera son finas. Se ha atribuido a Eugenio de Torices por la semejanza con algunas de sus obras y el detallismo de las escenas, aunque este artista solía hacer figuras vestidas con trajes de cera, en vez de trajes de tela como las de este escaparate. Se conservan piezas similares en el Museo Marés y en el Museo Nacional de Escultura.   \nBIBLIOGRAFÍA: ESTELLA MARCOS, \"Obras maestras inéditas del arte de la cera en España\", Goya, núm. 237, 1993, pp. 156-157."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/12d37496-ae3b-3753-852d-7fb0461731ad> .

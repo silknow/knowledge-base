@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/5477bf49-ce04-34ec-96e2-1717a1e91652>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908925_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/11e8a6c8-1a95-49a1-8f54-8e9a6d847407.jpg> .
+
+<http://data.silknow.org/event/1462f742-3d1b-30fb-a589-3909a3aad418>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don monsieur Marquereau, 1907" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f7b467fc-a644-39a4-afa9-cb4a552c7bd8> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/f7b467fc-a644-39a4-afa9-cb4a552c7bd8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f7b467fc-a644-39a4-afa9-cb4a552c7bd8> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/edb28dc4-51b4-34f7-89ca-04251073fe26> .
+
+<http://data.silknow.org/production/daf7df0c-07c5-342b-abfa-cceda3ba5ced>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1750 (vers), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f7b467fc-a644-39a4-afa9-cb4a552c7bd8> ;
+        ecrm:P126_employed      "Taffetas changeant, broché"@fr ;
+        ecrm:P3_has_note        "France, 1750 (vers), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/223dc152-e388-36a9-a6f8-2410abe2a50b> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/f7b467fc-a644-39a4-afa9-cb4a552c7bd8> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/edb28dc4-51b4-34f7-89ca-04251073fe26>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13236" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f7b467fc-a644-39a4-afa9-cb4a552c7bd8/category/1> , <http://data.silknow.org/object/f7b467fc-a644-39a4-afa9-cb4a552c7bd8> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/daf7df0c-07c5-342b-abfa-cceda3ba5ced> , <http://data.silknow.org/event/1462f742-3d1b-30fb-a589-3909a3aad418> , <http://data.silknow.org/image/5477bf49-ce04-34ec-96e2-1717a1e91652> ;
+        dc:identifier       "908925.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/f7b467fc-a644-39a4-afa9-cb4a552c7bd8>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1750 (vers), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5477bf49-ce04-34ec-96e2-1717a1e91652> ;
+        dc:identifier                  "13236" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908925> .

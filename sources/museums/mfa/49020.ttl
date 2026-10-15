@@ -1,0 +1,106 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/7cf8c54e-f42e-39be-bacd-23fd7f71425a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e> .
+
+<http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Embroidered panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e> .
+
+<http://data.silknow.org/image/48cc59ae-8c16-3ddd-9762-7ce46b152be0>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "844023" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/49020_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/844023/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/8a182ee7-7f51-3190-a4fa-e8f696b09698>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 46.1198" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e/observation/1> , <http://data.silknow.org/event/7cf8c54e-f42e-39be-bacd-23fd7f71425a> , <http://data.silknow.org/event/37005ba8-1b6b-38d5-87c7-241c7764df08> , <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e> , <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e/domain/1> , <http://data.silknow.org/image/48cc59ae-8c16-3ddd-9762-7ce46b152be0> , <http://data.silknow.org/production/c9d3ad49-3cc2-38b7-a1f5-3d939d7e3bd1> , <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "49020.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/production/c9d3ad49-3cc2-38b7-a1f5-3d939d7e3bd1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e> ;
+        ecrm:P126_employed      "Linen plain weave, embroidered with silk and metal-wrapped thread"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404506> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "35" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "35"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e> .
+
+<http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "49.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "49.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/f5ef1b89-6810-3796-a11f-fc04ef039416>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "About 1390/1391, created for George of Liechtenstein, Bishop of Trent, Italy [see note 1]; until the early 20th century, kept in the Cathedral of San Vigilio, Trent; about 1903, transferred to the Museo Diocesano Tridentino (Diocesan Museum, Trent; inventory no. 11/15) [see note 2]; removed from the Museo Diocesano and placed in the sacristy of the Cathedral of San Vigilio [see note 3]; between about 1939 and 1944, taken from the cathedral sacristy [see note 4]. 1946, with Arturo Grassi, Brooklyn; 1946, sold by Grassi to the MFA (accession no. 46.1198) [see note 5]; 2009, deaccessioned by the MFA for return to the Museo Diocesano Tridentino [see note 6]. NOTES: [1] This was part of a series of embroidered panels depicting the life of Saint Vigilius, which were sewn onto the consecration vestments of George of Liechtenstein, appointed prince bishop of Trent in 1390. This, the fifth in the series, depicts the entombment of Saint Vigilius at the left and the delivery of the news of his martrydom to the pope and emperor, Theodosius, at the right. [2] The Museo Diocesano Tridentino was established in 1903. The five panels that remained from the original series were transferred from the cathedral to the museum in the early 20th century and were included in the 1908 museum catalogue; see Vincenzo Casagrande, Catalogo del Museo Diocesano Tridentino (Trent), pp. 15-17, cat. nos. 11-15. [3] During World War I, the Theological Seminary was requisitioned for use as a military hospital. The Museo Diocesano was closed; the collection was placed into storage. The embroideries depicting the life of Saint Vigilius were eventually moved back to the cathedral sacristy. [4] The five embroidered panels were still in the cathedral sacristy in the 1930s. The Burial of Saint Vigilius was probably removed between about 1939 and 1944, during the upheaval of World War II. The rest of the series remained in the sacristy, and was taken out of storage in 1955 for return to the Museo Diocesano. [5] It is not known how this panel made its way to the United States. MFA curatorial staff inquired about the provenance of the panel at the time of its acquisition, and were told only that the previous owner had inherited it along with a large collection of other antique objects. The MFA knew nothing more about its subject matter or provenance until 2008 (see below). [6] In 2008, the MFA was notified by Dr. Evelin Wetter that this panel was once part of the Saint Vigilius series from the Museo Diocesano Tridentino. Curatorial research confirmed that the embroidery belonged to that series. In June 2008, the MFA contacted the Museo Diocesano to initiate discussions about its return, which concluded in April with the signing of an agreement by the MFA, the Archdiocese of Trent, and the Museo Diocesano. The panel was deaccessioned by the MFA in December and returned to Trent in the fall of 2010. / Otis Norcross Fund" ;
+        ecrm:P1_is_identified_by  "About 1390/1391, created for George of Liechtenstein, Bishop of Trent, Italy [see note 1]; until the early 20th century, kept in the Cathedral of San Vigilio, Trent; about 1903, transferred to the Museo Diocesano Tridentino (Diocesan Museum, Trent; inventory no. 11/15) [see note 2]; removed from the Museo Diocesano and placed in the sacristy of the Cathedral of San Vigilio [see note 3]; between about 1939 and 1944, taken from the cathedral sacristy [see note 4]. 1946, with Arturo Grassi, Brooklyn; 1946, sold by Grassi to the MFA (accession no. 46.1198) [see note 5]; 2009, deaccessioned by the MFA for return to the Museo Diocesano Tridentino [see note 6]. NOTES: [1] This was part of a series of embroidered panels depicting the life of Saint Vigilius, which were sewn onto the consecration vestments of George of Liechtenstein, appointed prince bishop of Trent in 1390. This, the fifth in the series, depicts the entombment of Saint Vigilius at the left and the delivery of the news of his martrydom to the pope and emperor, Theodosius, at the right. [2] The Museo Diocesano Tridentino was established in 1903. The five panels that remained from the original series were transferred from the cathedral to the museum in the early 20th century and were included in the 1908 museum catalogue; see Vincenzo Casagrande, Catalogo del Museo Diocesano Tridentino (Trent), pp. 15-17, cat. nos. 11-15. [3] During World War I, the Theological Seminary was requisitioned for use as a military hospital. The Museo Diocesano was closed; the collection was placed into storage. The embroideries depicting the life of Saint Vigilius were eventually moved back to the cathedral sacristy. [4] The five embroidered panels were still in the cathedral sacristy in the 1930s. The Burial of Saint Vigilius was probably removed between about 1939 and 1944, during the upheaval of World War II. The rest of the series remained in the sacristy, and was taken out of storage in 1955 for return to the Museo Diocesano. [5] It is not known how this panel made its way to the United States. MFA curatorial staff inquired about the provenance of the panel at the time of its acquisition, and were told only that the previous owner had inherited it along with a large collection of other antique objects. The MFA knew nothing more about its subject matter or provenance until 2008 (see below). [6] In 2008, the MFA was notified by Dr. Evelin Wetter that this panel was once part of the Saint Vigilius series from the Museo Diocesano Tridentino. Curatorial research confirmed that the embroidery belonged to that series. In June 2008, the MFA contacted the Museo Diocesano to initiate discussions about its return, which concluded in April with the signing of an agreement by the MFA, the Archdiocese of Trent, and the Museo Diocesano. The panel was deaccessioned by the MFA in December and returned to Trent in the fall of 2010. / Otis Norcross Fund" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Entombment of Saint Vigilius"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8a182ee7-7f51-3190-a4fa-e8f696b09698> .
+
+<http://data.silknow.org/event/37005ba8-1b6b-38d5-87c7-241c7764df08>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/f5ef1b89-6810-3796-a11f-fc04ef039416> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "About 1390/1391, created for George of Liechtenstein, Bishop of Trent, Italy [see note 1]; until the early 20th century, kept in the Cathedral of San Vigilio, Trent; about 1903, transferred to the Museo Diocesano Tridentino (Diocesan Museum, Trent; inventory no. 11/15) [see note 2]; removed from the Museo Diocesano and placed in the sacristy of the Cathedral of San Vigilio [see note 3]; between about 1939 and 1944, taken from the cathedral sacristy [see note 4]. 1946, with Arturo Grassi, Brooklyn; 1946, sold by Grassi to the MFA (accession no. 46.1198) [see note 5]; 2009, deaccessioned by the MFA for return to the Museo Diocesano Tridentino [see note 6].\n\nNOTES:\n[1] This was part of a series of embroidered panels depicting the life of Saint Vigilius, which were sewn onto the consecration vestments of George of Liechtenstein, appointed prince bishop of Trent in 1390. This, the fifth in the series, depicts the entombment of Saint Vigilius at the left and the delivery of the news of his martrydom to the pope and emperor, Theodosius, at the right. \n\n[2] The Museo Diocesano Tridentino was established in 1903. The five panels that remained from the original series were transferred from the cathedral to the museum in the early 20th century and were included in the 1908 museum catalogue; see Vincenzo Casagrande, Catalogo del Museo Diocesano Tridentino (Trent, 1908), pp. 15-17, cat. nos. 11-15. \n\n[3] During World War I, the Theological Seminary was requisitioned for use as a military hospital. The Museo Diocesano was closed; the collection was placed into storage. The embroideries depicting the life of Saint Vigilius were eventually moved back to the cathedral sacristy.\n\n[4] The five embroidered panels were still in the cathedral sacristy in the 1930s. The Burial of Saint Vigilius was probably removed between about 1939 and 1944, during the upheaval of World War II. The rest of the series remained in the sacristy, and was taken out of storage in 1955 for return to the Museo Diocesano. \n\n[5] It is not known how this panel made its way to the United States. MFA curatorial staff inquired about the provenance of the panel at the time of its acquisition, and were told only that the previous owner had inherited it along with a large collection of other antique objects. The MFA knew nothing more about its subject matter or provenance until 2008 (see below).\n\n[6] In 2008, the MFA was notified by Dr. Evelin Wetter that this panel was once part of the Saint Vigilius series from the Museo Diocesano Tridentino. Curatorial research confirmed that the embroidery belonged to that series. In June 2008, the MFA contacted the Museo Diocesano to initiate discussions about its return, which concluded in April, 2010 with the signing of an agreement by the MFA, the Archdiocese of Trent, and the Museo Diocesano. The panel was deaccessioned by the MFA in December, 2009 and returned to Trent in the fall of 2010. / Otis Norcross Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e> .
+
+<http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Entombment of Saint Vigilius"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/48cc59ae-8c16-3ddd-9762-7ce46b152be0> ;
+        ecrm:P3_has_note               "Entombment of Saint Vigilius"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e/dimension/2> , <http://data.silknow.org/object/6b02e244-7023-3625-b7d3-4bd581fe4b4e/dimension/1> ;
+        dc:identifier                  "46.1198" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/49020> .

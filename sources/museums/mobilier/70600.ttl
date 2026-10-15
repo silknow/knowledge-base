@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tapisserie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926> .
+
+<http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Tissage : 1756 - 1759"@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926> .
+
+<http://data.silknow.org/image/c1954d31-2f8a-30a3-b026-2cadfd7a13f5>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mobilier/70600_0.jpg> , <https://collection.mobiliernational.culture.gouv.fr/media/xl/BOON/2004/2004-02/GMTT-30-001_3832.jpg> .
+
+<http://data.silknow.org/production/0bf6f07d-928e-3479-a8b5-44ab3ed988b4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> , <http://data.silknow.org/vocabulary/857> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1759> .
+
+<http://data.silknow.org/mobilier>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9efb3084-7a70-3c90-a375-e94a470da94e> .
+
+<http://data.silknow.org/object/a4fa798e-e748-391d-acfa-a3ebf4170cdc>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Expo, Beauvais, Galerie nationale de la tapisserie, Tapisseries françaises à sujets religieux, 12/1998 - 05/1999, p.4"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Expo, Beauvais, Galerie nationale de la tapisserie, Tapisseries françaises à sujets religieux, 12/1998 - 05/1999, p.4"@fr .
+
+<http://data.silknow.org/object/9efb3084-7a70-3c90-a375-e94a470da94e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record GMTT-30-001" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/category/1> , <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/domain/1> , <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/domain/2> , <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926> , <http://data.silknow.org/image/c1954d31-2f8a-30a3-b026-2cadfd7a13f5> , <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/observation/1> , <http://data.silknow.org/object/a4fa798e-e748-391d-acfa-a3ebf4170cdc> , <http://data.silknow.org/production/0bf6f07d-928e-3479-a8b5-44ab3ed988b4> , <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/domain/3> ;
+        dc:identifier       "70600.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mobilier" .
+
+<http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Tissage : 1756 - 1759"@fr ;
+        rdfs:label                     "Ancien Testament\r\nL'évanouissement d' Esther"@fr ;
+        ecrm:P102_has_title            "Ancien Testament\r\nL'évanouissement d' Esther"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c1954d31-2f8a-30a3-b026-2cadfd7a13f5> ;
+        ecrm:P3_has_note               "Tissage : 1756 - 1759"@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/dimension/1> , <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/dimension/2> ;
+        dc:identifier                  "GMTT-30-001" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collection.mobiliernational.culture.gouv.fr/objet/GMTT-30-001> .
+
+<http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/category/1>
+        a                    silk:T35 ;
+        silk:L1              "TAPISSERIE DE LICE" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926> .
+
+<http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/domain/3>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926> .
+
+<http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "4.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "4.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Tapisserie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926> .
+
+<http://data.silknow.org/object/8e47c9c5-5f8d-33c8-bf68-18783ae19926/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "4.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "4.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "5.44" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "5.44"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/4bbe0951-d400-36f4-ac7f-4eb010cc48d5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> , <http://data.silknow.org/vocabulary/857> .
+
+<http://data.silknow.org/image/bad6a74c-7622-3b15-8bee-976ecf0b5e11>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mobilier/80448_1.jpg> , <https://collection.mobiliernational.culture.gouv.fr/media/xl/VALS/2020/02/gmtc-100-004_2020-3.JPG> .
+
+<http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Lé de damas de satin vert et dessin jaune. Les deux lisières sont toujours présentes. Le décor s’organise en frises de couronnes de laurier maintenues par des rubans et agrémentées de fleurs de lys. Elles sont séparées par des ornements décoratifs et contiennent des ancres de marine et des rosaces formées de palmettes et de fleurons.\n\nHistorique : Les étoffes ne semblent pas avoir servi. Elles appartiennent à un ensemble de six lés complets."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4> .
+
+<http://data.silknow.org/mobilier>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/05121370-9740-3c41-af48-52cbe3e6dc66> .
+
+<http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4> .
+
+<http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4/category/1>
+        a                    silk:T35 ;
+        silk:L1              "SOIERIE" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4> .
+
+<http://data.silknow.org/object/05121370-9740-3c41-af48-52cbe3e6dc66>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record GMTC-100-004" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4/domain/2> , <http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4/observation/1> , <http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4/category/1> , <http://data.silknow.org/image/ad13792b-8a07-3d0d-80ca-addd7d4fb77c> , <http://data.silknow.org/production/4bbe0951-d400-36f4-ac7f-4eb010cc48d5> , <http://data.silknow.org/image/bad6a74c-7622-3b15-8bee-976ecf0b5e11> , <http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4> , <http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4/domain/1> ;
+        dc:identifier       "80448.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mobilier" .
+
+<http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tissu précieux" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4> .
+
+<http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Lé de damas de satin vert et dessin jaune. Les deux lisières sont toujours présentes. Le décor s’organise en frises de couronnes de laurier maintenues par des rubans et agrémentées de fleurs de lys. Elles sont séparées par des ornements décoratifs et contiennent des ancres de marine et des rosaces formées de palmettes et de fleurons.\n\nHistorique : Les étoffes ne semblent pas avoir servi. Elles appartiennent à un ensemble de six lés complets."@fr ;
+        rdfs:label                     "Damas vert et jaune, à décor de couronnes de laurier, ancres de marine, rosaces et fleurs de lys."@fr ;
+        ecrm:P102_has_title            "Damas vert et jaune, à décor de couronnes de laurier, ancres de marine, rosaces et fleurs de lys."@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bad6a74c-7622-3b15-8bee-976ecf0b5e11> , <http://data.silknow.org/image/ad13792b-8a07-3d0d-80ca-addd7d4fb77c> ;
+        ecrm:P3_has_note               "Lé de damas de satin vert et dessin jaune. Les deux lisières sont toujours présentes. Le décor s’organise en frises de couronnes de laurier maintenues par des rubans et agrémentées de fleurs de lys. Elles sont séparées par des ornements décoratifs et contiennent des ancres de marine et des rosaces formées de palmettes et de fleurons.\n\nHistorique : Les étoffes ne semblent pas avoir servi. Elles appartiennent à un ensemble de six lés complets."@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4/dimension/2> , <http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4/dimension/1> ;
+        dc:identifier                  "GMTC-100-004" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collection.mobiliernational.culture.gouv.fr/objet/GMTC-100-004> .
+
+<http://data.silknow.org/object/56ddeecf-26a6-3796-b4a6-c69a3f1777c4/dimension/2>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/height> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/image/ad13792b-8a07-3d0d-80ca-addd7d4fb77c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mobilier/80448_0.jpg> , <https://collection.mobiliernational.culture.gouv.fr/media/xl/VALS/2020/02/gmtc-100-004_2020-1.JPG> .

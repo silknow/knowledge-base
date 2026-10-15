@@ -1,0 +1,91 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874> .
+
+<http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "26.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "26.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/579179e1-c88d-3ed9-b727-e82c87a33f26>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/957631_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/24429.jpg> .
+
+<http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/96> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874> .
+
+<http://data.silknow.org/production/3d57d3a8-701e-3585-ba3e-c1874182599d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/15b88ef7-858f-3fc7-b3fd-d5f9953cc49e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "55.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "55.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/579179e1-c88d-3ed9-b727-e82c87a33f26> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874/dimension/1> , <http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874/dimension/2> ;
+        dc:identifier                  "65.012.10" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/shawl-6501210> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/1ecb27d6-020c-3618-9796-ac3bb68ef94c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Hugo Linnell" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Hugo Linnell" .
+
+<http://data.silknow.org/event/8160bae6-fee1-3b4e-8f41-e7904931d850>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/23a719e6-f47b-3fed-907c-cf161b1fda81> .
+
+<http://data.silknow.org/event/c23a1005-57df-3572-88bc-ac4254281349>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/1ecb27d6-020c-3618-9796-ac3bb68ef94c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Hugo Linnell" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874> .
+
+<http://data.silknow.org/object/23a719e6-f47b-3fed-907c-cf161b1fda81>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 65.012.10" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/579179e1-c88d-3ed9-b727-e82c87a33f26> , <http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874/category/1> , <http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874> , <http://data.silknow.org/production/3d57d3a8-701e-3585-ba3e-c1874182599d> , <http://data.silknow.org/event/c23a1005-57df-3572-88bc-ac4254281349> , <http://data.silknow.org/event/8160bae6-fee1-3b4e-8f41-e7904931d850> , <http://data.silknow.org/object/f020263a-7f37-3840-87fa-fcdac44f4874/domain/1> ;
+        dc:identifier       "957631.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

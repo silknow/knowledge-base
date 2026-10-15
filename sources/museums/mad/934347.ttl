@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/1af99236-45a4-3364-90cd-d08173a73a86/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "20" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "20"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/2a7d2310-548e-366a-a556-80bfc6626386>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Commandant Seiler, en souvenir de M. Georges Marteau, 1917" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1af99236-45a4-3364-90cd-d08173a73a86> .
+
+<http://data.silknow.org/production/61183d78-9fe1-3e39-a6db-c1e3505791a8>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Japon, 18e siècle (2de moitié), 17e siècle (2de moitié)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1af99236-45a4-3364-90cd-d08173a73a86> ;
+        ecrm:P3_has_note        "Japon, 18e siècle (2de moitié), 17e siècle (2de moitié)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1751_1800> , <http://data.silknow.org/timespan/1651_1700> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .
+
+<http://data.silknow.org/image/65edeecb-47a1-3c18-8cd1-c1216a78ae7b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934347_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/41834c6f-272f-438a-99ef-cffae8aaffa1.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/1af99236-45a4-3364-90cd-d08173a73a86/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "21"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/1af99236-45a4-3364-90cd-d08173a73a86/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1af99236-45a4-3364-90cd-d08173a73a86> .
+
+<http://data.silknow.org/object/1af99236-45a4-3364-90cd-d08173a73a86>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Japon, 18e siècle (2de moitié), 17e siècle (2de moitié)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/65edeecb-47a1-3c18-8cd1-c1216a78ae7b> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/1af99236-45a4-3364-90cd-d08173a73a86/dimension/2> , <http://data.silknow.org/object/1af99236-45a4-3364-90cd-d08173a73a86/dimension/1> ;
+        dc:identifier                  "20662.A-C" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934347> .
+
+<http://data.silknow.org/object/0ef761b8-929a-3087-a5cb-df6edc2ff3df>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 20662.A-C" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/2a7d2310-548e-366a-a556-80bfc6626386> , <http://data.silknow.org/production/61183d78-9fe1-3e39-a6db-c1e3505791a8> , <http://data.silknow.org/object/1af99236-45a4-3364-90cd-d08173a73a86> , <http://data.silknow.org/object/1af99236-45a4-3364-90cd-d08173a73a86/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/65edeecb-47a1-3c18-8cd1-c1216a78ae7b> ;
+        dc:identifier       "934347.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0ef761b8-929a-3087-a5cb-df6edc2ff3df> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/1af99236-45a4-3364-90cd-d08173a73a86> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

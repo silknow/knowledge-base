@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/28596ae2-b7cc-3ad4-a65d-a65e79ed8615> .
+
+<http://data.silknow.org/assessment/e7c47651-bb31-3fde-a5b2-f8b0f4442902/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .
+
+<http://data.silknow.org/production/9da525a5-62d3-3d1d-9997-2edcba4bf331>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8abe9daa-f02b-3def-89bb-9d6105a17aee> ;
+        ecrm:P126_employed      "Hilo de seda rosa y plata."@es ;
+        ecrm:P32_used_general_technique
+                "Brocado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/9da525a5-62d3-3d1d-9997-2edcba4bf331/activity/1> .
+
+<http://data.silknow.org/object/8abe9daa-f02b-3def-89bb-9d6105a17aee/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Pertenece a la imagen de Ntra. Sra. del Tránsito.*Falta la saya."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8abe9daa-f02b-3def-89bb-9d6105a17aee> .
+
+<http://data.silknow.org/object/28596ae2-b7cc-3ad4-a65d-a65e79ed8615>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.102" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/d4043bed-aa4a-313f-b88c-e6cfa7dad5c1> , <http://data.silknow.org/object/8abe9daa-f02b-3def-89bb-9d6105a17aee> , <http://data.silknow.org/production/9da525a5-62d3-3d1d-9997-2edcba4bf331> , <http://data.silknow.org/assessment/e7c47651-bb31-3fde-a5b2-f8b0f4442902> , <http://data.silknow.org/object/8abe9daa-f02b-3def-89bb-9d6105a17aee/observation/1> , <http://data.silknow.org/object/8abe9daa-f02b-3def-89bb-9d6105a17aee/type/1> ;
+        dc:identifier       "5.102.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/object/8abe9daa-f02b-3def-89bb-9d6105a17aee/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8abe9daa-f02b-3def-89bb-9d6105a17aee> ;
+        ecrm:P42_assigned    "Traje procesional" .
+
+<http://data.silknow.org/object/8abe9daa-f02b-3def-89bb-9d6105a17aee>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Pertenece a la imagen de Ntra. Sra. del Tránsito.*Falta la saya."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d4043bed-aa4a-313f-b88c-e6cfa7dad5c1> ;
+        ecrm:P3_has_note               "*Pertenece a la imagen de Ntra. Sra. del Tránsito.*Falta la saya."@es ;
+        dc:identifier                  "5.102" .
+
+<http://data.silknow.org/production/9da525a5-62d3-3d1d-9997-2edcba4bf331/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .
+
+<http://data.silknow.org/image/d4043bed-aa4a-313f-b88c-e6cfa7dad5c1>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.102" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.102_0.jpg> .
+
+<http://data.silknow.org/assessment/e7c47651-bb31-3fde-a5b2-f8b0f4442902>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/8abe9daa-f02b-3def-89bb-9d6105a17aee> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/e7c47651-bb31-3fde-a5b2-f8b0f4442902/condition/1> .

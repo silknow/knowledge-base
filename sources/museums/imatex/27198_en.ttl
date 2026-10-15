@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/56fcbc01-1fe6-3d83-b103-5ed39347098b> .
+
+<http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "28" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "28"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3a0f0bc5-18c3-313d-9fb1-e99fe8191732> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff/dimension/1> , <http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff/dimension/2> ;
+        dc:identifier                  "15991" .
+
+<http://data.silknow.org/production/03967f28-0d2c-3f6d-b219-d129ba511a43>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                "patterned fabric"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> .
+
+<http://data.silknow.org/event/9cc96b68-1053-38dc-9cb6-0314e0403cae>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff> .
+
+<http://data.silknow.org/object/56fcbc01-1fe6-3d83-b103-5ed39347098b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27198" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/03967f28-0d2c-3f6d-b219-d129ba511a43> , <http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff/domain/1> , <http://data.silknow.org/image/3a0f0bc5-18c3-313d-9fb1-e99fe8191732> , <http://data.silknow.org/event/0bb79919-7d9b-3bd5-bd88-8fc7aef1cfa2> , <http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff/category/1> , <http://data.silknow.org/event/9cc96b68-1053-38dc-9cb6-0314e0403cae> , <http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff> ;
+        dc:identifier       "27198.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff> .
+
+<http://data.silknow.org/image/3a0f0bc5-18c3-313d-9fb1-e99fe8191732>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000032854" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27198_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000032854.jpg> .
+
+<http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff> .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .
+
+<http://data.silknow.org/event/0bb79919-7d9b-3bd5-bd88-8fc7aef1cfa2>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff> .
+
+<http://data.silknow.org/object/3c6587d9-7b84-3b1c-9225-3ec1cd9537ff/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "18" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "18"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

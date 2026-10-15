@@ -1,0 +1,106 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/7259c1f6-3f04-3d75-a2cc-289417715baf>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793> .
+
+<http://data.silknow.org/object/8cf96b2f-2a75-3046-9c23-e5fda3847f37>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 96.60" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/7259c1f6-3f04-3d75-a2cc-289417715baf> , <http://data.silknow.org/image/4edc7fd6-7dcc-302b-8115-fc23c4c8b106> , <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793/category/1> , <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793> , <http://data.silknow.org/event/3b6d3660-36fc-39f9-af61-b03c89e76fd9> , <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793/domain/1> , <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793/observation/1> , <http://data.silknow.org/production/d257af4d-99c8-3e63-a157-d2c47ff0e0e8> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "71001.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793> .
+
+<http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Insertion fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793> .
+
+<http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "10.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "10.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "67.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "67.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/3b6d3660-36fc-39f9-af61-b03c89e76fd9>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b4aa23b6-fddd-3c0e-abf2-d38261636623> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "Denman Waldo Ross Collection; Gift to the MFA, September 1, 1896 / Denman Waldo Ross Collection" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793> .
+
+<http://data.silknow.org/actor/b4aa23b6-fddd-3c0e-abf2-d38261636623>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Denman Waldo Ross Collection; Gift to the MFA, September 1 / Denman Waldo Ross Collection" ;
+        ecrm:P1_is_identified_by  "Denman Waldo Ross Collection; Gift to the MFA, September 1 / Denman Waldo Ross Collection" .
+
+<http://data.silknow.org/image/4edc7fd6-7dcc-302b-8115-fc23c4c8b106>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "729658" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/71001_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/729658/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Insertion fragment, probably from a furnishing fabric, made of knotted net embroidered with design of a female figure wearing a triangular shape long skirt."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4edc7fd6-7dcc-302b-8115-fc23c4c8b106> ;
+        ecrm:P3_has_note               "Insertion fragment, probably from a furnishing fabric, made of knotted net embroidered with design of a female figure wearing a triangular shape long skirt."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793/dimension/2> , <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793/dimension/1> ;
+        dc:identifier                  "96.60" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/71001> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Insertion fragment, probably from a furnishing fabric, made of knotted net embroidered with design of a female figure wearing a triangular shape long skirt."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8cf96b2f-2a75-3046-9c23-e5fda3847f37> .
+
+<https://sws.geonames.org/6255148/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/d257af4d-99c8-3e63-a157-d2c47ff0e0e8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5bd46f41-4186-32d9-92c0-af0721fc4793> ;
+        ecrm:P126_employed      "Linen; knotted net embroidered with linen thread with weaving stitch (filet work)"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1826_1875> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6255148/> .

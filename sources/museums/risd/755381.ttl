@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "9.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "9.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/024b6dbb-6623-33bf-b962-67d1534e2635>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256> .
+
+<http://data.silknow.org/production/ad61c4d9-be94-39fd-9b67-bb6f3637c6ce>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "33" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "33"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/10ea550b-2cd1-3b54-bc2b-5804f102ed6d>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256> .
+
+<http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b37e6a3a-338f-327e-826a-83387ae1b6ef> , <http://data.silknow.org/image/759f2c56-1ce5-395e-90d9-0d95a04f3409> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256/dimension/1> , <http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256/dimension/2> ;
+        dc:identifier                  "15.122" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/panel-costume-component-15122> .
+
+<http://data.silknow.org/image/759f2c56-1ce5-395e-90d9-0d95a04f3409>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/755381_1.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/29916.jpg> .
+
+<http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256> .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/19454df2-f000-357a-ac6a-f148cd47aac4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 15.122" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/ad61c4d9-be94-39fd-9b67-bb6f3637c6ce> , <http://data.silknow.org/event/10ea550b-2cd1-3b54-bc2b-5804f102ed6d> , <http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256/category/1> , <http://data.silknow.org/event/024b6dbb-6623-33bf-b962-67d1534e2635> , <http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256/domain/1> , <http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256> , <http://data.silknow.org/image/759f2c56-1ce5-395e-90d9-0d95a04f3409> , <http://data.silknow.org/image/b37e6a3a-338f-327e-826a-83387ae1b6ef> ;
+        dc:identifier       "755381.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256/category/1>
+        a                    silk:T35 ;
+        silk:L1              "panel (costume component)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e360500d-b158-3449-95aa-45f279441256> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Gustav Radeke" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/19454df2-f000-357a-ac6a-f148cd47aac4> .
+
+<http://data.silknow.org/image/b37e6a3a-338f-327e-826a-83387ae1b6ef>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/755381_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/29917.jpg> .

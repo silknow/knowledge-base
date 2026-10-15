@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3057568/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Light natural colored linen embroidered with yellow and blue silk, both in solid embroidery and with drawn work, in a border design."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042> .
+
+<http://data.silknow.org/image/f89c3d69-f22f-3120-a98e-98a508104996>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "843986" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/67390_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/843986/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Light natural colored linen embroidered with yellow and blue silk, both in solid embroidery and with drawn work, in a border design."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f89c3d69-f22f-3120-a98e-98a508104996> ;
+        ecrm:P3_has_note               "Light natural colored linen embroidered with yellow and blue silk, both in solid embroidery and with drawn work, in a border design."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042/dimension/2> , <http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042/dimension/1> ;
+        dc:identifier                  "22.743a-b" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/67390> .
+
+<http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/2> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042> .
+
+<http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "65" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "65"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/cd0e0fb8-2690-3a7e-9fdc-58bfc2cfe1c5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042> ;
+        ecrm:P126_employed      "Linen and silk; embroidery"@en ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3057568/> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/event/2655edf7-8071-34cc-89df-8fc726d2424c>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8192176a-8e3f-3559-9b82-b67a86b089c6> .
+
+<http://data.silknow.org/object/8192176a-8e3f-3559-9b82-b67a86b089c6>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 22.743a-b" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/production/cd0e0fb8-2690-3a7e-9fdc-58bfc2cfe1c5> , <http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042> , <http://data.silknow.org/event/2655edf7-8071-34cc-89df-8fc726d2424c> , <http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042/observation/1> , <http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042/domain/1> , <http://data.silknow.org/image/f89c3d69-f22f-3120-a98e-98a508104996> ;
+        dc:identifier       "67390.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2c82912d-3d49-38e3-8d60-21c644f54042> .

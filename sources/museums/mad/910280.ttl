@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/9fe2159d-0afa-3e09-876f-adcd0b6b2234>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910280_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/c1c31925-5dcc-46cb-a91f-4bab543a33c6.jpg> .
+
+<https://sws.geonames.org/3164603/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/379c6724-b60c-3cab-89e4-94cc226b1447>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10027" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e5f06daf-2e4d-3af3-90ce-de632d62728e/category/1> , <http://data.silknow.org/object/e5f06daf-2e4d-3af3-90ce-de632d62728e> , <http://data.silknow.org/event/443e6725-22ce-30ca-a108-ca5b9ceb832a> , <http://data.silknow.org/image/9fe2159d-0afa-3e09-876f-adcd0b6b2234> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/2c1d5324-ebd9-3fd5-bb48-b8efa53195f9> ;
+        dc:identifier       "910280.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/443e6725-22ce-30ca-a108-ca5b9ceb832a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "achat, 1902" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e5f06daf-2e4d-3af3-90ce-de632d62728e> .
+
+<http://data.silknow.org/production/2c1d5324-ebd9-3fd5-bb48-b8efa53195f9>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Venise, 1730-1740" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e5f06daf-2e4d-3af3-90ce-de632d62728e> ;
+        ecrm:P126_employed      "Damas gros de Tours, broché"@fr ;
+        ecrm:P3_has_note        "Venise, 1730-1740" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1730_1740> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3164603/> .
+
+<http://data.silknow.org/object/e5f06daf-2e4d-3af3-90ce-de632d62728e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Venise, 1730-1740"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9fe2159d-0afa-3e09-876f-adcd0b6b2234> ;
+        dc:identifier                  "10027" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910280> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/379c6724-b60c-3cab-89e4-94cc226b1447> .
+
+<http://data.silknow.org/object/e5f06daf-2e4d-3af3-90ce-de632d62728e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e5f06daf-2e4d-3af3-90ce-de632d62728e> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/e5f06daf-2e4d-3af3-90ce-de632d62728e> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

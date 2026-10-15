@@ -1,0 +1,66 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f0fda269-edc3-3d15-9435-0df3ea4daefa> .
+
+<http://data.silknow.org/event/26a285c1-ef06-3236-904b-6db7cbdd4724>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c61a7a44-47fd-35ce-bd70-7e1ce3f31c92> .
+
+<http://data.silknow.org/object/c61a7a44-47fd-35ce-bd70-7e1ce3f31c92/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c61a7a44-47fd-35ce-bd70-7e1ce3f31c92> .
+
+<http://data.silknow.org/event/e666ce28-4ac2-3255-b3d1-5412d79a2a4b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c61a7a44-47fd-35ce-bd70-7e1ce3f31c92> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/image/31cded3b-bc8d-3a40-8b08-e2eb9cfb9497>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000032978" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27313_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000032978.jpg> .
+
+<http://data.silknow.org/object/c61a7a44-47fd-35ce-bd70-7e1ce3f31c92>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/31cded3b-bc8d-3a40-8b08-e2eb9cfb9497> ;
+        dc:identifier                  "16066" .
+
+<http://data.silknow.org/object/f0fda269-edc3-3d15-9435-0df3ea4daefa>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27313" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/e666ce28-4ac2-3255-b3d1-5412d79a2a4b> , <http://data.silknow.org/image/31cded3b-bc8d-3a40-8b08-e2eb9cfb9497> , <http://data.silknow.org/production/4305b473-39c8-37bd-8d2b-6e06b1888b64> , <http://data.silknow.org/object/c61a7a44-47fd-35ce-bd70-7e1ce3f31c92/domain/1> , <http://data.silknow.org/event/26a285c1-ef06-3236-904b-6db7cbdd4724> , <http://data.silknow.org/object/c61a7a44-47fd-35ce-bd70-7e1ce3f31c92/category/1> , <http://data.silknow.org/object/c61a7a44-47fd-35ce-bd70-7e1ce3f31c92> ;
+        dc:identifier       "27313.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/c61a7a44-47fd-35ce-bd70-7e1ce3f31c92/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c61a7a44-47fd-35ce-bd70-7e1ce3f31c92> .
+
+<http://data.silknow.org/production/4305b473-39c8-37bd-8d2b-6e06b1888b64>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c61a7a44-47fd-35ce-bd70-7e1ce3f31c92> ;
+        ecrm:P126_employed      "... sense confirmar"@ca ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "vellut gofrat"@ca , "vellut tallat llis"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://vocab.getty.edu/aat/300404511> .

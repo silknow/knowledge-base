@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/assessment/1f10e9c8-ed71-38ad-aa2f-bcf392d16551/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "pas de défaut d'intégrité"@fr ;
+        ecrm:P2_has_type  "Intégrité" ;
+        ecrm:P3_has_note  "pas de défaut d'intégrité"@fr .
+
+<http://data.silknow.org/assessment/1f10e9c8-ed71-38ad-aa2f-bcf392d16551>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/6e95533c-59f9-39df-a825-bb18c7e200ad> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/1f10e9c8-ed71-38ad-aa2f-bcf392d16551/condition/1> .
+
+<http://data.silknow.org/object/6e95533c-59f9-39df-a825-bb18c7e200ad>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Fleurs"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/666a66f8-eed6-3db4-b1db-cbc6ffd3320e> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/dba89723-faea-3a2a-a2bf-53afc970d33c> , <http://data.silknow.org/vocabulary/905> ;
+        dc:identifier                  "95.71.61" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/image/666a66f8-eed6-3db4-b1db-cbc6ffd3320e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.61_0.jpg> .
+
+<http://data.silknow.org/object/6e95533c-59f9-39df-a825-bb18c7e200ad/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6e95533c-59f9-39df-a825-bb18c7e200ad> ;
+        ecrm:P42_assigned    "Fleurs" .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c8890a00-9186-37d5-aea7-0ec2b86033f3> .
+
+<http://data.silknow.org/object/6e95533c-59f9-39df-a825-bb18c7e200ad/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/6e95533c-59f9-39df-a825-bb18c7e200ad> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/production/664ddefc-192f-3200-89fa-760c9146034b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6e95533c-59f9-39df-a825-bb18c7e200ad> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/366> .
+
+<http://data.silknow.org/object/78812be7-6305-3b15-99c3-61d25beeb193>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.61.JPG"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6e95533c-59f9-39df-a825-bb18c7e200ad> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.61.JPG"@fr .
+
+<http://data.silknow.org/image/dba89723-faea-3a2a-a2bf-53afc970d33c>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "muguet"@fr ;
+        ecrm:P3_has_note  "muguet"@fr .
+
+<http://data.silknow.org/event/8c480aa2-daba-39ac-a427-5d7c7831d190>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6e95533c-59f9-39df-a825-bb18c7e200ad> .
+
+<http://data.silknow.org/object/c8890a00-9186-37d5-aea7-0ec2b86033f3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.61" ;
+        ecrm:P129_is_about  <http://data.silknow.org/assessment/1f10e9c8-ed71-38ad-aa2f-bcf392d16551> , <http://data.silknow.org/production/664ddefc-192f-3200-89fa-760c9146034b> , <http://data.silknow.org/object/6e95533c-59f9-39df-a825-bb18c7e200ad/right> , <http://data.silknow.org/image/666a66f8-eed6-3db4-b1db-cbc6ffd3320e> , <http://data.silknow.org/event/8c480aa2-daba-39ac-a427-5d7c7831d190> , <http://data.silknow.org/object/78812be7-6305-3b15-99c3-61d25beeb193> , <http://data.silknow.org/object/6e95533c-59f9-39df-a825-bb18c7e200ad> , <http://data.silknow.org/object/6e95533c-59f9-39df-a825-bb18c7e200ad/type/1> ;
+        dc:identifier       "95.71.61.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .

@@ -1,0 +1,105 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/36> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/9abad123-b34d-3131-9b6a-05e4e6ce98bd>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/88ea7d39-1ae5-33af-8c84-7597d1fe2455> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Miss Sylvester Hodder" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/production/04009792-39a9-3531-951d-de3a89f2389b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a> ;
+        ecrm:P126_employed      "Woven silk trimmed with velvet, lined with holland and poplin, faced with silk and boned"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1880_1899> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/04009792-39a9-3531-951d-de3a89f2389b/activity/1> .
+
+<http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk bodice and skirt with a woven pattern in pseudo 'Persian' style of vertical stripes of red, black and blue, each having varicoloured floral trails."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Fashion" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a> .
+
+<http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dress" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a> .
+
+<http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a>
+        a                 ecrm:E22_Man-Made_Object ;
+        rdfs:comment      "Silk bodice and skirt, designed by Worth, France, 1880-1899."@en , "Silk bodice and skirt with a woven pattern in pseudo 'Persian' style of vertical stripes of red, black and blue, each having varicoloured floral trails."@en ;
+        ecrm:P3_has_note  "Silk bodice and skirt, designed by Worth, France, 1880-1899."@en , "Silk bodice and skirt with a woven pattern in pseudo 'Persian' style of vertical stripes of red, black and blue, each having varicoloured floral trails."@en ;
+        dc:identifier     "T.230&A-1979" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O315795> .
+
+<http://data.silknow.org/object/a38bf1f3-17f8-351b-91f7-7af454071216>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O315795" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a/domain/1> , <http://data.silknow.org/production/04009792-39a9-3531-951d-de3a89f2389b> , <http://data.silknow.org/event/9abad123-b34d-3131-9b6a-05e4e6ce98bd> , <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a/observation/2> , <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a> , <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a/domain/2> , <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a/observation/1> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> ;
+        dc:identifier       "O315795.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a38bf1f3-17f8-351b-91f7-7af454071216> .
+
+<http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Silk bodice and skirt, designed by Worth, France, 1880-1899."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f04fdf4a-7721-3b61-b5ce-6a195bd19a2a> .
+
+<http://data.silknow.org/actor/88ea7d39-1ae5-33af-8c84-7597d1fe2455>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Miss Sylvester Hodder" ;
+        ecrm:P1_is_identified_by  "Given by Miss Sylvester Hodder" .
+
+<http://data.silknow.org/production/04009792-39a9-3531-951d-de3a89f2389b/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89d64f8e-85b7-3b73-b0db-f2f565e29f19> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/actor/89d64f8e-85b7-3b73-b0db-f2f565e29f19>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Worth" ;
+        ecrm:P1_is_identified_by  "Worth" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000498463299> .

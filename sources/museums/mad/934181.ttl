@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/a7153fa9-469c-3fa2-8843-266b0c8e1248>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, Jouy-en-Josas, 1787" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ccf77f9b-fd20-3ae1-a5c4-4a8eb59b57ee> ;
+        ecrm:P126_employed      "Toile de coton imprimée à la planche de bois et lustrage"@fr ;
+        ecrm:P3_has_note        "France, Jouy-en-Josas, 1787" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1787> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> , <https://sws.geonames.org/3012165/> .
+
+<http://data.silknow.org/object/ccf77f9b-fd20-3ae1-a5c4-4a8eb59b57ee/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ccf77f9b-fd20-3ae1-a5c4-4a8eb59b57ee> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/17e15967-75d3-303d-af49-51206cd6aac1>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934181_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/399de15c-0d72-47ac-824c-0a2f9fa51275.jpg> .
+
+<http://data.silknow.org/object/11b3aeab-3caa-3357-840b-3c08553671b6>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2017.160.4" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/a7153fa9-469c-3fa2-8843-266b0c8e1248> , <http://data.silknow.org/image/17e15967-75d3-303d-af49-51206cd6aac1> , <http://data.silknow.org/event/dd555d57-42ee-37e6-8d87-417e6f7e2601> , <http://data.silknow.org/object/ccf77f9b-fd20-3ae1-a5c4-4a8eb59b57ee> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/ccf77f9b-fd20-3ae1-a5c4-4a8eb59b57ee/category/1> ;
+        dc:identifier       "934181.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/ccf77f9b-fd20-3ae1-a5c4-4a8eb59b57ee>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, Jouy-en-Josas, 1787"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/17e15967-75d3-303d-af49-51206cd6aac1> ;
+        dc:identifier                  "2017.160.4" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934181> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/11b3aeab-3caa-3357-840b-3c08553671b6> .
+
+<http://data.silknow.org/event/dd555d57-42ee-37e6-8d87-417e6f7e2601>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Atelier Forrer, 2017" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ccf77f9b-fd20-3ae1-a5c4-4a8eb59b57ee> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ccf77f9b-fd20-3ae1-a5c4-4a8eb59b57ee> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/3012165/>
+        a       ecrm:E53_Place .

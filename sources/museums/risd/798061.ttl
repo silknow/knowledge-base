@@ -1,0 +1,75 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1269750/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/63d489d7-f304-3ac9-a2ec-086e0116fa81>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/505235cb-4d2c-3efb-83ed-013e10189328> .
+
+<http://data.silknow.org/object/8b04f83a-d699-3c3b-be09-1c48a86351b1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 55.566" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/562061b6-af68-3936-ad5a-92982182d435> , <http://data.silknow.org/object/505235cb-4d2c-3efb-83ed-013e10189328> , <http://data.silknow.org/object/505235cb-4d2c-3efb-83ed-013e10189328/category/1> , <http://data.silknow.org/object/505235cb-4d2c-3efb-83ed-013e10189328/domain/1> , <http://data.silknow.org/event/e76892ae-1ad2-3fe8-af4c-a7878a50afda> , <http://data.silknow.org/event/63d489d7-f304-3ac9-a2ec-086e0116fa81> , <http://data.silknow.org/production/74f52122-f6a9-3db7-946c-e4ecab990915> ;
+        dc:identifier       "798061.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/image/562061b6-af68-3936-ad5a-92982182d435>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/798061_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/12567.jpg> .
+
+<http://data.silknow.org/production/74f52122-f6a9-3db7-946c-e4ecab990915>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/505235cb-4d2c-3efb-83ed-013e10189328> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1269750/> .
+
+<http://data.silknow.org/object/505235cb-4d2c-3efb-83ed-013e10189328/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/505235cb-4d2c-3efb-83ed-013e10189328> .
+
+<http://data.silknow.org/object/505235cb-4d2c-3efb-83ed-013e10189328>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/562061b6-af68-3936-ad5a-92982182d435> ;
+        dc:identifier                  "55.566" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-length-55566> .
+
+<http://data.silknow.org/actor/7dd0bdea-1180-3516-abe6-2f9a54992d4c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Bequest of Miss Lucy T. Aldrich" ;
+        ecrm:P1_is_identified_by  "Bequest of Miss Lucy T. Aldrich" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/505235cb-4d2c-3efb-83ed-013e10189328/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile length" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/505235cb-4d2c-3efb-83ed-013e10189328> .
+
+<http://data.silknow.org/event/e76892ae-1ad2-3fe8-af4c-a7878a50afda>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/7dd0bdea-1180-3516-abe6-2f9a54992d4c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Bequest of Miss Lucy T. Aldrich" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/505235cb-4d2c-3efb-83ed-013e10189328> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8b04f83a-d699-3c3b-be09-1c48a86351b1> .

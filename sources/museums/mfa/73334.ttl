@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Punto di Milano embroidery" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018> .
+
+<http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "White linen worked with red silk.  Red fringe on one side."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018> .
+
+<http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "42.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "42.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/5046d017-9a8f-370f-ab5c-f96115c30076>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018> ;
+        ecrm:P126_employed      "Linen and silk; embroidery"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1700> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/image/ec029e18-cb57-3c9a-a7c2-ad72c1835900>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "844056" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/73334_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/844056/resize%3Aformat%3Dfull> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/dd8cd9b5-a676-39f9-8520-3a0a1798bd08>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/2f5800e9-1783-3a6d-8bd8-b025163fa5b9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 83.232" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018> , <http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018/observation/1> , <http://data.silknow.org/production/5046d017-9a8f-370f-ab5c-f96115c30076> , <http://data.silknow.org/event/dd8cd9b5-a676-39f9-8520-3a0a1798bd08> , <http://data.silknow.org/image/ec029e18-cb57-3c9a-a7c2-ad72c1835900> , <http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018/domain/1> ;
+        dc:identifier       "73334.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "White linen worked with red silk.  Red fringe on one side."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ec029e18-cb57-3c9a-a7c2-ad72c1835900> ;
+        ecrm:P3_has_note               "White linen worked with red silk.  Red fringe on one side."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018/dimension/2> , <http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018/dimension/1> ;
+        dc:identifier                  "83.232" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/73334> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2f5800e9-1783-3a6d-8bd8-b025163fa5b9> .
+
+<http://data.silknow.org/object/6361842c-021c-37bf-9529-25b50a4ff018/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "13.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "13.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

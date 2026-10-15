@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/363196/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "5.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "5.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "taffetas liseré broccato: fondo color salmone, motivi in lamella filata rame e argento"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/badda614-dc52-3988-9f82-7a9aaea418d0> ;
+        ecrm:P3_has_note               "taffetas liseré broccato: fondo color salmone, motivi in lamella filata rame e argento"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e/dimension/1> , <http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e/dimension/2> ;
+        dc:identifier                  "T0346" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/317522/?WEB=MuseiVE> .
+
+<http://data.silknow.org/object/636085f4-cb58-3101-a0f0-7230103b1ea1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 317522" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e/category/1> , <http://data.silknow.org/production/fec44fb5-766e-37c2-93c3-e3c25333a16b> , <http://data.silknow.org/image/badda614-dc52-3988-9f82-7a9aaea418d0> , <http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e/observation/1> , <http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e> , <http://data.silknow.org/event/7e6c2e0f-9c84-3915-85de-63140557557f> , <http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e/domain/1> ;
+        dc:identifier       "317522.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/actor/52a94e5d-55d8-38fd-85cc-d309d5f3bee8>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Fortuny, Venezia" ;
+        ecrm:P1_is_identified_by  "Museo Fortuny, Venezia" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122361075> , <https://viaf.org/viaf/168410339> .
+
+<http://data.silknow.org/event/7e6c2e0f-9c84-3915-85de-63140557557f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/52a94e5d-55d8-38fd-85cc-d309d5f3bee8> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e> .
+
+<http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "taffetas liseré broccato: fondo color salmone, motivi in lamella filata rame e argento"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e> .
+
+<http://data.silknow.org/production/fec44fb5-766e-37c2-93c3-e3c25333a16b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1601_1625> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/363196/> .
+
+<http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e> .
+
+<http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "87" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "87"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/636085f4-cb58-3101-a0f0-7230103b1ea1> .
+
+<http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b1fc0345-0381-3f6d-852b-bdc7d68f0f4e> .
+
+<http://data.silknow.org/image/badda614-dc52-3988-9f82-7a9aaea418d0>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/317522_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5idosGkczWnX9r6%2f0mFrnj5sXfvWi7LZ%2fMJBQWjeOkZeqqgfXkHlIVeq2RtsK0SnRcUppDqUqllFssMjHb9Qn3Ln4V8rhEngiivUulYdxWaDtndTlhgcBRA%3d%3d> .

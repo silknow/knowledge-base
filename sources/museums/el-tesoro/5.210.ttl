@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0f5bffb7-ec0e-301d-b518-6bcf90e45da2> .
+
+<http://data.silknow.org/object/2308ab61-4317-3df0-9404-fabf7db0f7be/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2308ab61-4317-3df0-9404-fabf7db0f7be> ;
+        ecrm:P42_assigned    "Traje procesional" .
+
+<http://data.silknow.org/production/490ab93c-aa23-3cdb-a33d-1d37d0586709>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2308ab61-4317-3df0-9404-fabf7db0f7be> ;
+        ecrm:P126_employed      "Hilo de oro, plata y seda. Galón de plata."@es ;
+        ecrm:P32_used_general_technique
+                "Espolín."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/490ab93c-aa23-3cdb-a33d-1d37d0586709/activity/1> .
+
+<http://data.silknow.org/object/0f5bffb7-ec0e-301d-b518-6bcf90e45da2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.210" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2308ab61-4317-3df0-9404-fabf7db0f7be> , <http://data.silknow.org/object/2308ab61-4317-3df0-9404-fabf7db0f7be/type/1> , <http://data.silknow.org/image/757e895c-8fd4-315e-96fa-43ddb7953650> , <http://data.silknow.org/production/490ab93c-aa23-3cdb-a33d-1d37d0586709> , <http://data.silknow.org/object/2308ab61-4317-3df0-9404-fabf7db0f7be/observation/1> , <http://data.silknow.org/assessment/6b68531b-27a3-36de-9d50-1a739c8b5c50> ;
+        dc:identifier       "5.210.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/assessment/6b68531b-27a3-36de-9d50-1a739c8b5c50/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Regular. No se recomienda su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Regular. No se recomienda su uso."@es .
+
+<http://data.silknow.org/object/2308ab61-4317-3df0-9404-fabf7db0f7be>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Pertenece a la imagen de Ntra. Sra. del Tránsito."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/757e895c-8fd4-315e-96fa-43ddb7953650> ;
+        ecrm:P3_has_note               "*Pertenece a la imagen de Ntra. Sra. del Tránsito."@es ;
+        dc:identifier                  "5.210" .
+
+<http://data.silknow.org/image/757e895c-8fd4-315e-96fa-43ddb7953650>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.210" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.210_0.jpg> .
+
+<http://data.silknow.org/object/2308ab61-4317-3df0-9404-fabf7db0f7be/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Pertenece a la imagen de Ntra. Sra. del Tránsito."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2308ab61-4317-3df0-9404-fabf7db0f7be> .
+
+<http://data.silknow.org/actor/97e9b2cd-6830-3dac-9411-56ef59533b19>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo. Flandes. (?)" ;
+        ecrm:P1_is_identified_by  "Anónimo. Flandes. (?)" .
+
+<http://data.silknow.org/production/490ab93c-aa23-3cdb-a33d-1d37d0586709/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/97e9b2cd-6830-3dac-9411-56ef59533b19> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/assessment/6b68531b-27a3-36de-9d50-1a739c8b5c50>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/2308ab61-4317-3df0-9404-fabf7db0f7be> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/6b68531b-27a3-36de-9d50-1a739c8b5c50/condition/1> .

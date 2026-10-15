@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c1a06906-5cf2-3b58-a8ad-e5c6bd86bc09> .
+
+<http://data.silknow.org/image/4507cfac-5bc0-314e-9e54-0ead9898ac83>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000028929" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/24573_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000028929.jpg> .
+
+<http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Teixit amb decoració vegetal de grans dimensions que incorpora l'emblema del d'orde dels agustins recol·lectes."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd> .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/event/92d34d84-6b62-3213-8702-8f128ad0acd6>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd> .
+
+<http://data.silknow.org/production/0b5833cf-21eb-3a7d-be50-4aaa0f04b2ef>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/168> , <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> , <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd> .
+
+<http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd> .
+
+<http://data.silknow.org/event/3808e9ba-c607-34e6-a7cc-8c2003932d3f>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/image/e92f096f-a383-3968-ab1c-aaad319abda0>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "decoración vegetal estilizada"@es ;
+        ecrm:P3_has_note  "decoración vegetal estilizada"@es .
+
+<http://data.silknow.org/image/d01fe1d3-7569-38e9-b69d-cf597e342de0>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "emblema de l'Orde de Sant Agustí"@es ;
+        ecrm:P3_has_note  "emblema de l'Orde de Sant Agustí"@es .
+
+<http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Teixit amb decoració vegetal de grans dimensions que incorpora l'emblema del d'orde dels agustins recol·lectes."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4507cfac-5bc0-314e-9e54-0ead9898ac83> ;
+        ecrm:P3_has_note               "Teixit amb decoració vegetal de grans dimensions que incorpora l'emblema del d'orde dels agustins recol·lectes."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/d01fe1d3-7569-38e9-b69d-cf597e342de0> , <http://data.silknow.org/image/e92f096f-a383-3968-ab1c-aaad319abda0> , <http://data.silknow.org/vocabulary/750> ;
+        dc:identifier                  "5468" .
+
+<http://data.silknow.org/object/c1a06906-5cf2-3b58-a8ad-e5c6bd86bc09>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 24573" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd/domain/1> , <http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd/category/1> , <http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd/observation/1> , <http://data.silknow.org/object/5b081e2d-aefa-3acc-8e37-40151c18f5dd> , <http://data.silknow.org/event/92d34d84-6b62-3213-8702-8f128ad0acd6> , <http://data.silknow.org/production/0b5833cf-21eb-3a7d-be50-4aaa0f04b2ef> , <http://data.silknow.org/image/4507cfac-5bc0-314e-9e54-0ead9898ac83> , <http://data.silknow.org/event/3808e9ba-c607-34e6-a7cc-8c2003932d3f> ;
+        dc:identifier       "24573.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

@@ -1,0 +1,105 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/377666aa-7105-3b63-8dbe-c1c74f6e55a5>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe> .
+
+<http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 29 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "29"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "brocaded, 1800s, Persian; Flowers and stripes"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe> .
+
+<http://data.silknow.org/image/b0446095-3f8a-31d6-9085-59b51aea927e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2010CT4437" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O158636_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2010CT/2010CT4437.jpg> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe> .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/db7efa16-1fce-376c-ba0c-3d8332fb2576>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe> ;
+        ecrm:P126_employed      "cotton yarn, silk thread, metal thread, weaving"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1890> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 19 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "19"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a65bffd5-2618-3050-92eb-c1c9435d896c> .
+
+<http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "brocaded, 1800s, Persian; Flowers and stripes"@en , "Dress fabric, woven silk and cotton brocaded with silk and metal thread.\nDisplayed behind glass. \nWarp: blue silk\nWeft: Z-spun blue cotton\nBrocading wefts: pink, red, green, purple silk and gilt metal strip Z-wound on yellow silk core.\nStripes:\n[1] blue ground with isolated gold lobed circles each containing an almost circular arrangement of leaves in gold, pink and green, pink and purple, red and green and red and purple.\n[2] blue ground hardly visible beneath a sinuous gold stem decorated with small red, pink, green and purple dots.  To either side of the stem are large gold floral shapes with details in the same colours."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0d0702e8-5bd6-3cd4-a7ec-bc10d0c448cf> , <http://data.silknow.org/image/b0446095-3f8a-31d6-9085-59b51aea927e> ;
+        ecrm:P3_has_note               "Dress fabric, woven silk and cotton brocaded with silk and metal thread.\nDisplayed behind glass. \nWarp: blue silk\nWeft: Z-spun blue cotton\nBrocading wefts: pink, red, green, purple silk and gilt metal strip Z-wound on yellow silk core.\nStripes:\n[1] blue ground with isolated gold lobed circles each containing an almost circular arrangement of leaves in gold, pink and green, pink and purple, red and green and red and purple.\n[2] blue ground hardly visible beneath a sinuous gold stem decorated with small red, pink, green and purple dots.  To either side of the stem are large gold floral shapes with details in the same colours."@en , "brocaded, 1800s, Persian; Flowers and stripes"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe/dimension/2> , <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe/dimension/1> ;
+        dc:identifier                  "1353-1899" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O158636> .
+
+<http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dress fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe> .
+
+<http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Dress fabric, woven silk and cotton brocaded with silk and metal thread.\nDisplayed behind glass. \nWarp: blue silk\nWeft: Z-spun blue cotton\nBrocading wefts: pink, red, green, purple silk and gilt metal strip Z-wound on yellow silk core.\nStripes:\n[1] blue ground with isolated gold lobed circles each containing an almost circular arrangement of leaves in gold, pink and green, pink and purple, red and green and red and purple.\n[2] blue ground hardly visible beneath a sinuous gold stem decorated with small red, pink, green and purple dots.  To either side of the stem are large gold floral shapes with details in the same colours."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe> .
+
+<http://data.silknow.org/object/a65bffd5-2618-3050-92eb-c1c9435d896c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O158636" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/db7efa16-1fce-376c-ba0c-3d8332fb2576> , <http://data.silknow.org/event/377666aa-7105-3b63-8dbe-c1c74f6e55a5> , <http://data.silknow.org/image/0d0702e8-5bd6-3cd4-a7ec-bc10d0c448cf> , <http://data.silknow.org/image/b0446095-3f8a-31d6-9085-59b51aea927e> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe/observation/2> , <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe/observation/1> , <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe> , <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe/domain/1> ;
+        dc:identifier       "O158636.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/image/0d0702e8-5bd6-3cd4-a7ec-bc10d0c448cf>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2011ER9396" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O158636_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2011ER/2011ER9396.jpg> .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/cb909bf6-0311-37fd-9f2a-c40958bdc2fe> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .

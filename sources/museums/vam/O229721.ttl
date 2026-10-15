@@ -1,0 +1,99 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 38 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "38"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/7e67af70-7b3a-3ad1-88ee-05f84760b5a4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303> ;
+        ecrm:P126_employed      "silk thread, metal thread, weaving"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1880> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/event/846bd09c-5a09-373a-bc2c-9e6d4cc5f02a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303> .
+
+<http://data.silknow.org/image/a57a0251-d44c-3b9c-a530-463a4fe95c51>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018KX9750" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O229721_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018KX/2018KX9750.jpg> .
+
+<http://data.silknow.org/object/986b9d46-8e9b-3d99-8288-1c9535e31bb3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O229721" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303> , <http://data.silknow.org/event/846bd09c-5a09-373a-bc2c-9e6d4cc5f02a> , <http://data.silknow.org/image/9a44fbb5-e105-38bd-97f4-0f3bc08f8c97> , <http://data.silknow.org/image/a57a0251-d44c-3b9c-a530-463a4fe95c51> , <http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303/domain/1> , <http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303/observation/1> , <http://data.silknow.org/production/7e67af70-7b3a-3ad1-88ee-05f84760b5a4> ;
+        dc:identifier       "O229721.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 34 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "34"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/986b9d46-8e9b-3d99-8288-1c9535e31bb3> .
+
+<http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Woven silk and metal thread.\nPossibly half of the original sash border. There is a selvedge down the right hand side. It includes two and a half vertical motifs. The metal thread is silver strip open S-wound on a yellow silk core. The two horizontal edges have beige silk warp threads and there seems to be no sign of any other colour, possibly suggesting that this border was woven as a separate piece to be attached to a central panel [rather than a border which has been cut off a sash].\nYellow silk ground woven with metal thread and dominated by large-scale and elaborate floral vases, each standing on a shallow striped dish. A semi-circle of  red tri-lobed motifs and mauve flowerheads is above each vase. And above this are two pairs of pink blossoms, a central mauve flower and a large pink carnation at the top.\nThe borders consist of narrow bands with diagonal green leaves separating pale flowerheads and a wider band with a pink carnation in profile, alternately inward and outward-facing, small mauve flowerheads and pairs of green leaves on curving stems."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303> .
+
+<http://data.silknow.org/image/9a44fbb5-e105-38bd-97f4-0f3bc08f8c97>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018KX9749" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O229721_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018KX/2018KX9749.jpg> .
+
+<http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303> .
+
+<http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Woven silk and metal thread.\nPossibly half of the original sash border. There is a selvedge down the right hand side. It includes two and a half vertical motifs. The metal thread is silver strip open S-wound on a yellow silk core. The two horizontal edges have beige silk warp threads and there seems to be no sign of any other colour, possibly suggesting that this border was woven as a separate piece to be attached to a central panel [rather than a border which has been cut off a sash].\nYellow silk ground woven with metal thread and dominated by large-scale and elaborate floral vases, each standing on a shallow striped dish. A semi-circle of  red tri-lobed motifs and mauve flowerheads is above each vase. And above this are two pairs of pink blossoms, a central mauve flower and a large pink carnation at the top.\nThe borders consist of narrow bands with diagonal green leaves separating pale flowerheads and a wider band with a pink carnation in profile, alternately inward and outward-facing, small mauve flowerheads and pairs of green leaves on curving stems."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9a44fbb5-e105-38bd-97f4-0f3bc08f8c97> , <http://data.silknow.org/image/a57a0251-d44c-3b9c-a530-463a4fe95c51> ;
+        ecrm:P3_has_note               "Woven silk and metal thread.\nPossibly half of the original sash border. There is a selvedge down the right hand side. It includes two and a half vertical motifs. The metal thread is silver strip open S-wound on a yellow silk core. The two horizontal edges have beige silk warp threads and there seems to be no sign of any other colour, possibly suggesting that this border was woven as a separate piece to be attached to a central panel [rather than a border which has been cut off a sash].\nYellow silk ground woven with metal thread and dominated by large-scale and elaborate floral vases, each standing on a shallow striped dish. A semi-circle of  red tri-lobed motifs and mauve flowerheads is above each vase. And above this are two pairs of pink blossoms, a central mauve flower and a large pink carnation at the top.\nThe borders consist of narrow bands with diagonal green leaves separating pale flowerheads and a wider band with a pink carnation in profile, alternately inward and outward-facing, small mauve flowerheads and pairs of green leaves on curving stems."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303/dimension/2> , <http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303/dimension/1> ;
+        dc:identifier                  "T.229-1910" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O229721> .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .
+
+<http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Sash border" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4cafb40a-2411-34fa-948a-178647180303> .

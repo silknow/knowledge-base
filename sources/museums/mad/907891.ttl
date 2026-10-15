@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/18a5cf6c-a70f-38f0-b72a-7ef153fbb4ad>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Kenzo Jap, Paris, 1976, collection printemps-été" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a1bcb792-c3ed-3b11-a062-75e6e30c1fcd> ;
+        ecrm:P3_has_note        "Kenzo Jap, Paris, 1976, collection printemps-été" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1976> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2988507/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/577e92ca-3908-31ee-82f1-eeb3a4225188>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2010.129.25" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/18a5cf6c-a70f-38f0-b72a-7ef153fbb4ad> , <http://data.silknow.org/object/a1bcb792-c3ed-3b11-a062-75e6e30c1fcd/category/1> , <http://data.silknow.org/image/ec285641-10fb-3276-9e57-797b27d0e3ca> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/a1bcb792-c3ed-3b11-a062-75e6e30c1fcd> , <http://data.silknow.org/event/4bca0785-1f48-337e-b8dc-ee9bf2c3687f> ;
+        dc:identifier       "907891.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/a1bcb792-c3ed-3b11-a062-75e6e30c1fcd>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Kenzo Jap, Paris, 1976, collection printemps-été"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ec285641-10fb-3276-9e57-797b27d0e3ca> ;
+        dc:identifier                  "2010.129.25" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/907891> .
+
+<http://data.silknow.org/event/4bca0785-1f48-337e-b8dc-ee9bf2c3687f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Brigitte Camelot-Raysse, 2010" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a1bcb792-c3ed-3b11-a062-75e6e30c1fcd> .
+
+<http://data.silknow.org/object/a1bcb792-c3ed-3b11-a062-75e6e30c1fcd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a1bcb792-c3ed-3b11-a062-75e6e30c1fcd> .
+
+<http://data.silknow.org/image/ec285641-10fb-3276-9e57-797b27d0e3ca>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/907891_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/af43ae64-970d-4975-ac41-85c8d39e2b34.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/577e92ca-3908-31ee-82f1-eeb3a4225188> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/a1bcb792-c3ed-3b11-a062-75e6e30c1fcd> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2988507/>
+        a       ecrm:E53_Place .

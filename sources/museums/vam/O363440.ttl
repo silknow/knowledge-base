@@ -1,0 +1,129 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/5d64617d-74ef-313d-a4aa-49d4dbecce12>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0> ;
+        ecrm:P126_employed      "linen (material)"@en , "silk (textile)"@en , "Silk, linen, cotton, silk thread, linen thread, whalebone"@en , "hand-woven silk, gauze and muslin, hand-made net, hand-sewn"@en , "linen thread"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/277> ;
+        ecrm:P32_used_general_technique
+                "gauze weave"@en , "netting"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1775_1780> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/actor/63b32c5e-b208-3fce-b86e-cc5fd0e44d9b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Christopher Lennox Boyd" ;
+        ecrm:P1_is_identified_by  "Given by Christopher Lennox Boyd" .
+
+<http://data.silknow.org/event/1c086d06-c59e-334f-9c10-ae9e8081cb90>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/63b32c5e-b208-3fce-b86e-cc5fd0e44d9b> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Christopher Lennox Boyd" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "A girl's gown, 1775-80, English; pink silk, trimmed with muslin, silk gauze and net"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0> .
+
+<http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "bust under armholes approx" ;
+        rdfs:label          "Circumference: 67.5 cm bust under armholes approx" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/circumference> ;
+        ecrm:P3_has_note    "bust under armholes approx" ;
+        ecrm:P90_has_value  "67.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Gown" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/cbce8a32-11b7-3f5f-9705-9014650a6795>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O363440" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/observation/1> , <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/domain/1> , <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/event/1c086d06-c59e-334f-9c10-ae9e8081cb90> , <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/observation/2> , <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/domain/2> , <http://data.silknow.org/production/5d64617d-74ef-313d-a4aa-49d4dbecce12> , <http://data.silknow.org/image/6e5acea2-7913-3e81-a96e-37fdda96b7b0> ;
+        dc:identifier       "O363440.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/24> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0> .
+
+<http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "A girl's gown, 1775-80, English; pink silk, trimmed with muslin, silk gauze and net"@en , "A girl's gown of pink silk.  The skirt is closed; the bodice opens at the back, with elbow length sleeves. The bodice and skirt were constructed separately and stitched together.  The bodice is made in three main pieces: an angled front panel and two sides. It is shaped at the waist with narrow pleats, lightly boned at the edge, has a lace-up fastening at the centre back and a wedge shaped panel applied at each side. The sleeves are of a short elbow length with a combination setting at the shoulder. There is a pocket slit on the right front seam.The bodice is made in three main pieces: a pointed front panel and two side-back pieces. The bodice is lightly boned at each back edge,with 12 worked eyelets each side for lacing.  A narrow, wedge-shaped panel applied at each side covers the back lacing. The bodice and sleeves are lined with bleached linen.  \n\nThe gown skirt is made of 5 widths of silk, faced with white silk taffeta at the hem.  The skirt is finely cartridge pleated at the waist, held in place with a band of silk and two rows of stitching. The top edge of the skirt is whipped to the lower edge of the bodice, leaving a  gap for the front and back points of the bodice to extend over the skirt.  It has a bound back opening and pocket slit on the right side. The skirt is about 30 cm longer at the back than the front  and would have been looped up with the five silk cord loops and buttons at the sides and back.\n\nThe gown bodice and sleeves are trimmed with ruched muslin, striped silk gauze and net.  The skirt front is decorated with a deep flounce of striped silk gauze, edged with muslin ruching and looped up with pearl buttons."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6e5acea2-7913-3e81-a96e-37fdda96b7b0> ;
+        ecrm:P3_has_note               "A girl's gown of pink silk.  The skirt is closed; the bodice opens at the back, with elbow length sleeves. The bodice and skirt were constructed separately and stitched together.  The bodice is made in three main pieces: an angled front panel and two sides. It is shaped at the waist with narrow pleats, lightly boned at the edge, has a lace-up fastening at the centre back and a wedge shaped panel applied at each side. The sleeves are of a short elbow length with a combination setting at the shoulder. There is a pocket slit on the right front seam.The bodice is made in three main pieces: a pointed front panel and two side-back pieces. The bodice is lightly boned at each back edge,with 12 worked eyelets each side for lacing.  A narrow, wedge-shaped panel applied at each side covers the back lacing. The bodice and sleeves are lined with bleached linen.  \n\nThe gown skirt is made of 5 widths of silk, faced with white silk taffeta at the hem.  The skirt is finely cartridge pleated at the waist, held in place with a band of silk and two rows of stitching. The top edge of the skirt is whipped to the lower edge of the bodice, leaving a  gap for the front and back points of the bodice to extend over the skirt.  It has a bound back opening and pocket slit on the right side. The skirt is about 30 cm longer at the back than the front  and would have been looped up with the five silk cord loops and buttons at the sides and back.\n\nThe gown bodice and sleeves are trimmed with ruched muslin, striped silk gauze and net.  The skirt front is decorated with a deep flounce of striped silk gauze, edged with muslin ruching and looped up with pearl buttons."@en , "A girl's gown, 1775-80, English; pink silk, trimmed with muslin, silk gauze and net"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/dimension/1> , <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/dimension/2> , <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/dimension/3> ;
+        dc:identifier                  "T.607-1974" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O363440> .
+
+<http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "silk, selvedge to selvedge" ;
+        rdfs:label          "Width: 73.6 cm silk, selvedge to selvedge" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "silk, selvedge to selvedge" ;
+        ecrm:P90_has_value  "73.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/6e5acea2-7913-3e81-a96e-37fdda96b7b0>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2015HM4209" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O363440_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2015HM/2015HM4209.jpg> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/cbce8a32-11b7-3f5f-9705-9014650a6795> .
+
+<http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "A girl's gown of pink silk.  The skirt is closed; the bodice opens at the back, with elbow length sleeves. The bodice and skirt were constructed separately and stitched together.  The bodice is made in three main pieces: an angled front panel and two sides. It is shaped at the waist with narrow pleats, lightly boned at the edge, has a lace-up fastening at the centre back and a wedge shaped panel applied at each side. The sleeves are of a short elbow length with a combination setting at the shoulder. There is a pocket slit on the right front seam.The bodice is made in three main pieces: a pointed front panel and two side-back pieces. The bodice is lightly boned at each back edge,with 12 worked eyelets each side for lacing.  A narrow, wedge-shaped panel applied at each side covers the back lacing. The bodice and sleeves are lined with bleached linen.  \n\nThe gown skirt is made of 5 widths of silk, faced with white silk taffeta at the hem.  The skirt is finely cartridge pleated at the waist, held in place with a band of silk and two rows of stitching. The top edge of the skirt is whipped to the lower edge of the bodice, leaving a  gap for the front and back points of the bodice to extend over the skirt.  It has a bound back opening and pocket slit on the right side. The skirt is about 30 cm longer at the back than the front  and would have been looped up with the five silk cord loops and buttons at the sides and back.\n\nThe gown bodice and sleeves are trimmed with ruched muslin, striped silk gauze and net.  The skirt front is decorated with a deep flounce of striped silk gauze, edged with muslin ruching and looped up with pearl buttons."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0> .
+
+<http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "shoulder to hem at centre back approx" ;
+        rdfs:label          "Length: 149.0 cm shoulder to hem at centre back approx" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "shoulder to hem at centre back approx" ;
+        ecrm:P90_has_value  "149.0"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Fashion" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/de8e340a-ed2d-3397-a121-8f536b8a20f0> .

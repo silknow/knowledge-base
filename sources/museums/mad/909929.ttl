@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/e742f870-bca7-3541-9a86-1152e54f9b9e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909929_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/162ec1ce-a78a-4184-abb6-428db2c9751d.jpg> .
+
+<http://data.silknow.org/object/c3ac26ba-77e4-3a1a-83b0-bfb53b22d843>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2001.144.42" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0b904b25-9f84-346d-8884-0ecff8e6fca3> , <http://data.silknow.org/image/e742f870-bca7-3541-9a86-1152e54f9b9e> , <http://data.silknow.org/production/2f4906b8-b57a-38fd-b8cf-dbb3344ccf2a> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/0b904b25-9f84-346d-8884-0ecff8e6fca3/category/1> , <http://data.silknow.org/event/76875146-83e7-3dbb-a70c-f03fefc9567f> ;
+        dc:identifier       "909929.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/2f4906b8-b57a-38fd-b8cf-dbb3344ccf2a>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Lesage, Paris, 1973, collection automne-hiver, Chanel, 1973, collection hiver" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0b904b25-9f84-346d-8884-0ecff8e6fca3> ;
+        ecrm:P126_employed      "Organza, broderie allover en tubes de verre doré et perles en acier taillé."@fr ;
+        ecrm:P3_has_note        "Lesage, Paris, 1973, collection automne-hiver, Chanel, 1973, collection hiver" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1973> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6052725/> , <https://sws.geonames.org/2988507/> , <https://sws.geonames.org/3727948/> .
+
+<http://data.silknow.org/object/0b904b25-9f84-346d-8884-0ecff8e6fca3/category/1>
+        a                    silk:T35 ;
+        silk:L1              "échantillon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0b904b25-9f84-346d-8884-0ecff8e6fca3> .
+
+<https://sws.geonames.org/6052725/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/76875146-83e7-3dbb-a70c-f03fefc9567f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don François Lesage, 2001" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0b904b25-9f84-346d-8884-0ecff8e6fca3> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c3ac26ba-77e4-3a1a-83b0-bfb53b22d843> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/0b904b25-9f84-346d-8884-0ecff8e6fca3> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2988507/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/0b904b25-9f84-346d-8884-0ecff8e6fca3>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "échantillon, Lesage, Paris, 1973, collection automne-hiver, Chanel, 1973, collection hiver"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e742f870-bca7-3541-9a86-1152e54f9b9e> ;
+        dc:identifier                  "2001.144.42" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909929> .
+
+<https://sws.geonames.org/3727948/>
+        a       ecrm:E53_Place .

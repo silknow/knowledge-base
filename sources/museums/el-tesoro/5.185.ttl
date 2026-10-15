@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dab46c6b-503e-3109-af38-af18cd6a2596> .
+
+<http://data.silknow.org/assessment/3a2f3afa-8527-3cbe-ad94-476a92d35bda/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .
+
+<http://data.silknow.org/production/82e48eb2-b594-3f89-be7a-39e6300018bf/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/9dbbb784-5003-3c97-8633-2e14189d1b7f/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9dbbb784-5003-3c97-8633-2e14189d1b7f> ;
+        ecrm:P42_assigned    "Cubre cáliz" .
+
+<http://data.silknow.org/object/dab46c6b-503e-3109-af38-af18cd6a2596>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.185" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/82e48eb2-b594-3f89-be7a-39e6300018bf> , <http://data.silknow.org/object/9dbbb784-5003-3c97-8633-2e14189d1b7f> , <http://data.silknow.org/assessment/3a2f3afa-8527-3cbe-ad94-476a92d35bda> , <http://data.silknow.org/image/1ebd9895-6df7-38d3-927b-6c7ad817f864> , <http://data.silknow.org/object/9dbbb784-5003-3c97-8633-2e14189d1b7f/type/1> ;
+        dc:identifier       "5.185.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/assessment/3a2f3afa-8527-3cbe-ad94-476a92d35bda>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/9dbbb784-5003-3c97-8633-2e14189d1b7f> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/3a2f3afa-8527-3cbe-ad94-476a92d35bda/condition/1> .
+
+<http://data.silknow.org/image/1ebd9895-6df7-38d3-927b-6c7ad817f864>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.185" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.185_0.jpg> .
+
+<http://data.silknow.org/production/82e48eb2-b594-3f89-be7a-39e6300018bf>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9dbbb784-5003-3c97-8633-2e14189d1b7f> ;
+        ecrm:P126_employed      "Hilo de seda y oro. Galón de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Brocado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/82e48eb2-b594-3f89-be7a-39e6300018bf/activity/1> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .
+
+<http://data.silknow.org/object/9dbbb784-5003-3c97-8633-2e14189d1b7f>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1ebd9895-6df7-38d3-927b-6c7ad817f864> ;
+        dc:identifier                  "5.185" .

@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/event/ee2de566-e1a8-3672-a24a-27f8ac38b4a1>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Moderna"@es , "Fragmento en forma de tira de brocado, de terciopelo de seda rojo cardenal e hilos metálicos dorados que aparecen rellenando la especie de hexágonos o círculos de la red que forma el terciopelo."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7e8e8f8d-ddde-3c22-b636-d0e3790158ea> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Fragmento en forma de tira de brocado, de terciopelo de seda rojo cardenal e hilos metálicos dorados que aparecen rellenando la especie de hexágonos o círculos de la red que forma el terciopelo."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/0af7bd0c-4f2d-3533-8bba-e3421f2bc973> ;
+        dc:identifier                  "CE24047" .
+
+<http://data.silknow.org/production/3a425820-5465-3fa9-a45a-66b33f476a13>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/851> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/97> , <http://data.silknow.org/vocabulary/379> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1700> .
+
+<http://data.silknow.org/event/7b42aa1b-10c8-3cb9-849a-fb3eb44cd97b>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820> .
+
+<http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fragmento en forma de tira de brocado, de terciopelo de seda rojo cardenal e hilos metálicos dorados que aparecen rellenando la especie de hexágonos o círculos de la red que forma el terciopelo."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820> .
+
+<http://data.silknow.org/image/0af7bd0c-4f2d-3533-8bba-e3421f2bc973>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Motivos vegetales; Motivos geométricos"@es ;
+        ecrm:P3_has_note  "Motivos vegetales; Motivos geométricos"@es .
+
+<http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820> .
+
+<http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820> .
+
+<http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragmento de tejido" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820> .
+
+<http://data.silknow.org/image/7e8e8f8d-ddde-3c22-b636-d0e3790158ea>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE24047" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE24047_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE24047&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/67f6da11-acbd-34d7-a7a0-e6db9fc6b247>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE24047" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/3a425820-5465-3fa9-a45a-66b33f476a13> , <http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820/observation/1> , <http://data.silknow.org/event/ee2de566-e1a8-3672-a24a-27f8ac38b4a1> , <http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820> , <http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820/domain/1> , <http://data.silknow.org/image/7e8e8f8d-ddde-3c22-b636-d0e3790158ea> , <http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820/category/1> , <http://data.silknow.org/event/7b42aa1b-10c8-3cb9-849a-fb3eb44cd97b> , <http://data.silknow.org/object/6b74ba17-f2e1-38db-975a-4104be844820/observation/2> ;
+        dc:identifier       "CE24047_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/67f6da11-acbd-34d7-a7a0-e6db9fc6b247> .

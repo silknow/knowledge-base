@@ -1,0 +1,106 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/c55941a1-1dc5-38d0-bc58-757153302fba>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c> .
+
+<http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "6.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "6.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/bf7e9b52-28c7-37be-bfbe-0c852e8396dc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c> ;
+        ecrm:P126_employed      "Cotton Levers machine lace"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1901_1925> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6255148/> .
+
+<http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "51.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "51.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Lace trim" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c> .
+
+<http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c> .
+
+<http://data.silknow.org/object/76563781-f9da-36bd-92af-0ddbe492c8b1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2009.5177" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/production/bf7e9b52-28c7-37be-bfbe-0c852e8396dc> , <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c/domain/1> , <http://data.silknow.org/event/200842bf-adec-374c-9700-6486a287a02a> , <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c/observation/1> , <http://data.silknow.org/event/c55941a1-1dc5-38d0-bc58-757153302fba> , <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c/category/1> , <http://data.silknow.org/image/4ff754ca-6fe5-3fe8-932a-7e1e5ba2145f> , <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c> ;
+        dc:identifier       "532324.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Narrow band of ecru lace trim with curvilinear or \"whiplash\" forms in the style of Milanese bobbin lace."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4ff754ca-6fe5-3fe8-932a-7e1e5ba2145f> ;
+        ecrm:P3_has_note               "Narrow band of ecru lace trim with curvilinear or \"whiplash\" forms in the style of Milanese bobbin lace."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c/dimension/2> , <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c/dimension/1> ;
+        dc:identifier                  "2009.5177" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/532324> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/76563781-f9da-36bd-92af-0ddbe492c8b1> .
+
+<http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Narrow band of ecru lace trim with curvilinear or \"whiplash\" forms in the style of Milanese bobbin lace."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c> .
+
+<http://data.silknow.org/image/4ff754ca-6fe5-3fe8-932a-7e1e5ba2145f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1175286" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/532324_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/1175286/resize%3Aformat%3Dfull> .
+
+<https://sws.geonames.org/6255148/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/c8e6062c-ceef-301f-a7f0-9adef664e0e1>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Collection of Gertrude Mayer; inherited by Jane B. Mayer, Newton Center, MA; gift of Mayer and her husband Robert to the MFA (Accession date: December 16) / Gift of Dr. Robert and Jane B. Mayer" ;
+        ecrm:P1_is_identified_by  "Collection of Gertrude Mayer; inherited by Jane B. Mayer, Newton Center, MA; gift of Mayer and her husband Robert to the MFA (Accession date: December 16) / Gift of Dr. Robert and Jane B. Mayer" .
+
+<http://data.silknow.org/event/200842bf-adec-374c-9700-6486a287a02a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c8e6062c-ceef-301f-a7f0-9adef664e0e1> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "Collection of Gertrude Mayer; inherited by Jane B. Mayer, Newton Center, MA; gift of Mayer and her husband Robert to the MFA (Accession date: December 16, 2009) / Gift of Dr. Robert and Jane B. Mayer" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e1a123ba-d161-3cf3-9c75-16c7c767804c> .

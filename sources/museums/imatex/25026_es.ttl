@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/526796b5-5086-3646-8f48-e79e10ef6c3c> .
+
+<http://data.silknow.org/event/8a8d31f5-de4b-3fbe-8a53-1ffad850f3d6>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/677f57c6-2a68-3403-864e-0b60e73733a6> .
+
+<http://data.silknow.org/event/58c01318-66aa-3419-b1f9-06e1bee1122a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/677f57c6-2a68-3403-864e-0b60e73733a6> .
+
+<http://data.silknow.org/object/677f57c6-2a68-3403-864e-0b60e73733a6>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/882ac8c1-e770-355d-83c3-4a509bfcc6f7> ;
+        dc:identifier                  "21592" .
+
+<http://data.silknow.org/object/677f57c6-2a68-3403-864e-0b60e73733a6/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/677f57c6-2a68-3403-864e-0b60e73733a6> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/image/882ac8c1-e770-355d-83c3-4a509bfcc6f7>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000029655" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/25026_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000029655.jpg> .
+
+<http://data.silknow.org/object/526796b5-5086-3646-8f48-e79e10ef6c3c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 25026" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/58c01318-66aa-3419-b1f9-06e1bee1122a> , <http://data.silknow.org/production/c77b4a02-b0b9-308e-a2e8-756893aa30ca> , <http://data.silknow.org/event/8a8d31f5-de4b-3fbe-8a53-1ffad850f3d6> , <http://data.silknow.org/object/677f57c6-2a68-3403-864e-0b60e73733a6/domain/1> , <http://data.silknow.org/image/882ac8c1-e770-355d-83c3-4a509bfcc6f7> , <http://data.silknow.org/object/677f57c6-2a68-3403-864e-0b60e73733a6> , <http://data.silknow.org/object/677f57c6-2a68-3403-864e-0b60e73733a6/category/1> ;
+        dc:identifier       "25026.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/677f57c6-2a68-3403-864e-0b60e73733a6/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/677f57c6-2a68-3403-864e-0b60e73733a6> .
+
+<http://data.silknow.org/production/c77b4a02-b0b9-308e-a2e8-756893aa30ca>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/677f57c6-2a68-3403-864e-0b60e73733a6> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .

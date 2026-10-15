@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/b5feaf8f-8a4a-3005-a574-19187db28232>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of John Cooper, Richard Cooper, Robert Cooper and Peggy Cooper in memory of William Rhys Cooper" ;
+        ecrm:P1_is_identified_by  "Gift of John Cooper, Richard Cooper, Robert Cooper and Peggy Cooper in memory of William Rhys Cooper" .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/ff8c9969-a81f-3053-b559-7e90a78539bd>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396> ;
+        ecrm:P126_employed      "cardboard; silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<http://data.silknow.org/object/d7a67665-7769-340f-897c-c31dd1b2aa59>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "The Woven Image" , "September 24 - December 7, 1997" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "The Woven Image" , "September 24 - December 7, 1997" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/woven-image> .
+
+<http://data.silknow.org/event/13cf10f6-fedc-361c-a46f-4bd17473f540>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b5feaf8f-8a4a-3005-a574-19187db28232> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of John Cooper, Richard Cooper, Robert Cooper and Peggy Cooper in memory of William Rhys Cooper" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396> .
+
+<http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Folio with Samples of Japanese, Chinese and Dutch Textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396> .
+
+<http://data.silknow.org/event/e91d8451-905f-3dbb-b828-2852bc477d00>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396> .
+
+<http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396>
+        a                       ecrm:E22_Man-Made_Object ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396/dimension/2> , <http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396/dimension/1> ;
+        dc:identifier           "1989.063.2A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/folio-samples-japanese-chinese-and-dutch-textiles-19890632a> .
+
+<http://data.silknow.org/object/25100002-3a48-366b-a7db-284e2d4e451a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1989.063.2A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/e91d8451-905f-3dbb-b828-2852bc477d00> , <http://data.silknow.org/object/d7a67665-7769-340f-897c-c31dd1b2aa59> , <http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396> , <http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396/domain/1> , <http://data.silknow.org/event/13cf10f6-fedc-361c-a46f-4bd17473f540> , <http://data.silknow.org/production/ff8c9969-a81f-3053-b559-7e90a78539bd> , <http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396/category/1> ;
+        dc:identifier       "826656.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/25100002-3a48-366b-a7db-284e2d4e451a> .
+
+<http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "31.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "31.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e75e57c3-e08f-3f67-897a-85831d234396/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "25.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "25.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

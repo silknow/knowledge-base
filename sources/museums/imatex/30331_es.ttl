@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c1da7b3c-840d-31bb-847f-d12760e585f4> .
+
+<http://data.silknow.org/event/0a3d4ff5-b8d7-3c50-8806-75e1d4af93d2>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348> .
+
+<http://data.silknow.org/production/151b949f-3156-34aa-93b8-c4ec59eca53c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/event/7490acc3-9699-3f79-90ab-75f6c4bb146a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348> .
+
+<http://data.silknow.org/object/c1da7b3c-840d-31bb-847f-d12760e585f4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 30331" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348/category/1> , <http://data.silknow.org/image/cb4126b3-f909-303b-b504-d06e46f11c70> , <http://data.silknow.org/production/151b949f-3156-34aa-93b8-c4ec59eca53c> , <http://data.silknow.org/image/a52f188b-8403-3b00-8313-57998a333c36> , <http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348/observation/1> , <http://data.silknow.org/event/7490acc3-9699-3f79-90ab-75f6c4bb146a> , <http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348/domain/1> , <http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348> , <http://data.silknow.org/event/0a3d4ff5-b8d7-3c50-8806-75e1d4af93d2> ;
+        dc:identifier       "30331.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348> .
+
+<http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "conserva els 2 voravius"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a52f188b-8403-3b00-8313-57998a333c36> , <http://data.silknow.org/image/cb4126b3-f909-303b-b504-d06e46f11c70> ;
+        ecrm:P3_has_note               "conserva els 2 voravius"@es ;
+        dc:identifier                  "21998" .
+
+<http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- conserva els 2 voravius"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348> .
+
+<http://data.silknow.org/image/a52f188b-8403-3b00-8313-57998a333c36>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000036441" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/30331_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000036441.jpg> .
+
+<http://data.silknow.org/image/cb4126b3-f909-303b-b504-d06e46f11c70>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000036440" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/30331_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000036440.jpg> .
+
+<http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e521dab2-37f1-3405-a78d-062d6034d348> .

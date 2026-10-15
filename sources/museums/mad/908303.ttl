@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/95d02242-0861-32dc-821d-603c6733d6d1>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908303_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/04469062-bca5-476f-a004-8599b0191575.jpg> .
+
+<http://data.silknow.org/object/a9fa4663-c369-3d9b-8bd6-ad1344726861>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lambrequin, Italie, 17e siècle"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/95d02242-0861-32dc-821d-603c6733d6d1> ;
+        dc:identifier                  "18198.ABCD" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908303> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/a3dab59d-04d4-3069-bd14-27ff855a74c1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 18198.ABCD" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a9fa4663-c369-3d9b-8bd6-ad1344726861> , <http://data.silknow.org/production/291ab981-f28e-3439-a9df-ef07e7dc69b7> , <http://data.silknow.org/event/82a048ce-3245-373e-aa41-b580506b9838> , <http://data.silknow.org/object/a9fa4663-c369-3d9b-8bd6-ad1344726861/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/95d02242-0861-32dc-821d-603c6733d6d1> ;
+        dc:identifier       "908303.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/291ab981-f28e-3439-a9df-ef07e7dc69b7>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Italie, 17e siècle" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a9fa4663-c369-3d9b-8bd6-ad1344726861> ;
+        ecrm:P126_employed      "Satin façonné, brodé d'un galon plat avec effilé argent et gland de passementerie."@fr ;
+        ecrm:P3_has_note        "Italie, 17e siècle" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/a9fa4663-c369-3d9b-8bd6-ad1344726861/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lambrequin" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a9fa4663-c369-3d9b-8bd6-ad1344726861> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a3dab59d-04d4-3069-bd14-27ff855a74c1> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/a9fa4663-c369-3d9b-8bd6-ad1344726861> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/event/82a048ce-3245-373e-aa41-b580506b9838>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don baron Carl de Vinck De Deux Orp, 1911" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a9fa4663-c369-3d9b-8bd6-ad1344726861> .

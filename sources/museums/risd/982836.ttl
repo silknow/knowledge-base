@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/2177ae78-5466-3c15-9273-2f7e6c2c00d0/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2177ae78-5466-3c15-9273-2f7e6c2c00d0> .
+
+<http://data.silknow.org/image/3bb81b85-052d-3bc7-a3c1-6d7e8e97f1ac>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/982836_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/28329.jpg> .
+
+<http://data.silknow.org/production/6b665f0b-fe3b-3f20-93ed-167b9ef816dd>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2177ae78-5466-3c15-9273-2f7e6c2c00d0> ;
+        ecrm:P126_employed      "Silk; plain weave, printed"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "printing"@en , "printed"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/236> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/5332cbf0-9a23-34e8-8760-c4307c2e9d58> .
+
+<http://data.silknow.org/object/faba9080-9dfa-3e3d-a771-516b864f49c5>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "From Paris to Providence" , "January 12 - April 8, 2001" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2177ae78-5466-3c15-9273-2f7e6c2c00d0> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "From Paris to Providence" , "January 12 - April 8, 2001" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/paris-providence> .
+
+<http://data.silknow.org/object/2177ae78-5466-3c15-9273-2f7e6c2c00d0>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3bb81b85-052d-3bc7-a3c1-6d7e8e97f1ac> ;
+        dc:identifier                  "2000.62.8" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/length-2000628> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/0aa2236f-28ff-3f41-b12d-87e17cb436cb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2000.62.8" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/faba9080-9dfa-3e3d-a771-516b864f49c5> , <http://data.silknow.org/object/2177ae78-5466-3c15-9273-2f7e6c2c00d0> , <http://data.silknow.org/event/6aa3c700-0646-38cb-af25-c74737e1d538> , <http://data.silknow.org/production/6b665f0b-fe3b-3f20-93ed-167b9ef816dd> , <http://data.silknow.org/event/e0ccb371-13e3-3aa7-a227-02b60a424dcc> , <http://data.silknow.org/object/2177ae78-5466-3c15-9273-2f7e6c2c00d0/category/1> , <http://data.silknow.org/object/2177ae78-5466-3c15-9273-2f7e6c2c00d0/domain/1> , <http://data.silknow.org/image/3bb81b85-052d-3bc7-a3c1-6d7e8e97f1ac> ;
+        dc:identifier       "982836.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0aa2236f-28ff-3f41-b12d-87e17cb436cb> .
+
+<http://data.silknow.org/event/e0ccb371-13e3-3aa7-a227-02b60a424dcc>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2177ae78-5466-3c15-9273-2f7e6c2c00d0> .
+
+<http://data.silknow.org/object/2177ae78-5466-3c15-9273-2f7e6c2c00d0/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Length" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2177ae78-5466-3c15-9273-2f7e6c2c00d0> .
+
+<http://data.silknow.org/actor/a603d842-4f67-3672-a198-b3ff89ed3e61>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mr. and Mrs. Louis J. Cella III" ;
+        ecrm:P1_is_identified_by  "Gift of Mr. and Mrs. Louis J. Cella III" .
+
+<http://data.silknow.org/event/6aa3c700-0646-38cb-af25-c74737e1d538>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a603d842-4f67-3672-a198-b3ff89ed3e61> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mr. and Mrs. Louis J. Cella III" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2177ae78-5466-3c15-9273-2f7e6c2c00d0> .

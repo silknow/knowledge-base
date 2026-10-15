@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/f221803c-19b2-3137-b9fc-f6f9ab3948f8>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/29786_0.jpg> , <https://www.artic.edu/iiif/2/fde9a72b-22c3-255e-dd1e-3e6cc1a182fe/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/event/805a3b83-4652-3239-b69c-e2143056e56c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c5664947-3e6b-3f26-a12b-57361db54f36> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Emily Crane Chadbourne" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359> .
+
+<http://data.silknow.org/production/cb2ad57d-d68b-37ed-83b7-355b217a11f4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/82f2fb65-a6a0-3e69-9d82-e6197cfe40d2> , <http://data.silknow.org/timespan/1736> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel (Showing “Lace” Design)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359> .
+
+<http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, silvered-metal-strip-wrapped silk, warp-float faced 7:1 satin weave with supplementary brocading wefts and supplementary binding warps tying some self-patterning ground wefts in plain interlacing"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f221803c-19b2-3137-b9fc-f6f9ab3948f8> ;
+        ecrm:P3_has_note               "Silk, silvered-metal-strip-wrapped silk, warp-float faced 7:1 satin weave with supplementary brocading wefts and supplementary binding warps tying some self-patterning ground wefts in plain interlacing"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359/dimension/1> , <http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359/dimension/2> ;
+        dc:identifier                  "1926.822" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/29786/panel-showing-lace-design> .
+
+<http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, silvered-metal-strip-wrapped silk, warp-float faced 7:1 satin weave with supplementary brocading wefts and supplementary binding warps tying some self-patterning ground wefts in plain interlacing"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "95.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "95.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "105.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "105.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/430b9e02-6dd4-3c18-965c-abd32263cf99>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1926.822" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/805a3b83-4652-3239-b69c-e2143056e56c> , <http://data.silknow.org/production/cb2ad57d-d68b-37ed-83b7-355b217a11f4> , <http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359> , <http://data.silknow.org/image/f221803c-19b2-3137-b9fc-f6f9ab3948f8> , <http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359/observation/1> , <http://data.silknow.org/object/16901488-0017-35ca-b6fa-c27e5ce32359/category/1> ;
+        dc:identifier       "29786.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/430b9e02-6dd4-3c18-965c-abd32263cf99> .
+
+<http://data.silknow.org/actor/c5664947-3e6b-3f26-a12b-57361db54f36>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Emily Crane Chadbourne" ;
+        ecrm:P1_is_identified_by  "Gift of Emily Crane Chadbourne" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000003297576X> .

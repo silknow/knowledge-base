@@ -1,0 +1,80 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f1bbf833-2245-3dc4-b0da-469ab9382495> .
+
+<http://data.silknow.org/object/f1bbf833-2245-3dc4-b0da-469ab9382495>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 25001" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/bc764019-521a-3fe9-b4a7-fe893994689f> , <http://data.silknow.org/event/9d605a6f-71f6-3891-b3a1-b50815c99e97> , <http://data.silknow.org/object/14c87997-d100-30d2-acbc-9868af59f172/domain/1> , <http://data.silknow.org/event/c443e2c1-fc2c-381e-8d9e-412af4808b0a> , <http://data.silknow.org/production/ed18ed8a-18ab-312f-8cb9-4f889bc79bf2> , <http://data.silknow.org/object/14c87997-d100-30d2-acbc-9868af59f172> , <http://data.silknow.org/object/14c87997-d100-30d2-acbc-9868af59f172/category/1> ;
+        dc:identifier       "25001.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/14c87997-d100-30d2-acbc-9868af59f172/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/14c87997-d100-30d2-acbc-9868af59f172> .
+
+<http://data.silknow.org/event/c443e2c1-fc2c-381e-8d9e-412af4808b0a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/14c87997-d100-30d2-acbc-9868af59f172> .
+
+<http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Tórtola Valencia, Carmen" ;
+        ecrm:P1_is_identified_by  "Tórtola Valencia, Carmen" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Carmen_Tórtola_Valencia> , <https://viaf.org/viaf/47896092> , <https://isni.org/isni/0000000038570077> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Carmen_Tórtola_Valencia> .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .
+
+<http://data.silknow.org/production/ed18ed8a-18ab-312f-8cb9-4f889bc79bf2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/14c87997-d100-30d2-acbc-9868af59f172> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "patterned fabric"@en .
+
+<http://data.silknow.org/event/9d605a6f-71f6-3891-b3a1-b50815c99e97>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "purchase - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "Tórtola Valencia, Carmen" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/14c87997-d100-30d2-acbc-9868af59f172> ;
+        ecrm:P3_has_note               "purchase - Diputació de Barcelona" ;
+        ecrm:P4_has_time-span          <http://data.silknow.org/timespan/1977_01_01> .
+
+<http://data.silknow.org/image/bc764019-521a-3fe9-b4a7-fe893994689f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000029466" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/25001_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000029466.jpg> .
+
+<http://data.silknow.org/object/14c87997-d100-30d2-acbc-9868af59f172>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bc764019-521a-3fe9-b4a7-fe893994689f> ;
+        dc:identifier                  "9538" .
+
+<http://data.silknow.org/object/14c87997-d100-30d2-acbc-9868af59f172/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/14c87997-d100-30d2-acbc-9868af59f172> .

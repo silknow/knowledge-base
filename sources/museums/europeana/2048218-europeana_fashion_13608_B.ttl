@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/39f7d927-d488-3af2-a070-13f4a93d2464>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Les Arts Décoratifs, Paris" ;
+        ecrm:P1_is_identified_by  "Les Arts Décoratifs, Paris" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122062171> , <https://viaf.org/viaf/169061136> .
+
+<http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8/category/2>
+        a                    silk:T35 ;
+        silk:L1              "Object Type: fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8> .
+
+<http://data.silknow.org/event/9044c4fd-3d3b-35e4-99f3-c0a5d5acdd71>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/39f7d927-d488-3af2-a070-13f4a93d2464> , <http://data.silknow.org/place/3dfbf716-f48d-3d9c-9652-1715a69e0a36> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8> .
+
+<http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4311e161-dcb0-3bbe-a690-55bdd33a8816> ;
+        dc:identifier                  "13608.B" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.europeana.eu/en/item/2048218/europeana_fashion_13608_B> .
+
+<http://data.silknow.org/production/bfed0c7f-09d5-3ba8-b3b1-11ca4ec03c2e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8> ;
+        ecrm:P126_employed      "Material: silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1900> .
+
+<http://data.silknow.org/object/10ae950f-f7cc-3c28-8f65-1567166aca18>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2048218-europeana_fashion_13608_B" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/bfed0c7f-09d5-3ba8-b3b1-11ca4ec03c2e> , <http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8/category/3> , <http://data.silknow.org/image/4311e161-dcb0-3bbe-a690-55bdd33a8816> , <http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8/category/1> , <http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8> , <http://data.silknow.org/event/9044c4fd-3d3b-35e4-99f3-c0a5d5acdd71> , <http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8/category/2> ;
+        dc:identifier       "2048218-europeana_fashion_13608_B.json" ;
+        dc:publisher        "http://data.silknow.org/organization/europeana" .
+
+<http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8/category/3>
+        a                    silk:T35 ;
+        silk:L1              "fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8> .
+
+<http://data.silknow.org/europeana>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/10ae950f-f7cc-3c28-8f65-1567166aca18> .
+
+<http://data.silknow.org/place/3dfbf716-f48d-3d9c-9652-1715a69e0a36>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Europeana Fashion" ;
+        ecrm:P87_is_identified_by  "Europeana Fashion" .
+
+<http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/767fbf08-c7af-35d8-8f8f-58ef5619aae8> .
+
+<http://data.silknow.org/image/4311e161-dcb0-3bbe-a690-55bdd33a8816>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/europeana/2048218-europeana_fashion_13608_B_0.jpg> , <https://proxy.europeana.eu/2048218/europeana_fashion_13608_B?view=http%3A%2F%2Frepos.europeanafashion.eu%2Flad%2Fimages%2F13608-B-ph1.jpg&disposition=inline&api_url=https%3A%2F%2Fapi.europeana.eu%2Fapi> .

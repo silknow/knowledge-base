@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/47ce15bc-3b90-3528-a94f-adec949ca87a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1900" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8ce0723b-7fda-385d-a2fe-683b6662cac0> .
+
+<http://data.silknow.org/production/37c1bf24-33d7-3755-bb87-4bcd109b2d18>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Henri Gillet, 1900, Saurel Frères, Nîmes, 1900" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8ce0723b-7fda-385d-a2fe-683b6662cac0> ;
+        ecrm:P126_employed      "Tissage à effet  de tapisserie au petit point"@fr ;
+        ecrm:P3_has_note        "Henri Gillet, 1900, Saurel Frères, Nîmes, 1900" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2990363/> .
+
+<http://data.silknow.org/object/8ce0723b-7fda-385d-a2fe-683b6662cac0/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8ce0723b-7fda-385d-a2fe-683b6662cac0> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/2990363/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/e3c5acdf-2404-3bbe-8ead-78b8970c9138>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/915600_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/733b4c7a-5a69-460f-a983-b79df3a895c3.jpg> .
+
+<http://data.silknow.org/object/cfc3eabe-0a0e-3f0b-be2d-3bc9db6da30b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 9234" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/e3c5acdf-2404-3bbe-8ead-78b8970c9138> , <http://data.silknow.org/object/8ce0723b-7fda-385d-a2fe-683b6662cac0/category/1> , <http://data.silknow.org/production/37c1bf24-33d7-3755-bb87-4bcd109b2d18> , <http://data.silknow.org/object/8ce0723b-7fda-385d-a2fe-683b6662cac0> , <http://data.silknow.org/event/47ce15bc-3b90-3528-a94f-adec949ca87a> ;
+        dc:identifier       "915600.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/cfc3eabe-0a0e-3f0b-be2d-3bc9db6da30b> .
+
+<http://data.silknow.org/object/8ce0723b-7fda-385d-a2fe-683b6662cac0>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Henri Gillet, 1900, Saurel Frères, Nîmes, 1900"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e3c5acdf-2404-3bbe-8ead-78b8970c9138> ;
+        dc:identifier                  "9234" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/915600> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/8ce0723b-7fda-385d-a2fe-683b6662cac0> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

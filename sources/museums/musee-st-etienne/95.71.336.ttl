@@ -1,0 +1,69 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/fc7de36a-bab6-3483-ad82-721ceca9e6b7>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.336_0.jpg> .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f4339580-df46-3b0f-8b6e-eeb2582326de> .
+
+<http://data.silknow.org/event/3a7c3dc7-3e59-36a7-b83c-eb0dbd917dc3>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8a3f93ab-3d7d-3b2e-9520-d38de00da23b> .
+
+<http://data.silknow.org/object/f4339580-df46-3b0f-8b6e-eeb2582326de>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.336" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/fc7de36a-bab6-3483-ad82-721ceca9e6b7> , <http://data.silknow.org/assessment/978878ef-7817-3fcd-ab07-70cc057372ab> , <http://data.silknow.org/object/c544b50f-5305-3c89-a16b-889b466a4f80> , <http://data.silknow.org/object/8a3f93ab-3d7d-3b2e-9520-d38de00da23b> , <http://data.silknow.org/event/3a7c3dc7-3e59-36a7-b83c-eb0dbd917dc3> , <http://data.silknow.org/production/d6a76f57-c2d3-330c-9f5e-a9d8d29b703c> , <http://data.silknow.org/object/8a3f93ab-3d7d-3b2e-9520-d38de00da23b/right> ;
+        dc:identifier       "95.71.336.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/object/8a3f93ab-3d7d-3b2e-9520-d38de00da23b/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/8a3f93ab-3d7d-3b2e-9520-d38de00da23b> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/assessment/978878ef-7817-3fcd-ab07-70cc057372ab>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/8a3f93ab-3d7d-3b2e-9520-d38de00da23b> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/978878ef-7817-3fcd-ab07-70cc057372ab/condition/1> .
+
+<http://data.silknow.org/assessment/978878ef-7817-3fcd-ab07-70cc057372ab/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "pas de défaut d'intégrité"@fr ;
+        ecrm:P2_has_type  "Intégrité" ;
+        ecrm:P3_has_note  "pas de défaut d'intégrité"@fr .
+
+<http://data.silknow.org/object/c544b50f-5305-3c89-a16b-889b466a4f80>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.336.JPG"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8a3f93ab-3d7d-3b2e-9520-d38de00da23b> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.336.JPG"@fr .
+
+<http://data.silknow.org/object/8a3f93ab-3d7d-3b2e-9520-d38de00da23b>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/fc7de36a-bab6-3483-ad82-721ceca9e6b7> ;
+        dc:identifier                  "95.71.336" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/production/d6a76f57-c2d3-330c-9f5e-a9d8d29b703c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8a3f93ab-3d7d-3b2e-9520-d38de00da23b> .

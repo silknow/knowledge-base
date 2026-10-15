@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4174860d-ee85-3517-b9b0-3b5e0856e4f4> .
+
+<http://data.silknow.org/object/79befcca-8520-3985-b5e9-d211ffc263cf/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/79befcca-8520-3985-b5e9-d211ffc263cf> .
+
+<http://data.silknow.org/event/eddc8014-38a7-3ce7-9ef6-cde1d621dc89>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/79befcca-8520-3985-b5e9-d211ffc263cf> .
+
+<http://data.silknow.org/image/191f38f2-7eba-3b66-a140-01e8d9e5a75f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035247" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29464_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000035247.jpg> .
+
+<http://data.silknow.org/event/9ade7174-3405-3982-8c79-557b60c28f3a>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/79befcca-8520-3985-b5e9-d211ffc263cf> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/object/4174860d-ee85-3517-b9b0-3b5e0856e4f4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29464" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/79befcca-8520-3985-b5e9-d211ffc263cf> , <http://data.silknow.org/image/191f38f2-7eba-3b66-a140-01e8d9e5a75f> , <http://data.silknow.org/production/5d70f2da-c629-3c09-8434-aa8212104ca3> , <http://data.silknow.org/event/eddc8014-38a7-3ce7-9ef6-cde1d621dc89> , <http://data.silknow.org/event/9ade7174-3405-3982-8c79-557b60c28f3a> , <http://data.silknow.org/object/79befcca-8520-3985-b5e9-d211ffc263cf/category/1> , <http://data.silknow.org/object/79befcca-8520-3985-b5e9-d211ffc263cf/domain/1> ;
+        dc:identifier       "29464.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/production/5d70f2da-c629-3c09-8434-aa8212104ca3>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/79befcca-8520-3985-b5e9-d211ffc263cf> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/79befcca-8520-3985-b5e9-d211ffc263cf/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/79befcca-8520-3985-b5e9-d211ffc263cf> .
+
+<http://data.silknow.org/object/79befcca-8520-3985-b5e9-d211ffc263cf>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/191f38f2-7eba-3b66-a140-01e8d9e5a75f> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> ;
+        dc:identifier                  "5168" .

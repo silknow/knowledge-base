@@ -1,0 +1,79 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/ac98c12e-46f1-3900-b0a3-ad139573dd44>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6035417a-0c40-3389-b967-a00d72b8f0f5> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1901_1925> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/event/bd65919f-71e2-3f8e-acff-c06644e29ee7>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/20327518-7b9e-3e76-886a-2366442542c0> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Charles O. Read" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6035417a-0c40-3389-b967-a00d72b8f0f5> .
+
+<http://data.silknow.org/actor/20327518-7b9e-3e76-886a-2366442542c0>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Charles O. Read" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Charles O. Read" .
+
+<http://data.silknow.org/object/082aaee4-a743-3fba-b17a-bae0c9d8942b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 25.006B" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6035417a-0c40-3389-b967-a00d72b8f0f5/domain/1> , <http://data.silknow.org/production/ac98c12e-46f1-3900-b0a3-ad139573dd44> , <http://data.silknow.org/object/6035417a-0c40-3389-b967-a00d72b8f0f5/category/1> , <http://data.silknow.org/object/6035417a-0c40-3389-b967-a00d72b8f0f5> , <http://data.silknow.org/object/82e23fb2-3ba1-3989-b9b6-43d30c3b1960> , <http://data.silknow.org/event/2a51b2ef-f938-3a7f-a67f-33851b04bdda> , <http://data.silknow.org/event/bd65919f-71e2-3f8e-acff-c06644e29ee7> ;
+        dc:identifier       "818616.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/6035417a-0c40-3389-b967-a00d72b8f0f5>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "25.006B" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/collar-25006b> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/6035417a-0c40-3389-b967-a00d72b8f0f5/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6035417a-0c40-3389-b967-a00d72b8f0f5> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/082aaee4-a743-3fba-b17a-bae0c9d8942b> .
+
+<http://data.silknow.org/event/2a51b2ef-f938-3a7f-a67f-33851b04bdda>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6035417a-0c40-3389-b967-a00d72b8f0f5> .
+
+<http://data.silknow.org/object/82e23fb2-3ba1-3989-b9b6-43d30c3b1960>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "A World of Costume and Textiles" , "A Handbook of the Collection" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6035417a-0c40-3389-b967-a00d72b8f0f5> ;
+        ecrm:P2_has_type    "Publication" ;
+        ecrm:P3_has_note    "A World of Costume and Textiles" , "A Handbook of the Collection" ;
+        schema:contentUrl   <https://risdmuseum.org/art-design/projects-publications/publications/world-costume-and-textiles> .
+
+<http://data.silknow.org/object/6035417a-0c40-3389-b967-a00d72b8f0f5/category/1>
+        a                    silk:T35 ;
+        silk:L1              "collar" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6035417a-0c40-3389-b967-a00d72b8f0f5> .

@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2f92d311-8bd2-35c5-812e-762746cd4ee7> .
+
+<http://data.silknow.org/production/95f7ed4b-f184-3c31-9cdc-ad74c1103775/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/6057d6a5-96ea-3ac7-9e43-d9a5e4092008> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/c00fdd1b-b416-3af4-958f-e3476300872b/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c00fdd1b-b416-3af4-958f-e3476300872b> ;
+        ecrm:P42_assigned    <http://data.silknow.org/category/97> .
+
+<http://data.silknow.org/object/2f92d311-8bd2-35c5-812e-762746cd4ee7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.101" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c00fdd1b-b416-3af4-958f-e3476300872b/type/1> , <http://data.silknow.org/object/c00fdd1b-b416-3af4-958f-e3476300872b> , <http://data.silknow.org/production/95f7ed4b-f184-3c31-9cdc-ad74c1103775> , <http://data.silknow.org/image/7f7d95af-5d0b-38cf-b776-043d38df5077> , <http://data.silknow.org/object/c00fdd1b-b416-3af4-958f-e3476300872b/observation/1> , <http://data.silknow.org/assessment/c6eb952b-0d64-3964-8a73-63f4f5b7ed9e> ;
+        dc:identifier       "5.101.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/assessment/c6eb952b-0d64-3964-8a73-63f4f5b7ed9e>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/c00fdd1b-b416-3af4-958f-e3476300872b> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/c6eb952b-0d64-3964-8a73-63f4f5b7ed9e/condition/1> .
+
+<http://data.silknow.org/object/c00fdd1b-b416-3af4-958f-e3476300872b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Se compone de forro de manga, estola, manípulo, bolsa de corporales y cubre cáliz."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7f7d95af-5d0b-38cf-b776-043d38df5077> ;
+        ecrm:P3_has_note               "*Se compone de forro de manga, estola, manípulo, bolsa de corporales y cubre cáliz."@es ;
+        dc:identifier                  "5.101" .
+
+<http://data.silknow.org/image/7f7d95af-5d0b-38cf-b776-043d38df5077>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.101" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.101_0.jpg> .
+
+<http://data.silknow.org/object/c00fdd1b-b416-3af4-958f-e3476300872b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Se compone de forro de manga, estola, manípulo, bolsa de corporales y cubre cáliz."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c00fdd1b-b416-3af4-958f-e3476300872b> .
+
+<http://data.silknow.org/actor/6057d6a5-96ea-3ac7-9e43-d9a5e4092008>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo. Francia. (?)" ;
+        ecrm:P1_is_identified_by  "Anónimo. Francia. (?)" .
+
+<http://data.silknow.org/production/95f7ed4b-f184-3c31-9cdc-ad74c1103775>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c00fdd1b-b416-3af4-958f-e3476300872b> ;
+        ecrm:P126_employed      "Hilo de plata y seda. Galón de plata."@es ;
+        ecrm:P32_used_general_technique
+                "Espolín."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/95f7ed4b-f184-3c31-9cdc-ad74c1103775/activity/1> .
+
+<http://data.silknow.org/assessment/c6eb952b-0d64-3964-8a73-63f4f5b7ed9e/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .

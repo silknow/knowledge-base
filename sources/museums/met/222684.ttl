@@ -1,0 +1,126 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/744ccebd-b0a0-3633-a08d-eb79c2ad9c59>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce> .
+
+<http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ae5b5423-071e-37f6-92ea-efa070ce76ae> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce/dimension/2> , <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce/dimension/1> ;
+        dc:identifier                  "33.39.76" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.metmuseum.org/art/collection/search/222684> .
+
+<http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/8> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce> .
+
+<http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "European Sculpture and Decorative Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce> ;
+        ecrm:P78_is_identified_by  "European Sculpture and Decorative Arts" .
+
+<http://data.silknow.org/production/a7fe3cbb-005f-33f4-a4cf-bf78d6414591>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/857> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/379> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1850> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce> .
+
+<http://data.silknow.org/image/ae5b5423-071e-37f6-92ea-efa070ce76ae>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/222684_0.jpg> , <https://collectionapi.metmuseum.org/api/collection/v1/iiif/222684/451528/main-image> .
+
+<http://data.silknow.org/event/86733de3-9bfa-3103-9d48-7f6ffc602b0a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/59a106e1-0cca-37ff-b54d-b0335e834564> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Van Santvoord Merle-Smith, 1933" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce> .
+
+<http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "53.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "53.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/c58c4c0b-ab06-3b5a-9f67-9edad15c2222>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 222684" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bb9a1f44-66d2-3c87-8411-27e9ba92bbae> , <http://data.silknow.org/object/cf5bc5c4-60dd-3751-95fd-99303447b4dd> , <http://data.silknow.org/production/a7fe3cbb-005f-33f4-a4cf-bf78d6414591> , <http://data.silknow.org/object/c363fee8-c50e-3155-8ffc-57f42d6576da> , <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce/category/1> , <http://data.silknow.org/event/86733de3-9bfa-3103-9d48-7f6ffc602b0a> , <http://data.silknow.org/object/cccdf7b3-4ead-3074-bc6c-5cad99fc8307> , <http://data.silknow.org/object/fcfa9180-9b13-381e-9bef-5c0db76e6f18> , <http://data.silknow.org/event/744ccebd-b0a0-3633-a08d-eb79c2ad9c59> , <http://data.silknow.org/image/ae5b5423-071e-37f6-92ea-efa070ce76ae> , <http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5> , <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce> ;
+        dc:identifier       "222684.json" ;
+        dc:publisher        "http://data.silknow.org/organization/met" .
+
+<http://data.silknow.org/object/cccdf7b3-4ead-3074-bc6c-5cad99fc8307>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/570beb1e-6d9f-3abd-9538-723c2ea6e64a> .
+
+<http://data.silknow.org/object/c363fee8-c50e-3155-8ffc-57f42d6576da>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/a8548028-2ef7-3727-a661-fa2d5c7c97a3> .
+
+<http://data.silknow.org/object/fcfa9180-9b13-381e-9bef-5c0db76e6f18>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/00596f58-e759-3309-b2c3-d25df313d256> .
+
+<http://data.silknow.org/met>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c58c4c0b-ab06-3b5a-9f67-9edad15c2222> .
+
+<http://data.silknow.org/object/cf5bc5c4-60dd-3751-95fd-99303447b4dd>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/d58774be-8620-3e39-a0b7-cce1ee8d0930> .
+
+<http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "75.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "75.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/bb9a1f44-66d2-3c87-8411-27e9ba92bbae>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bb7579e6-0d90-3041-ab8b-3b5d4c990dce> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/71e37459-c5a1-3b77-9641-247eebe36876> .
+
+<http://data.silknow.org/actor/59a106e1-0cca-37ff-b54d-b0335e834564>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Van Santvoord Merle-Smith" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Van Santvoord Merle-Smith" .

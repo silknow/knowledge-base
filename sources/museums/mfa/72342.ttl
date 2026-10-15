@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c> .
+
+<https://sws.geonames.org/2921044/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Italian embroidery."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c> .
+
+<http://data.silknow.org/production/b2508f5b-e288-3b34-a742-3633f47fbabe>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c> ;
+        ecrm:P126_employed      "Linen and silk"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404506> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2921044/> .
+
+<http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/event/e44120e4-6ef3-3ab7-a101-a22ab815ec50>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c> .
+
+<http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "44.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "44.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Aquamanile" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2d22d2f7-70dd-3976-ad4e-cca88d2dc5ac> .
+
+<http://data.silknow.org/image/23fe0c5b-04a3-3b1a-a7e8-0e4b64958dc8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "844206" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/72342_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/844206/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/2d22d2f7-70dd-3976-ad4e-cca88d2dc5ac>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 90.40" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c> , <http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c/observation/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/production/b2508f5b-e288-3b34-a742-3633f47fbabe> , <http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c/domain/1> , <http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c/category/1> , <http://data.silknow.org/image/23fe0c5b-04a3-3b1a-a7e8-0e4b64958dc8> , <http://data.silknow.org/event/e44120e4-6ef3-3ab7-a101-a22ab815ec50> ;
+        dc:identifier       "72342.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Italian embroidery."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/23fe0c5b-04a3-3b1a-a7e8-0e4b64958dc8> ;
+        ecrm:P3_has_note               "Italian embroidery."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c/dimension/2> , <http://data.silknow.org/object/10e2ebba-dc9e-3999-9a10-758773797a7c/dimension/1> ;
+        dc:identifier                  "90.40" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/72342> .

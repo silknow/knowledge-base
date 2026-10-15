@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69> .
+
+<http://data.silknow.org/production/5871a8de-9dff-3885-9e6d-0145b37d5e75>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1740_1760> .
+
+<http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "12" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "12"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8d2ec608-d73e-3cbf-b909-5cd329bf8fec> .
+
+<http://data.silknow.org/image/e1e6f3f5-c81b-3f87-9a98-0895239eed12>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/10414_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5NBYVeE4CB4pcWGndSicrrXE36ZK%2fG1WhoSt0VxuDFNWqJ7nJQJxImPjrz%2bRXbz%2bmh6GTvCoDjNihKC%2f8R%2fmfffb2A7JAxjSiYekFRC54D5126gOgj5gk8w%3d%3d> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69> .
+
+<http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Armatura di fondo taffetas verde broccata in argento lamellare e riccio e seta riccia verde, con disegni ottenuti per effetto di trame di legatura che legano l'ordito di legatura. Su fondo in seta verde broccato in argento lamellare e riccio, e in seta verde riccia e bavella, un disegno di figura umana sotto ad un albero e un cane rampante profilati entrambi in rosa, fiori e foglie dello sfondo profgilati in verde."@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e1e6f3f5-c81b-3f87-9a98-0895239eed12> ;
+        ecrm:P3_has_note               "Armatura di fondo taffetas verde broccata in argento lamellare e riccio e seta riccia verde, con disegni ottenuti per effetto di trame di legatura che legano l'ordito di legatura. Su fondo in seta verde broccato in argento lamellare e riccio, e in seta verde riccia e bavella, un disegno di figura umana sotto ad un albero e un cane rampante profilati entrambi in rosa, fiori e foglie dello sfondo profgilati in verde."@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69/dimension/1> , <http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 0413" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/10414/?WEB=MuseiVE> .
+
+<http://data.silknow.org/event/c67e437c-449b-315a-84c9-ab0114b93f24>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69> .
+
+<http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "15" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "15"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/8d2ec608-d73e-3cbf-b909-5cd329bf8fec>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10414" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69/domain/1> , <http://data.silknow.org/image/e1e6f3f5-c81b-3f87-9a98-0895239eed12> , <http://data.silknow.org/production/5871a8de-9dff-3885-9e6d-0145b37d5e75> , <http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69/observation/1> , <http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69/category/1> , <http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69> , <http://data.silknow.org/event/c67e437c-449b-315a-84c9-ab0114b93f24> ;
+        dc:identifier       "10414.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Armatura di fondo taffetas verde broccata in argento lamellare e riccio e seta riccia verde, con disegni ottenuti per effetto di trame di legatura che legano l'ordito di legatura. Su fondo in seta verde broccato in argento lamellare e riccio, e in seta verde riccia e bavella, un disegno di figura umana sotto ad un albero e un cane rampante profilati entrambi in rosa, fiori e foglie dello sfondo profgilati in verde."@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f3279041-4c09-3ba9-9ad7-8c151859aa69> .

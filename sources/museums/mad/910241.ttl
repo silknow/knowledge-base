@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/fb124ef9-42d7-32d0-aa21-c166476dfce6>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Inde, 18e siècle (1ère moitié)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4c89b0d5-7090-3096-bc8c-8d408fc75322> ;
+        ecrm:P126_employed      "Toile de coton imprimée et peinte à la main"@fr ;
+        ecrm:P3_has_note        "Inde, 18e siècle (1ère moitié)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1750> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/8767343/> .
+
+<http://data.silknow.org/event/d197f715-249b-38e3-a1b0-d67ed060b97c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Provenance inconnue, reversement de la Bibliothèque des Arts Décoratifs, 2010" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/4c89b0d5-7090-3096-bc8c-8d408fc75322> .
+
+<https://sws.geonames.org/8767343/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/4c89b0d5-7090-3096-bc8c-8d408fc75322>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Inde, 18e siècle (1ère moitié)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5753c510-2c72-31bc-b0b2-b609c963abdb> ;
+        dc:identifier                  "BAD 4483 (EE 41.1.15.B)" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910241> .
+
+<http://data.silknow.org/object/d61b7c37-2ef7-395f-ab82-3d867d265b8f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record BAD 4483 (EE 41.1.15.B)" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/fb124ef9-42d7-32d0-aa21-c166476dfce6> , <http://data.silknow.org/event/d197f715-249b-38e3-a1b0-d67ed060b97c> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/5753c510-2c72-31bc-b0b2-b609c963abdb> , <http://data.silknow.org/object/4c89b0d5-7090-3096-bc8c-8d408fc75322> ;
+        dc:identifier       "910241.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/image/5753c510-2c72-31bc-b0b2-b609c963abdb>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910241_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/c0afcb67-543a-4f79-ad6f-238c27cd126e.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d61b7c37-2ef7-395f-ab82-3d867d265b8f> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/4c89b0d5-7090-3096-bc8c-8d408fc75322> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

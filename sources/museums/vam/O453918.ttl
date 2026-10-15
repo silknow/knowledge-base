@@ -1,0 +1,112 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37> .
+
+<http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 65 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "65"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Fragment of purple silk shot with pink."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37> .
+
+<http://data.silknow.org/image/ff981d41-bd29-35b3-a09f-6fd728b066d3>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2014GY7267" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O453918_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2014GY/2014GY7267.jpg> .
+
+<http://data.silknow.org/image/2b6b2309-2299-3365-ae24-b578286945f9>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2014GY7268" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O453918_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2014GY/2014GY7268.jpg> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/production/16683c2c-81e5-386a-8e7f-1cb563700bb3>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37> ;
+        ecrm:P126_employed      "Woven silk"@en , "silk (textile)"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1167710/> .
+
+<http://data.silknow.org/object/5ebd5d47-a0a9-39ad-93d7-534117c723c4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O453918" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/2b6b2309-2299-3365-ae24-b578286945f9> , <http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217> , <http://data.silknow.org/production/16683c2c-81e5-386a-8e7f-1cb563700bb3> , <http://data.silknow.org/image/ff981d41-bd29-35b3-a09f-6fd728b066d3> , <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/observation/1> , <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/domain/1> , <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/domain/2> , <http://data.silknow.org/event/3b2fba02-c3d6-3005-93a5-ef39f81b9405> , <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37> , <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/observation/2> ;
+        dc:identifier       "O453918.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "South & South East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37> ;
+        ecrm:P78_is_identified_by  "South & South East Asia Collection" .
+
+<http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Textile, woven purple shot silk, Punjab, 19th century"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37> .
+
+<https://sws.geonames.org/1167710/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37> .
+
+<http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 45.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "45.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/3b2fba02-c3d6-3005-93a5-ef39f81b9405>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5ebd5d47-a0a9-39ad-93d7-534117c723c4> .
+
+<http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Fragment of purple silk shot with pink."@en , "Textile, woven purple shot silk, Punjab, 19th century"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2b6b2309-2299-3365-ae24-b578286945f9> , <http://data.silknow.org/image/ff981d41-bd29-35b3-a09f-6fd728b066d3> ;
+        ecrm:P3_has_note               "Fragment of purple silk shot with pink."@en , "Textile, woven purple shot silk, Punjab, 19th century"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/dimension/2> , <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/dimension/1> ;
+        dc:identifier                  "IPN.1064" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O453918> .
+
+<http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Parasol Foundation Trust Indian Textiles Cataloguing Project" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37481c28-8800-3766-8ebd-e788ee960c37> .

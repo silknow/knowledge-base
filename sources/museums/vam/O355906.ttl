@@ -1,0 +1,117 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/production/89d77c9b-a992-3b00-93f7-14b7034aa45f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523> ;
+        ecrm:P126_employed      "Silk velvet"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1650_1700> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Woven silk" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523> .
+
+<http://data.silknow.org/event/61091632-d9e0-3b0f-9d41-fbcb167abe58>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/0436c66c-1d82-3502-9aba-ff0660724031> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Miss M. H. Tattersall" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523> .
+
+<http://data.silknow.org/image/d8a39d1f-445b-3493-946d-8970a4b4958f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AM8267" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O355906_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AM/2006AM8267.jpg> .
+
+<http://data.silknow.org/actor/0436c66c-1d82-3502-9aba-ff0660724031>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Miss M. H. Tattersall" ;
+        ecrm:P1_is_identified_by  "Given by Miss M. H. Tattersall" .
+
+<http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "each" ;
+        rdfs:label          "Height: 36 in each" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P3_has_note    "each" ;
+        ecrm:P90_has_value  "91.44"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/903f625e-b624-3f5b-acab-7a9ad4b18340>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O355906" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523> , <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/domain/1> , <http://data.silknow.org/image/d8a39d1f-445b-3493-946d-8970a4b4958f> , <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/domain/2> , <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/observation/1> , <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/observation/2> , <http://data.silknow.org/event/61091632-d9e0-3b0f-9d41-fbcb167abe58> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/production/89d77c9b-a992-3b00-93f7-14b7034aa45f> ;
+        dc:identifier       "O355906.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Two fragments of green voided (figured) ciselé velvet. Their shape implies that they were originally used for the side sections on the front of a chasuble (T.136 was on the left, and T.136A on the right side section). \nThe charming pattern of the velvet is relatively simple; it comprises of small, leafy twigs - each bearing a spray with six berries - leaning in opposite directions in alternate rows. It is achieved by a single, green pile warp against a green taffeta ground. Ciselé velvet comprises two different forms of pile; cut an uncut. These are obtained by using two different rods during the weaving - one for the uncut and another for the cut pile, the latter being higher than the former. This gives the velvet three different levels (ground, uncut pile and cut pile) yielding different three-dimensional effects. In this case, the ground is green taffeta. The outlines and details of the pattern are worked in the uncut pile; their surface has the appearance of parallel rows of delicate, regular, light brown loops. The rest of the pattern is woven in cut pile. Even though the cut and uncut parts are worked by the same, green silk pile warp, the final nuances are different in cut and uncut parts. Where the pile has been cut, the colour is more profound. This is, generally speaking, an important characteristic of ciselé velvets, where achieving the diversity in the motifs relies not only on the different textures of the pile warp, but also on the varieties in the shades obtained."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523> .
+
+<http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/12> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523> .
+
+<http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "each maximum" ;
+        rdfs:label          "Width: 6.5 in each maximum" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "each maximum" ;
+        ecrm:P90_has_value  "16.51"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/903f625e-b624-3f5b-acab-7a9ad4b18340> .
+
+<http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "voided (figured) ciselé velvet, 1650-1700, Italian; two fragments of a chasuble"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523> .
+
+<http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523> .
+
+<http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "voided (figured) ciselé velvet, 1650-1700, Italian; two fragments of a chasuble"@en , "Two fragments of green voided (figured) ciselé velvet. Their shape implies that they were originally used for the side sections on the front of a chasuble (T.136 was on the left, and T.136A on the right side section). \nThe charming pattern of the velvet is relatively simple; it comprises of small, leafy twigs - each bearing a spray with six berries - leaning in opposite directions in alternate rows. It is achieved by a single, green pile warp against a green taffeta ground. Ciselé velvet comprises two different forms of pile; cut an uncut. These are obtained by using two different rods during the weaving - one for the uncut and another for the cut pile, the latter being higher than the former. This gives the velvet three different levels (ground, uncut pile and cut pile) yielding different three-dimensional effects. In this case, the ground is green taffeta. The outlines and details of the pattern are worked in the uncut pile; their surface has the appearance of parallel rows of delicate, regular, light brown loops. The rest of the pattern is woven in cut pile. Even though the cut and uncut parts are worked by the same, green silk pile warp, the final nuances are different in cut and uncut parts. Where the pile has been cut, the colour is more profound. This is, generally speaking, an important characteristic of ciselé velvets, where achieving the diversity in the motifs relies not only on the different textures of the pile warp, but also on the varieties in the shades obtained."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d8a39d1f-445b-3493-946d-8970a4b4958f> ;
+        ecrm:P3_has_note               "Two fragments of green voided (figured) ciselé velvet. Their shape implies that they were originally used for the side sections on the front of a chasuble (T.136 was on the left, and T.136A on the right side section). \nThe charming pattern of the velvet is relatively simple; it comprises of small, leafy twigs - each bearing a spray with six berries - leaning in opposite directions in alternate rows. It is achieved by a single, green pile warp against a green taffeta ground. Ciselé velvet comprises two different forms of pile; cut an uncut. These are obtained by using two different rods during the weaving - one for the uncut and another for the cut pile, the latter being higher than the former. This gives the velvet three different levels (ground, uncut pile and cut pile) yielding different three-dimensional effects. In this case, the ground is green taffeta. The outlines and details of the pattern are worked in the uncut pile; their surface has the appearance of parallel rows of delicate, regular, light brown loops. The rest of the pattern is woven in cut pile. Even though the cut and uncut parts are worked by the same, green silk pile warp, the final nuances are different in cut and uncut parts. Where the pile has been cut, the colour is more profound. This is, generally speaking, an important characteristic of ciselé velvets, where achieving the diversity in the motifs relies not only on the different textures of the pile warp, but also on the varieties in the shades obtained."@en , "voided (figured) ciselé velvet, 1650-1700, Italian; two fragments of a chasuble"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/dimension/2> , <http://data.silknow.org/object/71249fc1-4510-31da-a4a6-f7a0635ac523/dimension/1> ;
+        dc:identifier                  "T.136&A-1962" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O355906> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .

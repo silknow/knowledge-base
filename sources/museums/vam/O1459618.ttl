@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 95 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "95"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/event/13e475a9-a430-3da9-beb3-3417b5e47f6b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952> .
+
+<http://data.silknow.org/image/dc36a29b-5163-3d05-b925-f0d81179a61b>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006BF7653" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O1459618_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006BF/2006BF7653.jpg> .
+
+<http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Length of yellow silk damask with floral pattern."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952> .
+
+<http://data.silknow.org/object/3aa2c73f-229c-371d-bb0f-de52152bad93>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O1459618" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/51a43a6b-7b54-370f-8625-9f70f6dd66b3> , <http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952/domain/1> , <http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952> , <http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952/observation/1> , <http://data.silknow.org/image/dc36a29b-5163-3d05-b925-f0d81179a61b> , <http://data.silknow.org/event/13e475a9-a430-3da9-beb3-3417b5e47f6b> , <http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952/observation/2> , <http://data.silknow.org/collection/40c1ba84-e159-31aa-b354-ea24905da05f> ;
+        dc:identifier       "O1459618.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3aa2c73f-229c-371d-bb0f-de52152bad93> .
+
+<http://data.silknow.org/production/51a43a6b-7b54-370f-8625-9f70f6dd66b3>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952> ;
+        ecrm:P126_employed      "Silk damask, with satin weave pattern on a twill weave ground"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1826_1875> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952/category/1>
+        a                    silk:T35 ;
+        silk:L1              "length" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952> .
+
+<http://data.silknow.org/collection/40c1ba84-e159-31aa-b354-ea24905da05f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952> ;
+        ecrm:P78_is_identified_by  "East Asia Collection" .
+
+<http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Length of yellow silk damask, China, mid 19th century"@en , "Length of yellow silk damask with floral pattern."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/dc36a29b-5163-3d05-b925-f0d81179a61b> ;
+        ecrm:P3_has_note               "Length of yellow silk damask, China, mid 19th century"@en , "Length of yellow silk damask with floral pattern."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952/dimension/1> ;
+        dc:identifier                  "AP.412-4" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O1459618> .
+
+<http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Length of yellow silk damask, China, mid 19th century"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/31020359-292b-3352-818b-acb4d1e3a952> .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .

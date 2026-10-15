@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/c4b6aa0b-3d88-3cdb-a462-89ac2072ff64>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE06300" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d/observation/1> , <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d/domain/1> , <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d/category/1> , <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d> , <http://data.silknow.org/image/85013486-7dc7-30b8-8fa8-39ab1d9e0931> , <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d/domain/2> , <http://data.silknow.org/production/8223e4f2-a661-3191-9cb2-ac726cf012ca> , <http://data.silknow.org/event/6187dd1e-e513-38da-84c2-34d55f1de5c7> , <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d/observation/2> , <http://data.silknow.org/event/d316e00f-60d3-3f10-a33e-7ec65795edc3> ;
+        dc:identifier       "CE06300_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/event/d316e00f-60d3-3f10-a33e-7ec65795edc3>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d> .
+
+<http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Collarín (indumentaria)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d> .
+
+<http://data.silknow.org/image/85013486-7dc7-30b8-8fa8-39ab1d9e0931>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE06300" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE06300_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE06300&txt_id_imagen=1> .
+
+<http://data.silknow.org/event/6187dd1e-e513-38da-84c2-34d55f1de5c7>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d> .
+
+<http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Damasco rojo y blanco con decoración de grandes motivos vegetales. Forro de lienzo. Faltan galones o fleco de remate."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d> .
+
+<http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Moderna"@es , "Damasco rojo y blanco con decoración de grandes motivos vegetales. Forro de lienzo. Faltan galones o fleco de remate."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/85013486-7dc7-30b8-8fa8-39ab1d9e0931> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Damasco rojo y blanco con decoración de grandes motivos vegetales. Forro de lienzo. Faltan galones o fleco de remate."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/744> ;
+        dc:identifier                  "CE06300" .
+
+<http://data.silknow.org/production/8223e4f2-a661-3191-9cb2-ac726cf012ca>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/488> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/168> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1601_1700> .
+
+<http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/12> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d> .
+
+<http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d53fea86-be58-31a3-9dbc-f4650781407d> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c4b6aa0b-3d88-3cdb-a462-89ac2072ff64> .

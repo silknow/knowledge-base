@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/2387d66b-1a83-3969-8c93-21a37fb6aaf0/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2387d66b-1a83-3969-8c93-21a37fb6aaf0> .
+
+<http://data.silknow.org/object/2387d66b-1a83-3969-8c93-21a37fb6aaf0>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, 1750-1770, Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/92d0cc52-20b6-314e-afb9-89df017453c0> ;
+        dc:identifier                  "5217" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910233> .
+
+<http://data.silknow.org/production/a60a0875-8ca5-3ed7-8075-8568d422fb56>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1750-1770, Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2387d66b-1a83-3969-8c93-21a37fb6aaf0> ;
+        ecrm:P126_employed      "Taffetas liseré, lancé"@fr ;
+        ecrm:P3_has_note        "France, 1750-1770, Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1770> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/f3375cc8-9f88-38db-9d87-67cbdc3668d5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5217" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/a60a0875-8ca5-3ed7-8075-8568d422fb56> , <http://data.silknow.org/image/92d0cc52-20b6-314e-afb9-89df017453c0> , <http://data.silknow.org/object/2387d66b-1a83-3969-8c93-21a37fb6aaf0> , <http://data.silknow.org/event/5d529c19-4016-346f-8935-02bce1d7bf86> , <http://data.silknow.org/object/2387d66b-1a83-3969-8c93-21a37fb6aaf0/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "910233.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/5d529c19-4016-346f-8935-02bce1d7bf86>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1889" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2387d66b-1a83-3969-8c93-21a37fb6aaf0> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f3375cc8-9f88-38db-9d87-67cbdc3668d5> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2387d66b-1a83-3969-8c93-21a37fb6aaf0> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/image/92d0cc52-20b6-314e-afb9-89df017453c0>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910233_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/7249c806-1f5f-4e12-a4b8-03d5461b9b0a.jpg> .

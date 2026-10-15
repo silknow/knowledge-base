@@ -1,0 +1,58 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/908a9b42-118b-32fe-ad50-e69f45df5220>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "fleur"@fr ;
+        ecrm:P3_has_note  "fleur"@fr .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/object/7a3126ea-78c0-3424-8310-06c2be6ba8da>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.43" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/68f7d33f-5b02-3a00-a80c-06ae56a5e3c8> , <http://data.silknow.org/event/99ba4dc7-b2fe-33a4-8154-a042443c5394> , <http://data.silknow.org/object/40fba543-6f63-3f58-9d19-88d380cf401b/type/1> , <http://data.silknow.org/object/40fba543-6f63-3f58-9d19-88d380cf401b> ;
+        dc:identifier       "95.71.43.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7a3126ea-78c0-3424-8310-06c2be6ba8da> .
+
+<http://data.silknow.org/production/68f7d33f-5b02-3a00-a80c-06ae56a5e3c8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/40fba543-6f63-3f58-9d19-88d380cf401b> .
+
+<http://data.silknow.org/object/40fba543-6f63-3f58-9d19-88d380cf401b/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/40fba543-6f63-3f58-9d19-88d380cf401b> ;
+        ecrm:P42_assigned    "Fleurs" .
+
+<http://data.silknow.org/object/40fba543-6f63-3f58-9d19-88d380cf401b>
+        a                           ecrm:E22_Man-Made_Object ;
+        rdfs:label                  "Fleurs"@fr ;
+        ecrm:P65_shows_visual_item  <http://data.silknow.org/image/908a9b42-118b-32fe-ad50-e69f45df5220> , <http://data.silknow.org/vocabulary/750> , <http://data.silknow.org/image/033f5abd-fe85-387e-ba9a-e53336545a70> ;
+        dc:identifier               "95.71.43" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/event/99ba4dc7-b2fe-33a4-8154-a042443c5394>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/40fba543-6f63-3f58-9d19-88d380cf401b> .
+
+<http://data.silknow.org/image/033f5abd-fe85-387e-ba9a-e53336545a70>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "chevron orn"@fr ;
+        ecrm:P3_has_note  "chevron orn"@fr .

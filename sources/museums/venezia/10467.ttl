@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "24" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "24"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Velluto operato ad un corpo, tagliato e riccio su fondo in taffetas doublè in seta gialla"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303> .
+
+<http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303> .
+
+<http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7566ebc7-295e-3764-aa7e-c2a85811878b> .
+
+<http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "13" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "13"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/0804ab91-df07-361b-abc2-13209dd7091a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303> .
+
+<http://data.silknow.org/production/e704c060-ad9d-35b5-8242-45f2e1bdbc1c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1700_1799> .
+
+<http://data.silknow.org/image/ee9b88e4-e881-3833-acce-c95226a42735>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/10467_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5NBYVeE4CB4oKqPoBPYKTY6Atk56is3kZZBvm0KzwK6HZ7xwnvkddkruCMSHHGnFHCqFTcjt11%2fg0%2b6tKKAofo%2f%2bHiY4p%2bQ671nG9%2b1R6YNSdHFMEnDoJKw%3d%3d> .
+
+<http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Velluto operato ad un corpo, tagliato e riccio su fondo in taffetas doublè in seta gialla"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ee9b88e4-e881-3833-acce-c95226a42735> ;
+        ecrm:P3_has_note               "Velluto operato ad un corpo, tagliato e riccio su fondo in taffetas doublè in seta gialla"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303/dimension/1> , <http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 0620" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/10467/?WEB=MuseiVE> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/7566ebc7-295e-3764-aa7e-c2a85811878b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10467" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303/category/1> , <http://data.silknow.org/image/ee9b88e4-e881-3833-acce-c95226a42735> , <http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303/domain/1> , <http://data.silknow.org/event/0804ab91-df07-361b-abc2-13209dd7091a> , <http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303> , <http://data.silknow.org/object/c0fc6053-7c11-3174-b1f6-871e61948303/observation/1> , <http://data.silknow.org/production/e704c060-ad9d-35b5-8242-45f2e1bdbc1c> ;
+        dc:identifier       "10467.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .

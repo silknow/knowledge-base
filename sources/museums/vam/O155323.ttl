@@ -1,0 +1,100 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 59.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "59.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "F, embroidered, 1800-1860, Persian"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27> .
+
+<http://data.silknow.org/object/bbd1d887-dab9-3db6-a29c-bcd79d085839>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O155323" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/00b80990-307a-3765-84bf-54cf35b35650> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27/observation/2> , <http://data.silknow.org/production/f32033c9-093b-39f9-aa5d-cfb9a15c8615> , <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27/observation/1> , <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27/domain/1> , <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27> , <http://data.silknow.org/event/a945db5a-df5f-3cb8-8d40-7aee750fbd36> ;
+        dc:identifier       "O155323.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27> .
+
+<http://data.silknow.org/event/a945db5a-df5f-3cb8-8d40-7aee750fbd36>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27> .
+
+<http://data.silknow.org/production/f32033c9-093b-39f9-aa5d-cfb9a15c8615>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27> ;
+        ecrm:P126_employed      "cotton yarn, silk thread, metal thread, weaving, embroidering"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1860> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "F, embroidered, 1800-1860, Persian"@en , "Plain weave cotton embroidered with silk in straight stitches and with couched metal thread. \nDirectional design with the top of the pattern at the bottom of the panel, so that the wearer saw the correct pattern. There is a border along the bottom: pink blossom on chevron stem pointing to upper right; black outlined metal thread triangular blossom pointing to lower right.  There is a fine black line blow this and to the sides; it extends a little way up the sides of the panel.  Above the border is a line of black silk with couched metal thread forming a zigzag.\n\nThe main pattern is a series of black diagonal lines from lower right to upper left couched with metal thread.  \nThere are two sizes of stripes:\n[1] narrow stripes: white ground with angled metal thread stem and pink flower bending to the right alternating with large downward pointing gold pointed blossom.\n[2] wider stripes in two designs: [a] diamond segments: pink vase outlined in light blue with a pair of gold leaves, an oval gold blossom with pink centre and 3 mauve flowers alternating with a spray of 3 gold flowers.\n[b] diamond segments: a small silver cone with a spray of small pink flowers alternating with a long gold stem and large gold flower with pink centre and black lines.\n\nThreads: silk; 2S; white, dark green, light green, red, mauve, light mauve, green, light blue, black.\nMetal thread: [1] silver strip open S-wound on white silk core mainly used as an outline; [2] silver-gilt strip open S-wound on yellow silk core couched with pink floss silk."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/00b80990-307a-3765-84bf-54cf35b35650> ;
+        ecrm:P3_has_note               "F, embroidered, 1800-1860, Persian"@en , "Plain weave cotton embroidered with silk in straight stitches and with couched metal thread. \nDirectional design with the top of the pattern at the bottom of the panel, so that the wearer saw the correct pattern. There is a border along the bottom: pink blossom on chevron stem pointing to upper right; black outlined metal thread triangular blossom pointing to lower right.  There is a fine black line blow this and to the sides; it extends a little way up the sides of the panel.  Above the border is a line of black silk with couched metal thread forming a zigzag.\n\nThe main pattern is a series of black diagonal lines from lower right to upper left couched with metal thread.  \nThere are two sizes of stripes:\n[1] narrow stripes: white ground with angled metal thread stem and pink flower bending to the right alternating with large downward pointing gold pointed blossom.\n[2] wider stripes in two designs: [a] diamond segments: pink vase outlined in light blue with a pair of gold leaves, an oval gold blossom with pink centre and 3 mauve flowers alternating with a spray of 3 gold flowers.\n[b] diamond segments: a small silver cone with a spray of small pink flowers alternating with a long gold stem and large gold flower with pink centre and black lines.\n\nThreads: silk; 2S; white, dark green, light green, red, mauve, light mauve, green, light blue, black.\nMetal thread: [1] silver strip open S-wound on white silk core mainly used as an outline; [2] silver-gilt strip open S-wound on yellow silk core couched with pink floss silk."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27/dimension/2> , <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27/dimension/1> ;
+        dc:identifier                  "825-1876" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O155323> .
+
+<http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 77 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "77"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Trouser panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bbd1d887-dab9-3db6-a29c-bcd79d085839> .
+
+<http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Plain weave cotton embroidered with silk in straight stitches and with couched metal thread. \nDirectional design with the top of the pattern at the bottom of the panel, so that the wearer saw the correct pattern. There is a border along the bottom: pink blossom on chevron stem pointing to upper right; black outlined metal thread triangular blossom pointing to lower right.  There is a fine black line blow this and to the sides; it extends a little way up the sides of the panel.  Above the border is a line of black silk with couched metal thread forming a zigzag.\n\nThe main pattern is a series of black diagonal lines from lower right to upper left couched with metal thread.  \nThere are two sizes of stripes:\n[1] narrow stripes: white ground with angled metal thread stem and pink flower bending to the right alternating with large downward pointing gold pointed blossom.\n[2] wider stripes in two designs: [a] diamond segments: pink vase outlined in light blue with a pair of gold leaves, an oval gold blossom with pink centre and 3 mauve flowers alternating with a spray of 3 gold flowers.\n[b] diamond segments: a small silver cone with a spray of small pink flowers alternating with a long gold stem and large gold flower with pink centre and black lines.\n\nThreads: silk; 2S; white, dark green, light green, red, mauve, light mauve, green, light blue, black.\nMetal thread: [1] silver strip open S-wound on white silk core mainly used as an outline; [2] silver-gilt strip open S-wound on yellow silk core couched with pink floss silk."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27> .
+
+<http://data.silknow.org/image/00b80990-307a-3765-84bf-54cf35b35650>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2009CE0844" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O155323_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2009CE/2009CE0844.jpg> .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/7d6e7ff1-a0ac-30f9-b7ac-25a575664f27> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .

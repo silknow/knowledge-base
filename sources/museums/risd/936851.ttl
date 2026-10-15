@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/7564b446-e50a-30d2-8047-8907d44af3c0>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> , <http://data.silknow.org/vocabulary/88> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/1105f88d-23f0-35b6-ac67-ac9cc53facec>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/e90bdb0d-f82f-3f44-963e-8ee0e5bebfdb> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mr. and Mrs. William Boardman" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32> .
+
+<http://data.silknow.org/event/d523c053-ae89-33d6-8570-9bb2264de07b>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32> .
+
+<http://data.silknow.org/actor/e90bdb0d-f82f-3f44-963e-8ee0e5bebfdb>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mr. and Mrs. William Boardman" ;
+        ecrm:P1_is_identified_by  "Gift of Mr. and Mrs. William Boardman" .
+
+<http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "139.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "139.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/dd938ab5-4a83-3ae0-abd5-6dd72dbb80e1> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32/dimension/1> , <http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32/dimension/2> ;
+        dc:identifier                  "70.074" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/shawl-70074> .
+
+<http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/96> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/image/dd938ab5-4a83-3ae0-abd5-6dd72dbb80e1>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/936851_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/27792.jpg> .
+
+<http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "144.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "144.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1663170c-9308-3a86-a4b5-77d796e7133e> .
+
+<http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32> .
+
+<http://data.silknow.org/object/1663170c-9308-3a86-a4b5-77d796e7133e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 70.074" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/7564b446-e50a-30d2-8047-8907d44af3c0> , <http://data.silknow.org/event/d523c053-ae89-33d6-8570-9bb2264de07b> , <http://data.silknow.org/event/1105f88d-23f0-35b6-ac67-ac9cc53facec> , <http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32/domain/1> , <http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32> , <http://data.silknow.org/object/a0cb6eda-c44b-3cb1-a562-a8036b603a32/category/1> , <http://data.silknow.org/image/dd938ab5-4a83-3ae0-abd5-6dd72dbb80e1> ;
+        dc:identifier       "936851.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Gros de Tours lanciato con effetto di pelo strisciante"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9d3e8025-2b0c-375f-be56-d466d042f378> ;
+        ecrm:P3_has_note               "Gros de Tours lanciato con effetto di pelo strisciante"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782/dimension/1> , <http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 0774" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/283198/?WEB=MuseiVE> .
+
+<http://data.silknow.org/production/6eba6548-69ca-3f0d-84d9-1865b4193418>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1799> .
+
+<http://data.silknow.org/image/9d3e8025-2b0c-375f-be56-d466d042f378>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/283198_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5z%2f1nd6yTnkIYhMTJH4GhM8l4508FhBLKYcnRHfLe61wRqFcdAXYwS16qcskxR9eGJtRcaP5siwVuoMtNw0fYPaOjy8sYkavVEuqlqa%2baRJKnijwNfOpEOg%3d%3d> .
+
+<http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "19" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "19"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/d67bb6fb-c33f-307f-bf35-e8001168c2fd>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782> .
+
+<http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782> .
+
+<http://data.silknow.org/object/8a2c048f-e15b-3ac7-8b43-df51d0152204>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 283198" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782/observation/1> , <http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782/domain/1> , <http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782/category/1> , <http://data.silknow.org/event/d67bb6fb-c33f-307f-bf35-e8001168c2fd> , <http://data.silknow.org/image/9d3e8025-2b0c-375f-be56-d466d042f378> , <http://data.silknow.org/production/6eba6548-69ca-3f0d-84d9-1865b4193418> , <http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782> ;
+        dc:identifier       "283198.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Gros de Tours lanciato con effetto di pelo strisciante"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782> .
+
+<http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8a2c048f-e15b-3ac7-8b43-df51d0152204> .
+
+<http://data.silknow.org/object/f81912fb-c8b2-3599-a955-f26ede78c782/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "19" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "19"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .

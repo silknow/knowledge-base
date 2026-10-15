@@ -1,0 +1,142 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Arms & Armour" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee> .
+
+<http://data.silknow.org/production/d1566920-6459-3ba3-a39f-dea540a76f24>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee> ;
+        ecrm:P126_employed      "silk (textile)"@en , "hand-woven, hand-embroidered, hand-sewn"@en , "Leather, metal, silk, silver"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                "hand embroidery"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/379> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1600_1624> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/8873afa6-fa6d-36a5-bc63-374a46ba68b4>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MT7515" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O1547603_2.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2020MT/2020MT7515.jpg> .
+
+<http://data.silknow.org/event/e779a1db-f8e5-3fae-99e7-e19c23f9f0c0>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/87af3a2a-52db-3fcf-8ce4-1b40135e293b> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Lady Spickernell" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee> .
+
+<http://data.silknow.org/image/b5cdb6ef-364d-358f-bfc9-e1089f635a70>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2016JB9307" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O1547603_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2016JB/2016JB9307.jpg> .
+
+<http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "approximately" ;
+        rdfs:label          "Length: 27.8 cm  approximately" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "approximately" ;
+        ecrm:P90_has_value  "27.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Man's sword hangers, 1600-24, English; leather, silver embroidery, lined with tawny silk velvet"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/actor/87af3a2a-52db-3fcf-8ce4-1b40135e293b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Lady Spickernell" ;
+        ecrm:P1_is_identified_by  "Given by Lady Spickernell" .
+
+<http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Fashion" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee> .
+
+<http://data.silknow.org/image/0e1a14b5-335a-3913-b3c8-0a7fa437a605>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MT7516" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O1547603_3.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2020MT/2020MT7516.jpg> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1ea2d440-d485-3a3f-b3e3-d32bd4446d0e> .
+
+<http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "approximately" ;
+        rdfs:label          "Width: 75.3 cm  approximately" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "approximately" ;
+        ecrm:P90_has_value  "75.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/34c9407c-642b-3298-9115-4c3e3b03d608>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MT7514" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O1547603_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2020MT/2020MT7514.jpg> .
+
+<http://data.silknow.org/object/1ea2d440-d485-3a3f-b3e3-d32bd4446d0e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O1547603" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/8873afa6-fa6d-36a5-bc63-374a46ba68b4> , <http://data.silknow.org/image/b5cdb6ef-364d-358f-bfc9-e1089f635a70> , <http://data.silknow.org/image/34c9407c-642b-3298-9115-4c3e3b03d608> , <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/domain/3> , <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/observation/2> , <http://data.silknow.org/event/e779a1db-f8e5-3fae-99e7-e19c23f9f0c0> , <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/domain/1> , <http://data.silknow.org/production/d1566920-6459-3ba3-a39f-dea540a76f24> , <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/domain/2> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/observation/1> , <http://data.silknow.org/image/0e1a14b5-335a-3913-b3c8-0a7fa437a605> , <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee> ;
+        dc:identifier       "O1547603.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Man’s sword hangers and front strap of leather, lined with tawny silk velvet. They are embroidered with silver filé, purl and spangles in a pattern of abstract leaves. The hangers are in 3 parts, each with 3 scabbard straps held with metal buckles. The hangers are attached at the top with a metal hook. The front strap is sewn to the outside scabbard strap and has a hook at the other end."@en , "Man's sword hangers, 1600-24, English; leather, silver embroidery, lined with tawny silk velvet"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b5cdb6ef-364d-358f-bfc9-e1089f635a70> , <http://data.silknow.org/image/8873afa6-fa6d-36a5-bc63-374a46ba68b4> , <http://data.silknow.org/image/0e1a14b5-335a-3913-b3c8-0a7fa437a605> , <http://data.silknow.org/image/34c9407c-642b-3298-9115-4c3e3b03d608> ;
+        ecrm:P3_has_note               "Man's sword hangers, 1600-24, English; leather, silver embroidery, lined with tawny silk velvet"@en , "Man’s sword hangers and front strap of leather, lined with tawny silk velvet. They are embroidered with silver filé, purl and spangles in a pattern of abstract leaves. The hangers are in 3 parts, each with 3 scabbard straps held with metal buckles. The hangers are attached at the top with a metal hook. The front strap is sewn to the outside scabbard strap and has a hook at the other end."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/dimension/2> , <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/dimension/1> ;
+        dc:identifier                  "T.36A-1938" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O1547603> .
+
+<http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/domain/3>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/40> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee> .
+
+<http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/category/1>
+        a                    silk:T35 ;
+        silk:L1              "sword hangers" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee> .
+
+<http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Man’s sword hangers and front strap of leather, lined with tawny silk velvet. They are embroidered with silver filé, purl and spangles in a pattern of abstract leaves. The hangers are in 3 parts, each with 3 scabbard straps held with metal buckles. The hangers are attached at the top with a metal hook. The front strap is sewn to the outside scabbard strap and has a hook at the other end."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/60edb00d-6863-30a0-8007-db97fede3dee> .

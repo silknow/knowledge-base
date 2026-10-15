@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/da48246d-e715-343b-918e-56f3c1973eef>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a> ;
+        ecrm:P126_employed      "linen"@en , "linen; silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1700_1809> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/298795/> .
+
+<http://data.silknow.org/event/632269f6-d5ca-38ab-bf7f-d54e91140ea6>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a> .
+
+<http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "138.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "138.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "42.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "42.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/43c4fd44-19cb-360e-b7ee-a3322c677b70>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of John Davis Hatch in honor of Olivia Eggleston Phelps Stokes" ;
+        ecrm:P1_is_identified_by  "Gift of John Davis Hatch in honor of Olivia Eggleston Phelps Stokes" .
+
+<http://data.silknow.org/object/6d94232c-9662-3ad2-b009-2ac0020b6408>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1991.013.8" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a/domain/1> , <http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a/category/1> , <http://data.silknow.org/event/3939f2c7-5b97-3001-83f2-4dd039101208> , <http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a> , <http://data.silknow.org/event/632269f6-d5ca-38ab-bf7f-d54e91140ea6> , <http://data.silknow.org/production/da48246d-e715-343b-918e-56f3c1973eef> , <http://data.silknow.org/image/76c5c019-78eb-3ecf-bf8e-6b69b3cdcfde> ;
+        dc:identifier       "811846.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<https://sws.geonames.org/298795/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/76c5c019-78eb-3ecf-bf8e-6b69b3cdcfde> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a/dimension/1> , <http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a/dimension/2> ;
+        dc:identifier                  "1991.013.8" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/towel-19910138> .
+
+<http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "towel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a> .
+
+<http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/event/3939f2c7-5b97-3001-83f2-4dd039101208>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/43c4fd44-19cb-360e-b7ee-a3322c677b70> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of John Davis Hatch in honor of Olivia Eggleston Phelps Stokes" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0d73b32c-7976-315e-9c8f-a2ca22f6280a> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6d94232c-9662-3ad2-b009-2ac0020b6408> .
+
+<http://data.silknow.org/image/76c5c019-78eb-3ecf-bf8e-6b69b3cdcfde>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/811846_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/11730.jpg> .

@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/b5feaf8f-8a4a-3005-a574-19187db28232>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of John Cooper, Richard Cooper, Robert Cooper and Peggy Cooper in memory of William Rhys Cooper" ;
+        ecrm:P1_is_identified_by  "Gift of John Cooper, Richard Cooper, Robert Cooper and Peggy Cooper in memory of William Rhys Cooper" .
+
+<http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Folio with Samples of Japanese, Chinese and Dutch Textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01> .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/187c8e7f-80f2-3389-b790-eefd6c462da3>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01> .
+
+<http://data.silknow.org/event/8c1b5ccb-d231-3e21-ad96-b3fde09a4bf7>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b5feaf8f-8a4a-3005-a574-19187db28232> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of John Cooper, Richard Cooper, Robert Cooper and Peggy Cooper in memory of William Rhys Cooper" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01> .
+
+<http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01>
+        a                       ecrm:E22_Man-Made_Object ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01/dimension/1> , <http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01/dimension/2> ;
+        dc:identifier           "1989.063.2B" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/folio-samples-japanese-chinese-and-dutch-textiles-19890632b> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/fd41d51c-1991-358e-ba76-29b3bf2f39c9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1989.063.2B" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/290f446a-4540-3505-b7a9-46a3b8514e5d> , <http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01> , <http://data.silknow.org/event/187c8e7f-80f2-3389-b790-eefd6c462da3> , <http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01/domain/1> , <http://data.silknow.org/event/8c1b5ccb-d231-3e21-ad96-b3fde09a4bf7> , <http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01/category/1> ;
+        dc:identifier       "859041.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "32.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "32.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/290f446a-4540-3505-b7a9-46a3b8514e5d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01> ;
+        ecrm:P126_employed      "cardboard; silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fd41d51c-1991-358e-ba76-29b3bf2f39c9> .
+
+<http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01> .
+
+<http://data.silknow.org/object/f6418038-bf89-3c5c-af58-d2ec996c0f01/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "27" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "27"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

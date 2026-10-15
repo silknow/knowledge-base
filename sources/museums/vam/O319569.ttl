@@ -1,0 +1,97 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/4ddaa150-5f34-347d-ae03-046496b4455e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39> ;
+        ecrm:P126_employed      "Linen embroidered with silk in satin and chain stitch"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/253613/> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Cushion cover" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39> .
+
+<http://data.silknow.org/object/c2d64302-b8f6-3735-a14d-09161219b53d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O319569" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39/domain/2> , <http://data.silknow.org/image/14dd5152-281e-3c14-8a95-a3a4acaaab99> , <http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39/observation/1> , <http://data.silknow.org/production/4ddaa150-5f34-347d-ae03-046496b4455e> , <http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39/domain/1> , <http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39> , <http://data.silknow.org/event/3839f6eb-7add-3b50-8848-471a6e966f4d> , <http://data.silknow.org/image/7e6d6de6-d14a-3c7a-adbf-492ebe0d6618> ;
+        dc:identifier       "O319569.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/actor/ab58d53f-cf28-3f15-b7fb-0e923431da8a>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Prof. R. M. Dawkins" ;
+        ecrm:P1_is_identified_by  "Given by Prof. R. M. Dawkins" .
+
+<http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39> .
+
+<http://data.silknow.org/image/7e6d6de6-d14a-3c7a-adbf-492ebe0d6618>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019MD2189" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O319569_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2019MD/2019MD2189.jpg> .
+
+<http://data.silknow.org/event/3839f6eb-7add-3b50-8848-471a6e966f4d>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/ab58d53f-cf28-3f15-b7fb-0e923431da8a> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Prof. R. M. Dawkins" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c2d64302-b8f6-3735-a14d-09161219b53d> .
+
+<http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "embroidered, 1700s, Greek; Sporades, Skyros"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39> .
+
+<http://data.silknow.org/image/14dd5152-281e-3c14-8a95-a3a4acaaab99>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019MD2204" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O319569_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2019MD/2019MD2204.jpg> .
+
+<http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "embroidered, 1700s, Greek; Sporades, Skyros"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7e6d6de6-d14a-3c7a-adbf-492ebe0d6618> , <http://data.silknow.org/image/14dd5152-281e-3c14-8a95-a3a4acaaab99> ;
+        ecrm:P3_has_note               "embroidered, 1700s, Greek; Sporades, Skyros"@en ;
+        dc:identifier                  "T.56-1950" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O319569> .
+
+<http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/2> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f2079e08-83e7-3577-91a4-ba9fbf257c39> .
+
+<https://sws.geonames.org/253613/>
+        a       ecrm:E53_Place .

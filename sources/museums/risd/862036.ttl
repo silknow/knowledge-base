@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/63895ec2-c0b4-3804-96f2-87521f0f4766>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1991.122.4" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/69d3cdb0-b3e0-35fa-bc05-c1e5bd5bd7fb> , <http://data.silknow.org/event/cbe83995-1b2e-3e16-b8c3-7e7973107b07> , <http://data.silknow.org/object/d7d7038a-062b-3520-be2b-355c61627af2/category/1> , <http://data.silknow.org/object/d7d7038a-062b-3520-be2b-355c61627af2> , <http://data.silknow.org/image/5678c5e0-5599-3263-8508-2da82609d31b> , <http://data.silknow.org/object/d7d7038a-062b-3520-be2b-355c61627af2/domain/1> , <http://data.silknow.org/production/bfbbb6e3-bfdc-330b-8756-e04dbab2fbe5> ;
+        dc:identifier       "862036.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/image/5678c5e0-5599-3263-8508-2da82609d31b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/862036_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/28420.jpg> .
+
+<http://data.silknow.org/event/69d3cdb0-b3e0-35fa-bc05-c1e5bd5bd7fb>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/ffaff553-8fd5-3c6b-8623-7fc4b88f8249> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Edward Cella" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d7d7038a-062b-3520-be2b-355c61627af2> .
+
+<http://data.silknow.org/production/bfbbb6e3-bfdc-330b-8756-e04dbab2fbe5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d7d7038a-062b-3520-be2b-355c61627af2> ;
+        ecrm:P126_employed      "bead"@en , "silk; bead"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/60d53528-42dd-395f-8000-f7fb90d790c1> .
+
+<http://data.silknow.org/object/d7d7038a-062b-3520-be2b-355c61627af2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d7d7038a-062b-3520-be2b-355c61627af2> .
+
+<http://data.silknow.org/object/d7d7038a-062b-3520-be2b-355c61627af2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "trim (material)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d7d7038a-062b-3520-be2b-355c61627af2> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/d7d7038a-062b-3520-be2b-355c61627af2>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5678c5e0-5599-3263-8508-2da82609d31b> ;
+        dc:identifier                  "1991.122.4" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/trim-material-19911224> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/63895ec2-c0b4-3804-96f2-87521f0f4766> .
+
+<http://data.silknow.org/event/cbe83995-1b2e-3e16-b8c3-7e7973107b07>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/d7d7038a-062b-3520-be2b-355c61627af2> .
+
+<http://data.silknow.org/actor/ffaff553-8fd5-3c6b-8623-7fc4b88f8249>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Edward Cella" ;
+        ecrm:P1_is_identified_by  "Gift of Edward Cella" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000497626156> .

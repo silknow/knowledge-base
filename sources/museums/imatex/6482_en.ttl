@@ -1,0 +1,126 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/456da08a-033c-3355-aa3d-36f5e20c02c7>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040> ;
+        ecrm:P126_employed      "linen"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "weaving technique"@en , "tapestry technique"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1b4e76dc-9490-303d-bb25-e61700d7e2b6> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/357994/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8804118e-2908-3939-9c91-f5e608609f82> .
+
+<http://data.silknow.org/event/08d1151e-d896-3d10-89bf-36666a5bf40d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040> .
+
+<http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "18.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "18.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040> .
+
+<http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040> .
+
+<http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "28" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "28"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/f064cc68-171f-35c8-9329-d7c03b754448>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "decoration not significant"@en ;
+        ecrm:P3_has_note  "decoration not significant"@en .
+
+<http://data.silknow.org/image/c39b6fd8-9977-3c66-b31b-1d9e75375990>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000045315" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/6482_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000045315.jpg> .
+
+<http://data.silknow.org/object/a836569d-120c-3585-a3d7-ade6b7a1eec1>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Catàleg de l'exposició \"Egipte, entre el sol i la mitja lluna\", CDMT, Terrassa, abril-juliol, 1999, p. 241."@en ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Catàleg de l'exposició \"Egipte, entre el sol i la mitja lluna\", CDMT, Terrassa, abril-juliol, 1999, p. 241."@en .
+
+<http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Fragment de tafetà de lli que inclou bandes decoratives realitzades en tècnica de tapís, amb sedes policromes i lli.\nAMPLIACIÓ TÉCNICA:\ndensitat ordit: 20-21 fils/cm\ndensitat trama tafetà: 66 passades/cm \ndensitat trama tapís: 15 passades/cm"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c39b6fd8-9977-3c66-b31b-1d9e75375990> , <http://data.silknow.org/image/223d5906-05fd-3e8f-a98d-20e0fe730e30> ;
+        ecrm:P3_has_note               "Fragment de tafetà de lli que inclou bandes decoratives realitzades en tècnica de tapís, amb sedes policromes i lli.\nAMPLIACIÓ TÉCNICA:\ndensitat ordit: 20-21 fils/cm\ndensitat trama tafetà: 66 passades/cm \ndensitat trama tapís: 15 passades/cm"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040/dimension/2> , <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040/dimension/1> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/f064cc68-171f-35c8-9329-d7c03b754448> ;
+        dc:identifier                  "3920" .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Fragment de tafetà de lli que inclou bandes decoratives realitzades en tècnica de tapís, amb sedes policromes i lli.\nAMPLIACIÓ TÉCNICA:\ndensitat ordit: 20-21 fils/cm\ndensitat trama tafetà: 66 passades/cm \ndensitat trama tapís: 15 passades/cm"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040> .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .
+
+<http://data.silknow.org/image/223d5906-05fd-3e8f-a98d-20e0fe730e30>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000045316" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/6482_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000045316.jpg> .
+
+<http://data.silknow.org/event/5dced370-a1df-372b-9759-8822afb26ac5>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "purchase - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040> ;
+        ecrm:P3_has_note               "purchase - Diputació de Barcelona" ;
+        ecrm:P4_has_time-span          <http://data.silknow.org/timespan/1957_01_01> .
+
+<http://data.silknow.org/object/8804118e-2908-3939-9c91-f5e608609f82>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 6482" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/456da08a-033c-3355-aa3d-36f5e20c02c7> , <http://data.silknow.org/object/a836569d-120c-3585-a3d7-ade6b7a1eec1> , <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040/category/1> , <http://data.silknow.org/event/08d1151e-d896-3d10-89bf-36666a5bf40d> , <http://data.silknow.org/image/c39b6fd8-9977-3c66-b31b-1d9e75375990> , <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040> , <http://data.silknow.org/event/5dced370-a1df-372b-9759-8822afb26ac5> , <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040/observation/1> , <http://data.silknow.org/image/223d5906-05fd-3e8f-a98d-20e0fe730e30> , <http://data.silknow.org/object/a11b647a-b6b0-3876-9978-38e7b9942040/domain/1> ;
+        dc:identifier       "6482.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<https://sws.geonames.org/357994/>
+        a       ecrm:E53_Place .

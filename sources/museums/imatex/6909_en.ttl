@@ -1,0 +1,116 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/02d1ebdf-36a9-3847-b1d3-51e90b24ab58> .
+
+<http://data.silknow.org/image/53d93d6b-de55-350a-a143-5eef9f71cdff>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "medieval design imitation"@en ;
+        ecrm:P3_has_note  "medieval design imitation"@en .
+
+<http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Reproducció d'un teixit medieval."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/18557ebd-8624-3c6f-9aab-f267e7b489e5> ;
+        ecrm:P3_has_note               "Reproducció d'un teixit medieval."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b/dimension/2> , <http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b/dimension/1> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/751> , <http://data.silknow.org/image/53d93d6b-de55-350a-a143-5eef9f71cdff> , <http://data.silknow.org/image/69585ef9-611f-3d22-afc1-f67578e6396d> ;
+        dc:identifier                  "5761" .
+
+<http://data.silknow.org/production/d08bd5d3-c111-3741-a057-60dd45e75ec4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b> ;
+        ecrm:P126_employed      "... unconfirmed"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "patterned fabric"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/168> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/e67ca962-cfd0-3502-87cd-877b7776a08b> .
+
+<http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "57" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "57"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/c8bff2b3-001b-3d14-8b47-cdf0a2c131fa>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "purchase - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b> ;
+        ecrm:P3_has_note               "purchase - Diputació de Barcelona" ;
+        ecrm:P4_has_time-span          <http://data.silknow.org/timespan/1957_01_01> .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Reproducció d'un teixit medieval."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b> .
+
+<http://data.silknow.org/image/18557ebd-8624-3c6f-9aab-f267e7b489e5>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000004034" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/6909_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000004034.jpg> .
+
+<http://data.silknow.org/event/ed61fcfb-1ccc-318a-995c-bfa3c0acd930>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b> .
+
+<http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "45.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "45.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b> .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .
+
+<http://data.silknow.org/image/69585ef9-611f-3d22-afc1-f67578e6396d>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "circles arrangement"@en ;
+        ecrm:P3_has_note  "circles arrangement"@en .
+
+<http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b> .
+
+<http://data.silknow.org/object/02d1ebdf-36a9-3847-b1d3-51e90b24ab58>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 6909" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/ed61fcfb-1ccc-318a-995c-bfa3c0acd930> , <http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b> , <http://data.silknow.org/production/d08bd5d3-c111-3741-a057-60dd45e75ec4> , <http://data.silknow.org/event/c8bff2b3-001b-3d14-8b47-cdf0a2c131fa> , <http://data.silknow.org/image/18557ebd-8624-3c6f-9aab-f267e7b489e5> , <http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b/observation/1> , <http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b/domain/1> , <http://data.silknow.org/object/86c0ffcf-2736-3fe3-98c7-64972512971b/category/1> ;
+        dc:identifier       "6909.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

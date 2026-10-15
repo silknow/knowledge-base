@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Piece from a chasuble back. Meandering flowers and foliage brocaded with polychrome silk threads and lancé (lamé, frisé, and filé) with silver metallic thread on a yellow silk figured ground."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "124.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "124.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/03d570ae-5715-38e9-9ee1-a6b6e7f774e5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d> ;
+        ecrm:P126_employed      "Silk; Rococo (Louis XV style);"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1726_1775> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "53.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "53.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Piece from a chasuble back. Meandering flowers and foliage brocaded with polychrome silk threads and lancé (lamé, frisé, and filé) with silver metallic thread on a yellow silk figured ground."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ea5d7e4a-85fa-3bbf-8a39-bedb9bbce5aa> ;
+        ecrm:P3_has_note               "Piece from a chasuble back. Meandering flowers and foliage brocaded with polychrome silk threads and lancé (lamé, frisé, and filé) with silver metallic thread on a yellow silk figured ground."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d/dimension/2> , <http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d/dimension/1> ;
+        dc:identifier                  "46.62" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/48476> .
+
+<http://data.silknow.org/image/ea5d7e4a-85fa-3bbf-8a39-bedb9bbce5aa>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "711193" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/48476_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/711193/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/event/c6cb28b1-b2f2-3bae-9489-330e4db669e8>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5b98e436-2133-33f8-95dc-a2a1cbf8375b> .
+
+<http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d> .
+
+<http://data.silknow.org/object/5b98e436-2133-33f8-95dc-a2a1cbf8375b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 46.62" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d/domain/1> , <http://data.silknow.org/production/03d570ae-5715-38e9-9ee1-a6b6e7f774e5> , <http://data.silknow.org/image/ea5d7e4a-85fa-3bbf-8a39-bedb9bbce5aa> , <http://data.silknow.org/event/c6cb28b1-b2f2-3bae-9489-330e4db669e8> , <http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d> , <http://data.silknow.org/object/4776ce78-312a-37b1-a6d4-5956dc49b77d/observation/1> ;
+        dc:identifier       "48476.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

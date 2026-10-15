@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/8a5744f7-90a4-39f9-aefa-a77254e6febf>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/01d49588-e583-3c50-8505-679be08e00ae> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1946_1947> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6252001/> .
+
+<http://data.silknow.org/event/ce5fed10-bf70-3303-be46-2125a6b85c0c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/0314352b-1274-3ad9-abc1-12861048c31e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of C. M. Gourdon, Inc." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/01d49588-e583-3c50-8505-679be08e00ae> .
+
+<http://data.silknow.org/image/ce71531d-1b76-31b6-b263-253ce657b326>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/969046_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/18791.jpg> .
+
+<http://data.silknow.org/object/01d49588-e583-3c50-8505-679be08e00ae>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ce71531d-1b76-31b6-b263-253ce657b326> ;
+        dc:identifier                  "47.524" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/fabric-length-textile-length-47524> .
+
+<http://data.silknow.org/object/01d49588-e583-3c50-8505-679be08e00ae/category/1>
+        a                    silk:T35 ;
+        silk:L1              "fabric length; textile length" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/01d49588-e583-3c50-8505-679be08e00ae> .
+
+<http://data.silknow.org/object/e43c8ded-7e39-36f0-94d5-554156d66734>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 47.524" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/8a5744f7-90a4-39f9-aefa-a77254e6febf> , <http://data.silknow.org/image/ce71531d-1b76-31b6-b263-253ce657b326> , <http://data.silknow.org/object/01d49588-e583-3c50-8505-679be08e00ae/category/1> , <http://data.silknow.org/event/ce5fed10-bf70-3303-be46-2125a6b85c0c> , <http://data.silknow.org/object/01d49588-e583-3c50-8505-679be08e00ae/domain/1> , <http://data.silknow.org/event/23cf6772-add7-30f4-8487-36d19b666a65> , <http://data.silknow.org/object/01d49588-e583-3c50-8505-679be08e00ae> ;
+        dc:identifier       "969046.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/01d49588-e583-3c50-8505-679be08e00ae/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/01d49588-e583-3c50-8505-679be08e00ae> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<https://sws.geonames.org/6252001/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e43c8ded-7e39-36f0-94d5-554156d66734> .
+
+<http://data.silknow.org/event/23cf6772-add7-30f4-8487-36d19b666a65>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/01d49588-e583-3c50-8505-679be08e00ae> .
+
+<http://data.silknow.org/actor/0314352b-1274-3ad9-abc1-12861048c31e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of C. M. Gourdon, Inc" ;
+        ecrm:P1_is_identified_by  "Gift of C. M. Gourdon, Inc" .

@@ -1,0 +1,105 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Motifs géométriques composés à partir de carrés de couleur, 1er quart 20e siècle : date de fin"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/07ae3cfc-f46f-39d4-92aa-66bb6e63f4b7> ;
+        dc:identifier                  "2008.0.36" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1> ;
+        ecrm:P42_assigned    "Motifs géométriques composés à partir de carrés de couleur" .
+
+<http://data.silknow.org/production/55e2849c-a9ae-3474-ad98-1bb656a8e280>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/372cd8c0-3cde-33f3-a943-12421bf7603c> , <http://data.silknow.org/timespan/acb751ea-793d-3c88-89a1-2d6d8e67e42b> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/55e2849c-a9ae-3474-ad98-1bb656a8e280/activity/1> .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5a727147-1f29-3d21-a0e2-873400ab74f1> .
+
+<http://data.silknow.org/assessment/3740f3d6-cc02-372b-9ec4-ea65661e79f5/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "complet"@fr ;
+        ecrm:P2_has_type  "Intégrité" ;
+        ecrm:P3_has_note  "complet"@fr .
+
+<http://data.silknow.org/production/55e2849c-a9ae-3474-ad98-1bb656a8e280/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/7243313b-b3e4-30c7-b983-bc35c780b565> ;
+        ecrm:P2_has_type         "fabricant, auteur" .
+
+<http://data.silknow.org/actor/7243313b-b3e4-30c7-b983-bc35c780b565>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Troyet E. et Cie" ;
+        ecrm:P1_is_identified_by  "Troyet E. et Cie" .
+
+<http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Gidon Marielle"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1> ;
+        ecrm:P3_has_note       "Gidon Marielle"@fr .
+
+<http://data.silknow.org/assessment/3740f3d6-cc02-372b-9ec4-ea65661e79f5>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/3740f3d6-cc02-372b-9ec4-ea65661e79f5/condition/1> .
+
+<http://data.silknow.org/image/07ae3cfc-f46f-39d4-92aa-66bb6e63f4b7>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/2008.0.36_0.jpg> .
+
+<http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1> .
+
+<http://data.silknow.org/event/c202989b-5052-3e82-963a-109724146761>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1> .
+
+<http://data.silknow.org/object/fab7a755-1ddc-33ed-b624-de4ac07e731b>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "©www.philippehervouet.com/galerie"@fr , "Hervouet"@fr , "2008.0.36.JPG"@fr , "Philippe"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "©www.philippehervouet.com/galerie"@fr , "2008.0.36.JPG"@fr , "Hervouet"@fr , "Philippe"@fr .
+
+<http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1> .
+
+<http://data.silknow.org/object/211daed9-765c-3b89-b180-7ce425769f7e>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "2008.0.4-245"@fr , "Philippe"@fr , "Hervouet"@fr , "©www.philippehervouet.com/galerie"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "2008.0.4-245"@fr , "Philippe"@fr , "©www.philippehervouet.com/galerie"@fr , "Hervouet"@fr .
+
+<http://data.silknow.org/object/5a727147-1f29-3d21-a0e2-873400ab74f1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2008.0.36" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1/right> , <http://data.silknow.org/image/07ae3cfc-f46f-39d4-92aa-66bb6e63f4b7> , <http://data.silknow.org/event/c202989b-5052-3e82-963a-109724146761> , <http://data.silknow.org/production/55e2849c-a9ae-3474-ad98-1bb656a8e280> , <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1> , <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1/domain/1> , <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1/domain/2> , <http://data.silknow.org/object/fab7a755-1ddc-33ed-b624-de4ac07e731b> , <http://data.silknow.org/object/211daed9-765c-3b89-b180-7ce425769f7e> , <http://data.silknow.org/assessment/3740f3d6-cc02-372b-9ec4-ea65661e79f5> , <http://data.silknow.org/object/e24bbb96-9c0f-3b07-89a1-7268569c9ac1/type/1> ;
+        dc:identifier       "2008.0.36.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .

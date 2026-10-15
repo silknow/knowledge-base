@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/be97abe0-ea73-3321-baec-424256538ffc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa> ;
+        ecrm:P126_employed      "tapisserie de basse lisse = basse lisse (techniques textile->tapisserie = tapisserie sur métier)"@fr ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/644> , <http://data.silknow.org/vocabulary/369> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1940> , <http://data.silknow.org/timespan/1876> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/be97abe0-ea73-3321-baec-424256538ffc/activity/1> .
+
+<http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Vase et raisins (dans un encadrement) d'après Monnoyer"@fr ;
+        ecrm:P102_has_title            "Vase et raisins (dans un encadrement) d'après Monnoyer"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/367c5dcc-1b01-3c8e-8f7b-22ec7d69047d> , <http://data.silknow.org/image/dd294a5d-ef20-3d5e-911b-069b74c276d9> ;
+        dc:identifier                  "Numéro principal : OA 2470" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.louvre.fr/ark:/53355/cl010112740> .
+
+<http://data.silknow.org/image/367c5dcc-1b01-3c8e-8f7b-22ec7d69047d>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/louvre/cl010112740_1.jpg> , <https://collections.louvre.fr/media/cache/original/0000000021/0000112740/0000174174_OG.JPG> .
+
+<http://data.silknow.org/actor/45c77746-a42b-31cb-820e-d581ace72b34>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Manufacture de Beauvais" ;
+        ecrm:P1_is_identified_by  "Manufacture de Beauvais" .
+
+<http://data.silknow.org/production/be97abe0-ea73-3321-baec-424256538ffc/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/45c77746-a42b-31cb-820e-d581ace72b34> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/collection/b6ebad22-373c-39f2-8cbc-fe59c06527c7>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Département des Objets d'art du Moyen Age, de la Renaissance et des temps modernes" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa> ;
+        ecrm:P78_is_identified_by  "Département des Objets d'art du Moyen Age, de la Renaissance et des temps modernes" .
+
+<http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "tapisserie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa> .
+
+<http://data.silknow.org/image/dd294a5d-ef20-3d5e-911b-069b74c276d9>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/louvre/cl010112740_0.jpg> , <https://collections.louvre.fr/media/cache/original/0000000021/0000112740/0000996647_OG.JPG> .
+
+<http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Catégorie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa> ;
+        ecrm:P42_assigned    "tapisserie" .
+
+<http://data.silknow.org/object/790da9bb-2fec-36e5-8835-e0a597e639da>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record cl010112740" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa/domain/2> , <http://data.silknow.org/image/367c5dcc-1b01-3c8e-8f7b-22ec7d69047d> , <http://data.silknow.org/production/be97abe0-ea73-3321-baec-424256538ffc> , <http://data.silknow.org/collection/b6ebad22-373c-39f2-8cbc-fe59c06527c7> , <http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa> , <http://data.silknow.org/image/dd294a5d-ef20-3d5e-911b-069b74c276d9> , <http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa/type/1> , <http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa/domain/1> ;
+        dc:identifier       "cl010112740.json" ;
+        dc:publisher        "http://data.silknow.org/organization/louvre" .
+
+<http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "tapisserie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/35f50ab1-e66a-3f5d-ac49-06567dcfc0fa> .
+
+<http://data.silknow.org/louvre>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/790da9bb-2fec-36e5-8835-e0a597e639da> .

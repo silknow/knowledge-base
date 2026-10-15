@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/e6171b4e-2b72-344c-bb8f-9ee44e98653e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Philippe de Lasalle, Lyon, 1770 (vers), Louis XVI (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e3b675ef-a675-3ae8-9d67-2c1e684b2704> ;
+        dc:identifier                  "13271" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910364> .
+
+<http://data.silknow.org/event/b1d9414f-c9fc-3d4d-ad2f-f615f876c77b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don monsieur Marquereau, 1907" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e6171b4e-2b72-344c-bb8f-9ee44e98653e> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/e3b675ef-a675-3ae8-9d67-2c1e684b2704>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910364_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/9fcd352b-2036-4638-b06c-f8824f40e0f9.jpg> .
+
+<http://data.silknow.org/object/fd24e748-9585-3963-8a70-1dee9477a5f8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13271" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e6171b4e-2b72-344c-bb8f-9ee44e98653e> , <http://data.silknow.org/object/e6171b4e-2b72-344c-bb8f-9ee44e98653e/category/1> , <http://data.silknow.org/image/e3b675ef-a675-3ae8-9d67-2c1e684b2704> , <http://data.silknow.org/production/ae383b29-adaa-31f4-93f7-5992129a6f98> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/b1d9414f-c9fc-3d4d-ad2f-f615f876c77b> ;
+        dc:identifier       "910364.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/ae383b29-adaa-31f4-93f7-5992129a6f98>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Philippe de Lasalle, Lyon, 1770 (vers), Louis XVI (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e6171b4e-2b72-344c-bb8f-9ee44e98653e> ;
+        ecrm:P126_employed      "Satin de 8, broché à liage repris en sergé"@fr ;
+        ecrm:P3_has_note        "Philippe de Lasalle, Lyon, 1770 (vers), Louis XVI (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/b7d11cdc-0313-34de-b698-73c702bc0c17> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2996944/> .
+
+<http://data.silknow.org/object/e6171b4e-2b72-344c-bb8f-9ee44e98653e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e6171b4e-2b72-344c-bb8f-9ee44e98653e> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fd24e748-9585-3963-8a70-1dee9477a5f8> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/e6171b4e-2b72-344c-bb8f-9ee44e98653e> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .

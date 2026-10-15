@@ -1,0 +1,128 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/7768f7a8-91b3-3ad1-89b7-fea5db22f9b0>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99> ;
+        ecrm:P126_employed      "Silk, woven"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/fd6cbc20-455d-32c2-b88f-a17d02ad8c67> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1254388/> .
+
+<http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "approx." ;
+        rdfs:label          "Length: 717 cm  approx." ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "approx." ;
+        ecrm:P90_has_value  "717"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/domain/3>
+        a                    silk:T19 ;
+        silk:L4              "Parasol Foundation Trust Indian Textiles Cataloguing Project" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99> .
+
+<http://data.silknow.org/object/b471f6f3-8c60-3939-b4ac-bd837eb51e46>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O477506" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/domain/4> , <http://data.silknow.org/production/7768f7a8-91b3-3ad1-89b7-fea5db22f9b0> , <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/domain/2> , <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/domain/3> , <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99> , <http://data.silknow.org/image/ed155a94-0b59-3f97-9b9b-e33f9baaa051> , <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/observation/3> , <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/domain/1> , <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/observation/1> , <http://data.silknow.org/event/8af7ec0c-9a08-31ec-97ff-172e3ffcc67d> , <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/observation/2> , <http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217> ;
+        dc:identifier       "O477506.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Textile, length of silk, Tiruchchirappalli, ca. 1855."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99> .
+
+<http://data.silknow.org/event/8af7ec0c-9a08-31ec-97ff-172e3ffcc67d>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "Transferred from India Museum 1879."@en ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99> ;
+        ecrm:P3_has_note               "Transferred from India Museum 1879."@en .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99> .
+
+<http://data.silknow.org/image/ed155a94-0b59-3f97-9b9b-e33f9baaa051>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2012FV1542" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O477506_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2012FV/2012FV1542.jpg> .
+
+<http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Intended for use as a garment, clothing."@en , "Length of red silk, striped with bands of yellow floral motif, with a fine yellow stripe on either side. Narrow yellow bands at ends. Complete piece."@en , "Textile, length of silk, Tiruchchirappalli, ca. 1855."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ed155a94-0b59-3f97-9b9b-e33f9baaa051> ;
+        ecrm:P3_has_note               "Intended for use as a garment, clothing."@en , "Textile, length of silk, Tiruchchirappalli, ca. 1855."@en , "Length of red silk, striped with bands of yellow floral motif, with a fine yellow stripe on either side. Narrow yellow bands at ends. Complete piece."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/dimension/1> , <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/dimension/2> ;
+        dc:identifier                  "5206(IS)" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O477506> .
+
+<http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "South & South East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99> ;
+        ecrm:P78_is_identified_by  "South & South East Asia Collection" .
+
+<http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 90 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "90"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/domain/4>
+        a                    silk:T19 ;
+        silk:L4              "India Museum" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99> .
+
+<http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Intended for use as a garment, clothing."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b471f6f3-8c60-3939-b4ac-bd837eb51e46> .
+
+<http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99> .
+
+<http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99> .
+
+<https://sws.geonames.org/1254388/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Length of red silk, striped with bands of yellow floral motif, with a fine yellow stripe on either side. Narrow yellow bands at ends. Complete piece."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d54dd1fa-ce0f-353c-970f-9948105c6c99> .

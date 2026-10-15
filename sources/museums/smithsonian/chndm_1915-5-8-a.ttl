@@ -1,0 +1,90 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/5f177bf2-8b34-3dba-9aec-b7c08d1e6024>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438> .
+
+<http://data.silknow.org/actor/3301b228-9b63-3152-8c67-e87c66f52f59>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Cheney Brothers" ;
+        ecrm:P1_is_identified_by  "Gift of Cheney Brothers" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000104327666> .
+
+<https://sws.geonames.org/6252001/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/394cb080-f37e-32eb-8138-0badb597dc9a> .
+
+<http://data.silknow.org/event/53cbd23d-68be-3dde-b826-1cde98be4ec4>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/3301b228-9b63-3152-8c67-e87c66f52f59> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Cheney Brothers" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438> .
+
+<http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Reproduction fabric inspired by a sixteenth century design in the Cooper Union Museum collection. In dark purple with a pattern of flower-filled urns and pairs of peacocks."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3e6bc109-ee5e-30cb-8f3b-fa93b03cd0e1> ;
+        ecrm:P3_has_note               "Reproduction fabric inspired by a sixteenth century design in the Cooper Union Museum collection. In dark purple with a pattern of flower-filled urns and pairs of peacocks."@en ;
+        dc:identifier                  "chndm_1915-5-8-a" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1915-5-8-a> .
+
+<http://data.silknow.org/image/3e6bc109-ee5e-30cb-8f3b-fa93b03cd0e1>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1915-5-8-a_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-18891A1DC3C82-000001> .
+
+<http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438> .
+
+<http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Reproduction fabric inspired by a sixteenth century design in the Cooper Union Museum collection. In dark purple with a pattern of flower-filled urns and pairs of peacocks."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438> .
+
+<http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438> .
+
+<http://data.silknow.org/production/5325acd6-3e82-310c-8bb7-e11506602136>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438> ;
+        ecrm:P126_employed      "silk"@en ;
+        ecrm:P32_used_general_technique
+                "compound satin weave"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/71fe330c-775d-39c2-9665-1ed84107fd1a> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6252001/> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/394cb080-f37e-32eb-8138-0badb597dc9a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1915-5-8-a" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438> , <http://data.silknow.org/image/3e6bc109-ee5e-30cb-8f3b-fa93b03cd0e1> , <http://data.silknow.org/production/5325acd6-3e82-310c-8bb7-e11506602136> , <http://data.silknow.org/event/5f177bf2-8b34-3dba-9aec-b7c08d1e6024> , <http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438/observation/1> , <http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438/category/1> , <http://data.silknow.org/event/53cbd23d-68be-3dde-b826-1cde98be4ec4> , <http://data.silknow.org/object/b26b214f-4847-399c-8285-3b856f5fb438/domain/1> ;
+        dc:identifier       "chndm_1915-5-8-a.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .

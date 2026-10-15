@@ -1,0 +1,106 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/3b35ee45-b6d9-3fcc-b6af-2f7953f62c1f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916> ;
+        ecrm:P126_employed      "Silk compound weave"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404505> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2523118/> .
+
+<http://data.silknow.org/actor/b2013b0d-bbd1-35f9-870c-f20d87534300>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Raphael Stora, New York; sold by Stora to Adolph Loewi, Los Angeles; 1948, sold by Loewi to the MFAfor $35. (Accession Date: May 13) / John H. and Ernestine A. Payne Fund" ;
+        ecrm:P1_is_identified_by  "Raphael Stora, New York; sold by Stora to Adolph Loewi, Los Angeles; 1948, sold by Loewi to the MFAfor $35. (Accession Date: May 13) / John H. and Ernestine A. Payne Fund" .
+
+<http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Gold colored silk textile patterned with eight-pointed star with fleur de lis attached to each point"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0996bea6-2635-3afe-bc75-5b8d967da579> ;
+        ecrm:P3_has_note               "Gold colored silk textile patterned with eight-pointed star with fleur de lis attached to each point"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916/dimension/2> , <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916/dimension/1> ;
+        dc:identifier                  "48.381" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/49612> .
+
+<http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Gold colored silk textile patterned with eight-pointed star with fleur de lis attached to each point"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916> .
+
+<http://data.silknow.org/event/bd59153f-5e0b-3ca9-b563-5e0cc892729c>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916> .
+
+<http://data.silknow.org/event/35794afa-3c08-398c-a8f6-e4d26cd5be5f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b2013b0d-bbd1-35f9-870c-f20d87534300> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "Raphael Stora, New York; sold by Stora to Adolph Loewi, Los Angeles; 1948, sold by Loewi to the MFAfor $35.  (Accession Date: May 13, 1948) / John H. and Ernestine A. Payne Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916> .
+
+<http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "12.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "12.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916> .
+
+<http://data.silknow.org/object/92beff8c-fa71-36f6-b676-1c6ab0f19ed2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 48.381" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/0996bea6-2635-3afe-bc75-5b8d967da579> , <http://data.silknow.org/event/35794afa-3c08-398c-a8f6-e4d26cd5be5f> , <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916/domain/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916/observation/1> , <http://data.silknow.org/production/3b35ee45-b6d9-3fcc-b6af-2f7953f62c1f> , <http://data.silknow.org/event/bd59153f-5e0b-3ca9-b563-5e0cc892729c> , <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916> , <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916/category/1> ;
+        dc:identifier       "49612.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "14" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "14"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/2523118/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/92beff8c-fa71-36f6-b676-1c6ab0f19ed2> .
+
+<http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b5d33b2f-0873-384e-8f70-3a0d8845f916> .
+
+<http://data.silknow.org/image/0996bea6-2635-3afe-bc75-5b8d967da579>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "711992" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/49612_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/711992/resize%3Aformat%3Dfull> .

@@ -1,0 +1,85 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "3.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "3.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/d4809684-4058-3b5a-8298-c8552f5f8ca3>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd> ;
+        ecrm:P126_employed      "Linen Embroidery"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1700> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "41.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "41.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/f2b952f9-b8e2-3f71-9085-a1745e1b7f3e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "844218" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/72352_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/844218/resize%3Aformat%3Dfull> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/656f84b8-98c7-3dba-8c98-056dafa840b5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd> .
+
+<http://data.silknow.org/object/2dc43232-21a8-3e05-addc-2296a5c9b73d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 90.63" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd/domain/1> , <http://data.silknow.org/production/d4809684-4058-3b5a-8298-c8552f5f8ca3> , <http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd> , <http://data.silknow.org/event/656f84b8-98c7-3dba-8c98-056dafa840b5> , <http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd/category/1> , <http://data.silknow.org/image/f2b952f9-b8e2-3f71-9085-a1745e1b7f3e> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "72352.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Punto di Milano" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f2b952f9-b8e2-3f71-9085-a1745e1b7f3e> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd/dimension/2> , <http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd/dimension/1> ;
+        dc:identifier                  "90.63" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/72352> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2dc43232-21a8-3e05-addc-2296a5c9b73d> .
+
+<http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ef105f34-a266-3396-8975-0a1b2990c4fd> .

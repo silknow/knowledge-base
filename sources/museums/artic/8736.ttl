@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/place/5306eb4e-524a-31a1-aaea-574d57ca94c8>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "England, Spitalfields" ;
+        ecrm:P87_is_identified_by  "England, Spitalfields" .
+
+<http://data.silknow.org/event/839bbc90-8ddb-3121-84e7-e507ecf9cf34>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/01ffe90d-62ec-3f96-a630-cb3eb9baa2b7> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. A. Watson Armour, III" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "116" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "116"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk and gilt-metal-strip-wrapped silk, plain weave with supplementary brocading wefts tied by supplementary binding warps in a weft-float faced 3:1 twill interlacing"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/87212fd0-eb62-3908-8cf3-fd331af978cb> ;
+        ecrm:P3_has_note               "Silk and gilt-metal-strip-wrapped silk, plain weave with supplementary brocading wefts tied by supplementary binding warps in a weft-float faced 3:1 twill interlacing"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848/dimension/1> , <http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848/dimension/2> ;
+        dc:identifier                  "1958.560c" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/8736/fragment> .
+
+<http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "55" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "55"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/01ffe90d-62ec-3f96-a630-cb3eb9baa2b7>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. A. Watson Armour, III" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. A. Watson Armour, III" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk and gilt-metal-strip-wrapped silk, plain weave with supplementary brocading wefts tied by supplementary binding warps in a weft-float faced 3:1 twill interlacing"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848> .
+
+<http://data.silknow.org/object/2a25108b-6294-3afe-a582-b68ae39d07af>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1958.560c" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/87212fd0-eb62-3908-8cf3-fd331af978cb> , <http://data.silknow.org/production/07f3199d-66e9-39eb-b45f-7189d4c81d01> , <http://data.silknow.org/event/839bbc90-8ddb-3121-84e7-e507ecf9cf34> , <http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848/observation/1> , <http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848> , <http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848/category/1> ;
+        dc:identifier       "8736.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848> .
+
+<http://data.silknow.org/image/87212fd0-eb62-3908-8cf3-fd331af978cb>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/8736_0.jpg> , <https://www.artic.edu/iiif/2/478f7237-fc67-95c1-d9bb-577694fd93a5/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2a25108b-6294-3afe-a582-b68ae39d07af> .
+
+<http://data.silknow.org/production/07f3199d-66e9-39eb-b45f-7189d4c81d01>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/947d360f-0d39-39b8-bc2f-05f81088e848> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/b4d916f4-656d-3e00-af5e-c2b329796b14> , <http://data.silknow.org/timespan/1752> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/5306eb4e-524a-31a1-aaea-574d57ca94c8> , <https://sws.geonames.org/6269131/> .

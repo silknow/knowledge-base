@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/9d2a4073-b018-33f9-9c37-317e5b311993>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df> ;
+        ecrm:P126_employed      "Wool and silk blend, jacquard weave"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/644> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/215> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/2009> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/9d2a4073-b018-33f9-9c37-317e5b311993/activity/1> .
+
+<http://data.silknow.org/event/6c0bdd5e-f7aa-3834-932e-1b80d83d210a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/93e5d9fa-738a-367c-bed8-4f23cd9e600e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Helen M. Danforth Acquisition Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df> .
+
+<http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Coat" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df> .
+
+<http://data.silknow.org/actor/0d23375c-468e-37d3-add5-34cc63947c47>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gary Graham" ;
+        ecrm:P1_is_identified_by  "Gary Graham" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000084121248> , <https://viaf.org/viaf/115111600> .
+
+<http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df> .
+
+<http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Fashion" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df> .
+
+<http://data.silknow.org/production/9d2a4073-b018-33f9-9c37-317e5b311993/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/0d23375c-468e-37d3-add5-34cc63947c47> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/actor/93e5d9fa-738a-367c-bed8-4f23cd9e600e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Helen M. Danforth Acquisition Fund" ;
+        ecrm:P1_is_identified_by  "Helen M. Danforth Acquisition Fund" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0801ab8d-b709-39ef-9edc-66e8278e5f98> .
+
+<http://data.silknow.org/event/42942211-dc40-3f24-b46c-f1fc4b964fa9>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df> .
+
+<http://data.silknow.org/object/0801ab8d-b709-39ef-9edc-66e8278e5f98>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2009.23.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/9d2a4073-b018-33f9-9c37-317e5b311993> , <http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df> , <http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df/domain/2> , <http://data.silknow.org/event/6c0bdd5e-f7aa-3834-932e-1b80d83d210a> , <http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df/category/1> , <http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df/domain/1> , <http://data.silknow.org/event/42942211-dc40-3f24-b46c-f1fc4b964fa9> ;
+        dc:identifier       "1119486.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/e3e3dd86-0355-308f-9c24-3187c49d35df>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "2009.23.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/coat-2009231> .

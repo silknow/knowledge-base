@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/a411a6a6-54db-37dc-b004-30ed0d3ec285>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60> .
+
+<http://data.silknow.org/object/9ebe9aea-f888-3875-a0eb-65a558f86421>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1902-1-941" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/1ecb200e-f9c3-3acb-86ea-87398ba06649> , <http://data.silknow.org/event/db9686d9-3d46-3ad2-9b0a-9c9ff82570f5> , <http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60/category/1> , <http://data.silknow.org/event/a411a6a6-54db-37dc-b004-30ed0d3ec285> , <http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60> , <http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60/domain/1> , <http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60/observation/1> , <http://data.silknow.org/production/71809828-c04b-3f51-9f06-d61fe109c33f> ;
+        dc:identifier       "chndm_1902-1-941.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/actor/8cf7c822-935f-32c1-a6fd-c8e2dcb3bb51>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of John Pierpont Morgan" ;
+        ecrm:P1_is_identified_by  "Gift of John Pierpont Morgan" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/J._P._Morgan> , <https://viaf.org/viaf/57410770> , <https://isni.org/isni/000000008385399X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/J._P._Morgan> .
+
+<http://data.silknow.org/production/71809828-c04b-3f51-9f06-d61fe109c33f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60> ;
+        ecrm:P126_employed      "silk"@en ;
+        ecrm:P32_used_general_technique
+                "plain weave with supplementary wefts"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9ebe9aea-f888-3875-a0eb-65a558f86421> .
+
+<http://data.silknow.org/image/1ecb200e-f9c3-3acb-86ea-87398ba06649>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1902-1-941_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-FC65ED3EBAFC2-000001> .
+
+<http://data.silknow.org/event/db9686d9-3d46-3ad2-9b0a-9c9ff82570f5>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/8cf7c822-935f-32c1-a6fd-c8e2dcb3bb51> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of John Pierpont Morgan" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60> .
+
+<http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Serpentine pattern of polychrome branches on off-white. Many tears in the fabric."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Serpentine pattern of polychrome branches on off-white. Many tears in the fabric."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1ecb200e-f9c3-3acb-86ea-87398ba06649> ;
+        ecrm:P3_has_note               "Serpentine pattern of polychrome branches on off-white. Many tears in the fabric."@en ;
+        dc:identifier                  "chndm_1902-1-941" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1902-1-941> .
+
+<http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/179f3800-7a73-3a04-ae82-2cd1b3e04f60> .

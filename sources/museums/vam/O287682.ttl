@@ -1,0 +1,62 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/6db0a7d6-709c-30b3-8a51-978ba9b97a89>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0c46f9ef-08c0-3719-8789-5f0ca4732234> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/0c46f9ef-08c0-3719-8789-5f0ca4732234>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8cf77faf-c6d0-38db-8e13-c821b5853f91> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/750> , <http://data.silknow.org/image/41bc68a1-b217-3148-bb1b-7c905fa567b4> ;
+        dc:identifier                  "T.407-1985" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O287682> .
+
+<http://data.silknow.org/image/41bc68a1-b217-3148-bb1b-7c905fa567b4>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "spots"@en ;
+        ecrm:P3_has_note  "spots"@en .
+
+<http://data.silknow.org/object/7e11d896-e6ac-3291-b34d-ef2edf0c783b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O287682" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/a63029b3-867f-34b3-b1ec-70021abb7123> , <http://data.silknow.org/image/8cf77faf-c6d0-38db-8e13-c821b5853f91> , <http://data.silknow.org/event/6db0a7d6-709c-30b3-8a51-978ba9b97a89> , <http://data.silknow.org/object/0c46f9ef-08c0-3719-8789-5f0ca4732234/domain/1> , <http://data.silknow.org/object/0c46f9ef-08c0-3719-8789-5f0ca4732234> ;
+        dc:identifier       "O287682.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7e11d896-e6ac-3291-b34d-ef2edf0c783b> .
+
+<http://data.silknow.org/image/8cf77faf-c6d0-38db-8e13-c821b5853f91>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019LK4083" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O287682_0.jpg> , <https://framemark.vam.ac.uk/collections/2019LK4083/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/object/0c46f9ef-08c0-3719-8789-5f0ca4732234/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0c46f9ef-08c0-3719-8789-5f0ca4732234> .
+
+<http://data.silknow.org/production/a63029b3-867f-34b3-b1ec-70021abb7123>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0c46f9ef-08c0-3719-8789-5f0ca4732234> ;
+        ecrm:P126_employed      "silk (textile)"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> .

@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a33dffd4-062f-37fa-9dd3-159f6076b97a> .
+
+<http://data.silknow.org/object/b8e235b1-95ea-33b1-8de8-06408749891e/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b8e235b1-95ea-33b1-8de8-06408749891e> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/fcd8778d-7d2e-372e-a2b1-14075575bc44>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033366" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27687_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033366.jpg> .
+
+<http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Biosca, Josep" ;
+        ecrm:P1_is_identified_by  "Biosca, Josep" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Josep_Huguet_i_Biosca> , <https://viaf.org/viaf/95599143> , <https://isni.org/isni/000000007829170X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Josep_Huguet_i_Biosca> .
+
+<http://data.silknow.org/event/35305376-dc32-3644-a164-316285f16c75>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b8e235b1-95ea-33b1-8de8-06408749891e> .
+
+<http://data.silknow.org/object/b8e235b1-95ea-33b1-8de8-06408749891e>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/fcd8778d-7d2e-372e-a2b1-14075575bc44> ;
+        dc:identifier                  "603" .
+
+<http://data.silknow.org/production/44bc7c78-e025-35e5-94d8-47e4855d484a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b8e235b1-95ea-33b1-8de8-06408749891e> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                "patterned fabric"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2998324/> , <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .
+
+<http://data.silknow.org/object/a33dffd4-062f-37fa-9dd3-159f6076b97a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27687" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/35305376-dc32-3644-a164-316285f16c75> , <http://data.silknow.org/production/44bc7c78-e025-35e5-94d8-47e4855d484a> , <http://data.silknow.org/object/b8e235b1-95ea-33b1-8de8-06408749891e> , <http://data.silknow.org/image/fcd8778d-7d2e-372e-a2b1-14075575bc44> , <http://data.silknow.org/event/038ac1ab-45c4-3abf-88dd-6f9e67b36c34> , <http://data.silknow.org/object/b8e235b1-95ea-33b1-8de8-06408749891e/domain/1> , <http://data.silknow.org/object/b8e235b1-95ea-33b1-8de8-06408749891e/category/1> ;
+        dc:identifier       "27687.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<https://sws.geonames.org/2998324/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/b8e235b1-95ea-33b1-8de8-06408749891e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b8e235b1-95ea-33b1-8de8-06408749891e> .
+
+<http://data.silknow.org/event/038ac1ab-45c4-3abf-88dd-6f9e67b36c34>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "Biosca, Josep" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b8e235b1-95ea-33b1-8de8-06408749891e> ;
+        ecrm:P3_has_note               "donacions" ;
+        ecrm:P4_has_time-span          <http://data.silknow.org/timespan/1946_01_01> .

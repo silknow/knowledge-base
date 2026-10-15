@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/d36810bb-665f-3721-8f8d-d98101379e84>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/6c5c6fe2-56a3-3f79-a79e-a8606bcaca8a> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Jacob Ziskind, the Crescent Corporation" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/23312f31-da8f-3b49-a08a-575c14e2b77d> .
+
+<http://data.silknow.org/production/53cfb514-854f-3a09-8c43-5c388602fbba>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/23312f31-da8f-3b49-a08a-575c14e2b77d> ;
+        ecrm:P126_employed      "Wool plain weave ground with wool voided cut velvet and supplementary silk warp"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1870_1940> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/53cfb514-854f-3a09-8c43-5c388602fbba/activity/1> .
+
+<http://data.silknow.org/actor/6c5c6fe2-56a3-3f79-a79e-a8606bcaca8a>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Jacob Ziskind, the Crescent Corporation" ;
+        ecrm:P1_is_identified_by  "Gift of Jacob Ziskind, the Crescent Corporation" .
+
+<http://data.silknow.org/event/5c7043df-454d-3293-98f8-93e3115aab10>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/23312f31-da8f-3b49-a08a-575c14e2b77d> .
+
+<http://data.silknow.org/object/23312f31-da8f-3b49-a08a-575c14e2b77d>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2b3c0b9a-820d-3bb5-a485-9ad0648b0f17> , <http://data.silknow.org/image/c68ea2b4-4b08-31b9-98ba-b0fdbce693bc> ;
+        dc:identifier                  "49.369.105" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-swatch-49369105> .
+
+<http://data.silknow.org/production/53cfb514-854f-3a09-8c43-5c388602fbba/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/ecc984d7-878b-3fe7-83e9-05008b99b80c> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/23312f31-da8f-3b49-a08a-575c14e2b77d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/23312f31-da8f-3b49-a08a-575c14e2b77d> .
+
+<http://data.silknow.org/actor/ecc984d7-878b-3fe7-83e9-05008b99b80c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "J. Claude Freres & Cie" ;
+        ecrm:P1_is_identified_by  "J. Claude Freres & Cie" .
+
+<http://data.silknow.org/image/2b3c0b9a-820d-3bb5-a485-9ad0648b0f17>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1134761_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/280499.jpg> .
+
+<http://data.silknow.org/object/23312f31-da8f-3b49-a08a-575c14e2b77d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile swatch" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/23312f31-da8f-3b49-a08a-575c14e2b77d> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/cbeb820b-544b-36dc-b631-95da490b9563>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 49.369.105" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/5c7043df-454d-3293-98f8-93e3115aab10> , <http://data.silknow.org/event/d36810bb-665f-3721-8f8d-d98101379e84> , <http://data.silknow.org/object/23312f31-da8f-3b49-a08a-575c14e2b77d> , <http://data.silknow.org/image/c68ea2b4-4b08-31b9-98ba-b0fdbce693bc> , <http://data.silknow.org/production/53cfb514-854f-3a09-8c43-5c388602fbba> , <http://data.silknow.org/object/23312f31-da8f-3b49-a08a-575c14e2b77d/category/1> , <http://data.silknow.org/object/23312f31-da8f-3b49-a08a-575c14e2b77d/domain/1> , <http://data.silknow.org/image/2b3c0b9a-820d-3bb5-a485-9ad0648b0f17> ;
+        dc:identifier       "1134761.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/cbeb820b-544b-36dc-b631-95da490b9563> .
+
+<http://data.silknow.org/image/c68ea2b4-4b08-31b9-98ba-b0fdbce693bc>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1134761_1.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/283898.jpg> .

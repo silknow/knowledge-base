@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Tela a pelo strisciante"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321> .
+
+<http://data.silknow.org/event/8f2b9aef-049a-3f13-920e-daf1aaa69dff>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321> .
+
+<http://data.silknow.org/image/83c92f0b-95a1-3a88-b477-6ebac199b567>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/277616_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5nb1xp42SclWU83hAjviWKX6VOA7%2f%2bXHnszuVRlk%2fp0o5R87x9EeYhehbHCRw2p6lAc6U%2b82qemeOeUBRXc8A7iCeAsoyQ2%2be%2brm2k1cAWRtWtsuKaG5kVg%3d%3d> .
+
+<http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "24.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "24.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Tela a pelo strisciante"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/83c92f0b-95a1-3a88-b477-6ebac199b567> ;
+        ecrm:P3_has_note               "Tela a pelo strisciante"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321/dimension/1> , <http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 0733" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/277616/?WEB=MuseiVE> .
+
+<http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321> .
+
+<http://data.silknow.org/object/fea12eaa-2e0c-3591-94bf-c4f079f43929>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 277616" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/83c92f0b-95a1-3a88-b477-6ebac199b567> , <http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321> , <http://data.silknow.org/production/4fe92dcc-517d-37c1-9bb6-227be0ee5bee> , <http://data.silknow.org/event/8f2b9aef-049a-3f13-920e-daf1aaa69dff> , <http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321/category/1> , <http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321/domain/1> , <http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321/observation/1> ;
+        dc:identifier       "277616.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fea12eaa-2e0c-3591-94bf-c4f079f43929> .
+
+<http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "18.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "18.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/production/4fe92dcc-517d-37c1-9bb6-227be0ee5bee>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/03b10fea-b4ec-38dc-86e8-c19a402cb321> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1600_1620> .

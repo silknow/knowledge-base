@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/de3361a0-43d4-3056-b58c-f507555541bf> .
+
+<http://data.silknow.org/event/346dc998-b53e-31d7-aaca-a11691f44c64>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/09a0016d-abfe-3216-bb5b-58d9cfccdee4> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/image/6b960848-dc7f-3c55-9326-77717315c383>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000032946" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27281_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000032946.jpg> .
+
+<http://data.silknow.org/object/09a0016d-abfe-3216-bb5b-58d9cfccdee4/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/09a0016d-abfe-3216-bb5b-58d9cfccdee4> .
+
+<http://data.silknow.org/event/0c0b6818-68e4-35ed-85e5-199ad14f917e>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/09a0016d-abfe-3216-bb5b-58d9cfccdee4> .
+
+<http://data.silknow.org/object/09a0016d-abfe-3216-bb5b-58d9cfccdee4>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6b960848-dc7f-3c55-9326-77717315c383> ;
+        dc:identifier                  "16034" .
+
+<http://data.silknow.org/object/09a0016d-abfe-3216-bb5b-58d9cfccdee4/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/09a0016d-abfe-3216-bb5b-58d9cfccdee4> .
+
+<http://data.silknow.org/object/de3361a0-43d4-3056-b58c-f507555541bf>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27281" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/0c0b6818-68e4-35ed-85e5-199ad14f917e> , <http://data.silknow.org/object/09a0016d-abfe-3216-bb5b-58d9cfccdee4/category/1> , <http://data.silknow.org/event/346dc998-b53e-31d7-aaca-a11691f44c64> , <http://data.silknow.org/image/6b960848-dc7f-3c55-9326-77717315c383> , <http://data.silknow.org/production/38beb2e8-1025-317a-bd7c-d240bfceae60> , <http://data.silknow.org/object/09a0016d-abfe-3216-bb5b-58d9cfccdee4> , <http://data.silknow.org/object/09a0016d-abfe-3216-bb5b-58d9cfccdee4/domain/1> ;
+        dc:identifier       "27281.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/production/38beb2e8-1025-317a-bd7c-d240bfceae60>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/09a0016d-abfe-3216-bb5b-58d9cfccdee4> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca , "vellut"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .

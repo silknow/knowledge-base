@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/dfe5d673-9756-397e-97d2-9e3abe95ecc2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dfe5d673-9756-397e-97d2-9e3abe95ecc2> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/56300418-04d0-37ad-9951-5f626c46f199>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "PR 2010.10" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/dfe5d673-9756-397e-97d2-9e3abe95ecc2> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/8f24658e-ed28-3320-bdd4-83510b2564c2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record PR 2010.10.39" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/56300418-04d0-37ad-9951-5f626c46f199> , <http://data.silknow.org/production/ea5dcdde-afbd-3ad0-ae52-d26c89f37739> , <http://data.silknow.org/object/dfe5d673-9756-397e-97d2-9e3abe95ecc2/category/1> , <http://data.silknow.org/image/ffcc8499-df06-3d41-a586-ad3ce5db847f> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/dfe5d673-9756-397e-97d2-9e3abe95ecc2> ;
+        dc:identifier       "910005.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/image/ffcc8499-df06-3d41-a586-ad3ce5db847f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910005_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/97b090cf-0f47-4194-9508-a9a82beb3e56.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8f24658e-ed28-3320-bdd4-83510b2564c2> .
+
+<http://data.silknow.org/production/ea5dcdde-afbd-3ad0-ae52-d26c89f37739>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1750-1770, Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/dfe5d673-9756-397e-97d2-9e3abe95ecc2> ;
+        ecrm:P126_employed      "Fond cannelé à décor broché, fils métalliques"@fr ;
+        ecrm:P3_has_note        "France, 1750-1770, Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1770> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/dfe5d673-9756-397e-97d2-9e3abe95ecc2> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/dfe5d673-9756-397e-97d2-9e3abe95ecc2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, 1750-1770, Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ffcc8499-df06-3d41-a586-ad3ce5db847f> ;
+        dc:identifier                  "PR 2010.10.39" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910005> .

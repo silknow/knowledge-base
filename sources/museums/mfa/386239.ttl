@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/6b2ba2a9-c922-3f9b-8681-08a86d5940db>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff> .
+
+<http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragments of a coverlet (one of seven)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff> .
+
+<http://data.silknow.org/production/88d2b0f3-85c0-36fe-ad76-e793c38f9dd6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff> ;
+        ecrm:P126_employed      "Linen, embroidery"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1750> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/c01c7312-2216-3d2e-88e0-9dc2161be2e7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 33.646g" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff/domain/1> , <http://data.silknow.org/production/88d2b0f3-85c0-36fe-ad76-e793c38f9dd6> , <http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff> , <http://data.silknow.org/event/6b2ba2a9-c922-3f9b-8681-08a86d5940db> , <http://data.silknow.org/image/0ff567c9-2581-3c03-8d9d-6d2341c75c49> , <http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff/observation/1> , <http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "386239.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/image/0ff567c9-2581-3c03-8d9d-6d2341c75c49>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "816915" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/386239_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/816915/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Ground: natural-colored linen quilted with backstitch in a diaper pattern. Design: detached motifs of flowers and birds, etc., in pseudo-Chinese style. Narrow running border of flowering vine. Worked with chainstitch in silks (greens, red, blue, blue green, brown, and yellow).  According to the donor these are parts of a bedspread made in 1819 by ladies of the English Court and presented by them to Lady Averil Hazen (or Hayzen) upon the occasion of her marriage. From their style it seems more likely that the date should be 1719."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "12" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "12"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c01c7312-2216-3d2e-88e0-9dc2161be2e7> .
+
+<http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Ground: natural-colored linen quilted with backstitch in a diaper pattern. Design: detached motifs of flowers and birds, etc., in pseudo-Chinese style. Narrow running border of flowering vine. Worked with chainstitch in silks (greens, red, blue, blue green, brown, and yellow).  According to the donor these are parts of a bedspread made in 1819 by ladies of the English Court and presented by them to Lady Averil Hazen (or Hayzen) upon the occasion of her marriage. From their style it seems more likely that the date should be 1719."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0ff567c9-2581-3c03-8d9d-6d2341c75c49> ;
+        ecrm:P3_has_note               "Ground: natural-colored linen quilted with backstitch in a diaper pattern. Design: detached motifs of flowers and birds, etc., in pseudo-Chinese style. Narrow running border of flowering vine. Worked with chainstitch in silks (greens, red, blue, blue green, brown, and yellow).  According to the donor these are parts of a bedspread made in 1819 by ladies of the English Court and presented by them to Lady Averil Hazen (or Hayzen) upon the occasion of her marriage. From their style it seems more likely that the date should be 1719."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff/dimension/2> , <http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff/dimension/1> ;
+        dc:identifier                  "33.646g" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/386239> .
+
+<http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff> .
+
+<http://data.silknow.org/object/f908e2f0-27f5-38b0-9f88-9ff25f5d0cff/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "17" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "17"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

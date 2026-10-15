@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/3d21b20e-9655-3909-9091-782456bb560d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "panneau brodé, Chine, 19e siècle"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e9007405-137e-3d5f-8546-da7e9e04b141> ;
+        dc:identifier                  "6102" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/917336> .
+
+<http://data.silknow.org/event/76c37941-6b7c-375b-9477-1f83429caf83>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "achat, 1890" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3d21b20e-9655-3909-9091-782456bb560d> .
+
+<http://data.silknow.org/object/3d21b20e-9655-3909-9091-782456bb560d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "panneau brodé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3d21b20e-9655-3909-9091-782456bb560d> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/39fd0c8b-e271-368f-bc12-3340124e3d37>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Chine, 19e siècle" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3d21b20e-9655-3909-9091-782456bb560d> ;
+        ecrm:P3_has_note        "Chine, 19e siècle" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<http://data.silknow.org/image/e9007405-137e-3d5f-8546-da7e9e04b141>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/917336_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/c61e7d8e-2ce7-43a4-8020-56cb722d12a0.jpg> .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b614b24f-9629-37c0-ab4e-5627b64bd844> .
+
+<http://data.silknow.org/object/b614b24f-9629-37c0-ab4e-5627b64bd844>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 6102" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/39fd0c8b-e271-368f-bc12-3340124e3d37> , <http://data.silknow.org/object/3d21b20e-9655-3909-9091-782456bb560d> , <http://data.silknow.org/image/e9007405-137e-3d5f-8546-da7e9e04b141> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/3d21b20e-9655-3909-9091-782456bb560d/category/1> , <http://data.silknow.org/event/76c37941-6b7c-375b-9477-1f83429caf83> ;
+        dc:identifier       "917336.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/3d21b20e-9655-3909-9091-782456bb560d> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

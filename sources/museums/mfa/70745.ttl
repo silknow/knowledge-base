@@ -1,0 +1,100 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c> .
+
+<http://data.silknow.org/image/1fba48c8-c6d0-3722-96e8-5be7f6f8fc68>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "761154" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/70745_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/761154/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/d5314ecb-b262-35c6-ada0-52ea134d3cea>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "761155" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/70745_1.jpg> , <https://collections.mfa.org/internal/media/dispatcher/761155/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/c2123ad6-aad9-386b-9cec-0e9f52c8f7f8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c> ;
+        ecrm:P126_employed      "Silk samite"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/0501_0700> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/b9bb4d04-c8b7-3d0a-b38b-80b177723ffd> .
+
+<http://data.silknow.org/event/13cf5d68-d8d6-3ef8-8793-d4990763ebc5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c> .
+
+<http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Seven fragments of silk samite found in Egypt. What can be seen of the design consists of goats in round or oval medallions and palmette-like forms. The colors are red, blue, white and pale yellow. The design is apparently arranged in stripes."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c> .
+
+<http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Seven fragments of silk samite found in Egypt. What can be seen of the design consists of goats in round or oval medallions and palmette-like forms. The colors are red, blue, white and pale yellow. The design is apparently arranged in stripes."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d5314ecb-b262-35c6-ada0-52ea134d3cea> , <http://data.silknow.org/image/1fba48c8-c6d0-3722-96e8-5be7f6f8fc68> ;
+        ecrm:P3_has_note               "Seven fragments of silk samite found in Egypt. What can be seen of the design consists of goats in round or oval medallions and palmette-like forms. The colors are red, blue, white and pale yellow. The design is apparently arranged in stripes."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c/dimension/2> , <http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c/dimension/1> ;
+        dc:identifier                  "96.347" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/70745> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/place/b9bb4d04-c8b7-3d0a-b38b-80b177723ffd>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Mediterranean or Sassanian" ;
+        ecrm:P87_is_identified_by  "Mediterranean or Sassanian" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/73e93d2c-926d-33b1-a4c2-18a220b8580d> .
+
+<http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile fragments" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c> .
+
+<http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "10.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "10.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/73e93d2c-926d-33b1-a4c2-18a220b8580d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 96.347" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/13cf5d68-d8d6-3ef8-8793-d4990763ebc5> , <http://data.silknow.org/image/d5314ecb-b262-35c6-ada0-52ea134d3cea> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/production/c2123ad6-aad9-386b-9cec-0e9f52c8f7f8> , <http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c/category/1> , <http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c/domain/1> , <http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c/observation/1> , <http://data.silknow.org/image/1fba48c8-c6d0-3722-96e8-5be7f6f8fc68> , <http://data.silknow.org/object/34404df0-ad13-3d89-a91a-289d3b4b856c> ;
+        dc:identifier       "70745.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

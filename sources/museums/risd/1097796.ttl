@@ -1,0 +1,79 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/8ff1b4f5-d944-31f0-b768-e1fb9d078b4a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6a5d3e2c-0275-32f2-853a-f6fb583f5ca2> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/638> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/85ea43f5-2948-30c0-8125-76b71b00cf53> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/8ff1b4f5-d944-31f0-b768-e1fb9d078b4a/activity/1> .
+
+<http://data.silknow.org/event/8069060b-fff7-324b-b560-0afe29b0a83f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/40f5f0d2-de55-3adb-875f-622667bf9392> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Scalmandré Archives" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6a5d3e2c-0275-32f2-853a-f6fb583f5ca2> .
+
+<http://data.silknow.org/object/303b20e4-fdb5-3366-8821-573f256beef1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2006.24.3" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/8ff1b4f5-d944-31f0-b768-e1fb9d078b4a> , <http://data.silknow.org/event/12b51ac1-ded0-353b-ac11-b11db7f57624> , <http://data.silknow.org/object/6a5d3e2c-0275-32f2-853a-f6fb583f5ca2> , <http://data.silknow.org/event/8069060b-fff7-324b-b560-0afe29b0a83f> , <http://data.silknow.org/object/6a5d3e2c-0275-32f2-853a-f6fb583f5ca2/domain/1> , <http://data.silknow.org/object/6a5d3e2c-0275-32f2-853a-f6fb583f5ca2/category/1> ;
+        dc:identifier       "1097796.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/6a5d3e2c-0275-32f2-853a-f6fb583f5ca2>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "2006.24.3" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/hillwood-2006243> .
+
+<http://data.silknow.org/object/6a5d3e2c-0275-32f2-853a-f6fb583f5ca2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Hillwood" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6a5d3e2c-0275-32f2-853a-f6fb583f5ca2> .
+
+<http://data.silknow.org/production/8ff1b4f5-d944-31f0-b768-e1fb9d078b4a/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/5d8f88be-e460-3017-b6ce-a86fbb500efa> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/actor/5d8f88be-e460-3017-b6ce-a86fbb500efa>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Scalamandre Studio" ;
+        ecrm:P1_is_identified_by  "Scalamandre Studio" .
+
+<http://data.silknow.org/actor/40f5f0d2-de55-3adb-875f-622667bf9392>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Scalmandré Archives" ;
+        ecrm:P1_is_identified_by  "Gift of Scalmandré Archives" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/303b20e4-fdb5-3366-8821-573f256beef1> .
+
+<http://data.silknow.org/object/6a5d3e2c-0275-32f2-853a-f6fb583f5ca2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6a5d3e2c-0275-32f2-853a-f6fb583f5ca2> .
+
+<http://data.silknow.org/event/12b51ac1-ded0-353b-ac11-b11db7f57624>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6a5d3e2c-0275-32f2-853a-f6fb583f5ca2> .

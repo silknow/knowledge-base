@@ -1,0 +1,106 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/a243f396-a3fa-3762-a20f-b73be6b66b45>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591> ;
+        ecrm:P126_employed      "Cotton curtain net machine lace"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1927> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2921044/> .
+
+<https://sws.geonames.org/2921044/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Round doily with abstract floral motifs, \"1927\" in center."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591> .
+
+<http://data.silknow.org/image/57d663be-1789-3577-a7b2-3e48f30b2e30>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1223557" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/532322_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/1223557/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/event/64de06ed-018c-39af-8994-6ca3d9db9ff2>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c8e6062c-ceef-301f-a7f0-9adef664e0e1> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "Collection of Gertrude Mayer; inherited by Jane B. Mayer, Newton Center, MA; gift of Mayer and her husband Robert to the MFA (Accession date: December 16, 2009) / Gift of Dr. Robert and Jane B. Mayer" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591> .
+
+<http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "22" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "22"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/31023120-c0bc-34ff-a0cb-e13356f2a7be> .
+
+<http://data.silknow.org/object/31023120-c0bc-34ff-a0cb-e13356f2a7be>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2009.5175" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591/domain/1> , <http://data.silknow.org/production/a243f396-a3fa-3762-a20f-b73be6b66b45> , <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591/category/1> , <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591> , <http://data.silknow.org/event/64de06ed-018c-39af-8994-6ca3d9db9ff2> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/event/bc4b5bfa-f0e8-345f-b173-d8caa653559a> , <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591/observation/1> , <http://data.silknow.org/image/57d663be-1789-3577-a7b2-3e48f30b2e30> ;
+        dc:identifier       "532322.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "21"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Round doily with abstract floral motifs, \"1927\" in center."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/57d663be-1789-3577-a7b2-3e48f30b2e30> ;
+        ecrm:P3_has_note               "Round doily with abstract floral motifs, \"1927\" in center."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591/dimension/2> , <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591/dimension/1> ;
+        dc:identifier                  "2009.5175" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/532322> .
+
+<http://data.silknow.org/event/bc4b5bfa-f0e8-345f-b173-d8caa653559a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591> .
+
+<http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Doily" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b8cd5592-bc3c-3c22-8895-20c9c50f2591> .
+
+<http://data.silknow.org/actor/c8e6062c-ceef-301f-a7f0-9adef664e0e1>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Collection of Gertrude Mayer; inherited by Jane B. Mayer, Newton Center, MA; gift of Mayer and her husband Robert to the MFA (Accession date: December 16) / Gift of Dr. Robert and Jane B. Mayer" ;
+        ecrm:P1_is_identified_by  "Collection of Gertrude Mayer; inherited by Jane B. Mayer, Newton Center, MA; gift of Mayer and her husband Robert to the MFA (Accession date: December 16) / Gift of Dr. Robert and Jane B. Mayer" .

@@ -1,0 +1,99 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/11ad61bc-9e64-36e9-867b-e0f41ee220c4>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968> .
+
+<http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "White silk ground on which is a design of flowers woven with yellow, green, white, blue and pink silk and various shades."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/cbe2aefb-9c5e-356d-8fb9-d382bb0f5ede> , <http://data.silknow.org/image/79948461-4619-3f07-bc82-cf5e8732c79e> ;
+        ecrm:P3_has_note               "White silk ground on which is a design of flowers woven with yellow, green, white, blue and pink silk and various shades."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968/dimension/2> , <http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968/dimension/1> ;
+        dc:identifier                  "96.443a-b" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/70560> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Pieces of brocade" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968> .
+
+<http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "White silk ground on which is a design of flowers woven with yellow, green, white, blue and pink silk and various shades."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968> .
+
+<http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "46" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "46"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/79948461-4619-3f07-bc82-cf5e8732c79e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "843823" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/70560_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/843823/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6c2d366d-d63b-31db-b685-9cc263294b69> .
+
+<http://data.silknow.org/object/6c2d366d-d63b-31db-b685-9cc263294b69>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 96.443a-b" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/11ad61bc-9e64-36e9-867b-e0f41ee220c4> , <http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968/domain/1> , <http://data.silknow.org/image/79948461-4619-3f07-bc82-cf5e8732c79e> , <http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968> , <http://data.silknow.org/production/7dfd5c32-09b1-3a86-b54e-647e81ceebc7> , <http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968/category/1> , <http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968/observation/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/cbe2aefb-9c5e-356d-8fb9-d382bb0f5ede> ;
+        dc:identifier       "70560.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/image/cbe2aefb-9c5e-356d-8fb9-d382bb0f5ede>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "843824" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/70560_1.jpg> , <https://collections.mfa.org/internal/media/dispatcher/843824/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/7dfd5c32-09b1-3a86-b54e-647e81ceebc7>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/97> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f837c94b-b4a6-3d22-9810-54a5c7850968> .

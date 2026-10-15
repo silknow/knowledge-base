@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "29.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "29.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "redessiné et retisé dans le cadre de la restauration de la chambre de Louis XIV à Versailles, inaugurée en 1980."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402> .
+
+<http://data.silknow.org/image/f431f7e2-9e53-38f3-9373-fc0349bd7217>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/versailles/2016.00.017_0.jpg> , <http://collections.chateauversailles.fr/cc/imageproxy.aspx?server=10.0.10.13&port=14456&filename=objectimages%2F2016.00.017_003.cci> .
+
+<http://data.silknow.org/object/d7af4933-bfdb-303e-88cc-6ee073f37936>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2016.00.017" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402/domain/1> , <http://data.silknow.org/image/f431f7e2-9e53-38f3-9373-fc0349bd7217> , <http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402/observation/1> , <http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402> , <http://data.silknow.org/production/29db6a9c-1b3b-3e68-a174-37b86bb62ca4> , <http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402/type/1> ;
+        dc:identifier       "2016.00.017.json" ;
+        dc:publisher        "http://data.silknow.org/organization/versailles" .
+
+<http://data.silknow.org/production/29db6a9c-1b3b-3e68-a174-37b86bb62ca4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402> ;
+        ecrm:P126_employed      "lampas 2 lacs de lancé, broché, fond satin de 8\nsoie, filé or, frisé or, frisé argent, frisé lamé or"@fr ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/2370aec6-f279-37c3-ad71-a8bf99d7e3a0> .
+
+<http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "redessiné et retisé dans le cadre de la restauration de la chambre de Louis XIV à Versailles, inaugurée en 1980."@fr ;
+        rdfs:label                     "lé de tenture"@fr ;
+        ecrm:P102_has_title            "lé de tenture"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f431f7e2-9e53-38f3-9373-fc0349bd7217> ;
+        ecrm:P3_has_note               "redessiné et retisé dans le cadre de la restauration de la chambre de Louis XIV à Versailles, inaugurée en 1980."@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402/dimension/1> , <http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402/dimension/2> ;
+        dc:identifier                  "2016.00.017" .
+
+<http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "37" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "37"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/versailles>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d7af4933-bfdb-303e-88cc-6ee073f37936> .
+
+<http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402> .
+
+<http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/58a59f71-2047-3a21-ad87-d5eaac66d402> ;
+        ecrm:P42_assigned    "lé de tenture" .

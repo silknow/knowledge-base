@@ -1,0 +1,73 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b8dd7c6e-c0a4-3d05-8f22-816ac381db21> .
+
+<http://data.silknow.org/object/4e64e6ca-c856-3e4f-b5bb-02f49658c5f8>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/70802f2c-b9ec-36eb-8cec-c2f4ac0382fa> ;
+        dc:identifier                  "21158" .
+
+<http://data.silknow.org/production/e75c0e09-82c6-3d53-a240-7e3081c44d67>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4e64e6ca-c856-3e4f-b5bb-02f49658c5f8> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "domàs"@ca , "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> , <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/b8dd7c6e-c0a4-3d05-8f22-816ac381db21>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 4207" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4e64e6ca-c856-3e4f-b5bb-02f49658c5f8/category/1> , <http://data.silknow.org/image/70802f2c-b9ec-36eb-8cec-c2f4ac0382fa> , <http://data.silknow.org/event/f5a40d67-9c49-3f8d-9ce3-3821575864f1> , <http://data.silknow.org/object/4e64e6ca-c856-3e4f-b5bb-02f49658c5f8> , <http://data.silknow.org/production/e75c0e09-82c6-3d53-a240-7e3081c44d67> , <http://data.silknow.org/event/6952fef9-3e45-3b7d-9de3-4b8b4a6e314c> , <http://data.silknow.org/object/4e64e6ca-c856-3e4f-b5bb-02f49658c5f8/domain/1> ;
+        dc:identifier       "4207.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/4e64e6ca-c856-3e4f-b5bb-02f49658c5f8/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4e64e6ca-c856-3e4f-b5bb-02f49658c5f8> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/event/f5a40d67-9c49-3f8d-9ce3-3821575864f1>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/4e64e6ca-c856-3e4f-b5bb-02f49658c5f8> .
+
+<http://data.silknow.org/image/70802f2c-b9ec-36eb-8cec-c2f4ac0382fa>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000001734" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/4207_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000001734.jpg> .
+
+<http://data.silknow.org/event/6952fef9-3e45-3b7d-9de3-4b8b4a6e314c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/4e64e6ca-c856-3e4f-b5bb-02f49658c5f8> .
+
+<http://data.silknow.org/object/4e64e6ca-c856-3e4f-b5bb-02f49658c5f8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4e64e6ca-c856-3e4f-b5bb-02f49658c5f8> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

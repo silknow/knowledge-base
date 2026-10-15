@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "30" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "30"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c> .
+
+<http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c> .
+
+<http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Velluto"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c> .
+
+<http://data.silknow.org/image/8d2e12ac-3987-3e6e-8843-845ec068aeab>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/278473_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5buXVwcWVEj%2bin%2bP4Hd1QCMqB13k5hQgwIjADQBAoXFKWLQWfSr8gQtuAGEhtF9GLFEn3gChcLpVmHIUng5FhW8ZHhhFEd8j4sj9wpLE0ftIgpYnoJaPkUg%3d%3d> .
+
+<http://data.silknow.org/production/381c75e6-1cdf-3ecb-9d78-eb819d969054>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1899> .
+
+<http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "21.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/2efd3c11-f031-3e77-ae47-1eb6ce4deb0c>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1bc17b63-c087-3b43-a84b-5c41ac6061d5> .
+
+<http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Velluto"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8d2e12ac-3987-3e6e-8843-845ec068aeab> ;
+        ecrm:P3_has_note               "Velluto"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c/dimension/1> , <http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 1016" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/278473/?WEB=MuseiVE> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/1bc17b63-c087-3b43-a84b-5c41ac6061d5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 278473" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c/observation/1> , <http://data.silknow.org/event/2efd3c11-f031-3e77-ae47-1eb6ce4deb0c> , <http://data.silknow.org/production/381c75e6-1cdf-3ecb-9d78-eb819d969054> , <http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c/domain/1> , <http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c/category/1> , <http://data.silknow.org/image/8d2e12ac-3987-3e6e-8843-845ec068aeab> , <http://data.silknow.org/object/4a95e883-d7c7-3db7-b491-cd864d78365c> ;
+        dc:identifier       "278473.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .

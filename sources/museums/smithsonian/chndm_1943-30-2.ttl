@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f> .
+
+<http://data.silknow.org/production/27f6a83f-ea8e-3964-92e6-a54f82581067>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f> ;
+        ecrm:P126_employed      "gold foil on silk core"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "plain twill with supplementary weft"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .
+
+<http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Design of floral units brocaded in colored silk and gold and on a background design of undulating lines in gold. The ground fabric is in plain twill weave; it is tan and at top and bottom changes to brown and orange-red respectively. This change is produced by chine dyeing of the warps and change of color of wefts."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ce4835cb-610b-311f-9909-7ced4d6844bb> .
+
+<http://data.silknow.org/image/9bb8f0dc-757d-3aae-92b9-6573a4336bec>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1943-30-2_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-6EA6E37569202-000001> .
+
+<http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f> .
+
+<http://data.silknow.org/object/ce4835cb-610b-311f-9909-7ced4d6844bb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1943-30-2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/9bb8f0dc-757d-3aae-92b9-6573a4336bec> , <http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f/domain/1> , <http://data.silknow.org/event/52f2cf45-4bf1-39e3-b7e7-27d19c1d90be> , <http://data.silknow.org/production/27f6a83f-ea8e-3964-92e6-a54f82581067> , <http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f/observation/1> , <http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f> , <http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f/category/1> ;
+        dc:identifier       "chndm_1943-30-2.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/event/52f2cf45-4bf1-39e3-b7e7-27d19c1d90be>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f> .
+
+<http://data.silknow.org/object/8a498925-87f4-346c-a490-dc36bca5712f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Design of floral units brocaded in colored silk and gold and on a background design of undulating lines in gold. The ground fabric is in plain twill weave; it is tan and at top and bottom changes to brown and orange-red respectively. This change is produced by chine dyeing of the warps and change of color of wefts."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9bb8f0dc-757d-3aae-92b9-6573a4336bec> ;
+        ecrm:P3_has_note               "Design of floral units brocaded in colored silk and gold and on a background design of undulating lines in gold. The ground fabric is in plain twill weave; it is tan and at top and bottom changes to brown and orange-red respectively. This change is produced by chine dyeing of the warps and change of color of wefts."@en ;
+        dc:identifier                  "chndm_1943-30-2" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1943-30-2> .

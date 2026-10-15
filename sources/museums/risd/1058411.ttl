@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/29580fce-4bc7-3eee-922d-895e7dd174fb>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Bequest of Lyra Brown Nickerson" ;
+        ecrm:P1_is_identified_by  "Bequest of Lyra Brown Nickerson" .
+
+<http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5> .
+
+<http://data.silknow.org/event/83686125-ec11-319c-90bc-8aba3aeca7f2>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5> .
+
+<http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5>
+        a                       ecrm:E22_Man-Made_Object ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5/dimension/1> , <http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5/dimension/2> ;
+        dc:identifier           "16.483" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/pillow-top-16483> .
+
+<https://sws.geonames.org/298795/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f0e51050-2f32-30e9-be9b-40541b3bced8> .
+
+<http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "61" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "61"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/67fad203-7cd9-3aae-b43b-c02645f0264f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/29580fce-4bc7-3eee-922d-895e7dd174fb> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Bequest of Lyra Brown Nickerson" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5> .
+
+<http://data.silknow.org/object/f0e51050-2f32-30e9-be9b-40541b3bced8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 16.483" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5/domain/1> , <http://data.silknow.org/event/83686125-ec11-319c-90bc-8aba3aeca7f2> , <http://data.silknow.org/production/f4b4663b-1eaa-3bd1-90aa-233fba7f7a9d> , <http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5/category/1> , <http://data.silknow.org/event/67fad203-7cd9-3aae-b43b-c02645f0264f> , <http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5> ;
+        dc:identifier       "1058411.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Pillow top" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5> .
+
+<http://data.silknow.org/production/f4b4663b-1eaa-3bd1-90aa-233fba7f7a9d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5> ;
+        ecrm:P126_employed      "linen"@en , "silk; cotton; linen"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/298795/> .
+
+<http://data.silknow.org/object/52fd82d8-85c5-3209-91f2-96c1c9d9ffd5/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "57.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "57.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

@@ -1,0 +1,91 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Ceremonial Textile (Chagsi pangkheb)," ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16> .
+
+<http://data.silknow.org/production/39ba03b3-31ab-38c6-b41f-a0f7d88f6128>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16> ;
+        ecrm:P126_employed      "Cotton plain weave with silk supplementary weft patterning, twined weft fringe"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1901_1925> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1252634/> .
+
+<https://sws.geonames.org/1252634/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/bf45c0d8-5bc1-3967-a9fb-79dd9176c63d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16> .
+
+<http://data.silknow.org/object/7c2fe3cc-4c8f-3d1b-9835-a09b8feba4d6>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2017.45.19" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16/category/1> , <http://data.silknow.org/production/39ba03b3-31ab-38c6-b41f-a0f7d88f6128> , <http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16> , <http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16/domain/1> , <http://data.silknow.org/image/7d998b93-0593-3f2e-8374-b0ecb59c2dd6> , <http://data.silknow.org/event/bf45c0d8-5bc1-3967-a9fb-79dd9176c63d> , <http://data.silknow.org/event/48cbeb81-948b-3988-a94c-254e1f426149> ;
+        dc:identifier       "1138416.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16> .
+
+<http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "230" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "230"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/image/7d998b93-0593-3f2e-8374-b0ecb59c2dd6>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1138416_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/299085.jpg> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7c2fe3cc-4c8f-3d1b-9835-a09b8feba4d6> .
+
+<http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "96" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "96"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7d998b93-0593-3f2e-8374-b0ecb59c2dd6> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16/dimension/1> , <http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16/dimension/2> ;
+        dc:identifier                  "2017.45.19" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/ceremonial-textile-chagsi-pangkheb-20174519> .
+
+<http://data.silknow.org/event/48cbeb81-948b-3988-a94c-254e1f426149>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/f7fe74f9-5135-3a03-bafd-bf5d85f12c91> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Transfer from RISD Textiles department: gift of Mae and Gene Festa from the Mae Festa Textile Collection" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8d11dc60-3827-3672-bc1a-28d97110ae16> .
+
+<http://data.silknow.org/actor/f7fe74f9-5135-3a03-bafd-bf5d85f12c91>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Transfer from RISD Textiles department: gift of Mae and Gene Festa from the Mae Festa Textile Collection" ;
+        ecrm:P1_is_identified_by  "Transfer from RISD Textiles department: gift of Mae and Gene Festa from the Mae Festa Textile Collection" .

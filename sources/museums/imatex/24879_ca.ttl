@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/69282a58-1686-35be-b7c6-8ec19f2b5de4> .
+
+<http://data.silknow.org/event/bc526e52-c088-32e1-9116-6a30952b3481>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ee4ba127-d9c7-3977-868e-fcb2355be9d8> .
+
+<http://data.silknow.org/object/69282a58-1686-35be-b7c6-8ec19f2b5de4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 24879" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/0395e8bb-20bc-316c-9f5a-e1f973a0d1fa> , <http://data.silknow.org/object/ee4ba127-d9c7-3977-868e-fcb2355be9d8/domain/1> , <http://data.silknow.org/image/8169e993-96e2-39cc-87e8-5fc7e2c3f340> , <http://data.silknow.org/event/f0dc8819-985e-330d-95b5-20881e0c5a9e> , <http://data.silknow.org/object/ee4ba127-d9c7-3977-868e-fcb2355be9d8> , <http://data.silknow.org/object/ee4ba127-d9c7-3977-868e-fcb2355be9d8/category/1> , <http://data.silknow.org/event/bc526e52-c088-32e1-9116-6a30952b3481> ;
+        dc:identifier       "24879.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/ee4ba127-d9c7-3977-868e-fcb2355be9d8/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ee4ba127-d9c7-3977-868e-fcb2355be9d8> .
+
+<http://data.silknow.org/image/8169e993-96e2-39cc-87e8-5fc7e2c3f340>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000029319" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/24879_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000029319.jpg> .
+
+<http://data.silknow.org/object/ee4ba127-d9c7-3977-868e-fcb2355be9d8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ee4ba127-d9c7-3977-868e-fcb2355be9d8> .
+
+<http://data.silknow.org/production/0395e8bb-20bc-316c-9f5a-e1f973a0d1fa>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ee4ba127-d9c7-3977-868e-fcb2355be9d8> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "vellut tallat llis"@ca .
+
+<http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Tórtola Valencia, Carmen" ;
+        ecrm:P1_is_identified_by  "Tórtola Valencia, Carmen" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Carmen_Tórtola_Valencia> , <https://viaf.org/viaf/47896092> , <https://isni.org/isni/0000000038570077> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Carmen_Tórtola_Valencia> .
+
+<http://data.silknow.org/event/f0dc8819-985e-330d-95b5-20881e0c5a9e>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b> ;
+        ecrm:P23_transferred_title_from
+                "Tórtola Valencia, Carmen" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ee4ba127-d9c7-3977-868e-fcb2355be9d8> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/object/ee4ba127-d9c7-3977-868e-fcb2355be9d8>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8169e993-96e2-39cc-87e8-5fc7e2c3f340> ;
+        dc:identifier                  "8429" .

@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/3e4d69f2-656f-3cf1-af95-b203bc12398e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "quilt" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3e4d69f2-656f-3cf1-af95-b203bc12398e> .
+
+<http://data.silknow.org/actor/5d103d57-c81b-33b9-acb7-2a72082bbe1b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Donald Downs, RISD BFA Photography 1990, in memory of Doris White Downs" ;
+        ecrm:P1_is_identified_by  "Gift of Donald Downs, RISD BFA Photography 1990, in memory of Doris White Downs" .
+
+<http://data.silknow.org/object/3e4d69f2-656f-3cf1-af95-b203bc12398e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3e4d69f2-656f-3cf1-af95-b203bc12398e> .
+
+<http://data.silknow.org/object/1810dd38-fde4-3e53-a462-09058fe4c0ea>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2005.62" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3e4d69f2-656f-3cf1-af95-b203bc12398e> , <http://data.silknow.org/object/3e4d69f2-656f-3cf1-af95-b203bc12398e/category/1> , <http://data.silknow.org/event/a05a4dd7-4cbf-38ac-9eb1-a42a8c4b9fd8> , <http://data.silknow.org/event/a636ef88-d5eb-3201-8158-856667cb602f> , <http://data.silknow.org/object/3e4d69f2-656f-3cf1-af95-b203bc12398e/domain/1> , <http://data.silknow.org/production/65ca03eb-8a21-3cc5-aa38-8f775e2ef582> ;
+        dc:identifier       "1091286.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/3e4d69f2-656f-3cf1-af95-b203bc12398e>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "2005.62" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/quilt-200562> .
+
+<http://data.silknow.org/event/a636ef88-d5eb-3201-8158-856667cb602f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/5d103d57-c81b-33b9-acb7-2a72082bbe1b> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Donald Downs, RISD BFA Photography 1990, in memory of Doris White Downs" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3e4d69f2-656f-3cf1-af95-b203bc12398e> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<https://sws.geonames.org/6252001/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1810dd38-fde4-3e53-a462-09058fe4c0ea> .
+
+<http://data.silknow.org/production/65ca03eb-8a21-3cc5-aa38-8f775e2ef582>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3e4d69f2-656f-3cf1-af95-b203bc12398e> ;
+        ecrm:P126_employed      "silk; cotton"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> , <http://data.silknow.org/vocabulary/88> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/dc4b0a3f-7e03-3a58-a6ee-2687e672a33e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6252001/> .
+
+<http://data.silknow.org/event/a05a4dd7-4cbf-38ac-9eb1-a42a8c4b9fd8>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3e4d69f2-656f-3cf1-af95-b203bc12398e> .

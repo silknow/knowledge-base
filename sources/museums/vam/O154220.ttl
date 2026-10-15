@@ -1,0 +1,115 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/8d1406eb-b9a0-3dc1-9367-f1b5578f310b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1860_1899> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/object/e088f68d-12c5-3af6-9e08-3f3e901b3776>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O154220" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/6b5c05c4-2e77-3f5f-b105-b42b50c475db> , <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/domain/1> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6> , <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/domain/2> , <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/observation/1> , <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/observation/2> , <http://data.silknow.org/production/8d1406eb-b9a0-3dc1-9367-f1b5578f310b> , <http://data.silknow.org/event/75a88b4a-d0de-39b9-aafd-1512e0766f3a> ;
+        dc:identifier       "O154220.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 19.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "19.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/aae925cd-f96a-3d40-97b2-09913188be57>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by T. S. W. Jarvis, Esq" ;
+        ecrm:P1_is_identified_by  "Given by T. S. W. Jarvis, Esq" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Dress fabric of woven silk, twill binding.\nBias cut fabric patterned with a series of two narrow stripes.\n[1] white ground with a dark grey meandering stem bearing leaves and alternate red and pale blue flower heads.\n[2] asymmetrically placed similar meander in grey with leaves and pink or blue flower heads.\nEach stripe is separated by a very narrow grey and white stripe.\nWarp: white, grey, pink silk.\nWeft: white, light blue, grey, red and pink silk.\n\nType possibly known as Hussein Kuli Khan."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6> .
+
+<http://data.silknow.org/event/75a88b4a-d0de-39b9-aafd-1512e0766f3a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/aae925cd-f96a-3d40-97b2-09913188be57> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by T. S. W. Jarvis, Esq." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6> .
+
+<http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6> .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "maximum" ;
+        rdfs:label          "Width: 9.5 cm  maximum" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "maximum" ;
+        ecrm:P90_has_value  "9.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/6b5c05c4-2e77-3f5f-b105-b42b50c475db>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018LD6850" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O154220_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018LD/2018LD6850.jpg> .
+
+<http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Dress fabric of woven silk, Iran, 1860-1899"@en , "Dress fabric of woven silk, twill binding.\nBias cut fabric patterned with a series of two narrow stripes.\n[1] white ground with a dark grey meandering stem bearing leaves and alternate red and pale blue flower heads.\n[2] asymmetrically placed similar meander in grey with leaves and pink or blue flower heads.\nEach stripe is separated by a very narrow grey and white stripe.\nWarp: white, grey, pink silk.\nWeft: white, light blue, grey, red and pink silk.\n\nType possibly known as Hussein Kuli Khan."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6b5c05c4-2e77-3f5f-b105-b42b50c475db> ;
+        ecrm:P3_has_note               "Dress fabric of woven silk, Iran, 1860-1899"@en , "Dress fabric of woven silk, twill binding.\nBias cut fabric patterned with a series of two narrow stripes.\n[1] white ground with a dark grey meandering stem bearing leaves and alternate red and pale blue flower heads.\n[2] asymmetrically placed similar meander in grey with leaves and pink or blue flower heads.\nEach stripe is separated by a very narrow grey and white stripe.\nWarp: white, grey, pink silk.\nWeft: white, light blue, grey, red and pink silk.\n\nType possibly known as Hussein Kuli Khan."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/dimension/1> , <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/dimension/2> ;
+        dc:identifier                  "T.21:117-1955" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O154220> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e088f68d-12c5-3af6-9e08-3f3e901b3776> .
+
+<http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dress fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6> .
+
+<http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Dress fabric of woven silk, Iran, 1860-1899"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6> .
+
+<http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6> .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/44b402db-8f34-30ac-a4e4-6ec97698bce6> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .

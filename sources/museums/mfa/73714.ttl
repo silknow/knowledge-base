@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "46.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "46.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/906a75b7-8606-3bca-8ea0-55a76b5973df>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319> .
+
+<http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Crimson ground. The design of clusters of naturalistic rose-like flowers and a twisting ribbon is woven with crimson, blue, orange, red, brown, white and green silk, and gold thread. Patched."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319> .
+
+<http://data.silknow.org/production/9f789394-b2e1-308f-884c-8b985a793051>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/97> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/image/469e3503-87ba-3d3d-8fe4-b19a6bf5d908>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "895118" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/73714_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/895118/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Crimson ground. The design of clusters of naturalistic rose-like flowers and a twisting ribbon is woven with crimson, blue, orange, red, brown, white and green silk, and gold thread. Patched."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/469e3503-87ba-3d3d-8fe4-b19a6bf5d908> ;
+        ecrm:P3_has_note               "Crimson ground. The design of clusters of naturalistic rose-like flowers and a twisting ribbon is woven with crimson, blue, orange, red, brown, white and green silk, and gold thread. Patched."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319/dimension/2> , <http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319/dimension/1> ;
+        dc:identifier                  "02.319" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/73714> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bf865678-bfd7-3a78-9813-1cc40f41b12d> .
+
+<http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319> .
+
+<http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "67.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "67.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Brocade fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319> .
+
+<http://data.silknow.org/object/bf865678-bfd7-3a78-9813-1cc40f41b12d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 02.319" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319> , <http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/production/9f789394-b2e1-308f-884c-8b985a793051> , <http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319/observation/1> , <http://data.silknow.org/event/906a75b7-8606-3bca-8ea0-55a76b5973df> , <http://data.silknow.org/image/469e3503-87ba-3d3d-8fe4-b19a6bf5d908> , <http://data.silknow.org/object/a46d6d38-f866-3e49-8267-e2829578e319/domain/1> ;
+        dc:identifier       "73714.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

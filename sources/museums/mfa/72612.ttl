@@ -1,0 +1,85 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/2623032/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb> .
+
+<http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/93c29863-e8f2-361f-9b77-6b847f0a8d9c> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb/dimension/2> , <http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb/dimension/1> ;
+        dc:identifier                  "86.7" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/72612> .
+
+<http://data.silknow.org/event/41573da3-99fa-35a2-9854-49e8ebb4f207>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb> .
+
+<http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Point lace, drawn-work, outline of chain-stitch" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/506dfed3-e3ab-38a0-bddf-520401eceaf4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 86.7" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/77d5eab7-e200-38d6-b6eb-dc6a4831ba05> , <http://data.silknow.org/image/93c29863-e8f2-361f-9b77-6b847f0a8d9c> , <http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb/domain/1> , <http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb> , <http://data.silknow.org/event/41573da3-99fa-35a2-9854-49e8ebb4f207> ;
+        dc:identifier       "72612.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "10.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "10.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/506dfed3-e3ab-38a0-bddf-520401eceaf4> .
+
+<http://data.silknow.org/production/77d5eab7-e200-38d6-b6eb-dc6a4831ba05>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb> ;
+        ecrm:P126_employed      "Lace, point, drawn-work, outline of chain-stitch"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1676_1700> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2623032/> .
+
+<http://data.silknow.org/image/93c29863-e8f2-361f-9b77-6b847f0a8d9c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "730245" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/72612_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/730245/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/9ae8ab07-1108-36d0-babd-b1b9f94d9cbb/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "48" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "48"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

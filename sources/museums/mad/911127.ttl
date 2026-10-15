@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/b86486c5-ff41-3bf1-883d-a39a73d3449d>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/911127_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/da9dcfcd-d148-46d6-abe5-a3b031ecf321.jpg> .
+
+<http://data.silknow.org/object/b8102312-0554-3740-94bd-030dc85ee2cc>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2001.144.53" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/970379a9-ed78-35b9-9f08-0249951cda4f> , <http://data.silknow.org/production/6eb0066d-c2b1-394c-bc34-97f44d39716c> , <http://data.silknow.org/object/653dfa52-1053-3cf0-bbb6-104a3393cdf4> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/b86486c5-ff41-3bf1-883d-a39a73d3449d> , <http://data.silknow.org/object/653dfa52-1053-3cf0-bbb6-104a3393cdf4/category/1> ;
+        dc:identifier       "911127.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/6eb0066d-c2b1-394c-bc34-97f44d39716c>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Madeleine Vionnet, 1929, collection automne-hiver, Lesage, Paris, 1929, collection hiver" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/653dfa52-1053-3cf0-bbb6-104a3393cdf4> ;
+        ecrm:P126_employed      "gaze de soie, broderie de fils de soie au point d'ombre et  au passé empiétant"@fr ;
+        ecrm:P3_has_note        "Madeleine Vionnet, 1929, collection automne-hiver, Lesage, Paris, 1929, collection hiver" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1929> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6052725/> , <https://sws.geonames.org/2988507/> .
+
+<http://data.silknow.org/object/653dfa52-1053-3cf0-bbb6-104a3393cdf4>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "échantillon, Madeleine Vionnet, 1929, collection automne-hiver, Lesage, Paris, 1929, collection hiver"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b86486c5-ff41-3bf1-883d-a39a73d3449d> ;
+        dc:identifier                  "2001.144.53" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/911127> .
+
+<https://sws.geonames.org/6052725/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/970379a9-ed78-35b9-9f08-0249951cda4f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don François Lesage, 2001" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/653dfa52-1053-3cf0-bbb6-104a3393cdf4> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b8102312-0554-3740-94bd-030dc85ee2cc> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/653dfa52-1053-3cf0-bbb6-104a3393cdf4> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2988507/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/653dfa52-1053-3cf0-bbb6-104a3393cdf4/category/1>
+        a                    silk:T35 ;
+        silk:L1              "échantillon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/653dfa52-1053-3cf0-bbb6-104a3393cdf4> .

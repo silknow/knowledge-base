@@ -1,0 +1,72 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/36d6a3d2-a9f4-3bf8-9b5f-fceb14aa8963>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6> .
+
+<http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/2> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/5476b529-887f-3fa2-9653-f06d7e90d643>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O98704" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6> , <http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6/domain/1> , <http://data.silknow.org/event/36d6a3d2-a9f4-3bf8-9b5f-fceb14aa8963> , <http://data.silknow.org/production/1a66db59-83e8-3813-bce2-72aca0c3a018> , <http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6/domain/2> , <http://data.silknow.org/image/6c4578a1-a319-306b-b1dd-b13fce6a7772> , <http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6/domain/3> ;
+        dc:identifier       "O98704.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6/domain/3>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5476b529-887f-3fa2-9653-f06d7e90d643> .
+
+<http://data.silknow.org/image/6c4578a1-a319-306b-b1dd-b13fce6a7772>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AF7186" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O98704_0.jpg> , <https://framemark.vam.ac.uk/collections/2006AF7186/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/image/eeb05233-ebf9-39a5-bab7-72fc82d410c3>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "ogival"@en ;
+        ecrm:P3_has_note  "ogival"@en .
+
+<http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6c4578a1-a319-306b-b1dd-b13fce6a7772> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/761> , <http://data.silknow.org/image/eeb05233-ebf9-39a5-bab7-72fc82d410c3> ;
+        dc:identifier                  "T.820-1919" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O98704> .
+
+<http://data.silknow.org/production/1a66db59-83e8-3813-bce2-72aca0c3a018>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/379> , <http://data.silknow.org/vocabulary/526> .
+
+<http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/12> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/43c9289a-1bd0-3aed-888b-6470a8ad15c6> .

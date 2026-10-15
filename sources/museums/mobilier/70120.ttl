@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/category/1>
+        a                    silk:T35 ;
+        silk:L1              "TAPISSERIE DE LICE" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25> .
+
+<http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Tapisserie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25> .
+
+<http://data.silknow.org/image/e8f73fde-65c0-38f6-8910-c41b9831aadf>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mobilier/70120_0.jpg> , <https://collection.mobiliernational.culture.gouv.fr/media/xl/BIDEAU/2017/03/GMTT-1259-000_9-2017.jpg> .
+
+<http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tapisserie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25> .
+
+<http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "3.55" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "3.55"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Tapisserie de Lice d'aprés Karel van Mander.\nVers 1630.\nTissée dans les ateliers du Faubourg Saint-Marcel, Paris."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25> .
+
+<http://data.silknow.org/mobilier>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/398be125-4d3e-33c0-9485-dd87cb644dc5> .
+
+<http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "5.15" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "5.15"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/398be125-4d3e-33c0-9485-dd87cb644dc5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record GMTT-1259-000" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/domain/1> , <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25> , <http://data.silknow.org/production/b2cf19d3-1458-3193-8b1b-fe2c1ac53858> , <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/domain/2> , <http://data.silknow.org/image/e8f73fde-65c0-38f6-8910-c41b9831aadf> , <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/category/1> , <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/domain/3> , <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/observation/1> ;
+        dc:identifier       "70120.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mobilier" .
+
+<http://data.silknow.org/production/b2cf19d3-1458-3193-8b1b-fe2c1ac53858>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/644> , <http://data.silknow.org/vocabulary/857> , <http://data.silknow.org/vocabulary/369> .
+
+<http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Tapisserie de Lice d'aprés Karel van Mander.\nVers 1630.\nTissée dans les ateliers du Faubourg Saint-Marcel, Paris."@fr ;
+        rdfs:label                     "Histoire de Diane\r\nHistoire de Céphale et Procris"@fr ;
+        ecrm:P102_has_title            "Histoire de Diane\r\nHistoire de Céphale et Procris"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e8f73fde-65c0-38f6-8910-c41b9831aadf> ;
+        ecrm:P3_has_note               "Tapisserie de Lice d'aprés Karel van Mander.\nVers 1630.\nTissée dans les ateliers du Faubourg Saint-Marcel, Paris."@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/dimension/1> , <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/dimension/2> ;
+        dc:identifier                  "GMTT-1259-000" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collection.mobiliernational.culture.gouv.fr/objet/GMTT-1259-000> .
+
+<http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25/domain/3>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/198003ed-83ed-3822-825c-851b73114f25> .

@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/dad84104-e0f5-3fae-99ed-9d1034f30c82>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/versailles/V%204727.1_0.jpg> , <http://collections.chateauversailles.fr/cc/imageproxy.aspx?server=10.0.10.13&port=14456&filename=objectimages%2FV+4727.1_002.cci> .
+
+<http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc> .
+
+<http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc> ;
+        ecrm:P42_assigned    "gant" .
+
+<http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "45" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "45"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/versailles>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3e11970b-95ab-3e9f-85bf-051c5933ca4a> .
+
+<http://data.silknow.org/production/5f00ccda-dc67-3931-82c4-860041ec1f93>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc> ;
+        ecrm:P126_employed      "chevreau, soie"@fr ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/4eec4468-6fac-3e4c-a61f-12b83d625e08> .
+
+<http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Paire de gants dite de Marie-Antoinette. Selon une tradition familiale ces gants auraient été donnés par la reine en 1789 à une aristocrate écossaise, Susan Tracy Keck, Lady Elcho (1746-1835), dame d'honneur de la princesse de Galles depuis 1771, et dont l'oncle par alliance avait été au service de Louis XV, sans que l'on sache les circonstances de ce don.\nDon de Mr. John Fowler, 1970."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc> .
+
+<http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "14.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "14.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/3e11970b-95ab-3e9f-85bf-051c5933ca4a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record V 4727.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc/observation/1> , <http://data.silknow.org/production/5f00ccda-dc67-3931-82c4-860041ec1f93> , <http://data.silknow.org/image/dad84104-e0f5-3fae-99ed-9d1034f30c82> , <http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc> , <http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc/type/1> , <http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc/domain/1> ;
+        dc:identifier       "V 4727.1.json" ;
+        dc:publisher        "http://data.silknow.org/organization/versailles" .
+
+<http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Paire de gants dite de Marie-Antoinette. Selon une tradition familiale ces gants auraient été donnés par la reine en 1789 à une aristocrate écossaise, Susan Tracy Keck, Lady Elcho (1746-1835), dame d'honneur de la princesse de Galles depuis 1771, et dont l'oncle par alliance avait été au service de Louis XV, sans que l'on sache les circonstances de ce don.\nDon de Mr. John Fowler, 1970."@fr ;
+        rdfs:label                     "gant"@fr ;
+        ecrm:P102_has_title            "gant"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/dad84104-e0f5-3fae-99ed-9d1034f30c82> ;
+        ecrm:P3_has_note               "Paire de gants dite de Marie-Antoinette. Selon une tradition familiale ces gants auraient été donnés par la reine en 1789 à une aristocrate écossaise, Susan Tracy Keck, Lady Elcho (1746-1835), dame d'honneur de la princesse de Galles depuis 1771, et dont l'oncle par alliance avait été au service de Louis XV, sans que l'on sache les circonstances de ce don.\nDon de Mr. John Fowler, 1970."@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc/dimension/1> , <http://data.silknow.org/object/dd22d4e2-d47d-30fb-9afe-4d4373d699fc/dimension/2> ;
+        dc:identifier                  "V 4727.1" .

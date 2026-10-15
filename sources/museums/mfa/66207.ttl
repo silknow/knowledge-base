@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Ground: linen. Design: a vertical row of conventionalized plants each flanked at the top by small angular animals, worked in cross stitch (not pulled tight) with yellowish green, and reddish orange silk. Sewed to this are two strips of linen on which conventionalized leaves are worked in the same manner. Ragged."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89> .
+
+<http://data.silknow.org/event/50ade608-d120-3867-93c4-b97cf4f24f10>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89> .
+
+<https://sws.geonames.org/400665/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/1b576457-fbc6-3f5f-a3e6-5ef071fdae3a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 33.439" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/50ade608-d120-3867-93c4-b97cf4f24f10> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89/observation/1> , <http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89/domain/1> , <http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89/category/1> , <http://data.silknow.org/image/99f9d559-055c-3bbe-b87f-e0735c8d94ef> , <http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89> , <http://data.silknow.org/production/f6d41675-3023-3ed0-ba60-9b132a2f7a09> ;
+        dc:identifier       "66207.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89> .
+
+<http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "15.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "15.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/99f9d559-055c-3bbe-b87f-e0735c8d94ef>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "727007" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/66207_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/727007/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/f6d41675-3023-3ed0-ba60-9b132a2f7a09>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89> ;
+        ecrm:P126_employed      "Linen and silk; embroidery"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/400665/> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1b576457-fbc6-3f5f-a3e6-5ef071fdae3a> .
+
+<http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Ground: linen. Design: a vertical row of conventionalized plants each flanked at the top by small angular animals, worked in cross stitch (not pulled tight) with yellowish green, and reddish orange silk. Sewed to this are two strips of linen on which conventionalized leaves are worked in the same manner. Ragged."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/99f9d559-055c-3bbe-b87f-e0735c8d94ef> ;
+        ecrm:P3_has_note               "Ground: linen. Design: a vertical row of conventionalized plants each flanked at the top by small angular animals, worked in cross stitch (not pulled tight) with yellowish green, and reddish orange silk. Sewed to this are two strips of linen on which conventionalized leaves are worked in the same manner. Ragged."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89/dimension/2> , <http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89/dimension/1> ;
+        dc:identifier                  "33.439" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/66207> .
+
+<http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment of a bed tent" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89> .
+
+<http://data.silknow.org/object/2cbc83c2-82a8-3ca5-b215-bdecb27c4c89/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "97" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "97"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

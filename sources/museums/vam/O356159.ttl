@@ -1,0 +1,105 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/dddd2f0e-bfe3-314c-8dfb-3ea0d4611591>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Mrs Grace E. Innous" ;
+        ecrm:P1_is_identified_by  "Given by Mrs Grace E. Innous" .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/797231c1-1f56-3044-8bb0-e6da211cbce2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8> ;
+        ecrm:P126_employed      "Figured silk"@en , "silk (textile)"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1840_1845> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Dress of figured silk, with floral sprays on a yellow ground."@en , "Dress, figured silk with floral sprays on a yellow ground, made in England, 1840-1845"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/46cefc40-b7c5-3029-88cd-fd048b93d7fe> , <http://data.silknow.org/image/075a1c47-f296-3dbc-84b6-e34c9c0d75ff> , <http://data.silknow.org/image/5f03074f-f80a-35d1-a4e7-6a77163020c5> ;
+        ecrm:P3_has_note               "Dress, figured silk with floral sprays on a yellow ground, made in England, 1840-1845"@en , "Dress of figured silk, with floral sprays on a yellow ground."@en ;
+        dc:identifier                  "T.73-1926" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O356159> .
+
+<http://data.silknow.org/image/5f03074f-f80a-35d1-a4e7-6a77163020c5>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017KB7687" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O356159_2.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017KB/2017KB7687.jpg> .
+
+<http://data.silknow.org/object/914bf277-fa14-3860-8627-1f36087b3332>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O356159" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8/domain/1> , <http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8/observation/1> , <http://data.silknow.org/production/797231c1-1f56-3044-8bb0-e6da211cbce2> , <http://data.silknow.org/image/075a1c47-f296-3dbc-84b6-e34c9c0d75ff> , <http://data.silknow.org/image/46cefc40-b7c5-3029-88cd-fd048b93d7fe> , <http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8/observation/2> , <http://data.silknow.org/event/c3c2e652-5f5c-3cfe-8a7d-19198fbfcc6c> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8> , <http://data.silknow.org/image/5f03074f-f80a-35d1-a4e7-6a77163020c5> ;
+        dc:identifier       "O356159.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Dress of figured silk, with floral sprays on a yellow ground."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8> .
+
+<http://data.silknow.org/image/075a1c47-f296-3dbc-84b6-e34c9c0d75ff>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2011FA2405" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O356159_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2011FA/2011FA2405.jpg> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dress" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8> .
+
+<http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Dress, figured silk with floral sprays on a yellow ground, made in England, 1840-1845"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/914bf277-fa14-3860-8627-1f36087b3332> .
+
+<http://data.silknow.org/image/46cefc40-b7c5-3029-88cd-fd048b93d7fe>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MU0236" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O356159_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2020MU/2020MU0236.jpg> .
+
+<http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Europeana Fashion Project" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8> .
+
+<http://data.silknow.org/event/c3c2e652-5f5c-3cfe-8a7d-19198fbfcc6c>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "T.73-1926, T.74-1926, T.75-1926, T75A-1926 and T.144-1929 all belonged to the donor's great-grandmother."@en ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dddd2f0e-bfe3-314c-8dfb-3ea0d4611591> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Mrs Grace E. Innous" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8845f197-252e-3276-94d6-1dde583615b8> ;
+        ecrm:P3_has_note               "T.73-1926, T.74-1926, T.75-1926, T75A-1926 and T.144-1929 all belonged to the donor's great-grandmother."@en .

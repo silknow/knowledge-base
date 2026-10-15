@@ -1,0 +1,96 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f8fcdeea-a071-3ae8-92cb-f7875f5237a4> .
+
+<http://data.silknow.org/production/cd8c1474-a67c-3697-b416-b16cf0b68958>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/854> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1426_1475> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> , <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c> .
+
+<http://data.silknow.org/event/622923e1-0357-3145-a2f9-e028d3b8f3b2>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/event/73be0055-bfc9-35fc-9cf3-151d505b3b49>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/4baa381f-6bb5-37d9-96a1-c7f33db7e2cb>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "flor del cardo"@es ;
+        ecrm:P3_has_note  "flor del cardo"@es .
+
+<http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- Conserva 4 fragments de voraviu\n- Vellut tallat llavorat de 1 cos"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c> .
+
+<http://data.silknow.org/object/f8fcdeea-a071-3ae8-92cb-f7875f5237a4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 6928" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c/category/1> , <http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c> , <http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c/observation/1> , <http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c/domain/1> , <http://data.silknow.org/image/10444ccd-8888-3b37-a051-e444d0ffd919> , <http://data.silknow.org/event/622923e1-0357-3145-a2f9-e028d3b8f3b2> , <http://data.silknow.org/production/cd8c1474-a67c-3697-b416-b16cf0b68958> , <http://data.silknow.org/event/73be0055-bfc9-35fc-9cf3-151d505b3b49> ;
+        dc:identifier       "6928.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/image/10444ccd-8888-3b37-a051-e444d0ffd919>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000004053" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/6928_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000004053.jpg> .
+
+<http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c> .
+
+<http://data.silknow.org/image/aa37d9ec-e048-3ff5-8341-f23553eff3f0>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "motivos ferronerie"@es ;
+        ecrm:P3_has_note  "motivos ferronerie"@es .
+
+<http://data.silknow.org/object/09d6520c-b154-3fd8-a707-49dafb75cd7c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Conserva 4 fragments de voraviu\n- Vellut tallat llavorat de 1 cos"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/10444ccd-8888-3b37-a051-e444d0ffd919> ;
+        ecrm:P3_has_note               "Conserva 4 fragments de voraviu\n- Vellut tallat llavorat de 1 cos"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/aa37d9ec-e048-3ff5-8341-f23553eff3f0> , <http://data.silknow.org/image/4baa381f-6bb5-37d9-96a1-c7f33db7e2cb> ;
+        dc:identifier                  "5809" .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

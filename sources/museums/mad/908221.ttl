@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/da5e0402-fde3-38fa-b2eb-0e5a76d51b81>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908221_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/4a1796b7-a882-45f3-b36e-a435e98660f8.jpg> .
+
+<http://data.silknow.org/production/bab72fac-17f3-3bee-b96a-665cb4f79991>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Lyon, 1785 (vers), Louis XVI (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b15875f1-1310-379c-884c-536f5c344f71> ;
+        ecrm:P126_employed      "Satin, broché soie"@fr ;
+        ecrm:P3_has_note        "Lyon, 1785 (vers), Louis XVI (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/7a56a7e7-b202-3fbc-8747-2d59e85b33ac> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2996944/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/728a7b4f-c7b7-32bf-8849-c75f378d7476>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13318" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/bab72fac-17f3-3bee-b96a-665cb4f79991> , <http://data.silknow.org/image/da5e0402-fde3-38fa-b2eb-0e5a76d51b81> , <http://data.silknow.org/object/b15875f1-1310-379c-884c-536f5c344f71/category/1> , <http://data.silknow.org/object/b15875f1-1310-379c-884c-536f5c344f71> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/38d412f4-af75-31e3-8278-3ef1e187cf5a> ;
+        dc:identifier       "908221.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/38d412f4-af75-31e3-8278-3ef1e187cf5a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don monsieur Marquereau, 1907" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b15875f1-1310-379c-884c-536f5c344f71> .
+
+<http://data.silknow.org/object/b15875f1-1310-379c-884c-536f5c344f71/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b15875f1-1310-379c-884c-536f5c344f71> .
+
+<http://data.silknow.org/object/b15875f1-1310-379c-884c-536f5c344f71>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Lyon, 1785 (vers), Louis XVI (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/da5e0402-fde3-38fa-b2eb-0e5a76d51b81> ;
+        dc:identifier                  "13318" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908221> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/728a7b4f-c7b7-32bf-8849-c75f378d7476> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/b15875f1-1310-379c-884c-536f5c344f71> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .

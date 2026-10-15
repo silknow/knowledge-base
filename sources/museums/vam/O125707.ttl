@@ -1,0 +1,134 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "image" ;
+        rdfs:label          "Width: 60 cm  image" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "image" ;
+        ecrm:P90_has_value  "60"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/dimension/5>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "knob" ;
+        rdfs:label          "Length: 4.5 cm  knob" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "knob" ;
+        ecrm:P90_has_value  "4.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/3d7fc4d5-f691-3c5a-83d9-f81182cbf0d2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Professor E. V. Lee" ;
+        ecrm:P1_is_identified_by  "Given by Professor E. V. Lee" .
+
+<http://data.silknow.org/production/5a4c7616-a6d9-30b3-bdf3-88bab43d6161>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912> ;
+        ecrm:P126_employed      "Ink on silk, signed  and dated 1585."@en , "ink"@en , "colour"@en , "paper"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1547_1625> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/d344d84a-6401-370f-8450-5e88a8f8c01a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O125707" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/observation/1> , <http://data.silknow.org/event/10501bd2-78ce-31b1-a0c9-32d03400832e> , <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/observation/2> , <http://data.silknow.org/production/5a4c7616-a6d9-30b3-bdf3-88bab43d6161> , <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912> , <http://data.silknow.org/collection/40c1ba84-e159-31aa-b354-ea24905da05f> ;
+        dc:identifier       "O125707.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "whole scroll" ;
+        rdfs:label          "Height: 279.5 cm  whole scroll" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P3_has_note    "whole scroll" ;
+        ecrm:P90_has_value  "279.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Hanging scroll" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912> .
+
+<http://data.silknow.org/event/10501bd2-78ce-31b1-a0c9-32d03400832e>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "Given by Mrs. E.V.Lee."@en ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/3d7fc4d5-f691-3c5a-83d9-f81182cbf0d2> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Professor E. V. Lee" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912> ;
+        ecrm:P3_has_note               "Given by Mrs. E.V.Lee."@en .
+
+<http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Gathering of scholars in a landscape."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912> .
+
+<http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/dimension/6>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "knob" ;
+        rdfs:label          "Diameter: 3.5 cm  knob" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/diameter> ;
+        ecrm:P3_has_note    "knob" ;
+        ecrm:P90_has_value  "3.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "image" ;
+        rdfs:label          "Height: 179 cm  image" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P3_has_note    "image" ;
+        ecrm:P90_has_value  "179"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d344d84a-6401-370f-8450-5e88a8f8c01a> .
+
+<http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/dimension/4>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "whole scroll" ;
+        rdfs:label          "Width: 74.5 cm  whole scroll" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "whole scroll" ;
+        ecrm:P90_has_value  "74.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912>
+        a                       ecrm:E22_Man-Made_Object ;
+        rdfs:comment            "Gathering of scholars in a landscape."@en , "Pap, China, paintings and drawings. Hanging scroll, ink on silk, Ding Yunpeng, (1547-1625)"@en ;
+        ecrm:P3_has_note        "Pap, China, paintings and drawings. Hanging scroll, ink on silk, Ding Yunpeng, (1547-1625)"@en , "Gathering of scholars in a landscape."@en ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/dimension/2> , <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/dimension/4> , <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/dimension/6> , <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/dimension/1> , <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/dimension/3> , <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/dimension/5> ;
+        dc:identifier           "FE.10-1973" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O125707> .
+
+<http://data.silknow.org/collection/40c1ba84-e159-31aa-b354-ea24905da05f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912> ;
+        ecrm:P78_is_identified_by  "East Asia Collection" .
+
+<http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Pap, China, paintings and drawings. Hanging scroll, ink on silk, Ding Yunpeng, (1547-1625)"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/83777322-035e-3bf1-ab43-1a5e00024912> .

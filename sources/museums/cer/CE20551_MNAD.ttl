@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/event/51c47179-fcee-34bf-b662-9d2aafb43b58>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236> .
+
+<http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Mantón de Manila" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236> .
+
+<http://data.silknow.org/event/cb3d6e45-2308-3f1f-82f1-c9cbb1638b7d>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/e07b4e17-97a6-3c23-af33-0addf9c5d964>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE20551" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/d52aa529-0499-30c5-9ca7-9320a90555ae> , <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236> , <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236/domain/2> , <http://data.silknow.org/event/51c47179-fcee-34bf-b662-9d2aafb43b58> , <http://data.silknow.org/event/cb3d6e45-2308-3f1f-82f1-c9cbb1638b7d> , <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236/observation/2> , <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236/domain/1> , <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236/category/1> , <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236/observation/1> , <http://data.silknow.org/production/6ec76ca2-689f-3930-bf5e-7ab8bd7e9204> ;
+        dc:identifier       "CE20551_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Contemporánea"@es , "Mantón de Manila cuadrangular de color blanco marfil. Posee decoración bordada, dos cenefas alrededor, la exterior de cuatro centímetros y la interior de quince centímetros. Cuatro ángulos iguales dos a dos en diagonal compuestos por rombos con peonías y aves. El centro del mantón poco decorado, se resuelve con pequeñas flores, exóticos pájaros e insectos."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d52aa529-0499-30c5-9ca7-9320a90555ae> ;
+        ecrm:P3_has_note               "Edad Contemporánea"@es , "Mantón de Manila cuadrangular de color blanco marfil. Posee decoración bordada, dos cenefas alrededor, la exterior de cuatro centímetros y la interior de quince centímetros. Cuatro ángulos iguales dos a dos en diagonal compuestos por rombos con peonías y aves. El centro del mantón poco decorado, se resuelve con pequeñas flores, exóticos pájaros e insectos."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/b04cad17-663e-3f28-9dbc-95f1528168d6> ;
+        dc:identifier                  "CE20551" .
+
+<http://data.silknow.org/image/d52aa529-0499-30c5-9ca7-9320a90555ae>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE20551" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE20551_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE20551&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Mantón de Manila cuadrangular de color blanco marfil. Posee decoración bordada, dos cenefas alrededor, la exterior de cuatro centímetros y la interior de quince centímetros. Cuatro ángulos iguales dos a dos en diagonal compuestos por rombos con peonías y aves. El centro del mantón poco decorado, se resuelve con pequeñas flores, exóticos pájaros e insectos."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236> .
+
+<http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236> .
+
+<http://data.silknow.org/image/b04cad17-663e-3f28-9dbc-95f1528168d6>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Motivos florales; Cenefa exterior: Roleo;   Dos de los ángulos: Peonía;   Cenefa interior: Rama; Aves"@es ;
+        ecrm:P3_has_note  "Motivos florales; Cenefa exterior: Roleo;   Dos de los ángulos: Peonía;   Cenefa interior: Rama; Aves"@es .
+
+<http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Contemporánea"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236> .
+
+<http://data.silknow.org/production/6ec76ca2-689f-3930-bf5e-7ab8bd7e9204>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236> ;
+        ecrm:P126_employed      "Fleco: Fibra de seda marfil"@es , "Seda marfil"@es ;
+        ecrm:P32_used_general_technique
+                "Macramé [Una sola banda de dibujo geométrico.]  Bordado al pasado [O de realce sin relleno.]  Tafetán"@es , "Crespón [Crespón de seda]"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1900> .
+
+<http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/43> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bf63c1c4-7f28-3892-96be-6aca28567236> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e07b4e17-97a6-3c23-af33-0addf9c5d964> .

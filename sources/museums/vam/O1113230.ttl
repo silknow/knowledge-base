@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/collection/4d5eb4be-51a1-3b4b-b061-6688e54a3c37>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Theatre and Performance Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/c326a65c-6da1-3991-984d-210d01a84658> ;
+        ecrm:P78_is_identified_by  "Theatre and Performance Collection" .
+
+<http://data.silknow.org/object/591ee77b-bd16-3d56-ba09-84e1697efad2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O1113230" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4d5eb4be-51a1-3b4b-b061-6688e54a3c37> , <http://data.silknow.org/object/c326a65c-6da1-3991-984d-210d01a84658/observation/1> , <http://data.silknow.org/event/6f168447-ba58-38a6-b723-3541aef75657> , <http://data.silknow.org/image/d69698e9-b908-3911-941a-c58ffbbb15ad> , <http://data.silknow.org/object/c326a65c-6da1-3991-984d-210d01a84658> , <http://data.silknow.org/production/b5cc258b-95c5-309d-9d36-bd9f74f4de34> ;
+        dc:identifier       "O1113230.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/production/b5cc258b-95c5-309d-9d36-bd9f74f4de34>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c326a65c-6da1-3991-984d-210d01a84658> ;
+        ecrm:P126_employed      "Printed silk"@en , "silk (textile)"@en , "ink"@en ;
+        ecrm:P32_used_general_technique
+                "printed"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1859_06_27> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/c326a65c-6da1-3991-984d-210d01a84658/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Silk programme" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c326a65c-6da1-3991-984d-210d01a84658> .
+
+<http://data.silknow.org/image/d69698e9-b908-3911-941a-c58ffbbb15ad>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2014GX0591" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O1113230_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2014GX/2014GX0591.jpg> .
+
+<http://data.silknow.org/object/c326a65c-6da1-3991-984d-210d01a84658>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk programme on large cream silk in three panels, in black typography with gold fringe applied all round.  Produced for Shakespeare's 'Henry the Fifth' starring Charles Kean, and 'If the Cap Fits' with Ellen Terry, Princess's Theatre, 27th June 1859."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d69698e9-b908-3911-941a-c58ffbbb15ad> ;
+        ecrm:P3_has_note               "Silk programme on large cream silk in three panels, in black typography with gold fringe applied all round.  Produced for Shakespeare's 'Henry the Fifth' starring Charles Kean, and 'If the Cap Fits' with Ellen Terry, Princess's Theatre, 27th June 1859."@en ;
+        dc:identifier                  "S.234-1981" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O1113230> .
+
+<http://data.silknow.org/object/c326a65c-6da1-3991-984d-210d01a84658/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Silk programme on large cream silk in three panels, in black typography with gold fringe applied all round.  Produced for Shakespeare's 'Henry the Fifth' starring Charles Kean, and 'If the Cap Fits' with Ellen Terry, Princess's Theatre, 27th June 1859."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c326a65c-6da1-3991-984d-210d01a84658> .
+
+<http://data.silknow.org/event/6f168447-ba58-38a6-b723-3541aef75657>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c326a65c-6da1-3991-984d-210d01a84658> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/591ee77b-bd16-3d56-ba09-84e1697efad2> .

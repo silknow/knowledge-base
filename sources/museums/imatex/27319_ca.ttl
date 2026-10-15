@@ -1,0 +1,66 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3d3ecbef-33e2-37f2-8b91-789938caf491> .
+
+<http://data.silknow.org/object/a5c4455a-3d26-3552-b910-7dc294c38774/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a5c4455a-3d26-3552-b910-7dc294c38774> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/production/40ddcd70-8489-31d1-87e1-206630de8337>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a5c4455a-3d26-3552-b910-7dc294c38774> ;
+        ecrm:P126_employed      "... sense confirmar"@ca ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "vellut gofrat"@ca , "vellut tallat llis"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/image/596a879b-ced5-3291-85a0-dcaf2e29051a>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000032984" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27319_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000032984.jpg> .
+
+<http://data.silknow.org/event/b92b7d06-1aaa-31c9-9399-4e1a8e2476e9>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a5c4455a-3d26-3552-b910-7dc294c38774> .
+
+<http://data.silknow.org/object/a5c4455a-3d26-3552-b910-7dc294c38774>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/596a879b-ced5-3291-85a0-dcaf2e29051a> ;
+        dc:identifier                  "16072" .
+
+<http://data.silknow.org/object/3d3ecbef-33e2-37f2-8b91-789938caf491>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27319" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/b92b7d06-1aaa-31c9-9399-4e1a8e2476e9> , <http://data.silknow.org/object/a5c4455a-3d26-3552-b910-7dc294c38774/domain/1> , <http://data.silknow.org/object/a5c4455a-3d26-3552-b910-7dc294c38774/category/1> , <http://data.silknow.org/image/596a879b-ced5-3291-85a0-dcaf2e29051a> , <http://data.silknow.org/production/40ddcd70-8489-31d1-87e1-206630de8337> , <http://data.silknow.org/object/a5c4455a-3d26-3552-b910-7dc294c38774> , <http://data.silknow.org/event/bc5fc5e9-b5d8-383e-a2a4-692d45ffabee> ;
+        dc:identifier       "27319.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/bc5fc5e9-b5d8-383e-a2a4-692d45ffabee>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a5c4455a-3d26-3552-b910-7dc294c38774> .
+
+<http://data.silknow.org/object/a5c4455a-3d26-3552-b910-7dc294c38774/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a5c4455a-3d26-3552-b910-7dc294c38774> .

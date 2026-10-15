@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "53.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "53.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/c1145e14-f5bd-3600-9284-289ac8469b59>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a> ;
+        ecrm:P126_employed      "Silk satin and linen weave"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1601_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Satin weave in silks on a linen backing. Pairs of yellow and green stripes on a cream-colored ground. Greens almost completely rotted out. Very worn, torn, holes."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/03e024f1-77e0-3193-bd52-d3db418b7d62> ;
+        ecrm:P3_has_note               "Satin weave in silks on a linen backing. Pairs of yellow and green stripes on a cream-colored ground. Greens almost completely rotted out. Very worn, torn, holes."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a/dimension/2> , <http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a/dimension/1> ;
+        dc:identifier                  "50.3182a" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/52178> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/image/03e024f1-77e0-3193-bd52-d3db418b7d62>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "817088" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/52178_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/817088/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Satin weave in silks on a linen backing. Pairs of yellow and green stripes on a cream-colored ground. Greens almost completely rotted out. Very worn, torn, holes."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d9458723-8591-3d84-99a3-3910ef2a185f> .
+
+<http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a> .
+
+<http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Weaving in two pieces (one piece)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a> .
+
+<http://data.silknow.org/event/9e327f0c-41e1-3477-b188-cb62f1ad2a5f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a> .
+
+<http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "47.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "47.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/d9458723-8591-3d84-99a3-3910ef2a185f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 50.3182a" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/c1145e14-f5bd-3600-9284-289ac8469b59> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a/observation/1> , <http://data.silknow.org/event/9e327f0c-41e1-3477-b188-cb62f1ad2a5f> , <http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a> , <http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a/category/1> , <http://data.silknow.org/image/03e024f1-77e0-3193-bd52-d3db418b7d62> , <http://data.silknow.org/object/6a45b7aa-c60f-3c5d-9365-2e11fac7a79a/domain/1> ;
+        dc:identifier       "52178.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

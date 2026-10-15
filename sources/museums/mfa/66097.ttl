@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/b6f2b542-232a-35bf-89ee-a58dee1c8e77>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "35.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "35.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/357c8a85-9a5c-302f-a4bf-9b6eea591501>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "745558" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/66097_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/745558/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Brocade in polychrome silks on an ivory-colored ground in compound weave. Floral arrangements with slices of citrus fruits. Composed of two pieces, each with a selvedge on one side of six cords and three narrow stripes. Two pieces sewn together along the selvedges to make a piece rounded on one end and straight on the other. Soiled, slightly worn."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/357c8a85-9a5c-302f-a4bf-9b6eea591501> ;
+        ecrm:P3_has_note               "Brocade in polychrome silks on an ivory-colored ground in compound weave. Floral arrangements with slices of citrus fruits. Composed of two pieces, each with a selvedge on one side of six cords and three narrow stripes. Two pieces sewn together along the selvedges to make a piece rounded on one end and straight on the other. Soiled, slightly worn."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709/dimension/2> , <http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709/dimension/1> ;
+        dc:identifier                  "51.478" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/66097> .
+
+<http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Brocade in polychrome silks on an ivory-colored ground in compound weave. Floral arrangements with slices of citrus fruits. Composed of two pieces, each with a selvedge on one side of six cords and three narrow stripes. Two pieces sewn together along the selvedges to make a piece rounded on one end and straight on the other. Soiled, slightly worn."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of brocade" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/769686fa-9a3d-36ab-ad03-7d103bbc10c8> .
+
+<http://data.silknow.org/object/769686fa-9a3d-36ab-ad03-7d103bbc10c8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 51.478" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/d9e31a33-4773-35c2-8a26-7e1de99d3d7b> , <http://data.silknow.org/event/b6f2b542-232a-35bf-89ee-a58dee1c8e77> , <http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709/observation/1> , <http://data.silknow.org/image/357c8a85-9a5c-302f-a4bf-9b6eea591501> , <http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709/domain/1> , <http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709/category/1> ;
+        dc:identifier       "66097.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709> .
+
+<http://data.silknow.org/production/d9e31a33-4773-35c2-8a26-7e1de99d3d7b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709> ;
+        ecrm:P126_employed      "Silk brocade"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1725_1775> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/32ea4357-cf15-3942-ac9d-a6815c6a9709/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "48.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "48.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

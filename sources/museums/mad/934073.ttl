@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/6f0b335d-57f4-3e58-84ea-4e39f7866c02/category/1>
+        a                    silk:T35 ;
+        silk:L1              "tapisserie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6f0b335d-57f4-3e58-84ea-4e39f7866c02> .
+
+<http://data.silknow.org/object/6f0b335d-57f4-3e58-84ea-4e39f7866c02>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "tapisserie, Louis, Henri, Alphonse de Waroquier, France, 1923, S.de Waroquier"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c0743c6d-93d7-34e7-b467-ee7fee15c6a0> ;
+        dc:identifier                  "44423" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934073> .
+
+<http://data.silknow.org/production/7b85f101-0c82-361e-a8bc-5255a38b3cec>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Louis, Henri, Alphonse de Waroquier, France, 1923, S.de Waroquier" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6f0b335d-57f4-3e58-84ea-4e39f7866c02> ;
+        ecrm:P126_employed      "Tapisserie au petit point en soie, cadre en hêtre ciré noir, perles de verre"@fr ;
+        ecrm:P3_has_note        "Louis, Henri, Alphonse de Waroquier, France, 1923, S.de Waroquier" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1923> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/c0743c6d-93d7-34e7-b467-ee7fee15c6a0>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934073_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/aad362b6-4e2a-4f38-a0cf-58e850fcd985.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ffb4e2dd-c69c-38be-bc1f-c10e9fbbbef9> .
+
+<http://data.silknow.org/object/ffb4e2dd-c69c-38be-bc1f-c10e9fbbbef9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 44423" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/c0743c6d-93d7-34e7-b467-ee7fee15c6a0> , <http://data.silknow.org/object/6f0b335d-57f4-3e58-84ea-4e39f7866c02/category/1> , <http://data.silknow.org/event/661ce04e-6982-3cb5-bd90-1859ace00b6b> , <http://data.silknow.org/object/6f0b335d-57f4-3e58-84ea-4e39f7866c02> , <http://data.silknow.org/production/7b85f101-0c82-361e-a8bc-5255a38b3cec> ;
+        dc:identifier       "934073.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6f0b335d-57f4-3e58-84ea-4e39f7866c02> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/event/661ce04e-6982-3cb5-bd90-1859ace00b6b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Legs Louis Henri Alphonse de Waroquier, 1975" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6f0b335d-57f4-3e58-84ea-4e39f7866c02> .

@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Pekin broccato"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/eab6c10a-a467-36e3-844a-9497b940de54> ;
+        ecrm:P3_has_note               "Pekin broccato"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1/dimension/1> , <http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 0132" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/278507/?WEB=MuseiVE> .
+
+<http://data.silknow.org/event/4f3629b2-14d7-34ee-92a7-97dfbcd951bd>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1> .
+
+<http://data.silknow.org/production/24cf8280-88c2-306c-8ac4-2e20e96e8c63>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1> ;
+        ecrm:P126_employed      "filo metallico"@it ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1680_1720> .
+
+<http://data.silknow.org/object/d2e97a34-c240-32f7-9794-7016d51f646a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 278507" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/4f3629b2-14d7-34ee-92a7-97dfbcd951bd> , <http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1> , <http://data.silknow.org/production/24cf8280-88c2-306c-8ac4-2e20e96e8c63> , <http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1/category/1> , <http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1/observation/1> , <http://data.silknow.org/image/eab6c10a-a467-36e3-844a-9497b940de54> , <http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1/domain/1> ;
+        dc:identifier       "278507.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "42" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "42"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Pekin broccato"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1> .
+
+<http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d2e97a34-c240-32f7-9794-7016d51f646a> .
+
+<http://data.silknow.org/image/eab6c10a-a467-36e3-844a-9497b940de54>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/278507_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5buXVwcWVEj9kx2BtHjlsBvEHVTABRmdcut0VpLJ6xsP9GPGW7jsviVqi6XCZgrHdcIB8R4g2p93sOr%2bWbynQwyzhSir%2bwwigQ4xbQL5mhvKC69Wau%2fGbHg%3d%3d> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "45" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "45"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2fb4de11-d26c-393f-ad30-5a198e6594f1> .

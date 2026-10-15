@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/b2a1aa60-feb3-3249-9f51-73e050d25028>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Maria T. Ksiezopolska" ;
+        ecrm:P1_is_identified_by  "Gift of Maria T. Ksiezopolska" .
+
+<http://data.silknow.org/event/6c8398ba-460d-3df2-a121-dc513414e409>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b2a1aa60-feb3-3249-9f51-73e050d25028> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Maria T. Ksiezopolska" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c82bfcea-10c7-3969-ac14-49356f3d694e> .
+
+<http://data.silknow.org/event/63b14312-726a-3335-83c0-6ae9243b4028>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c82bfcea-10c7-3969-ac14-49356f3d694e> .
+
+<http://data.silknow.org/object/c82bfcea-10c7-3969-ac14-49356f3d694e>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7c221da3-7343-3322-b0ff-ed8025777933> ;
+        dc:identifier                  "1996.106.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/scrapbook-textile-swatches-19961061> .
+
+<http://data.silknow.org/image/7c221da3-7343-3322-b0ff-ed8025777933>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/769866_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/40455.jpg> .
+
+<http://data.silknow.org/object/c82bfcea-10c7-3969-ac14-49356f3d694e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c82bfcea-10c7-3969-ac14-49356f3d694e> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/c82bfcea-10c7-3969-ac14-49356f3d694e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Scrapbook of Textile Swatches" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c82bfcea-10c7-3969-ac14-49356f3d694e> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/production/3c7dfca8-c406-33bc-8577-1400093949a3>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c82bfcea-10c7-3969-ac14-49356f3d694e> ;
+        ecrm:P126_employed      "linen"@en , "silk; wool; cotton; linen"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/644> , <http://data.silknow.org/vocabulary/617> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/6e64bc4b-a22f-3358-86fd-98fd1c624e35> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d5ea78d4-1cab-30ac-bcf4-527a281bbd31> .
+
+<http://data.silknow.org/object/d5ea78d4-1cab-30ac-bcf4-527a281bbd31>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1996.106.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/6c8398ba-460d-3df2-a121-dc513414e409> , <http://data.silknow.org/event/63b14312-726a-3335-83c0-6ae9243b4028> , <http://data.silknow.org/object/c82bfcea-10c7-3969-ac14-49356f3d694e/category/1> , <http://data.silknow.org/object/c82bfcea-10c7-3969-ac14-49356f3d694e/domain/1> , <http://data.silknow.org/object/c82bfcea-10c7-3969-ac14-49356f3d694e> , <http://data.silknow.org/image/7c221da3-7343-3322-b0ff-ed8025777933> , <http://data.silknow.org/production/3c7dfca8-c406-33bc-8577-1400093949a3> ;
+        dc:identifier       "769866.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

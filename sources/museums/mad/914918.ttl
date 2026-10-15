@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/66c42804-5cca-3ef0-ba5c-4fc318f87380>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 20722" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/aa7d2083-c270-3ce2-9989-96b0ad85fae6/category/1> , <http://data.silknow.org/object/aa7d2083-c270-3ce2-9989-96b0ad85fae6> , <http://data.silknow.org/production/8bd9f924-4aeb-3aea-b75f-d89c83251d6e> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/800fd5b6-1f59-3ddf-a485-3aeb1c40041a> , <http://data.silknow.org/event/ee496d39-7277-311e-9a5e-f5fe63d68540> ;
+        dc:identifier       "914918.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/ee496d39-7277-311e-9a5e-f5fe63d68540>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "don Pottier Frères - Aux 3 quartiers, 1917" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/aa7d2083-c270-3ce2-9989-96b0ad85fae6> .
+
+<http://data.silknow.org/production/8bd9f924-4aeb-3aea-b75f-d89c83251d6e>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1917 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/aa7d2083-c270-3ce2-9989-96b0ad85fae6> ;
+        ecrm:P126_employed      "Toile écrue imprimée à la planche (4 coups de planche)"@fr ;
+        ecrm:P3_has_note        "France, 1917 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/54444675-f89d-3afc-a1ff-814a40555408> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/aa7d2083-c270-3ce2-9989-96b0ad85fae6/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/aa7d2083-c270-3ce2-9989-96b0ad85fae6> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/800fd5b6-1f59-3ddf-a485-3aeb1c40041a>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/914918_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/9ca461b7-4f0c-4e3f-82b8-bfcb778c81c5.jpg> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/aa7d2083-c270-3ce2-9989-96b0ad85fae6>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1917 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/800fd5b6-1f59-3ddf-a485-3aeb1c40041a> ;
+        dc:identifier                  "20722" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/914918> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/66c42804-5cca-3ef0-ba5c-4fc318f87380> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/aa7d2083-c270-3ce2-9989-96b0ad85fae6> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

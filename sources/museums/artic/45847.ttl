@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/eaa05841-53a8-32e1-a480-63f1f8a5258c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, satin; brocaded in silk and metal thread"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/eaa05841-53a8-32e1-a480-63f1f8a5258c> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/place/dbe33bce-aaf4-3071-ba79-c2fe8481bbe5>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "France, Lyon" ;
+        ecrm:P87_is_identified_by  "France, Lyon" .
+
+<http://data.silknow.org/object/eaa05841-53a8-32e1-a480-63f1f8a5258c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel (Dress Fabric)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/eaa05841-53a8-32e1-a480-63f1f8a5258c> .
+
+<http://data.silknow.org/event/e8bdeab3-8e88-376f-b1bc-cdcab74f650e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/3486b6d7-769b-3d6a-a5ba-f69b563c48a9> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Textile Purchase Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/eaa05841-53a8-32e1-a480-63f1f8a5258c> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/actor/3486b6d7-769b-3d6a-a5ba-f69b563c48a9>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Textile Purchase Fund" ;
+        ecrm:P1_is_identified_by  "Textile Purchase Fund" .
+
+<http://data.silknow.org/image/b3731b8c-5dee-373b-9dfa-c90f396f6a02>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/45847_0.jpg> , <https://www.artic.edu/iiif/2/5e30621c-ec37-bc97-b206-a2d0a28c57f0/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/eaa05841-53a8-32e1-a480-63f1f8a5258c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, satin; brocaded in silk and metal thread"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b3731b8c-5dee-373b-9dfa-c90f396f6a02> ;
+        ecrm:P3_has_note               "Silk, satin; brocaded in silk and metal thread"@en ;
+        dc:identifier                  "1973.676" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/45847/panel-dress-fabric> .
+
+<http://data.silknow.org/production/11408c20-535e-3129-91c7-db285c553ea8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/eaa05841-53a8-32e1-a480-63f1f8a5258c> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1725> , <http://data.silknow.org/timespan/1725> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/dbe33bce-aaf4-3071-ba79-c2fe8481bbe5> , <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0f617fe0-a0a8-31c0-8224-a0825fcdf1dd> .
+
+<http://data.silknow.org/object/0f617fe0-a0a8-31c0-8224-a0825fcdf1dd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1973.676" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/eaa05841-53a8-32e1-a480-63f1f8a5258c/observation/1> , <http://data.silknow.org/object/eaa05841-53a8-32e1-a480-63f1f8a5258c> , <http://data.silknow.org/event/e8bdeab3-8e88-376f-b1bc-cdcab74f650e> , <http://data.silknow.org/production/11408c20-535e-3129-91c7-db285c553ea8> , <http://data.silknow.org/object/eaa05841-53a8-32e1-a480-63f1f8a5258c/category/1> , <http://data.silknow.org/image/b3731b8c-5dee-373b-9dfa-c90f396f6a02> ;
+        dc:identifier       "45847.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .

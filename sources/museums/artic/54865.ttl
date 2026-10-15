@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/e28cf151-7d1e-33e4-b47d-50a7c619d582>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404465> , <http://data.silknow.org/timespan/1500> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6487845/> , <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, gold gilt strip wound around linen fiber core, intergrated compound-weave of warp-float faced satin weave and twill weave with supplementary patterning wefts"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ca340ba6-838c-3579-a824-bd92d0c69065> ;
+        ecrm:P3_has_note               "Silk, gold gilt strip wound around linen fiber core, intergrated compound-weave of warp-float faced satin weave and twill weave with supplementary patterning wefts"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778/dimension/1> , <http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778/dimension/2> ;
+        dc:identifier                  "1946.87" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/54865/border> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/event/e52cffdb-23be-3be6-9ec8-1ae403c7653c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a6e79d3b-ec1b-39e9-bfb5-6bb899d417da> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Else Regensteiner" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778> .
+
+<http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "5.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "5.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, gold gilt strip wound around linen fiber core, intergrated compound-weave of warp-float faced satin weave and twill weave with supplementary patterning wefts"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778> .
+
+<http://data.silknow.org/object/46e8327d-1867-374c-9acf-95166ea6dd2a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1946.87" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/e28cf151-7d1e-33e4-b47d-50a7c619d582> , <http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778/category/1> , <http://data.silknow.org/event/e52cffdb-23be-3be6-9ec8-1ae403c7653c> , <http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778> , <http://data.silknow.org/image/ca340ba6-838c-3579-a824-bd92d0c69065> , <http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778/observation/1> ;
+        dc:identifier       "54865.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/actor/a6e79d3b-ec1b-39e9-bfb5-6bb899d417da>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Else Regensteiner" ;
+        ecrm:P1_is_identified_by  "Gift of Else Regensteiner" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000398008723> .
+
+<http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "21.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Border" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/07ee2405-95b0-3777-af65-19d4f5256778> .
+
+<http://data.silknow.org/image/ca340ba6-838c-3579-a824-bd92d0c69065>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/54865_0.jpg> , <https://www.artic.edu/iiif/2/d66ab9ec-ae82-a535-4cb4-3a9cef9393d5/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/46e8327d-1867-374c-9acf-95166ea6dd2a> .
+
+<https://sws.geonames.org/6487845/>
+        a       ecrm:E53_Place .

@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/e97496ab-cc68-3d19-8b6a-d954188cf882>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1932-11-11_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-C191660ACD9B2-000001> .
+
+<http://data.silknow.org/event/bb795c57-2781-30d5-972c-94592752bfe9>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783> .
+
+<http://data.silknow.org/production/7a0255ab-9a64-358a-b1b3-bbbf660d8637>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783> ;
+        ecrm:P126_employed      "metal thread"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "plain weave with discontinuous supplementary weft patterning (brocade)"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/event/ba4bd5df-45d4-3436-95fb-8460522d1acb>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/82d6f9de-6663-3715-8ada-5946d749d91f> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Montgomery Hare" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783> .
+
+<http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c882c108-5d7e-3e8e-bccb-5a9e01ba7c32> .
+
+<http://data.silknow.org/actor/82d6f9de-6663-3715-8ada-5946d749d91f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Montgomery Hare" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Montgomery Hare" .
+
+<http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/c882c108-5d7e-3e8e-bccb-5a9e01ba7c32>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1932-11-11" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/e97496ab-cc68-3d19-8b6a-d954188cf882> , <http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783> , <http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783/category/1> , <http://data.silknow.org/event/ba4bd5df-45d4-3436-95fb-8460522d1acb> , <http://data.silknow.org/event/bb795c57-2781-30d5-972c-94592752bfe9> , <http://data.silknow.org/production/7a0255ab-9a64-358a-b1b3-bbbf660d8637> , <http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783/observation/1> , <http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783/domain/1> ;
+        dc:identifier       "chndm_1932-11-11.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Blue taffeta with deeply curving serpentines in warp of the ground fabric. Between serpentines, in horizontal rows, figure of a man playing a clarinet, alternating with a bird on a slender branch. Alternate horizontal rows have sprays of flowers. Design brocaded in silver metal thread with outlines in red silk brocade."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/1007c189-1fb2-3414-8162-12fc1a3f6783>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Blue taffeta with deeply curving serpentines in warp of the ground fabric. Between serpentines, in horizontal rows, figure of a man playing a clarinet, alternating with a bird on a slender branch. Alternate horizontal rows have sprays of flowers. Design brocaded in silver metal thread with outlines in red silk brocade."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e97496ab-cc68-3d19-8b6a-d954188cf882> ;
+        ecrm:P3_has_note               "Blue taffeta with deeply curving serpentines in warp of the ground fabric. Between serpentines, in horizontal rows, figure of a man playing a clarinet, alternating with a bird on a slender branch. Alternate horizontal rows have sprays of flowers. Design brocaded in silver metal thread with outlines in red silk brocade."@en ;
+        dc:identifier                  "chndm_1932-11-11" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1932-11-11> .

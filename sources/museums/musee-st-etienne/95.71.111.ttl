@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/768d9dd4-a613-3d46-81fd-fe71fa485425>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.111.JPG"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/7bccaf96-15db-36e2-a004-d26fa128038e> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.111.JPG"@fr .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/event/375921b7-2957-39d2-bb94-9862ccbfa1d0>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7bccaf96-15db-36e2-a004-d26fa128038e> .
+
+<http://data.silknow.org/image/fd611cc1-9a44-367c-bd4c-4a39128c405d>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.111_0.jpg> .
+
+<http://data.silknow.org/object/707a5aa7-cf84-3d82-91b9-8441d593b30c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.111" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/bd2742db-2a20-32e3-abc7-dc6f3b1c1169> , <http://data.silknow.org/object/7bccaf96-15db-36e2-a004-d26fa128038e/type/1> , <http://data.silknow.org/object/7bccaf96-15db-36e2-a004-d26fa128038e/right> , <http://data.silknow.org/event/375921b7-2957-39d2-bb94-9862ccbfa1d0> , <http://data.silknow.org/image/fd611cc1-9a44-367c-bd4c-4a39128c405d> , <http://data.silknow.org/object/768d9dd4-a613-3d46-81fd-fe71fa485425> , <http://data.silknow.org/object/7bccaf96-15db-36e2-a004-d26fa128038e> ;
+        dc:identifier       "95.71.111.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/object/7bccaf96-15db-36e2-a004-d26fa128038e/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7bccaf96-15db-36e2-a004-d26fa128038e> ;
+        ecrm:P42_assigned    "tête de chat" .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/707a5aa7-cf84-3d82-91b9-8441d593b30c> .
+
+<http://data.silknow.org/object/7bccaf96-15db-36e2-a004-d26fa128038e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "tête de chat"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/fd611cc1-9a44-367c-bd4c-4a39128c405d> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/382bfc4a-4e3c-386e-b276-1f9e47b9e3bf> ;
+        dc:identifier                  "95.71.111" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/production/bd2742db-2a20-32e3-abc7-dc6f3b1c1169>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7bccaf96-15db-36e2-a004-d26fa128038e> .
+
+<http://data.silknow.org/object/7bccaf96-15db-36e2-a004-d26fa128038e/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/7bccaf96-15db-36e2-a004-d26fa128038e> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/image/382bfc4a-4e3c-386e-b276-1f9e47b9e3bf>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "tête d'animal"@fr ;
+        ecrm:P3_has_note  "tête d'animal"@fr .

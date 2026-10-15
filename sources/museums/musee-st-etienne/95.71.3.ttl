@@ -1,0 +1,48 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9a29501c-c429-35e0-8f84-9e218e679a02> .
+
+<http://data.silknow.org/production/8a07ad71-a311-3e37-9493-ea4434ca4728>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2990723a-4033-3326-b2c2-218d2e3234f2> .
+
+<http://data.silknow.org/object/9a29501c-c429-35e0-8f84-9e218e679a02>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.3" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/8a07ad71-a311-3e37-9493-ea4434ca4728> , <http://data.silknow.org/event/b1537252-3c6b-3660-b730-63a7d67a5d73> , <http://data.silknow.org/object/2990723a-4033-3326-b2c2-218d2e3234f2/type/1> , <http://data.silknow.org/object/2990723a-4033-3326-b2c2-218d2e3234f2> ;
+        dc:identifier       "95.71.3.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/object/2990723a-4033-3326-b2c2-218d2e3234f2>
+        a                           ecrm:E22_Man-Made_Object ;
+        rdfs:label                  "Roses"@fr ;
+        ecrm:P65_shows_visual_item  <http://data.silknow.org/vocabulary/785> ;
+        dc:identifier               "95.71.3" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/2990723a-4033-3326-b2c2-218d2e3234f2/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2990723a-4033-3326-b2c2-218d2e3234f2> ;
+        ecrm:P42_assigned    "Roses" .
+
+<http://data.silknow.org/event/b1537252-3c6b-3660-b730-63a7d67a5d73>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2990723a-4033-3326-b2c2-218d2e3234f2> .

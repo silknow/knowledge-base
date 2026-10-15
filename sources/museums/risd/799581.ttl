@@ -1,0 +1,72 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/2359ab3b-0678-3004-99b9-d7098701598e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/f0be83d8-b2fc-3e68-a713-69f486e90c9c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Miss Lucy T. Aldrich" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9027d062-16d4-3417-8279-c5495f8a0fbc> .
+
+<http://data.silknow.org/object/9027d062-16d4-3417-8279-c5495f8a0fbc>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "35.358" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/altar-cloth-uchishiki-35358> .
+
+<http://data.silknow.org/event/f02e2e13-8981-345a-b60a-7125b0a4be34>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9027d062-16d4-3417-8279-c5495f8a0fbc> .
+
+<http://data.silknow.org/object/9027d062-16d4-3417-8279-c5495f8a0fbc/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Altar cloth (uchishiki)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9027d062-16d4-3417-8279-c5495f8a0fbc> .
+
+<http://data.silknow.org/object/105ae617-0428-3594-b980-8871ad94680a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 35.358" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9027d062-16d4-3417-8279-c5495f8a0fbc/category/1> , <http://data.silknow.org/object/9027d062-16d4-3417-8279-c5495f8a0fbc/domain/1> , <http://data.silknow.org/event/f02e2e13-8981-345a-b60a-7125b0a4be34> , <http://data.silknow.org/event/2359ab3b-0678-3004-99b9-d7098701598e> , <http://data.silknow.org/production/7c43a7c1-c661-38a9-ace1-f044cda9fd22> , <http://data.silknow.org/object/9027d062-16d4-3417-8279-c5495f8a0fbc> ;
+        dc:identifier       "799581.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/f0be83d8-b2fc-3e68-a713-69f486e90c9c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Miss Lucy T. Aldrich" ;
+        ecrm:P1_is_identified_by  "Gift of Miss Lucy T. Aldrich" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/105ae617-0428-3594-b980-8871ad94680a> .
+
+<http://data.silknow.org/object/9027d062-16d4-3417-8279-c5495f8a0fbc/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9027d062-16d4-3417-8279-c5495f8a0fbc> .
+
+<http://data.silknow.org/production/7c43a7c1-c661-38a9-ace1-f044cda9fd22>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9027d062-16d4-3417-8279-c5495f8a0fbc> ;
+        ecrm:P126_employed      "gilt paper"@en , "silk; gilt paper"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1786_1838> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .

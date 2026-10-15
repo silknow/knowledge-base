@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/2196d93b-5b31-3690-8a2e-cdd401a9dc04>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1976-65-12_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-9E3A97EBAD5C2-000001> .
+
+<http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c> .
+
+<http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c> .
+
+<http://data.silknow.org/production/189efa30-9b1c-3dbc-99a6-df510341dd3d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c> ;
+        ecrm:P126_employed      "metallic thread"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "8-harness satin with continuous and discontinuous supplementary weft"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6255148/> .
+
+<http://data.silknow.org/event/98078127-a695-30f9-a6d9-5ff50322300f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e0572b44-2e95-3292-8ac7-56d852021fbe> .
+
+<http://data.silknow.org/object/e0572b44-2e95-3292-8ac7-56d852021fbe>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1976-65-12" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/2196d93b-5b31-3690-8a2e-cdd401a9dc04> , <http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c/observation/1> , <http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c/category/1> , <http://data.silknow.org/event/98078127-a695-30f9-a6d9-5ff50322300f> , <http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c> , <http://data.silknow.org/production/189efa30-9b1c-3dbc-99a6-df510341dd3d> , <http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c/domain/1> ;
+        dc:identifier       "chndm_1976-65-12.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<https://sws.geonames.org/6255148/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fragment of a dress fabric with solid stripes in two tones of blue and stripes of brocaded metallic gold. Gold-patterned stripes have plant motifs and a chinoiserie pattern."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c> .
+
+<http://data.silknow.org/object/a7778035-2584-3afb-890f-b0b10f1a028c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Fragment of a dress fabric with solid stripes in two tones of blue and stripes of brocaded metallic gold. Gold-patterned stripes have plant motifs and a chinoiserie pattern."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2196d93b-5b31-3690-8a2e-cdd401a9dc04> ;
+        ecrm:P3_has_note               "Fragment of a dress fabric with solid stripes in two tones of blue and stripes of brocaded metallic gold. Gold-patterned stripes have plant motifs and a chinoiserie pattern."@en ;
+        dc:identifier                  "chndm_1976-65-12" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1976-65-12> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .

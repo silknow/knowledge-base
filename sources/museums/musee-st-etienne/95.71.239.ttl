@@ -1,0 +1,66 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/641bf100-925d-3ef3-9060-9a54ab4c7f17>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.239_0.jpg> .
+
+<http://data.silknow.org/event/050f8580-16e7-3288-95dd-4302de234446>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/db6d2044-081c-3581-a2c6-6985382710ef> .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/object/db6d2044-081c-3581-a2c6-6985382710ef/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/db6d2044-081c-3581-a2c6-6985382710ef> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/de020493-c35f-3fd5-8a66-06312bd76325> .
+
+<http://data.silknow.org/production/6219b007-0fde-3a21-bc5f-36b2dcfc104f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/db6d2044-081c-3581-a2c6-6985382710ef> .
+
+<http://data.silknow.org/object/de020493-c35f-3fd5-8a66-06312bd76325>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.239" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/db6d2044-081c-3581-a2c6-6985382710ef/type/1> , <http://data.silknow.org/image/641bf100-925d-3ef3-9060-9a54ab4c7f17> , <http://data.silknow.org/object/db6d2044-081c-3581-a2c6-6985382710ef/right> , <http://data.silknow.org/production/6219b007-0fde-3a21-bc5f-36b2dcfc104f> , <http://data.silknow.org/event/050f8580-16e7-3288-95dd-4302de234446> , <http://data.silknow.org/object/4dfe5939-da94-3de0-a85c-494c8f7fd22a> , <http://data.silknow.org/object/db6d2044-081c-3581-a2c6-6985382710ef> ;
+        dc:identifier       "95.71.239.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/object/db6d2044-081c-3581-a2c6-6985382710ef>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Fleurs des champs"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/641bf100-925d-3ef3-9060-9a54ab4c7f17> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/905> ;
+        dc:identifier                  "95.71.239" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/db6d2044-081c-3581-a2c6-6985382710ef/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/db6d2044-081c-3581-a2c6-6985382710ef> ;
+        ecrm:P42_assigned    "Fleurs des champs" .
+
+<http://data.silknow.org/object/4dfe5939-da94-3de0-a85c-494c8f7fd22a>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Saint-Etienne\", Edition Gakken, Japon, 1981, 221 pages,"@fr , "Rubans français au Musée d'Art et d'Industrie de"@fr , "Studio Caterin"@fr , "95.71.239.jpg"@fr , "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/db6d2044-081c-3581-a2c6-6985382710ef> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Saint-Etienne\", Edition Gakken, Japon, 1981, 221 pages,"@fr , "Studio Caterin"@fr , "Rubans français au Musée d'Art et d'Industrie de"@fr , "95.71.239.jpg"@fr , "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr .

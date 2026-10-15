@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b49d80a3-7f23-33b2-8e42-c7e3acb83ac4> .
+
+<http://data.silknow.org/object/4c4bf148-53d5-3483-9d75-8b318d72d2ef>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Pertenece a la imagen de Ntra. Sra. de Gracia del Convento agustino del mismo nombre."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a0683eb4-1000-3bb2-a04c-86f797cfbb8c> ;
+        ecrm:P3_has_note               "*Pertenece a la imagen de Ntra. Sra. de Gracia del Convento agustino del mismo nombre."@es ;
+        dc:identifier                  "5.99" .
+
+<http://data.silknow.org/object/4c4bf148-53d5-3483-9d75-8b318d72d2ef/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Pertenece a la imagen de Ntra. Sra. de Gracia del Convento agustino del mismo nombre."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4c4bf148-53d5-3483-9d75-8b318d72d2ef> .
+
+<http://data.silknow.org/object/b49d80a3-7f23-33b2-8e42-c7e3acb83ac4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.99" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/c13e2119-b1ee-380d-958a-77641c6e1988> , <http://data.silknow.org/assessment/19c5bbcf-6eb6-3cc6-b2f8-1e319ce06c39> , <http://data.silknow.org/object/4c4bf148-53d5-3483-9d75-8b318d72d2ef> , <http://data.silknow.org/object/4c4bf148-53d5-3483-9d75-8b318d72d2ef/type/1> , <http://data.silknow.org/image/a0683eb4-1000-3bb2-a04c-86f797cfbb8c> , <http://data.silknow.org/object/4c4bf148-53d5-3483-9d75-8b318d72d2ef/observation/1> ;
+        dc:identifier       "5.99.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/production/c13e2119-b1ee-380d-958a-77641c6e1988/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/assessment/19c5bbcf-6eb6-3cc6-b2f8-1e319ce06c39/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Malo. No apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Malo. No apto para su uso."@es .
+
+<http://data.silknow.org/image/a0683eb4-1000-3bb2-a04c-86f797cfbb8c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.99" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.99_0.jpg> .
+
+<http://data.silknow.org/object/4c4bf148-53d5-3483-9d75-8b318d72d2ef/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4c4bf148-53d5-3483-9d75-8b318d72d2ef> ;
+        ecrm:P42_assigned    "Correa" .
+
+<http://data.silknow.org/production/c13e2119-b1ee-380d-958a-77641c6e1988>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4c4bf148-53d5-3483-9d75-8b318d72d2ef> ;
+        ecrm:P126_employed      "Seda negra. Perlas. Hilo de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Bordado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/c13e2119-b1ee-380d-958a-77641c6e1988/activity/1> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .
+
+<http://data.silknow.org/assessment/19c5bbcf-6eb6-3cc6-b2f8-1e319ce06c39>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/4c4bf148-53d5-3483-9d75-8b318d72d2ef> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/19c5bbcf-6eb6-3cc6-b2f8-1e319ce06c39/condition/1> .

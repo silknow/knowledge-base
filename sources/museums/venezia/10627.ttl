@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Velluto operato ad un corpo, tagliato e riccio, su fondo in taffetas giallo/opera in velluto verde"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d> .
+
+<http://data.silknow.org/event/6985c53c-c721-3086-9e4c-5132f2ef6af7>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d> .
+
+<http://data.silknow.org/production/1e09462a-23ec-3b79-a5c3-71549c27252f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1680_1720> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3164602/> .
+
+<http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "62" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "62"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d> .
+
+<http://data.silknow.org/image/69ab708b-bd53-3f17-997c-2b86e0bd46a4>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/10627_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5nBbkV00speufNaf46zsd1ZhfgLCdIKrKeYxfMy2lqIh1%2bFoZCfpAZW0sByjXhe2MyElf3RbSHvKZbxc3m%2fC0wYid%2btw%2bfej%2fvTkY2hsDwbvDtkna7uwy0g%3d%3d> .
+
+<https://sws.geonames.org/3164602/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f22a0771-ca36-3080-a56d-3dfe9a6994ee> .
+
+<http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Velluto operato ad un corpo, tagliato e riccio, su fondo in taffetas giallo/opera in velluto verde"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/69ab708b-bd53-3f17-997c-2b86e0bd46a4> ;
+        ecrm:P3_has_note               "Velluto operato ad un corpo, tagliato e riccio, su fondo in taffetas giallo/opera in velluto verde"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d/dimension/1> , <http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 491/109" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/10627/?WEB=MuseiVE> .
+
+<http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "32" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "32"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/f22a0771-ca36-3080-a56d-3dfe9a6994ee>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10627" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/6985c53c-c721-3086-9e4c-5132f2ef6af7> , <http://data.silknow.org/image/69ab708b-bd53-3f17-997c-2b86e0bd46a4> , <http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d> , <http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d/domain/1> , <http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d/observation/1> , <http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d/category/1> , <http://data.silknow.org/production/1e09462a-23ec-3b79-a5c3-71549c27252f> ;
+        dc:identifier       "10627.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cd758005-558c-318f-b1be-7a3bdbaf787d> .

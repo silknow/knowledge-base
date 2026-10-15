@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/ed7dafc7-952a-30e2-89ff-853536913ed8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2001.130.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0e9c5f64-7ce1-37a9-a259-9f6ac651e20a/category/1> , <http://data.silknow.org/object/0e9c5f64-7ce1-37a9-a259-9f6ac651e20a> , <http://data.silknow.org/image/27c3990a-8df3-379b-a600-7ec4c0974b43> , <http://data.silknow.org/event/e0d2bc10-7043-3195-9b9b-05316757dacf> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/f1e1f1b2-6132-38dd-b980-4cd501e983bd> ;
+        dc:identifier       "910587.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/e0d2bc10-7043-3195-9b9b-05316757dacf>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat grâce au mécénat de Mrs. Jayne Wrightsman, 2001" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0e9c5f64-7ce1-37a9-a259-9f6ac651e20a> .
+
+<http://data.silknow.org/production/f1e1f1b2-6132-38dd-b980-4cd501e983bd>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Tours, 1740 (vers), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0e9c5f64-7ce1-37a9-a259-9f6ac651e20a> ;
+        ecrm:P126_employed      "Damas satin de soie"@fr ;
+        ecrm:P3_has_note        "Tours, 1740 (vers), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/43a6247a-1363-3118-ad2d-b64ccd99445e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3012219/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/27c3990a-8df3-379b-a600-7ec4c0974b43>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910587_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/91fd0d26-96fd-4244-acfa-b9d1a04ce743.jpg> .
+
+<https://sws.geonames.org/3012219/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/0e9c5f64-7ce1-37a9-a259-9f6ac651e20a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "panneau" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0e9c5f64-7ce1-37a9-a259-9f6ac651e20a> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ed7dafc7-952a-30e2-89ff-853536913ed8> .
+
+<http://data.silknow.org/object/0e9c5f64-7ce1-37a9-a259-9f6ac651e20a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "panneau, Tours, 1740 (vers), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/27c3990a-8df3-379b-a600-7ec4c0974b43> ;
+        dc:identifier                  "2001.130.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910587> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/0e9c5f64-7ce1-37a9-a259-9f6ac651e20a> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

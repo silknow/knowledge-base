@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/a4aad343-358e-3b9c-83cf-fb6431f0e29b>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Russie, 18e siècle (2de moitié), Catherine II (Russie)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/42e9c0fc-b1a8-36e7-ad35-ecba049d5848> ;
+        ecrm:P126_employed      "Lé de lampas fond taffetas, lancé, broché, fils métalliques"@fr ;
+        ecrm:P3_has_note        "Russie, 18e siècle (2de moitié), Catherine II (Russie)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1751_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2017370/> .
+
+<https://sws.geonames.org/2017370/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/42e9c0fc-b1a8-36e7-ad35-ecba049d5848/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/42e9c0fc-b1a8-36e7-ad35-ecba049d5848> .
+
+<http://data.silknow.org/image/45893922-a795-3bfd-9b2e-85742e09a93b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909875_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/9f56e325-7779-42ab-8164-f712a6176271.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/42e9c0fc-b1a8-36e7-ad35-ecba049d5848>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Russie, 18e siècle (2de moitié), Catherine II (Russie)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/45893922-a795-3bfd-9b2e-85742e09a93b> ;
+        dc:identifier                  "44780" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909875> .
+
+<http://data.silknow.org/object/ff3837ab-596f-30a8-8821-aa9044a41165>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 44780" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/42e9c0fc-b1a8-36e7-ad35-ecba049d5848/category/1> , <http://data.silknow.org/object/42e9c0fc-b1a8-36e7-ad35-ecba049d5848> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/a4aad343-358e-3b9c-83cf-fb6431f0e29b> , <http://data.silknow.org/image/45893922-a795-3bfd-9b2e-85742e09a93b> , <http://data.silknow.org/event/d3f5c233-03cf-313f-a60f-c3f19412ee6f> ;
+        dc:identifier       "909875.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/d3f5c233-03cf-313f-a60f-c3f19412ee6f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don M. Curiel, 1974" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/42e9c0fc-b1a8-36e7-ad35-ecba049d5848> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ff3837ab-596f-30a8-8821-aa9044a41165> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/42e9c0fc-b1a8-36e7-ad35-ecba049d5848> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

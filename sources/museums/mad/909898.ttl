@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/63ff1ac3-6d8d-34a4-b133-cd8d060959da>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1770-1785, Louis XVI (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/03a5c2da-09fd-3cfc-8113-90530af31a29> ;
+        ecrm:P126_employed      "Satin de 8, liseré, broché soie"@fr ;
+        ecrm:P3_has_note        "France, 1770-1785, Louis XVI (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1770_1785> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/image/0878dec4-c23f-33f2-8a56-95e94d5da32a>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909898_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/db260d15-e915-48d9-b1d5-d296187f2bf3.jpg> .
+
+<http://data.silknow.org/object/03a5c2da-09fd-3cfc-8113-90530af31a29>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, 1770-1785, Louis XVI (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0878dec4-c23f-33f2-8a56-95e94d5da32a> ;
+        dc:identifier                  "13569" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909898> .
+
+<http://data.silknow.org/object/b82521eb-f19e-3f7f-9874-328b98057000>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13569" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/03a5c2da-09fd-3cfc-8113-90530af31a29> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/27c2d854-54aa-392f-9b98-ec55250fa49a> , <http://data.silknow.org/object/03a5c2da-09fd-3cfc-8113-90530af31a29/category/1> , <http://data.silknow.org/image/0878dec4-c23f-33f2-8a56-95e94d5da32a> , <http://data.silknow.org/production/63ff1ac3-6d8d-34a4-b133-cd8d060959da> ;
+        dc:identifier       "909898.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/03a5c2da-09fd-3cfc-8113-90530af31a29/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/03a5c2da-09fd-3cfc-8113-90530af31a29> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/27c2d854-54aa-392f-9b98-ec55250fa49a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1907" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/03a5c2da-09fd-3cfc-8113-90530af31a29> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b82521eb-f19e-3f7f-9874-328b98057000> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/03a5c2da-09fd-3cfc-8113-90530af31a29> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

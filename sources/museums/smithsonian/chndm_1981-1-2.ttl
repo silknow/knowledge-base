@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/ffe9af4e-0dce-3200-bc74-312efbf783e5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/6ca78f32-1067-31ba-928f-f405a9a60fa6>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/8f05dad8-7eb7-32dc-ae42-da92847c4b52> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Barbara Rogoff" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221> .
+
+<http://data.silknow.org/production/997b9ae1-bb5d-315f-982f-db783ac37d4a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221> ;
+        ecrm:P126_employed      "silk"@en ;
+        ecrm:P32_used_general_technique
+                "printed on plain weave"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1826_1875> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Quarter of a printed scarf with plain red field, red and black border with design of fabric swatches"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7e5773bf-49b0-3adb-ac3b-93968957d74a> .
+
+<http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Scarf sample" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221> .
+
+<http://data.silknow.org/image/3f6fdeed-572c-3965-b876-62db29da9100>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1981-1-2_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-1981-1-2MattFlynn> .
+
+<http://data.silknow.org/actor/8f05dad8-7eb7-32dc-ae42-da92847c4b52>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Barbara Rogoff" ;
+        ecrm:P1_is_identified_by  "Gift of Barbara Rogoff" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Barbara_Rogoff> , <https://viaf.org/viaf/67141625> , <https://isni.org/isni/0000000110686825> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Barbara_Rogoff> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Quarter of a printed scarf with plain red field, red and black border with design of fabric swatches"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3f6fdeed-572c-3965-b876-62db29da9100> ;
+        ecrm:P3_has_note               "Quarter of a printed scarf with plain red field, red and black border with design of fabric swatches"@en ;
+        dc:identifier                  "chndm_1981-1-2" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1981-1-2> .
+
+<http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "printed, dyed & painted textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221> .
+
+<http://data.silknow.org/object/7e5773bf-49b0-3adb-ac3b-93968957d74a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1981-1-2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221/observation/1> , <http://data.silknow.org/image/3f6fdeed-572c-3965-b876-62db29da9100> , <http://data.silknow.org/production/997b9ae1-bb5d-315f-982f-db783ac37d4a> , <http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221/category/1> , <http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221> , <http://data.silknow.org/object/a2893d19-7655-3d12-ab82-e14950ba1221/domain/1> , <http://data.silknow.org/event/ffe9af4e-0dce-3200-bc74-312efbf783e5> , <http://data.silknow.org/event/6ca78f32-1067-31ba-928f-f405a9a60fa6> ;
+        dc:identifier       "chndm_1981-1-2.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .

@@ -1,0 +1,83 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d84d8d06-a193-347a-9190-4a4489981bfc> .
+
+<http://data.silknow.org/production/7f16c427-88dc-3bf5-9475-444944ee13d2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/244> , <http://data.silknow.org/vocabulary/366> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/image/e8d85c78-6ebf-3a67-b495-a749f2b1f560>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000029168" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/24768_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000029168.jpg> .
+
+<http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- conserva fragments de voraviu"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a> .
+
+<http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Diferents fragments d'un mateix teixit cosits sobre un teixit de base. Els fragments tenen la forma de la part superior d'una peça d'indumentaria"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a> .
+
+<http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a> .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/event/05212844-083e-3548-8fc2-3c0d1d932ad8>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/event/230f780a-8627-30b7-8dbb-f32bcfdcded1>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a> .
+
+<http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a> .
+
+<http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Diferents fragments d'un mateix teixit cosits sobre un teixit de base. Els fragments tenen la forma de la part superior d'una peça d'indumentaria"@es , "conserva fragments de voraviu"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e8d85c78-6ebf-3a67-b495-a749f2b1f560> ;
+        ecrm:P3_has_note               "Diferents fragments d'un mateix teixit cosits sobre un teixit de base. Els fragments tenen la forma de la part superior d'una peça d'indumentaria"@es , "conserva fragments de voraviu"@es ;
+        dc:identifier                  "4829" .
+
+<http://data.silknow.org/object/d84d8d06-a193-347a-9190-4a4489981bfc>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 24768" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a/category/1> , <http://data.silknow.org/event/05212844-083e-3548-8fc2-3c0d1d932ad8> , <http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a/observation/1> , <http://data.silknow.org/production/7f16c427-88dc-3bf5-9475-444944ee13d2> , <http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a/domain/1> , <http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a> , <http://data.silknow.org/image/e8d85c78-6ebf-3a67-b495-a749f2b1f560> , <http://data.silknow.org/object/5706af2e-7751-32c1-a449-f5e4a45db47a/observation/2> , <http://data.silknow.org/event/230f780a-8627-30b7-8dbb-f32bcfdcded1> ;
+        dc:identifier       "24768.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

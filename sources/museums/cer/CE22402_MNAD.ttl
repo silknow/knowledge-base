@@ -1,0 +1,97 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Arte Chino"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38> .
+
+<http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Rollo vertical" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38> .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/014290a6-9244-3afb-96d9-a03580dab4b4>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38> .
+
+<http://data.silknow.org/image/a7645156-1687-31a7-a037-9540fac72484>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Banda de seda: Motivos geométricos; Motivos florales"@es ;
+        ecrm:P3_has_note  "Banda de seda: Motivos geométricos; Motivos florales"@es .
+
+<http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Arte Chino"@es , "Rollo de pintura vertical, enmarcada por una banda de seda muy fina que parece pintada con colores suaves (verdes, malvas y azules) con motivos geométricos. Montado además en banda de seda adamascada en su color con motivos florales. Barras de madera en los extremos, la superior más gruesa y de sección circular, rematada por tejido bordado con motivo geométrico en azul y blanco. Representa sobre fondo dorado unas ramas floridas con flores rojas sobre las que se posa un pájaro de plumaje blanco y negro. En el ángulo superior izquierdo una inscripción."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/fae1e8e8-acd7-3024-bb32-72b3dfba50f4> ;
+        ecrm:P3_has_note               "Arte Chino"@es , "Rollo de pintura vertical, enmarcada por una banda de seda muy fina que parece pintada con colores suaves (verdes, malvas y azules) con motivos geométricos. Montado además en banda de seda adamascada en su color con motivos florales. Barras de madera en los extremos, la superior más gruesa y de sección circular, rematada por tejido bordado con motivo geométrico en azul y blanco. Representa sobre fondo dorado unas ramas floridas con flores rojas sobre las que se posa un pájaro de plumaje blanco y negro. En el ángulo superior izquierdo una inscripción."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/a7645156-1687-31a7-a037-9540fac72484> ;
+        dc:identifier                  "CE22402" .
+
+<http://data.silknow.org/production/0b553bb6-e2fe-3e6d-8e85-eb0f57acbaf4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38> ;
+        ecrm:P126_employed      "Tinta"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "Pintado"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> , <http://data.silknow.org/vocabulary/10> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1401_1600> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Pintura" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38> .
+
+<http://data.silknow.org/object/a78e355d-eae1-3d9f-9037-2bc91c032b56>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE22402" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/a316edf0-2a71-3ae8-9892-ad8d6af097d8> , <http://data.silknow.org/image/fae1e8e8-acd7-3024-bb32-72b3dfba50f4> , <http://data.silknow.org/production/0b553bb6-e2fe-3e6d-8e85-eb0f57acbaf4> , <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38/domain/1> , <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38/domain/2> , <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38/category/1> , <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38> , <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38/observation/1> , <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38/observation/2> , <http://data.silknow.org/event/014290a6-9244-3afb-96d9-a03580dab4b4> ;
+        dc:identifier       "CE22402_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/event/a316edf0-2a71-3ae8-9892-ad8d6af097d8>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Colección de Arte Oriental" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38> .
+
+<http://data.silknow.org/image/fae1e8e8-acd7-3024-bb32-72b3dfba50f4>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE22402" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE22402_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE22402&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Rollo de pintura vertical, enmarcada por una banda de seda muy fina que parece pintada con colores suaves (verdes, malvas y azules) con motivos geométricos. Montado además en banda de seda adamascada en su color con motivos florales. Barras de madera en los extremos, la superior más gruesa y de sección circular, rematada por tejido bordado con motivo geométrico en azul y blanco. Representa sobre fondo dorado unas ramas floridas con flores rojas sobre las que se posa un pájaro de plumaje blanco y negro. En el ángulo superior izquierdo una inscripción."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0ba4dbff-7f5e-3d11-990d-fa42408b3f38> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a78e355d-eae1-3d9f-9037-2bc91c032b56> .

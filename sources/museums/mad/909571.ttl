@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/9ffa3155-a0c4-353c-8f9a-8dcd35bda18c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1986" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/bf9a5106-d8f8-331c-abab-a5bd3d55c8de> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/86fd58ab-915c-3cd9-932a-c53fd1d19b4b>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, Louis XIV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bf9a5106-d8f8-331c-abab-a5bd3d55c8de> ;
+        ecrm:P3_has_note        "France, Louis XIV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/2bf3472f-deb9-3be0-8763-bf0f09040200> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/bf9a5106-d8f8-331c-abab-a5bd3d55c8de>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "pente de lit, France, Louis XIV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b2578b74-4f87-3202-98f0-c194c4a90b4a> ;
+        dc:identifier                  "56955.E" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909571> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/bf9a5106-d8f8-331c-abab-a5bd3d55c8de/category/1>
+        a                    silk:T35 ;
+        silk:L1              "pente de lit" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bf9a5106-d8f8-331c-abab-a5bd3d55c8de> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d6d76dd7-6a02-3504-8c51-453f9f1935ed> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/bf9a5106-d8f8-331c-abab-a5bd3d55c8de> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/d6d76dd7-6a02-3504-8c51-453f9f1935ed>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 56955.E" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bf9a5106-d8f8-331c-abab-a5bd3d55c8de/category/1> , <http://data.silknow.org/production/86fd58ab-915c-3cd9-932a-c53fd1d19b4b> , <http://data.silknow.org/image/b2578b74-4f87-3202-98f0-c194c4a90b4a> , <http://data.silknow.org/event/9ffa3155-a0c4-353c-8f9a-8dcd35bda18c> , <http://data.silknow.org/object/bf9a5106-d8f8-331c-abab-a5bd3d55c8de> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "909571.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/image/b2578b74-4f87-3202-98f0-c194c4a90b4a>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909571_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/e17ab8fb-8fec-405f-99ff-7bfcb7a4c27f.jpg> .

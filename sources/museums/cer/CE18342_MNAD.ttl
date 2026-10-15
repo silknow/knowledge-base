@@ -1,0 +1,109 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/image/de213b03-cc89-33c9-bd87-173017341a98>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE18342" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE18342_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE18342&txt_id_imagen=1> .
+
+<http://data.silknow.org/event/7c2668d9-e60a-3f13-ab53-7dc32e4e0f77>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9> .
+
+<http://data.silknow.org/production/639099bc-6194-3f32-b240-f4e25b481d65>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9> ;
+        ecrm:P126_employed      "Forro: Seda azul"@es , "Lomo (encuadernación): Seda"@es , "Tapa: Plata dorado"@es , "Libro: Papel blanco"@es ;
+        ecrm:P32_used_general_technique
+                "Forro: Moaré"@es , "Lomo (encuadernación): Terciopelo"@es , "Tapa: Dorado"@es , "Tapa: Pintado"@es , "Grabado (metal)"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1858> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/6c0b14bb-0b89-30e8-a7b4-7546849d340b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE18342" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/7c2668d9-e60a-3f13-ab53-7dc32e4e0f77> , <http://data.silknow.org/production/639099bc-6194-3f32-b240-f4e25b481d65> , <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9> , <http://data.silknow.org/event/e7d03ab1-4622-38af-9ea2-10f8f9d5232d> , <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/domain/2> , <http://data.silknow.org/image/de213b03-cc89-33c9-bd87-173017341a98> , <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/category/1> , <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/observation/2> , <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/observation/1> , <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/domain/1> ;
+        dc:identifier       "CE18342_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Carné de baile con dos tapas de plata troquelada de repujado mecánico y grabado manual y \"guilloché\". En la tapa anterior, greca de eslabones cuadrados, ces en las esquinas, ventana ochavada alargada, con vidrio donde se representa un lince que ataca el nido de un pájaro. En la tapa posterior, grabado con la palabra \"Recuerdo\" en un rectángulo inscrito en otro. Greca de cadenas y ces en esquinas. Lomo de terciopelo azul. Forro de moaré azul con solapa y portalápices. Libro de notas, semanario y calendario iluminado, en francés, del año 1858, encolado en la primera página. En la segunda página, grabado en el que se representa una novia quitándose el velo nupcial, ayudada por una doncella. Lapicero de plata sobredorada grabada. Marca francesa."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9> .
+
+<http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Platería" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9> .
+
+<http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Carné de baile" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9> .
+
+<http://data.silknow.org/event/e7d03ab1-4622-38af-9ea2-10f8f9d5232d>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Contemporánea"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9> .
+
+<http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Carné de baile con dos tapas de plata troquelada de repujado mecánico y grabado manual y \"guilloché\". En la tapa anterior, greca de eslabones cuadrados, ces en las esquinas, ventana ochavada alargada, con vidrio donde se representa un lince que ataca el nido de un pájaro. En la tapa posterior, grabado con la palabra \"Recuerdo\" en un rectángulo inscrito en otro. Greca de cadenas y ces en esquinas. Lomo de terciopelo azul. Forro de moaré azul con solapa y portalápices. Libro de notas, semanario y calendario iluminado, en francés, del año 1858, encolado en la primera página. En la segunda página, grabado en el que se representa una novia quitándose el velo nupcial, ayudada por una doncella. Lapicero de plata sobredorada grabada. Marca francesa."@es , "Edad Contemporánea"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/de213b03-cc89-33c9-bd87-173017341a98> ;
+        ecrm:P3_has_note               "Edad Contemporánea"@es , "Carné de baile con dos tapas de plata troquelada de repujado mecánico y grabado manual y \"guilloché\". En la tapa anterior, greca de eslabones cuadrados, ces en las esquinas, ventana ochavada alargada, con vidrio donde se representa un lince que ataca el nido de un pájaro. En la tapa posterior, grabado con la palabra \"Recuerdo\" en un rectángulo inscrito en otro. Greca de cadenas y ces en esquinas. Lomo de terciopelo azul. Forro de moaré azul con solapa y portalápices. Libro de notas, semanario y calendario iluminado, en francés, del año 1858, encolado en la primera página. En la segunda página, grabado en el que se representa una novia quitándose el velo nupcial, ayudada por una doncella. Lapicero de plata sobredorada grabada. Marca francesa."@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/dimension/1> , <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/dimension/2> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/9ca40af7-3695-32a3-9158-928b5998d557> ;
+        dc:identifier                  "CE18342" .
+
+<http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/44> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6815b3f1-c926-37ca-b231-8a56934d67a9> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/9ca40af7-3695-32a3-9158-928b5998d557>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "En el libro de notas.: Escena nupcial;   En la tapa anterior.: Representación animal"@es ;
+        ecrm:P3_has_note  "En el libro de notas.: Escena nupcial;   En la tapa anterior.: Representación animal"@es .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6c0b14bb-0b89-30e8-a7b4-7546849d340b> .

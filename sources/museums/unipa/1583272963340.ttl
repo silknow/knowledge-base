@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/3fdd5832-94d4-334e-96d0-e9f77491f529>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Assente"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/62c9fcaf-c759-3da5-a1cd-0efd2b404496> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Assente"@it .
+
+<http://data.silknow.org/object/62c9fcaf-c759-3da5-a1cd-0efd2b404496/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/62c9fcaf-c759-3da5-a1cd-0efd2b404496> ;
+        ecrm:P42_assigned    "Palla" .
+
+<http://data.silknow.org/event/a6d56f75-fd06-326e-ad5c-0d123e39e3b2>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/5d9495a8-17c8-3124-8993-29bf90ea9225> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/62c9fcaf-c759-3da5-a1cd-0efd2b404496> .
+
+<http://data.silknow.org/object/62c9fcaf-c759-3da5-a1cd-0efd2b404496/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "16" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "16"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/62c9fcaf-c759-3da5-a1cd-0efd2b404496>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "XIX secolo"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/68ce7a5e-9cfa-3002-8f9f-7b5e57cee4eb> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/62c9fcaf-c759-3da5-a1cd-0efd2b404496/dimension/2> , <http://data.silknow.org/object/62c9fcaf-c759-3da5-a1cd-0efd2b404496/dimension/1> ;
+        dc:identifier                  "1583272963340" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/12ed648e-d8cb-3398-8070-d0444799f107>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1583272963340" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/62c9fcaf-c759-3da5-a1cd-0efd2b404496> , <http://data.silknow.org/object/3fdd5832-94d4-334e-96d0-e9f77491f529> , <http://data.silknow.org/event/a6d56f75-fd06-326e-ad5c-0d123e39e3b2> , <http://data.silknow.org/image/68ce7a5e-9cfa-3002-8f9f-7b5e57cee4eb> , <http://data.silknow.org/production/195d90e0-178f-3570-a16c-28e0ce7ae431> , <http://data.silknow.org/object/62c9fcaf-c759-3da5-a1cd-0efd2b404496/type/1> ;
+        dc:identifier       "1583272963340.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/image/68ce7a5e-9cfa-3002-8f9f-7b5e57cee4eb>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1583273659_acireale10" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1583272963340_0.jpg> .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/12ed648e-d8cb-3398-8070-d0444799f107> .
+
+<http://data.silknow.org/actor/5d9495a8-17c8-3124-8993-29bf90ea9225>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Acireale, Museo della Basilica di San Sebastiano" ;
+        ecrm:P1_is_identified_by  "Acireale, Museo della Basilica di San Sebastiano" .
+
+<https://sws.geonames.org/2523118/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/195d90e0-178f-3570-a16c-28e0ce7ae431>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/62c9fcaf-c759-3da5-a1cd-0efd2b404496> ;
+        ecrm:P32_used_general_technique
+                "Taffetas liseré ricamato"@it ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2523118/> .
+
+<http://data.silknow.org/object/62c9fcaf-c759-3da5-a1cd-0efd2b404496/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "16" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "16"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

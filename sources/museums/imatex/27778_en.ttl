@@ -1,0 +1,104 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a2e74bd9-8ed3-3bce-a6a4-472db0738592> .
+
+<http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "41" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "41"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/3abdadb8-481b-32a6-9e09-15907839d8ae>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033473" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27778_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033473.jpg> .
+
+<http://data.silknow.org/actor/5e9abb6b-4d93-39f1-b10d-6dce9d2ee889>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Cardús de Badía, Maria" ;
+        ecrm:P1_is_identified_by  "Cardús de Badía, Maria" .
+
+<http://data.silknow.org/event/6395dd8a-6768-3960-8039-a465eccecd03>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209> .
+
+<http://data.silknow.org/object/a2e74bd9-8ed3-3bce-a6a4-472db0738592>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27778" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/0646cb4e-8607-393f-a67b-deaf0cefdcf1> , <http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209> , <http://data.silknow.org/production/9fbed6e2-649d-35ae-a763-ae7ed0252efb> , <http://data.silknow.org/event/6395dd8a-6768-3960-8039-a465eccecd03> , <http://data.silknow.org/image/3abdadb8-481b-32a6-9e09-15907839d8ae> , <http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209/domain/1> , <http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209/category/1> ;
+        dc:identifier       "27778.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/0646cb4e-8607-393f-a67b-deaf0cefdcf1>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/5e9abb6b-4d93-39f1-b10d-6dce9d2ee889> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "Cardús de Badía, Maria" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209> ;
+        ecrm:P3_has_note               "donacions" ;
+        ecrm:P4_has_time-span          <http://data.silknow.org/timespan/1990_03_01> .
+
+<http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209> .
+
+<http://data.silknow.org/production/9fbed6e2-649d-35ae-a763-ae7ed0252efb/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/c95a401e-fc9b-3d46-8108-cbcc51a2080d> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/production/9fbed6e2-649d-35ae-a763-ae7ed0252efb>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/366> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/9fbed6e2-649d-35ae-a763-ae7ed0252efb/activity/1> .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .
+
+<http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209> .
+
+<http://data.silknow.org/actor/c95a401e-fc9b-3d46-8108-cbcc51a2080d>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "desconegut" ;
+        ecrm:P1_is_identified_by  "desconegut" .
+
+<http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "56.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "56.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3abdadb8-481b-32a6-9e09-15907839d8ae> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209/dimension/1> , <http://data.silknow.org/object/5c113d2d-fd41-3062-a281-a3235ae0f209/dimension/2> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> ;
+        dc:identifier                  "12635" .

@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/d55007f9-0801-329a-8bdc-ea64768145b4>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/73d1baf2-10cb-39e5-b57d-b10d0ab62297> .
+
+<http://data.silknow.org/production/3ee784ec-c96d-3e45-9356-98bd2e1e8099>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/73d1baf2-10cb-39e5-b57d-b10d0ab62297> ;
+        ecrm:P126_employed      "Silk chiffon, cut pile, devoré (burnout)"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1926_1930> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/73d1baf2-10cb-39e5-b57d-b10d0ab62297/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile Sample" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/73d1baf2-10cb-39e5-b57d-b10d0ab62297> .
+
+<http://data.silknow.org/object/fb02773b-072f-318a-9966-83c1755bccf4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 52.238.30" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/e33e3e26-0c60-3aea-bf55-cf0c51929ff2> , <http://data.silknow.org/production/3ee784ec-c96d-3e45-9356-98bd2e1e8099> , <http://data.silknow.org/event/d55007f9-0801-329a-8bdc-ea64768145b4> , <http://data.silknow.org/object/73d1baf2-10cb-39e5-b57d-b10d0ab62297> , <http://data.silknow.org/object/73d1baf2-10cb-39e5-b57d-b10d0ab62297/category/1> , <http://data.silknow.org/object/73d1baf2-10cb-39e5-b57d-b10d0ab62297/domain/1> ;
+        dc:identifier       "1139516.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/73d1baf2-10cb-39e5-b57d-b10d0ab62297>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "52.238.30" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-sample-5223830> .
+
+<http://data.silknow.org/event/e33e3e26-0c60-3aea-bf55-cf0c51929ff2>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c48c63d2-47aa-39e5-ac7f-6af70ba30780> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Mary B. Jackson Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/73d1baf2-10cb-39e5-b57d-b10d0ab62297> .
+
+<http://data.silknow.org/actor/c48c63d2-47aa-39e5-ac7f-6af70ba30780>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Mary B. Jackson Fund" ;
+        ecrm:P1_is_identified_by  "Mary B. Jackson Fund" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/73d1baf2-10cb-39e5-b57d-b10d0ab62297/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/73d1baf2-10cb-39e5-b57d-b10d0ab62297> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fb02773b-072f-318a-9966-83c1755bccf4> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .

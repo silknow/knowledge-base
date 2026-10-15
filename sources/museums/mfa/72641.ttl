@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd> .
+
+<http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "1.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "1.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "23.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "23.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Yellow silk ground with a chain-like design woven with gold thread, made by winding silk with silver gilt."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bba0d8db-d174-3f12-b05d-033c0600c5a1> ;
+        ecrm:P3_has_note               "Yellow silk ground with a chain-like design woven with gold thread, made by winding silk with silver gilt."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd/dimension/2> , <http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd/dimension/1> ;
+        dc:identifier                  "86.31" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/72641> .
+
+<http://data.silknow.org/image/bba0d8db-d174-3f12-b05d-033c0600c5a1>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "844075" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/72641_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/844075/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/89b618b0-e148-37fb-9d40-2388eab4fd3a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 86.31" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd> , <http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd/category/1> , <http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd/observation/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/event/59396590-00ef-3a47-b726-a8b8e744920b> , <http://data.silknow.org/production/2c577fa4-d3fc-3daf-becf-abac7333d41b> , <http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd/domain/1> , <http://data.silknow.org/image/bba0d8db-d174-3f12-b05d-033c0600c5a1> ;
+        dc:identifier       "72641.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/event/59396590-00ef-3a47-b726-a8b8e744920b>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd> .
+
+<http://data.silknow.org/place/594d387e-eb81-3cc6-b46d-2b9e9cfbc935>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Italian, Spanish or French" ;
+        ecrm:P87_is_identified_by  "Italian, Spanish or French" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/89b618b0-e148-37fb-9d40-2388eab4fd3a> .
+
+<http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Yellow silk ground with a chain-like design woven with gold thread, made by winding silk with silver gilt."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd> .
+
+<http://data.silknow.org/production/2c577fa4-d3fc-3daf-becf-abac7333d41b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/594d387e-eb81-3cc6-b46d-2b9e9cfbc935> .
+
+<http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Gimp" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/48f87fc7-642f-3624-8c1c-5ff3244572bd> .

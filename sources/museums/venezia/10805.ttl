@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Velluto ad inferriata"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23> .
+
+<http://data.silknow.org/production/4d801785-5369-360f-b4bf-a06e3efd1b50>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23> ;
+        ecrm:P126_employed      "Ordito e trama: seta"@it ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404465> .
+
+<http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "470" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "470"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e6f475f1-cc1e-31d3-88a5-49807653170c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10805" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23/category/1> , <http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23> , <http://data.silknow.org/production/4d801785-5369-360f-b4bf-a06e3efd1b50> , <http://data.silknow.org/event/b9463dac-2bdc-3573-93d2-0a5d55291d35> , <http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23/domain/1> , <http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23/observation/1> ;
+        dc:identifier       "10805.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "500" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "500"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/b9463dac-2bdc-3573-93d2-0a5d55291d35>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e6f475f1-cc1e-31d3-88a5-49807653170c> .
+
+<http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23>
+        a                       ecrm:E22_Man-Made_Object ;
+        rdfs:comment            "Velluto ad inferriata"@it ;
+        ecrm:P3_has_note        "Velluto ad inferriata"@it ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23/dimension/1> , <http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23/dimension/2> ;
+        dc:identifier           "0072" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/10805/?WEB=MuseiVE> .
+
+<http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/713b1cb5-a11d-3fd1-b1a6-20627638db23> .

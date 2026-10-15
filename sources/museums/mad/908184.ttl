@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/42912e85-b3b2-3529-ab45-b9ed6cf6f593>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Marimekko, Finlande, 2008, Marimekko, Finlande, 1954, Vuokko Eskolin-Nurmesniemi, Finlande, 1954"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9689e1c2-51b4-36b7-a8a3-0e3004a21fcc> ;
+        dc:identifier                  "2008.141.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908184> .
+
+<http://data.silknow.org/object/42912e85-b3b2-3529-ab45-b9ed6cf6f593/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/42912e85-b3b2-3529-ab45-b9ed6cf6f593> .
+
+<http://data.silknow.org/object/3a9c090b-e1d8-3a2c-964d-285280f2d0cb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2008.141.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/3bc4f373-e545-3346-bd13-78bbc754dd2b> , <http://data.silknow.org/image/9689e1c2-51b4-36b7-a8a3-0e3004a21fcc> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/42912e85-b3b2-3529-ab45-b9ed6cf6f593/category/1> , <http://data.silknow.org/object/42912e85-b3b2-3529-ab45-b9ed6cf6f593> , <http://data.silknow.org/event/6d241dae-5e63-3a97-a3ad-931f04e521e5> ;
+        dc:identifier       "908184.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/9689e1c2-51b4-36b7-a8a3-0e3004a21fcc>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908184_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/e1d9ca34-1cf4-4132-8d55-4e82dc0a9884.jpg> .
+
+<https://sws.geonames.org/660013/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/6d241dae-5e63-3a97-a3ad-931f04e521e5>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Marimekko, 2008" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/42912e85-b3b2-3529-ab45-b9ed6cf6f593> .
+
+<http://data.silknow.org/production/3bc4f373-e545-3346-bd13-78bbc754dd2b>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Marimekko, Finlande, 2008, Marimekko, Finlande, 1954, Vuokko Eskolin-Nurmesniemi, Finlande, 1954" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/42912e85-b3b2-3529-ab45-b9ed6cf6f593> ;
+        ecrm:P126_employed      "Toile de coton imprimée au cadre."@fr ;
+        ecrm:P3_has_note        "Marimekko, Finlande, 2008, Marimekko, Finlande, 1954, Vuokko Eskolin-Nurmesniemi, Finlande, 1954" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/2008> , <http://data.silknow.org/timespan/1954> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/660013/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3a9c090b-e1d8-3a2c-964d-285280f2d0cb> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/42912e85-b3b2-3529-ab45-b9ed6cf6f593> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

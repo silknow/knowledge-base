@@ -1,0 +1,100 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d> .
+
+<http://data.silknow.org/production/faa2ab13-5f9f-3a49-b993-72bfdc27694f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d> ;
+        ecrm:P126_employed      "Silk; velvet"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/60d53528-42dd-395f-8000-f7fb90d790c1> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/image/30b503b2-025e-3ceb-9f5c-3638bdbe062c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/982816_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/28268.jpg> .
+
+<http://data.silknow.org/event/c1826d86-aa77-3c27-962f-c70ffd1e3ed9>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d> .
+
+<http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/30b503b2-025e-3ceb-9f5c-3638bdbe062c> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d/dimension/2> , <http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d/dimension/1> ;
+        dc:identifier                  "1991.123.19" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/length-199112319> .
+
+<http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "94" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "94"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/44f363ac-597d-3ba6-adcb-7e05cde91318>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of L. J. Cella III" ;
+        ecrm:P1_is_identified_by  "Gift of L. J. Cella III" .
+
+<http://data.silknow.org/object/8e5b6f05-4bf7-308a-825a-5bc077b5ab01>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1991.123.19" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/faba9080-9dfa-3e3d-a771-516b864f49c5> , <http://data.silknow.org/event/66cbdfb2-2157-3ef5-b2a1-6522a6021838> , <http://data.silknow.org/event/c1826d86-aa77-3c27-962f-c70ffd1e3ed9> , <http://data.silknow.org/image/30b503b2-025e-3ceb-9f5c-3638bdbe062c> , <http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d> , <http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d/domain/1> , <http://data.silknow.org/production/faa2ab13-5f9f-3a49-b993-72bfdc27694f> , <http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d/category/1> ;
+        dc:identifier       "982816.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/faba9080-9dfa-3e3d-a771-516b864f49c5>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "From Paris to Providence" , "January 12 - April 8, 2001" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "From Paris to Providence" , "January 12 - April 8, 2001" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/paris-providence> .
+
+<http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "88.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "88.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/66cbdfb2-2157-3ef5-b2a1-6522a6021838>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/44f363ac-597d-3ba6-adcb-7e05cde91318> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of L. J. Cella III" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8e5b6f05-4bf7-308a-825a-5bc077b5ab01> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Length" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7614e426-b45b-3440-9dfc-07e51d86432d> .

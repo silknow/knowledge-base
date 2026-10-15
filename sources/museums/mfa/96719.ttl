@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/8f3c6c94-46ef-3c28-89bf-48b8b2d00a27>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202> .
+
+<http://data.silknow.org/production/c012af9f-b238-3b72-a9f2-0a52d26b0de5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202> ;
+        ecrm:P126_employed      "Cotton blockprint with painted details in polychrome on white"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1797_1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2990969/> .
+
+<http://data.silknow.org/image/30571242-a9b5-3d28-a9ad-ff26b6729501>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "741221" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/96719_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/741221/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "54.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "54.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Piece of printed cotton, polychrome on white ground showing vignette of couple in swing supported by two trees above, two figures in classical dress, on wingèd, one holding garland of flowers, somewhat stained, a number of small holes; probably from the same fabric as 55.103."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202> .
+
+<http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "41.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "41.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<https://sws.geonames.org/2990969/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/62f532d4-8ff5-3e5e-99ee-c7002bf70b4e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 55.102" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/30571242-a9b5-3d28-a9ad-ff26b6729501> , <http://data.silknow.org/production/c012af9f-b238-3b72-a9f2-0a52d26b0de5> , <http://data.silknow.org/event/8f3c6c94-46ef-3c28-89bf-48b8b2d00a27> , <http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202/domain/1> , <http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202> , <http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202/category/1> , <http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202/observation/1> ;
+        dc:identifier       "96719.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Piece of printed cotton, polychrome on white ground showing vignette of couple in swing supported by two trees above, two figures in classical dress, on wingèd, one holding garland of flowers, somewhat stained, a number of small holes; probably from the same fabric as 55.103."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/30571242-a9b5-3d28-a9ad-ff26b6729501> ;
+        ecrm:P3_has_note               "Piece of printed cotton, polychrome on white ground showing vignette of couple in swing supported by two trees above, two figures in classical dress, on wingèd, one holding garland of flowers, somewhat stained, a number of small holes; probably from the same fabric as 55.103."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202/dimension/2> , <http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202/dimension/1> ;
+        dc:identifier                  "55.102" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/96719> .
+
+<http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/62f532d4-8ff5-3e5e-99ee-c7002bf70b4e> .
+
+<http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Printed cotton: The Swing" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/093c13ce-989f-3dcc-af58-299a388f4202> .

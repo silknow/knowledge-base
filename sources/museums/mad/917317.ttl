@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/799cbd26-ec91-3873-b585-4c4b96c08b26>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don F. Croco" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/08a111f4-d848-34fb-9b20-1a5597fb0878> .
+
+<http://data.silknow.org/image/b5364e9b-da31-3522-bf58-f6a619801dde>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/917317_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/80eb110b-e158-46f1-8404-034a53aab3dc.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/08a111f4-d848-34fb-9b20-1a5597fb0878>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "F. Croco, Paris, 1855, Robert"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b5364e9b-da31-3522-bf58-f6a619801dde> ;
+        dc:identifier                  "BAD 5357 (CC 83)" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/917317> .
+
+<http://data.silknow.org/production/29ed39a5-cd95-3a0f-8cd5-c9c6aa6c70e2>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "F. Croco, Paris, 1855, Robert" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/08a111f4-d848-34fb-9b20-1a5597fb0878> ;
+        ecrm:P126_employed      "Couverture en peau verte"@fr ;
+        ecrm:P3_has_note        "F. Croco, Paris, 1855, Robert" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1855> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2988507/> .
+
+<http://data.silknow.org/object/cf7f11d6-9851-3e9a-825a-6187ba9e0caf>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record BAD 5357 (CC 83)" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/29ed39a5-cd95-3a0f-8cd5-c9c6aa6c70e2> , <http://data.silknow.org/event/799cbd26-ec91-3873-b585-4c4b96c08b26> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/b5364e9b-da31-3522-bf58-f6a619801dde> , <http://data.silknow.org/object/08a111f4-d848-34fb-9b20-1a5597fb0878> ;
+        dc:identifier       "917317.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/cf7f11d6-9851-3e9a-825a-6187ba9e0caf> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/08a111f4-d848-34fb-9b20-1a5597fb0878> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2988507/>
+        a       ecrm:E53_Place .

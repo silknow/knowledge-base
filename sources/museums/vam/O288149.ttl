@@ -1,0 +1,108 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/production/5e47db2f-e965-359b-ad75-ccdb69085c70>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec> ;
+        ecrm:P126_employed      "Silk, satin, woven"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1830_1860> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 6.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "6.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Silk ribbon, France, 1830-1860."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec> .
+
+<http://data.silknow.org/image/fe93faaa-a71d-3742-bba2-92df1104cfc9>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017JY8542" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O288149_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017JY/2017JY8542.jpg> .
+
+<http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Ribbon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6db26278-7855-339e-a7d9-68845e330355> .
+
+<http://data.silknow.org/object/6db26278-7855-339e-a7d9-68845e330355>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O288149" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec/observation/2> , <http://data.silknow.org/production/5e47db2f-e965-359b-ad75-ccdb69085c70> , <http://data.silknow.org/image/fe93faaa-a71d-3742-bba2-92df1104cfc9> , <http://data.silknow.org/event/c5b4156d-fbf0-3944-b6f4-a07c50d54b32> , <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec/observation/1> , <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec/domain/1> , <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> ;
+        dc:identifier       "O288149.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/actor/cc36948d-2364-3db6-b0e0-cba7dbf988e4>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Mrs M. Jackson" ;
+        ecrm:P1_is_identified_by  "Given by Mrs M. Jackson" .
+
+<http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk ribbon, the width of which is filled by three stripes of arched compartments; brown and white, pink and white and emerald green and white. The white has a surface bound twill, the colours in satin. The compartments are defined by an edging of pale pink silk, and through them run pale pink stems bearing small, angular flowers imitating those in woven shawls. The flowers are in black and golden yellow and are formed by weft threads. The ribbon has narrow black selvedges."@en , "Silk ribbon, France, 1830-1860."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/fe93faaa-a71d-3742-bba2-92df1104cfc9> ;
+        ecrm:P3_has_note               "Silk ribbon, France, 1830-1860."@en , "Silk ribbon, the width of which is filled by three stripes of arched compartments; brown and white, pink and white and emerald green and white. The white has a surface bound twill, the colours in satin. The compartments are defined by an edging of pale pink silk, and through them run pale pink stems bearing small, angular flowers imitating those in woven shawls. The flowers are in black and golden yellow and are formed by weft threads. The ribbon has narrow black selvedges."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec/dimension/2> , <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec/dimension/1> ;
+        dc:identifier                  "T.180-1970" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O288149> .
+
+<http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 122 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "122"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/c5b4156d-fbf0-3944-b6f4-a07c50d54b32>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/cc36948d-2364-3db6-b0e0-cba7dbf988e4> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Mrs M. Jackson." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec> .
+
+<http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk ribbon, the width of which is filled by three stripes of arched compartments; brown and white, pink and white and emerald green and white. The white has a surface bound twill, the colours in satin. The compartments are defined by an edging of pale pink silk, and through them run pale pink stems bearing small, angular flowers imitating those in woven shawls. The flowers are in black and golden yellow and are formed by weft threads. The ribbon has narrow black selvedges."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec> .
+
+<http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3cf53102-fc49-34c9-9097-9e281dbe06ec> .

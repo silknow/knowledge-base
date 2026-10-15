@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/719dfac1-be37-38bf-9267-359dbf023dff>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c4b6572e-d0f6-32c0-ab3f-10fa799ac668> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/c4b6572e-d0f6-32c0-ab3f-10fa799ac668>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e5d6c1f3-3a9b-3656-ad30-0c4ce9daa3ce> ;
+        dc:identifier                  "16.070X" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-16070x> .
+
+<http://data.silknow.org/object/c4b6572e-d0f6-32c0-ab3f-10fa799ac668/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c4b6572e-d0f6-32c0-ab3f-10fa799ac668> .
+
+<http://data.silknow.org/object/c4b6572e-d0f6-32c0-ab3f-10fa799ac668/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c4b6572e-d0f6-32c0-ab3f-10fa799ac668> .
+
+<http://data.silknow.org/event/47666a5b-3de4-3573-91b0-7421cea2141f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/3a626f45-ece5-373c-968b-9227470f551b> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. J. Bonsall Taylor" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c4b6572e-d0f6-32c0-ab3f-10fa799ac668> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/a8e20f5e-ceb9-33b8-9556-24ad10031afd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 16.070X" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/47666a5b-3de4-3573-91b0-7421cea2141f> , <http://data.silknow.org/event/87abcf06-7302-3360-a826-6cce413e2739> , <http://data.silknow.org/object/c4b6572e-d0f6-32c0-ab3f-10fa799ac668> , <http://data.silknow.org/production/719dfac1-be37-38bf-9267-359dbf023dff> , <http://data.silknow.org/image/e5d6c1f3-3a9b-3656-ad30-0c4ce9daa3ce> , <http://data.silknow.org/object/c4b6572e-d0f6-32c0-ab3f-10fa799ac668/category/1> , <http://data.silknow.org/object/c4b6572e-d0f6-32c0-ab3f-10fa799ac668/domain/1> ;
+        dc:identifier       "967031.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a8e20f5e-ceb9-33b8-9556-24ad10031afd> .
+
+<http://data.silknow.org/image/e5d6c1f3-3a9b-3656-ad30-0c4ce9daa3ce>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/967031_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/13902.jpg> .
+
+<http://data.silknow.org/event/87abcf06-7302-3360-a826-6cce413e2739>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c4b6572e-d0f6-32c0-ab3f-10fa799ac668> .
+
+<http://data.silknow.org/actor/3a626f45-ece5-373c-968b-9227470f551b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. J. Bonsall Taylor" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. J. Bonsall Taylor" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .

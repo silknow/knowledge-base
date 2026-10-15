@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/55418148-b997-3e2b-96cf-8af011a5481a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2> ;
+        ecrm:P126_employed      "Linen, Appliqué embroidery"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/f4fbe750-c5c6-321e-9837-37432e70dffc> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Appliqué embroidered angel, probably from an ecclesiastical vestment. Embroidered on linen grond with gold and silk threads in yellow, green, beige, white and black. Appliqued to wine-colored voided velvet. Cherubim stands on a flaming wheel and holds a scroll. Some silks gone in small areas. Colors bright. Lining and braid later additions."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2> .
+
+<http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/image/a0b23287-b056-3b13-95b5-4c933f45afb8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "582376" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/115485_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/582376/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Appliqué embroidered angel, probably from an ecclesiastical vestment. Embroidered on linen grond with gold and silk threads in yellow, green, beige, white and black. Appliqued to wine-colored voided velvet. Cherubim stands on a flaming wheel and holds a scroll. Some silks gone in small areas. Colors bright. Lining and braid later additions."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a0b23287-b056-3b13-95b5-4c933f45afb8> ;
+        ecrm:P3_has_note               "Appliqué embroidered angel, probably from an ecclesiastical vestment. Embroidered on linen grond with gold and silk threads in yellow, green, beige, white and black. Appliqued to wine-colored voided velvet. Cherubim stands on a flaming wheel and holds a scroll. Some silks gone in small areas. Colors bright. Lining and braid later additions."@en ;
+        dc:identifier                  "63.179" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/115485> .
+
+<http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Ecclesiastical embroidery" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0223f987-7961-3071-8521-f6ec2a914395> .
+
+<http://data.silknow.org/object/0223f987-7961-3071-8521-f6ec2a914395>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 63.179" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2/observation/1> , <http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2/domain/1> , <http://data.silknow.org/image/a0b23287-b056-3b13-95b5-4c933f45afb8> , <http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2/category/1> , <http://data.silknow.org/event/a81d8a65-510d-3f27-b162-3ae23fb56b7d> , <http://data.silknow.org/production/55418148-b997-3e2b-96cf-8af011a5481a> ;
+        dc:identifier       "115485.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/event/a81d8a65-510d-3f27-b162-3ae23fb56b7d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/67209144-ecce-322e-9c82-d7a9327608e2> .

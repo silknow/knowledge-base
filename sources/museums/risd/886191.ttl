@@ -1,0 +1,80 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/448f7a6b-c3a7-31be-bbda-670119bc8aa7>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/efd229f6-13bd-3ffb-a730-0bd45195177c> .
+
+<http://data.silknow.org/event/75021fd4-0488-39d9-9e4f-b6b7a4c27aa3>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/50655d27-5fd6-32b1-bd26-5ca6ad8f026a> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Marshall H. Gould" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/efd229f6-13bd-3ffb-a730-0bd45195177c> .
+
+<http://data.silknow.org/object/dd30403d-586a-3972-846d-5d6733974470>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 46.197A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/efd229f6-13bd-3ffb-a730-0bd45195177c/domain/1> , <http://data.silknow.org/object/efd229f6-13bd-3ffb-a730-0bd45195177c/category/1> , <http://data.silknow.org/production/eed763e0-cdb6-369a-a55e-41b8cb510e69> , <http://data.silknow.org/event/448f7a6b-c3a7-31be-bbda-670119bc8aa7> , <http://data.silknow.org/image/e132d029-90f9-383e-88e6-62c3366971f2> , <http://data.silknow.org/object/efd229f6-13bd-3ffb-a730-0bd45195177c> , <http://data.silknow.org/event/75021fd4-0488-39d9-9e4f-b6b7a4c27aa3> ;
+        dc:identifier       "886191.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/50655d27-5fd6-32b1-bd26-5ca6ad8f026a>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Marshall H. Gould" ;
+        ecrm:P1_is_identified_by  "Gift of Marshall H. Gould" .
+
+<http://data.silknow.org/object/efd229f6-13bd-3ffb-a730-0bd45195177c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/efd229f6-13bd-3ffb-a730-0bd45195177c> .
+
+<http://data.silknow.org/production/eed763e0-cdb6-369a-a55e-41b8cb510e69>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/efd229f6-13bd-3ffb-a730-0bd45195177c> ;
+        ecrm:P126_employed      "silk; metallic yarn"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                "satin weave"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> , <http://data.silknow.org/vocabulary/88> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<http://data.silknow.org/object/efd229f6-13bd-3ffb-a730-0bd45195177c>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e132d029-90f9-383e-88e6-62c3366971f2> ;
+        dc:identifier                  "46.197A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/chair-cover-46197a> .
+
+<http://data.silknow.org/object/efd229f6-13bd-3ffb-a730-0bd45195177c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "chair cover" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/efd229f6-13bd-3ffb-a730-0bd45195177c> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/image/e132d029-90f9-383e-88e6-62c3366971f2>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/886191_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/34061.jpg> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dd30403d-586a-3972-846d-5d6733974470> .

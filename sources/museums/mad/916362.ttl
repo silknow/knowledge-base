@@ -1,0 +1,64 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/ab31c638-363a-3dd4-8a04-f9576aa8c4d5>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "E. Corillot, 1925" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/49030d61-4708-320c-b960-3dfa9a70e8b5> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/168> ;
+        ecrm:P3_has_note        "E. Corillot, 1925" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1925> .
+
+<http://data.silknow.org/object/85912096-773b-397a-bfa4-e366ed2ebf1b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 25173" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/ab31c638-363a-3dd4-8a04-f9576aa8c4d5> , <http://data.silknow.org/image/b4e3acf2-8e6b-3271-ad5a-378b5c21acf7> , <http://data.silknow.org/event/98d31231-e9ca-3c46-8075-2e5163f97850> , <http://data.silknow.org/object/49030d61-4708-320c-b960-3dfa9a70e8b5/category/1> , <http://data.silknow.org/object/49030d61-4708-320c-b960-3dfa9a70e8b5> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "916362.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/98d31231-e9ca-3c46-8075-2e5163f97850>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Cornille et Cie, 1926" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/49030d61-4708-320c-b960-3dfa9a70e8b5> .
+
+<http://data.silknow.org/object/49030d61-4708-320c-b960-3dfa9a70e8b5/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/49030d61-4708-320c-b960-3dfa9a70e8b5> .
+
+<http://data.silknow.org/image/b4e3acf2-8e6b-3271-ad5a-378b5c21acf7>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/916362_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/ff41bcfb-94c2-4721-8916-96a1e1d53735.jpg> .
+
+<http://data.silknow.org/object/49030d61-4708-320c-b960-3dfa9a70e8b5>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, E. Corillot, 1925"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b4e3acf2-8e6b-3271-ad5a-378b5c21acf7> ;
+        dc:identifier                  "25173" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/916362> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/85912096-773b-397a-bfa4-e366ed2ebf1b> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/49030d61-4708-320c-b960-3dfa9a70e8b5> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

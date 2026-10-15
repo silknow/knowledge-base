@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/7977a644-f8cd-3b61-89af-8e8fe2b46d3f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934129_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/56b8f951-8009-42ed-9667-233ad0b92a43.jpg> .
+
+<http://data.silknow.org/production/80a51507-a9e6-3a4a-88c4-5acc6d108f64>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Inde, Côte de Coromandel, 18e siècle (fin)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e79a0795-1b13-3cdd-b8c3-1dcd70048482> ;
+        ecrm:P126_employed      "Toile de coton, peinte, teinte par mordançage et réserve"@fr ;
+        ecrm:P3_has_note        "Inde, Côte de Coromandel, 18e siècle (fin)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1776_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/8767343/> , <https://sws.geonames.org/1273819/> .
+
+<http://data.silknow.org/object/e79a0795-1b13-3cdd-b8c3-1dcd70048482/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e79a0795-1b13-3cdd-b8c3-1dcd70048482> .
+
+<https://sws.geonames.org/8767343/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/56789781-16e1-36a0-b2fd-b5c4f4775d4e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Atelier Forrer, 2017" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e79a0795-1b13-3cdd-b8c3-1dcd70048482> .
+
+<http://data.silknow.org/object/e79a0795-1b13-3cdd-b8c3-1dcd70048482>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Inde, Côte de Coromandel, 18e siècle (fin)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7977a644-f8cd-3b61-89af-8e8fe2b46d3f> ;
+        dc:identifier                  "2017.160.25" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934129> .
+
+<http://data.silknow.org/object/f18dca44-50f7-352c-983c-f9b8b376422a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2017.160.25" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/7977a644-f8cd-3b61-89af-8e8fe2b46d3f> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/e79a0795-1b13-3cdd-b8c3-1dcd70048482> , <http://data.silknow.org/event/56789781-16e1-36a0-b2fd-b5c4f4775d4e> , <http://data.silknow.org/production/80a51507-a9e6-3a4a-88c4-5acc6d108f64> , <http://data.silknow.org/object/e79a0795-1b13-3cdd-b8c3-1dcd70048482/category/1> ;
+        dc:identifier       "934129.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<https://sws.geonames.org/1273819/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f18dca44-50f7-352c-983c-f9b8b376422a> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/e79a0795-1b13-3cdd-b8c3-1dcd70048482> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

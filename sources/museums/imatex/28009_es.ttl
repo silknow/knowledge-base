@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bd485107-4ffa-31c7-ac09-039d4dd73c40> .
+
+<http://data.silknow.org/event/2c36f4ae-9aa8-3b09-a307-1f64be9b13de>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f24131bb-02c2-31f9-bce4-d82f4a0abc23> .
+
+<http://data.silknow.org/object/f24131bb-02c2-31f9-bce4-d82f4a0abc23>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f7ba3ce1-401c-3436-8832-b9c6d10130c7> ;
+        dc:identifier                  "16404" .
+
+<http://data.silknow.org/object/f24131bb-02c2-31f9-bce4-d82f4a0abc23/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f24131bb-02c2-31f9-bce4-d82f4a0abc23> .
+
+<http://data.silknow.org/object/f24131bb-02c2-31f9-bce4-d82f4a0abc23/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f24131bb-02c2-31f9-bce4-d82f4a0abc23> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/production/53da8196-c579-3b31-8fd5-de735178f997>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f24131bb-02c2-31f9-bce4-d82f4a0abc23> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> , <http://data.silknow.org/vocabulary/379> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/event/f802558c-277a-3b1d-8fd9-17d8f84e1d62>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f24131bb-02c2-31f9-bce4-d82f4a0abc23> .
+
+<http://data.silknow.org/object/bd485107-4ffa-31c7-ac09-039d4dd73c40>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 28009" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f24131bb-02c2-31f9-bce4-d82f4a0abc23/domain/1> , <http://data.silknow.org/production/53da8196-c579-3b31-8fd5-de735178f997> , <http://data.silknow.org/event/2c36f4ae-9aa8-3b09-a307-1f64be9b13de> , <http://data.silknow.org/object/f24131bb-02c2-31f9-bce4-d82f4a0abc23> , <http://data.silknow.org/object/f24131bb-02c2-31f9-bce4-d82f4a0abc23/category/1> , <http://data.silknow.org/image/f7ba3ce1-401c-3436-8832-b9c6d10130c7> , <http://data.silknow.org/event/f802558c-277a-3b1d-8fd9-17d8f84e1d62> ;
+        dc:identifier       "28009.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/f7ba3ce1-401c-3436-8832-b9c6d10130c7>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033748" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/28009_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033748.jpg> .

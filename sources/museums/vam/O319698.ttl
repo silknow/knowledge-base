@@ -1,0 +1,108 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/ffb89c38-cbcc-38b4-9094-3f48119475da>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0> ;
+        ecrm:P126_employed      "Brocaded silk with silver thread"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1775> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Loom-width of brocaded silk with floral meanders. The main pattern of semi-naturalistic flowers, arranged in symmetrical floral meanders, is brocaded in silks ranging in colour from peach through tan to dark red, white and bright green, and in silver thread filé and frisé. The ground is of blue ribbed silk with a portion of the weft used to form ground patterns of diaper and striped fillings, flowers and leaves which follow the lines of the main brocaded pattern. Six white silk cords form the selvedge."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0> .
+
+<http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 32 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "81.28"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Loom-width" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/actor/1fb6acc5-2aea-3eb7-9198-13e4ccc9d12c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Col. S.H. Hill" ;
+        ecrm:P1_is_identified_by  "Given by Col. S.H. Hill" .
+
+<http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Loom-width of brocaded silk, France, 1750-1775"@en , "Loom-width of brocaded silk with floral meanders. The main pattern of semi-naturalistic flowers, arranged in symmetrical floral meanders, is brocaded in silks ranging in colour from peach through tan to dark red, white and bright green, and in silver thread filé and frisé. The ground is of blue ribbed silk with a portion of the weft used to form ground patterns of diaper and striped fillings, flowers and leaves which follow the lines of the main brocaded pattern. Six white silk cords form the selvedge."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2483d127-8ff5-3438-a3fe-d91b1fb52996> ;
+        ecrm:P3_has_note               "Loom-width of brocaded silk, France, 1750-1775"@en , "Loom-width of brocaded silk with floral meanders. The main pattern of semi-naturalistic flowers, arranged in symmetrical floral meanders, is brocaded in silks ranging in colour from peach through tan to dark red, white and bright green, and in silver thread filé and frisé. The ground is of blue ribbed silk with a portion of the weft used to form ground patterns of diaper and striped fillings, flowers and leaves which follow the lines of the main brocaded pattern. Six white silk cords form the selvedge."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0/dimension/1> , <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0/dimension/2> ;
+        dc:identifier                  "T.7-1966" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O319698> .
+
+<http://data.silknow.org/image/2483d127-8ff5-3438-a3fe-d91b1fb52996>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MR2424" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O319698_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2020MR/2020MR2424.jpg> .
+
+<http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Loom-width of brocaded silk, France, 1750-1775"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0> .
+
+<http://data.silknow.org/event/1108cf03-f6fe-3e07-9ff6-ab990ca6ec2f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/1fb6acc5-2aea-3eb7-9198-13e4ccc9d12c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Col. S.H. Hill" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0> .
+
+<http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0> .
+
+<http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 21.5 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "54.61"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/cca9d889-a1a9-3bd9-8b33-011995acb555>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O319698" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0> , <http://data.silknow.org/event/1108cf03-f6fe-3e07-9ff6-ab990ca6ec2f> , <http://data.silknow.org/image/2483d127-8ff5-3438-a3fe-d91b1fb52996> , <http://data.silknow.org/production/ffb89c38-cbcc-38b4-9094-3f48119475da> , <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0/observation/2> , <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0/domain/1> , <http://data.silknow.org/object/f5eac3f9-343f-3688-a76c-098eec4330a0/observation/1> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> ;
+        dc:identifier       "O319698.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/cca9d889-a1a9-3bd9-8b33-011995acb555> .

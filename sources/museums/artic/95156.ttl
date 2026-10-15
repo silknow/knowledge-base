@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "24.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "24.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/35bef1d9-0b2b-3329-a622-f14c0701082b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1650_1700> , <http://data.silknow.org/timespan/1700> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/image/e4e63cfa-09de-378c-8b62-b9f4a68325e5>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/95156_0.jpg> , <https://www.artic.edu/iiif/2/2f3dc237-86bf-81b4-7084-b54811d88a80/full/600,/0/default.jpg> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/307f22cc-5d30-3857-9274-983fa6cec080>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1907.701" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/e4e63cfa-09de-378c-8b62-b9f4a68325e5> , <http://data.silknow.org/event/1abfa734-d729-3c37-9849-0b9158ab45d9> , <http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee/observation/1> , <http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee> , <http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee/category/1> , <http://data.silknow.org/production/35bef1d9-0b2b-3329-a622-f14c0701082b> ;
+        dc:identifier       "95156.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, plain weave with self-patterning ground wefts"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee> .
+
+<http://data.silknow.org/actor/3b493381-b69c-3ea1-82df-46c6604a32b4>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Art Institute of Chicago Purchase Fund" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago Purchase Fund" .
+
+<http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "24.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "24.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, plain weave with self-patterning ground wefts"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e4e63cfa-09de-378c-8b62-b9f4a68325e5> ;
+        ecrm:P3_has_note               "Silk, plain weave with self-patterning ground wefts"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee/dimension/1> , <http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee/dimension/2> ;
+        dc:identifier                  "1907.701" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/95156/fragment> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/307f22cc-5d30-3857-9274-983fa6cec080> .
+
+<http://data.silknow.org/event/1abfa734-d729-3c37-9849-0b9158ab45d9>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/3b493381-b69c-3ea1-82df-46c6604a32b4> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Art Institute of Chicago Purchase Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee> .
+
+<http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c8bf635b-aacf-3ae0-8e79-ab5b7f28e5ee> .

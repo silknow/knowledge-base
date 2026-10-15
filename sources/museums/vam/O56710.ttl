@@ -1,0 +1,113 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/df979227-319d-3131-be15-36bb5853936b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430> ;
+        ecrm:P126_employed      "Silk embroidered with silk and metal thread, quilted silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/277> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> , <http://data.silknow.org/vocabulary/88> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1600_1799> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/298795/> .
+
+<http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Cover of silk embroidered with silk and metal thread, Turkey, 1600-1799"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430> .
+
+<http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/domain/3>
+        a                    silk:T19 ;
+        silk:L4              "Interiors" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430> .
+
+<http://data.silknow.org/event/7c94b695-a43b-3e32-8a1e-c9b1354f1799>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430> .
+
+<https://sws.geonames.org/298795/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 26 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "66.04"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/154e9937-f171-3202-8b81-1704aef73d10>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O56710" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/domain/3> , <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/observation/1> , <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/domain/1> , <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/observation/2> , <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/domain/2> , <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430> , <http://data.silknow.org/production/df979227-319d-3131-be15-36bb5853936b> , <http://data.silknow.org/event/7c94b695-a43b-3e32-8a1e-c9b1354f1799> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/image/e389bed9-e522-3f90-9be4-cee4886d1094> ;
+        dc:identifier       "O56710.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/image/e389bed9-e522-3f90-9be4-cee4886d1094>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018LF9559" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O56710_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018LF/2018LF9559.jpg> .
+
+<http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Cover of silk embroidered with silk and metal thread, and quilted silk. With a central panel of red plain-weave silk embroidered with silk in Atma stitch (laid and couch by a couched line) and couched threads, and with couched metal threads with outlines of silk in split stitch. This has been set within a deep border of quilted green silk into which a design of fleurs de lys within scrolling frames has been worked. There is a border around the four sides of the red silk panel, but the complete pattern has been obscured and may be missing or may have been concealed beneath the green silk. The border seems to have a green meander which runs through a white flower with a metal thread centre, through a segmented tulip worked in black, yellow and white and through a white carnation. There are blue hyacinth flowers growing from the meander. The design in the field is not clearly centred and may simply be a section taken from a larger design. The elements of the border appear in the field except that the hyacinth sprays are complete curving stems and the yellow and white tulips are broken across the middle by black tiger stripes."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430> .
+
+<http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Cover" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430> .
+
+<http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/2> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/154e9937-f171-3202-8b81-1704aef73d10> .
+
+<http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 31 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "78.74"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .
+
+<http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Cover of silk embroidered with silk and metal thread, Turkey, 1600-1799"@en , "Cover of silk embroidered with silk and metal thread, and quilted silk. With a central panel of red plain-weave silk embroidered with silk in Atma stitch (laid and couch by a couched line) and couched threads, and with couched metal threads with outlines of silk in split stitch. This has been set within a deep border of quilted green silk into which a design of fleurs de lys within scrolling frames has been worked. There is a border around the four sides of the red silk panel, but the complete pattern has been obscured and may be missing or may have been concealed beneath the green silk. The border seems to have a green meander which runs through a white flower with a metal thread centre, through a segmented tulip worked in black, yellow and white and through a white carnation. There are blue hyacinth flowers growing from the meander. The design in the field is not clearly centred and may simply be a section taken from a larger design. The elements of the border appear in the field except that the hyacinth sprays are complete curving stems and the yellow and white tulips are broken across the middle by black tiger stripes."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e389bed9-e522-3f90-9be4-cee4886d1094> ;
+        ecrm:P3_has_note               "Cover of silk embroidered with silk and metal thread, and quilted silk. With a central panel of red plain-weave silk embroidered with silk in Atma stitch (laid and couch by a couched line) and couched threads, and with couched metal threads with outlines of silk in split stitch. This has been set within a deep border of quilted green silk into which a design of fleurs de lys within scrolling frames has been worked. There is a border around the four sides of the red silk panel, but the complete pattern has been obscured and may be missing or may have been concealed beneath the green silk. The border seems to have a green meander which runs through a white flower with a metal thread centre, through a segmented tulip worked in black, yellow and white and through a white carnation. There are blue hyacinth flowers growing from the meander. The design in the field is not clearly centred and may simply be a section taken from a larger design. The elements of the border appear in the field except that the hyacinth sprays are complete curving stems and the yellow and white tulips are broken across the middle by black tiger stripes."@en , "Cover of silk embroidered with silk and metal thread, Turkey, 1600-1799"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/dimension/1> , <http://data.silknow.org/object/1e01b50b-0f2c-3914-9853-b27741d57430/dimension/2> ;
+        dc:identifier                  "4645-1859" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O56710> .

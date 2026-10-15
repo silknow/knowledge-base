@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "46.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "46.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "White silk ground, on which are twisted ribbons of white silk and bunches of flowers connected by vines, woven with green, pink, violet, brown, blue,and white silk, and narrow strips of silver."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9> .
+
+<http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of brocade" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9> .
+
+<http://data.silknow.org/image/07b968b3-b195-35c4-ad07-60b522f8be8e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "817985" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/70776_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/817985/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "White silk ground, on which are twisted ribbons of white silk and bunches of flowers connected by vines, woven with green, pink, violet, brown, blue,and white silk, and narrow strips of silver."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/07b968b3-b195-35c4-ad07-60b522f8be8e> ;
+        ecrm:P3_has_note               "White silk ground, on which are twisted ribbons of white silk and bunches of flowers connected by vines, woven with green, pink, violet, brown, blue,and white silk, and narrow strips of silver."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9/dimension/2> , <http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9/dimension/1> ;
+        dc:identifier                  "96.376" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/70776> .
+
+<http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/event/2bbbae77-6be3-3305-a5b7-aa23d42d098d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/b45fef25-5177-37ad-8df6-278a2c77b6b8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 96.376" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/production/bcdb50dc-c642-3e4d-b316-e2814019896f> , <http://data.silknow.org/image/07b968b3-b195-35c4-ad07-60b522f8be8e> , <http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9/observation/1> , <http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9/domain/1> , <http://data.silknow.org/event/2bbbae77-6be3-3305-a5b7-aa23d42d098d> , <http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9/category/1> , <http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9> ;
+        dc:identifier       "70776.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b45fef25-5177-37ad-8df6-278a2c77b6b8> .
+
+<http://data.silknow.org/production/bcdb50dc-c642-3e4d-b316-e2814019896f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9> ;
+        ecrm:P126_employed      "Silk and silver-colored flat strip metal brocade"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/49678d55-4226-3435-a557-75f10c1e55c9/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "67.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "67.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

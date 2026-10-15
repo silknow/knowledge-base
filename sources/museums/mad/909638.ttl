@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/978f873d-c92f-3406-b676-f7a9139d5be8>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Sonia Delaunay, 1927 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1605c4b8-9988-3428-b065-238d0c555df5> ;
+        dc:identifier                  "47726" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909638> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/4614e499-e6c1-33d1-8577-63f040e80d7c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 47726" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/978f873d-c92f-3406-b676-f7a9139d5be8/category/1> , <http://data.silknow.org/object/978f873d-c92f-3406-b676-f7a9139d5be8> , <http://data.silknow.org/event/87a557cb-d5c0-33a5-bb58-db93d87d3112> , <http://data.silknow.org/production/7bd3a219-4d6b-3d60-a86b-0df4edad5086> , <http://data.silknow.org/image/1605c4b8-9988-3428-b065-238d0c555df5> ;
+        dc:identifier       "909638.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/image/1605c4b8-9988-3428-b065-238d0c555df5>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909638_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/8244d666-e04b-4bc8-96fe-b3a611854a64.jpg> .
+
+<http://data.silknow.org/event/87a557cb-d5c0-33a5-bb58-db93d87d3112>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don de Monsieur Delaunay, en souvenir de sa mère, madame Sonia Delaunay, 1981" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/978f873d-c92f-3406-b676-f7a9139d5be8> .
+
+<http://data.silknow.org/production/7bd3a219-4d6b-3d60-a86b-0df4edad5086>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Sonia Delaunay, 1927 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/978f873d-c92f-3406-b676-f7a9139d5be8> ;
+        ecrm:P126_employed      "Jersey de laine, broderie de soie au passé plat"@fr ;
+        ecrm:P3_has_note        "Sonia Delaunay, 1927 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/b44d8efb-3e7e-3440-a18e-3008d3799540> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4614e499-e6c1-33d1-8577-63f040e80d7c> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/978f873d-c92f-3406-b676-f7a9139d5be8> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/978f873d-c92f-3406-b676-f7a9139d5be8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/978f873d-c92f-3406-b676-f7a9139d5be8> .

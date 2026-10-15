@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "225.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "225.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/80d1aa16-c168-3a69-8a0b-bf3463c0dbc9>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1860_1870> , <http://data.silknow.org/timespan/1870> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "34.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "34.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/ec903d89-bef6-3e68-96c5-4a7012fe4ff3>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/cfab456f-97a3-3e00-a963-df550c8ef307> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Herbert L. Stern" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/90003a7b-3022-3c4a-8460-e615233eeb1c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1957.173" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076/category/1> , <http://data.silknow.org/image/b0eb8f01-69bb-32b8-b155-88662fa00be1> , <http://data.silknow.org/event/ec903d89-bef6-3e68-96c5-4a7012fe4ff3> , <http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076> , <http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076/observation/1> , <http://data.silknow.org/production/80d1aa16-c168-3a69-8a0b-bf3463c0dbc9> ;
+        dc:identifier       "5605.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, plain weave with supplementary patterning warps; edged with gilt-metal-strip-wrapped silk and silk, bobbin lace braid and extended weft cut fringe; woven on loom with Jacquard attachment"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076> .
+
+<http://data.silknow.org/image/b0eb8f01-69bb-32b8-b155-88662fa00be1>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/5605_0.jpg> , <https://www.artic.edu/iiif/2/403dd417-d8ff-1e81-4873-259bba7b86b1/full/600,/0/default.jpg> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Runner" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076> .
+
+<http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, plain weave with supplementary patterning warps; edged with gilt-metal-strip-wrapped silk and silk, bobbin lace braid and extended weft cut fringe; woven on loom with Jacquard attachment"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b0eb8f01-69bb-32b8-b155-88662fa00be1> ;
+        ecrm:P3_has_note               "Silk, plain weave with supplementary patterning warps; edged with gilt-metal-strip-wrapped silk and silk, bobbin lace braid and extended weft cut fringe; woven on loom with Jacquard attachment"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076/dimension/1> , <http://data.silknow.org/object/ec2ff5cb-12b6-3a15-96ac-f838404fe076/dimension/2> ;
+        dc:identifier                  "1957.173" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/5605/runner> .
+
+<http://data.silknow.org/actor/cfab456f-97a3-3e00-a963-df550c8ef307>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Herbert L. Stern" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Herbert L. Stern" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/90003a7b-3022-3c4a-8460-e615233eeb1c> .

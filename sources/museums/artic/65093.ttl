@@ -1,0 +1,91 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/a58bde58-53c8-312b-b046-0fb5068239b9>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/65093_0.jpg> , <https://www.artic.edu/iiif/2/10fff647-90f6-f9e1-0628-f66ea36edc5a/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/55fca468-2951-3ff7-90d3-27ed5de0d92b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1911.324a" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045> , <http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045/category/1> , <http://data.silknow.org/production/b8c83107-c2a8-3ee1-975a-941c00df6c02> , <http://data.silknow.org/event/e3d4ec78-3457-3c42-b2ec-4dc44267aa18> , <http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045/observation/1> , <http://data.silknow.org/image/a58bde58-53c8-312b-b046-0fb5068239b9> ;
+        dc:identifier       "65093.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "silk"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045> .
+
+<http://data.silknow.org/production/b8c83107-c2a8-3ee1-975a-941c00df6c02>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> , <http://data.silknow.org/timespan/1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/actor/73ba463c-7251-3b8f-be86-082ed20d6c0b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Martin A. Ryerson" ;
+        ecrm:P1_is_identified_by  "Gift of Martin A. Ryerson" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Martin_A._Ryerson> , <https://viaf.org/viaf/305453277> , <https://isni.org/isni/0000000420570385> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Martin_A._Ryerson> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/e3d4ec78-3457-3c42-b2ec-4dc44267aa18>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/73ba463c-7251-3b8f-be86-082ed20d6c0b> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Martin A. Ryerson" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045> .
+
+<http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "22.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "22.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "silk"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a58bde58-53c8-312b-b046-0fb5068239b9> ;
+        ecrm:P3_has_note               "silk"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045/dimension/1> , <http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045/dimension/2> ;
+        dc:identifier                  "1911.324a" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/65093/fragment> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/55fca468-2951-3ff7-90d3-27ed5de0d92b> .
+
+<http://data.silknow.org/object/b3b906cb-4d51-3ee5-9395-f521b2216045/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "10.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "10.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

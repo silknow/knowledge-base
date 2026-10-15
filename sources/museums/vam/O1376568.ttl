@@ -1,0 +1,130 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/ed2a017b-619e-38b2-afb8-8d96b16d6196>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Chrétien, Gilles-Louis" ;
+        ecrm:P1_is_identified_by  "Chrétien, Gilles-Louis" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000066392626> , <https://viaf.org/viaf/47031076> , <http://dbpedia.org/resource/Gilles-Louis_Chrétien> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Gilles-Louis_Chrétien> .
+
+<http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Height: 11.4 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "11.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Circular portrait printed on an irregular square sheet of silk from square-ish copper plate. Male sitter shown in profile, facing the left. The sitter's name and a line of verse encircle the image, within the platemark. Taped along top edge to thin card window mount."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af> .
+
+<http://data.silknow.org/image/06094bce-ac20-34c0-a741-c53f3714bd93>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019MG0455" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O1376568_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2019MG/2019MG0455.jpg> .
+
+<http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/category/1>
+        a                    silk:T35 ;
+        silk:L1              "print" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af> .
+
+<http://data.silknow.org/event/aa2dd7e8-c4fe-3b27-a487-756d8a5b9b19>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af> .
+
+<https://sws.geonames.org/2988507/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/6568270c-e569-3d07-93bc-c4a60dfbc80c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af> ;
+        ecrm:P126_employed      "Copper plate etching and aquatint printed on square fragment of silk (via physionotrace technique)"@en , "printing ink"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/6e62acc1-8b9b-3255-8aa8-644498452821> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2988507/> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/6568270c-e569-3d07-93bc-c4a60dfbc80c/activity/1> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/90c317b7-a94e-300e-80f1-2fd65fe9d8b6>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O1376568" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/06094bce-ac20-34c0-a741-c53f3714bd93> , <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/observation/1> , <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af> , <http://data.silknow.org/collection/45e60474-9784-317e-88fc-284da7a14859> , <http://data.silknow.org/production/6568270c-e569-3d07-93bc-c4a60dfbc80c> , <http://data.silknow.org/object/0baf1075-6961-33b9-92bd-ef6f00f6e722> , <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/domain/1> , <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/observation/2> , <http://data.silknow.org/event/aa2dd7e8-c4fe-3b27-a487-756d8a5b9b19> ;
+        dc:identifier       "O1376568.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 10.8 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "10.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Physionotrace portrait on silk: Jean Fouquet and Gilles-Louis Chrétien, Portrait of Jean Louis Pascal Roche (1765-1864), French, late 18th century"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af> .
+
+<http://data.silknow.org/collection/45e60474-9784-317e-88fc-284da7a14859>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Prints, Drawings & Paintings Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af> ;
+        ecrm:P78_is_identified_by  "Prints, Drawings & Paintings Collection" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/90c317b7-a94e-300e-80f1-2fd65fe9d8b6> .
+
+<http://data.silknow.org/object/0baf1075-6961-33b9-92bd-ef6f00f6e722>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "'1. [PHYSIONOTRACE PORTRAIT ON SILK]. FOUQUET, Jean, artist, and Gilles-Louis CHRÉTIEN. Portrait of Jean Louis Pascal Roche, late 18th century' in WINTER MISCELLANY. PHOTOGRAPHY, A PHYSIONOTRACE & A PEEP SHOW PAINTING, <u>Quaritch</u> (London: December, 2016), no. 1.\nBibliothèque nationale, <u>Inventaire du fonds français, graveurs du XVIIIe siècle</u>, (Paris, 1940), iv, pp. 493- 586 (Roche portrait not included)."@en ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "'1. [PHYSIONOTRACE PORTRAIT ON SILK]. FOUQUET, Jean, artist, and Gilles-Louis CHRÉTIEN. Portrait of Jean Louis Pascal Roche, late 18th century' in WINTER MISCELLANY. PHOTOGRAPHY, A PHYSIONOTRACE & A PEEP SHOW PAINTING, <u>Quaritch</u> (London: December, 2016), no. 1.\nBibliothèque nationale, <u>Inventaire du fonds français, graveurs du XVIIIe siècle</u>, (Paris, 1940), iv, pp. 493- 586 (Roche portrait not included)."@en .
+
+<http://data.silknow.org/production/6568270c-e569-3d07-93bc-c4a60dfbc80c/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/ed2a017b-619e-38b2-afb8-8d96b16d6196> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Portraits" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af> .
+
+<http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Circular portrait printed on an irregular square sheet of silk from square-ish copper plate. Male sitter shown in profile, facing the left. The sitter's name and a line of verse encircle the image, within the platemark. Taped along top edge to thin card window mount."@en , "Physionotrace portrait on silk: Jean Fouquet and Gilles-Louis Chrétien, Portrait of Jean Louis Pascal Roche (1765-1864), French, late 18th century"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/06094bce-ac20-34c0-a741-c53f3714bd93> ;
+        ecrm:P3_has_note               "Circular portrait printed on an irregular square sheet of silk from square-ish copper plate. Male sitter shown in profile, facing the left. The sitter's name and a line of verse encircle the image, within the platemark. Taped along top edge to thin card window mount."@en , "Physionotrace portrait on silk: Jean Fouquet and Gilles-Louis Chrétien, Portrait of Jean Louis Pascal Roche (1765-1864), French, late 18th century"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/dimension/2> , <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/dimension/3> , <http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/dimension/1> ;
+        dc:identifier                  "E.208-2017" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O1376568> .
+
+<http://data.silknow.org/object/ed21d8c8-e2a9-3fab-a20c-b503101647af/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Diameter: 5.7  cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/diameter> ;
+        ecrm:P90_has_value  "5.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

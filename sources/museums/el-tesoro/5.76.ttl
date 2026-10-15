@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/fc2e4bb1-7e12-3b6e-bbca-737ecfa455c6>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo. Canarias" ;
+        ecrm:P1_is_identified_by  "Anónimo. Canarias" .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/979ddc89-2d80-36ba-b991-8b30b889f6cf> .
+
+<http://data.silknow.org/assessment/4dd2de09-1362-3bc5-93c7-cdf1b6376394>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/a9799ad9-83df-38b3-a0b7-8c1d2c841133> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/4dd2de09-1362-3bc5-93c7-cdf1b6376394/condition/1> .
+
+<http://data.silknow.org/production/9dd09ca2-232e-3982-a1bf-98a52a016706/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/fc2e4bb1-7e12-3b6e-bbca-737ecfa455c6> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/a9799ad9-83df-38b3-a0b7-8c1d2c841133/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Se compone de estola, manípulo, cubre cáliz, bolsa de corporales, palia e hijuela."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a9799ad9-83df-38b3-a0b7-8c1d2c841133> .
+
+<http://data.silknow.org/object/979ddc89-2d80-36ba-b991-8b30b889f6cf>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.76" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a9799ad9-83df-38b3-a0b7-8c1d2c841133/observation/1> , <http://data.silknow.org/assessment/4dd2de09-1362-3bc5-93c7-cdf1b6376394> , <http://data.silknow.org/production/9dd09ca2-232e-3982-a1bf-98a52a016706> , <http://data.silknow.org/object/a9799ad9-83df-38b3-a0b7-8c1d2c841133> , <http://data.silknow.org/image/b8e132f3-7136-3d33-aa0e-4dce9b00f6b7> , <http://data.silknow.org/object/a9799ad9-83df-38b3-a0b7-8c1d2c841133/type/1> ;
+        dc:identifier       "5.76.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/object/a9799ad9-83df-38b3-a0b7-8c1d2c841133>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Se compone de estola, manípulo, cubre cáliz, bolsa de corporales, palia e hijuela."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b8e132f3-7136-3d33-aa0e-4dce9b00f6b7> ;
+        ecrm:P3_has_note               "*Se compone de estola, manípulo, cubre cáliz, bolsa de corporales, palia e hijuela."@es ;
+        dc:identifier                  "5.76" .
+
+<http://data.silknow.org/object/a9799ad9-83df-38b3-a0b7-8c1d2c841133/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a9799ad9-83df-38b3-a0b7-8c1d2c841133> ;
+        ecrm:P42_assigned    "Casulla (Turronera)" .
+
+<http://data.silknow.org/image/b8e132f3-7136-3d33-aa0e-4dce9b00f6b7>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.76" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.76_0.jpg> .
+
+<http://data.silknow.org/production/9dd09ca2-232e-3982-a1bf-98a52a016706>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a9799ad9-83df-38b3-a0b7-8c1d2c841133> ;
+        ecrm:P126_employed      "Hilo de seda. Galón de seda."@es ;
+        ecrm:P32_used_general_technique
+                "Raso listado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/9dd09ca2-232e-3982-a1bf-98a52a016706/activity/1> .
+
+<http://data.silknow.org/assessment/4dd2de09-1362-3bc5-93c7-cdf1b6376394/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .

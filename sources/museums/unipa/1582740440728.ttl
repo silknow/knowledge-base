@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/a39d31f4-33d0-3a78-aa4d-7b041526f393/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a39d31f4-33d0-3a78-aa4d-7b041526f393> ;
+        ecrm:P42_assigned    "Copricalice" .
+
+<http://data.silknow.org/object/a39d31f4-33d0-3a78-aa4d-7b041526f393/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "58" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "58"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/c78af4f4-9e9e-321e-814a-03ba7befdb42>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1582741045_catania18" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1582740440728_0.jpg> .
+
+<http://data.silknow.org/actor/ecef3a7f-77c0-3f8c-8784-b920720aef4d>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Catania, Museo Diocesano" ;
+        ecrm:P1_is_identified_by  "Catania, Museo Diocesano" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/4886835b-2a7a-3a14-b8a8-5877fe887ed2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a39d31f4-33d0-3a78-aa4d-7b041526f393> ;
+        ecrm:P32_used_general_technique
+                "Raso liseré broccato / Taffetas"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1751_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/event/42a5c896-7d36-38a4-87d7-fec5c48eadc4>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/ecef3a7f-77c0-3f8c-8784-b920720aef4d> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a39d31f4-33d0-3a78-aa4d-7b041526f393> .
+
+<http://data.silknow.org/object/18d4d10c-640c-3237-b39b-16b45f7b175a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1582740440728" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/4886835b-2a7a-3a14-b8a8-5877fe887ed2> , <http://data.silknow.org/event/42a5c896-7d36-38a4-87d7-fec5c48eadc4> , <http://data.silknow.org/image/c78af4f4-9e9e-321e-814a-03ba7befdb42> , <http://data.silknow.org/object/7243fb64-686d-3ebd-9566-5147d2e034ba> , <http://data.silknow.org/object/a39d31f4-33d0-3a78-aa4d-7b041526f393/type/1> , <http://data.silknow.org/object/a39d31f4-33d0-3a78-aa4d-7b041526f393> ;
+        dc:identifier       "1582740440728.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/object/a39d31f4-33d0-3a78-aa4d-7b041526f393/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "58" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "58"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/18d4d10c-640c-3237-b39b-16b45f7b175a> .
+
+<http://data.silknow.org/object/a39d31f4-33d0-3a78-aa4d-7b041526f393>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Seconda metà del XVIII"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c78af4f4-9e9e-321e-814a-03ba7befdb42> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/a39d31f4-33d0-3a78-aa4d-7b041526f393/dimension/2> , <http://data.silknow.org/object/a39d31f4-33d0-3a78-aa4d-7b041526f393/dimension/1> ;
+        dc:identifier                  "1582740440728" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/7243fb64-686d-3ebd-9566-5147d2e034ba>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Assente"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a39d31f4-33d0-3a78-aa4d-7b041526f393> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Assente"@it .

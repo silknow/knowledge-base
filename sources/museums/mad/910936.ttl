@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/ba5fe864-7255-356b-9ebd-521ca7165c87>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don monsieur Marquereau, 1907" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/06a3b8c3-841f-35c9-bd1b-840cb2441179> .
+
+<http://data.silknow.org/object/06a3b8c3-841f-35c9-bd1b-840cb2441179>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, 1780-1795, Louis XVI (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b3d2ca62-fb5c-3f1e-9d8e-33352a86f3cf> ;
+        dc:identifier                  "13314" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910936> .
+
+<http://data.silknow.org/image/b3d2ca62-fb5c-3f1e-9d8e-33352a86f3cf>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910936_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/55126eaf-2bbe-4aaa-8d4e-b5efffb14494.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/b36ecc6e-b70c-3d86-a402-a16ca9a91027>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13314" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/06a3b8c3-841f-35c9-bd1b-840cb2441179/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/ba5fe864-7255-356b-9ebd-521ca7165c87> , <http://data.silknow.org/object/06a3b8c3-841f-35c9-bd1b-840cb2441179> , <http://data.silknow.org/production/6418bc84-304e-3fa4-b9f1-d9c7800e9209> , <http://data.silknow.org/image/b3d2ca62-fb5c-3f1e-9d8e-33352a86f3cf> ;
+        dc:identifier       "910936.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/6418bc84-304e-3fa4-b9f1-d9c7800e9209>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1780-1795, Louis XVI (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/06a3b8c3-841f-35c9-bd1b-840cb2441179> ;
+        ecrm:P126_employed      "Lampas fond satin de 8, liseré, broché"@fr ;
+        ecrm:P3_has_note        "France, 1780-1795, Louis XVI (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1780_1795> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b36ecc6e-b70c-3d86-a402-a16ca9a91027> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/06a3b8c3-841f-35c9-bd1b-840cb2441179> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/06a3b8c3-841f-35c9-bd1b-840cb2441179/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/06a3b8c3-841f-35c9-bd1b-840cb2441179> .

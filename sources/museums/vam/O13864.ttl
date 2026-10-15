@@ -1,0 +1,165 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/bb950375-a836-354b-b9a8-e9c8e593328c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Messrs Harrods Ltd" ;
+        ecrm:P1_is_identified_by  "Given by Messrs Harrods Ltd" .
+
+<http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "overall, flat approx, :, :" ;
+        rdfs:label          "Length: 59 cm overall, flat approx, :, :" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "overall, flat approx, :, :" ;
+        ecrm:P90_has_value  "59"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Woman's stays 1780s, British; Crimson silk damask, partially boned, back lacing"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604> .
+
+<http://data.silknow.org/production/bb304a39-413d-3e02-bfe1-5fd91cae6d01>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604> ;
+        ecrm:P126_employed      "Silk, linen, baleen"@en , "hand-woven damask weave, hand-sewn"@en , "linen (material)"@en , "silk (textile)"@en ;
+        ecrm:P32_used_general_technique
+                "damask weave"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1780_1789> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2635167/> .
+
+<https://sws.geonames.org/2635167/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/85a9d83d-e37e-3582-ac93-cfa6196469c3>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/bb950375-a836-354b-b9a8-e9c8e593328c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Messrs Harrods Ltd." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604> .
+
+<http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Stays" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/image/e8eeab12-7578-3b75-aff5-52a3bc9869b0>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2011EW5109" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O13864_4.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2011EW/2011EW5109.jpg> .
+
+<http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Womenswear" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604> .
+
+<http://data.silknow.org/object/7d81fe4d-6cb1-3d5f-8e4c-a8571a87cc96>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O13864" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/85a9d83d-e37e-3582-ac93-cfa6196469c3> , <http://data.silknow.org/production/bb304a39-413d-3e02-bfe1-5fd91cae6d01> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/observation/3> , <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/domain/1> , <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/observation/1> , <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604> , <http://data.silknow.org/image/e8eeab12-7578-3b75-aff5-52a3bc9869b0> , <http://data.silknow.org/image/6dfa34eb-da5a-320c-8bfa-a410d957c5f5> , <http://data.silknow.org/image/a3c43ca1-c10a-3c38-96be-fefaca16b5a8> , <http://data.silknow.org/image/ad0113f3-1c42-36ab-a1df-e4876f984ecf> , <http://data.silknow.org/image/15e3c8db-daa9-3fde-bfec-0281af767506> , <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/observation/4> , <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/domain/2> , <http://data.silknow.org/image/35e13b66-d3e9-3d96-862f-855e56d51183> , <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/observation/2> ;
+        dc:identifier       "O13864.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "overall, flat approx" ;
+        rdfs:label          "Width: 76.5 cm overall, flat approx" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "overall, flat approx" ;
+        ecrm:P90_has_value  "76.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/35e13b66-d3e9-3d96-862f-855e56d51183>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2010EE8092" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O13864_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2010EE/2010EE8092.jpg> .
+
+<http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "In the 18th century, women’s stays served to mould the torso to the fashionable shape and provide a rigid form on which the gown could be arranged and fastened. Because they were underwear and therefore never seen, stays were usually made of plain linen, but this example provides a colourful and luxurious alternative."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604> .
+
+<http://data.silknow.org/image/a3c43ca1-c10a-3c38-96be-fefaca16b5a8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AY2927" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O13864_3.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AY/2006AY2927.jpg> .
+
+<http://data.silknow.org/image/ad0113f3-1c42-36ab-a1df-e4876f984ecf>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017KJ7242" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O13864_5.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017KJ/2017KJ7242.jpg> .
+
+<http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "approx" ;
+        rdfs:label          "Height: 31 cm  approx" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P3_has_note    "approx" ;
+        ecrm:P90_has_value  "31"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Woman’s stays of crimson silk damask, lined and interlined with linen and reinforced with baleen. They are back-lacing with a high narrow back, a wide, decolletage and a point in front, about 4 inches (10 cm) below the natural waist. The stays are cut in 8 pieces and partially boned in stitched channels about 3/16-inch (4 mm) wide, the baleen extending into the skirts below the waist. There are 7 horizontal boned channels at the neckline and a ⅜-inch (5 mm) wide, boned channel on each side of the centre front. A 3/16-inch (4 mm) wide white silk twill ribbon covers the seams. The neckline, armholes and edges of the skirts are bound with white silk grosgrain ribbon. The stays are laced through 12 eyelets on each side at centre back arranged asymmetrically.  The shoulder straps, each with an eyelet, extend from the front and fasten to a pair of eyelets at each back shoulder."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7d81fe4d-6cb1-3d5f-8e4c-a8571a87cc96> .
+
+<http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/observation/4>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "In her 1778 novel, <i>The Sylph</i>, Georgiana Cavendish, Duchess of Devonshire wrote: 'Poor Winifred... broke two laces in endeavouring to draw my new French stays close... Then they are so intolerably wide across the breast that my arms are absolutely sore with them; and sides so pinched! But... to be admired, is a sufficient balsam'.\n\nHalf-boned stays\nBritain,  1770s\nSilk damask, buckram and whalebone, lined with linen\nGiven by Messrs Harrods Ltd.\nV&amp;A: T.909-1913 [2013-2015]\nSilk Stays\n\nThese stays are reinforced with parallel strips of whalebone along the upper edge, making them very wide across the breasts. The Duchess of Devonshire (1757-1806) complained in a letter from 1778 that a similar corset cut into her body and made her arms sore, 'But it is the 'ton' [fashion]; and pride feels no pain.'\n\nStays\nBritain, 1775-85\nSilk damask, buckram interlining, whalebone (baleen), linen lining\nV&A: T.909-1913\nGiven by the Messrs Harrods [16/04/2016-12/03/2017]"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604> .
+
+<http://data.silknow.org/image/6dfa34eb-da5a-320c-8bfa-a410d957c5f5>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2010EE8093" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O13864_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2010EE/2010EE8093.jpg> .
+
+<http://data.silknow.org/image/15e3c8db-daa9-3fde-bfec-0281af767506>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2010EE7904" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O13864_2.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2010EE/2010EE7904.jpg> .
+
+<http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/20> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604> .
+
+<http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "In her 1778 novel, <i>The Sylph</i>, Georgiana Cavendish, Duchess of Devonshire wrote: 'Poor Winifred... broke two laces in endeavouring to draw my new French stays close... Then they are so intolerably wide across the breast that my arms are absolutely sore with them; and sides so pinched! But... to be admired, is a sufficient balsam'.\n\nHalf-boned stays\nBritain,  1770s\nSilk damask, buckram and whalebone, lined with linen\nGiven by Messrs Harrods Ltd.\nV&amp;A: T.909-1913 [2013-2015]\nSilk Stays\n\nThese stays are reinforced with parallel strips of whalebone along the upper edge, making them very wide across the breasts. The Duchess of Devonshire (1757-1806) complained in a letter from 1778 that a similar corset cut into her body and made her arms sore, 'But it is the 'ton' [fashion]; and pride feels no pain.'\n\nStays\nBritain, 1775-85\nSilk damask, buckram interlining, whalebone (baleen), linen lining\nV&A: T.909-1913\nGiven by the Messrs Harrods [16/04/2016-12/03/2017]"@en , "In the 18th century, women’s stays served to mould the torso to the fashionable shape and provide a rigid form on which the gown could be arranged and fastened. Because they were underwear and therefore never seen, stays were usually made of plain linen, but this example provides a colourful and luxurious alternative."@en , "Woman's stays 1780s, British; Crimson silk damask, partially boned, back lacing"@en , "Woman’s stays of crimson silk damask, lined and interlined with linen and reinforced with baleen. They are back-lacing with a high narrow back, a wide, decolletage and a point in front, about 4 inches (10 cm) below the natural waist. The stays are cut in 8 pieces and partially boned in stitched channels about 3/16-inch (4 mm) wide, the baleen extending into the skirts below the waist. There are 7 horizontal boned channels at the neckline and a ⅜-inch (5 mm) wide, boned channel on each side of the centre front. A 3/16-inch (4 mm) wide white silk twill ribbon covers the seams. The neckline, armholes and edges of the skirts are bound with white silk grosgrain ribbon. The stays are laced through 12 eyelets on each side at centre back arranged asymmetrically.  The shoulder straps, each with an eyelet, extend from the front and fasten to a pair of eyelets at each back shoulder."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6dfa34eb-da5a-320c-8bfa-a410d957c5f5> , <http://data.silknow.org/image/15e3c8db-daa9-3fde-bfec-0281af767506> , <http://data.silknow.org/image/e8eeab12-7578-3b75-aff5-52a3bc9869b0> , <http://data.silknow.org/image/ad0113f3-1c42-36ab-a1df-e4876f984ecf> , <http://data.silknow.org/image/a3c43ca1-c10a-3c38-96be-fefaca16b5a8> , <http://data.silknow.org/image/35e13b66-d3e9-3d96-862f-855e56d51183> ;
+        ecrm:P3_has_note               "Woman's stays 1780s, British; Crimson silk damask, partially boned, back lacing"@en , "In the 18th century, women’s stays served to mould the torso to the fashionable shape and provide a rigid form on which the gown could be arranged and fastened. Because they were underwear and therefore never seen, stays were usually made of plain linen, but this example provides a colourful and luxurious alternative."@en , "In her 1778 novel, <i>The Sylph</i>, Georgiana Cavendish, Duchess of Devonshire wrote: 'Poor Winifred... broke two laces in endeavouring to draw my new French stays close... Then they are so intolerably wide across the breast that my arms are absolutely sore with them; and sides so pinched! But... to be admired, is a sufficient balsam'.\n\nHalf-boned stays\nBritain,  1770s\nSilk damask, buckram and whalebone, lined with linen\nGiven by Messrs Harrods Ltd.\nV&amp;A: T.909-1913 [2013-2015]\nSilk Stays\n\nThese stays are reinforced with parallel strips of whalebone along the upper edge, making them very wide across the breasts. The Duchess of Devonshire (1757-1806) complained in a letter from 1778 that a similar corset cut into her body and made her arms sore, 'But it is the 'ton' [fashion]; and pride feels no pain.'\n\nStays\nBritain, 1775-85\nSilk damask, buckram interlining, whalebone (baleen), linen lining\nV&A: T.909-1913\nGiven by the Messrs Harrods [16/04/2016-12/03/2017]"@en , "Woman’s stays of crimson silk damask, lined and interlined with linen and reinforced with baleen. They are back-lacing with a high narrow back, a wide, decolletage and a point in front, about 4 inches (10 cm) below the natural waist. The stays are cut in 8 pieces and partially boned in stitched channels about 3/16-inch (4 mm) wide, the baleen extending into the skirts below the waist. There are 7 horizontal boned channels at the neckline and a ⅜-inch (5 mm) wide, boned channel on each side of the centre front. A 3/16-inch (4 mm) wide white silk twill ribbon covers the seams. The neckline, armholes and edges of the skirts are bound with white silk grosgrain ribbon. The stays are laced through 12 eyelets on each side at centre back arranged asymmetrically.  The shoulder straps, each with an eyelet, extend from the front and fasten to a pair of eyelets at each back shoulder."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/dimension/2> , <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/dimension/3> , <http://data.silknow.org/object/a84736b3-591d-31f3-8a55-7948352be604/dimension/1> ;
+        dc:identifier                  "T.909-1913" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O13864> .

@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/7df41d17-20f4-3571-9594-947a44874100>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/905767_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/5af6adcf-1e6e-4cb5-bd85-2d65bd7fad3b.jpg> .
+
+<http://data.silknow.org/object/216338b0-af4b-300d-b919-7785c1f29960>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Arthur Martin, Paris, 1869, Mathevon et Bouvard, Lyon, 1877"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7df41d17-20f4-3571-9594-947a44874100> ;
+        dc:identifier                  "13599" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/905767> .
+
+<http://data.silknow.org/object/a2852126-a881-38de-87d8-4e716a8fb8cc>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13599" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/35ffbd99-47fa-3097-876c-7aae4150a1f8> , <http://data.silknow.org/object/216338b0-af4b-300d-b919-7785c1f29960> , <http://data.silknow.org/image/7df41d17-20f4-3571-9594-947a44874100> , <http://data.silknow.org/event/8cc32c93-7484-3709-bcdb-ea0ef1d060ec> , <http://data.silknow.org/object/216338b0-af4b-300d-b919-7785c1f29960/category/1> ;
+        dc:identifier       "905767.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/8cc32c93-7484-3709-bcdb-ea0ef1d060ec>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Arthur Martin, 1907" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/216338b0-af4b-300d-b919-7785c1f29960> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/216338b0-af4b-300d-b919-7785c1f29960/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/216338b0-af4b-300d-b919-7785c1f29960> .
+
+<http://data.silknow.org/production/35ffbd99-47fa-3097-876c-7aae4150a1f8>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Arthur Martin, Paris, 1869, Mathevon et Bouvard, Lyon, 1877" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/216338b0-af4b-300d-b919-7785c1f29960> ;
+        ecrm:P126_employed      "Velours ciselé fond satin dit velours de Gênes"@fr ;
+        ecrm:P3_has_note        "Arthur Martin, Paris, 1869, Mathevon et Bouvard, Lyon, 1877" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1869> , <http://data.silknow.org/timespan/1877> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2988507/> , <https://sws.geonames.org/2996944/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a2852126-a881-38de-87d8-4e716a8fb8cc> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/216338b0-af4b-300d-b919-7785c1f29960> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2988507/>
+        a       ecrm:E53_Place .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .

@@ -1,0 +1,80 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ffcff687-0aa2-352e-b224-73bbea90e6c0> .
+
+<http://data.silknow.org/object/6c79311e-73ba-35a1-9449-dd045519921f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6c79311e-73ba-35a1-9449-dd045519921f> .
+
+<http://data.silknow.org/object/6c79311e-73ba-35a1-9449-dd045519921f/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6c79311e-73ba-35a1-9449-dd045519921f> .
+
+<http://data.silknow.org/object/ffcff687-0aa2-352e-b224-73bbea90e6c0>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 3650" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6c79311e-73ba-35a1-9449-dd045519921f/domain/1> , <http://data.silknow.org/object/6c79311e-73ba-35a1-9449-dd045519921f/category/1> , <http://data.silknow.org/image/6c54a105-0456-362c-bc1a-2a1c6ac005e3> , <http://data.silknow.org/object/6c79311e-73ba-35a1-9449-dd045519921f> , <http://data.silknow.org/event/ccbb1ba7-0b9b-370e-8e0f-e5ce3090eef4> , <http://data.silknow.org/production/551dc48d-8823-3966-8ff8-d0150268dd7a> , <http://data.silknow.org/event/74e39d83-eea1-32c2-b1eb-94f9acfd55d1> ;
+        dc:identifier       "3650.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/ccbb1ba7-0b9b-370e-8e0f-e5ce3090eef4>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6c79311e-73ba-35a1-9449-dd045519921f> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/6c79311e-73ba-35a1-9449-dd045519921f>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6c54a105-0456-362c-bc1a-2a1c6ac005e3> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/b3ad076b-d87d-3a55-b0dd-e188bfb9c119> ;
+        dc:identifier                  "20954" .
+
+<http://data.silknow.org/event/74e39d83-eea1-32c2-b1eb-94f9acfd55d1>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6c79311e-73ba-35a1-9449-dd045519921f> .
+
+<http://data.silknow.org/image/b3ad076b-d87d-3a55-b0dd-e188bfb9c119>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "decoració vegetal estilitzada"@ca ;
+        ecrm:P3_has_note  "decoració vegetal estilitzada"@ca .
+
+<http://data.silknow.org/image/6c54a105-0456-362c-bc1a-2a1c6ac005e3>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000000647" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/3650_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000000647.jpg> .
+
+<http://data.silknow.org/production/551dc48d-8823-3966-8ff8-d0150268dd7a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6c79311e-73ba-35a1-9449-dd045519921f> ;
+        ecrm:P126_employed      "làmina de paper daurada entorxada"@ca ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "brocat"@ca , "vellut tallat llavorat"@ca , "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> , <https://sws.geonames.org/2510769/> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

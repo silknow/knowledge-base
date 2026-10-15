@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/6a7ccd99-e59b-3bb5-b380-4befbb2b8d23>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8f451e42-4175-3770-9058-aadb0788ffc0> .
+
+<http://data.silknow.org/object/8f451e42-4175-3770-9058-aadb0788ffc0>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f880e1b9-898a-372a-94b1-b9ebb0b58c52> ;
+        dc:identifier                  "13.1489" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-131489> .
+
+<http://data.silknow.org/actor/4c91b182-0c46-3c3f-928f-397531c09fc0>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Jesse H. Metcalf" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Jesse H. Metcalf" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/8f451e42-4175-3770-9058-aadb0788ffc0/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8f451e42-4175-3770-9058-aadb0788ffc0> .
+
+<http://data.silknow.org/object/cf325e91-1ae2-3011-bb0e-60bb08356428>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13.1489" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8f451e42-4175-3770-9058-aadb0788ffc0/domain/1> , <http://data.silknow.org/object/8f451e42-4175-3770-9058-aadb0788ffc0> , <http://data.silknow.org/object/a6d8b55b-5619-35ca-be8e-2c265a91e62c> , <http://data.silknow.org/event/6a7ccd99-e59b-3bb5-b380-4befbb2b8d23> , <http://data.silknow.org/image/f880e1b9-898a-372a-94b1-b9ebb0b58c52> , <http://data.silknow.org/event/a1d5be41-6f20-3e12-89c2-70ba1f28bd9c> , <http://data.silknow.org/object/8f451e42-4175-3770-9058-aadb0788ffc0/category/1> , <http://data.silknow.org/production/6338c01a-bf2c-38c6-b1d7-72cd7161d026> ;
+        dc:identifier       "977011.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/a6d8b55b-5619-35ca-be8e-2c265a91e62c>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Ceremonial Costumes" , "September 13 - October 14, 1973" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8f451e42-4175-3770-9058-aadb0788ffc0> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "Ceremonial Costumes" , "September 13 - October 14, 1973" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/ceremonial-costumes> .
+
+<http://data.silknow.org/object/8f451e42-4175-3770-9058-aadb0788ffc0/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8f451e42-4175-3770-9058-aadb0788ffc0> .
+
+<http://data.silknow.org/event/a1d5be41-6f20-3e12-89c2-70ba1f28bd9c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4c91b182-0c46-3c3f-928f-397531c09fc0> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Jesse H. Metcalf" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8f451e42-4175-3770-9058-aadb0788ffc0> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/cf325e91-1ae2-3011-bb0e-60bb08356428> .
+
+<http://data.silknow.org/image/f880e1b9-898a-372a-94b1-b9ebb0b58c52>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/977011_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/23105.jpg> .
+
+<http://data.silknow.org/production/6338c01a-bf2c-38c6-b1d7-72cd7161d026>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8f451e42-4175-3770-9058-aadb0788ffc0> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1525> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .

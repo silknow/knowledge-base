@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/614aca51-86f9-3a40-b2df-9cd699ca458d>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "foliation (pattern)"@en ;
+        ecrm:P3_has_note  "foliation (pattern)"@en .
+
+<http://data.silknow.org/object/5fdbea76-7aaa-38fb-8d89-62936131d007/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/12> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5fdbea76-7aaa-38fb-8d89-62936131d007> .
+
+<http://data.silknow.org/production/d16afd1d-b2a1-3842-9b28-1caaea5e9d13>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5fdbea76-7aaa-38fb-8d89-62936131d007> ;
+        ecrm:P126_employed      "silk (textile)"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/379> .
+
+<http://data.silknow.org/event/808a88fd-bc78-3426-9113-6db42ec45bc5>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5fdbea76-7aaa-38fb-8d89-62936131d007> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/image/1ecef4c3-7847-3e64-82b9-06dd7120db1d>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2021MX9366" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O356700_0.jpg> , <https://framemark.vam.ac.uk/collections/2021MX9366/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/object/5fdbea76-7aaa-38fb-8d89-62936131d007>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1ecef4c3-7847-3e64-82b9-06dd7120db1d> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/761> , <http://data.silknow.org/image/614aca51-86f9-3a40-b2df-9cd699ca458d> ;
+        dc:identifier                  "23-1903" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O356700> .
+
+<http://data.silknow.org/object/5fdbea76-7aaa-38fb-8d89-62936131d007/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Christianity" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5fdbea76-7aaa-38fb-8d89-62936131d007> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/43ec0a35-9813-38cb-b89e-2f9dc63c10d1> .
+
+<http://data.silknow.org/object/43ec0a35-9813-38cb-b89e-2f9dc63c10d1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O356700" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/5fdbea76-7aaa-38fb-8d89-62936131d007/domain/2> , <http://data.silknow.org/object/5fdbea76-7aaa-38fb-8d89-62936131d007> , <http://data.silknow.org/image/1ecef4c3-7847-3e64-82b9-06dd7120db1d> , <http://data.silknow.org/event/808a88fd-bc78-3426-9113-6db42ec45bc5> , <http://data.silknow.org/object/5fdbea76-7aaa-38fb-8d89-62936131d007/domain/1> , <http://data.silknow.org/production/d16afd1d-b2a1-3842-9b28-1caaea5e9d13> ;
+        dc:identifier       "O356700.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .

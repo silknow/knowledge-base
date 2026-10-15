@@ -1,0 +1,121 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Textile, woven blue shot silk, Lahore, ca. 1855"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9> .
+
+<http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 50 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "50"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Parasol Foundation Trust Indian Textiles Cataloguing Project" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9> .
+
+<http://data.silknow.org/event/98df8910-6235-3de6-bec7-2e4a0179fffd>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "Transferred from India Museum 1879."@en ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9> ;
+        ecrm:P3_has_note               "Transferred from India Museum 1879."@en .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/image/c445aeb5-1c95-380d-821e-d49f2440ba0b>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2014GY7221" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O477565_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2014GY/2014GY7221.jpg> .
+
+<http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/domain/3>
+        a                    silk:T19 ;
+        silk:L4              "India Museum" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9> .
+
+<http://data.silknow.org/object/77672c49-3ebb-3bab-8b8c-6b39e5911c1f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O477565" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/domain/2> , <http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217> , <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9> , <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/observation/1> , <http://data.silknow.org/image/c445aeb5-1c95-380d-821e-d49f2440ba0b> , <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/domain/1> , <http://data.silknow.org/image/66ac3748-ef75-33e9-9869-6b18d1e861fc> , <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/domain/3> , <http://data.silknow.org/event/98df8910-6235-3de6-bec7-2e4a0179fffd> , <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/observation/2> , <http://data.silknow.org/production/60214a4d-50b2-3ea6-aba2-b706be457709> ;
+        dc:identifier       "O477565.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "South & South East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9> ;
+        ecrm:P78_is_identified_by  "South & South East Asia Collection" .
+
+<http://data.silknow.org/production/60214a4d-50b2-3ea6-aba2-b706be457709>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9> ;
+        ecrm:P126_employed      "Woven silk"@en , "silk (textile)"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/fd6cbc20-455d-32c2-b88f-a17d02ad8c67> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1172451/> .
+
+<http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9> .
+
+<http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Textile, woven blue shot silk, Lahore, ca. 1855"@en , "Cut length of woven silk, light blue shot with pink, with red borders."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/66ac3748-ef75-33e9-9869-6b18d1e861fc> , <http://data.silknow.org/image/c445aeb5-1c95-380d-821e-d49f2440ba0b> ;
+        ecrm:P3_has_note               "Cut length of woven silk, light blue shot with pink, with red borders."@en , "Textile, woven blue shot silk, Lahore, ca. 1855"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/dimension/2> , <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/dimension/1> ;
+        dc:identifier                  "7174(IS)" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O477565> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/77672c49-3ebb-3bab-8b8c-6b39e5911c1f> .
+
+<https://sws.geonames.org/1172451/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Cut length of woven silk, light blue shot with pink, with red borders."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9> .
+
+<http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "maximum" ;
+        rdfs:label          "Length: 276 cm  maximum" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "maximum" ;
+        ecrm:P90_has_value  "276"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bdedcfde-631d-3894-afcc-9834cd5658e9> .
+
+<http://data.silknow.org/image/66ac3748-ef75-33e9-9869-6b18d1e861fc>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2014GY7222" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O477565_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2014GY/2014GY7222.jpg> .

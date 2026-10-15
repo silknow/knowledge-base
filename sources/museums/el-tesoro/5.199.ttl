@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/b2fa483e-739e-3d22-8d62-77de4341f43a/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d21337e3-c01e-3ee9-93a1-1cb9647c9a33> .
+
+<http://data.silknow.org/object/e7a760c1-1b70-3a86-bef6-94d7ed3d865d>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3a92e42f-9c7b-338a-9f35-77ccae3e10e2> ;
+        dc:identifier                  "5.199" .
+
+<http://data.silknow.org/object/d21337e3-c01e-3ee9-93a1-1cb9647c9a33>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.199" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/b2fa483e-739e-3d22-8d62-77de4341f43a> , <http://data.silknow.org/object/e7a760c1-1b70-3a86-bef6-94d7ed3d865d> , <http://data.silknow.org/assessment/7cf65dc1-6838-3618-bf09-cccdab725593> , <http://data.silknow.org/image/3a92e42f-9c7b-338a-9f35-77ccae3e10e2> , <http://data.silknow.org/object/e7a760c1-1b70-3a86-bef6-94d7ed3d865d/type/1> ;
+        dc:identifier       "5.199.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/assessment/7cf65dc1-6838-3618-bf09-cccdab725593>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/e7a760c1-1b70-3a86-bef6-94d7ed3d865d> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/7cf65dc1-6838-3618-bf09-cccdab725593/condition/1> .
+
+<http://data.silknow.org/object/e7a760c1-1b70-3a86-bef6-94d7ed3d865d/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e7a760c1-1b70-3a86-bef6-94d7ed3d865d> ;
+        ecrm:P42_assigned    "Cíngulo" .
+
+<http://data.silknow.org/production/b2fa483e-739e-3d22-8d62-77de4341f43a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e7a760c1-1b70-3a86-bef6-94d7ed3d865d> ;
+        ecrm:P126_employed      "Hilo de seda. Borlas."@es ;
+        ecrm:P32_used_general_technique
+                "Bordado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/b2fa483e-739e-3d22-8d62-77de4341f43a/activity/1> .
+
+<http://data.silknow.org/assessment/7cf65dc1-6838-3618-bf09-cccdab725593/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Regular. No se recomienda su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Regular. No se recomienda su uso."@es .
+
+<http://data.silknow.org/image/3a92e42f-9c7b-338a-9f35-77ccae3e10e2>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.199" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.199_0.jpg> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .

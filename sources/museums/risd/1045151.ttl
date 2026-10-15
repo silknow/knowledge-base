@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/13689d34-4fb7-3a33-b144-79bd3f36d449/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/13689d34-4fb7-3a33-b144-79bd3f36d449> .
+
+<http://data.silknow.org/event/090ea49e-dede-31bf-b8c3-299ab4210bdf>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/13689d34-4fb7-3a33-b144-79bd3f36d449> .
+
+<http://data.silknow.org/actor/a77a4695-3645-3a84-8087-8dbdc079e17d>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Marianne Kaufmann Ricca" ;
+        ecrm:P1_is_identified_by  "Gift of Marianne Kaufmann Ricca" .
+
+<http://data.silknow.org/actor/258494d6-8173-303c-bba1-8d60246ff4c3>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Smith and Kaufmann" ;
+        ecrm:P1_is_identified_by  "Smith and Kaufmann" .
+
+<http://data.silknow.org/object/13689d34-4fb7-3a33-b144-79bd3f36d449/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/13689d34-4fb7-3a33-b144-79bd3f36d449> .
+
+<http://data.silknow.org/production/e1af022c-b27e-3159-a920-f998c4c432c9/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/258494d6-8173-303c-bba1-8d60246ff4c3> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/production/e1af022c-b27e-3159-a920-f998c4c432c9>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/13689d34-4fb7-3a33-b144-79bd3f36d449> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/15b88ef7-858f-3fc7-b3fd-d5f9953cc49e> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/e1af022c-b27e-3159-a920-f998c4c432c9/activity/1> .
+
+<http://data.silknow.org/object/259cae61-7a97-3ed2-a97d-907674b5894b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 79.036" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/13689d34-4fb7-3a33-b144-79bd3f36d449/domain/1> , <http://data.silknow.org/event/c2b18f9d-659a-33da-afe4-ef0e36c7cc58> , <http://data.silknow.org/event/090ea49e-dede-31bf-b8c3-299ab4210bdf> , <http://data.silknow.org/production/e1af022c-b27e-3159-a920-f998c4c432c9> , <http://data.silknow.org/object/13689d34-4fb7-3a33-b144-79bd3f36d449/category/1> , <http://data.silknow.org/image/2425c868-9391-3dff-8d22-e17f17420aa5> , <http://data.silknow.org/object/13689d34-4fb7-3a33-b144-79bd3f36d449> ;
+        dc:identifier       "1045151.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/259cae61-7a97-3ed2-a97d-907674b5894b> .
+
+<http://data.silknow.org/object/13689d34-4fb7-3a33-b144-79bd3f36d449>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2425c868-9391-3dff-8d22-e17f17420aa5> ;
+        dc:identifier                  "79.036" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-79036> .
+
+<http://data.silknow.org/image/2425c868-9391-3dff-8d22-e17f17420aa5>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1045151_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/14021.jpg> .
+
+<http://data.silknow.org/event/c2b18f9d-659a-33da-afe4-ef0e36c7cc58>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a77a4695-3645-3a84-8087-8dbdc079e17d> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Marianne Kaufmann Ricca" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/13689d34-4fb7-3a33-b144-79bd3f36d449> .

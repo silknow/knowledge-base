@@ -1,0 +1,62 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/57ff15e7-890f-3e6d-8717-4d371e4e23c5>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/913785_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/84f8ee4e-4f8f-4bb4-b1c5-97ce7bce4a90.jpg> .
+
+<http://data.silknow.org/object/6aa57ce2-c43d-3206-9f89-ff777b2ee648/category/1>
+        a                    silk:T35 ;
+        silk:L1              "garniture de siège" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6aa57ce2-c43d-3206-9f89-ff777b2ee648> .
+
+<http://data.silknow.org/event/7683971c-d76c-3579-b4c9-b09dc6602f08>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "don Marcel Bing, 1914" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6aa57ce2-c43d-3206-9f89-ff777b2ee648> .
+
+<http://data.silknow.org/object/176864b2-4e81-3dbe-a69a-4571c166106b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 19846.B" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/7683971c-d76c-3579-b4c9-b09dc6602f08> , <http://data.silknow.org/object/6aa57ce2-c43d-3206-9f89-ff777b2ee648> , <http://data.silknow.org/object/6aa57ce2-c43d-3206-9f89-ff777b2ee648/category/1> , <http://data.silknow.org/image/57ff15e7-890f-3e6d-8717-4d371e4e23c5> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/0d661b0b-6d6d-38e9-bef1-62e798bc8e5a> ;
+        dc:identifier       "913785.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/176864b2-4e81-3dbe-a69a-4571c166106b> .
+
+<http://data.silknow.org/production/0d661b0b-6d6d-38e9-bef1-62e798bc8e5a>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "1900 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6aa57ce2-c43d-3206-9f89-ff777b2ee648> ;
+        ecrm:P3_has_note        "1900 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/dc4b0a3f-7e03-3a58-a6ee-2687e672a33e> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6aa57ce2-c43d-3206-9f89-ff777b2ee648> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/6aa57ce2-c43d-3206-9f89-ff777b2ee648>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "garniture de siège, 1900 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/57ff15e7-890f-3e6d-8717-4d371e4e23c5> ;
+        dc:identifier                  "19846.B" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/913785> .

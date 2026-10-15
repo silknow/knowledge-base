@@ -1,0 +1,107 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/production/06e1bb35-0396-39a2-8cbb-4f62ea8a29f4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51> ;
+        ecrm:P126_employed      "Lino [???]"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/497> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "Terciopelo [Azul marino]"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/192> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1401_1500> .
+
+<http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "25" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "25"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Formado por dos fragmentos. Forro de lienzo azul, soporte interior de papel con escritura de caracteres góticos."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51> .
+
+<http://data.silknow.org/event/3deae080-353d-3bf0-b1b5-4edf49c7ad63>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "25" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "25"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Baja Edad Media"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51> .
+
+<http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/68> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51> .
+
+<http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Portacorporales" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6f115fda-8b7e-3875-9508-967c5cc477ba> .
+
+<http://data.silknow.org/image/50ce8f67-d23a-3fe6-bda5-2c93a82419c2>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE04575" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE04575_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE04575&txt_id_imagen=1> .
+
+<http://data.silknow.org/event/19fef73b-5422-31b8-baae-dc757318f981>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51> .
+
+<http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51> .
+
+<http://data.silknow.org/image/a6ef9c1c-872e-387d-8ffa-5d71faaa417a>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Piña; Clavelina"@es ;
+        ecrm:P3_has_note  "Piña; Clavelina"@es .
+
+<http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Baja Edad Media"@es , "Formado por dos fragmentos. Forro de lienzo azul, soporte interior de papel con escritura de caracteres góticos."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/50ce8f67-d23a-3fe6-bda5-2c93a82419c2> ;
+        ecrm:P3_has_note               "Baja Edad Media"@es , "Formado por dos fragmentos. Forro de lienzo azul, soporte interior de papel con escritura de caracteres góticos."@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/dimension/1> , <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/dimension/2> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/a6ef9c1c-872e-387d-8ffa-5d71faaa417a> ;
+        dc:identifier                  "CE04575" .
+
+<http://data.silknow.org/object/6f115fda-8b7e-3875-9508-967c5cc477ba>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE04575" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51> , <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/domain/1> , <http://data.silknow.org/image/50ce8f67-d23a-3fe6-bda5-2c93a82419c2> , <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/domain/2> , <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/category/1> , <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/observation/1> , <http://data.silknow.org/event/3deae080-353d-3bf0-b1b5-4edf49c7ad63> , <http://data.silknow.org/production/06e1bb35-0396-39a2-8cbb-4f62ea8a29f4> , <http://data.silknow.org/event/19fef73b-5422-31b8-baae-dc757318f981> , <http://data.silknow.org/object/c0155aa1-d018-354d-8a99-017ab2b2af51/observation/2> ;
+        dc:identifier       "CE04575_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .

@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/76b0ad7b-9757-3ca8-8992-4c74c1066af6/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/76b0ad7b-9757-3ca8-8992-4c74c1066af6> ;
+        ecrm:P42_assigned    "Cubre cáliz" .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ae8e0644-bb90-3cd9-bb56-8d245f155874> .
+
+<http://data.silknow.org/actor/28725087-4375-3f1d-8275-86d5ddb1b552>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo. Valencia" ;
+        ecrm:P1_is_identified_by  "Anónimo. Valencia" .
+
+<http://data.silknow.org/assessment/baecd088-72d6-30e0-ab26-b49440bfa364>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/76b0ad7b-9757-3ca8-8992-4c74c1066af6> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/baecd088-72d6-30e0-ab26-b49440bfa364/condition/1> .
+
+<http://data.silknow.org/production/79ae18db-5817-37b6-9b47-deafa43a53e8/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/28725087-4375-3f1d-8275-86d5ddb1b552> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/ae8e0644-bb90-3cd9-bb56-8d245f155874>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.184" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/79ae18db-5817-37b6-9b47-deafa43a53e8> , <http://data.silknow.org/object/76b0ad7b-9757-3ca8-8992-4c74c1066af6> , <http://data.silknow.org/assessment/baecd088-72d6-30e0-ab26-b49440bfa364> , <http://data.silknow.org/image/5ace3c50-3837-38cb-a803-bbfb3ada93c7> , <http://data.silknow.org/object/76b0ad7b-9757-3ca8-8992-4c74c1066af6/type/1> ;
+        dc:identifier       "5.184.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/production/79ae18db-5817-37b6-9b47-deafa43a53e8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/76b0ad7b-9757-3ca8-8992-4c74c1066af6> ;
+        ecrm:P126_employed      "Hilo de seda y oro. Encaje de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Espolín."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/79ae18db-5817-37b6-9b47-deafa43a53e8/activity/1> .
+
+<http://data.silknow.org/object/76b0ad7b-9757-3ca8-8992-4c74c1066af6>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5ace3c50-3837-38cb-a803-bbfb3ada93c7> ;
+        dc:identifier                  "5.184" .
+
+<http://data.silknow.org/image/5ace3c50-3837-38cb-a803-bbfb3ada93c7>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.184" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.184_0.jpg> .
+
+<http://data.silknow.org/assessment/baecd088-72d6-30e0-ab26-b49440bfa364/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .

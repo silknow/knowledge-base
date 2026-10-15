@@ -1,0 +1,72 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c1ecd534-f566-388b-8c6e-1c1b6de2ab00> .
+
+<http://data.silknow.org/object/627a2223-089a-3fed-ac97-3bff29e86cda/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/627a2223-089a-3fed-ac97-3bff29e86cda> .
+
+<http://data.silknow.org/event/0d0b3c87-ad86-3ee9-841b-d4a37c159e7a>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/627a2223-089a-3fed-ac97-3bff29e86cda> .
+
+<http://data.silknow.org/production/57b6256e-ac73-3795-9f1a-9ff6bad1a75b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/627a2223-089a-3fed-ac97-3bff29e86cda> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/c1ecd534-f566-388b-8c6e-1c1b6de2ab00>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 7806" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/627a2223-089a-3fed-ac97-3bff29e86cda> , <http://data.silknow.org/event/0d0b3c87-ad86-3ee9-841b-d4a37c159e7a> , <http://data.silknow.org/image/36c58e49-d0b8-3a0b-b9b9-7dcbe1d35d41> , <http://data.silknow.org/production/57b6256e-ac73-3795-9f1a-9ff6bad1a75b> , <http://data.silknow.org/object/627a2223-089a-3fed-ac97-3bff29e86cda/category/1> , <http://data.silknow.org/object/627a2223-089a-3fed-ac97-3bff29e86cda/domain/1> , <http://data.silknow.org/event/e1e357e4-c632-33b6-a9f6-2433c4d20b94> ;
+        dc:identifier       "7806.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Tórtola Valencia, Carmen" ;
+        ecrm:P1_is_identified_by  "Tórtola Valencia, Carmen" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Carmen_Tórtola_Valencia> , <https://viaf.org/viaf/47896092> , <https://isni.org/isni/0000000038570077> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Carmen_Tórtola_Valencia> .
+
+<http://data.silknow.org/object/627a2223-089a-3fed-ac97-3bff29e86cda/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/627a2223-089a-3fed-ac97-3bff29e86cda> .
+
+<http://data.silknow.org/event/e1e357e4-c632-33b6-a9f6-2433c4d20b94>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b> ;
+        ecrm:P23_transferred_title_from
+                "Tórtola Valencia, Carmen" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/627a2223-089a-3fed-ac97-3bff29e86cda> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/image/36c58e49-d0b8-3a0b-b9b9-7dcbe1d35d41>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000004933" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/7806_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000004933.jpg> .
+
+<http://data.silknow.org/object/627a2223-089a-3fed-ac97-3bff29e86cda>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/36c58e49-d0b8-3a0b-b9b9-7dcbe1d35d41> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> ;
+        dc:identifier                  "8218" .

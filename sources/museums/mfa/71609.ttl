@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of brocade" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c> .
+
+<http://data.silknow.org/event/4996e6c1-6f36-358e-9ad3-fd8340701ebf>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c> .
+
+<http://data.silknow.org/image/7e21fe17-edf1-3c4f-84ad-435e909b78ed>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "843702" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/71609_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/843702/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/place/6ed2782e-b9ef-3c47-b8dc-501bfeb4fede>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "French or Italian" ;
+        ecrm:P87_is_identified_by  "French or Italian" .
+
+<http://data.silknow.org/production/43c1b16b-1368-3910-bafa-845e9d56ada8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c> ;
+        ecrm:P126_employed      "Silk brocade"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1601_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/6ed2782e-b9ef-3c47-b8dc-501bfeb4fede> .
+
+<http://data.silknow.org/object/c43b9b20-a628-34a7-8db2-4d435436d8ae>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 93.869" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c/observation/1> , <http://data.silknow.org/event/4996e6c1-6f36-358e-9ad3-fd8340701ebf> , <http://data.silknow.org/image/7e21fe17-edf1-3c4f-84ad-435e909b78ed> , <http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/production/43c1b16b-1368-3910-bafa-845e9d56ada8> , <http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c/domain/1> , <http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c/category/1> ;
+        dc:identifier       "71609.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "67.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "67.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c> .
+
+<http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "46" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "46"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c43b9b20-a628-34a7-8db2-4d435436d8ae> .
+
+<http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Deep salmon pink corded silk ground, large symmetrically arranged design of flowers; woven with deep cream, color, dark and light green, white, and blue silk."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c> .
+
+<http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Deep salmon pink corded silk ground, large symmetrically arranged design of flowers; woven with deep cream, color, dark and light green, white, and blue silk."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7e21fe17-edf1-3c4f-84ad-435e909b78ed> ;
+        ecrm:P3_has_note               "Deep salmon pink corded silk ground, large symmetrically arranged design of flowers; woven with deep cream, color, dark and light green, white, and blue silk."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c/dimension/2> , <http://data.silknow.org/object/cee0ce14-3b44-3f9e-b485-f59029c97d8c/dimension/1> ;
+        dc:identifier                  "93.869" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/71609> .

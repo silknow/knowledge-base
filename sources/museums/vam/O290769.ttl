@@ -1,0 +1,102 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 3 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "7.62"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/be51db7d-285f-3a30-90de-64764be84ff5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40> ;
+        ecrm:P126_employed      "Jacquard-woven silk"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1830> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2651347/> .
+
+<http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/69> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/event/3e57ba1b-017e-32c5-b092-fbfa45f07fc9>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "Formerly AP. 317:9"@en ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40> ;
+        ecrm:P3_has_note               "Formerly AP. 317:9"@en .
+
+<http://data.silknow.org/image/f3f3ff1c-36d8-3cb7-83ac-bb66d8abaed2>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018LD1331" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O290769_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018LD/2018LD1331.jpg> .
+
+<http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Textile sample of Jacquard-woven silk, Derby, 1830"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40> .
+
+<http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Height: 5.25 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "13.335"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/6adcf29a-9091-3812-aec2-349480d3bc81>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O290769" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/image/f3f3ff1c-36d8-3cb7-83ac-bb66d8abaed2> , <http://data.silknow.org/production/be51db7d-285f-3a30-90de-64764be84ff5> , <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40> , <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40/observation/2> , <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40/observation/1> , <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40/domain/1> , <http://data.silknow.org/event/3e57ba1b-017e-32c5-b092-fbfa45f07fc9> ;
+        dc:identifier       "O290769.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Textile sample of Jacquard-woven silk, Derby, 1830"@en , "Textile sample of Jacquard-woven silk. With a design in cream on a black ground of 0.75 inch wide bands in which motifs, possibly inspired by Chinese or Arabic caligraphy, alternate with plain panels of concaved outline."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f3f3ff1c-36d8-3cb7-83ac-bb66d8abaed2> ;
+        ecrm:P3_has_note               "Textile sample of Jacquard-woven silk. With a design in cream on a black ground of 0.75 inch wide bands in which motifs, possibly inspired by Chinese or Arabic caligraphy, alternate with plain panels of concaved outline."@en , "Textile sample of Jacquard-woven silk, Derby, 1830"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40/dimension/2> , <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40/dimension/1> ;
+        dc:identifier                  "T.34H-1959" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O290769> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6adcf29a-9091-3812-aec2-349480d3bc81> .
+
+<https://sws.geonames.org/2651347/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Textile sample of Jacquard-woven silk. With a design in cream on a black ground of 0.75 inch wide bands in which motifs, possibly inspired by Chinese or Arabic caligraphy, alternate with plain panels of concaved outline."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b8bd28f1-6e31-321e-bad7-684b069dbc40> .

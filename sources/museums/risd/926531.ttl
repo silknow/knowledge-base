@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/60b8c970-472d-38a2-b454-f753a7034efb>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/1613e9e4-4564-3ebb-8bfc-ace45ffb3f8b> .
+
+<http://data.silknow.org/event/261337db-54d1-3c47-9a9d-3b2606359009>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/7dd0bdea-1180-3516-abe6-2f9a54992d4c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Bequest of Miss Lucy T. Aldrich" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1613e9e4-4564-3ebb-8bfc-ace45ffb3f8b> .
+
+<http://data.silknow.org/object/f5213c71-1c4f-3287-ae19-9ca654cba46c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 55.513" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/5939bf1c-cc5c-3d0c-a504-d596d83a1c5e> , <http://data.silknow.org/object/1613e9e4-4564-3ebb-8bfc-ace45ffb3f8b> , <http://data.silknow.org/image/4dd2096c-339b-3179-9dec-9d7a14ce06cc> , <http://data.silknow.org/event/261337db-54d1-3c47-9a9d-3b2606359009> , <http://data.silknow.org/object/1613e9e4-4564-3ebb-8bfc-ace45ffb3f8b/domain/1> , <http://data.silknow.org/object/1613e9e4-4564-3ebb-8bfc-ace45ffb3f8b/category/1> , <http://data.silknow.org/event/60b8c970-472d-38a2-b454-f753a7034efb> ;
+        dc:identifier       "926531.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/1613e9e4-4564-3ebb-8bfc-ace45ffb3f8b/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1613e9e4-4564-3ebb-8bfc-ace45ffb3f8b> .
+
+<http://data.silknow.org/image/4dd2096c-339b-3179-9dec-9d7a14ce06cc>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/926531_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/11531.jpg> .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/5939bf1c-cc5c-3d0c-a504-d596d83a1c5e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1613e9e4-4564-3ebb-8bfc-ace45ffb3f8b> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/actor/7dd0bdea-1180-3516-abe6-2f9a54992d4c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Bequest of Miss Lucy T. Aldrich" ;
+        ecrm:P1_is_identified_by  "Bequest of Miss Lucy T. Aldrich" .
+
+<http://data.silknow.org/object/1613e9e4-4564-3ebb-8bfc-ace45ffb3f8b>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4dd2096c-339b-3179-9dec-9d7a14ce06cc> ;
+        dc:identifier                  "55.513" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-55513> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f5213c71-1c4f-3287-ae19-9ca654cba46c> .
+
+<http://data.silknow.org/object/1613e9e4-4564-3ebb-8bfc-ace45ffb3f8b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1613e9e4-4564-3ebb-8bfc-ace45ffb3f8b> .

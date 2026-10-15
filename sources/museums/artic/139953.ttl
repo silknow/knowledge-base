@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "32.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "32.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/bc4597da-84e9-3fa3-8b91-5f7fcfaca9be>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Bequest of Mrs. Chauncey B. Borland" ;
+        ecrm:P1_is_identified_by  "Bequest of Mrs. Chauncey B. Borland" .
+
+<http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "53.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "53.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, plain weave with supplementary patterning warps"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c44745ac-be8b-38a0-95b6-690cc20dfced> ;
+        ecrm:P3_has_note               "Silk, plain weave with supplementary patterning warps"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286/dimension/1> , <http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286/dimension/2> ;
+        dc:identifier                  "1978.972b" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/139953/fragment> .
+
+<http://data.silknow.org/image/c44745ac-be8b-38a0-95b6-690cc20dfced>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/139953_0.jpg> , <https://www.artic.edu/iiif/2/3c1b8e04-fd5f-7763-f381-9ceb49a1a1ad/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286> .
+
+<http://data.silknow.org/production/9ab499b8-349f-30f7-bb3d-a98d45d1d0b2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1725_1775> , <http://data.silknow.org/timespan/1775> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/3cb81344-a2a3-3e21-a18b-b59a43952c12> , <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/event/c9c1e5a9-5bf7-3c53-850f-4f8e49ca9b8f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/bc4597da-84e9-3fa3-8b91-5f7fcfaca9be> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Bequest of Mrs. Chauncey B. Borland" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286> .
+
+<http://data.silknow.org/place/3cb81344-a2a3-3e21-a18b-b59a43952c12>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "England or France" ;
+        ecrm:P87_is_identified_by  "England or France" .
+
+<http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, plain weave with supplementary patterning warps"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/413762d8-3f2d-38d9-a16f-880cf2163d32>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1978.972b" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286/category/1> , <http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286> , <http://data.silknow.org/event/c9c1e5a9-5bf7-3c53-850f-4f8e49ca9b8f> , <http://data.silknow.org/production/9ab499b8-349f-30f7-bb3d-a98d45d1d0b2> , <http://data.silknow.org/object/43955cbe-0ebd-33fe-b748-5f4973e70286/observation/1> , <http://data.silknow.org/image/c44745ac-be8b-38a0-95b6-690cc20dfced> ;
+        dc:identifier       "139953.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/413762d8-3f2d-38d9-a16f-880cf2163d32> .

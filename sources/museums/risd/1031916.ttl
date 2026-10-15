@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/d28baca2-3d1c-3ec4-8f50-a3aa47e325b3>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158> .
+
+<http://data.silknow.org/actor/0c824693-e0cf-378c-a3ee-142a783a33bc>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "See Notes" ;
+        ecrm:P1_is_identified_by  "See Notes" .
+
+<http://data.silknow.org/image/00785e1a-bbf6-35ee-9ba1-fb22fd11d6d2>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1031916_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/28347.jpg> .
+
+<http://data.silknow.org/production/c069f345-b8b3-3457-8d06-9d5728e739f6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/ce751466-09f8-37d9-a181-bfa8a6fb513c> .
+
+<http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "66" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "66"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/b1323bc9-b2a8-3cc1-9e3f-eccd53e99bdf>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1991.098.39" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/c069f345-b8b3-3457-8d06-9d5728e739f6> , <http://data.silknow.org/event/ab0d2abd-3b61-35e9-841d-1c4d91d11a9c> , <http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158/domain/1> , <http://data.silknow.org/event/d28baca2-3d1c-3ec4-8f50-a3aa47e325b3> , <http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158/category/1> , <http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158> , <http://data.silknow.org/image/00785e1a-bbf6-35ee-9ba1-fb22fd11d6d2> ;
+        dc:identifier       "1031916.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "60.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "60.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158> .
+
+<http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158/category/1>
+        a                    silk:T35 ;
+        silk:L1              "net panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158> .
+
+<http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/00785e1a-bbf6-35ee-9ba1-fb22fd11d6d2> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158/dimension/1> , <http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158/dimension/2> ;
+        dc:identifier                  "1991.098.39" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/net-panel-199109839> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b1323bc9-b2a8-3cc1-9e3f-eccd53e99bdf> .
+
+<http://data.silknow.org/event/ab0d2abd-3b61-35e9-841d-1c4d91d11a9c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/0c824693-e0cf-378c-a3ee-142a783a33bc> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "See Notes" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/781c2f2c-b246-3b3f-aadc-2e355508d158> .

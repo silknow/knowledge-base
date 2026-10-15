@@ -1,0 +1,97 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/9c571096-c99a-36f9-aaf7-e5d67abd901b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3> ;
+        ecrm:P126_employed      "Silk; embroidery"@en ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/8505031/> .
+
+<http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "For decorating the tops of sleeves, worked with black silk and tarnished metal thread in a conventional design."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f8015154-0d3e-3b2f-9eb7-1768f310421c> , <http://data.silknow.org/image/027faaf1-059e-3ee9-9361-23c6dc66583c> ;
+        ecrm:P3_has_note               "For decorating the tops of sleeves, worked with black silk and tarnished metal thread in a conventional design."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3/dimension/2> , <http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3/dimension/1> ;
+        dc:identifier                  "22.750a-b" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/67383> .
+
+<http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "13.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "13.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/61a37c70-9f6f-3c8d-ab08-0a260f546496>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/f0f9bb6d-3c35-3d61-aeec-c08bf6fedc24>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 22.750a-b" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3/observation/1> , <http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3/domain/1> , <http://data.silknow.org/production/9c571096-c99a-36f9-aaf7-e5d67abd901b> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3/category/1> , <http://data.silknow.org/image/f8015154-0d3e-3b2f-9eb7-1768f310421c> , <http://data.silknow.org/image/027faaf1-059e-3ee9-9361-23c6dc66583c> , <http://data.silknow.org/event/61a37c70-9f6f-3c8d-ab08-0a260f546496> , <http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3> ;
+        dc:identifier       "67383.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3> .
+
+<http://data.silknow.org/image/f8015154-0d3e-3b2f-9eb7-1768f310421c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "844150" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/67383_1.jpg> , <https://collections.mfa.org/internal/media/dispatcher/844150/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f0f9bb6d-3c35-3d61-aeec-c08bf6fedc24> .
+
+<http://data.silknow.org/image/027faaf1-059e-3ee9-9361-23c6dc66583c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "844151" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/67383_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/844151/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Bands of solid embroidery" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3> .
+
+<https://sws.geonames.org/8505031/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "For decorating the tops of sleeves, worked with black silk and tarnished metal thread in a conventional design."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/676bf494-1e4f-3af0-8b67-ba9868aa4eb3> .

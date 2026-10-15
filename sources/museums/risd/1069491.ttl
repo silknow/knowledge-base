@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/b40469a1-c921-32c9-83e0-84f029ad5b5e>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "55.208" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/cover-55208> .
+
+<http://data.silknow.org/object/bec11c89-ece8-3bbd-a38f-740175e6ef1b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 55.208" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/334ddae9-bd62-36de-b449-03baa2ce39b3> , <http://data.silknow.org/object/b40469a1-c921-32c9-83e0-84f029ad5b5e/domain/1> , <http://data.silknow.org/event/905546fe-f9e9-3945-830e-7f9b1867ab46> , <http://data.silknow.org/production/f9f3bd6e-04cb-30dd-9c28-ec339785a19c> , <http://data.silknow.org/object/b40469a1-c921-32c9-83e0-84f029ad5b5e/category/1> , <http://data.silknow.org/object/b40469a1-c921-32c9-83e0-84f029ad5b5e> ;
+        dc:identifier       "1069491.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/b40469a1-c921-32c9-83e0-84f029ad5b5e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b40469a1-c921-32c9-83e0-84f029ad5b5e> .
+
+<http://data.silknow.org/production/f9f3bd6e-04cb-30dd-9c28-ec339785a19c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b40469a1-c921-32c9-83e0-84f029ad5b5e> ;
+        ecrm:P126_employed      "Silk; satin weave, painted"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "gilding"@en , "satin weave"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1876_1925> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1605651/> .
+
+<http://data.silknow.org/actor/7dd0bdea-1180-3516-abe6-2f9a54992d4c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Bequest of Miss Lucy T. Aldrich" ;
+        ecrm:P1_is_identified_by  "Bequest of Miss Lucy T. Aldrich" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bec11c89-ece8-3bbd-a38f-740175e6ef1b> .
+
+<http://data.silknow.org/event/905546fe-f9e9-3945-830e-7f9b1867ab46>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b40469a1-c921-32c9-83e0-84f029ad5b5e> .
+
+<http://data.silknow.org/event/334ddae9-bd62-36de-b449-03baa2ce39b3>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/7dd0bdea-1180-3516-abe6-2f9a54992d4c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Bequest of Miss Lucy T. Aldrich" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b40469a1-c921-32c9-83e0-84f029ad5b5e> .
+
+<https://sws.geonames.org/1605651/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/b40469a1-c921-32c9-83e0-84f029ad5b5e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Cover" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b40469a1-c921-32c9-83e0-84f029ad5b5e> .

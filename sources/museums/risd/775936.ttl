@@ -1,0 +1,85 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/2f4e57ed-e3b3-3cbb-82ff-ce3209683dcc>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Paul Fletcher" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Paul Fletcher" .
+
+<http://data.silknow.org/image/2743108a-13ab-3e97-b290-c5f3e998ad9c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/775936_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/13968.jpg> .
+
+<http://data.silknow.org/object/86a9616a-dd10-3344-8ed9-47b2b1a8ada8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Skirt Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/86a9616a-dd10-3344-8ed9-47b2b1a8ada8> .
+
+<http://data.silknow.org/production/a897f0ca-25af-35ec-82b9-3b0372a32509>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/86a9616a-dd10-3344-8ed9-47b2b1a8ada8> ;
+        ecrm:P126_employed      "Polychrome silk taffeta brocade"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1776_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/event/94c6472b-4691-3b3e-82f7-b2f0e23e0d50>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/86a9616a-dd10-3344-8ed9-47b2b1a8ada8> .
+
+<http://data.silknow.org/object/86a9616a-dd10-3344-8ed9-47b2b1a8ada8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/86a9616a-dd10-3344-8ed9-47b2b1a8ada8> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/2ec63a65-d99b-399f-a188-4a762f089862>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 82.076.12" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/94c6472b-4691-3b3e-82f7-b2f0e23e0d50> , <http://data.silknow.org/object/86a9616a-dd10-3344-8ed9-47b2b1a8ada8/category/1> , <http://data.silknow.org/object/f33bd772-6a1f-397b-b7d4-0e49130147c5> , <http://data.silknow.org/production/a897f0ca-25af-35ec-82b9-3b0372a32509> , <http://data.silknow.org/object/86a9616a-dd10-3344-8ed9-47b2b1a8ada8/domain/1> , <http://data.silknow.org/image/2743108a-13ab-3e97-b290-c5f3e998ad9c> , <http://data.silknow.org/object/86a9616a-dd10-3344-8ed9-47b2b1a8ada8> , <http://data.silknow.org/event/4488db10-df46-3eac-b79c-a03a6b725895> ;
+        dc:identifier       "775936.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/86a9616a-dd10-3344-8ed9-47b2b1a8ada8>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2743108a-13ab-3e97-b290-c5f3e998ad9c> ;
+        dc:identifier                  "82.076.12" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/skirt-panel-8207612> .
+
+<http://data.silknow.org/object/f33bd772-6a1f-397b-b7d4-0e49130147c5>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Lost in the Museum" , "October 5, 2018 - August 25, 2019" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/86a9616a-dd10-3344-8ed9-47b2b1a8ada8> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "Lost in the Museum" , "October 5, 2018 - August 25, 2019" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/lost-museum> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2ec63a65-d99b-399f-a188-4a762f089862> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/4488db10-df46-3eac-b79c-a03a6b725895>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/2f4e57ed-e3b3-3cbb-82ff-ce3209683dcc> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Paul Fletcher" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/86a9616a-dd10-3344-8ed9-47b2b1a8ada8> .

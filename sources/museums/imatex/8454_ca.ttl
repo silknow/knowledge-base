@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/492d0823-3f0b-3c98-a544-5360c450d226> .
+
+<http://data.silknow.org/event/dac74e02-58cb-3df7-af49-cc4aef51ce36>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c96d6d84-c38c-3944-ae48-f38819ea838e> .
+
+<http://data.silknow.org/image/de087010-1818-331c-96d7-c073672f55b3>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000005581" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/8454_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000005581.jpg> .
+
+<http://data.silknow.org/image/bfe51b6f-f292-3d1f-a564-fd705bba4466>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "escenes figuratives"@ca ;
+        ecrm:P3_has_note  "escenes figuratives"@ca .
+
+<http://data.silknow.org/object/c96d6d84-c38c-3944-ae48-f38819ea838e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c96d6d84-c38c-3944-ae48-f38819ea838e> .
+
+<http://data.silknow.org/image/9bed0154-da2a-36b7-8459-0cc870c6eba9>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "figuració humana"@ca ;
+        ecrm:P3_has_note  "figuració humana"@ca .
+
+<http://data.silknow.org/object/c96d6d84-c38c-3944-ae48-f38819ea838e>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/de087010-1818-331c-96d7-c073672f55b3> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/bfe51b6f-f292-3d1f-a564-fd705bba4466> , <http://data.silknow.org/image/9bed0154-da2a-36b7-8459-0cc870c6eba9> ;
+        dc:identifier                  "9287" .
+
+<http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Tórtola Valencia, Carmen" ;
+        ecrm:P1_is_identified_by  "Tórtola Valencia, Carmen" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Carmen_Tórtola_Valencia> , <https://viaf.org/viaf/47896092> , <https://isni.org/isni/0000000038570077> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Carmen_Tórtola_Valencia> .
+
+<http://data.silknow.org/event/51033ebe-3a5e-3ba3-8cee-c654430b1774>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b> ;
+        ecrm:P23_transferred_title_from
+                "Tórtola Valencia, Carmen" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c96d6d84-c38c-3944-ae48-f38819ea838e> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/production/a893422a-06e8-391a-8396-dc287eab0698>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c96d6d84-c38c-3944-ae48-f38819ea838e> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "tècnica d'estampació"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/492d0823-3f0b-3c98-a544-5360c450d226>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 8454" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c96d6d84-c38c-3944-ae48-f38819ea838e> , <http://data.silknow.org/production/a893422a-06e8-391a-8396-dc287eab0698> , <http://data.silknow.org/object/c96d6d84-c38c-3944-ae48-f38819ea838e/domain/1> , <http://data.silknow.org/image/de087010-1818-331c-96d7-c073672f55b3> , <http://data.silknow.org/event/dac74e02-58cb-3df7-af49-cc4aef51ce36> , <http://data.silknow.org/object/c96d6d84-c38c-3944-ae48-f38819ea838e/category/1> , <http://data.silknow.org/event/51033ebe-3a5e-3ba3-8cee-c654430b1774> ;
+        dc:identifier       "8454.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/c96d6d84-c38c-3944-ae48-f38819ea838e/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c96d6d84-c38c-3944-ae48-f38819ea838e> .

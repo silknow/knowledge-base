@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "15.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "15.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/27625813-ed82-312b-9c10-1a46242358ca>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "843705" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/71748_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/843705/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/d355dad4-3c76-3f67-acf6-6c1cf6c85f5d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f> ;
+        ecrm:P126_employed      "Silk brocade"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of brocade" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/dbeb659b-8e86-32e7-a906-f27c1233d1b9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 93.881" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f> , <http://data.silknow.org/production/d355dad4-3c76-3f67-acf6-6c1cf6c85f5d> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f/category/1> , <http://data.silknow.org/event/73b212c1-9bb4-30a3-abcf-8968c900dc97> , <http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f/domain/1> , <http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f/observation/1> , <http://data.silknow.org/image/27625813-ed82-312b-9c10-1a46242358ca> ;
+        dc:identifier       "71748.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dbeb659b-8e86-32e7-a906-f27c1233d1b9> .
+
+<http://data.silknow.org/event/73b212c1-9bb4-30a3-abcf-8968c900dc97>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f> .
+
+<http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Light green satin ground on which is a design of conventional leaves and flowers, woven with yellow, and white silk."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f> .
+
+<http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "45.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "45.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Light green satin ground on which is a design of conventional leaves and flowers, woven with yellow, and white silk."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/27625813-ed82-312b-9c10-1a46242358ca> ;
+        ecrm:P3_has_note               "Light green satin ground on which is a design of conventional leaves and flowers, woven with yellow, and white silk."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f/dimension/2> , <http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f/dimension/1> ;
+        dc:identifier                  "93.881" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/71748> .
+
+<http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac47d85a-b36d-370a-a093-e6582abc387f> .

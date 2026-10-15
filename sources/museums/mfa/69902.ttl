@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/e11b7d00-e8f5-3740-9f0b-c530d9b2805a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764> .
+
+<http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "10" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "10"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Embroidered textile" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764> .
+
+<http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "49" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "49"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/9340d1fc-b8ba-3107-af8b-99350d7b88d1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764> ;
+        ecrm:P126_employed      "Wool, Cotton and silk; embroidery"@en ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/390903/> .
+
+<http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764> .
+
+<http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Heavy white cotton cloth. On one side is a solid border of embroidery. The ground is worked with golden brown silk. The design of geometrical forms, with dark blue and yellow wool."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/76799eb8-e057-30d7-b893-fca083897733> ;
+        ecrm:P3_has_note               "Heavy white cotton cloth. On one side is a solid border of embroidery. The ground is worked with golden brown silk. The design of geometrical forms, with dark blue and yellow wool."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764/dimension/2> , <http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764/dimension/1> ;
+        dc:identifier                  "98.40" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/69902> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<https://sws.geonames.org/390903/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1e7947a7-d9b6-3cc8-88c6-83806e3388b4> .
+
+<http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Heavy white cotton cloth. On one side is a solid border of embroidery. The ground is worked with golden brown silk. The design of geometrical forms, with dark blue and yellow wool."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764> .
+
+<http://data.silknow.org/object/1e7947a7-d9b6-3cc8-88c6-83806e3388b4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 98.40" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/e11b7d00-e8f5-3740-9f0b-c530d9b2805a> , <http://data.silknow.org/production/9340d1fc-b8ba-3107-af8b-99350d7b88d1> , <http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/76799eb8-e057-30d7-b893-fca083897733> , <http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764> , <http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764/observation/1> , <http://data.silknow.org/object/719e7972-4c53-3228-892a-51a932167764/domain/1> ;
+        dc:identifier       "69902.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/image/76799eb8-e057-30d7-b893-fca083897733>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "844243" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/69902_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/844243/resize%3Aformat%3Dfull> .

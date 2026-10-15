@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/de3484ad-02e1-3137-88d1-1f9b1b7f33f4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/da3df424-98af-37a2-bd97-ee359427a066> ;
+        ecrm:P32_used_general_technique
+                "Velluto tagliato lanciato e bouclé"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1451_1500> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3176959/> .
+
+<http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        ecrm:P1_is_identified_by  "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122951649> , <https://viaf.org/viaf/147524313> .
+
+<http://data.silknow.org/image/41344238-5dc4-3dee-9204-9f98ff0799ca>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1600770665_58" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1600769665520_0.jpg> .
+
+<http://data.silknow.org/object/da3df424-98af-37a2-bd97-ee359427a066>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Seconda metà del XV secolo"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/41344238-5dc4-3dee-9204-9f98ff0799ca> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/da3df424-98af-37a2-bd97-ee359427a066/dimension/2> , <http://data.silknow.org/object/da3df424-98af-37a2-bd97-ee359427a066/dimension/1> ;
+        dc:identifier                  "1600769665520" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/event/978cb368-83c8-358a-a579-b50344be0b88>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/da3df424-98af-37a2-bd97-ee359427a066> .
+
+<http://data.silknow.org/object/da3df424-98af-37a2-bd97-ee359427a066/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/da3df424-98af-37a2-bd97-ee359427a066> ;
+        ecrm:P42_assigned    "Telo" .
+
+<http://data.silknow.org/object/9588bd7a-c374-3f52-a446-5d4a48da38bf>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1600769665520" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/da3df424-98af-37a2-bd97-ee359427a066> , <http://data.silknow.org/production/de3484ad-02e1-3137-88d1-1f9b1b7f33f4> , <http://data.silknow.org/object/d716d307-3864-3054-b6ac-0c76544b4d35> , <http://data.silknow.org/object/da3df424-98af-37a2-bd97-ee359427a066/type/1> , <http://data.silknow.org/image/41344238-5dc4-3dee-9204-9f98ff0799ca> , <http://data.silknow.org/event/978cb368-83c8-358a-a579-b50344be0b88> ;
+        dc:identifier       "1600769665520.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/object/da3df424-98af-37a2-bd97-ee359427a066/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "60" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "60"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9588bd7a-c374-3f52-a446-5d4a48da38bf> .
+
+<http://data.silknow.org/object/d716d307-3864-3054-b6ac-0c76544b4d35>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Elisabetta Bazzani, scheda n. 58, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, pp. 144-145"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/da3df424-98af-37a2-bd97-ee359427a066> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Elisabetta Bazzani, scheda n. 58, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, pp. 144-145"@it .
+
+<https://sws.geonames.org/3176959/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/da3df424-98af-37a2-bd97-ee359427a066/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "83" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "83"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

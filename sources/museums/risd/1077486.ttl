@@ -1,0 +1,73 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/94214edd-6ea9-3926-aaa3-2c133bd87ffa>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/036c6345-84ae-33e9-82b0-4ce78d6a19d5> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/638> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/60d53528-42dd-395f-8000-f7fb90d790c1> .
+
+<http://data.silknow.org/event/020a76b4-66c9-3551-bf1a-8c1efca736bb>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a603d842-4f67-3672-a198-b3ff89ed3e61> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mr. and Mrs. Louis J. Cella III" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/036c6345-84ae-33e9-82b0-4ce78d6a19d5> .
+
+<http://data.silknow.org/object/036c6345-84ae-33e9-82b0-4ce78d6a19d5/category/1>
+        a                    silk:T35 ;
+        silk:L1              "textile length" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/036c6345-84ae-33e9-82b0-4ce78d6a19d5> .
+
+<http://data.silknow.org/object/036c6345-84ae-33e9-82b0-4ce78d6a19d5/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/036c6345-84ae-33e9-82b0-4ce78d6a19d5> .
+
+<http://data.silknow.org/object/50c92f34-8ba9-388f-8ec9-149614ad0882>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2000.62.10" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/258760d1-4182-3a5b-b7b4-efc31cf3de4e> , <http://data.silknow.org/object/036c6345-84ae-33e9-82b0-4ce78d6a19d5/domain/1> , <http://data.silknow.org/object/036c6345-84ae-33e9-82b0-4ce78d6a19d5/category/1> , <http://data.silknow.org/object/036c6345-84ae-33e9-82b0-4ce78d6a19d5> , <http://data.silknow.org/event/020a76b4-66c9-3551-bf1a-8c1efca736bb> , <http://data.silknow.org/production/94214edd-6ea9-3926-aaa3-2c133bd87ffa> , <http://data.silknow.org/image/d08bf048-38c5-3571-a0ba-69fffca72284> ;
+        dc:identifier       "1077486.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/036c6345-84ae-33e9-82b0-4ce78d6a19d5>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d08bf048-38c5-3571-a0ba-69fffca72284> ;
+        dc:identifier                  "2000.62.10" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-length-20006210> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/event/258760d1-4182-3a5b-b7b4-efc31cf3de4e>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/036c6345-84ae-33e9-82b0-4ce78d6a19d5> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/50c92f34-8ba9-388f-8ec9-149614ad0882> .
+
+<http://data.silknow.org/actor/a603d842-4f67-3672-a198-b3ff89ed3e61>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mr. and Mrs. Louis J. Cella III" ;
+        ecrm:P1_is_identified_by  "Gift of Mr. and Mrs. Louis J. Cella III" .
+
+<http://data.silknow.org/image/d08bf048-38c5-3571-a0ba-69fffca72284>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1077486_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/28389.jpg> .

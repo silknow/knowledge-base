@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/f96eeb9b-f9b2-374c-b852-429e6f646da6>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Donghia Textiles, Inc" ;
+        ecrm:P1_is_identified_by  "Donghia Textiles, Inc" .
+
+<http://data.silknow.org/object/9170ce1c-1122-3f51-8a50-cff314bf944c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Furnishing textile" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9170ce1c-1122-3f51-8a50-cff314bf944c> .
+
+<http://data.silknow.org/production/7ee71cd8-e596-3e5f-b28e-992a0ee3a5e8/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/f96eeb9b-f9b2-374c-b852-429e6f646da6> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/event/a43f5425-809e-34fd-9871-6b3de7ecd22a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/856189a6-8133-36af-a497-383f13f4d8af> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Sherri Donghia" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9170ce1c-1122-3f51-8a50-cff314bf944c> .
+
+<http://data.silknow.org/object/9170ce1c-1122-3f51-8a50-cff314bf944c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9170ce1c-1122-3f51-8a50-cff314bf944c> .
+
+<http://data.silknow.org/object/9170ce1c-1122-3f51-8a50-cff314bf944c>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "2018.12.4" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/furnishing-textile-2018124> .
+
+<http://data.silknow.org/object/a03cb1b5-c6df-3c0c-bfa9-b97e7f6a7091>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2018.12.4" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9170ce1c-1122-3f51-8a50-cff314bf944c/category/1> , <http://data.silknow.org/production/7ee71cd8-e596-3e5f-b28e-992a0ee3a5e8> , <http://data.silknow.org/event/a43f5425-809e-34fd-9871-6b3de7ecd22a> , <http://data.silknow.org/object/9170ce1c-1122-3f51-8a50-cff314bf944c/domain/1> , <http://data.silknow.org/object/9170ce1c-1122-3f51-8a50-cff314bf944c> , <http://data.silknow.org/event/b3b38295-edb5-3b53-ae72-786f91b5b40a> ;
+        dc:identifier       "1142086.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/production/7ee71cd8-e596-3e5f-b28e-992a0ee3a5e8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9170ce1c-1122-3f51-8a50-cff314bf944c> ;
+        ecrm:P126_employed      "Silk and Rayon (Righe) stripe foulard"@en ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/7ee71cd8-e596-3e5f-b28e-992a0ee3a5e8/activity/1> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/856189a6-8133-36af-a497-383f13f4d8af>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Sherri Donghia" ;
+        ecrm:P1_is_identified_by  "Gift of Sherri Donghia" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000036591720> .
+
+<http://data.silknow.org/event/b3b38295-edb5-3b53-ae72-786f91b5b40a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9170ce1c-1122-3f51-8a50-cff314bf944c> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a03cb1b5-c6df-3c0c-bfa9-b97e7f6a7091> .

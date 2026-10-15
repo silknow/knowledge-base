@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/assessment/bd554c35-880e-309e-bddc-d888c55f6013>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/b5e27308-9f89-3456-ba9c-4c960b802ba7> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/bd554c35-880e-309e-bddc-d888c55f6013/condition/1> .
+
+<http://data.silknow.org/image/9ac3b2e9-4b03-37e9-a578-47ef0bac7fc5>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.92" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.92_0.jpg> .
+
+<http://data.silknow.org/assessment/bd554c35-880e-309e-bddc-d888c55f6013/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b19045a3-7a24-3a41-8940-a8f084115d1f> .
+
+<http://data.silknow.org/object/b5e27308-9f89-3456-ba9c-4c960b802ba7/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Perteneciente a la imagen del Cristo Preso."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b5e27308-9f89-3456-ba9c-4c960b802ba7> .
+
+<http://data.silknow.org/production/8b61d2e4-dfee-3738-8e53-e83ad72db70d/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/production/8b61d2e4-dfee-3738-8e53-e83ad72db70d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b5e27308-9f89-3456-ba9c-4c960b802ba7> ;
+        ecrm:P126_employed      "Hilo de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Cordonería."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/8b61d2e4-dfee-3738-8e53-e83ad72db70d/activity/1> .
+
+<http://data.silknow.org/object/b19045a3-7a24-3a41-8940-a8f084115d1f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.92" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b5e27308-9f89-3456-ba9c-4c960b802ba7> , <http://data.silknow.org/production/8b61d2e4-dfee-3738-8e53-e83ad72db70d> , <http://data.silknow.org/object/b5e27308-9f89-3456-ba9c-4c960b802ba7/type/1> , <http://data.silknow.org/object/b5e27308-9f89-3456-ba9c-4c960b802ba7/observation/1> , <http://data.silknow.org/assessment/bd554c35-880e-309e-bddc-d888c55f6013> , <http://data.silknow.org/image/9ac3b2e9-4b03-37e9-a578-47ef0bac7fc5> ;
+        dc:identifier       "5.92.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/object/b5e27308-9f89-3456-ba9c-4c960b802ba7>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Perteneciente a la imagen del Cristo Preso."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9ac3b2e9-4b03-37e9-a578-47ef0bac7fc5> ;
+        ecrm:P3_has_note               "*Perteneciente a la imagen del Cristo Preso."@es ;
+        dc:identifier                  "5.92" .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .
+
+<http://data.silknow.org/object/b5e27308-9f89-3456-ba9c-4c960b802ba7/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b5e27308-9f89-3456-ba9c-4c960b802ba7> ;
+        ecrm:P42_assigned    "Cíngulo" .

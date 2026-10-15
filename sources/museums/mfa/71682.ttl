@@ -1,0 +1,80 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/165e2b55-6017-3e9a-9544-34a03de4137e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b> ;
+        ecrm:P126_employed      "Silk brocade"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1601_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/27ac0312-db18-36f9-8485-ea4c2fb40f2a> .
+
+<http://data.silknow.org/image/16f1e4ec-bf12-317a-a75d-55b0f210ad4c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "843696" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/71682_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/843696/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b> .
+
+<http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "White satin ground, on which is a design of flowers, woven with two shades of pink, light blue, yellow, and green silk."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b> .
+
+<http://data.silknow.org/event/0dca3546-71e9-3b4c-aa59-ea9050fa3af7>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b> .
+
+<http://data.silknow.org/place/27ac0312-db18-36f9-8485-ea4c2fb40f2a>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Italian or French" ;
+        ecrm:P87_is_identified_by  "Italian or French" .
+
+<http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of brocade" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/f78b6eeb-d560-3416-bb19-3b076a85d23d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 93.833" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/0dca3546-71e9-3b4c-aa59-ea9050fa3af7> , <http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b> , <http://data.silknow.org/production/165e2b55-6017-3e9a-9544-34a03de4137e> , <http://data.silknow.org/image/16f1e4ec-bf12-317a-a75d-55b0f210ad4c> , <http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b/domain/1> , <http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b/observation/1> , <http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "71682.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/c96e284c-6cbc-3e6a-81e7-45e870b0439b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "White satin ground, on which is a design of flowers, woven with two shades of pink, light blue, yellow, and green silk."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/16f1e4ec-bf12-317a-a75d-55b0f210ad4c> ;
+        ecrm:P3_has_note               "White satin ground, on which is a design of flowers, woven with two shades of pink, light blue, yellow, and green silk."@en ;
+        dc:identifier                  "93.833" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/71682> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f78b6eeb-d560-3416-bb19-3b076a85d23d> .

@@ -1,0 +1,62 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/3708df66-a624-36dc-aecc-faf9379a9fae>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Cornille et Cie, 1926" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/394ebf67-06b1-333f-8f6d-6781d46151b8> .
+
+<http://data.silknow.org/production/da36b3dd-ae5a-30a8-9854-f2330a3ea4fb>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Samson (Melle), 1925, Cornille et Cie" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/394ebf67-06b1-333f-8f6d-6781d46151b8> ;
+        ecrm:P3_has_note        "Samson (Melle), 1925, Cornille et Cie" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1925> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/394ebf67-06b1-333f-8f6d-6781d46151b8>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Samson (Melle), 1925, Cornille et Cie"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bd63ff07-17d9-302e-8ac5-08401f0f3623> ;
+        dc:identifier                  "25167" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/914083> .
+
+<http://data.silknow.org/object/394ebf67-06b1-333f-8f6d-6781d46151b8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/394ebf67-06b1-333f-8f6d-6781d46151b8> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/781ea77b-926f-35c3-a8b3-a15ec05c611f> .
+
+<http://data.silknow.org/object/781ea77b-926f-35c3-a8b3-a15ec05c611f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 25167" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/3708df66-a624-36dc-aecc-faf9379a9fae> , <http://data.silknow.org/object/394ebf67-06b1-333f-8f6d-6781d46151b8> , <http://data.silknow.org/image/bd63ff07-17d9-302e-8ac5-08401f0f3623> , <http://data.silknow.org/object/394ebf67-06b1-333f-8f6d-6781d46151b8/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/da36b3dd-ae5a-30a8-9854-f2330a3ea4fb> ;
+        dc:identifier       "914083.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/394ebf67-06b1-333f-8f6d-6781d46151b8> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/image/bd63ff07-17d9-302e-8ac5-08401f0f3623>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/914083_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/549c9baa-e536-4d57-8af4-f1e517047ff5.jpg> .

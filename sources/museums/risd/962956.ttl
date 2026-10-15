@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/a035a8b9-5999-3cd8-a972-91ab130f687e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/46e183a1-6b7b-37d9-be64-5343624f46e9> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "resist patterning"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/236> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1994> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/a035a8b9-5999-3cd8-a972-91ab130f687e/activity/1> .
+
+<http://data.silknow.org/object/43165f7f-96b9-383f-9a84-1fe29513a457>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1994.055" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/46e183a1-6b7b-37d9-be64-5343624f46e9> , <http://data.silknow.org/production/a035a8b9-5999-3cd8-a972-91ab130f687e> , <http://data.silknow.org/event/cc072a9d-7f49-328b-867f-7c0ef9fd4d47> , <http://data.silknow.org/image/6f04dbbf-f310-3419-b969-52004dde0a91> , <http://data.silknow.org/object/46e183a1-6b7b-37d9-be64-5343624f46e9/domain/1> , <http://data.silknow.org/object/46e183a1-6b7b-37d9-be64-5343624f46e9/category/1> , <http://data.silknow.org/event/c4b1a913-e45b-3089-badf-08a9707b4d56> ;
+        dc:identifier       "962956.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/46e183a1-6b7b-37d9-be64-5343624f46e9>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6f04dbbf-f310-3419-b969-52004dde0a91> ;
+        dc:identifier                  "1994.055" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/cirrus-1994055> .
+
+<http://data.silknow.org/event/cc072a9d-7f49-328b-867f-7c0ef9fd4d47>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/8fa9838e-7909-3bca-b7c6-5896e6c1779f> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of NUNO Corporation" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/46e183a1-6b7b-37d9-be64-5343624f46e9> .
+
+<http://data.silknow.org/production/a035a8b9-5999-3cd8-a972-91ab130f687e/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/ef03782c-788b-35a4-ac82-bc3313b018e3> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/event/c4b1a913-e45b-3089-badf-08a9707b4d56>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/46e183a1-6b7b-37d9-be64-5343624f46e9> .
+
+<http://data.silknow.org/actor/ef03782c-788b-35a4-ac82-bc3313b018e3>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Nuno Corporation" ;
+        ecrm:P1_is_identified_by  "Nuno Corporation" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/43165f7f-96b9-383f-9a84-1fe29513a457> .
+
+<http://data.silknow.org/actor/8fa9838e-7909-3bca-b7c6-5896e6c1779f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of NUNO Corporation" ;
+        ecrm:P1_is_identified_by  "Gift of NUNO Corporation" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000046354788X> .
+
+<http://data.silknow.org/object/46e183a1-6b7b-37d9-be64-5343624f46e9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Cirrus" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/46e183a1-6b7b-37d9-be64-5343624f46e9> .
+
+<http://data.silknow.org/image/6f04dbbf-f310-3419-b969-52004dde0a91>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/962956_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/13238.jpg> .
+
+<http://data.silknow.org/object/46e183a1-6b7b-37d9-be64-5343624f46e9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/46e183a1-6b7b-37d9-be64-5343624f46e9> .

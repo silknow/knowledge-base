@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/79e0eefb-e4aa-31e5-8ecd-5d031ccc3a03>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "1740 circa"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/98ed6c19-4f53-38a5-abbf-cc0eeeecc4c9> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/79e0eefb-e4aa-31e5-8ecd-5d031ccc3a03/dimension/2> , <http://data.silknow.org/object/79e0eefb-e4aa-31e5-8ecd-5d031ccc3a03/dimension/1> ;
+        dc:identifier                  "1582650062262" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/actor/ecef3a7f-77c0-3f8c-8784-b920720aef4d>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Catania, Museo Diocesano" ;
+        ecrm:P1_is_identified_by  "Catania, Museo Diocesano" .
+
+<http://data.silknow.org/object/a5e17379-e7cc-3a72-a690-71e5cbfbb964>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1582650062262" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/67745f9a-bed3-3abf-9f12-a0960d573af5> , <http://data.silknow.org/object/79e0eefb-e4aa-31e5-8ecd-5d031ccc3a03/type/1> , <http://data.silknow.org/event/14588d65-5810-36c2-bbb1-e9959b1bb7c0> , <http://data.silknow.org/object/79e0eefb-e4aa-31e5-8ecd-5d031ccc3a03> , <http://data.silknow.org/production/06284c59-0316-3b2a-820b-7e2ca41b48bf> , <http://data.silknow.org/image/98ed6c19-4f53-38a5-abbf-cc0eeeecc4c9> ;
+        dc:identifier       "1582650062262.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/object/79e0eefb-e4aa-31e5-8ecd-5d031ccc3a03/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/79e0eefb-e4aa-31e5-8ecd-5d031ccc3a03> ;
+        ecrm:P42_assigned    "Pianeta" .
+
+<http://data.silknow.org/event/14588d65-5810-36c2-bbb1-e9959b1bb7c0>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/ecef3a7f-77c0-3f8c-8784-b920720aef4d> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/79e0eefb-e4aa-31e5-8ecd-5d031ccc3a03> .
+
+<http://data.silknow.org/production/06284c59-0316-3b2a-820b-7e2ca41b48bf>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/79e0eefb-e4aa-31e5-8ecd-5d031ccc3a03> ;
+        ecrm:P32_used_general_technique
+                "Taffetas ricamato"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/43a6247a-1363-3118-ad2d-b64ccd99445e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2523118/> .
+
+<http://data.silknow.org/object/79e0eefb-e4aa-31e5-8ecd-5d031ccc3a03/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "114" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "114"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/98ed6c19-4f53-38a5-abbf-cc0eeeecc4c9>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1582650574_catania30vetrina" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1582650062262_0.jpg> .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a5e17379-e7cc-3a72-a690-71e5cbfbb964> .
+
+<http://data.silknow.org/object/67745f9a-bed3-3abf-9f12-a0960d573af5>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "M. Vitella, Scheda n. VIII.I.5, in Il Museo Diocesano di Catania, coordinatore scientifico M. Vitella, Catania 2017, p. 39"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/79e0eefb-e4aa-31e5-8ecd-5d031ccc3a03> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "M. Vitella, Scheda n. VIII.I.5, in Il Museo Diocesano di Catania, coordinatore scientifico M. Vitella, Catania 2017, p. 39"@it .
+
+<https://sws.geonames.org/2523118/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/79e0eefb-e4aa-31e5-8ecd-5d031ccc3a03/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "74" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "74"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

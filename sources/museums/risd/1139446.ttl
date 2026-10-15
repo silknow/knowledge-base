@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/128c045d-2df8-3003-979f-0670ed42a7fa>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 52.238.16" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/4a0a555e-4402-3fbe-bdae-925cad1ef818> , <http://data.silknow.org/object/f768721e-2b7c-33a5-a649-ca6773d81fad> , <http://data.silknow.org/production/a015cfc7-01b5-325c-9aec-6b07b2b49c48> , <http://data.silknow.org/event/9f7f1066-0569-3f8e-9f83-81030f48f61d> , <http://data.silknow.org/object/f768721e-2b7c-33a5-a649-ca6773d81fad/category/1> , <http://data.silknow.org/object/f768721e-2b7c-33a5-a649-ca6773d81fad/domain/1> ;
+        dc:identifier       "1139446.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/f768721e-2b7c-33a5-a649-ca6773d81fad/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f768721e-2b7c-33a5-a649-ca6773d81fad> .
+
+<http://data.silknow.org/production/a015cfc7-01b5-325c-9aec-6b07b2b49c48>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f768721e-2b7c-33a5-a649-ca6773d81fad> ;
+        ecrm:P126_employed      "Silk; Chiffon with cut pile."@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1870_1879> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/f768721e-2b7c-33a5-a649-ca6773d81fad/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile Sample" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f768721e-2b7c-33a5-a649-ca6773d81fad> .
+
+<http://data.silknow.org/actor/c48c63d2-47aa-39e5-ac7f-6af70ba30780>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Mary B. Jackson Fund" ;
+        ecrm:P1_is_identified_by  "Mary B. Jackson Fund" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/128c045d-2df8-3003-979f-0670ed42a7fa> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/f768721e-2b7c-33a5-a649-ca6773d81fad>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "52.238.16" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-sample-5223816> .
+
+<http://data.silknow.org/event/9f7f1066-0569-3f8e-9f83-81030f48f61d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f768721e-2b7c-33a5-a649-ca6773d81fad> .
+
+<http://data.silknow.org/event/4a0a555e-4402-3fbe-bdae-925cad1ef818>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c48c63d2-47aa-39e5-ac7f-6af70ba30780> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Mary B. Jackson Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f768721e-2b7c-33a5-a649-ca6773d81fad> .

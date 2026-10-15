@@ -1,0 +1,117 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Hanging scroll" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322> .
+
+<http://data.silknow.org/actor/13d834d6-1c4b-3b0a-ab7a-b48c760a45de>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Genki, Komai" ;
+        ecrm:P1_is_identified_by  "Genki, Komai" .
+
+<http://data.silknow.org/production/f7cf8e3b-1124-30f5-b637-c1a30086c540/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/13d834d6-1c4b-3b0a-ab7a-b48c760a45de> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/event/0c430fac-552d-394c-a64c-2d8904e27ef0>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322> .
+
+<http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "painted surface" ;
+        rdfs:label          "Width: 19.625 in painted surface" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "painted surface" ;
+        ecrm:P90_has_value  "49.847500000000004"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Komai Genki. A Chinese lady admiring prunus blossoms. Kakemono. Ink and watercolour on silk. 1770s-80s"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/production/f7cf8e3b-1124-30f5-b637-c1a30086c540>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322> ;
+        ecrm:P126_employed      "watercolour painting on silk"@en , "ink"@en , "bodycolour"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/e0a4f3ac-3108-3a57-9a47-39c7baa5a5fc> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/f7cf8e3b-1124-30f5-b637-c1a30086c540/activity/1> .
+
+<http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/90> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0668583b-9b00-3ec8-a987-c2cbec42a854> .
+
+<http://data.silknow.org/object/0668583b-9b00-3ec8-a987-c2cbec42a854>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O461009" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8f7ef5e6-d50b-3a51-9555-86bfaeb09cf8> , <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322> , <http://data.silknow.org/collection/40c1ba84-e159-31aa-b354-ea24905da05f> , <http://data.silknow.org/event/0c430fac-552d-394c-a64c-2d8904e27ef0> , <http://data.silknow.org/production/f7cf8e3b-1124-30f5-b637-c1a30086c540> , <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322/domain/1> , <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322/observation/2> , <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322/observation/1> ;
+        dc:identifier       "O461009.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322>
+        a                       ecrm:E22_Man-Made_Object ;
+        rdfs:comment            "Komai Genki. A Chinese lady admiring prunus blossoms. Kakemono. Ink and watercolour on silk. 1770s-80s"@en , "A Chinese lady admiring blossom on the branch of a tree. Komai Genki (1741-1797)."@en ;
+        ecrm:P3_has_note        "Komai Genki. A Chinese lady admiring prunus blossoms. Kakemono. Ink and watercolour on silk. 1770s-80s"@en , "A Chinese lady admiring blossom on the branch of a tree. Komai Genki (1741-1797)."@en ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322/dimension/2> , <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322/dimension/1> ;
+        dc:identifier           "E.869:1-1949" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O461009> .
+
+<http://data.silknow.org/collection/40c1ba84-e159-31aa-b354-ea24905da05f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322> ;
+        ecrm:P78_is_identified_by  "East Asia Collection" .
+
+<http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "painted surface" ;
+        rdfs:label          "Height: 46.375 in painted surface" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P3_has_note    "painted surface" ;
+        ecrm:P90_has_value  "117.7925"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "A Chinese lady admiring blossom on the branch of a tree. Komai Genki (1741-1797)."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322> .
+
+<http://data.silknow.org/object/8f7ef5e6-d50b-3a51-9555-86bfaeb09cf8>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "<u>Victoria and Albert Museum, Department of Prints and Drawings and Department of Paintings, Accessions 1949</u>, London: HMSO, 1961."@en ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b907fcd5-3831-30c3-9058-b22ef34cc322> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "<u>Victoria and Albert Museum, Department of Prints and Drawings and Department of Paintings, Accessions 1949</u>, London: HMSO, 1961."@en .

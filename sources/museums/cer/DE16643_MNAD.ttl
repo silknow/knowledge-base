@@ -1,0 +1,111 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Colección de Arte Oriental" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf> .
+
+<http://data.silknow.org/event/1c46e19b-2509-38c2-be2b-26cdfd40bd59>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf> .
+
+<http://data.silknow.org/production/cf2b1e45-7b06-3869-a70a-fcef04690fc0>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf> ;
+        ecrm:P126_employed      "Seda [dorado.]  Esteatita [dorado.]  Fibra de seda [dorado.]  Hilo metálico [dorado.]  Marfil [dorado.]"@es ;
+        ecrm:P32_used_general_technique
+                "Pintado"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<http://data.silknow.org/image/65463351-24f6-37c8-ac85-7c4990d06c3f>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Murciélago; Motivos florales; Dragón"@es ;
+        ecrm:P3_has_note  "Murciélago; Motivos florales; Dragón"@es .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/7d0c772e-a633-3944-9abd-fbc9550b0fc0>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "DE16643" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/DE16643_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=DE16643&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/d4fa6b5e-71fd-3ace-8f09-bcadd34b55c0>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record DE16643" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/category/1> , <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/observation/1> , <http://data.silknow.org/event/1c46e19b-2509-38c2-be2b-26cdfd40bd59> , <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/observation/2> , <http://data.silknow.org/event/281c904e-89dc-3614-8b28-9e23bca5a89a> , <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/domain/1> , <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/domain/2> , <http://data.silknow.org/production/cf2b1e45-7b06-3869-a70a-fcef04690fc0> , <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf> , <http://data.silknow.org/image/7d0c772e-a633-3944-9abd-fbc9550b0fc0> ;
+        dc:identifier       "DE16643_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Cinturón de seda del que penden diez estuches para contener accesorios de uso personal con decoración de motivos florales, murciélagos y dragones.  \nProcedente de China, siglo XVIII.  \nA lo largo de la historia la indumentaria china ha seguido un código jerarquizado, vinculado al status social y a la profesión de cada individuo. Tanto las prendas como los complementos que las acompañaban, así como los motivos decorativos y los colores, seguían esta rígida estructura.  \nEste tipo de cinturón fue utilizado durante la Dinastía Qing (1644-1911). El uso de tantos accesorios es una reminiscencia del origen manchú de dicha dinastía, cultura de carácter nómada en la que eran necesarios útiles para el viaje.  \nHacia mediados del siglo XIX, esta jerarquización en la indumentaria comenzó a caer en desuso, aboliéndose definitivamente con la proclamación de la República en 1911."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf> .
+
+<http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Cinturón" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf> .
+
+<http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Dinastía Qing [1644-1911]  Arte Chino   Arte Asiático"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf> .
+
+<http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "97" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "97"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/281c904e-89dc-3614-8b28-9e23bca5a89a>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/43> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf> .
+
+<http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Cinturón de seda del que penden diez estuches para contener accesorios de uso personal con decoración de motivos florales, murciélagos y dragones.  \nProcedente de China, siglo XVIII.  \nA lo largo de la historia la indumentaria china ha seguido un código jerarquizado, vinculado al status social y a la profesión de cada individuo. Tanto las prendas como los complementos que las acompañaban, así como los motivos decorativos y los colores, seguían esta rígida estructura.  \nEste tipo de cinturón fue utilizado durante la Dinastía Qing (1644-1911). El uso de tantos accesorios es una reminiscencia del origen manchú de dicha dinastía, cultura de carácter nómada en la que eran necesarios útiles para el viaje.  \nHacia mediados del siglo XIX, esta jerarquización en la indumentaria comenzó a caer en desuso, aboliéndose definitivamente con la proclamación de la República en 1911."@es , "Dinastía Qing [1644-1911]  Arte Chino   Arte Asiático"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7d0c772e-a633-3944-9abd-fbc9550b0fc0> ;
+        ecrm:P3_has_note               "Cinturón de seda del que penden diez estuches para contener accesorios de uso personal con decoración de motivos florales, murciélagos y dragones.  \nProcedente de China, siglo XVIII.  \nA lo largo de la historia la indumentaria china ha seguido un código jerarquizado, vinculado al status social y a la profesión de cada individuo. Tanto las prendas como los complementos que las acompañaban, así como los motivos decorativos y los colores, seguían esta rígida estructura.  \nEste tipo de cinturón fue utilizado durante la Dinastía Qing (1644-1911). El uso de tantos accesorios es una reminiscencia del origen manchú de dicha dinastía, cultura de carácter nómada en la que eran necesarios útiles para el viaje.  \nHacia mediados del siglo XIX, esta jerarquización en la indumentaria comenzó a caer en desuso, aboliéndose definitivamente con la proclamación de la República en 1911."@es , "Dinastía Qing [1644-1911]  Arte Chino   Arte Asiático"@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/dimension/2> , <http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/dimension/1> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/65463351-24f6-37c8-ac85-7c4990d06c3f> ;
+        dc:identifier                  "DE16643" .
+
+<http://data.silknow.org/object/b3e9627a-aa42-3bd8-b17b-88181a9135cf/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "110" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "110"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d4fa6b5e-71fd-3ace-8f09-bcadd34b55c0> .

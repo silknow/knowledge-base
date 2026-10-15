@@ -1,0 +1,111 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/6605b157-c44a-36ff-b5da-d2d0c173f447>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/2612dd5e-0d98-37da-b37b-9c42ac835a3e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of C. Alphonse Haus/ Empire Silk Company" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9> .
+
+<http://data.silknow.org/actor/ecc984d7-878b-3fe7-83e9-05008b99b80c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "J. Claude Freres & Cie" ;
+        ecrm:P1_is_identified_by  "J. Claude Freres & Cie" .
+
+<http://data.silknow.org/event/1098045e-619f-3b88-ac23-2a290eff3945>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/image/f8f43608-3e44-30b0-94f3-4bfd9c735e8f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1015776_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/281034.jpg> .
+
+<http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "11.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "11.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/6bdd4195-735a-3e84-b3b3-2e1f3803c347>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1015776_1.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/37495.jpg> .
+
+<http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Scrapbook of Textile Ribbon Samples" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9> .
+
+<http://data.silknow.org/actor/2612dd5e-0d98-37da-b37b-9c42ac835a3e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of C. Alphonse Haus/ Empire Silk Company" ;
+        ecrm:P1_is_identified_by  "Gift of C. Alphonse Haus/ Empire Silk Company" .
+
+<http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6bdd4195-735a-3e84-b3b3-2e1f3803c347> , <http://data.silknow.org/image/f8f43608-3e44-30b0-94f3-4bfd9c735e8f> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9/dimension/2> , <http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9/dimension/1> ;
+        dc:identifier                  "INV2004.260" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/scrapbook-textile-ribbon-samples-inv2004260> .
+
+<http://data.silknow.org/risd>
+        a                         crmdig:D1_Digital_Object , <http://www.w3.org/ns/dcat#dataset> ;
+        rdfs:label                "risd" ;
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/84d54c21-8aa8-38e1-b1a7-9671de58d49d> .
+
+<http://data.silknow.org/object/eacbff90-c75b-3bb9-a8e0-9f1cf60dc7b8>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Manual / Issue 6" , "Assemblage" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9> ;
+        ecrm:P2_has_type    "Publication" ;
+        ecrm:P3_has_note    "Manual / Issue 6" , "Assemblage" ;
+        schema:contentUrl   <https://risdmuseum.org/art-design/projects-publications/publications/manual-issue-6> .
+
+<http://data.silknow.org/production/1945c93a-ec82-3852-9722-6ecf7a72ef17>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9> ;
+        ecrm:P126_employed      "Silk swatches mounted on paper and boud in leather"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/3f343d92-dbc3-3fbf-ba6c-9700a2481daa> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/1945c93a-ec82-3852-9722-6ecf7a72ef17/activity/1> .
+
+<http://data.silknow.org/production/1945c93a-ec82-3852-9722-6ecf7a72ef17/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/ecc984d7-878b-3fe7-83e9-05008b99b80c> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "25.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "25.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9> .
+
+<http://data.silknow.org/object/84d54c21-8aa8-38e1-b1a7-9671de58d49d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record INV2004.260" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9> , <http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9/category/1> , <http://data.silknow.org/event/1098045e-619f-3b88-ac23-2a290eff3945> , <http://data.silknow.org/image/6bdd4195-735a-3e84-b3b3-2e1f3803c347> , <http://data.silknow.org/object/eacbff90-c75b-3bb9-a8e0-9f1cf60dc7b8> , <http://data.silknow.org/object/477799b4-3068-3fab-bb44-b4e8df0c66a9/domain/1> , <http://data.silknow.org/image/f8f43608-3e44-30b0-94f3-4bfd9c735e8f> , <http://data.silknow.org/event/6605b157-c44a-36ff-b5da-d2d0c173f447> , <http://data.silknow.org/production/1945c93a-ec82-3852-9722-6ecf7a72ef17> ;
+        dc:identifier       "1015776.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

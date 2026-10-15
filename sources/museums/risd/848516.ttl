@@ -1,0 +1,80 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/a2cd2f5e-4e6e-329c-bfe9-fe8db25240a5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/dfbace89-dbce-3744-ba21-40b840f352bc> .
+
+<http://data.silknow.org/image/e6026b54-f29e-3a19-882c-4f22d977426f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/848516_1.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/39032.jpg> .
+
+<http://data.silknow.org/object/dfbace89-dbce-3744-ba21-40b840f352bc/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dfbace89-dbce-3744-ba21-40b840f352bc> .
+
+<http://data.silknow.org/object/742f8f12-3d5c-3cf7-a359-ffd6cb5a7ab4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 11.092" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/45f35c70-e0f4-3581-a4eb-d1859e9bc41b> , <http://data.silknow.org/production/365f3c9f-6ca1-3a90-99c0-c0f324b4835c> , <http://data.silknow.org/object/dfbace89-dbce-3744-ba21-40b840f352bc/category/1> , <http://data.silknow.org/object/dfbace89-dbce-3744-ba21-40b840f352bc> , <http://data.silknow.org/image/e6026b54-f29e-3a19-882c-4f22d977426f> , <http://data.silknow.org/event/a2cd2f5e-4e6e-329c-bfe9-fe8db25240a5> , <http://data.silknow.org/event/aaee92bf-508c-3db8-9e76-b3f59d22f405> , <http://data.silknow.org/object/dfbace89-dbce-3744-ba21-40b840f352bc/domain/1> ;
+        dc:identifier       "848516.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/production/365f3c9f-6ca1-3a90-99c0-c0f324b4835c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/dfbace89-dbce-3744-ba21-40b840f352bc> ;
+        ecrm:P126_employed      "Flat metallic thread, metallic wrapped yarn, silk; interlooped"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1849> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Gustav Radeke" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/742f8f12-3d5c-3cf7-a359-ffd6cb5a7ab4> .
+
+<http://data.silknow.org/object/dfbace89-dbce-3744-ba21-40b840f352bc>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/45f35c70-e0f4-3581-a4eb-d1859e9bc41b> , <http://data.silknow.org/image/e6026b54-f29e-3a19-882c-4f22d977426f> ;
+        dc:identifier                  "11.092" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/metallic-lace-trim-11092> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/aaee92bf-508c-3db8-9e76-b3f59d22f405>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/dfbace89-dbce-3744-ba21-40b840f352bc> .
+
+<http://data.silknow.org/object/dfbace89-dbce-3744-ba21-40b840f352bc/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Metallic Lace Trim" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dfbace89-dbce-3744-ba21-40b840f352bc> .
+
+<http://data.silknow.org/image/45f35c70-e0f4-3581-a4eb-d1859e9bc41b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/848516_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/283616.jpg> .

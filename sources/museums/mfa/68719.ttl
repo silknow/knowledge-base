@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Lace valence" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b> .
+
+<http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "230" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "230"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Altar-frontal (?) On the bottom of the piece of heavy white linen is sewed a deep border of hand woven lace, made in imitation of drawn-work, (punto tirato). The design is of stags, with branching horns, face to face, and separated by a vase of flowers. Below is a heavy fringe and tassels."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b> .
+
+<http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b> .
+
+<http://data.silknow.org/event/6e5bdbeb-6bb1-3d70-ae3b-1f6f050bbe0e>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b> .
+
+<http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Altar-frontal (?) On the bottom of the piece of heavy white linen is sewed a deep border of hand woven lace, made in imitation of drawn-work, (punto tirato). The design is of stags, with branching horns, face to face, and separated by a vase of flowers. Below is a heavy fringe and tassels."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0e4bb6b3-e27b-3db8-852d-7102dc5dfd0c> ;
+        ecrm:P3_has_note               "Altar-frontal (?) On the bottom of the piece of heavy white linen is sewed a deep border of hand woven lace, made in imitation of drawn-work, (punto tirato). The design is of stags, with branching horns, face to face, and separated by a vase of flowers. Below is a heavy fringe and tassels."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b/dimension/2> , <http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b/dimension/1> ;
+        dc:identifier                  "08.439" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/68719> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fbe4dbd1-f32b-3714-b57f-b5e5f0808bc3> .
+
+<http://data.silknow.org/image/0e4bb6b3-e27b-3db8-852d-7102dc5dfd0c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "729018" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/68719_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/729018/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "78" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "78"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/23f03e4e-cebf-34d4-b253-90fbae939ff6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/fbe4dbd1-f32b-3714-b57f-b5e5f0808bc3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 08.439" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/0e4bb6b3-e27b-3db8-852d-7102dc5dfd0c> , <http://data.silknow.org/production/23f03e4e-cebf-34d4-b253-90fbae939ff6> , <http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b/category/1> , <http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b> , <http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b/observation/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/event/6e5bdbeb-6bb1-3d70-ae3b-1f6f050bbe0e> , <http://data.silknow.org/object/4ef1ffd8-f67f-3cc5-9016-f62456c14d2b/domain/1> ;
+        dc:identifier       "68719.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/0cb5d5d7-77ff-354f-ac5f-de94b80b374b>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Italie, 15e siècle (milieu)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2b7f38ff-9a42-3566-82cc-27a4f3d8b621> ;
+        ecrm:P126_employed      "Velours de soie façonné coupé, simple corps, fond satin"@fr ;
+        ecrm:P3_has_note        "Italie, 15e siècle (milieu)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1426_1475> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/2b7f38ff-9a42-3566-82cc-27a4f3d8b621/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "36" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "36"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2b7f38ff-9a42-3566-82cc-27a4f3d8b621>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Italie, 15e siècle (milieu)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8f7ced6f-896c-3e18-b72f-487b38aa09a1> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2b7f38ff-9a42-3566-82cc-27a4f3d8b621/dimension/2> , <http://data.silknow.org/object/2b7f38ff-9a42-3566-82cc-27a4f3d8b621/dimension/1> ;
+        dc:identifier                  "LOUVRE OA 10848.083" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/904043> .
+
+<http://data.silknow.org/object/841b8863-1a50-37f2-8f60-48a06175e6f9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record LOUVRE OA 10848.083" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/2b7f38ff-9a42-3566-82cc-27a4f3d8b621/category/1> , <http://data.silknow.org/object/2b7f38ff-9a42-3566-82cc-27a4f3d8b621> , <http://data.silknow.org/production/0cb5d5d7-77ff-354f-ac5f-de94b80b374b> , <http://data.silknow.org/image/8f7ced6f-896c-3e18-b72f-487b38aa09a1> , <http://data.silknow.org/event/7fa71af9-6462-3400-92cd-ca617ebaf6a8> ;
+        dc:identifier       "904043.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/2b7f38ff-9a42-3566-82cc-27a4f3d8b621/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2b7f38ff-9a42-3566-82cc-27a4f3d8b621> .
+
+<http://data.silknow.org/image/8f7ced6f-896c-3e18-b72f-487b38aa09a1>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/904043_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/44a190a1-e24a-43ad-9cfa-fe5fcb8dde93.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/841b8863-1a50-37f2-8f60-48a06175e6f9> .
+
+<http://data.silknow.org/event/7fa71af9-6462-3400-92cd-ca617ebaf6a8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2b7f38ff-9a42-3566-82cc-27a4f3d8b621> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2b7f38ff-9a42-3566-82cc-27a4f3d8b621> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/2b7f38ff-9a42-3566-82cc-27a4f3d8b621/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "52" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "52"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

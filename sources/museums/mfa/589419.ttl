@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "29" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "29"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Design for printed textile" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05> .
+
+<http://data.silknow.org/event/1cae7166-285e-3d0d-97ac-90dcf7f2ae8a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05> .
+
+<http://data.silknow.org/production/24fcc878-37ba-3d3a-a4e5-386e5dd0bc3d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05> ;
+        ecrm:P126_employed      "Pencil and gouache"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> .
+
+<http://data.silknow.org/collection/179a175d-57f7-3531-887c-3d169f21616f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Contemporary Art, Americas, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05> ;
+        ecrm:P78_is_identified_by  "Europe, Contemporary Art, Americas, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05> .
+
+<http://data.silknow.org/object/59e7c7ea-ef18-39e5-a256-50095d2085c1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record APP.1947.165" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05/category/1> , <http://data.silknow.org/production/24fcc878-37ba-3d3a-a4e5-386e5dd0bc3d> , <http://data.silknow.org/event/1cae7166-285e-3d0d-97ac-90dcf7f2ae8a> , <http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05> , <http://data.silknow.org/collection/179a175d-57f7-3531-887c-3d169f21616f> , <http://data.silknow.org/image/0b55b6c8-5fe3-367f-a577-54240118329a> , <http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05/domain/1> , <http://data.silknow.org/event/d24b9589-bf6a-3fcc-84f1-912d27342274> ;
+        dc:identifier       "589419.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0b55b6c8-5fe3-367f-a577-54240118329a> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05/dimension/2> , <http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05/dimension/1> ;
+        dc:identifier                  "APP.1947.165" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/589419> .
+
+<http://data.silknow.org/image/0b55b6c8-5fe3-367f-a577-54240118329a>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1446220" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/589419_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/1446220/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/event/d24b9589-bf6a-3fcc-84f1-912d27342274>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/0d81e045-5e29-36c0-ae23-aa1c49bfd9c3> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "1947, gift of Stefan Jancsy to the MFA. (Accession Date: September 18, 1947) / Gift of Mr. Stefan Jancsy" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/59e7c7ea-ef18-39e5-a256-50095d2085c1> .
+
+<http://data.silknow.org/object/afb4adc6-dc5b-3831-bf05-e0cd20a14e05/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "33.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "33.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/0d81e045-5e29-36c0-ae23-aa1c49bfd9c3>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "1947, gift of Stefan Jancsy to the MFA. (Accession Date: September 18) / Gift of Mr. Stefan Jancsy" ;
+        ecrm:P1_is_identified_by  "1947, gift of Stefan Jancsy to the MFA. (Accession Date: September 18) / Gift of Mr. Stefan Jancsy" .

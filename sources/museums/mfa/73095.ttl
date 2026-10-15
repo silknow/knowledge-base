@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Golden silk ground, with a large design of irregular ogival frames, enclosing symmetrical forms, probably suggested by flowers, woven with white silk."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508> .
+
+<http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "66" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "66"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "51.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "51.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/0c82b75f-99dc-3feb-8683-2547c404581f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508> ;
+        ecrm:P126_employed      "Silk brocade"@en ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/3bc1e684-ab9f-30cd-a55e-c0e10b8f5d28> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/image/98cf2db4-af33-3dfe-a3f5-26aba5edb227>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "815968" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/73095_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/815968/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508> .
+
+<http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of brocade" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9e4c4c37-3fe7-3d54-b377-771ae4bada09> .
+
+<http://data.silknow.org/event/b598034c-c517-3940-9cc7-cdc18d479acb>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508> .
+
+<http://data.silknow.org/object/9e4c4c37-3fe7-3d54-b377-771ae4bada09>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 93.582" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/98cf2db4-af33-3dfe-a3f5-26aba5edb227> , <http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508> , <http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508/category/1> , <http://data.silknow.org/production/0c82b75f-99dc-3feb-8683-2547c404581f> , <http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508/observation/1> , <http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508/domain/1> , <http://data.silknow.org/event/b598034c-c517-3940-9cc7-cdc18d479acb> ;
+        dc:identifier       "73095.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/place/3bc1e684-ab9f-30cd-a55e-c0e10b8f5d28>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Italian or Spanish" ;
+        ecrm:P87_is_identified_by  "Italian or Spanish" .
+
+<http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Golden silk ground, with a large design of irregular ogival frames, enclosing symmetrical forms, probably suggested by flowers, woven with white silk."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/98cf2db4-af33-3dfe-a3f5-26aba5edb227> ;
+        ecrm:P3_has_note               "Golden silk ground, with a large design of irregular ogival frames, enclosing symmetrical forms, probably suggested by flowers, woven with white silk."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508/dimension/2> , <http://data.silknow.org/object/99f7bfee-7acb-3f72-85a1-ae34a61ba508/dimension/1> ;
+        dc:identifier                  "93.582" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/73095> .

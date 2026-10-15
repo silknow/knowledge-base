@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/8fc392ef-03fd-3ae0-b7c0-3685eaafbec5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/40f1e0b2-75db-31ae-a66c-50a0908bfef0> .
+
+<http://data.silknow.org/object/40f1e0b2-75db-31ae-a66c-50a0908bfef0>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "XVI-XVII secolo"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bcd54ebb-321d-3851-b13d-11de090e8faa> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/40f1e0b2-75db-31ae-a66c-50a0908bfef0/dimension/2> , <http://data.silknow.org/object/40f1e0b2-75db-31ae-a66c-50a0908bfef0/dimension/1> ;
+        dc:identifier                  "1601055984865" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        ecrm:P1_is_identified_by  "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122951649> , <https://viaf.org/viaf/147524313> .
+
+<http://data.silknow.org/object/40f1e0b2-75db-31ae-a66c-50a0908bfef0/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/40f1e0b2-75db-31ae-a66c-50a0908bfef0> ;
+        ecrm:P42_assigned    "Frammento" .
+
+<http://data.silknow.org/image/bcd54ebb-321d-3851-b13d-11de090e8faa>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1601056931_180" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1601055984865_0.jpg> .
+
+<http://data.silknow.org/object/40f1e0b2-75db-31ae-a66c-50a0908bfef0/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "18" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "18"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e848fe4f-6d2c-3244-9b6f-1f208feae295> .
+
+<http://data.silknow.org/production/b0f3e3ec-4fd1-34b7-947c-33be118cd347>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/40f1e0b2-75db-31ae-a66c-50a0908bfef0> ;
+        ecrm:P32_used_general_technique
+                "Raso liseré"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1700> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/06b2bed3-768f-35a0-ab8d-eb84af89c66f> .
+
+<http://data.silknow.org/object/e848fe4f-6d2c-3244-9b6f-1f208feae295>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1601055984865" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/40f1e0b2-75db-31ae-a66c-50a0908bfef0> , <http://data.silknow.org/object/8175fee2-8614-35d0-9eca-9eaea309377e> , <http://data.silknow.org/image/bcd54ebb-321d-3851-b13d-11de090e8faa> , <http://data.silknow.org/event/8fc392ef-03fd-3ae0-b7c0-3685eaafbec5> , <http://data.silknow.org/object/40f1e0b2-75db-31ae-a66c-50a0908bfef0/type/1> , <http://data.silknow.org/production/b0f3e3ec-4fd1-34b7-947c-33be118cd347> ;
+        dc:identifier       "1601055984865.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/object/40f1e0b2-75db-31ae-a66c-50a0908bfef0/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/8175fee2-8614-35d0-9eca-9eaea309377e>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Iolanda Silvestri, scheda n. 180, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, pp. 213-214"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/40f1e0b2-75db-31ae-a66c-50a0908bfef0> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Iolanda Silvestri, scheda n. 180, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, pp. 213-214"@it .
+
+<http://data.silknow.org/place/06b2bed3-768f-35a0-ab8d-eb84af89c66f>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "italiana o spagnola o turca" ;
+        ecrm:P87_is_identified_by  "italiana o spagnola o turca" .

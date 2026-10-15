@@ -1,0 +1,113 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/3> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc> .
+
+<http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/03996b19-5549-3562-b868-2026d50550ec> , <http://data.silknow.org/image/683af430-536c-3724-9226-2a56eb3c3d5f> , <http://data.silknow.org/image/4b9c896c-d9ad-3302-93d7-5402065cb829> ;
+        dc:identifier                  "46.180" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.metmuseum.org/art/collection/search/227248> .
+
+<http://data.silknow.org/actor/2f47a8f2-31d4-3a79-bde1-c18791884875>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Rogers Fund" ;
+        ecrm:P1_is_identified_by  "Rogers Fund" .
+
+<http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "European Sculpture and Decorative Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc> ;
+        ecrm:P78_is_identified_by  "European Sculpture and Decorative Arts" .
+
+<http://data.silknow.org/production/17c06a91-3062-33ed-bde9-da62f5c0beaf>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc> ;
+        ecrm:P126_employed      "Costume"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/644> , <http://data.silknow.org/vocabulary/857> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/d67c2140-386d-3d79-a470-10fb908cccdd> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2017370/> .
+
+<http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/96> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc> .
+
+<http://data.silknow.org/image/03996b19-5549-3562-b868-2026d50550ec>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/227248_2.jpg> , <https://images.metmuseum.org/CRDImages/es/original/DP316243.jpg> .
+
+<http://data.silknow.org/object/dfe5dcc2-701c-3a83-a7be-8f95eff216bc>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/ef8934d0-f1ea-32bf-b159-611cbdd40790> .
+
+<https://sws.geonames.org/2017370/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/9e6c4b64-542d-363f-9511-6a4070a5a571>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc> .
+
+<http://data.silknow.org/event/5db1f1e2-9c59-3f35-a40d-ce20aa637564>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/2f47a8f2-31d4-3a79-bde1-c18791884875> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Rogers Fund, 1946" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc> .
+
+<http://data.silknow.org/image/683af430-536c-3724-9226-2a56eb3c3d5f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/227248_1.jpg> , <https://images.metmuseum.org/CRDImages/es/original/DP302739.jpg> .
+
+<http://data.silknow.org/met>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7e65b012-b315-3441-b262-b8f15fe62489> .
+
+<http://data.silknow.org/object/1791bfc9-439f-3f5b-91f9-fb2e5dc9eff2>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/95473ebb-5d43-322e-83f8-ab0817301310> .
+
+<http://data.silknow.org/object/7e65b012-b315-3441-b262-b8f15fe62489>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 227248" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2a71f10f-9b8a-3e75-a1af-66d030612611> , <http://data.silknow.org/image/683af430-536c-3724-9226-2a56eb3c3d5f> , <http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5> , <http://data.silknow.org/image/03996b19-5549-3562-b868-2026d50550ec> , <http://data.silknow.org/event/9e6c4b64-542d-363f-9511-6a4070a5a571> , <http://data.silknow.org/production/17c06a91-3062-33ed-bde9-da62f5c0beaf> , <http://data.silknow.org/object/c2a06de1-6d1a-36d2-8809-039cac70141f> , <http://data.silknow.org/object/1791bfc9-439f-3f5b-91f9-fb2e5dc9eff2> , <http://data.silknow.org/image/4b9c896c-d9ad-3302-93d7-5402065cb829> , <http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc> , <http://data.silknow.org/object/dfe5dcc2-701c-3a83-a7be-8f95eff216bc> , <http://data.silknow.org/event/5db1f1e2-9c59-3f35-a40d-ce20aa637564> , <http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc/category/1> ;
+        dc:identifier       "227248.json" ;
+        dc:publisher        "http://data.silknow.org/organization/met" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/image/4b9c896c-d9ad-3302-93d7-5402065cb829>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/227248_0.jpg> , <https://images.metmuseum.org/CRDImages/es/original/DP302738.jpg> .
+
+<http://data.silknow.org/object/c2a06de1-6d1a-36d2-8809-039cac70141f>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/0e06c61b-5fe7-35cd-a98e-d626728a846b> .
+
+<http://data.silknow.org/object/2a71f10f-9b8a-3e75-a1af-66d030612611>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f08c5c40-6b26-367c-9a94-3e459e58babc> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/a00d48a4-2c00-351c-b20a-7c4ee6f35cec> .

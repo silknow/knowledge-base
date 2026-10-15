@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/1cd4ce0c-d44b-3461-9264-3e9c8a179881>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Lauer, Etats-Unis, 1917 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a0d69e01-6a39-3887-9ca8-b6d05aaf29f0> ;
+        dc:identifier                  "21152" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/914215> .
+
+<http://data.silknow.org/object/15be82c4-50cc-3d6c-9c02-9ce0e83649ed>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 21152" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/a89fb66d-d55d-39d5-af93-c7f4955a1a48> , <http://data.silknow.org/event/a4341b6d-7840-31fe-8e46-8638f92bb34a> , <http://data.silknow.org/object/1cd4ce0c-d44b-3461-9264-3e9c8a179881> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/1cd4ce0c-d44b-3461-9264-3e9c8a179881/category/1> , <http://data.silknow.org/image/a0d69e01-6a39-3887-9ca8-b6d05aaf29f0> ;
+        dc:identifier       "914215.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/1cd4ce0c-d44b-3461-9264-3e9c8a179881/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1cd4ce0c-d44b-3461-9264-3e9c8a179881> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/a4341b6d-7840-31fe-8e46-8638f92bb34a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "don monsieur Lauer, 1918" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1cd4ce0c-d44b-3461-9264-3e9c8a179881> .
+
+<https://sws.geonames.org/5034242/>
+        a       ecrm:E53_Place .
+
+<https://sws.geonames.org/3381741/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/a89fb66d-d55d-39d5-af93-c7f4955a1a48>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Lauer, Etats-Unis, 1917 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1cd4ce0c-d44b-3461-9264-3e9c8a179881> ;
+        ecrm:P3_has_note        "Lauer, Etats-Unis, 1917 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/54444675-f89d-3afc-a1ff-814a40555408> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/5034242/> , <https://sws.geonames.org/3381741/> .
+
+<http://data.silknow.org/image/a0d69e01-6a39-3887-9ca8-b6d05aaf29f0>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/914215_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/09ca7789-4871-44cc-9dcb-b823fa9879b1.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/15be82c4-50cc-3d6c-9c02-9ce0e83649ed> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/1cd4ce0c-d44b-3461-9264-3e9c8a179881> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50/type/2>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Subject" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50> ;
+        ecrm:P42_assigned    "women's costume" .
+
+<http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50/category/2>
+        a                    silk:T35 ;
+        silk:L1              "Object Type: bonnet (hat)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50> .
+
+<http://data.silknow.org/object/5bded62c-0694-3417-b54e-0582e3a444fc>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2048210-europeana_fashion_2008_6_0159" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50/type/1> , <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50/observation/1> , <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50/category/3> , <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50> , <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50/category/2> , <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50/category/1> , <http://data.silknow.org/production/29df39ba-4996-3f1e-a0fc-e89f5ee29fc7> , <http://data.silknow.org/image/d9f48ab2-9bc2-3677-a598-b3e32e258f20> , <http://data.silknow.org/event/b96043f8-7cd2-3901-b189-cdab6c230643> , <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50/type/2> ;
+        dc:identifier       "2048210-europeana_fashion_2008_6_0159.json" ;
+        dc:publisher        "http://data.silknow.org/organization/europeana" .
+
+<http://data.silknow.org/production/29df39ba-4996-3f1e-a0fc-e89f5ee29fc7>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50> ;
+        ecrm:P126_employed      "Material: silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1850_1859> , <http://data.silknow.org/timespan/1850> .
+
+<http://data.silknow.org/event/b96043f8-7cd2-3901-b189-cdab6c230643>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/2d5d8717-b44c-3a89-96a4-6e3d92cc175c> , <http://data.silknow.org/place/3dfbf716-f48d-3d9c-9652-1715a69e0a36> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50> .
+
+<http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50/category/3>
+        a                    silk:T35 ;
+        silk:L1              "bonnet (hat)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50> .
+
+<http://data.silknow.org/europeana>
+        a                         crmdig:D1_Digital_Object , <http://www.w3.org/ns/dcat#dataset> ;
+        rdfs:label                "europeana" ;
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5bded62c-0694-3417-b54e-0582e3a444fc> .
+
+<http://data.silknow.org/actor/2d5d8717-b44c-3a89-96a4-6e3d92cc175c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Peloponnesian Folklore Foundation" ;
+        ecrm:P1_is_identified_by  "Peloponnesian Folklore Foundation" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000107230851> , <https://viaf.org/viaf/134945146> .
+
+<http://data.silknow.org/place/3dfbf716-f48d-3d9c-9652-1715a69e0a36>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Europeana Fashion" ;
+        ecrm:P87_is_identified_by  "Europeana Fashion" .
+
+<http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Subject" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50> ;
+        ecrm:P42_assigned    "Object Type: women's costume" .
+
+<http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Ivory silk bonnet with white woven in stripes, decorated with white flowers at the crown. White cotton fabric lining."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d9f48ab2-9bc2-3677-a598-b3e32e258f20> ;
+        ecrm:P3_has_note               "Ivory silk bonnet with white woven in stripes, decorated with white flowers at the crown. White cotton fabric lining."@en ;
+        dc:identifier                  "2008.6.0159" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.europeana.eu/en/item/2048210/europeana_fashion_2008_6_0159> .
+
+<http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Bonnet" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50> .
+
+<http://data.silknow.org/image/d9f48ab2-9bc2-3677-a598-b3e32e258f20>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/europeana/2048210-europeana_fashion_2008_6_0159_0.jpg> , <https://proxy.europeana.eu/2048210/europeana_fashion_2008_6_0159?view=http%3A%2F%2Frepos.europeanafashion.eu%2Fpff%2Fimages%2F2008.6.0159.JPG&disposition=inline&api_url=https%3A%2F%2Fapi.europeana.eu%2Fapi> .
+
+<http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Ivory silk bonnet with white woven in stripes, decorated with white flowers at the crown. White cotton fabric lining."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a00e2857-ae9d-32b8-8ca3-716bf86afc50> .

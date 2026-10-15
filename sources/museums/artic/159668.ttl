@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "11.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "11.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/1334f01d-8341-32c0-a3d3-a2403e8c93d9>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> , <http://data.silknow.org/timespan/1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/actor/f76a4c3c-19ae-3341-bec9-b5fc86051a49>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mildred Davison" ;
+        ecrm:P1_is_identified_by  "Gift of Mildred Davison" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/72872273> , <https://isni.org/isni/0000000073964274> .
+
+<http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "9.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "9.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, warp-float faced 7:1 'S' twill weave with plain interlacings of secondary binding warps and pairs of self-patterning ground wefts"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/80579e9c-f4bf-36a2-b9bc-70a7a7da9439> ;
+        ecrm:P3_has_note               "Silk, warp-float faced 7:1 'S' twill weave with plain interlacings of secondary binding warps and pairs of self-patterning ground wefts"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8/dimension/1> , <http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8/dimension/2> ;
+        dc:identifier                  "2002.222" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/159668/fragment> .
+
+<http://data.silknow.org/image/80579e9c-f4bf-36a2-b9bc-70a7a7da9439>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/159668_0.jpg> , <https://www.artic.edu/iiif/2/8b42000a-e3ef-37b9-a290-4b85f5742d16/full/600,/0/default.jpg> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, warp-float faced 7:1 'S' twill weave with plain interlacings of secondary binding warps and pairs of self-patterning ground wefts"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8> .
+
+<http://data.silknow.org/event/d9857ae1-fd81-3c49-9e46-9df8f6a366db>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/f76a4c3c-19ae-3341-bec9-b5fc86051a49> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mildred Davison" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8> .
+
+<http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8> .
+
+<http://data.silknow.org/object/131a9ede-bf6e-31d2-b396-7d026fc4f437>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2002.222" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/d9857ae1-fd81-3c49-9e46-9df8f6a366db> , <http://data.silknow.org/image/80579e9c-f4bf-36a2-b9bc-70a7a7da9439> , <http://data.silknow.org/production/1334f01d-8341-32c0-a3d3-a2403e8c93d9> , <http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8> , <http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8/category/1> , <http://data.silknow.org/object/6a180b97-8da0-3b22-895c-ea3e75e5d0b8/observation/1> ;
+        dc:identifier       "159668.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/131a9ede-bf6e-31d2-b396-7d026fc4f437> .

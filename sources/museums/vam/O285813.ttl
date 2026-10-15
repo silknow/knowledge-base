@@ -1,0 +1,62 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/654efbba-6082-3c07-8692-602c56e6ad01/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/654efbba-6082-3c07-8692-602c56e6ad01> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/image/9732b335-052f-391e-92a3-4e60a9da687e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2021MX1347" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O285813_0.jpg> , <https://framemark.vam.ac.uk/collections/2021MX1347/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/object/654efbba-6082-3c07-8692-602c56e6ad01>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9732b335-052f-391e-92a3-4e60a9da687e> , <http://data.silknow.org/image/f38657c3-18f2-31ce-8aaa-7b4546872ca7> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/751> ;
+        dc:identifier                  "275A-1880" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O285813> .
+
+<http://data.silknow.org/image/f38657c3-18f2-31ce-8aaa-7b4546872ca7>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006BD3592" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O285813_1.jpg> , <https://framemark.vam.ac.uk/collections/2006BD3592/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/event/2bfd6871-f885-3966-a7e8-a9d199ac6f2b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/654efbba-6082-3c07-8692-602c56e6ad01> .
+
+<http://data.silknow.org/object/9b088a37-4bf1-3238-ad49-e30aee616e77>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O285813" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/9732b335-052f-391e-92a3-4e60a9da687e> , <http://data.silknow.org/object/654efbba-6082-3c07-8692-602c56e6ad01/domain/1> , <http://data.silknow.org/object/654efbba-6082-3c07-8692-602c56e6ad01> , <http://data.silknow.org/event/2bfd6871-f885-3966-a7e8-a9d199ac6f2b> , <http://data.silknow.org/production/b44e0527-55e2-34fc-9106-698595d04d5e> , <http://data.silknow.org/image/f38657c3-18f2-31ce-8aaa-7b4546872ca7> ;
+        dc:identifier       "O285813.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9b088a37-4bf1-3238-ad49-e30aee616e77> .
+
+<http://data.silknow.org/production/b44e0527-55e2-34fc-9106-698595d04d5e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/654efbba-6082-3c07-8692-602c56e6ad01> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> .

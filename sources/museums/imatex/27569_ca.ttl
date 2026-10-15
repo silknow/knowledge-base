@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/87647610-56a4-35f7-83cd-13cbc7acd5db> .
+
+<http://data.silknow.org/image/6ed24525-b677-384f-84ba-6f5c66eee9b6>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033249" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27569_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033249.jpg> .
+
+<http://data.silknow.org/event/2416c7aa-fe83-3153-b651-217117b4cef2>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3ed58153-24b9-39fe-aef2-852fe45064b2> .
+
+<http://data.silknow.org/object/3ed58153-24b9-39fe-aef2-852fe45064b2>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6ed24525-b677-384f-84ba-6f5c66eee9b6> ;
+        dc:identifier                  "16227" .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/87647610-56a4-35f7-83cd-13cbc7acd5db>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27569" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3ed58153-24b9-39fe-aef2-852fe45064b2/category/1> , <http://data.silknow.org/event/527e994c-d13c-378c-84ed-fcc261c4f15a> , <http://data.silknow.org/object/3ed58153-24b9-39fe-aef2-852fe45064b2/domain/1> , <http://data.silknow.org/event/2416c7aa-fe83-3153-b651-217117b4cef2> , <http://data.silknow.org/production/69823f50-2f6a-3d82-8628-1f4784324e2d> , <http://data.silknow.org/image/6ed24525-b677-384f-84ba-6f5c66eee9b6> , <http://data.silknow.org/object/3ed58153-24b9-39fe-aef2-852fe45064b2> ;
+        dc:identifier       "27569.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/production/69823f50-2f6a-3d82-8628-1f4784324e2d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3ed58153-24b9-39fe-aef2-852fe45064b2> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca , "vellut"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/object/3ed58153-24b9-39fe-aef2-852fe45064b2/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3ed58153-24b9-39fe-aef2-852fe45064b2> .
+
+<http://data.silknow.org/object/3ed58153-24b9-39fe-aef2-852fe45064b2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3ed58153-24b9-39fe-aef2-852fe45064b2> .
+
+<http://data.silknow.org/event/527e994c-d13c-378c-84ed-fcc261c4f15a>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3ed58153-24b9-39fe-aef2-852fe45064b2> .

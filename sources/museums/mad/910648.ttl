@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/15e0d621-ee59-3a80-99a2-6b73a4470b22>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Espagne, 15e siècle" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/123b2a67-0a17-38a3-b246-e73b2c9795aa> ;
+        ecrm:P126_employed      "Soie, or"@fr ;
+        ecrm:P3_has_note        "Espagne, 15e siècle" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404465> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/image/bd15a1cf-af06-31be-acd1-5cfeac6c11e5>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910648_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/4cb33185-82a9-4a44-9ac8-e898553ccc9b.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/e0f10a1a-f52a-3966-91b3-5f672fd329bc>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don de la réunion d'amateurs formée pour l'acquisition de la collection Gay, MM. Maciet, Doucet, Fenaille, Bruneau et baron Edmond de Rothshild , 1909" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/123b2a67-0a17-38a3-b246-e73b2c9795aa> .
+
+<http://data.silknow.org/object/dc3cb7f1-bab1-3224-9d52-e416368b2673>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 16372" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/15e0d621-ee59-3a80-99a2-6b73a4470b22> , <http://data.silknow.org/event/e0f10a1a-f52a-3966-91b3-5f672fd329bc> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/bd15a1cf-af06-31be-acd1-5cfeac6c11e5> , <http://data.silknow.org/object/123b2a67-0a17-38a3-b246-e73b2c9795aa> ;
+        dc:identifier       "910648.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dc3cb7f1-bab1-3224-9d52-e416368b2673> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/123b2a67-0a17-38a3-b246-e73b2c9795aa> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/123b2a67-0a17-38a3-b246-e73b2c9795aa>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Espagne, 15e siècle"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bd15a1cf-af06-31be-acd1-5cfeac6c11e5> ;
+        dc:identifier                  "16372" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910648> .

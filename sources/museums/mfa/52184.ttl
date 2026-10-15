@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Weaving in two pieces (one piece)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "29.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "29.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/66cec17d-fe7c-3a3f-9fcc-a90b3599562f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b> ;
+        ecrm:P126_employed      "Silk; Satin, Weaving"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "43.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "43.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/561367f0-176b-3522-9c0f-8e3fac8e6746>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "818006" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/52184_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/818006/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Two pieces of a fancy satin; striped plain yellow, pale blue with minute herringbone, ribbed white; a number of small stains; soiled."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/8adaa392-bf51-3bbb-95d4-1bf32183cce6>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 50.3183a" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/fc32d18e-10c2-3c9a-97e4-60d8424448a6> , <http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b/category/1> , <http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b/observation/1> , <http://data.silknow.org/image/561367f0-176b-3522-9c0f-8e3fac8e6746> , <http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b/domain/1> , <http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b> , <http://data.silknow.org/production/66cec17d-fe7c-3a3f-9fcc-a90b3599562f> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "52184.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/event/fc32d18e-10c2-3c9a-97e4-60d8424448a6>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8adaa392-bf51-3bbb-95d4-1bf32183cce6> .
+
+<http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b> .
+
+<http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Two pieces of a fancy satin; striped plain yellow, pale blue with minute herringbone, ribbed white; a number of small stains; soiled."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/561367f0-176b-3522-9c0f-8e3fac8e6746> ;
+        ecrm:P3_has_note               "Two pieces of a fancy satin; striped plain yellow, pale blue with minute herringbone, ribbed white; a number of small stains; soiled."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b/dimension/2> , <http://data.silknow.org/object/4c516915-6046-330d-8c88-0c4a27ea498b/dimension/1> ;
+        dc:identifier                  "50.3183a" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/52184> .

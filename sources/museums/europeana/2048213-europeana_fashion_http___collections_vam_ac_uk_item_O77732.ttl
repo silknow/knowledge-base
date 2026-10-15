@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Machine-embroidered silk trimming, Houldsworth & Co., Manchester, 1853."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c> .
+
+<http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Object Type: swatch" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c> .
+
+<http://data.silknow.org/event/ef7f2903-2924-3adc-a614-68cff9187235>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> , <http://data.silknow.org/place/3dfbf716-f48d-3d9c-9652-1715a69e0a36> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c> .
+
+<http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Machine-embroidered silk trimming, Houldsworth & Co., Manchester, 1853."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/31aeda18-ebb5-339c-8fd0-9aa54b5434ae> ;
+        ecrm:P3_has_note               "Machine-embroidered silk trimming, Houldsworth & Co., Manchester, 1853."@en ;
+        dc:identifier                  "796-1854" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.europeana.eu/en/item/2048213/europeana_fashion_http___collections_vam_ac_uk_item_O77732> .
+
+<http://data.silknow.org/object/12729a06-599b-33d5-8a1b-e559e25d224a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2048213-europeana_fashion_http___collections_vam_ac_uk_item_O77732" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c/observation/1> , <http://data.silknow.org/image/31aeda18-ebb5-339c-8fd0-9aa54b5434ae> , <http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c/category/2> , <http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c/category/1> , <http://data.silknow.org/event/ef7f2903-2924-3adc-a614-68cff9187235> , <http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c> , <http://data.silknow.org/production/2fffec7d-74a3-3f1f-8899-fc58e8ab5661> ;
+        dc:identifier       "2048213-europeana_fashion_http___collections_vam_ac_uk_item_O77732.json" ;
+        dc:publisher        "http://data.silknow.org/organization/europeana" .
+
+<http://data.silknow.org/europeana>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/12729a06-599b-33d5-8a1b-e559e25d224a> .
+
+<http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c/category/2>
+        a                    silk:T35 ;
+        silk:L1              "swatch" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c> .
+
+<http://data.silknow.org/place/3dfbf716-f48d-3d9c-9652-1715a69e0a36>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Europeana Fashion" ;
+        ecrm:P87_is_identified_by  "Europeana Fashion" .
+
+<http://data.silknow.org/image/31aeda18-ebb5-339c-8fd0-9aa54b5434ae>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/europeana/2048213-europeana_fashion_http___collections_vam_ac_uk_item_O77732_0.jpg> , <https://proxy.europeana.eu/2048213/europeana_fashion_http___collections_vam_ac_uk_item_O77732?view=http%3A%2F%2Fmedia.vam.ac.uk%2Fmedia%2Fthira%2Fcollection_images%2F2006AM%2F2006AM6945_jpg_l.jpg&disposition=inline&api_url=https%3A%2F%2Fapi.europeana.eu%2Fapi> .
+
+<http://data.silknow.org/production/2fffec7d-74a3-3f1f-8899-fc58e8ab5661>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9a186343-3cf5-3253-ad72-197d93e2788c> ;
+        ecrm:P126_employed      "Material: silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1853> .

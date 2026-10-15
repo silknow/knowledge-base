@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/85afa135-faa0-3934-89b6-d1a8ef481653>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/fd058879-f59c-3ba9-bf34-7fc3e8f4fcea> .
+
+<http://data.silknow.org/object/fd058879-f59c-3ba9-bf34-7fc3e8f4fcea>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/774e9c5a-8a80-3aca-92c1-015338e2b5aa> ;
+        dc:identifier                  "62.017.44" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/shawl-6201744> .
+
+<http://data.silknow.org/image/774e9c5a-8a80-3aca-92c1-015338e2b5aa>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/947396_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/98793.jpg> .
+
+<http://data.silknow.org/production/f5444fa6-2104-35a0-9ad4-37bd7ff4f1d1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/fd058879-f59c-3ba9-bf34-7fc3e8f4fcea> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/3715027c-aac1-3498-abe4-23974c89b573> .
+
+<http://data.silknow.org/object/fd058879-f59c-3ba9-bf34-7fc3e8f4fcea/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fd058879-f59c-3ba9-bf34-7fc3e8f4fcea> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/18ac0f67-d429-34be-9135-f64c6a3ad8ee>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mr. Rodman A. Heeren" ;
+        ecrm:P1_is_identified_by  "Gift of Mr. Rodman A. Heeren" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1f733b8a-7048-3166-b243-40e5d31576d2> .
+
+<http://data.silknow.org/object/1f733b8a-7048-3166-b243-40e5d31576d2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 62.017.44" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/fd058879-f59c-3ba9-bf34-7fc3e8f4fcea/category/1> , <http://data.silknow.org/image/774e9c5a-8a80-3aca-92c1-015338e2b5aa> , <http://data.silknow.org/event/85afa135-faa0-3934-89b6-d1a8ef481653> , <http://data.silknow.org/object/fd058879-f59c-3ba9-bf34-7fc3e8f4fcea/domain/1> , <http://data.silknow.org/production/f5444fa6-2104-35a0-9ad4-37bd7ff4f1d1> , <http://data.silknow.org/event/c83a5d98-f080-37bd-9013-e5179daf590f> , <http://data.silknow.org/object/fd058879-f59c-3ba9-bf34-7fc3e8f4fcea> ;
+        dc:identifier       "947396.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/fd058879-f59c-3ba9-bf34-7fc3e8f4fcea/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/96> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fd058879-f59c-3ba9-bf34-7fc3e8f4fcea> .
+
+<http://data.silknow.org/event/c83a5d98-f080-37bd-9013-e5179daf590f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/18ac0f67-d429-34be-9135-f64c6a3ad8ee> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mr. Rodman A. Heeren" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/fd058879-f59c-3ba9-bf34-7fc3e8f4fcea> .

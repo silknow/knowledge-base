@@ -1,0 +1,100 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "20.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "20.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "44.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "44.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/c0806cee-1517-3daa-ab79-b84bfeda400f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1991.112.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e/category/1> , <http://data.silknow.org/event/60ee5a56-c423-3506-b7af-f5d145baaa08> , <http://data.silknow.org/object/f33bd772-6a1f-397b-b7d4-0e49130147c5> , <http://data.silknow.org/production/aa16f1de-22bf-320e-8f38-f79277684357> , <http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e> , <http://data.silknow.org/image/7a0c3d61-2bc7-38b9-b143-1c9bcacad204> , <http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e/domain/1> , <http://data.silknow.org/event/1bc1679e-74fe-34ac-9d96-ebce83af5b0f> ;
+        dc:identifier       "902836.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/production/aa16f1de-22bf-320e-8f38-f79277684357>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e> ;
+        ecrm:P126_employed      "Undyed cotton ground, silk embroidery"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/298795/> .
+
+<http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Embroidery Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e> .
+
+<http://data.silknow.org/actor/f3ce1095-0335-3ba0-aec8-eca1c9601c56>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mr. and Mrs. Lorin A. Riggs" ;
+        ecrm:P1_is_identified_by  "Gift of Mr. and Mrs. Lorin A. Riggs" .
+
+<http://data.silknow.org/image/7a0c3d61-2bc7-38b9-b143-1c9bcacad204>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/902836_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/313064.jpg> .
+
+<http://data.silknow.org/event/60ee5a56-c423-3506-b7af-f5d145baaa08>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e> .
+
+<https://sws.geonames.org/298795/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e> .
+
+<http://data.silknow.org/event/1bc1679e-74fe-34ac-9d96-ebce83af5b0f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/f3ce1095-0335-3ba0-aec8-eca1c9601c56> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mr. and Mrs. Lorin A. Riggs" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/f33bd772-6a1f-397b-b7d4-0e49130147c5>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "October 5, 2018 - August 25, 2019" , "Lost in the Museum" , "This textile was catalogued properly when it arrived, but as the object went on and off display, the label that connected them to their records were lost.\nThe distinctive materials and techniques that make these works noteworthy today—peacock-feather yarns, metallic-wrapped threads, and raffia cut pile—were all described in their original records. By examining details listed in museum records, including fiber contents, measurements, motifs, and embellishments, researchers reunited the unlabeled textiles with their original biographical data, bringing them back into circulation." ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "Lost in the Museum" , "October 5, 2018 - August 25, 2019" , "This textile was catalogued properly when it arrived, but as the object went on and off display, the label that connected them to their records were lost.\nThe distinctive materials and techniques that make these works noteworthy today—peacock-feather yarns, metallic-wrapped threads, and raffia cut pile—were all described in their original records. By examining details listed in museum records, including fiber contents, measurements, motifs, and embellishments, researchers reunited the unlabeled textiles with their original biographical data, bringing them back into circulation." ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/lost-museum> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c0806cee-1517-3daa-ab79-b84bfeda400f> .
+
+<http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7a0c3d61-2bc7-38b9-b143-1c9bcacad204> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e/dimension/2> , <http://data.silknow.org/object/1ba0e703-8754-377b-92e3-f371b915b68e/dimension/1> ;
+        dc:identifier                  "1991.112.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/embroidery-fragment-19911121> .

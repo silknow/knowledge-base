@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/d2d22e5a-29ee-3140-bc16-16cfa7124300>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mr. and Mrs. Winthrop W. Aldrich" ;
+        ecrm:P1_is_identified_by  "Gift of Mr. and Mrs. Winthrop W. Aldrich" .
+
+<http://data.silknow.org/event/76c1c8a6-5db5-3d41-91e6-652a464fc3ef>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/270db6bf-7db4-3453-ae1a-393cea9423cf> .
+
+<http://data.silknow.org/event/347dc204-4c82-330f-8bbe-0d4bd1fc111a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/d2d22e5a-29ee-3140-bc16-16cfa7124300> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mr. and Mrs. Winthrop W. Aldrich" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/270db6bf-7db4-3453-ae1a-393cea9423cf> .
+
+<http://data.silknow.org/production/22d60d67-5ab3-3bb3-a5d5-75b08d0ad40e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/270db6bf-7db4-3453-ae1a-393cea9423cf> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .
+
+<http://data.silknow.org/object/270db6bf-7db4-3453-ae1a-393cea9423cf/category/1>
+        a                    silk:T35 ;
+        silk:L1              "tassel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/270db6bf-7db4-3453-ae1a-393cea9423cf> .
+
+<http://data.silknow.org/object/270db6bf-7db4-3453-ae1a-393cea9423cf>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "58.184.40" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/tassel-5818440> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/48e050e9-f2b2-39e3-b02d-a7926e350f7c> .
+
+<http://data.silknow.org/object/270db6bf-7db4-3453-ae1a-393cea9423cf/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/270db6bf-7db4-3453-ae1a-393cea9423cf> .
+
+<http://data.silknow.org/object/48e050e9-f2b2-39e3-b02d-a7926e350f7c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 58.184.40" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/347dc204-4c82-330f-8bbe-0d4bd1fc111a> , <http://data.silknow.org/production/22d60d67-5ab3-3bb3-a5d5-75b08d0ad40e> , <http://data.silknow.org/event/76c1c8a6-5db5-3d41-91e6-652a464fc3ef> , <http://data.silknow.org/object/270db6bf-7db4-3453-ae1a-393cea9423cf/category/1> , <http://data.silknow.org/object/270db6bf-7db4-3453-ae1a-393cea9423cf> , <http://data.silknow.org/object/270db6bf-7db4-3453-ae1a-393cea9423cf/domain/1> ;
+        dc:identifier       "1035016.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

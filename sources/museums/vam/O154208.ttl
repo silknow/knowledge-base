@@ -1,0 +1,124 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Dress fabric of woven silk, Iran, 1860-1899"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2> .
+
+<http://data.silknow.org/actor/aae925cd-f96a-3d40-97b2-09913188be57>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by T. S. W. Jarvis, Esq" ;
+        ecrm:P1_is_identified_by  "Given by T. S. W. Jarvis, Esq" .
+
+<http://data.silknow.org/event/aaeb309e-7d6d-3063-b797-09883b72f6e8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/aae925cd-f96a-3d40-97b2-09913188be57> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by T. S. W. Jarvis, Esq." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2> .
+
+<http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "minimum" ;
+        rdfs:label          "Length: 4.5 cm  minimum" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "minimum" ;
+        ecrm:P90_has_value  "4.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dress fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/production/0392339a-c7be-3c9f-8147-d86a2035f8fa>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1860_1899> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2> .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/7c91b76c-a0eb-35e3-a39e-3d6dac9d7b9d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O154208" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/0392339a-c7be-3c9f-8147-d86a2035f8fa> , <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/observation/2> , <http://data.silknow.org/image/c5775a1f-919c-3290-9a0d-c924e17e130f> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/domain/1> , <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2> , <http://data.silknow.org/event/aaeb309e-7d6d-3063-b797-09883b72f6e8> , <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/observation/1> , <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/domain/2> ;
+        dc:identifier       "O154208.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "maximum" ;
+        rdfs:label          "Length: 6.5 cm  maximum" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "maximum" ;
+        ecrm:P90_has_value  "6.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/c5775a1f-919c-3290-9a0d-c924e17e130f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018LD6835" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O154208_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018LD/2018LD6835.jpg> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7c91b76c-a0eb-35e3-a39e-3d6dac9d7b9d> .
+
+<http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Dress fabric of woven silk.\nSilk twill; Hussein Kuli Khan type.\n\nBroad stripes:\n[1] pink or possibly orange ground with a broken and not very obvious blue meandering stem and many disjointed leaves and flowerheads. Details in white, green and light blue.\n[2] white ground with the same design but details in pink, green and light blue.\nThese are separated by a  narrow stripe:\n[3] dark blue ground with red meander and green and blue leaves and flowerheads.\n[4] pink ground with isolated sprigs: blue flower above green leaf, 3-petalled sprig. All with dark blue outlines.\nWarp: white, red, dark blue and orange silk.\nWeft: white, light blue, light green, orange, light red silk all S-twist and dark blue silk."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2> .
+
+<http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2> .
+
+<http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 26.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "26.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .
+
+<http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Dress fabric of woven silk, Iran, 1860-1899"@en , "Dress fabric of woven silk.\nSilk twill; Hussein Kuli Khan type.\n\nBroad stripes:\n[1] pink or possibly orange ground with a broken and not very obvious blue meandering stem and many disjointed leaves and flowerheads. Details in white, green and light blue.\n[2] white ground with the same design but details in pink, green and light blue.\nThese are separated by a  narrow stripe:\n[3] dark blue ground with red meander and green and blue leaves and flowerheads.\n[4] pink ground with isolated sprigs: blue flower above green leaf, 3-petalled sprig. All with dark blue outlines.\nWarp: white, red, dark blue and orange silk.\nWeft: white, light blue, light green, orange, light red silk all S-twist and dark blue silk."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c5775a1f-919c-3290-9a0d-c924e17e130f> ;
+        ecrm:P3_has_note               "Dress fabric of woven silk.\nSilk twill; Hussein Kuli Khan type.\n\nBroad stripes:\n[1] pink or possibly orange ground with a broken and not very obvious blue meandering stem and many disjointed leaves and flowerheads. Details in white, green and light blue.\n[2] white ground with the same design but details in pink, green and light blue.\nThese are separated by a  narrow stripe:\n[3] dark blue ground with red meander and green and blue leaves and flowerheads.\n[4] pink ground with isolated sprigs: blue flower above green leaf, 3-petalled sprig. All with dark blue outlines.\nWarp: white, red, dark blue and orange silk.\nWeft: white, light blue, light green, orange, light red silk all S-twist and dark blue silk."@en , "Dress fabric of woven silk, Iran, 1860-1899"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/dimension/1> , <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/dimension/2> , <http://data.silknow.org/object/2a19385c-0065-3abf-8afb-a1feed4e23a2/dimension/3> ;
+        dc:identifier                  "T.21:106-1955" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O154208> .

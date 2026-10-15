@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/d087aee0-b98e-3df3-ab3d-b37211b31a0c>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Textile Panorama" , "February 12 - March 30, 1947" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b5075c95-98ad-3b90-a03f-88d3a588e59d> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "Textile Panorama" , "February 12 - March 30, 1947" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/textile-panorama> .
+
+<http://data.silknow.org/production/6177a65a-e5a0-3d31-8c92-f6083a5430e1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b5075c95-98ad-3b90-a03f-88d3a588e59d> ;
+        ecrm:P126_employed      "cotton; silk; metal"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/617> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/88> , <http://data.silknow.org/vocabulary/87> , <http://data.silknow.org/vocabulary/236> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/596c894b-9517-3b38-b630-b8c99e45861d> .
+
+<http://data.silknow.org/image/59c6e2a0-a63f-31f5-abb9-e5505d06b60b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/892371_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/14699.jpg> .
+
+<http://data.silknow.org/event/4782d6df-b926-3655-abd1-1215af8b16cb>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b5075c95-98ad-3b90-a03f-88d3a588e59d> .
+
+<http://data.silknow.org/object/a89a778e-3532-3bf9-804d-5eaf2fbb4a0b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 11.065" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/59c6e2a0-a63f-31f5-abb9-e5505d06b60b> , <http://data.silknow.org/event/4782d6df-b926-3655-abd1-1215af8b16cb> , <http://data.silknow.org/object/b5075c95-98ad-3b90-a03f-88d3a588e59d/domain/1> , <http://data.silknow.org/object/b5075c95-98ad-3b90-a03f-88d3a588e59d/category/1> , <http://data.silknow.org/production/6177a65a-e5a0-3d31-8c92-f6083a5430e1> , <http://data.silknow.org/object/b5075c95-98ad-3b90-a03f-88d3a588e59d> , <http://data.silknow.org/event/8e64b69d-8ec7-3a4e-b1dd-dc00757385bf> , <http://data.silknow.org/object/d087aee0-b98e-3df3-ab3d-b37211b31a0c> ;
+        dc:identifier       "892371.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/b5075c95-98ad-3b90-a03f-88d3a588e59d>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/59c6e2a0-a63f-31f5-abb9-e5505d06b60b> ;
+        dc:identifier                  "11.065" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/bag-11065> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Gustav Radeke" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a89a778e-3532-3bf9-804d-5eaf2fbb4a0b> .
+
+<http://data.silknow.org/object/b5075c95-98ad-3b90-a03f-88d3a588e59d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b5075c95-98ad-3b90-a03f-88d3a588e59d> .
+
+<http://data.silknow.org/object/b5075c95-98ad-3b90-a03f-88d3a588e59d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "bag" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b5075c95-98ad-3b90-a03f-88d3a588e59d> .
+
+<http://data.silknow.org/place/596c894b-9517-3b38-b630-b8c99e45861d>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Greco-Albanian" ;
+        ecrm:P87_is_identified_by  "Greco-Albanian" .
+
+<http://data.silknow.org/event/8e64b69d-8ec7-3a4e-b1dd-dc00757385bf>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b5075c95-98ad-3b90-a03f-88d3a588e59d> .

@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "100.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "100.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, warp-faced plain weave; brocaded"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5d6bd5ed-58ce-3d4e-8f4d-3ca40ca6659b> ;
+        ecrm:P3_has_note               "Silk, warp-faced plain weave; brocaded"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9/dimension/1> , <http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9/dimension/2> ;
+        dc:identifier                  "1978.100" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/52156/panel> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/image/5d6bd5ed-58ce-3d4e-8f4d-3ca40ca6659b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/52156_0.jpg> , <https://www.artic.edu/iiif/2/20ab72fb-b7cf-419a-d6e7-bec55fda2778/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "54" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "54"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/84662a51-2221-393a-addf-71def615bec9>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/3486b6d7-769b-3d6a-a5ba-f69b563c48a9> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Textile Purchase Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9> .
+
+<http://data.silknow.org/actor/3486b6d7-769b-3d6a-a5ba-f69b563c48a9>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Textile Purchase Fund" ;
+        ecrm:P1_is_identified_by  "Textile Purchase Fund" .
+
+<http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, warp-faced plain weave; brocaded"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9> .
+
+<http://data.silknow.org/production/39c93eea-0d6e-3498-a7ec-2c3d743c3dbc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1800> , <http://data.silknow.org/timespan/1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/779119bb-68c3-3c65-8131-849dfe47a4ea>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1978.100" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/84662a51-2221-393a-addf-71def615bec9> , <http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9> , <http://data.silknow.org/image/5d6bd5ed-58ce-3d4e-8f4d-3ca40ca6659b> , <http://data.silknow.org/production/39c93eea-0d6e-3498-a7ec-2c3d743c3dbc> , <http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9/observation/1> , <http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9/category/1> ;
+        dc:identifier       "52156.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/60b35b39-c886-3ae7-9291-643fb84424a9> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/779119bb-68c3-3c65-8131-849dfe47a4ea> .

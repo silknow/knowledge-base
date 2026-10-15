@@ -1,0 +1,123 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/a3b0e51a-4272-3fd5-9b5e-40a5876639cd>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Mr Frank Brangwyn" ;
+        ecrm:P1_is_identified_by  "Given by Mr Frank Brangwyn" .
+
+<http://data.silknow.org/event/89a02040-f990-37aa-aea5-0116f8a620ed>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a3b0e51a-4272-3fd5-9b5e-40a5876639cd> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Mr Frank Brangwyn" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9> .
+
+<https://sws.geonames.org/298795/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 205 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "205"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/2> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Hanging" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9> .
+
+<http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Hanging, linen embroidered with silk in surface darning on the diagonal over 3 threads. \nA solid green line forms the border.  The field is decorated with zigzag parallel stems which are blue and contain cream tulips on a green leafy stem punctuated at intervals by a red spot. The stem is broken at intervals by a stylised cream cloud-band or crown motif. Small green stems branch from the blue ones and bear cream or blue and red tulips.  Thicker blue stems branch off, each bearing a large red tulip with an internal pattern of yellow tulips, green leafy stem and white spots.\nMade from three widths joined after being embroidered."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9> .
+
+<http://data.silknow.org/object/964ea075-680a-3739-a8f1-e965fb836abf>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O54375" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9> , <http://data.silknow.org/production/3cc1266b-9615-3ce5-8691-0a5d242d26d6> , <http://data.silknow.org/object/bfe4a072-40e6-32c7-bb94-75dd2e2845d4> , <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/observation/2> , <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/domain/2> , <http://data.silknow.org/image/cad2df28-9634-3489-901d-f53b5e60de01> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/event/89a02040-f990-37aa-aea5-0116f8a620ed> , <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/observation/1> , <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/domain/1> ;
+        dc:identifier       "O54375.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/image/cad2df28-9634-3489-901d-f53b5e60de01>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AL8099" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O54375_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AL/2006AL8099.jpg> .
+
+<http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 134.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "134.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/964ea075-680a-3739-a8f1-e965fb836abf> .
+
+<http://data.silknow.org/production/3cc1266b-9615-3ce5-8691-0a5d242d26d6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9> ;
+        ecrm:P126_employed      "linen"@en , "Linen, embroidered with silk in surface darning on the diagonal over three threads"@en , "made from three widths joined after being embroidered"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/277> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/88> , <http://data.silknow.org/vocabulary/526> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1600_1699> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/298795/> .
+
+<http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "The oldest Ottoman embroideries in the V&A date from the 16th or 17th centuries. They are either whole covers and wall hangings or fragments of them. They are decorated with large-scale, bold designs in red, blue, green and yellow, with some white and black.  In the 17th century the main designs were based on wavy parallel stems which run along the length of the fabric. In this example, the designer has given equal emphasis to the stems and to the flowers."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9> .
+
+<http://data.silknow.org/object/bfe4a072-40e6-32c7-bb94-75dd2e2845d4>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Illustrated in 'Ottoman Embroidery' by Marianne Ellis and Jennifer Wearden (V&A Publication, 2001) Plate 11"@en ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Illustrated in 'Ottoman Embroidery' by Marianne Ellis and Jennifer Wearden (V&A Publication, 2001) Plate 11"@en .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .
+
+<http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9> .
+
+<http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "The oldest Ottoman embroideries in the V&A date from the 16th or 17th centuries. They are either whole covers and wall hangings or fragments of them. They are decorated with large-scale, bold designs in red, blue, green and yellow, with some white and black.  In the 17th century the main designs were based on wavy parallel stems which run along the length of the fabric. In this example, the designer has given equal emphasis to the stems and to the flowers."@en , "Hanging, linen embroidered with silk in surface darning on the diagonal over 3 threads. \nA solid green line forms the border.  The field is decorated with zigzag parallel stems which are blue and contain cream tulips on a green leafy stem punctuated at intervals by a red spot. The stem is broken at intervals by a stylised cream cloud-band or crown motif. Small green stems branch from the blue ones and bear cream or blue and red tulips.  Thicker blue stems branch off, each bearing a large red tulip with an internal pattern of yellow tulips, green leafy stem and white spots.\nMade from three widths joined after being embroidered."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/cad2df28-9634-3489-901d-f53b5e60de01> ;
+        ecrm:P3_has_note               "Hanging, linen embroidered with silk in surface darning on the diagonal over 3 threads. \nA solid green line forms the border.  The field is decorated with zigzag parallel stems which are blue and contain cream tulips on a green leafy stem punctuated at intervals by a red spot. The stem is broken at intervals by a stylised cream cloud-band or crown motif. Small green stems branch from the blue ones and bear cream or blue and red tulips.  Thicker blue stems branch off, each bearing a large red tulip with an internal pattern of yellow tulips, green leafy stem and white spots.\nMade from three widths joined after being embroidered."@en , "The oldest Ottoman embroideries in the V&A date from the 16th or 17th centuries. They are either whole covers and wall hangings or fragments of them. They are decorated with large-scale, bold designs in red, blue, green and yellow, with some white and black.  In the 17th century the main designs were based on wavy parallel stems which run along the length of the fabric. In this example, the designer has given equal emphasis to the stems and to the flowers."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/dimension/1> , <http://data.silknow.org/object/d1305f47-7b94-31e3-8359-10b7efa20ec9/dimension/2> ;
+        dc:identifier                  "T.44-1940" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O54375> .

@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/43abb366-281a-33dc-b567-89b86c1ed3db> .
+
+<http://data.silknow.org/production/3073c941-e4ac-3998-b18c-103f9787ae5e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/33e1d613-9bbd-357a-80ed-7b35d501aa0b> ;
+        ecrm:P126_employed      "Raso de seda blanco. Hojilla. Lentejuelas. Hilo de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Bordado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/3073c941-e4ac-3998-b18c-103f9787ae5e/activity/1> .
+
+<http://data.silknow.org/object/33e1d613-9bbd-357a-80ed-7b35d501aa0b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Pertenece al ajuar del Obispo Luis Folgueras y Sión."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/33e1d613-9bbd-357a-80ed-7b35d501aa0b> .
+
+<http://data.silknow.org/object/33e1d613-9bbd-357a-80ed-7b35d501aa0b/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/33e1d613-9bbd-357a-80ed-7b35d501aa0b> ;
+        ecrm:P42_assigned    "Mitra" .
+
+<http://data.silknow.org/image/3ed95e7f-6d73-3fdc-8f20-3ad059e869c3>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.17" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.17_0.jpg> .
+
+<http://data.silknow.org/object/43abb366-281a-33dc-b567-89b86c1ed3db>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.17" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/33e1d613-9bbd-357a-80ed-7b35d501aa0b/observation/1> , <http://data.silknow.org/production/3073c941-e4ac-3998-b18c-103f9787ae5e> , <http://data.silknow.org/object/33e1d613-9bbd-357a-80ed-7b35d501aa0b> , <http://data.silknow.org/image/3ed95e7f-6d73-3fdc-8f20-3ad059e869c3> , <http://data.silknow.org/assessment/8664e264-66bd-3952-aecd-5487c8728710> , <http://data.silknow.org/object/33e1d613-9bbd-357a-80ed-7b35d501aa0b/type/1> ;
+        dc:identifier       "5.17.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/assessment/8664e264-66bd-3952-aecd-5487c8728710>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/33e1d613-9bbd-357a-80ed-7b35d501aa0b> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/8664e264-66bd-3952-aecd-5487c8728710/condition/1> .
+
+<http://data.silknow.org/object/33e1d613-9bbd-357a-80ed-7b35d501aa0b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Pertenece al ajuar del Obispo Luis Folgueras y Sión."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3ed95e7f-6d73-3fdc-8f20-3ad059e869c3> ;
+        ecrm:P3_has_note               "*Pertenece al ajuar del Obispo Luis Folgueras y Sión."@es ;
+        dc:identifier                  "5.17" .
+
+<http://data.silknow.org/assessment/8664e264-66bd-3952-aecd-5487c8728710/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Malo. No apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Malo. No apto para su uso."@es .
+
+<http://data.silknow.org/actor/ec78f035-edf1-33a9-8734-2be2edcecb38>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo. Cádiz. (?)" ;
+        ecrm:P1_is_identified_by  "Anónimo. Cádiz. (?)" .
+
+<http://data.silknow.org/production/3073c941-e4ac-3998-b18c-103f9787ae5e/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/ec78f035-edf1-33a9-8734-2be2edcecb38> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .

@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/23108967-26bb-3154-a675-b9e93e483910>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7d98aa27-167d-3392-a8e6-bb5479935062> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/838> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1551_1600> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3176959/> .
+
+<http://data.silknow.org/object/7d98aa27-167d-3392-a8e6-bb5479935062/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/6c12b9ac-48ab-3592-9d74-f503cc4893d4>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Iolanda Silvestri, scheda n. 148, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, p. 199"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/7d98aa27-167d-3392-a8e6-bb5479935062> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Iolanda Silvestri, scheda n. 148, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, p. 199"@it .
+
+<http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        ecrm:P1_is_identified_by  "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122951649> , <https://viaf.org/viaf/147524313> .
+
+<http://data.silknow.org/image/10701804-9b21-35f2-babc-ad0798902b6d>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1600954946_148" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1600954014260_0.jpg> .
+
+<http://data.silknow.org/object/7d98aa27-167d-3392-a8e6-bb5479935062/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7d98aa27-167d-3392-a8e6-bb5479935062> ;
+        ecrm:P42_assigned    "Due frammenti cuciti insieme" .
+
+<http://data.silknow.org/object/b2f05e8e-f3f5-3fde-9c3d-bbbb2c96f115>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1600954014260" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/25e58a4a-f573-33ce-b5d9-9b9bac60b609> , <http://data.silknow.org/object/7d98aa27-167d-3392-a8e6-bb5479935062/type/1> , <http://data.silknow.org/object/6c12b9ac-48ab-3592-9d74-f503cc4893d4> , <http://data.silknow.org/image/10701804-9b21-35f2-babc-ad0798902b6d> , <http://data.silknow.org/object/7d98aa27-167d-3392-a8e6-bb5479935062> , <http://data.silknow.org/production/23108967-26bb-3154-a675-b9e93e483910> ;
+        dc:identifier       "1600954014260.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/event/25e58a4a-f573-33ce-b5d9-9b9bac60b609>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/7d98aa27-167d-3392-a8e6-bb5479935062> .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b2f05e8e-f3f5-3fde-9c3d-bbbb2c96f115> .
+
+<http://data.silknow.org/object/7d98aa27-167d-3392-a8e6-bb5479935062>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Seconda metà del XVI secolo"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/10701804-9b21-35f2-babc-ad0798902b6d> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/7d98aa27-167d-3392-a8e6-bb5479935062/dimension/2> , <http://data.silknow.org/object/7d98aa27-167d-3392-a8e6-bb5479935062/dimension/1> ;
+        dc:identifier                  "1600954014260" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/7d98aa27-167d-3392-a8e6-bb5479935062/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "16" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "16"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3176959/>
+        a       ecrm:E53_Place .

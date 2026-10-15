@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Velluto soprarizzo fondo raso. Su fondo bianco in rosso, grandi foglie a palmetta centrale si dipartono da un probabile collo di un vaso."@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650> .
+
+<http://data.silknow.org/object/e85adb7d-e6a5-3b48-91b9-9410fd06722e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 277888" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/c7b184df-c1ea-3b37-b6f5-d7d05c01784a> , <http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650/domain/1> , <http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650> , <http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650/observation/1> , <http://data.silknow.org/production/7b0f5d4a-c685-3630-be39-51cdcbdb6b1a> , <http://data.silknow.org/image/408a32b1-b2af-3058-90ac-d8eed315b0bd> , <http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650/category/1> ;
+        dc:identifier       "277888.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650> .
+
+<http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "23" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "23"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/c7b184df-c1ea-3b37-b6f5-d7d05c01784a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650> .
+
+<http://data.silknow.org/production/7b0f5d4a-c685-3630-be39-51cdcbdb6b1a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1600_1699> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e85adb7d-e6a5-3b48-91b9-9410fd06722e> .
+
+<http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "19" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "19"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Velluto soprarizzo fondo raso. Su fondo bianco in rosso, grandi foglie a palmetta centrale si dipartono da un probabile collo di un vaso."@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/408a32b1-b2af-3058-90ac-d8eed315b0bd> ;
+        ecrm:P3_has_note               "Velluto soprarizzo fondo raso. Su fondo bianco in rosso, grandi foglie a palmetta centrale si dipartono da un probabile collo di un vaso."@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650/dimension/1> , <http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 0739/19" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/277888/?WEB=MuseiVE> .
+
+<http://data.silknow.org/image/408a32b1-b2af-3058-90ac-d8eed315b0bd>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/277888_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5nb1xp42SclXzdtDqvXH1I7bya3FGqNGxBtnxf0ECbJVEF9IeMsu85apNz1aDQIpyqMvAPsQ4HZlFUez9W0ClSXirjdyWdltRcxwsmmm4qs9WMIyJjdpm9Q%3d%3d> .
+
+<http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9f65b04c-1792-3d6d-8c2b-60a2f5401650> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .

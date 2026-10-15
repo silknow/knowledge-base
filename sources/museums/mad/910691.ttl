@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/051dc48c-32b5-3bb1-97e0-278d0c2058c7/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/051dc48c-32b5-3bb1-97e0-278d0c2058c7> .
+
+<http://data.silknow.org/event/2db7082f-d01d-3ea2-9fdc-34b9a03b5a75>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "PR 2002.2" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/051dc48c-32b5-3bb1-97e0-278d0c2058c7> .
+
+<http://data.silknow.org/object/051dc48c-32b5-3bb1-97e0-278d0c2058c7>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1720-1730, Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c7847978-ff61-37d4-b51c-1f64e1e89628> ;
+        dc:identifier                  "PR 2002.20.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910691> .
+
+<http://data.silknow.org/image/c7847978-ff61-37d4-b51c-1f64e1e89628>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910691_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/b04ea985-e832-4954-87ff-2d3d89b628f1.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/1785ddbe-0b84-32fc-a1a7-9d612468ec87>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1720-1730, Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/051dc48c-32b5-3bb1-97e0-278d0c2058c7> ;
+        ecrm:P126_employed      "Lampas fond satin, liseré, broché"@fr ;
+        ecrm:P3_has_note        "France, 1720-1730, Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1720_1730> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8fabe281-20f6-3df7-8af3-7ee40474a350> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/051dc48c-32b5-3bb1-97e0-278d0c2058c7> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/8fabe281-20f6-3df7-8af3-7ee40474a350>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record PR 2002.20.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/051dc48c-32b5-3bb1-97e0-278d0c2058c7/category/1> , <http://data.silknow.org/production/1785ddbe-0b84-32fc-a1a7-9d612468ec87> , <http://data.silknow.org/event/2db7082f-d01d-3ea2-9fdc-34b9a03b5a75> , <http://data.silknow.org/image/c7847978-ff61-37d4-b51c-1f64e1e89628> , <http://data.silknow.org/object/051dc48c-32b5-3bb1-97e0-278d0c2058c7> ;
+        dc:identifier       "910691.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

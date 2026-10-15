@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/b31a9084-0576-3e0b-abb8-ed00f4946ddc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8898ee50-a904-3095-b8f5-2fe1a6326f58> ;
+        ecrm:P32_used_general_technique
+                "Taffetas broccato"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/6ad819b1-3b10-3517-a6c2-403bca03d25b> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/8898ee50-a904-3095-b8f5-2fe1a6326f58/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8898ee50-a904-3095-b8f5-2fe1a6326f58> ;
+        ecrm:P42_assigned    "Dalmatica" .
+
+<http://data.silknow.org/actor/5143e5b7-edad-36f4-ad06-495f398f103e>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Ragusa, Museo della Basilica di San Giorgio" ;
+        ecrm:P1_is_identified_by  "Ragusa, Museo della Basilica di San Giorgio" .
+
+<http://data.silknow.org/image/f3291e97-df88-32e7-8218-8b7da8697058>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1582108864_ragusa17" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1582108017167_0.jpg> .
+
+<http://data.silknow.org/object/8898ee50-a904-3095-b8f5-2fe1a6326f58>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "1730 circa"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f3291e97-df88-32e7-8218-8b7da8697058> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/8898ee50-a904-3095-b8f5-2fe1a6326f58/dimension/2> , <http://data.silknow.org/object/8898ee50-a904-3095-b8f5-2fe1a6326f58/dimension/1> ;
+        dc:identifier                  "1582108017167" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/8898ee50-a904-3095-b8f5-2fe1a6326f58/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "102" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "102"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fed46382-2258-3711-a80d-7179b21ab1ef> .
+
+<http://data.silknow.org/event/53485c5b-330f-305d-8793-ba389056f519>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/5143e5b7-edad-36f4-ad06-495f398f103e> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8898ee50-a904-3095-b8f5-2fe1a6326f58> .
+
+<http://data.silknow.org/object/8898ee50-a904-3095-b8f5-2fe1a6326f58/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "100" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "100"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/fed46382-2258-3711-a80d-7179b21ab1ef>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1582108017167" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8898ee50-a904-3095-b8f5-2fe1a6326f58/type/1> , <http://data.silknow.org/object/9fd53aab-dde3-350f-b8a1-fa0296b3111a> , <http://data.silknow.org/object/8898ee50-a904-3095-b8f5-2fe1a6326f58> , <http://data.silknow.org/event/53485c5b-330f-305d-8793-ba389056f519> , <http://data.silknow.org/image/f3291e97-df88-32e7-8218-8b7da8697058> , <http://data.silknow.org/production/b31a9084-0576-3e0b-abb8-ed00f4946ddc> ;
+        dc:identifier       "1582108017167.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/object/9fd53aab-dde3-350f-b8a1-fa0296b3111a>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Assente"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8898ee50-a904-3095-b8f5-2fe1a6326f58> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Assente"@it .

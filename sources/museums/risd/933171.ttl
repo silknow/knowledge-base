@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/c67f3032-8614-3aee-88e0-74b7bb445f36>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/351a86f2-d679-3006-8bf4-8a33e571c12b> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1988> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/c67f3032-8614-3aee-88e0-74b7bb445f36/activity/1> .
+
+<http://data.silknow.org/event/bfec4066-7560-3b7e-a083-4f44f5400c92>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/1edc5272-c9bf-376e-86c8-b868a8e5bd14> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Museum purchase with funds from the National Endowment for the Arts" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/351a86f2-d679-3006-8bf4-8a33e571c12b> .
+
+<http://data.silknow.org/image/7946b8f5-d226-3415-8482-4db724f9ced4>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/933171_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/18864.jpg> .
+
+<http://data.silknow.org/production/c67f3032-8614-3aee-88e0-74b7bb445f36/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/78fc278d-ac01-3205-bd2b-13039d944c8d> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/actor/78fc278d-ac01-3205-bd2b-13039d944c8d>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Thelma Becherer" ;
+        ecrm:P1_is_identified_by  "Thelma Becherer" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/351a86f2-d679-3006-8bf4-8a33e571c12b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/351a86f2-d679-3006-8bf4-8a33e571c12b> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/48bc700b-4314-3083-8a77-bd5575905f94> .
+
+<http://data.silknow.org/object/48bc700b-4314-3083-8a77-bd5575905f94>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1989.054" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/bfec4066-7560-3b7e-a083-4f44f5400c92> , <http://data.silknow.org/image/7946b8f5-d226-3415-8482-4db724f9ced4> , <http://data.silknow.org/object/351a86f2-d679-3006-8bf4-8a33e571c12b/domain/1> , <http://data.silknow.org/object/351a86f2-d679-3006-8bf4-8a33e571c12b/category/1> , <http://data.silknow.org/object/351a86f2-d679-3006-8bf4-8a33e571c12b> , <http://data.silknow.org/production/c67f3032-8614-3aee-88e0-74b7bb445f36> , <http://data.silknow.org/event/d96c6b7a-4a63-34b7-bbf1-115a1175facf> ;
+        dc:identifier       "933171.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/351a86f2-d679-3006-8bf4-8a33e571c12b>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7946b8f5-d226-3415-8482-4db724f9ced4> ;
+        dc:identifier                  "1989.054" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/hanging-1989054> .
+
+<http://data.silknow.org/actor/1edc5272-c9bf-376e-86c8-b868a8e5bd14>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Museum purchase with funds from the National Endowment for the Arts" ;
+        ecrm:P1_is_identified_by  "Museum purchase with funds from the National Endowment for the Arts" .
+
+<http://data.silknow.org/object/351a86f2-d679-3006-8bf4-8a33e571c12b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "hanging" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/351a86f2-d679-3006-8bf4-8a33e571c12b> .
+
+<http://data.silknow.org/event/d96c6b7a-4a63-34b7-bbf1-115a1175facf>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/351a86f2-d679-3006-8bf4-8a33e571c12b> .

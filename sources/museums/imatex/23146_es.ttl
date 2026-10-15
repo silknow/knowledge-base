@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Es tracta d'un fragment de tapiseria que formava part d'un conjunt de tres butaques de la casa Joan Prat."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9bae008f-6969-38e9-bff5-b5ff3e0c4f6f> , <http://data.silknow.org/image/9e93c404-e304-3f69-8d1c-0e5e23c206f7> ;
+        ecrm:P3_has_note               "Es tracta d'un fragment de tapiseria que formava part d'un conjunt de tres butaques de la casa Joan Prat."@es ;
+        dc:identifier                  "19951" .
+
+<http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94> .
+
+<http://data.silknow.org/production/b95739f2-3189-379f-92a4-3bdf11238536>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "... sin confirmar"@es , "vellut estampat"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/854> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1901_1925> .
+
+<http://data.silknow.org/image/9e93c404-e304-3f69-8d1c-0e5e23c206f7>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000028020" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/23146_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000028020.jpg> .
+
+<http://data.silknow.org/image/9bae008f-6969-38e9-bff5-b5ff3e0c4f6f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000020279" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/23146_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000020279.jpg> .
+
+<http://data.silknow.org/event/0e4a57cf-326b-3aa1-99a3-e6373a41781c>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94> .
+
+<http://data.silknow.org/event/8f3655ec-16c0-345b-bb9f-4776ee25caff>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/7aeda3a3-00f7-3787-80cd-6eff0104cee2> ;
+        ecrm:P23_transferred_title_from
+                "Bargalló, Antoni" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94> ;
+        ecrm:P3_has_note               "donacions" .
+
+<http://data.silknow.org/actor/7aeda3a3-00f7-3787-80cd-6eff0104cee2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Bargalló, Antoni" ;
+        ecrm:P1_is_identified_by  "Bargalló, Antoni" .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d26c20d5-5f69-3aa6-97ab-40171ab976d2> .
+
+<http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Es tracta d'un fragment de tapiseria que formava part d'un conjunt de tres butaques de la casa Joan Prat."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94> .
+
+<http://data.silknow.org/object/d26c20d5-5f69-3aa6-97ab-40171ab976d2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 23146" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94/observation/1> , <http://data.silknow.org/image/9e93c404-e304-3f69-8d1c-0e5e23c206f7> , <http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94/category/1> , <http://data.silknow.org/event/0e4a57cf-326b-3aa1-99a3-e6373a41781c> , <http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94> , <http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94/domain/1> , <http://data.silknow.org/event/8f3655ec-16c0-345b-bb9f-4776ee25caff> , <http://data.silknow.org/production/b95739f2-3189-379f-92a4-3bdf11238536> , <http://data.silknow.org/image/9bae008f-6969-38e9-bff5-b5ff3e0c4f6f> ;
+        dc:identifier       "23146.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d607f9cf-0ed2-3e86-818c-8bccb5d92b94> .

@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/d911372a-e1cc-32ef-a0b1-4d6080e8dd2e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f> ;
+        ecrm:P126_employed      "filo metallico"@it ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1700_1750> .
+
+<http://data.silknow.org/event/d3893d05-4e58-3706-9dca-4bfd876cfec0>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f> .
+
+<http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f> .
+
+<http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Lampasso lanciato broccato con effetto di pelo strisciante"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5281fa8d-0cc0-37e4-b6f5-a964ff91c9d4> ;
+        ecrm:P3_has_note               "Lampasso lanciato broccato con effetto di pelo strisciante"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f/dimension/1> , <http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 1320" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/282406/?WEB=MuseiVE> .
+
+<http://data.silknow.org/object/54bbc38e-1c26-3ecb-8c59-be2bd5c7721e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 282406" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/d3893d05-4e58-3706-9dca-4bfd876cfec0> , <http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f/domain/1> , <http://data.silknow.org/image/5281fa8d-0cc0-37e4-b6f5-a964ff91c9d4> , <http://data.silknow.org/production/d911372a-e1cc-32ef-a0b1-4d6080e8dd2e> , <http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f/category/1> , <http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f/observation/1> , <http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f> ;
+        dc:identifier       "282406.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "28.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "28.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/5281fa8d-0cc0-37e4-b6f5-a964ff91c9d4>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/282406_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5AyGCmfN26VSul82Kmg3Lw5kOxA8b88dSEjsoR4g3XjPsPV5dJz2hISpVflkP7TWKP%2bd0J%2b4X28AGpUabJzHCCp2Q5XX%2bsszWd%2faTssAFMNtwgixhVJt%2bcg%3d%3d> .
+
+<http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/54bbc38e-1c26-3ecb-8c59-be2bd5c7721e> .
+
+<http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Lampasso lanciato broccato con effetto di pelo strisciante"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/17e8ad54-dab1-3e27-adf2-f6a8aba4887f/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "38" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "38"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

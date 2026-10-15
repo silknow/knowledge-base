@@ -1,0 +1,73 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e58abd8f-f331-3201-a9e3-9a3d848740ef> .
+
+<http://data.silknow.org/image/621c77e0-24d4-3046-914a-4c1b76f27ae5>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033883" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/28142_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033883.jpg> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Peça que pel seu format podría ser un frontal d'altar. De vellut de seda verd duia com a decoració un brodat aplicat del que avui en dia no es conserva res però del que encara es poden observar el forat de les puntades."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/621c77e0-24d4-3046-914a-4c1b76f27ae5> ;
+        ecrm:P3_has_note               "Peça que pel seu format podría ser un frontal d'altar. De vellut de seda verd duia com a decoració un brodat aplicat del que avui en dia no es conserva res però del que encara es poden observar el forat de les puntades."@es ;
+        dc:identifier                  "16607" .
+
+<http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Peça que pel seu format podría ser un frontal d'altar. De vellut de seda verd duia com a decoració un brodat aplicat del que avui en dia no es conserva res però del que encara es poden observar el forat de les puntades."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49> .
+
+<http://data.silknow.org/event/582ea373-1d7d-3f48-bd74-a59ea3da5966>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49> .
+
+<http://data.silknow.org/event/db3f98e7-b3e2-3900-9cad-16c245e14a29>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49> .
+
+<http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49> .
+
+<http://data.silknow.org/production/cf767fb0-86d3-313a-b465-856113164607>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/853> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/object/e58abd8f-f331-3201-a9e3-9a3d848740ef>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 28142" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49> , <http://data.silknow.org/production/cf767fb0-86d3-313a-b465-856113164607> , <http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49/domain/1> , <http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49/observation/1> , <http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49/category/1> , <http://data.silknow.org/event/db3f98e7-b3e2-3900-9cad-16c245e14a29> , <http://data.silknow.org/image/621c77e0-24d4-3046-914a-4c1b76f27ae5> , <http://data.silknow.org/event/582ea373-1d7d-3f48-bd74-a59ea3da5966> ;
+        dc:identifier       "28142.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2aa80f1b-2bd7-3654-8795-dd30028cfe49> .

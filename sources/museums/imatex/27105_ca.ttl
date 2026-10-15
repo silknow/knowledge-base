@@ -1,0 +1,69 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/10bc53ee-0f01-3098-bfcd-c42921aacc3e> .
+
+<http://data.silknow.org/production/0747425a-5ba6-3547-aa23-38d1151b6d0d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8501027e-c02e-3192-a8eb-f76e68c3136a> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca .
+
+<http://data.silknow.org/image/5992eab5-2776-3184-ae4f-43989deb92a3>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000032751" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27105_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000032751.jpg> .
+
+<http://data.silknow.org/event/e3e2408d-9181-347f-b6f1-1b31c4091b1c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8501027e-c02e-3192-a8eb-f76e68c3136a> .
+
+<http://data.silknow.org/object/8501027e-c02e-3192-a8eb-f76e68c3136a>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5992eab5-2776-3184-ae4f-43989deb92a3> , <http://data.silknow.org/image/fffdfe89-ca4f-3ab3-9920-aa735f2df8cc> ;
+        dc:identifier                  "15869" .
+
+<http://data.silknow.org/event/a8377a9a-2dd4-362c-a893-8a2a426af74d>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8501027e-c02e-3192-a8eb-f76e68c3136a> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/8501027e-c02e-3192-a8eb-f76e68c3136a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8501027e-c02e-3192-a8eb-f76e68c3136a> .
+
+<http://data.silknow.org/object/8501027e-c02e-3192-a8eb-f76e68c3136a/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8501027e-c02e-3192-a8eb-f76e68c3136a> .
+
+<http://data.silknow.org/image/fffdfe89-ca4f-3ab3-9920-aa735f2df8cc>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000032750" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27105_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000032750.jpg> .
+
+<http://data.silknow.org/object/10bc53ee-0f01-3098-bfcd-c42921aacc3e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27105" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/0747425a-5ba6-3547-aa23-38d1151b6d0d> , <http://data.silknow.org/object/8501027e-c02e-3192-a8eb-f76e68c3136a> , <http://data.silknow.org/object/8501027e-c02e-3192-a8eb-f76e68c3136a/category/1> , <http://data.silknow.org/image/5992eab5-2776-3184-ae4f-43989deb92a3> , <http://data.silknow.org/event/e3e2408d-9181-347f-b6f1-1b31c4091b1c> , <http://data.silknow.org/image/fffdfe89-ca4f-3ab3-9920-aa735f2df8cc> , <http://data.silknow.org/object/8501027e-c02e-3192-a8eb-f76e68c3136a/domain/1> , <http://data.silknow.org/event/a8377a9a-2dd4-362c-a893-8a2a426af74d> ;
+        dc:identifier       "27105.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

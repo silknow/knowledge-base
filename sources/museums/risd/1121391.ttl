@@ -1,0 +1,83 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/362f4378-0343-37a6-8f6d-4e261dfd03a4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2a0e8a79-a93e-32e5-80b7-ef5ac41076b1> ;
+        ecrm:P126_employed      "Silk; plain weave, continuous supplementary weft patterning"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .
+
+<http://data.silknow.org/object/2a0e8a79-a93e-32e5-80b7-ef5ac41076b1>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2bf3d094-f451-3508-821a-145d6f805b61> , <http://data.silknow.org/image/db4d0226-6e1b-3e7c-9440-4847f6eb4c9e> ;
+        dc:identifier                  "2009.117.23" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/group-textile-swatch-200911723> .
+
+<http://data.silknow.org/image/2bf3d094-f451-3508-821a-145d6f805b61>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1121391_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/205238.jpg> .
+
+<http://data.silknow.org/object/fb10f1ae-f0e8-3422-aaa3-5ded1efd38a3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2009.117.23" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2a0e8a79-a93e-32e5-80b7-ef5ac41076b1/category/1> , <http://data.silknow.org/object/2a0e8a79-a93e-32e5-80b7-ef5ac41076b1> , <http://data.silknow.org/image/db4d0226-6e1b-3e7c-9440-4847f6eb4c9e> , <http://data.silknow.org/image/2bf3d094-f451-3508-821a-145d6f805b61> , <http://data.silknow.org/event/f4c11295-7ea5-33b5-8e29-38556c667d5a> , <http://data.silknow.org/object/2a0e8a79-a93e-32e5-80b7-ef5ac41076b1/domain/1> , <http://data.silknow.org/event/5e5aadd6-2290-3cd2-990d-9a598382ff77> , <http://data.silknow.org/production/362f4378-0343-37a6-8f6d-4e261dfd03a4> ;
+        dc:identifier       "1121391.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/2a0e8a79-a93e-32e5-80b7-ef5ac41076b1/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2a0e8a79-a93e-32e5-80b7-ef5ac41076b1> .
+
+<http://data.silknow.org/image/db4d0226-6e1b-3e7c-9440-4847f6eb4c9e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1121391_1.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/205236.jpg> .
+
+<http://data.silknow.org/event/f4c11295-7ea5-33b5-8e29-38556c667d5a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2a0e8a79-a93e-32e5-80b7-ef5ac41076b1> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/event/5e5aadd6-2290-3cd2-990d-9a598382ff77>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/afda8da7-40ce-3d93-a19e-50687f88049a> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Andrea Aranow" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2a0e8a79-a93e-32e5-80b7-ef5ac41076b1> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fb10f1ae-f0e8-3422-aaa3-5ded1efd38a3> .
+
+<http://data.silknow.org/actor/afda8da7-40ce-3d93-a19e-50687f88049a>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Andrea Aranow" ;
+        ecrm:P1_is_identified_by  "Gift of Andrea Aranow" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000498833130> .
+
+<http://data.silknow.org/object/2a0e8a79-a93e-32e5-80b7-ef5ac41076b1/category/1>
+        a                    silk:T35 ;
+        silk:L1              "group ~ textile ~ swatch" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2a0e8a79-a93e-32e5-80b7-ef5ac41076b1> .

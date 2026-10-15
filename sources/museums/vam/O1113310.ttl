@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/collection/4d5eb4be-51a1-3b4b-b061-6688e54a3c37>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Theatre and Performance Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/f5c1f238-64db-3111-8ed2-b012637dac02> ;
+        ecrm:P78_is_identified_by  "Theatre and Performance Collection" .
+
+<http://data.silknow.org/object/19ab6604-0f26-32cb-ae88-98eacf235ecb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O1113310" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f5c1f238-64db-3111-8ed2-b012637dac02> , <http://data.silknow.org/image/77664f52-8e14-3f47-a3e0-df609fad647a> , <http://data.silknow.org/object/f5c1f238-64db-3111-8ed2-b012637dac02/observation/1> , <http://data.silknow.org/collection/4d5eb4be-51a1-3b4b-b061-6688e54a3c37> , <http://data.silknow.org/event/952469fb-f6f6-3e9e-a25c-540f66391974> , <http://data.silknow.org/production/f8b598d6-73ef-3300-a44c-2825993aaa6a> ;
+        dc:identifier       "O1113310.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/event/952469fb-f6f6-3e9e-a25c-540f66391974>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f5c1f238-64db-3111-8ed2-b012637dac02> .
+
+<http://data.silknow.org/object/f5c1f238-64db-3111-8ed2-b012637dac02/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Silk programme on cream silk in brown and green typography with a gilt fringe applied all round.  Produced for 'The 60th Anniversary of Her Majesty's Accession to the Throne' with Acts from 'Tannhauser', 'Romeo et Juliette' and 'Les Huguenots', Royal Opera Covent Garden, 23rd June 1897."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f5c1f238-64db-3111-8ed2-b012637dac02> .
+
+<http://data.silknow.org/image/77664f52-8e14-3f47-a3e0-df609fad647a>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2014GX0385" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O1113310_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2014GX/2014GX0385.jpg> .
+
+<http://data.silknow.org/object/f5c1f238-64db-3111-8ed2-b012637dac02/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Silk programme" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f5c1f238-64db-3111-8ed2-b012637dac02> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/production/f8b598d6-73ef-3300-a44c-2825993aaa6a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f5c1f238-64db-3111-8ed2-b012637dac02> ;
+        ecrm:P126_employed      "Printed silk"@en , "silk (textile)"@en , "ink"@en ;
+        ecrm:P32_used_general_technique
+                "printed"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1897_06_23> .
+
+<http://data.silknow.org/object/f5c1f238-64db-3111-8ed2-b012637dac02>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk programme on cream silk in brown and green typography with a gilt fringe applied all round.  Produced for 'The 60th Anniversary of Her Majesty's Accession to the Throne' with Acts from 'Tannhauser', 'Romeo et Juliette' and 'Les Huguenots', Royal Opera Covent Garden, 23rd June 1897."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/77664f52-8e14-3f47-a3e0-df609fad647a> ;
+        ecrm:P3_has_note               "Silk programme on cream silk in brown and green typography with a gilt fringe applied all round.  Produced for 'The 60th Anniversary of Her Majesty's Accession to the Throne' with Acts from 'Tannhauser', 'Romeo et Juliette' and 'Les Huguenots', Royal Opera Covent Garden, 23rd June 1897."@en ;
+        dc:identifier                  "S.203-1981" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O1113310> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/19ab6604-0f26-32cb-ae88-98eacf235ecb> .

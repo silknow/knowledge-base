@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/event/df872e5b-8b7f-3b85-99a7-b34774028245>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> , <http://data.silknow.org/place/3dfbf716-f48d-3d9c-9652-1715a69e0a36> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40> .
+
+<http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40/category/2>
+        a                    silk:T35 ;
+        silk:L1              "fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40> .
+
+<http://data.silknow.org/object/3d7b627b-f077-377c-ae98-efeddabe5a64>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2048213-europeana_fashion_http___collections_vam_ac_uk_item_O261637" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/d3151697-7aa8-3d69-bdbc-80f75dbe3a39> , <http://data.silknow.org/event/df872e5b-8b7f-3b85-99a7-b34774028245> , <http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40/observation/1> , <http://data.silknow.org/image/1fe476a9-cbbc-3f5d-96b9-933df26bb99d> , <http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40/category/2> , <http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40> , <http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40/category/1> ;
+        dc:identifier       "2048213-europeana_fashion_http___collections_vam_ac_uk_item_O261637.json" ;
+        dc:publisher        "http://data.silknow.org/organization/europeana" .
+
+<http://data.silknow.org/image/1fe476a9-cbbc-3f5d-96b9-933df26bb99d>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/europeana/2048213-europeana_fashion_http___collections_vam_ac_uk_item_O261637_0.jpg> , <https://proxy.europeana.eu/2048213/europeana_fashion_http___collections_vam_ac_uk_item_O261637?view=http%3A%2F%2Fmedia.vam.ac.uk%2Fmedia%2Fthira%2Fcollection_images%2F2006AT%2F2006AT2299_jpg_l.jpg&disposition=inline&api_url=https%3A%2F%2Fapi.europeana.eu%2Fapi> .
+
+<http://data.silknow.org/europeana>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3d7b627b-f077-377c-ae98-efeddabe5a64> .
+
+<http://data.silknow.org/production/d3151697-7aa8-3d69-bdbc-80f75dbe3a39>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40> ;
+        ecrm:P126_employed      "Material: silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1753> .
+
+<http://data.silknow.org/place/3dfbf716-f48d-3d9c-9652-1715a69e0a36>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Europeana Fashion" ;
+        ecrm:P87_is_identified_by  "Europeana Fashion" .
+
+<http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Dress fabric of woven silk, Spitalfields, London, 1753."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1fe476a9-cbbc-3f5d-96b9-933df26bb99d> ;
+        ecrm:P3_has_note               "Dress fabric of woven silk, Spitalfields, London, 1753."@en ;
+        dc:identifier                  "T.16-1969" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.europeana.eu/en/item/2048213/europeana_fashion_http___collections_vam_ac_uk_item_O261637> .
+
+<http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Dress fabric of woven silk, Spitalfields, London, 1753."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40> .
+
+<http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Object Type: fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5901001b-88d9-35ec-a326-120d170d6f40> .

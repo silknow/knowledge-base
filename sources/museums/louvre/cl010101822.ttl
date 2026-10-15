@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Description / Décor" ;
+        ecrm:P3_has_note    "Tapis d'Orient fond bleu vert, bordure fond orangé."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06> .
+
+<http://data.silknow.org/production/5335e8e7-a011-3ca9-a2e8-684d063858ed/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/8dbd81b5-e04d-30be-b3e5-fc4a60743f06> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "tapis" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06> .
+
+<http://data.silknow.org/actor/8dbd81b5-e04d-30be-b3e5-fc4a60743f06>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anonyme" ;
+        ecrm:P1_is_identified_by  "Anonyme" .
+
+<http://data.silknow.org/collection/b6ebad22-373c-39f2-8cbc-fe59c06527c7>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Département des Objets d'art du Moyen Age, de la Renaissance et des temps modernes" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06> ;
+        ecrm:P78_is_identified_by  "Département des Objets d'art du Moyen Age, de la Renaissance et des temps modernes" .
+
+<https://sws.geonames.org/6269133/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/5335e8e7-a011-3ca9-a2e8-684d063858ed>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06> ;
+        ecrm:P126_employed      "tapis (techniques textile)"@fr ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/644> , <http://data.silknow.org/vocabulary/369> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/7d496396-4079-30f8-8cde-4b03883ee23e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269133/> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/5335e8e7-a011-3ca9-a2e8-684d063858ed/activity/1> .
+
+<http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "tapis" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06> .
+
+<http://data.silknow.org/louvre>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/52a1482f-6b59-3b24-a5e8-23f0f822605f> .
+
+<http://data.silknow.org/object/52a1482f-6b59-3b24-a5e8-23f0f822605f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record cl010101822" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/b6ebad22-373c-39f2-8cbc-fe59c06527c7> , <http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06> , <http://data.silknow.org/production/5335e8e7-a011-3ca9-a2e8-684d063858ed> , <http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06/domain/2> , <http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06/observation/1> , <http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06/type/1> , <http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06/domain/1> , <http://data.silknow.org/image/8441f2a8-241b-376a-a52f-d826852f53e2> ;
+        dc:identifier       "cl010101822.json" ;
+        dc:publisher        "http://data.silknow.org/organization/louvre" .
+
+<http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Tapis d'Orient fond bleu vert, bordure fond orangé."@fr ;
+        rdfs:label                     "Tapis \"Herat\""@fr ;
+        ecrm:P102_has_title            "Tapis \"Herat\""@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8441f2a8-241b-376a-a52f-d826852f53e2> ;
+        ecrm:P3_has_note               "Tapis d'Orient fond bleu vert, bordure fond orangé."@fr ;
+        dc:identifier                  "Numéro principal : OAR 571" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.louvre.fr/ark:/53355/cl010101822> .
+
+<http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Catégorie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0f5fddf6-6d1c-3d95-993b-ade169784c06> ;
+        ecrm:P42_assigned    "tapis" .
+
+<http://data.silknow.org/image/8441f2a8-241b-376a-a52f-d826852f53e2>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/louvre/cl010101822_0.jpg> , <https://collections.louvre.fr/media/cache/large/0000000021/0000101822/0000401188_OG.JPG> .

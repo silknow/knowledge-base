@@ -1,0 +1,111 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 633 mm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "63.300000000000004"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/production/d66bbc18-ac61-3b75-a330-b300be0958ba>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6> ;
+        ecrm:P126_employed      "Silk bobbin lace"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/a1a59d76-5d20-331b-ae5a-266599943bac> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2562770/> .
+
+<http://data.silknow.org/image/9d78fdf7-637a-3c00-80e5-c2cd2a22dfc7>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018KW9963" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O139681_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018KW/2018KW9963.jpg> .
+
+<http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Parasol cover in pink and beige silk bobbin lace, intregal fringes"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6> .
+
+<http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/domain/3>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/43> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "pink and beige silk bobbin lace parasol cover, Maltese, ca. 1868"@en , "Parasol cover in pink and beige silk bobbin lace, intregal fringes"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9d78fdf7-637a-3c00-80e5-c2cd2a22dfc7> ;
+        ecrm:P3_has_note               "pink and beige silk bobbin lace parasol cover, Maltese, ca. 1868"@en , "Parasol cover in pink and beige silk bobbin lace, intregal fringes"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/dimension/2> , <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/dimension/1> ;
+        dc:identifier                  "829-1868" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O139681> .
+
+<http://data.silknow.org/object/7a13b67c-99b9-3043-88ed-9477561d9f6a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O139681" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6> , <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/observation/1> , <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/domain/2> , <http://data.silknow.org/image/9d78fdf7-637a-3c00-80e5-c2cd2a22dfc7> , <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/observation/2> , <http://data.silknow.org/event/2650c2a7-43e8-3faf-a9d5-40d1b332912a> , <http://data.silknow.org/production/d66bbc18-ac61-3b75-a330-b300be0958ba> , <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/domain/1> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/domain/3> ;
+        dc:identifier       "O139681.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Parasol cover" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6> .
+
+<http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/5> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6> .
+
+<https://sws.geonames.org/2562770/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 650 mm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "65.0"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "pink and beige silk bobbin lace parasol cover, Maltese, ca. 1868"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7a13b67c-99b9-3043-88ed-9477561d9f6a> .
+
+<http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6> .
+
+<http://data.silknow.org/event/2650c2a7-43e8-3faf-a9d5-40d1b332912a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ac7f3248-d3ec-3c4e-9889-9ec98037aea6> .

@@ -1,0 +1,90 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/f1cffa87-881f-3056-91d2-b9dac5a53626>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1> .
+
+<http://data.silknow.org/event/89000a88-23d7-3cc9-a8f9-c6c07a2dd65b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/32d4af18-905b-3d50-b1d2-a6d8098cba95> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Richard C. Greenleaf" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1> .
+
+<http://data.silknow.org/object/16a217ab-7597-3c58-adc6-b3fef0001030>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1954-167-22-a_b" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/89000a88-23d7-3cc9-a8f9-c6c07a2dd65b> , <http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1/observation/1> , <http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1/domain/1> , <http://data.silknow.org/event/f1cffa87-881f-3056-91d2-b9dac5a53626> , <http://data.silknow.org/image/74c153e5-9277-350f-a614-a7074e663a3a> , <http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1> , <http://data.silknow.org/production/b60fcdc1-d58f-38df-a151-9d95737f92b1> , <http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1/category/1> ;
+        dc:identifier       "chndm_1954-167-22-a_b.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/actor/32d4af18-905b-3d50-b1d2-a6d8098cba95>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Richard C. Greenleaf" ;
+        ecrm:P1_is_identified_by  "Gift of Richard C. Greenleaf" .
+
+<http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Reddish-brown satin with a large-scale design of vaguely chinoiserie character. Horizontal row of motifs formed by: groups of vases, trunks filled with scrolls and fabric swags, rocaille forms with dragons, Chinese pavilions, mirrors, and shield-forms with rooster heads."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1> .
+
+<http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1> .
+
+<http://data.silknow.org/production/b60fcdc1-d58f-38df-a151-9d95737f92b1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1> ;
+        ecrm:P126_employed      "silk"@en ;
+        ecrm:P32_used_general_technique
+                "8-harness satin (brown) patterned by weft-floats (light gray) with continuous supplementary weft (ivory)"@en , "and a discontinuous supplementary weft (light blue) bound on the front by a supplementary warp in a 1/3 twill"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1780_1789> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/6ff7b83b-5716-3272-b03f-f78f890af702> .
+
+<http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Reddish-brown satin with a large-scale design of vaguely chinoiserie character. Horizontal row of motifs formed by: groups of vases, trunks filled with scrolls and fabric swags, rocaille forms with dragons, Chinese pavilions, mirrors, and shield-forms with rooster heads."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/74c153e5-9277-350f-a614-a7074e663a3a> ;
+        ecrm:P3_has_note               "Reddish-brown satin with a large-scale design of vaguely chinoiserie character. Horizontal row of motifs formed by: groups of vases, trunks filled with scrolls and fabric swags, rocaille forms with dragons, Chinese pavilions, mirrors, and shield-forms with rooster heads."@en ;
+        dc:identifier                  "chndm_1954-167-22-a_b" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1954-167-22-a_b> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/16a217ab-7597-3c58-adc6-b3fef0001030> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/image/74c153e5-9277-350f-a614-a7074e663a3a>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1954-167-22-a_b_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-061A37AAFE022-000001> .
+
+<http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a1c68a5f-91be-3aa0-b0d7-74d0fc8616c1> .
+
+<http://data.silknow.org/place/6ff7b83b-5716-3272-b03f-f78f890af702>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Italy or Lyon, France" ;
+        ecrm:P87_is_identified_by  "Italy or Lyon, France" .

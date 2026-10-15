@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "textile designs" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec> .
+
+<http://data.silknow.org/image/59fdbd46-2fc8-3146-95c4-ed5874ea05dd>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1976-103-155_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-22F17E2AC8E62_02-000001> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/65e4b654-1f1c-3379-aed7-b80e7d86e56e> .
+
+<http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Komon dotted stripes are accompanied by kimekomi balls, which are Japanese traditional wooden balls decorated with various fabrics to produce ornate designs."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec> .
+
+<http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "katagami" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec> .
+
+<http://data.silknow.org/event/839541a9-c3ff-348d-8d55-92d6e3148d58>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec> .
+
+<http://data.silknow.org/event/aa92c8dc-c844-39cd-930b-5f535aac3ba3>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/46f51257-6942-34f1-8eb3-e322ddffe6c1> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Helen Snyder" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec> .
+
+<http://data.silknow.org/production/719d9285-7596-324f-b599-e1cbb70ed35d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1825> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/65e4b654-1f1c-3379-aed7-b80e7d86e56e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1976-103-155" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec/observation/1> , <http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec/domain/1> , <http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec/domain/2> , <http://data.silknow.org/event/aa92c8dc-c844-39cd-930b-5f535aac3ba3> , <http://data.silknow.org/event/839541a9-c3ff-348d-8d55-92d6e3148d58> , <http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec> , <http://data.silknow.org/image/59fdbd46-2fc8-3146-95c4-ed5874ea05dd> , <http://data.silknow.org/production/719d9285-7596-324f-b599-e1cbb70ed35d> , <http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec/category/1> ;
+        dc:identifier       "chndm_1976-103-155.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Komon dotted stripes are accompanied by kimekomi balls, which are Japanese traditional wooden balls decorated with various fabrics to produce ornate designs."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/59fdbd46-2fc8-3146-95c4-ed5874ea05dd> ;
+        ecrm:P3_has_note               "Komon dotted stripes are accompanied by kimekomi balls, which are Japanese traditional wooden balls decorated with various fabrics to produce ornate designs."@en ;
+        dc:identifier                  "chndm_1976-103-155" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1976-103-155> .
+
+<http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Komon and Kimekomi Balls" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9a7ff266-a869-3d68-bc52-ebe5301ebcec> .
+
+<http://data.silknow.org/actor/46f51257-6942-34f1-8eb3-e322ddffe6c1>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Helen Snyder" ;
+        ecrm:P1_is_identified_by  "Gift of Helen Snyder" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/50653664> , <https://isni.org/isni/0000000082299827> .

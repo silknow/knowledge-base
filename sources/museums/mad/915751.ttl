@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/32c9b01a-9711-32d4-895d-0c256a4e2668>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Georges Barbier, 1920 (vers), Bianchini-Férier, Lyon"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/01364502-562e-3c25-8abb-89bd18326eec> ;
+        dc:identifier                  "21953" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/915751> .
+
+<http://data.silknow.org/image/01364502-562e-3c25-8abb-89bd18326eec>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/915751_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/01a8e9c1-f742-48b3-9bd3-4adcccb91cdc.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/7f8e1dcd-f0f8-3ea4-9e76-9b7009780a1e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat Bianchini-Férier, 1920" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/32c9b01a-9711-32d4-895d-0c256a4e2668> .
+
+<http://data.silknow.org/object/3436057f-07f3-36ec-83c1-2301b5533810>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 21953" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/32c9b01a-9711-32d4-895d-0c256a4e2668/category/1> , <http://data.silknow.org/event/7f8e1dcd-f0f8-3ea4-9e76-9b7009780a1e> , <http://data.silknow.org/object/32c9b01a-9711-32d4-895d-0c256a4e2668> , <http://data.silknow.org/image/01364502-562e-3c25-8abb-89bd18326eec> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/912bd114-971f-391e-9079-49df1ba1ddbe> ;
+        dc:identifier       "915751.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/32c9b01a-9711-32d4-895d-0c256a4e2668/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/32c9b01a-9711-32d4-895d-0c256a4e2668> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3436057f-07f3-36ec-83c1-2301b5533810> .
+
+<http://data.silknow.org/production/912bd114-971f-391e-9079-49df1ba1ddbe>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Georges Barbier, 1920 (vers), Bianchini-Férier, Lyon" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/32c9b01a-9711-32d4-895d-0c256a4e2668> ;
+        ecrm:P3_has_note        "Georges Barbier, 1920 (vers), Bianchini-Férier, Lyon" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/ce751466-09f8-37d9-a181-bfa8a6fb513c> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2996944/> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/32c9b01a-9711-32d4-895d-0c256a4e2668> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .

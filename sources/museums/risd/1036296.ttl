@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/c524ce2b-8505-3515-a6d7-9316dd648c93>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Sogo Matsumoto" ;
+        ecrm:P1_is_identified_by  "Gift of Sogo Matsumoto" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000459965544> .
+
+<http://data.silknow.org/event/6985c0ff-90c7-36b0-bb1c-9eafc5857a2d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba> .
+
+<http://data.silknow.org/production/437d1a99-d7bd-3f96-987e-c10f680988d6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .
+
+<http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "24.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "24.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "15.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "15.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/6a2cdf72-43af-340c-bc9d-fde0c50b91dc>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1036296_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/38223.jpg> .
+
+<http://data.silknow.org/event/eb2f2f73-2724-3f08-82ec-c92450134075>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c524ce2b-8505-3515-a6d7-9316dd648c93> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Sogo Matsumoto" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/8acf7db7-2505-399f-b128-920dffc22cb0>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 05.041" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/6985c0ff-90c7-36b0-bb1c-9eafc5857a2d> , <http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba/domain/1> , <http://data.silknow.org/event/eb2f2f73-2724-3f08-82ec-c92450134075> , <http://data.silknow.org/production/437d1a99-d7bd-3f96-987e-c10f680988d6> , <http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba> , <http://data.silknow.org/image/6a2cdf72-43af-340c-bc9d-fde0c50b91dc> , <http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba/category/1> ;
+        dc:identifier       "1036296.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6a2cdf72-43af-340c-bc9d-fde0c50b91dc> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba/dimension/1> , <http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba/dimension/2> ;
+        dc:identifier                  "05.041" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-fragment-05041> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8acf7db7-2505-399f-b128-920dffc22cb0> .
+
+<http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba> .
+
+<http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9e453f1e-eeb2-3b01-b536-8c6b267c88ba> .

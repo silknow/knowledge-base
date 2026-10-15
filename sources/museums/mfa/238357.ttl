@@ -1,0 +1,91 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/335809c5-4235-384f-9b5b-a7c9c189bbfb>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Purchased from Miss Eliza M. Niblack. / Arthur Mason Knapp Fund" ;
+        ecrm:P1_is_identified_by  "Purchased from Miss Eliza M. Niblack. / Arthur Mason Knapp Fund" .
+
+<http://data.silknow.org/event/5f2d0f30-cb9b-3942-a2a0-044ca9538e45>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73> .
+
+<http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Bobbin lace, Potten Kant" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73> .
+
+<http://data.silknow.org/event/6a76ed97-ba07-30b7-8d53-f64d168747d7>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/335809c5-4235-384f-9b5b-a7c9c189bbfb> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "Purchased from Miss Eliza M. Niblack. / Arthur Mason Knapp Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/image/0c6d2a04-f216-3c12-8299-c667ee18b192>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "622298" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/238357_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/622298/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "The design consists of a repetition of a much conventionalized pot form, three circular spots with a single large flower growing from it, a parrot is perched on each side of the pot; the ground is a heavy mesh called \"Fond Chant\", \" Fond Double\", etc. Badly mended."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0c6d2a04-f216-3c12-8299-c667ee18b192> ;
+        ecrm:P3_has_note               "The design consists of a repetition of a much conventionalized pot form, three circular spots with a single large flower growing from it, a parrot is perched on each side of the pot; the ground is a heavy mesh called \"Fond Chant\", \" Fond Double\", etc. Badly mended."@en ;
+        dc:identifier                  "21.1848" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/238357> .
+
+<https://sws.geonames.org/2803138/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/29f198b0-07de-3379-812e-a19c41adce99> .
+
+<http://data.silknow.org/production/54280add-e7ea-3c8c-8c33-bbdb0fadb5fc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73> ;
+        ecrm:P126_employed      "Lace"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2803138/> .
+
+<http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73> .
+
+<http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "The design consists of a repetition of a much conventionalized pot form, three circular spots with a single large flower growing from it, a parrot is perched on each side of the pot; the ground is a heavy mesh called \"Fond Chant\", \" Fond Double\", etc. Badly mended."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73> .
+
+<http://data.silknow.org/object/29f198b0-07de-3379-812e-a19c41adce99>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 21.1848" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/6a76ed97-ba07-30b7-8d53-f64d168747d7> , <http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73/category/1> , <http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73/domain/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73> , <http://data.silknow.org/object/8e06c147-a8be-39cf-a4f0-abe5ed4feb73/observation/1> , <http://data.silknow.org/event/5f2d0f30-cb9b-3942-a2a0-044ca9538e45> , <http://data.silknow.org/production/54280add-e7ea-3c8c-8c33-bbdb0fadb5fc> , <http://data.silknow.org/image/0c6d2a04-f216-3c12-8299-c667ee18b192> ;
+        dc:identifier       "238357.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

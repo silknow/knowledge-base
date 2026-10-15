@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/3c3d621c-8d65-30bd-8647-4498b38df1ff>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/d06d21e6-2f81-3a5e-88bb-7fcad0e38fde> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Frederick D. Reed" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6705996a-4f1d-3cfa-9797-1dc88b54c9ac> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/438c767c-2025-32be-bf45-7b9961544622>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/793851_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/29608.jpg> .
+
+<http://data.silknow.org/event/e0b27e34-3fc2-32fa-b043-5e6d1352ccc5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6705996a-4f1d-3cfa-9797-1dc88b54c9ac> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/d06d21e6-2f81-3a5e-88bb-7fcad0e38fde>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Frederick D. Reed" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Frederick D. Reed" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ff0b5f11-92af-3a95-b1fa-7fd61ec8f247> .
+
+<http://data.silknow.org/object/6705996a-4f1d-3cfa-9797-1dc88b54c9ac>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/438c767c-2025-32be-bf45-7b9961544622> ;
+        dc:identifier                  "27.218" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-fragment-27218> .
+
+<http://data.silknow.org/object/ff0b5f11-92af-3a95-b1fa-7fd61ec8f247>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27.218" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/438c767c-2025-32be-bf45-7b9961544622> , <http://data.silknow.org/object/6705996a-4f1d-3cfa-9797-1dc88b54c9ac/category/1> , <http://data.silknow.org/event/3c3d621c-8d65-30bd-8647-4498b38df1ff> , <http://data.silknow.org/production/112eceb5-1923-37c4-a108-6b0bd1ae0fb3> , <http://data.silknow.org/object/6705996a-4f1d-3cfa-9797-1dc88b54c9ac/domain/1> , <http://data.silknow.org/event/e0b27e34-3fc2-32fa-b043-5e6d1352ccc5> , <http://data.silknow.org/object/6705996a-4f1d-3cfa-9797-1dc88b54c9ac> ;
+        dc:identifier       "793851.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/production/112eceb5-1923-37c4-a108-6b0bd1ae0fb3>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6705996a-4f1d-3cfa-9797-1dc88b54c9ac> ;
+        ecrm:P126_employed      "silk and cotton compound weave with metallic yarn supplemental weft decoration"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/6705996a-4f1d-3cfa-9797-1dc88b54c9ac/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6705996a-4f1d-3cfa-9797-1dc88b54c9ac> .
+
+<http://data.silknow.org/object/6705996a-4f1d-3cfa-9797-1dc88b54c9ac/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6705996a-4f1d-3cfa-9797-1dc88b54c9ac> .

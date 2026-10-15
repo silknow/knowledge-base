@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/018f2f05-13ad-3a81-9640-d1b4352d194f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/43a6247a-1363-3118-ad2d-b64ccd99445e> , <http://data.silknow.org/timespan/1750> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/df8c3e16-51f2-3665-a999-7d62c3276036> , <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/event/f549b639-a9ac-3474-9518-ebb3783cdfed>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/6d361e51-f898-37b4-9ff6-210a4b7c216f> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Mr. and Mrs. Martin A. Ryerson Collection" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6> .
+
+<http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6> .
+
+<http://data.silknow.org/object/7ef90e36-c301-3f44-a9eb-48be2b4c1928>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1937.1287" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/018f2f05-13ad-3a81-9640-d1b4352d194f> , <http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6> , <http://data.silknow.org/image/2a4b7417-8ba0-318f-be65-7e5378c47479> , <http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6/observation/1> , <http://data.silknow.org/event/f549b639-a9ac-3474-9518-ebb3783cdfed> , <http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6/category/1> ;
+        dc:identifier       "26430.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/place/df8c3e16-51f2-3665-a999-7d62c3276036>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "France (provincial) or Northern Italy" ;
+        ecrm:P87_is_identified_by  "France (provincial) or Northern Italy" .
+
+<http://data.silknow.org/image/2a4b7417-8ba0-318f-be65-7e5378c47479>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/26430_0.jpg> , <https://www.artic.edu/iiif/2/2cde3282-3d21-1c75-11f5-4e7abd9576bb/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "54.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "54.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "50.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "50.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, plain weave with supplementary brocading wefts and self-patterned by two-color complementary ground wefts"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2a4b7417-8ba0-318f-be65-7e5378c47479> ;
+        ecrm:P3_has_note               "Silk, plain weave with supplementary brocading wefts and self-patterned by two-color complementary ground wefts"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6/dimension/1> , <http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6/dimension/2> ;
+        dc:identifier                  "1937.1287" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/26430/fragment> .
+
+<http://data.silknow.org/actor/6d361e51-f898-37b4-9ff6-210a4b7c216f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Mr. and Mrs. Martin A. Ryerson Collection" ;
+        ecrm:P1_is_identified_by  "Mr. and Mrs. Martin A. Ryerson Collection" .
+
+<http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, plain weave with supplementary brocading wefts and self-patterned by two-color complementary ground wefts"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4606ae8e-2403-32d9-aafc-6b7e32a708c6> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7ef90e36-c301-3f44-a9eb-48be2b4c1928> .

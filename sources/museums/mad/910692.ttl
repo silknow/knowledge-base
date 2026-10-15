@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/934d9f7a-beec-3d93-b00f-169cc7ae9c0d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "feuille d'écran, France, 17e siècle, Louis XIV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4b4a5d31-3cc4-3133-894a-a196ace23cb2> ;
+        dc:identifier                  "9155" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910692> .
+
+<http://data.silknow.org/event/2d64448b-2376-3aba-8a9d-d34081e9391a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1899" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/934d9f7a-beec-3d93-b00f-169cc7ae9c0d> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/af004287-45d1-330c-9c93-b5c1c2f0f421>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 17e siècle, Louis XIV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/934d9f7a-beec-3d93-b00f-169cc7ae9c0d> ;
+        ecrm:P126_employed      "Taffetas, décor en application de soie polychrome et cordonnet."@fr ;
+        ecrm:P3_has_note        "France, 17e siècle, Louis XIV (époq.)" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/image/4b4a5d31-3cc4-3133-894a-a196ace23cb2>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910692_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/81794106-87c0-44e9-939a-d709c83bfe30.jpg> .
+
+<http://data.silknow.org/object/2c2ba03b-8105-3226-8dc9-d9e1fec6ffb7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 9155" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/2d64448b-2376-3aba-8a9d-d34081e9391a> , <http://data.silknow.org/production/af004287-45d1-330c-9c93-b5c1c2f0f421> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/934d9f7a-beec-3d93-b00f-169cc7ae9c0d/category/1> , <http://data.silknow.org/image/4b4a5d31-3cc4-3133-894a-a196ace23cb2> , <http://data.silknow.org/object/934d9f7a-beec-3d93-b00f-169cc7ae9c0d> ;
+        dc:identifier       "910692.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2c2ba03b-8105-3226-8dc9-d9e1fec6ffb7> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/934d9f7a-beec-3d93-b00f-169cc7ae9c0d> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/934d9f7a-beec-3d93-b00f-169cc7ae9c0d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "feuille d'écran" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/934d9f7a-beec-3d93-b00f-169cc7ae9c0d> .

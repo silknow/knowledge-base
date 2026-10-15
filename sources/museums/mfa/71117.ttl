@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/b259196c-e723-3cae-b04d-18b3e5bc8cc1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d> ;
+        ecrm:P126_employed      "Bobbin; lace"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3337388/> .
+
+<http://data.silknow.org/event/36162f4d-2487-3b49-aa34-c692ac066412>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d> .
+
+<http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Flemish lace.   Flemish, Binche, Louis XIV."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/89d9ea03-a8cf-314a-b973-88956d7bce53> ;
+        ecrm:P3_has_note               "Flemish lace.   Flemish, Binche, Louis XIV."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d/dimension/2> , <http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d/dimension/1> ;
+        dc:identifier                  "95.895" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/71117> .
+
+<http://data.silknow.org/image/89d9ea03-a8cf-314a-b973-88956d7bce53>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1032471" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/71117_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/1032471/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "50.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "50.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<https://sws.geonames.org/3337388/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a6566461-e8db-36e9-8a53-520beb2100c9> .
+
+<http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Flemish lace.   Flemish, Binche, Louis XIV."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d> .
+
+<http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Bobbin lace" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d> .
+
+<http://data.silknow.org/object/a6566461-e8db-36e9-8a53-520beb2100c9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.895" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d> , <http://data.silknow.org/event/36162f4d-2487-3b49-aa34-c692ac066412> , <http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d/category/1> , <http://data.silknow.org/production/b259196c-e723-3cae-b04d-18b3e5bc8cc1> , <http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d/domain/1> , <http://data.silknow.org/object/dc359f4c-9445-3223-ab33-3444b729753d/observation/1> , <http://data.silknow.org/image/89d9ea03-a8cf-314a-b973-88956d7bce53> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "71117.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

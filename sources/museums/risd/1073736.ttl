@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/31fa194d-3722-3ffb-8fe8-b230410c78b2> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112/dimension/1> , <http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112/dimension/2> ;
+        dc:identifier                  "2002.88.5" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/pojagi-2002885> .
+
+<http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "52.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "52.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "52.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "52.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112> .
+
+<http://data.silknow.org/event/8c87ab18-73c4-38fd-8795-deb919e97f3a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112> .
+
+<http://data.silknow.org/object/504d04b4-e4bb-3566-8db1-e670d71f09bf>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2002.88.5" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/8c87ab18-73c4-38fd-8795-deb919e97f3a> , <http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112/domain/1> , <http://data.silknow.org/event/abf29950-d566-3e24-8417-2c5dc07cbe03> , <http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112/category/1> , <http://data.silknow.org/production/1cbadcf7-af3e-3947-987e-18a594cdda96> , <http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112> , <http://data.silknow.org/image/31fa194d-3722-3ffb-8fe8-b230410c78b2> ;
+        dc:identifier       "1073736.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/production/1cbadcf7-af3e-3947-987e-18a594cdda96>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/39> ;
+        ecrm:P32_used_general_technique
+                "appliqué (prefered spelling)"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/4941456/> .
+
+<http://data.silknow.org/actor/c48c63d2-47aa-39e5-ac7f-6af70ba30780>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Mary B. Jackson Fund" ;
+        ecrm:P1_is_identified_by  "Mary B. Jackson Fund" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/event/abf29950-d566-3e24-8417-2c5dc07cbe03>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c48c63d2-47aa-39e5-ac7f-6af70ba30780> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Mary B. Jackson Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112> .
+
+<https://sws.geonames.org/4941456/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/504d04b4-e4bb-3566-8db1-e670d71f09bf> .
+
+<http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Pojagi" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1c913491-c8df-3af4-af8d-f5b1639ab112> .
+
+<http://data.silknow.org/image/31fa194d-3722-3ffb-8fe8-b230410c78b2>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1073736_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/42906.jpg> .

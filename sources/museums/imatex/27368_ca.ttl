@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/5dff0766-e402-33bb-be09-ab080f133166/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5dff0766-e402-33bb-be09-ab080f133166> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/83c0fb83-6547-3159-bec5-ed0b2ff6ea15> .
+
+<http://data.silknow.org/production/580d8701-302a-3546-94fd-f79aff09a60a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5dff0766-e402-33bb-be09-ab080f133166> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca , "vellut"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/object/5dff0766-e402-33bb-be09-ab080f133166>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/27500467-5eb1-311c-ad70-5399587df1d1> ;
+        dc:identifier                  "16124" .
+
+<http://data.silknow.org/event/34c93698-4de8-3b31-877a-32b91f2476db>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5dff0766-e402-33bb-be09-ab080f133166> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/5dff0766-e402-33bb-be09-ab080f133166/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5dff0766-e402-33bb-be09-ab080f133166> .
+
+<http://data.silknow.org/image/27500467-5eb1-311c-ad70-5399587df1d1>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033039" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27368_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033039.jpg> .
+
+<http://data.silknow.org/object/83c0fb83-6547-3159-bec5-ed0b2ff6ea15>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27368" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/27500467-5eb1-311c-ad70-5399587df1d1> , <http://data.silknow.org/event/f88c84bb-ec49-3213-9a63-7f2cfa73a1e0> , <http://data.silknow.org/event/34c93698-4de8-3b31-877a-32b91f2476db> , <http://data.silknow.org/object/5dff0766-e402-33bb-be09-ab080f133166> , <http://data.silknow.org/object/5dff0766-e402-33bb-be09-ab080f133166/category/1> , <http://data.silknow.org/production/580d8701-302a-3546-94fd-f79aff09a60a> , <http://data.silknow.org/object/5dff0766-e402-33bb-be09-ab080f133166/domain/1> ;
+        dc:identifier       "27368.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/f88c84bb-ec49-3213-9a63-7f2cfa73a1e0>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5dff0766-e402-33bb-be09-ab080f133166> .

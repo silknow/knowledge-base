@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Moderna"@es , "Pieza formada por dos fragmentos cosidos en el centro. Pequeño dobladillo alrededor. De color rojo. Decoración formada por red de rombos formados por cintas que se entrecruzan formando ochos, en el interior un florón con núcleo de perfil lotiforme con corona de hojas pequeñas, cercado todo ello por hojas y flores entrelazadas, el interior de las cintas se decora con un ajedrezado."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d8433956-81dc-364e-8b6d-cbee158b933c> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Pieza formada por dos fragmentos cosidos en el centro. Pequeño dobladillo alrededor. De color rojo. Decoración formada por red de rombos formados por cintas que se entrecruzan formando ochos, en el interior un florón con núcleo de perfil lotiforme con corona de hojas pequeñas, cercado todo ello por hojas y flores entrelazadas, el interior de las cintas se decora con un ajedrezado."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/ae264bb6-e4d9-3b7f-b79d-5756d77ab407> ;
+        dc:identifier                  "CE21422" .
+
+<http://data.silknow.org/event/45263cf0-def9-334a-9b2a-d8a6ab4653a0>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/event/833acf2b-f2c3-33f2-860f-9ef0bfc14ba7>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432> .
+
+<http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432> .
+
+<http://data.silknow.org/object/a8f9b60c-1409-34db-9e6a-929dff114373>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE21422" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432> , <http://data.silknow.org/image/d8433956-81dc-364e-8b6d-cbee158b933c> , <http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432/domain/1> , <http://data.silknow.org/production/6a40f8d4-033d-37a0-9ea7-eddf227daa9c> , <http://data.silknow.org/event/45263cf0-def9-334a-9b2a-d8a6ab4653a0> , <http://data.silknow.org/event/833acf2b-f2c3-33f2-860f-9ef0bfc14ba7> , <http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432/category/1> , <http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432/observation/1> , <http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432/observation/2> ;
+        dc:identifier       "CE21422_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/image/d8433956-81dc-364e-8b6d-cbee158b933c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE21422" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE21422_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE21422&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Pieza formada por dos fragmentos cosidos en el centro. Pequeño dobladillo alrededor. De color rojo. Decoración formada por red de rombos formados por cintas que se entrecruzan formando ochos, en el interior un florón con núcleo de perfil lotiforme con corona de hojas pequeñas, cercado todo ello por hojas y flores entrelazadas, el interior de las cintas se decora con un ajedrezado."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432> .
+
+<http://data.silknow.org/image/ae264bb6-e4d9-3b7f-b79d-5756d77ab407>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Motivos florales; Motivos vegetales; Motivos geométricos"@es ;
+        ecrm:P3_has_note  "Motivos florales; Motivos vegetales; Motivos geométricos"@es .
+
+<http://data.silknow.org/production/6a40f8d4-033d-37a0-9ea7-eddf227daa9c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/168> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1600> .
+
+<http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragmento de tejido" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a8f9b60c-1409-34db-9e6a-929dff114373> .
+
+<http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2bf2ff64-15e4-363f-b26c-d7f87e55c432> .

@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/48ad2661-0f80-3c67-8431-00d5082f8708>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771> ;
+        ecrm:P126_employed      "Cotton plain weave, roller-printed"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1825> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/8b6f42b3-5c8d-3ba3-b327-aab65d654f0b> .
+
+<http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771> .
+
+<http://data.silknow.org/event/0680bcb9-0bd4-3fdf-bda2-4b1a56c7188f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771> .
+
+<http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "91.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "91.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Material: white cotton. Design: romantic scenes, boys and girls, goats, ruined castles, etc., framed by garlands of flowers, printed in red and stippled, probably from roller. Stained, patched and mended."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771> .
+
+<http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "63.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "63.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Material: white cotton. Design: romantic scenes, boys and girls, goats, ruined castles, etc., framed by garlands of flowers, printed in red and stippled, probably from roller. Stained, patched and mended."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/096a2b6a-818e-3761-a232-0f67410efcbc> ;
+        ecrm:P3_has_note               "Material: white cotton. Design: romantic scenes, boys and girls, goats, ruined castles, etc., framed by garlands of flowers, printed in red and stippled, probably from roller. Stained, patched and mended."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771/dimension/2> , <http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771/dimension/1> ;
+        dc:identifier                  "31.693" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/66380> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fb602d03-b453-3d90-85a3-803ea00f5cdd> .
+
+<http://data.silknow.org/object/fb602d03-b453-3d90-85a3-803ea00f5cdd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 31.693" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/0680bcb9-0bd4-3fdf-bda2-4b1a56c7188f> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771/domain/1> , <http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771/category/1> , <http://data.silknow.org/production/48ad2661-0f80-3c67-8431-00d5082f8708> , <http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771/observation/1> , <http://data.silknow.org/image/096a2b6a-818e-3761-a232-0f67410efcbc> , <http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771> ;
+        dc:identifier       "66380.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Printed cotton length" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2fc7e932-2e9a-349a-9f68-19aa96cae771> .
+
+<http://data.silknow.org/image/096a2b6a-818e-3761-a232-0f67410efcbc>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "817797" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/66380_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/817797/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/place/8b6f42b3-5c8d-3ba3-b327-aab65d654f0b>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "French, Alsace" ;
+        ecrm:P87_is_identified_by  "French, Alsace" .

@@ -1,0 +1,105 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Nakshe" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98> .
+
+<http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 62 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "62"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Middle East, Textile; Fragment from women's trousers, silk-embroidered cotton panel or naqshe, design of diagonal stripes, Iran, 1800-1860"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/production/69dd0cfa-ab48-33b8-a8de-8157985855b7>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98> ;
+        ecrm:P126_employed      "cotton yarn, silk thread,weaving, embroidering"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/617> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1860> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/object/485ebba3-326d-39b5-8d97-c6fc6082a7e6>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O146187" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/234302f6-1411-38fb-a06d-c41149b6db59> , <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98/observation/1> , <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98/domain/1> , <http://data.silknow.org/event/79db0ff3-c6a5-3302-a1bb-d00c77c2742a> , <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98/observation/2> , <http://data.silknow.org/production/69dd0cfa-ab48-33b8-a8de-8157985855b7> ;
+        dc:identifier       "O146187.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/79db0ff3-c6a5-3302-a1bb-d00c77c2742a>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "Purchased for the Museum by Robert Murdoch Smith, from Sidney Churchill in Tehran, Iran."@en ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98> ;
+        ecrm:P3_has_note               "Purchased for the Museum by Robert Murdoch Smith, from Sidney Churchill in Tehran, Iran."@en .
+
+<http://data.silknow.org/image/234302f6-1411-38fb-a06d-c41149b6db59>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006BF4533" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O146187_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006BF/2006BF4533.jpg> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/485ebba3-326d-39b5-8d97-c6fc6082a7e6> .
+
+<http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98> .
+
+<http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 72 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "72"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Middle East, Textile; Fragment from women's trousers, silk-embroidered cotton panel or naqshe, design of diagonal stripes, Iran, 1800-1860"@en , "Plain weave cotton embroidered with silk in straight stitches.\nDirectional design with the top of the pattern  at the bottom of the panel, so that the wearer saw the correct pattern.\nUnusually there is a border along all four sides. The upper and lower borders are delineated by two chevron bands.  The bottom border has downward pointing pink flowers.  The top border has pink flower heads in profile alternating with pink and blue ones.  The two side borders have pink-petalled flowers outlined in dark blue.  There is a solid blue line either side of the side border.  The top and the side borders include a green zigzagged line.\nThe main pattern is a series of diagonal lines from lower right to upper left.  These are chevron lines in dark blue and yellow with details in pink and white. There are two sizes of stripes:\n[1] narrow stripes: dark blue ground with pink cross within a dark blue octagon in the centre of a tear drop shaped flower, a three-petalled pink blossom outlined in blue and an iris-like flower in blue, dark blue, pink and mauve.\n[2] wider stripes in two designs: [a] small flower heads pointing in every direction.  At regular intervals there is a triangular pink flower with dark blue details on a thick upright stem. [b] diamond shaped section; floral spray in a small brown vase alternating with a spray in a small light blue and dark blue vase.\nThreads: 2S silk: red, yellow, mauve, orange, white, green, light blue, blue, dark blue, pink, beige."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/234302f6-1411-38fb-a06d-c41149b6db59> ;
+        ecrm:P3_has_note               "Middle East, Textile; Fragment from women's trousers, silk-embroidered cotton panel or naqshe, design of diagonal stripes, Iran, 1800-1860"@en , "Plain weave cotton embroidered with silk in straight stitches.\nDirectional design with the top of the pattern  at the bottom of the panel, so that the wearer saw the correct pattern.\nUnusually there is a border along all four sides. The upper and lower borders are delineated by two chevron bands.  The bottom border has downward pointing pink flowers.  The top border has pink flower heads in profile alternating with pink and blue ones.  The two side borders have pink-petalled flowers outlined in dark blue.  There is a solid blue line either side of the side border.  The top and the side borders include a green zigzagged line.\nThe main pattern is a series of diagonal lines from lower right to upper left.  These are chevron lines in dark blue and yellow with details in pink and white. There are two sizes of stripes:\n[1] narrow stripes: dark blue ground with pink cross within a dark blue octagon in the centre of a tear drop shaped flower, a three-petalled pink blossom outlined in blue and an iris-like flower in blue, dark blue, pink and mauve.\n[2] wider stripes in two designs: [a] small flower heads pointing in every direction.  At regular intervals there is a triangular pink flower with dark blue details on a thick upright stem. [b] diamond shaped section; floral spray in a small brown vase alternating with a spray in a small light blue and dark blue vase.\nThreads: 2S silk: red, yellow, mauve, orange, white, green, light blue, blue, dark blue, pink, beige."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98/dimension/1> , <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98/dimension/2> ;
+        dc:identifier                  "1064-1883" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O146187> .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .
+
+<http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Plain weave cotton embroidered with silk in straight stitches.\nDirectional design with the top of the pattern  at the bottom of the panel, so that the wearer saw the correct pattern.\nUnusually there is a border along all four sides. The upper and lower borders are delineated by two chevron bands.  The bottom border has downward pointing pink flowers.  The top border has pink flower heads in profile alternating with pink and blue ones.  The two side borders have pink-petalled flowers outlined in dark blue.  There is a solid blue line either side of the side border.  The top and the side borders include a green zigzagged line.\nThe main pattern is a series of diagonal lines from lower right to upper left.  These are chevron lines in dark blue and yellow with details in pink and white. There are two sizes of stripes:\n[1] narrow stripes: dark blue ground with pink cross within a dark blue octagon in the centre of a tear drop shaped flower, a three-petalled pink blossom outlined in blue and an iris-like flower in blue, dark blue, pink and mauve.\n[2] wider stripes in two designs: [a] small flower heads pointing in every direction.  At regular intervals there is a triangular pink flower with dark blue details on a thick upright stem. [b] diamond shaped section; floral spray in a small brown vase alternating with a spray in a small light blue and dark blue vase.\nThreads: 2S silk: red, yellow, mauve, orange, white, green, light blue, blue, dark blue, pink, beige."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/19ce40c8-05d7-3223-9ab9-5b7a24015f98> .

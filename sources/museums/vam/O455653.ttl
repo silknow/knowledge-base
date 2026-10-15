@@ -1,0 +1,112 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1733044/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 43.5 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "110.49"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd> .
+
+<http://data.silknow.org/production/2a35ac34-1469-3e3a-8d54-653aa4dff9e6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1733044/> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Sarong (skirt-cloth) woven on a four-needle hand loom in white, black, green, red and pink silks. The field is patterned with a bold check of green and pink squares. The head or kapala is figured with broad horizontal stripes in pink and shot-green crossed by vertical white lines. The whole fabric has a sub-pattern of small squares."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd> .
+
+<http://data.silknow.org/event/8af18390-6d2e-3dd5-9f90-6eb19a5cbf1b>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "This sarong was exhibited at British Empire Exhibition at Wembley, 1924.\n\nRP 1924/6927"@en ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd> ;
+        ecrm:P3_has_note               "This sarong was exhibited at British Empire Exhibition at Wembley, 1924.\n\nRP 1924/6927"@en .
+
+<http://data.silknow.org/image/5dab0107-46d8-3e7f-9fdf-3ccc2cee4bdf>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018LD2595" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O455653_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018LD/2018LD2595.jpg> .
+
+<http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "South & South East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd> ;
+        ecrm:P78_is_identified_by  "South & South East Asia Collection" .
+
+<http://data.silknow.org/object/d4cb088f-7d18-3393-9fa9-ecc9679634e1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O455653" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/5dab0107-46d8-3e7f-9fdf-3ccc2cee4bdf> , <http://data.silknow.org/production/2a35ac34-1469-3e3a-8d54-653aa4dff9e6> , <http://data.silknow.org/event/8af18390-6d2e-3dd5-9f90-6eb19a5cbf1b> , <http://data.silknow.org/image/fa322cfd-dbd3-3a69-8f44-0dbaab18071c> , <http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217> , <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/domain/2> , <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/domain/1> , <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/observation/2> , <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/observation/1> , <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd> ;
+        dc:identifier       "O455653.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Sarong" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd> .
+
+<http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Sarong (skirt-cloth) woven on a four-needle hand loom in white, black, green, red and pink silks. The field is patterned with a bold check of green and pink squares. The head or kapala is figured with broad horizontal stripes in pink and shot-green crossed by vertical white lines. The whole fabric has a sub-pattern of small squares."@en , "Sarong (skirt-cloth), woven silk, Kelantan State, Malaysia, 19th century"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/fa322cfd-dbd3-3a69-8f44-0dbaab18071c> , <http://data.silknow.org/image/5dab0107-46d8-3e7f-9fdf-3ccc2cee4bdf> ;
+        ecrm:P3_has_note               "Sarong (skirt-cloth), woven silk, Kelantan State, Malaysia, 19th century"@en , "Sarong (skirt-cloth) woven on a four-needle hand loom in white, black, green, red and pink silks. The field is patterned with a bold check of green and pink squares. The head or kapala is figured with broad horizontal stripes in pink and shot-green crossed by vertical white lines. The whole fabric has a sub-pattern of small squares."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/dimension/2> , <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/dimension/1> ;
+        dc:identifier                  "IM.274-1924" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O455653> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d4cb088f-7d18-3393-9fa9-ecc9679634e1> .
+
+<http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 75.5 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "191.77"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/fa322cfd-dbd3-3a69-8f44-0dbaab18071c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MP5659" ;
+        schema:contentUrl  <http://media.vam.ac.uk/media/thira/collection_images/2020MP/2020MP5659.jpg> .
+
+<http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Sarong (skirt-cloth), woven silk, Kelantan State, Malaysia, 19th century"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd> .
+
+<http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8d9ebaa6-a665-3f9f-9524-db38baa2a4bd> .

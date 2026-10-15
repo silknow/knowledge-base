@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/place/07c6847c-d569-3ffd-be82-8d527f82cb00>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Spanish, French, or Italian" ;
+        ecrm:P87_is_identified_by  "Spanish, French, or Italian" .
+
+<http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "3.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "3.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "47.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "47.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2fc77bf6-352f-32ee-8f85-c933cea2cccb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 85.403" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863> , <http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863/observation/1> , <http://data.silknow.org/event/f0e82063-4f8f-3873-9f61-e60bad2611ce> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863/category/1> , <http://data.silknow.org/image/505466c9-70b4-3e00-b298-6262b05562c1> , <http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863/domain/1> , <http://data.silknow.org/production/1206ab21-564f-3d57-9be4-919366f69aa9> ;
+        dc:identifier       "72673.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Bobbin laceTrim" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/image/505466c9-70b4-3e00-b298-6262b05562c1>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "844061" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/72673_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/844061/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Pieced."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/505466c9-70b4-3e00-b298-6262b05562c1> ;
+        ecrm:P3_has_note               "Pieced."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863/dimension/2> , <http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863/dimension/1> ;
+        dc:identifier                  "85.403" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/72673> .
+
+<http://data.silknow.org/event/f0e82063-4f8f-3873-9f61-e60bad2611ce>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863> .
+
+<http://data.silknow.org/production/1206ab21-564f-3d57-9be4-919366f69aa9>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863> ;
+        ecrm:P126_employed      "Gold metallic thread and gold strips bobbin lace"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/07c6847c-d569-3ffd-be82-8d527f82cb00> .
+
+<http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2fc77bf6-352f-32ee-8f85-c933cea2cccb> .
+
+<http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Pieced."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/591840b6-42c6-3a4b-8611-802a95128863> .

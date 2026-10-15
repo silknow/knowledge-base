@@ -1,0 +1,99 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9> .
+
+<http://data.silknow.org/event/3956ded9-c267-319a-9425-b4e841e08397>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a9ed56f7-da70-340a-89fd-0c8f7c5129d9> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of John W. Smith" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9> .
+
+<http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "27.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "27.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/a9ed56f7-da70-340a-89fd-0c8f7c5129d9>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of John W. Smith" ;
+        ecrm:P1_is_identified_by  "Gift of John W. Smith" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/108854813> , <https://isni.org/isni/0000000110322925> .
+
+<http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Sad Hanky (purple)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9> .
+
+<http://data.silknow.org/production/c109b620-7cf7-342b-a2bb-93f500612333/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/1c0b8e23-7932-34f0-9f29-433c39d2806d> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ad72ff52-8c2d-37e2-999b-b4c966bed7d0> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9/dimension/1> , <http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9/dimension/2> ;
+        dc:identifier                  "2015.10.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/sad-hanky-purple-2015101> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "27.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "27.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/74dae0b0-08f2-3d2b-b092-e7aa53d0d803> .
+
+<http://data.silknow.org/production/c109b620-7cf7-342b-a2bb-93f500612333>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9> ;
+        ecrm:P126_employed      "Silkscreen print on cotton plain weave"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/2010> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/c109b620-7cf7-342b-a2bb-93f500612333/activity/1> .
+
+<http://data.silknow.org/image/ad72ff52-8c2d-37e2-999b-b4c966bed7d0>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1026701_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/276778.jpg> .
+
+<http://data.silknow.org/actor/1c0b8e23-7932-34f0-9f29-433c39d2806d>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Sofie Lachaert" ;
+        ecrm:P1_is_identified_by  "Sofie Lachaert" .
+
+<http://data.silknow.org/event/8fcf41f1-14cb-3d88-9ebe-c8bd4bf59cff>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9> .
+
+<http://data.silknow.org/object/74dae0b0-08f2-3d2b-b092-e7aa53d0d803>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2015.10.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/3956ded9-c267-319a-9425-b4e841e08397> , <http://data.silknow.org/production/c109b620-7cf7-342b-a2bb-93f500612333> , <http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9/category/1> , <http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9/domain/1> , <http://data.silknow.org/event/8fcf41f1-14cb-3d88-9ebe-c8bd4bf59cff> , <http://data.silknow.org/image/ad72ff52-8c2d-37e2-999b-b4c966bed7d0> , <http://data.silknow.org/object/ac879577-1ecd-3ad0-b9ce-dae3518b93d9> ;
+        dc:identifier       "1026701.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

@@ -1,0 +1,97 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/3730e735-1c5e-32ec-8033-0b14096c806c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "printing"@en , "printed"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/236> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/3730e735-1c5e-32ec-8033-0b14096c806c/activity/1> .
+
+<http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140> .
+
+<http://data.silknow.org/production/3730e735-1c5e-32ec-8033-0b14096c806c/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/236dd293-a86a-325e-9513-fba684adc4d3> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/event/f2f8c240-72fe-31f8-b5e3-0c1df43d9189>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140> .
+
+<http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "15.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "15.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/6a50dfb3-dc08-3162-a058-a31ba272ba04>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b7df8312-12a1-37f5-9903-c1c1b372f37d> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Edgar J. Lownes Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140> .
+
+<http://data.silknow.org/object/9691c9b7-004d-36f9-8ac1-c91830c67d27>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2004.35.20A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/6a50dfb3-dc08-3162-a058-a31ba272ba04> , <http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140> , <http://data.silknow.org/event/f2f8c240-72fe-31f8-b5e3-0c1df43d9189> , <http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140/domain/1> , <http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140/category/1> , <http://data.silknow.org/production/3730e735-1c5e-32ec-8033-0b14096c806c> ;
+        dc:identifier       "1087931.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "19.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "19.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140>
+        a                       ecrm:E22_Man-Made_Object ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140/dimension/1> , <http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140/dimension/2> ;
+        dc:identifier           "2004.35.20A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/mysore-com-4356-6-style-6413-20043520a> .
+
+<http://data.silknow.org/actor/b7df8312-12a1-37f5-9903-c1c1b372f37d>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Edgar J. Lownes Fund" ;
+        ecrm:P1_is_identified_by  "Edgar J. Lownes Fund" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9691c9b7-004d-36f9-8ac1-c91830c67d27> .
+
+<http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Mysore. Com. 4356/6, Style 6413" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/aa536ce5-c7cc-3166-8e27-06aa38955140> .
+
+<http://data.silknow.org/actor/236dd293-a86a-325e-9513-fba684adc4d3>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Cheney Brothers Silk Manufacturing Company" ;
+        ecrm:P1_is_identified_by  "Cheney Brothers Silk Manufacturing Company" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000008737999X> .

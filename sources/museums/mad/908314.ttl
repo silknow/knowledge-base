@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/e52c8edc-24e4-356c-ace0-eb5eae8d1859>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1740-1750, Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9c757307-845b-37c9-be67-31ab0e50cdf2> ;
+        ecrm:P126_employed      "Lampas fond taffetas, lancé"@fr ;
+        ecrm:P3_has_note        "France, 1740-1750, Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1740_1750> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/9c757307-845b-37c9-be67-31ab0e50cdf2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "bande, France, 1740-1750, Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/186b01b6-dea5-366e-a773-d1ac20c020af> ;
+        dc:identifier                  "10425" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908314> .
+
+<http://data.silknow.org/object/d75a6109-155a-3e22-a0a2-57b117c5c272>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10425" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9c757307-845b-37c9-be67-31ab0e50cdf2> , <http://data.silknow.org/image/186b01b6-dea5-366e-a773-d1ac20c020af> , <http://data.silknow.org/event/c62f1456-b34e-34f2-9d6e-7849ebce9622> , <http://data.silknow.org/production/e52c8edc-24e4-356c-ace0-eb5eae8d1859> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/9c757307-845b-37c9-be67-31ab0e50cdf2/category/1> ;
+        dc:identifier       "908314.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/186b01b6-dea5-366e-a773-d1ac20c020af>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908314_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/ca0059ee-c002-4645-a6dd-26629178956f.jpg> .
+
+<http://data.silknow.org/object/9c757307-845b-37c9-be67-31ab0e50cdf2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "bande" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9c757307-845b-37c9-be67-31ab0e50cdf2> .
+
+<http://data.silknow.org/event/c62f1456-b34e-34f2-9d6e-7849ebce9622>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1902" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9c757307-845b-37c9-be67-31ab0e50cdf2> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d75a6109-155a-3e22-a0a2-57b117c5c272> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/9c757307-845b-37c9-be67-31ab0e50cdf2> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

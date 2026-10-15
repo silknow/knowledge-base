@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/9e055c7f-a6e5-3c29-9f5d-6bcc9f3a6190>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5614a87d-8c12-3fbd-b699-57a27d3e543f> .
+
+<http://data.silknow.org/object/20135c60-0c12-306f-b19d-ae40f3ade130>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 38.1119" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/5614a87d-8c12-3fbd-b699-57a27d3e543f/domain/1> , <http://data.silknow.org/event/9e055c7f-a6e5-3c29-9f5d-6bcc9f3a6190> , <http://data.silknow.org/image/5c07c394-61c1-3b39-bf14-f6c61fb86197> , <http://data.silknow.org/object/5614a87d-8c12-3fbd-b699-57a27d3e543f> , <http://data.silknow.org/production/3a0bf038-edb0-3bc6-8b96-498bd9660bc1> , <http://data.silknow.org/object/5614a87d-8c12-3fbd-b699-57a27d3e543f/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "46755.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/5614a87d-8c12-3fbd-b699-57a27d3e543f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5614a87d-8c12-3fbd-b699-57a27d3e543f> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/5614a87d-8c12-3fbd-b699-57a27d3e543f> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/image/5c07c394-61c1-3b39-bf14-f6c61fb86197>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "709743" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/46755_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/709743/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/5614a87d-8c12-3fbd-b699-57a27d3e543f>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5c07c394-61c1-3b39-bf14-f6c61fb86197> ;
+        dc:identifier                  "38.1119" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/46755> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/20135c60-0c12-306f-b19d-ae40f3ade130> .
+
+<http://data.silknow.org/production/3a0bf038-edb0-3bc6-8b96-498bd9660bc1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5614a87d-8c12-3fbd-b699-57a27d3e543f> ;
+        ecrm:P126_employed      "Embroidery; drawnwork"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/5614a87d-8c12-3fbd-b699-57a27d3e543f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Band" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5614a87d-8c12-3fbd-b699-57a27d3e543f> .

@@ -1,0 +1,83 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/ae08d6fc-9f86-3f1d-bc74-2da608df6e6b/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "239" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "239"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/9a9b4e7d-22fd-3d20-833c-2c1d3dded26d>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1740 (vers), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ae08d6fc-9f86-3f1d-bc74-2da608df6e6b> ;
+        ecrm:P126_employed      "Gros de Tours de soie,  liseré, broché de soie sans liage"@fr ;
+        ecrm:P3_has_note        "France, 1740 (vers), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/43a6247a-1363-3118-ad2d-b64ccd99445e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/ae08d6fc-9f86-3f1d-bc74-2da608df6e6b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ae08d6fc-9f86-3f1d-bc74-2da608df6e6b> .
+
+<http://data.silknow.org/object/ae08d6fc-9f86-3f1d-bc74-2da608df6e6b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1740 (vers), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d9134a3f-145b-390b-8b17-3653fbb3950d> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/ae08d6fc-9f86-3f1d-bc74-2da608df6e6b/dimension/2> , <http://data.silknow.org/object/ae08d6fc-9f86-3f1d-bc74-2da608df6e6b/dimension/1> ;
+        dc:identifier                  "997.3.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/911469> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/ae08d6fc-9f86-3f1d-bc74-2da608df6e6b/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "101" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "101"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/d9134a3f-145b-390b-8b17-3653fbb3950d>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/911469_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/0692bcf5-e973-4dd9-b6c7-8ae3826b7b23.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/33f9cccd-3ee7-317f-83b9-e8a348f93cf2> .
+
+<http://data.silknow.org/object/33f9cccd-3ee7-317f-83b9-e8a348f93cf2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 997.3.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/ae08d6fc-9f86-3f1d-bc74-2da608df6e6b> , <http://data.silknow.org/production/9a9b4e7d-22fd-3d20-833c-2c1d3dded26d> , <http://data.silknow.org/object/ae08d6fc-9f86-3f1d-bc74-2da608df6e6b/category/1> , <http://data.silknow.org/event/cb8141e3-ec06-38da-9d6d-9bda22398bff> , <http://data.silknow.org/image/d9134a3f-145b-390b-8b17-3653fbb3950d> ;
+        dc:identifier       "911469.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ae08d6fc-9f86-3f1d-bc74-2da608df6e6b> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/event/cb8141e3-ec06-38da-9d6d-9bda22398bff>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1997" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ae08d6fc-9f86-3f1d-bc74-2da608df6e6b> .

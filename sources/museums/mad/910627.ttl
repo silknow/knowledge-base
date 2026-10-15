@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/da9fdf48-e426-30df-a4e7-d6238a5d6fde>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don monsieur Marquereau, 1907" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7afcf62b-89ed-35ff-b00e-2a29f14c35dd> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/7afcf62b-89ed-35ff-b00e-2a29f14c35dd>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1765 (vers), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7b87b7e3-9b55-39df-942f-570f8da7a27b> ;
+        dc:identifier                  "13238" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910627> .
+
+<http://data.silknow.org/object/7afcf62b-89ed-35ff-b00e-2a29f14c35dd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7afcf62b-89ed-35ff-b00e-2a29f14c35dd> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8b37633a-065b-3ef8-8419-832b6204b1d9> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/7afcf62b-89ed-35ff-b00e-2a29f14c35dd> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/8b37633a-065b-3ef8-8419-832b6204b1d9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13238" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/bc12d33e-cdfc-3eaf-9afd-b11a04500543> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/7afcf62b-89ed-35ff-b00e-2a29f14c35dd/category/1> , <http://data.silknow.org/image/7b87b7e3-9b55-39df-942f-570f8da7a27b> , <http://data.silknow.org/object/7afcf62b-89ed-35ff-b00e-2a29f14c35dd> , <http://data.silknow.org/event/da9fdf48-e426-30df-a4e7-d6238a5d6fde> ;
+        dc:identifier       "910627.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/image/7b87b7e3-9b55-39df-942f-570f8da7a27b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910627_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/d049cba7-23d8-47f4-8153-a1e4b7703dea.jpg> .
+
+<http://data.silknow.org/production/bc12d33e-cdfc-3eaf-9afd-b11a04500543>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1765 (vers), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7afcf62b-89ed-35ff-b00e-2a29f14c35dd> ;
+        ecrm:P126_employed      "Lampas fond taffetas, broché soie, ondé, et métal, or et argent, lame, filé, frisé"@fr ;
+        ecrm:P3_has_note        "France, 1765 (vers), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/19578d8c-9f7c-3731-bd91-a326334f6271> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .

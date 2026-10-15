@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/image/f27dccce-213d-33ba-b00a-94cc789eb772>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE24019" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE24019_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE24019&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Moderna"@es , "Fragmento de seda labrada en rojo cardenal y amarillo, con decoración brocada con hilos plateados. Decoración de grandes flores rematadas con la flor de lis. Grandes roleos ondulantes rodean la flor que lleva en su interior decoración en hilos plateados."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f27dccce-213d-33ba-b00a-94cc789eb772> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Fragmento de seda labrada en rojo cardenal y amarillo, con decoración brocada con hilos plateados. Decoración de grandes flores rematadas con la flor de lis. Grandes roleos ondulantes rodean la flor que lleva en su interior decoración en hilos plateados."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/5514e91a-8538-345f-8cea-545490a537ee> ;
+        dc:identifier                  "CE24019" .
+
+<http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragmento de tejido" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd> .
+
+<http://data.silknow.org/production/dad51dc8-2cc4-30b5-bed2-62abdd8dc568>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/852> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/97> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1601_1700> .
+
+<http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd> .
+
+<http://data.silknow.org/event/872b31bd-5a77-3fd5-a54f-1e4ad97d6391>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fragmento de seda labrada en rojo cardenal y amarillo, con decoración brocada con hilos plateados. Decoración de grandes flores rematadas con la flor de lis. Grandes roleos ondulantes rodean la flor que lleva en su interior decoración en hilos plateados."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd> .
+
+<http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd> .
+
+<http://data.silknow.org/object/d6d8e688-4322-3370-aacf-34fc817ad6d8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE24019" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd/observation/2> , <http://data.silknow.org/event/872b31bd-5a77-3fd5-a54f-1e4ad97d6391> , <http://data.silknow.org/production/dad51dc8-2cc4-30b5-bed2-62abdd8dc568> , <http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd/category/1> , <http://data.silknow.org/image/f27dccce-213d-33ba-b00a-94cc789eb772> , <http://data.silknow.org/event/89580ea4-266c-3bbf-835f-aea39b5768d3> , <http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd> , <http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd/domain/1> , <http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd/observation/1> ;
+        dc:identifier       "CE24019_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/event/89580ea4-266c-3bbf-835f-aea39b5768d3>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/47c17fe4-795c-3685-b29e-4b14f964a1cd> .
+
+<http://data.silknow.org/image/5514e91a-8538-345f-8cea-545490a537ee>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Motivos florales; Roleo"@es ;
+        ecrm:P3_has_note  "Motivos florales; Roleo"@es .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d6d8e688-4322-3370-aacf-34fc817ad6d8> .

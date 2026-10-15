@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/051ce51e-6b25-3aea-8e95-ec923736470c> .
+
+<http://data.silknow.org/actor/f84e496c-4842-32bc-a43d-0ad413b70a41>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo. Lyon" ;
+        ecrm:P1_is_identified_by  "Anónimo. Lyon" .
+
+<http://data.silknow.org/image/d279b9c0-1a55-359b-b32d-66f5402407d6>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.34.1" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.34.1_0.jpg> .
+
+<http://data.silknow.org/assessment/914046fc-1f0e-3812-967f-f9db858d1720/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Malo. No se recomienda su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Malo. No se recomienda su uso."@es .
+
+<http://data.silknow.org/production/ed257f72-1c55-3a6f-a5f0-403987ec16e6/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/f84e496c-4842-32bc-a43d-0ad413b70a41> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/production/ed257f72-1c55-3a6f-a5f0-403987ec16e6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/193986bd-728f-3d57-822a-64519c217ab6> ;
+        ecrm:P126_employed      "Hilo de oro, plata y seda. Lentejuelas. Galón de oro. Fleco."@es ;
+        ecrm:P32_used_general_technique
+                "Brocado espolinado."@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1823> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/ed257f72-1c55-3a6f-a5f0-403987ec16e6/activity/1> .
+
+<http://data.silknow.org/object/193986bd-728f-3d57-822a-64519c217ab6>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d279b9c0-1a55-359b-b32d-66f5402407d6> ;
+        dc:identifier                  "5.34.1" .
+
+<http://data.silknow.org/object/051ce51e-6b25-3aea-8e95-ec923736470c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.34.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/ed257f72-1c55-3a6f-a5f0-403987ec16e6> , <http://data.silknow.org/object/193986bd-728f-3d57-822a-64519c217ab6> , <http://data.silknow.org/assessment/914046fc-1f0e-3812-967f-f9db858d1720> , <http://data.silknow.org/image/d279b9c0-1a55-359b-b32d-66f5402407d6> , <http://data.silknow.org/object/193986bd-728f-3d57-822a-64519c217ab6/type/1> ;
+        dc:identifier       "5.34.1.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/object/193986bd-728f-3d57-822a-64519c217ab6/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/193986bd-728f-3d57-822a-64519c217ab6> ;
+        ecrm:P42_assigned    "Terno del Corpus (Casulla)" .
+
+<http://data.silknow.org/assessment/914046fc-1f0e-3812-967f-f9db858d1720>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/193986bd-728f-3d57-822a-64519c217ab6> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/914046fc-1f0e-3812-967f-f9db858d1720/condition/1> .

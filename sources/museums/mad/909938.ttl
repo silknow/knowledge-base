@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/b6066088-12d9-3701-9b81-44a62f7d27d4>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1770 (vers), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/db6aa401-5436-3452-99ca-e1a6e4d63492> ;
+        ecrm:P126_employed      "Lampas fond satin, liseré, effet taffetas"@fr ;
+        ecrm:P3_has_note        "France, 1770 (vers), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/b7d11cdc-0313-34de-b698-73c702bc0c17> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/5e7fbd87-5afa-3931-90eb-306b3ec3f1eb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13407" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/b6066088-12d9-3701-9b81-44a62f7d27d4> , <http://data.silknow.org/event/7e7e8037-f0db-359f-83aa-b317a2b75a42> , <http://data.silknow.org/object/db6aa401-5436-3452-99ca-e1a6e4d63492/category/1> , <http://data.silknow.org/image/137fdf49-638c-3ba7-a24c-b8da8f0257dd> , <http://data.silknow.org/object/db6aa401-5436-3452-99ca-e1a6e4d63492> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "909938.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/7e7e8037-f0db-359f-83aa-b317a2b75a42>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don monsieur Marquereau, 1907" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/db6aa401-5436-3452-99ca-e1a6e4d63492> .
+
+<http://data.silknow.org/object/db6aa401-5436-3452-99ca-e1a6e4d63492/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/db6aa401-5436-3452-99ca-e1a6e4d63492> .
+
+<http://data.silknow.org/image/137fdf49-638c-3ba7-a24c-b8da8f0257dd>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909938_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/e87e6d8a-cf7f-41f5-922b-7e99201fb000.jpg> .
+
+<http://data.silknow.org/object/db6aa401-5436-3452-99ca-e1a6e4d63492>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1770 (vers), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/137fdf49-638c-3ba7-a24c-b8da8f0257dd> ;
+        dc:identifier                  "13407" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909938> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5e7fbd87-5afa-3931-90eb-306b3ec3f1eb> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/db6aa401-5436-3452-99ca-e1a6e4d63492> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

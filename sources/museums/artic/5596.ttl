@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/5fad84b0-3ce4-3bdb-b630-c04d941ce916>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/5596_0.jpg> , <https://www.artic.edu/iiif/2/dac42227-14df-7f6a-7909-543af6f9c78e/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/event/5f82267c-c18f-3e75-a060-46b2b6f8ce13>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/cfab456f-97a3-3e00-a963-df550c8ef307> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Herbert L. Stern" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4> .
+
+<http://data.silknow.org/production/3ef5d014-77bb-31a7-97ba-ac7911984695>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/560dd408-3f95-3fd7-9991-75ecb99f4560> , <http://data.silknow.org/timespan/1860> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/012c157d-a164-31be-ab30-44a321ddb5c8> , <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/place/012c157d-a164-31be-ab30-44a321ddb5c8>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "France, England or Austria" ;
+        ecrm:P87_is_identified_by  "France, England or Austria" .
+
+<http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "189.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "189.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, wool, and cotton, warp threads dyed in multiple colors prior to weaving; center of 2:2 'S' twill weave; patterned areas of warp-float faced 3:1 'S' twill weave with supplementary patterning wefts bound in weft-float faced 1:3 'S' twill interlacings; main warp fringe; woven on loom with Jacquard attachment"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5fad84b0-3ce4-3bdb-b630-c04d941ce916> ;
+        ecrm:P3_has_note               "Silk, wool, and cotton, warp threads dyed in multiple colors prior to weaving; center of 2:2 'S' twill weave; patterned areas of warp-float faced 3:1 'S' twill weave with supplementary patterning wefts bound in weft-float faced 1:3 'S' twill interlacings; main warp fringe; woven on loom with Jacquard attachment"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4/dimension/1> , <http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4/dimension/2> ;
+        dc:identifier                  "1957.170" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/5596/square-shawl> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, wool, and cotton, warp threads dyed in multiple colors prior to weaving; center of 2:2 'S' twill weave; patterned areas of warp-float faced 3:1 'S' twill weave with supplementary patterning wefts bound in weft-float faced 1:3 'S' twill interlacings; main warp fringe; woven on loom with Jacquard attachment"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4> .
+
+<http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "166.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "166.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/f63c1248-e735-3eca-8762-b2d35768b3eb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1957.170" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/3ef5d014-77bb-31a7-97ba-ac7911984695> , <http://data.silknow.org/event/5f82267c-c18f-3e75-a060-46b2b6f8ce13> , <http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4/observation/1> , <http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4> , <http://data.silknow.org/image/5fad84b0-3ce4-3bdb-b630-c04d941ce916> , <http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4/category/1> ;
+        dc:identifier       "5596.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/actor/cfab456f-97a3-3e00-a963-df550c8ef307>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Herbert L. Stern" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Herbert L. Stern" .
+
+<http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Square Shawl" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/afa99cae-e321-37d0-86a7-8ad4e1e15bb4> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f63c1248-e735-3eca-8762-b2d35768b3eb> .

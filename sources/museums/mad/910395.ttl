@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/d6c6a5a3-60cb-33be-adc4-b1f816e8cdc9>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, René Piot, 1912, Tassinari et Chatel, 1912"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f9076aa3-81c0-3480-98c8-833ada74a393> ;
+        dc:identifier                  "2006.106.4.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910395> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/f9076aa3-81c0-3480-98c8-833ada74a393>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910395_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/e600a684-963a-4731-be2e-10319ad696aa.jpg> .
+
+<http://data.silknow.org/production/1337b020-0bf5-3f69-aa5b-b411aba94d45>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "René Piot, 1912, Tassinari et Chatel, 1912" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d6c6a5a3-60cb-33be-adc4-b1f816e8cdc9> ;
+        ecrm:P126_employed      "Lampas tissé à bras, fond satin noir jaspé, laissant deviner la trame orange, décor broché polychrome"@fr ;
+        ecrm:P3_has_note        "René Piot, 1912, Tassinari et Chatel, 1912" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1912> .
+
+<http://data.silknow.org/object/f3176b61-f382-3088-b39b-953962d54c3c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2006.106.4.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/060a198e-8c0f-3fbf-bdc3-f36d69d57867> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/f9076aa3-81c0-3480-98c8-833ada74a393> , <http://data.silknow.org/object/d6c6a5a3-60cb-33be-adc4-b1f816e8cdc9/category/1> , <http://data.silknow.org/production/1337b020-0bf5-3f69-aa5b-b411aba94d45> , <http://data.silknow.org/object/d6c6a5a3-60cb-33be-adc4-b1f816e8cdc9> ;
+        dc:identifier       "910395.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/060a198e-8c0f-3fbf-bdc3-f36d69d57867>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, grâce au mécénat des Amis des Arts décoratifs (pour la pièce 2006.106.4.1-2 ), 2006" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d6c6a5a3-60cb-33be-adc4-b1f816e8cdc9> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f3176b61-f382-3088-b39b-953962d54c3c> .
+
+<http://data.silknow.org/object/d6c6a5a3-60cb-33be-adc4-b1f816e8cdc9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d6c6a5a3-60cb-33be-adc4-b1f816e8cdc9> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/d6c6a5a3-60cb-33be-adc4-b1f816e8cdc9> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

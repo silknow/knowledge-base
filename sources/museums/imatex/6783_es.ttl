@@ -1,0 +1,118 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/55e1a7aa-fecf-35ca-9461-79c249597f7b> .
+
+<http://data.silknow.org/assessment/4a4bb94b-3794-3e2c-aad3-22d61acbb458>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/4a4bb94b-3794-3e2c-aad3-22d61acbb458/condition/1> .
+
+<http://data.silknow.org/production/f4020ba1-7f46-31c6-ac4c-76df9b1904b3>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "ikat por urdimbre"@es , "técnica de calada"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/366> , <http://data.silknow.org/vocabulary/144> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/96290669-2ed5-3c2a-98cc-31beff5691f1> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2512989/> , <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/event/e7d4cc78-edf0-335e-bf1a-ccd7549ef6c1>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b> .
+
+<http://data.silknow.org/assessment/4a4bb94b-3794-3e2c-aad3-22d61acbb458/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "restaurat"@es ;
+        ecrm:P2_has_type  "condition" ;
+        ecrm:P3_has_note  "restaurat"@es .
+
+<http://data.silknow.org/image/1f2416c4-9f42-353a-ac5a-d71e073251b0>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "disposición en franjas"@es ;
+        ecrm:P3_has_note  "disposición en franjas"@es .
+
+<http://data.silknow.org/event/9e613605-02a8-31b0-87ec-1d4ff050c60e>
+        a                      ecrm:E11_Modification ;
+        rdfs:comment           "Mata, Pilar" ;
+        ecrm:P31_has_modified  <http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b> ;
+        ecrm:P3_has_note       "Mata, Pilar" ;
+        ecrm:P4_has_time-span  <http://data.silknow.org/timespan/1988> .
+
+<http://data.silknow.org/event/5585d580-14c3-3932-9f6d-4bfe225574c7>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/image/660f3ddb-26d5-39f0-a88d-52aa99b39e82>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000022021" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/6783_3.jpg> , <http://imatex.cdmt.cat/fotografies/0000022021.jpg> .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/image/9237542c-59d4-3cec-a8c0-88ff86ed7c9d>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000022019" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/6783_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000022019.jpg> .
+
+<http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b> .
+
+<http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b> .
+
+<https://sws.geonames.org/2512989/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/fecd718d-a9fc-31a7-8003-d8e7c7491de6>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000022020" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/6783_2.jpg> , <http://imatex.cdmt.cat/fotografies/0000022020.jpg> .
+
+<http://data.silknow.org/object/55e1a7aa-fecf-35ca-9461-79c249597f7b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 6783" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/9237542c-59d4-3cec-a8c0-88ff86ed7c9d> , <http://data.silknow.org/assessment/4a4bb94b-3794-3e2c-aad3-22d61acbb458> , <http://data.silknow.org/image/9240f6a2-94c2-3adb-bb4f-3a13fea7f017> , <http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b> , <http://data.silknow.org/image/660f3ddb-26d5-39f0-a88d-52aa99b39e82> , <http://data.silknow.org/image/fecd718d-a9fc-31a7-8003-d8e7c7491de6> , <http://data.silknow.org/production/f4020ba1-7f46-31c6-ac4c-76df9b1904b3> , <http://data.silknow.org/event/e7d4cc78-edf0-335e-bf1a-ccd7549ef6c1> , <http://data.silknow.org/event/9e613605-02a8-31b0-87ec-1d4ff050c60e> , <http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b/category/1> , <http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b/domain/1> , <http://data.silknow.org/event/5585d580-14c3-3932-9f6d-4bfe225574c7> ;
+        dc:identifier       "6783.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/ab573a86-6bc4-304e-a001-32fd093bdf8b>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/660f3ddb-26d5-39f0-a88d-52aa99b39e82> , <http://data.silknow.org/image/fecd718d-a9fc-31a7-8003-d8e7c7491de6> , <http://data.silknow.org/image/9237542c-59d4-3cec-a8c0-88ff86ed7c9d> , <http://data.silknow.org/image/9240f6a2-94c2-3adb-bb4f-3a13fea7f017> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> , <http://data.silknow.org/image/1f2416c4-9f42-353a-ac5a-d71e073251b0> ;
+        dc:identifier                  "5599" .
+
+<http://data.silknow.org/image/9240f6a2-94c2-3adb-bb4f-3a13fea7f017>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000003907" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/6783_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000003907.jpg> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

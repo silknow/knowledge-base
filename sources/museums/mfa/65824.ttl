@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/03f76e80-db4b-336c-8f33-a211c05f67bf>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0> ;
+        ecrm:P126_employed      "Silk, ink; embroidery"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1793> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3164603/> .
+
+<http://data.silknow.org/event/250d45bb-9caa-3294-b227-81ae762fa544>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0> .
+
+<http://data.silknow.org/object/d08fdc59-bd90-301f-ac71-9848a667bd64>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 50.4002" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/eaccb19b-d63d-3907-bb8b-f18e49d1d39c> , <http://data.silknow.org/event/250d45bb-9caa-3294-b227-81ae762fa544> , <http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0> , <http://data.silknow.org/production/03f76e80-db4b-336c-8f33-a211c05f67bf> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0/observation/1> , <http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0/domain/1> , <http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0/category/1> ;
+        dc:identifier       "65824.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Cream colored satin ground, worked with light polychrome silks in satin, knot, couching, stem, and long and short stitches, narrow border striped blue and white, scene showing Christ with two apostles seated at table; lower center embroidered coat of arms flanked by inked inscription: \"Dedicato al Signor Giovanni Michielli\", below bottom border inked inscription: \"Nostro Signore con li Due Appostali in Enemeus in Venezia Del 1793\", several holes in satin touched up with paint."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0> .
+
+<http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "22.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "22.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Cream colored satin ground, worked with light polychrome silks in satin, knot, couching, stem, and long and short stitches, narrow border striped blue and white, scene showing Christ with two apostles seated at table; lower center embroidered coat of arms flanked by inked inscription: \"Dedicato al Signor Giovanni Michielli\", below bottom border inked inscription: \"Nostro Signore con li Due Appostali in Enemeus in Venezia Del 1793\", several holes in satin touched up with paint."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/eaccb19b-d63d-3907-bb8b-f18e49d1d39c> ;
+        ecrm:P3_has_note               "Cream colored satin ground, worked with light polychrome silks in satin, knot, couching, stem, and long and short stitches, narrow border striped blue and white, scene showing Christ with two apostles seated at table; lower center embroidered coat of arms flanked by inked inscription: \"Dedicato al Signor Giovanni Michielli\", below bottom border inked inscription: \"Nostro Signore con li Due Appostali in Enemeus in Venezia Del 1793\", several holes in satin touched up with paint."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0/dimension/2> , <http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0/dimension/1> ;
+        dc:identifier                  "50.4002" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/65824> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "21"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d08fdc59-bd90-301f-ac71-9848a667bd64> .
+
+<http://data.silknow.org/image/eaccb19b-d63d-3907-bb8b-f18e49d1d39c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "726778" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/65824_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/726778/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0/category/1>
+        a                    silk:T35 ;
+        silk:L1              "An embroidered picture, Christ at Emmaus" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/50ade1f4-e407-3996-a257-fd32e367a0d0> .
+
+<https://sws.geonames.org/3164603/>
+        a       ecrm:E53_Place .

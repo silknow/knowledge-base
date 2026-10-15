@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/7a696b06-1c86-3bbf-b96e-8215772e3c40>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7f78ae4a-794b-37ee-90e3-8c0f71b337cc> ;
+        dc:identifier                  "48.218" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/towel-48218> .
+
+<http://data.silknow.org/event/405b7351-fe02-31cf-9089-7312908ee5c6>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/8c052495-e97b-317d-9168-2ab97240465e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mary A. Jack" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7a696b06-1c86-3bbf-b96e-8215772e3c40> .
+
+<http://data.silknow.org/production/0c501cef-3352-3d04-8188-094b54500d42>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7a696b06-1c86-3bbf-b96e-8215772e3c40> ;
+        ecrm:P126_employed      "linen"@en , "linen; silk; metallic yarn"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/497> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1600_1709> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/298795/> .
+
+<https://sws.geonames.org/298795/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/event/917646b1-3f58-3c1d-9d6d-7c8d886afc90>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/7a696b06-1c86-3bbf-b96e-8215772e3c40> .
+
+<http://data.silknow.org/image/7f78ae4a-794b-37ee-90e3-8c0f71b337cc>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1065426_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/11708.jpg> .
+
+<http://data.silknow.org/object/58e00527-ca88-37fc-9ac2-b5032d4cc9d7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 48.218" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/917646b1-3f58-3c1d-9d6d-7c8d886afc90> , <http://data.silknow.org/object/7a696b06-1c86-3bbf-b96e-8215772e3c40/domain/1> , <http://data.silknow.org/image/7f78ae4a-794b-37ee-90e3-8c0f71b337cc> , <http://data.silknow.org/production/0c501cef-3352-3d04-8188-094b54500d42> , <http://data.silknow.org/object/7a696b06-1c86-3bbf-b96e-8215772e3c40/category/1> , <http://data.silknow.org/event/405b7351-fe02-31cf-9089-7312908ee5c6> , <http://data.silknow.org/object/7a696b06-1c86-3bbf-b96e-8215772e3c40> ;
+        dc:identifier       "1065426.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/58e00527-ca88-37fc-9ac2-b5032d4cc9d7> .
+
+<http://data.silknow.org/object/7a696b06-1c86-3bbf-b96e-8215772e3c40/category/1>
+        a                    silk:T35 ;
+        silk:L1              "towel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7a696b06-1c86-3bbf-b96e-8215772e3c40> .
+
+<http://data.silknow.org/object/7a696b06-1c86-3bbf-b96e-8215772e3c40/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7a696b06-1c86-3bbf-b96e-8215772e3c40> .
+
+<http://data.silknow.org/actor/8c052495-e97b-317d-9168-2ab97240465e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mary A. Jack" ;
+        ecrm:P1_is_identified_by  "Gift of Mary A. Jack" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Mary_Jane_Kelly> , <https://viaf.org/viaf/68249944> , <https://isni.org/isni/0000000034240097> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Mary_Jane_Kelly> .

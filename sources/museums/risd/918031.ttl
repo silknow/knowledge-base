@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/1a09ed8d-18c9-3f6d-ae8a-4054bf7b34c5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b4818095-c5e1-3fb2-81c9-57d1ce546834> .
+
+<http://data.silknow.org/object/70e57989-8ee8-322b-875b-848e8c3613c2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 55.562.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/26a45014-4d08-39a3-a3ce-7d518748b3eb> , <http://data.silknow.org/image/c67f6dbf-4437-3946-a2b7-60d3ee4d9353> , <http://data.silknow.org/event/1a09ed8d-18c9-3f6d-ae8a-4054bf7b34c5> , <http://data.silknow.org/object/b4818095-c5e1-3fb2-81c9-57d1ce546834/category/1> , <http://data.silknow.org/object/b4818095-c5e1-3fb2-81c9-57d1ce546834/domain/1> , <http://data.silknow.org/event/71b844b4-30f4-3d51-be10-304d3d230740> , <http://data.silknow.org/object/b4818095-c5e1-3fb2-81c9-57d1ce546834> ;
+        dc:identifier       "918031.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<https://sws.geonames.org/298795/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/c67f6dbf-4437-3946-a2b7-60d3ee4d9353>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/918031_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/11671.jpg> .
+
+<http://data.silknow.org/object/b4818095-c5e1-3fb2-81c9-57d1ce546834/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b4818095-c5e1-3fb2-81c9-57d1ce546834> .
+
+<http://data.silknow.org/event/71b844b4-30f4-3d51-be10-304d3d230740>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/7dd0bdea-1180-3516-abe6-2f9a54992d4c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Bequest of Miss Lucy T. Aldrich" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b4818095-c5e1-3fb2-81c9-57d1ce546834> .
+
+<http://data.silknow.org/actor/7dd0bdea-1180-3516-abe6-2f9a54992d4c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Bequest of Miss Lucy T. Aldrich" ;
+        ecrm:P1_is_identified_by  "Bequest of Miss Lucy T. Aldrich" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/70e57989-8ee8-322b-875b-848e8c3613c2> .
+
+<http://data.silknow.org/production/26a45014-4d08-39a3-a3ce-7d518748b3eb>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b4818095-c5e1-3fb2-81c9-57d1ce546834> ;
+        ecrm:P126_employed      "cotton; silk; metal strip; metallic wrapped yarn"@en , "metallic wrapped yarn"@en , "metal strip"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/88> , <http://data.silknow.org/vocabulary/87> , <http://data.silknow.org/vocabulary/236> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/298795/> .
+
+<http://data.silknow.org/object/b4818095-c5e1-3fb2-81c9-57d1ce546834/category/1>
+        a                    silk:T35 ;
+        silk:L1              "towel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b4818095-c5e1-3fb2-81c9-57d1ce546834> .
+
+<http://data.silknow.org/object/b4818095-c5e1-3fb2-81c9-57d1ce546834>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c67f6dbf-4437-3946-a2b7-60d3ee4d9353> ;
+        dc:identifier                  "55.562.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/towel-555621> .

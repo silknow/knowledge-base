@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/4cf1c374-793f-36ad-9b8b-e0ff5f21f2bc>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e> .
+
+<http://data.silknow.org/production/97140b66-3bc5-327a-a7ce-d794ba89c9c1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1680_1720> .
+
+<http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Damasco laminato"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e> .
+
+<http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e> .
+
+<http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Damasco laminato"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7ac2c088-c591-386c-88d4-4143149b6862> ;
+        ecrm:P3_has_note               "Damasco laminato"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e/dimension/1> , <http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e/dimension/2> ;
+        dc:identifier                  "0733" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/10901/?WEB=MuseiVE> .
+
+<http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "200" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "200"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/ee4110ae-0e00-3858-9246-143a0bb95457>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10901" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e> , <http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e/observation/1> , <http://data.silknow.org/event/4cf1c374-793f-36ad-9b8b-e0ff5f21f2bc> , <http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e/domain/1> , <http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e/category/1> , <http://data.silknow.org/image/7ac2c088-c591-386c-88d4-4143149b6862> , <http://data.silknow.org/production/97140b66-3bc5-327a-a7ce-d794ba89c9c1> ;
+        dc:identifier       "10901.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ee4110ae-0e00-3858-9246-143a0bb95457> .
+
+<http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e> .
+
+<http://data.silknow.org/object/8bab5b2d-8b5e-395f-8ec2-db82075fb54e/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "90" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "90"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/image/7ac2c088-c591-386c-88d4-4143149b6862>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/10901_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5QXno8UZzBEElSG4D%2bsujOItFbJhokkTxrCZikqrTT7m6Lxig3kZb4teA2K68volm9LO1eOTNXNoqzxXjiqugILcC5FE2Z%2fwCKQ3JO1NfznVnEjMLCXm5dQ%3d%3d> .

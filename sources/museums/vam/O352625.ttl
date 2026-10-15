@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/6addba8d-eac9-3c78-ae60-176d347232e7>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6356d380-4f80-3e64-a3d3-1c867c82f93e> ;
+        ecrm:P126_employed      "silk (textile)"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> .
+
+<http://data.silknow.org/image/614aca51-86f9-3a40-b2df-9cd699ca458d>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "foliation (pattern)"@en ;
+        ecrm:P3_has_note  "foliation (pattern)"@en .
+
+<http://data.silknow.org/image/f56a2173-a1bd-32ae-9553-247a082bfa94>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019LM0570" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O352625_0.jpg> , <https://framemark.vam.ac.uk/collections/2019LM0570/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/event/e53474d1-c66f-3122-a206-ca729305440c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6356d380-4f80-3e64-a3d3-1c867c82f93e> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/6356d380-4f80-3e64-a3d3-1c867c82f93e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6356d380-4f80-3e64-a3d3-1c867c82f93e> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e512a7d8-358e-3a42-8451-81e9003eb288> .
+
+<http://data.silknow.org/object/e512a7d8-358e-3a42-8451-81e9003eb288>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O352625" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6356d380-4f80-3e64-a3d3-1c867c82f93e/domain/2> , <http://data.silknow.org/production/6addba8d-eac9-3c78-ae60-176d347232e7> , <http://data.silknow.org/event/e53474d1-c66f-3122-a206-ca729305440c> , <http://data.silknow.org/object/6356d380-4f80-3e64-a3d3-1c867c82f93e/domain/1> , <http://data.silknow.org/image/f56a2173-a1bd-32ae-9553-247a082bfa94> , <http://data.silknow.org/object/6356d380-4f80-3e64-a3d3-1c867c82f93e> ;
+        dc:identifier       "O352625.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/6356d380-4f80-3e64-a3d3-1c867c82f93e>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f56a2173-a1bd-32ae-9553-247a082bfa94> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/614aca51-86f9-3a40-b2df-9cd699ca458d> ;
+        dc:identifier                  "T.143-1993" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O352625> .
+
+<http://data.silknow.org/object/6356d380-4f80-3e64-a3d3-1c867c82f93e/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/43> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6356d380-4f80-3e64-a3d3-1c867c82f93e> .

@@ -1,0 +1,105 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Woodwork" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a> .
+
+<https://sws.geonames.org/2635167/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/9ef075c8-96ca-356f-82e2-21d46aad8d58>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a> .
+
+<http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Wooden work box and drawer with 5 pegs, thread winder and magnifying glass."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a> .
+
+<http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "pegs" ;
+        rdfs:label          "Length: 15.5 cm pegs" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "pegs" ;
+        ecrm:P90_has_value  "15.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Work box" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a> .
+
+<http://data.silknow.org/object/1f6959c6-4870-313c-b7d8-1f8558c97513>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O135653" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/observation/2> , <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a> , <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/observation/1> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/production/55bc9fcc-c202-38e1-a74a-cbeeb61cce1d> , <http://data.silknow.org/event/9ef075c8-96ca-356f-82e2-21d46aad8d58> , <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/domain/3> , <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/domain/2> , <http://data.silknow.org/image/64fa01b5-43f7-3801-8c93-40f71ca78e80> , <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/domain/1> ;
+        dc:identifier       "O135653.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/image/64fa01b5-43f7-3801-8c93-40f71ca78e80>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2010ED0203" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O135653_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2010ED/2010ED0203.jpg> .
+
+<http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/domain/3>
+        a                    silk:T19 ;
+        silk:L4              "Tools & Equipment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a> .
+
+<http://data.silknow.org/production/55bc9fcc-c202-38e1-a74a-cbeeb61cce1d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a> ;
+        ecrm:P126_employed      "Wood inlaid with ivory/bone, ivory, glass and brass, and lined with silk"@en , "wood"@en , "ivory"@en , "silk (textile)"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1825> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2635167/> .
+
+<http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Wooden work box and drawer with 5 pegs, thread winder and magnifying glass, possibly made in Great Britain, early 19th century"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a> .
+
+<http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1f6959c6-4870-313c-b7d8-1f8558c97513> .
+
+<http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Wooden work box and drawer with 5 pegs, thread winder and magnifying glass, possibly made in Great Britain, early 19th century"@en , "Wooden work box and drawer with 5 pegs, thread winder and magnifying glass."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/64fa01b5-43f7-3801-8c93-40f71ca78e80> ;
+        ecrm:P3_has_note               "Wooden work box and drawer with 5 pegs, thread winder and magnifying glass, possibly made in Great Britain, early 19th century"@en , "Wooden work box and drawer with 5 pegs, thread winder and magnifying glass."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b41ff000-ba0c-39e1-97c7-8b4aca962f0a/dimension/1> ;
+        dc:identifier                  "T.406:1 to 9-1998" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O135653> .

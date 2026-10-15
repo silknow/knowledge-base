@@ -1,0 +1,119 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/263e8c24-57f7-36df-8464-30a69b054b2d> .
+
+<http://data.silknow.org/event/a57aee78-5fe0-3ff7-b7e4-9d3cf0335794>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4> .
+
+<http://data.silknow.org/image/53d93d6b-de55-350a-a143-5eef9f71cdff>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "medieval design imitation"@en ;
+        ecrm:P3_has_note  "medieval design imitation"@en .
+
+<http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/23db8077-aaa8-344f-a512-a6009ed237fb> , <http://data.silknow.org/image/73f6a0ab-3ebe-39db-bf49-80d556ada3cc> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4/dimension/1> , <http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4/dimension/2> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/69585ef9-611f-3d22-afc1-f67578e6396d> , <http://data.silknow.org/image/53d93d6b-de55-350a-a143-5eef9f71cdff> , <http://data.silknow.org/image/d1b48fa1-5523-3abe-b51f-f7075fa432f1> ;
+        dc:identifier                  "10611" .
+
+<http://data.silknow.org/production/dd4b2be2-6b37-3c44-b7af-69e836ff520b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4> ;
+        ecrm:P126_employed      "... unconfirmed"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "patterned fabric"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/e67ca962-cfd0-3502-87cd-877b7776a08b> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4> .
+
+<http://data.silknow.org/object/263e8c24-57f7-36df-8464-30a69b054b2d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 8633" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/73f6a0ab-3ebe-39db-bf49-80d556ada3cc> , <http://data.silknow.org/image/23db8077-aaa8-344f-a512-a6009ed237fb> , <http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4/domain/1> , <http://data.silknow.org/event/a57aee78-5fe0-3ff7-b7e4-9d3cf0335794> , <http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4> , <http://data.silknow.org/production/dd4b2be2-6b37-3c44-b7af-69e836ff520b> , <http://data.silknow.org/event/b77ad80d-35c8-36a7-9ee6-90fb261eaed6> , <http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4/category/1> ;
+        dc:identifier       "8633.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "25" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "25"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/d1b48fa1-5523-3abe-b51f-f7075fa432f1>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "pegasus"@en ;
+        ecrm:P3_has_note  "pegasus"@en .
+
+<http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4> .
+
+<http://data.silknow.org/image/73f6a0ab-3ebe-39db-bf49-80d556ada3cc>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000022818" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/8633_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000022818.jpg> .
+
+<http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "20" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "20"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/23db8077-aaa8-344f-a512-a6009ed237fb>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000005760" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/8633_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000005760.jpg> .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .
+
+<http://data.silknow.org/actor/b8496f30-3c5a-3b38-bf2d-10503671beb1>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Rigol Fornaguera, Josep" ;
+        ecrm:P1_is_identified_by  "Rigol Fornaguera, Josep" .
+
+<http://data.silknow.org/event/b77ad80d-35c8-36a7-9ee6-90fb261eaed6>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b8496f30-3c5a-3b38-bf2d-10503671beb1> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "Rigol Fornaguera, Josep" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5258f80a-2bbf-3dc1-9da9-181e53e9a9f4> ;
+        ecrm:P3_has_note               "donacions" ;
+        ecrm:P4_has_time-span          <http://data.silknow.org/timespan/1983_01_01> .
+
+<http://data.silknow.org/image/69585ef9-611f-3d22-afc1-f67578e6396d>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "circles arrangement"@en ;
+        ecrm:P3_has_note  "circles arrangement"@en .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

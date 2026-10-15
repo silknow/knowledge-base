@@ -1,0 +1,85 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<https://sws.geonames.org/719819/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/5dfbe825-294d-3c84-a98f-747cac86611f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019MB9297" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O261941_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2019MB/2019MB9297.jpg> .
+
+<http://data.silknow.org/image/421f230e-425f-3c44-a3bb-29e35a88e413>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019MB9290" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O261941_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2019MB/2019MB9290.jpg> .
+
+<http://data.silknow.org/object/bec190ce-1b3d-356a-ada3-65c5b133a7b2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O261941" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f/observation/1> , <http://data.silknow.org/event/af52f64e-fa1c-3734-9643-a412efb2ce5e> , <http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f> , <http://data.silknow.org/image/5dfbe825-294d-3c84-a98f-747cac86611f> , <http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f/observation/2> , <http://data.silknow.org/image/421f230e-425f-3c44-a3bb-29e35a88e413> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/production/a1e65a3e-1aee-3201-b21a-1ab6a13c31ac> ;
+        dc:identifier       "O261941.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/production/a1e65a3e-1aee-3201-b21a-1ab6a13c31ac>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f> ;
+        ecrm:P126_employed      "Linen embroidered with silk and silver-gilt thread"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/719819/> .
+
+<http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "One width of a sheet border. The pattern would have been worked on a strip of linen     which was then applied to the sheet, usually to a long edge so that the border fell over the side of the bed."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f> .
+
+<http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "embroidered, 1600s, Hungarian"@en , "One width of a sheet border. The pattern would have been worked on a strip of linen     which was then applied to the sheet, usually to a long edge so that the border fell over the side of the bed."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/421f230e-425f-3c44-a3bb-29e35a88e413> , <http://data.silknow.org/image/5dfbe825-294d-3c84-a98f-747cac86611f> ;
+        ecrm:P3_has_note               "embroidered, 1600s, Hungarian"@en , "One width of a sheet border. The pattern would have been worked on a strip of linen     which was then applied to the sheet, usually to a long edge so that the border fell over the side of the bed."@en ;
+        dc:identifier                  "770-1900" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O261941> .
+
+<http://data.silknow.org/event/af52f64e-fa1c-3734-9643-a412efb2ce5e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bec190ce-1b3d-356a-ada3-65c5b133a7b2> .
+
+<http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Sheet border" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f> .
+
+<http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "embroidered, 1600s, Hungarian"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/695be87c-9c55-3991-8a4e-b86b377bde0f> .

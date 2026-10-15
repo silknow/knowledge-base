@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/81e707b8-2e66-339a-b736-aa0723cb4b80>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1fcf0fe4-5522-3d49-bb86-df350044667b> .
+
+<http://data.silknow.org/image/908a9b42-118b-32fe-ad50-e69f45df5220>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "fleur"@fr ;
+        ecrm:P3_has_note  "fleur"@fr .
+
+<http://data.silknow.org/object/1fcf0fe4-5522-3d49-bb86-df350044667b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Guirlande de fleurs"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/58424bbf-3d85-3848-9da3-a28cba9dc8d1> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/785> , <http://data.silknow.org/image/908a9b42-118b-32fe-ad50-e69f45df5220> ;
+        dc:identifier                  "95.71.10" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/224f514e-f400-3074-879b-b911035b716d> .
+
+<http://data.silknow.org/assessment/cb9b4ac0-26c6-3405-8a6f-ed68d9c0c63d>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/1fcf0fe4-5522-3d49-bb86-df350044667b> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/cb9b4ac0-26c6-3405-8a6f-ed68d9c0c63d/condition/1> .
+
+<http://data.silknow.org/assessment/cb9b4ac0-26c6-3405-8a6f-ed68d9c0c63d/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "pas de défaut d'intégrité"@fr ;
+        ecrm:P2_has_type  "Intégrité" ;
+        ecrm:P3_has_note  "pas de défaut d'intégrité"@fr .
+
+<http://data.silknow.org/object/224f514e-f400-3074-879b-b911035b716d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.10" ;
+        ecrm:P129_is_about  <http://data.silknow.org/assessment/cb9b4ac0-26c6-3405-8a6f-ed68d9c0c63d> , <http://data.silknow.org/object/a1681ffd-a7b3-303a-9b72-283fa966a573> , <http://data.silknow.org/production/81e707b8-2e66-339a-b736-aa0723cb4b80> , <http://data.silknow.org/event/238c79bc-e7f6-3b66-91d3-9ebbd2679eec> , <http://data.silknow.org/object/1fcf0fe4-5522-3d49-bb86-df350044667b/type/1> , <http://data.silknow.org/image/58424bbf-3d85-3848-9da3-a28cba9dc8d1> , <http://data.silknow.org/object/1fcf0fe4-5522-3d49-bb86-df350044667b/right> , <http://data.silknow.org/object/1fcf0fe4-5522-3d49-bb86-df350044667b> ;
+        dc:identifier       "95.71.10.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/object/1fcf0fe4-5522-3d49-bb86-df350044667b/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1fcf0fe4-5522-3d49-bb86-df350044667b> ;
+        ecrm:P42_assigned    "Guirlande de fleurs" .
+
+<http://data.silknow.org/object/a1681ffd-a7b3-303a-9b72-283fa966a573>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Saint-Etienne\", Edition Gakken, Japon, 1981, 221 pages,"@fr , "Rubans français au Musée d'Art et d'Industrie de"@fr , "95.71.10.JPG"@fr , "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/1fcf0fe4-5522-3d49-bb86-df350044667b> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "Saint-Etienne\", Edition Gakken, Japon, 1981, 221 pages,"@fr , "95.71.10.JPG"@fr , "Rubans français au Musée d'Art et d'Industrie de"@fr .
+
+<http://data.silknow.org/object/1fcf0fe4-5522-3d49-bb86-df350044667b/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/1fcf0fe4-5522-3d49-bb86-df350044667b> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/image/58424bbf-3d85-3848-9da3-a28cba9dc8d1>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.10_0.jpg> .
+
+<http://data.silknow.org/event/238c79bc-e7f6-3b66-91d3-9ebbd2679eec>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1fcf0fe4-5522-3d49-bb86-df350044667b> .

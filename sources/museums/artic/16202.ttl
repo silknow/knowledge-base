@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/f37364ac-4ccf-3b6e-ae9a-ca654acdb02a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1925.544" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433/observation/1> , <http://data.silknow.org/event/588afc47-3826-3c94-84f8-0713998925ae> , <http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433> , <http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433/category/1> , <http://data.silknow.org/image/a4011e4d-ca4a-3a05-a9e7-b4476b985913> , <http://data.silknow.org/production/b30fe412-392c-3c1d-9944-7ad34cc81e81> ;
+        dc:identifier       "16202.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/event/588afc47-3826-3c94-84f8-0713998925ae>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/462acdeb-3b89-3ddb-88c2-1e7aa0b47302> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Robert Allerton" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433> .
+
+<http://data.silknow.org/actor/462acdeb-3b89-3ddb-88c2-1e7aa0b47302>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Robert Allerton" ;
+        ecrm:P1_is_identified_by  "Gift of Robert Allerton" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000393634901> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk; painted"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433> .
+
+<http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk; painted"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a4011e4d-ca4a-3a05-a9e7-b4476b985913> ;
+        ecrm:P3_has_note               "Silk; painted"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433/dimension/1> , <http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433/dimension/2> ;
+        dc:identifier                  "1925.544" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/16202/shawl> .
+
+<http://data.silknow.org/image/a4011e4d-ca4a-3a05-a9e7-b4476b985913>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/16202_0.jpg> , <https://www.artic.edu/iiif/2/50121620-e8c3-d7ab-a4f1-b85477bf9447/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "157.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "157.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/96> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433> .
+
+<http://data.silknow.org/production/b30fe412-392c-3c1d-9944-7ad34cc81e81>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/d544c7d2-d26e-37de-9053-383fcf8bac4f> , <http://data.silknow.org/timespan/1870> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/f0e0c8cd-deb4-3790-b0c1-2dd3b14c8433/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "149.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "149.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f37364ac-4ccf-3b6e-ae9a-ca654acdb02a> .

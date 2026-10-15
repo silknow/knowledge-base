@@ -1,0 +1,66 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b9671657-bd1c-3420-8141-cbc99f2baaa3> .
+
+<http://data.silknow.org/event/8df5ed28-5e66-30e3-9160-7392d81f8a29>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5f24c020-5923-3441-aa5b-14b7af84c8d9> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/production/0887f805-6e70-373c-b574-e9e17e2d7d8d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5f24c020-5923-3441-aa5b-14b7af84c8d9> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/97> , <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/5f24c020-5923-3441-aa5b-14b7af84c8d9/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5f24c020-5923-3441-aa5b-14b7af84c8d9> .
+
+<http://data.silknow.org/image/e3735b08-877d-3e17-a595-de347cdcdd06>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000034800" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29099_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000034800.jpg> .
+
+<http://data.silknow.org/object/5f24c020-5923-3441-aa5b-14b7af84c8d9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5f24c020-5923-3441-aa5b-14b7af84c8d9> .
+
+<http://data.silknow.org/object/b9671657-bd1c-3420-8141-cbc99f2baaa3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29099" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/5f24c020-5923-3441-aa5b-14b7af84c8d9> , <http://data.silknow.org/production/0887f805-6e70-373c-b574-e9e17e2d7d8d> , <http://data.silknow.org/event/52e5bae1-a185-37d5-8069-a59a38895e5e> , <http://data.silknow.org/image/e3735b08-877d-3e17-a595-de347cdcdd06> , <http://data.silknow.org/object/5f24c020-5923-3441-aa5b-14b7af84c8d9/domain/1> , <http://data.silknow.org/event/8df5ed28-5e66-30e3-9160-7392d81f8a29> , <http://data.silknow.org/object/5f24c020-5923-3441-aa5b-14b7af84c8d9/category/1> ;
+        dc:identifier       "29099.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/52e5bae1-a185-37d5-8069-a59a38895e5e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5f24c020-5923-3441-aa5b-14b7af84c8d9> .
+
+<http://data.silknow.org/object/5f24c020-5923-3441-aa5b-14b7af84c8d9>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e3735b08-877d-3e17-a595-de347cdcdd06> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> ;
+        dc:identifier                  "16905" .

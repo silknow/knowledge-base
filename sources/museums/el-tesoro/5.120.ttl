@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/78f1d9b8-a4db-3350-8fd5-93c9e3329bb1/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/78f1d9b8-a4db-3350-8fd5-93c9e3329bb1> ;
+        ecrm:P42_assigned    <http://data.silknow.org/category/97> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d42e5daa-d1ba-3f1e-a50e-627b188d5a36> .
+
+<http://data.silknow.org/object/78f1d9b8-a4db-3350-8fd5-93c9e3329bb1>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Se compone de estola y manípulo."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8f59b9ed-ca99-3eab-badb-0e158722f7bb> ;
+        ecrm:P3_has_note               "*Se compone de estola y manípulo."@es ;
+        dc:identifier                  "5.120" .
+
+<http://data.silknow.org/production/a6a83a4c-ea47-352f-80bb-1989da6ac18c/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/production/a6a83a4c-ea47-352f-80bb-1989da6ac18c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/78f1d9b8-a4db-3350-8fd5-93c9e3329bb1> ;
+        ecrm:P126_employed      "Hilo de oro y seda. Encaje de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Espolín."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/a6a83a4c-ea47-352f-80bb-1989da6ac18c/activity/1> .
+
+<http://data.silknow.org/assessment/e1fa80be-312d-3b0e-8afb-ea222641fa8f>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/78f1d9b8-a4db-3350-8fd5-93c9e3329bb1> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/e1fa80be-312d-3b0e-8afb-ea222641fa8f/condition/1> .
+
+<http://data.silknow.org/assessment/e1fa80be-312d-3b0e-8afb-ea222641fa8f/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Malo. No apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Malo. No apto para su uso."@es .
+
+<http://data.silknow.org/object/78f1d9b8-a4db-3350-8fd5-93c9e3329bb1/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Se compone de estola y manípulo."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/78f1d9b8-a4db-3350-8fd5-93c9e3329bb1> .
+
+<http://data.silknow.org/object/d42e5daa-d1ba-3f1e-a50e-627b188d5a36>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.120" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/8f59b9ed-ca99-3eab-badb-0e158722f7bb> , <http://data.silknow.org/object/78f1d9b8-a4db-3350-8fd5-93c9e3329bb1> , <http://data.silknow.org/production/a6a83a4c-ea47-352f-80bb-1989da6ac18c> , <http://data.silknow.org/object/78f1d9b8-a4db-3350-8fd5-93c9e3329bb1/type/1> , <http://data.silknow.org/object/78f1d9b8-a4db-3350-8fd5-93c9e3329bb1/observation/1> , <http://data.silknow.org/assessment/e1fa80be-312d-3b0e-8afb-ea222641fa8f> ;
+        dc:identifier       "5.120.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/image/8f59b9ed-ca99-3eab-badb-0e158722f7bb>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.120" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.120_0.jpg> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .

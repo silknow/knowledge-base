@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/b6be9476-ec80-39aa-88f6-6ed6358fe956>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> , <http://data.silknow.org/vocabulary/857> .
+
+<http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "3.92" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "3.92"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/mobilier>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/12cb842c-710e-38e0-b81a-a4b1a26af18a> .
+
+<http://data.silknow.org/object/12cb842c-710e-38e0-b81a-a4b1a26af18a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record GOB-1-000" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/domain/1> , <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/category/1> , <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0> , <http://data.silknow.org/object/1a4c7f50-d314-3da6-a90d-097b3ff20e37> , <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/domain/3> , <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/domain/2> , <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/observation/1> , <http://data.silknow.org/production/b6be9476-ec80-39aa-88f6-6ed6358fe956> , <http://data.silknow.org/image/841ef0c8-5182-38b5-93c8-a8c2cc78c96c> ;
+        dc:identifier       "71630.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mobilier" .
+
+<http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/domain/3>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0> .
+
+<http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/category/1>
+        a                    silk:T35 ;
+        silk:L1              "TAPISSERIE DE LICE" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0> .
+
+<http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Tenture de l'Abbaye de Sainte-Geneviève"@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0> .
+
+<http://data.silknow.org/image/841ef0c8-5182-38b5-93c8-a8c2cc78c96c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mobilier/71630_0.jpg> , <https://collection.mobiliernational.culture.gouv.fr/media/xl/ORKYS/gob-1-000_15199.jpg> .
+
+<http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Tapisserie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0> .
+
+<http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Tenture de l'Abbaye de Sainte-Geneviève"@fr ;
+        rdfs:label                     "Les Actes des Apôtres\r\nLa lapidation de saint Etienne"@fr ;
+        ecrm:P102_has_title            "Les Actes des Apôtres\r\nLa lapidation de saint Etienne"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/841ef0c8-5182-38b5-93c8-a8c2cc78c96c> ;
+        ecrm:P3_has_note               "Tenture de l'Abbaye de Sainte-Geneviève"@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/dimension/2> , <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/dimension/1> ;
+        dc:identifier                  "GOB-1-000" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collection.mobiliernational.culture.gouv.fr/objet/GOB-1-000> .
+
+<http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tapisserie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0> .
+
+<http://data.silknow.org/object/1a4c7f50-d314-3da6-a90d-097b3ff20e37>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Expo, Beauvais, Galerie nationale de la tapisserie, Tapisseries françaises de XVII et XVIII ème siècles à sujets religieux, 1998-1999, p.12 à 15"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Expo, Beauvais, Galerie nationale de la tapisserie, Tapisseries françaises de XVII et XVIII ème siècles à sujets religieux, 1998-1999, p.12 à 15"@fr .
+
+<http://data.silknow.org/object/a28db452-8f11-33be-b3aa-cdea8e14e5e0/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "4.26" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "4.26"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

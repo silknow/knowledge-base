@@ -1,0 +1,96 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "53.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "53.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "silk; cut, voided velvet against plain weave foundation"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/110635a5-e656-32ed-8b98-515abc16f575> ;
+        ecrm:P3_has_note               "silk; cut, voided velvet against plain weave foundation"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6/dimension/1> , <http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6/dimension/2> ;
+        dc:identifier                  "1932.862d" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/12313/fragments> .
+
+<http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "27" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "27"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "silk; cut, voided velvet against plain weave foundation"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6> .
+
+<http://data.silknow.org/place/0c6c2558-29d9-3ca6-bb15-be777f4b1121>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Spain or Italy" ;
+        ecrm:P87_is_identified_by  "Spain or Italy" .
+
+<http://data.silknow.org/production/992a2fc6-6c0b-3f5d-8743-eb771b8e389b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://data.silknow.org/timespan/1600> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/0c6c2558-29d9-3ca6-bb15-be777f4b1121> , <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/image/110635a5-e656-32ed-8b98-515abc16f575>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/12313_0.jpg> , <https://www.artic.edu/iiif/2/b2e123c3-8faf-7f1c-f3c0-a059bbeae889/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/actor/73ba463c-7251-3b8f-be86-082ed20d6c0b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Martin A. Ryerson" ;
+        ecrm:P1_is_identified_by  "Gift of Martin A. Ryerson" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Martin_A._Ryerson> , <https://viaf.org/viaf/305453277> , <https://isni.org/isni/0000000420570385> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Martin_A._Ryerson> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/event/7d5d0a85-8631-3ef6-b93d-28505aad2abb>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/73ba463c-7251-3b8f-be86-082ed20d6c0b> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Martin A. Ryerson" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6> .
+
+<http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragments" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/b2bf0146-40b4-33dc-877f-f69507cc37fd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1932.862d" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6/observation/1> , <http://data.silknow.org/image/110635a5-e656-32ed-8b98-515abc16f575> , <http://data.silknow.org/event/7d5d0a85-8631-3ef6-b93d-28505aad2abb> , <http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6/category/1> , <http://data.silknow.org/object/af4dbe71-2dc7-33ca-b7e2-e744b40c02d6> , <http://data.silknow.org/production/992a2fc6-6c0b-3f5d-8743-eb771b8e389b> ;
+        dc:identifier       "12313.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b2bf0146-40b4-33dc-877f-f69507cc37fd> .

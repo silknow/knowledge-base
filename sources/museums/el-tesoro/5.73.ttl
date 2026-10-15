@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/21b7771b-9fb3-31b2-bf83-dfc1b4a5fa47>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d02f2c9d-fb6c-35de-8d55-4da622b6b6fb> ;
+        ecrm:P126_employed      "Hilo de seda rosa. Galón de seda."@es ;
+        ecrm:P32_used_general_technique
+                "Damasco de Palma."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/21b7771b-9fb3-31b2-bf83-dfc1b4a5fa47/activity/1> .
+
+<http://data.silknow.org/object/d02f2c9d-fb6c-35de-8d55-4da622b6b6fb/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d02f2c9d-fb6c-35de-8d55-4da622b6b6fb> ;
+        ecrm:P42_assigned    "Capa pluvial." .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c20c96dc-899f-399c-89e6-fd6a0105aa21> .
+
+<http://data.silknow.org/actor/cbe0b877-b81e-35b7-b075-287229e35716>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Ornamentos Burillo" ;
+        ecrm:P1_is_identified_by  "Ornamentos Burillo" .
+
+<http://data.silknow.org/assessment/9edfcdd3-afd8-3ca7-ab36-4a2226ea7246>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/d02f2c9d-fb6c-35de-8d55-4da622b6b6fb> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/9edfcdd3-afd8-3ca7-ab36-4a2226ea7246/condition/1> .
+
+<http://data.silknow.org/object/d02f2c9d-fb6c-35de-8d55-4da622b6b6fb>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "“Ornamentos Burillo Valencia”"@es ;
+                                         ecrm:P3_has_note  "“Ornamentos Burillo Valencia”"@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bf729e48-3749-3b5f-9b3a-97efa2057417> ;
+        dc:identifier                  "5.73" .
+
+<http://data.silknow.org/image/bf729e48-3749-3b5f-9b3a-97efa2057417>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.73" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.73_0.jpg> .
+
+<http://data.silknow.org/production/21b7771b-9fb3-31b2-bf83-dfc1b4a5fa47/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/cbe0b877-b81e-35b7-b075-287229e35716> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/c20c96dc-899f-399c-89e6-fd6a0105aa21>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.73" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/21b7771b-9fb3-31b2-bf83-dfc1b4a5fa47> , <http://data.silknow.org/object/d02f2c9d-fb6c-35de-8d55-4da622b6b6fb> , <http://data.silknow.org/assessment/9edfcdd3-afd8-3ca7-ab36-4a2226ea7246> , <http://data.silknow.org/image/bf729e48-3749-3b5f-9b3a-97efa2057417> , <http://data.silknow.org/object/d02f2c9d-fb6c-35de-8d55-4da622b6b6fb/type/1> ;
+        dc:identifier       "5.73.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/assessment/9edfcdd3-afd8-3ca7-ab36-4a2226ea7246/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .

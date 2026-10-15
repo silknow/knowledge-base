@@ -1,0 +1,66 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/35ea6600-34f9-3b89-8cae-90123c26df01> .
+
+<http://data.silknow.org/event/ec708240-355c-337b-98cc-7e314487bc22>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b2b8cd05-105b-31ae-b8a0-af658328f2d6> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/image/57efcb37-2d5d-38e7-be00-d6e808542278>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000032838" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27182_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000032838.jpg> .
+
+<http://data.silknow.org/object/35ea6600-34f9-3b89-8cae-90123c26df01>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27182" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/57efcb37-2d5d-38e7-be00-d6e808542278> , <http://data.silknow.org/object/b2b8cd05-105b-31ae-b8a0-af658328f2d6/domain/1> , <http://data.silknow.org/object/b2b8cd05-105b-31ae-b8a0-af658328f2d6/category/1> , <http://data.silknow.org/production/7576bf60-ae86-3fc3-951f-da9df550dab8> , <http://data.silknow.org/object/b2b8cd05-105b-31ae-b8a0-af658328f2d6> , <http://data.silknow.org/event/349933e9-3cb6-3cff-82f4-da5d54b44154> , <http://data.silknow.org/event/ec708240-355c-337b-98cc-7e314487bc22> ;
+        dc:identifier       "27182.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/b2b8cd05-105b-31ae-b8a0-af658328f2d6/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b2b8cd05-105b-31ae-b8a0-af658328f2d6> .
+
+<http://data.silknow.org/object/b2b8cd05-105b-31ae-b8a0-af658328f2d6>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/57efcb37-2d5d-38e7-be00-d6e808542278> ;
+        dc:identifier                  "15973" .
+
+<http://data.silknow.org/object/b2b8cd05-105b-31ae-b8a0-af658328f2d6/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b2b8cd05-105b-31ae-b8a0-af658328f2d6> .
+
+<http://data.silknow.org/event/349933e9-3cb6-3cff-82f4-da5d54b44154>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b2b8cd05-105b-31ae-b8a0-af658328f2d6> .
+
+<http://data.silknow.org/production/7576bf60-ae86-3fc3-951f-da9df550dab8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b2b8cd05-105b-31ae-b8a0-af658328f2d6> ;
+        ecrm:P126_employed      "fil metàl·lic"@ca ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> .

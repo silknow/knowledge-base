@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/edc1833b-96e1-39b8-ba63-1e6549a17ef6>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "L. Magne, 20e siècle (1ère moitié), avant 1912, Tassinari et Chatel, Lyon, 20e siècle (1ère moitié), avant 1912" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7a17deaf-1ce6-3bb1-b357-35ed6ec37542> ;
+        ecrm:P126_employed      "Velours ciselé deux corps, violet et jaune, fond satin jaune clair, poil couché vers le bas."@fr ;
+        ecrm:P3_has_note        "L. Magne, 20e siècle (1ère moitié), avant 1912, Tassinari et Chatel, Lyon, 20e siècle (1ère moitié), avant 1912" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1901_1950> , <http://data.silknow.org/timespan/d345e5e4-0d76-3c68-a678-40dd469358dd> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2996944/> .
+
+<http://data.silknow.org/object/7a17deaf-1ce6-3bb1-b357-35ed6ec37542/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7a17deaf-1ce6-3bb1-b357-35ed6ec37542> .
+
+<http://data.silknow.org/object/7a17deaf-1ce6-3bb1-b357-35ed6ec37542>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, L. Magne, 20e siècle (1ère moitié), avant 1912, Tassinari et Chatel, Lyon, 20e siècle (1ère moitié), avant 1912"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a9f671e1-1bcd-3f35-ba91-5b17a8db85a0> ;
+        dc:identifier                  "18559" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908718> .
+
+<http://data.silknow.org/event/26e9db96-fe20-30dc-bcca-7295a86567a0>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "DonTassinari et Chatel, 1912" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7a17deaf-1ce6-3bb1-b357-35ed6ec37542> .
+
+<http://data.silknow.org/image/a9f671e1-1bcd-3f35-ba91-5b17a8db85a0>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908718_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/402b42c7-acd3-4405-808b-6fb9c02ee305.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8a8841df-a5d9-3c6e-b228-2d59e6665a6e> .
+
+<http://data.silknow.org/object/8a8841df-a5d9-3c6e-b228-2d59e6665a6e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 18559" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/7a17deaf-1ce6-3bb1-b357-35ed6ec37542/category/1> , <http://data.silknow.org/production/edc1833b-96e1-39b8-ba63-1e6549a17ef6> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/a9f671e1-1bcd-3f35-ba91-5b17a8db85a0> , <http://data.silknow.org/event/26e9db96-fe20-30dc-bcca-7295a86567a0> , <http://data.silknow.org/object/7a17deaf-1ce6-3bb1-b357-35ed6ec37542> ;
+        dc:identifier       "908718.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/7a17deaf-1ce6-3bb1-b357-35ed6ec37542> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .

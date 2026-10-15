@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/210da7e0-5a39-33c8-9911-8d723afb27e5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581> ;
+        ecrm:P126_employed      "satin de soie peint à l'huile"@fr ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/2370aec6-f279-37c3-ad71-a8bf99d7e3a0> .
+
+<http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "272" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "272"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "D'une série de seize panneaux  ; copie de la tenture livrée en 1811 par Vauchelet pour le salon de la Maison du Seigneur au hameau du Petit Trianon, vandalisée et déposée en 1956 (MV 8898.1-16)."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581> .
+
+<http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581> ;
+        ecrm:P42_assigned    "tenture" .
+
+<http://data.silknow.org/object/22840bb9-8590-395a-8264-4108f9f83332>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2017.00.189" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581/domain/1> , <http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581/type/1> , <http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581/observation/1> , <http://data.silknow.org/image/5b4f34d0-d8cd-3ff1-94ca-830161d537c3> , <http://data.silknow.org/production/210da7e0-5a39-33c8-9911-8d723afb27e5> , <http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581> ;
+        dc:identifier       "2017.00.189.json" ;
+        dc:publisher        "http://data.silknow.org/organization/versailles" .
+
+<http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "62.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "62.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581> .
+
+<http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "D'une série de seize panneaux  ; copie de la tenture livrée en 1811 par Vauchelet pour le salon de la Maison du Seigneur au hameau du Petit Trianon, vandalisée et déposée en 1956 (MV 8898.1-16)."@fr ;
+        rdfs:label                     "tenture"@fr ;
+        ecrm:P102_has_title            "tenture"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5b4f34d0-d8cd-3ff1-94ca-830161d537c3> ;
+        ecrm:P3_has_note               "D'une série de seize panneaux  ; copie de la tenture livrée en 1811 par Vauchelet pour le salon de la Maison du Seigneur au hameau du Petit Trianon, vandalisée et déposée en 1956 (MV 8898.1-16)."@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581/dimension/1> , <http://data.silknow.org/object/966a4baf-d281-362b-b4c1-e200e0225581/dimension/2> ;
+        dc:identifier                  "2017.00.189" .
+
+<http://data.silknow.org/image/5b4f34d0-d8cd-3ff1-94ca-830161d537c3>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/versailles/2017.00.189_0.jpg> , <http://collections.chateauversailles.fr/cc/imageproxy.aspx?server=10.0.10.13&port=14456&filename=objectimages%2F2017.00.189_002.cci> .
+
+<http://data.silknow.org/versailles>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/22840bb9-8590-395a-8264-4108f9f83332> .

@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ee390607-f53d-3a55-a27b-03441c6a8594> .
+
+<http://data.silknow.org/image/e59eae49-7c6a-3944-8556-3b2113558661>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033737" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27998_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033737.jpg> .
+
+<http://data.silknow.org/event/1d7a20e7-cbfd-3e29-a753-b87f6193487e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b596edaa-2b50-30b6-873c-5687900fd7b3> .
+
+<http://data.silknow.org/event/2519cd47-3978-3b73-8bdb-37bc9dd4ffad>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b596edaa-2b50-30b6-873c-5687900fd7b3> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/b596edaa-2b50-30b6-873c-5687900fd7b3/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b596edaa-2b50-30b6-873c-5687900fd7b3> .
+
+<http://data.silknow.org/object/b596edaa-2b50-30b6-873c-5687900fd7b3/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b596edaa-2b50-30b6-873c-5687900fd7b3> .
+
+<http://data.silknow.org/object/b596edaa-2b50-30b6-873c-5687900fd7b3>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e59eae49-7c6a-3944-8556-3b2113558661> ;
+        dc:identifier                  "16393" .
+
+<http://data.silknow.org/production/b6a224fc-21a2-3194-b82c-4e9cc480443d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b596edaa-2b50-30b6-873c-5687900fd7b3> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> , <http://data.silknow.org/vocabulary/379> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/object/ee390607-f53d-3a55-a27b-03441c6a8594>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27998" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b596edaa-2b50-30b6-873c-5687900fd7b3> , <http://data.silknow.org/event/1d7a20e7-cbfd-3e29-a753-b87f6193487e> , <http://data.silknow.org/image/e59eae49-7c6a-3944-8556-3b2113558661> , <http://data.silknow.org/event/2519cd47-3978-3b73-8bdb-37bc9dd4ffad> , <http://data.silknow.org/object/b596edaa-2b50-30b6-873c-5687900fd7b3/domain/1> , <http://data.silknow.org/object/b596edaa-2b50-30b6-873c-5687900fd7b3/category/1> , <http://data.silknow.org/production/b6a224fc-21a2-3194-b82c-4e9cc480443d> ;
+        dc:identifier       "27998.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

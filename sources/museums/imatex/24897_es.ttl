@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/405fc998-463b-3998-93d4-ae041175b451> .
+
+<http://data.silknow.org/actor/b3b150a4-0299-3484-b7e5-2283aeef7ad1>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Mestres Brunet, Lluís" ;
+        ecrm:P1_is_identified_by  "Mestres Brunet, Lluís" .
+
+<http://data.silknow.org/event/fda0e4f3-8693-3d8b-9739-6b3e3918164a>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b3b150a4-0299-3484-b7e5-2283aeef7ad1> ;
+        ecrm:P23_transferred_title_from
+                "Mestres Brunet, Lluís" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/89a5b899-525e-3194-be59-b4e1e2654d31> ;
+        ecrm:P3_has_note               "donacions" .
+
+<http://data.silknow.org/production/9e26eb36-314b-36aa-abc1-c4a6e58b038b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/89a5b899-525e-3194-be59-b4e1e2654d31> ;
+        ecrm:P126_employed      "... sin confirmar"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> .
+
+<http://data.silknow.org/object/405fc998-463b-3998-93d4-ae041175b451>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 24897" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/89a5b899-525e-3194-be59-b4e1e2654d31/domain/1> , <http://data.silknow.org/production/9e26eb36-314b-36aa-abc1-c4a6e58b038b> , <http://data.silknow.org/image/7a01f723-6ab6-3198-9ba1-1bd2c36accd1> , <http://data.silknow.org/object/89a5b899-525e-3194-be59-b4e1e2654d31> , <http://data.silknow.org/event/fda0e4f3-8693-3d8b-9739-6b3e3918164a> , <http://data.silknow.org/event/490d6d49-58f9-34d0-ae5e-dac030999bc6> , <http://data.silknow.org/object/89a5b899-525e-3194-be59-b4e1e2654d31/category/1> ;
+        dc:identifier       "24897.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/7a01f723-6ab6-3198-9ba1-1bd2c36accd1>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000029339" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/24897_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000029339.jpg> .
+
+<http://data.silknow.org/event/490d6d49-58f9-34d0-ae5e-dac030999bc6>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/89a5b899-525e-3194-be59-b4e1e2654d31> .
+
+<http://data.silknow.org/object/89a5b899-525e-3194-be59-b4e1e2654d31>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7a01f723-6ab6-3198-9ba1-1bd2c36accd1> ;
+        dc:identifier                  "14196" .
+
+<http://data.silknow.org/object/89a5b899-525e-3194-be59-b4e1e2654d31/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/89a5b899-525e-3194-be59-b4e1e2654d31> .
+
+<http://data.silknow.org/object/89a5b899-525e-3194-be59-b4e1e2654d31/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/89a5b899-525e-3194-be59-b4e1e2654d31> .

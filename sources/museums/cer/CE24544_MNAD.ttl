@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/event/32fcb7a8-5be5-303e-8803-1b8eabf95c22>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/image/df773b97-36ce-3867-956c-28a8c421edcc>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE24544" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE24544_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE24544&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/53dccd18-3347-3870-92b3-8bab7ad89f31>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE24544" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/dd9bbed4-aefb-3797-9fb7-ef82ed5322df> , <http://data.silknow.org/production/ec8fc07e-3f06-34ef-af4a-4c707a965f87> , <http://data.silknow.org/image/df773b97-36ce-3867-956c-28a8c421edcc> , <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea/category/1> , <http://data.silknow.org/event/32fcb7a8-5be5-303e-8803-1b8eabf95c22> , <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea/observation/2> , <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea/observation/1> , <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea> , <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea/domain/1> ;
+        dc:identifier       "CE24544_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/event/dd9bbed4-aefb-3797-9fb7-ef82ed5322df>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea> .
+
+<http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "57" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "57"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fragmento textil en forma de media luna, de lana brocada, con ligamento base de sarga de lana en su color cubierta de oro de Chipre. Rematado, en gran parte, con galón metálico dorado. Forro de seda en su color."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea> .
+
+<http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Moderna"@es , "Fragmento textil en forma de media luna, de lana brocada, con ligamento base de sarga de lana en su color cubierta de oro de Chipre. Rematado, en gran parte, con galón metálico dorado. Forro de seda en su color."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/df773b97-36ce-3867-956c-28a8c421edcc> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Fragmento textil en forma de media luna, de lana brocada, con ligamento base de sarga de lana en su color cubierta de oro de Chipre. Rematado, en gran parte, con galón metálico dorado. Forro de seda en su color."@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea/dimension/1> , <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea/dimension/2> ;
+        dc:identifier                  "CE24544" .
+
+<http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "29" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "29"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea> .
+
+<http://data.silknow.org/production/ec8fc07e-3f06-34ef-af4a-4c707a965f87>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/644> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                "Sarga"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1800> .
+
+<http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragmento de tejido" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea> .
+
+<http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dc97a4f9-ac68-3123-b1bc-36501d2581ea> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/53dccd18-3347-3870-92b3-8bab7ad89f31> .

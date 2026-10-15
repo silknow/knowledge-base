@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/PM>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/90ddd209-84ae-30a0-a684-5b96f2e14afa> .
+
+<http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Vêtements et accessoires de vêtement" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd> .
+
+<http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Pot de fleurs"@fr ;
+        rdfs:label                     "Eventail brisé"@fr ;
+        ecrm:P102_has_title            "Eventail brisé"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6dda3940-8303-34d9-a527-f07c01d174dd> , <http://data.silknow.org/image/2e2b52e3-fcc0-32c8-8b18-66e849e2a90b> ;
+        ecrm:P3_has_note               "Pot de fleurs"@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd/dimension/1> , <http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd/dimension/2> ;
+        dc:identifier                  "1967.66.2" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://parismuseescollections.paris.fr/node/197501> .
+
+<http://data.silknow.org/event/31cf24a8-204a-3951-88a6-e41385c5bd3f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f4f677e1-0fb0-381b-a311-e59780a8f445> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd> .
+
+<http://data.silknow.org/production/284e25d6-2eb9-3db1-9a1f-cff5d8d652f5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd> ;
+        ecrm:P126_employed      "Dorure"@fr ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1820> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/actor/f4f677e1-0fb0-381b-a311-e59780a8f445>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Palais Galliera, musée de la Mode de la Ville de Paris" ;
+        ecrm:P1_is_identified_by  "Palais Galliera, musée de la Mode de la Ville de Paris" .
+
+<http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/iconographical-observation> ;
+        ecrm:P3_has_note    "Pot de fleurs"@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd> .
+
+<http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Eventail brisé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd> .
+
+<http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "16 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "16 cm" ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/90ddd209-84ae-30a0-a684-5b96f2e14afa>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1967.66.2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/6dda3940-8303-34d9-a527-f07c01d174dd> , <http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd/category/1> , <http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd/domain/1> , <http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd/observation/1> , <http://data.silknow.org/production/284e25d6-2eb9-3db1-9a1f-cff5d8d652f5> , <http://data.silknow.org/image/2e2b52e3-fcc0-32c8-8b18-66e849e2a90b> , <http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd> , <http://data.silknow.org/event/31cf24a8-204a-3951-88a6-e41385c5bd3f> ;
+        dc:identifier       "197501.json" ;
+        dc:publisher        "http://data.silknow.org/organization/PM" .
+
+<http://data.silknow.org/image/6dda3940-8303-34d9-a527-f07c01d174dd>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "529946" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ParisMusees/197501_1.jpg> , <https://www.parismuseescollections.paris.fr/sites/default/files/styles/pm_diaporama/public/atoms/images/GAL/gal1967.66.2_2.jpg?itok=aaxzeRkw> .
+
+<http://data.silknow.org/image/2e2b52e3-fcc0-32c8-8b18-66e849e2a90b>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "529945" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ParisMusees/197501_0.jpg> , <https://www.parismuseescollections.paris.fr/sites/default/files/styles/pm_diaporama/public/atoms/images/GAL/gal1967.66.2_1.jpg?itok=bdVdqGHL> .
+
+<http://data.silknow.org/object/c09631a7-f4ec-3f94-9560-ff673ee7b7fd/dimension/1>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/width> ;
+        ecrm:P91_has_unit  "cm" .

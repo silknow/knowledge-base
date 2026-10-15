@@ -1,0 +1,128 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Rose and Thistle"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0> .
+
+<http://data.silknow.org/actor/e26012c4-4148-3cae-9e6a-1dbd5e2530eb>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Daniel Walters & Sons" ;
+        ecrm:P1_is_identified_by  "Daniel Walters & Sons" .
+
+<http://data.silknow.org/object/602f0dd7-bf31-3832-8c94-5189fdd87c2c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O79800" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/0f559df6-8c6f-345b-a639-dcbd5fd8b978> , <http://data.silknow.org/production/0e2f520e-89cf-3d73-b014-9c0287760df1> , <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/observation/4> , <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/domain/1> , <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0> , <http://data.silknow.org/image/45e7953a-09e6-3336-b6b5-0c311ad4939e> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/observation/1> , <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/observation/2> , <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/observation/3> , <http://data.silknow.org/image/ecef2e23-e561-33c5-8778-cb2a48be9c48> ;
+        dc:identifier       "O79800.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 52 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "52"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/4> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0> .
+
+<http://data.silknow.org/production/0e2f520e-89cf-3d73-b014-9c0287760df1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0> ;
+        ecrm:P126_employed      "Jacquard-woven silk"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1855_1856> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2654938/> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/0e2f520e-89cf-3d73-b014-9c0287760df1/activity/1> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Rose and Thistle"@en , "Furnishing fabric"@en , "British Galleries:\nThis is an example of a very high quality jacquard-woven fabric. It was selected in 1855 for a prestigious commission - the Ballroom at Buckingham Palace, London, the main royal residence. Prince Albert, who was always interested in new and revolutionary manufacturing methods, may have helped design this fabric. [27/03/2003]"@en , "This high-quality woven silk was used to decorate the lower walls of the Ballroom, as part of a decorative scheme designed by Ludwig Gruner (1801-1882) and James Pennethorne (1801-1871), incorporating the national devices of England (Tudor rose), Scotland (thistle) and Ireland (shamrock). The silk was woven by Daniel Walters & Sons in Braintree in Essex who had been in business since 1820. By the mid-19th century the firm was recognised as the leading British silk manufacturers, and  employed between 200 and 300 people. The firm produced silk furnishings for a number of important commissions, including Windsor Castle and Buckingham Palace. It was taken over by Warner & Sons in 1894.\n\nIn  1845 the House of Commons granted œ150,000  to enlarge Buckingham Palace, which was considered inadequate for royal entertaining. Between 1851 and 1856 a new suite of entertaining rooms was built on the south side of the Palace.  This included a ballroom designed by Ludwig Gruner. Prince Albert had significant control over the scheme, which showed his interest in Raphael and Italianate design.   The Queen's 'fine new room' was opened with a ball on 8 May 1856; both she and Prince Albert were delighted with it."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ecef2e23-e561-33c5-8778-cb2a48be9c48> , <http://data.silknow.org/image/45e7953a-09e6-3336-b6b5-0c311ad4939e> ;
+        ecrm:P3_has_note               "British Galleries:\nThis is an example of a very high quality jacquard-woven fabric. It was selected in 1855 for a prestigious commission - the Ballroom at Buckingham Palace, London, the main royal residence. Prince Albert, who was always interested in new and revolutionary manufacturing methods, may have helped design this fabric. [27/03/2003]"@en , "Rose and Thistle"@en , "Furnishing fabric"@en , "This high-quality woven silk was used to decorate the lower walls of the Ballroom, as part of a decorative scheme designed by Ludwig Gruner (1801-1882) and James Pennethorne (1801-1871), incorporating the national devices of England (Tudor rose), Scotland (thistle) and Ireland (shamrock). The silk was woven by Daniel Walters & Sons in Braintree in Essex who had been in business since 1820. By the mid-19th century the firm was recognised as the leading British silk manufacturers, and  employed between 200 and 300 people. The firm produced silk furnishings for a number of important commissions, including Windsor Castle and Buckingham Palace. It was taken over by Warner & Sons in 1894.\n\nIn  1845 the House of Commons granted œ150,000  to enlarge Buckingham Palace, which was considered inadequate for royal entertaining. Between 1851 and 1856 a new suite of entertaining rooms was built on the south side of the Palace.  This included a ballroom designed by Ludwig Gruner. Prince Albert had significant control over the scheme, which showed his interest in Raphael and Italianate design.   The Queen's 'fine new room' was opened with a ball on 8 May 1856; both she and Prince Albert were delighted with it."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/dimension/1> , <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/dimension/2> ;
+        dc:identifier                  "4759A-1859" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O79800> .
+
+<http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "This high-quality woven silk was used to decorate the lower walls of the Ballroom, as part of a decorative scheme designed by Ludwig Gruner (1801-1882) and James Pennethorne (1801-1871), incorporating the national devices of England (Tudor rose), Scotland (thistle) and Ireland (shamrock). The silk was woven by Daniel Walters & Sons in Braintree in Essex who had been in business since 1820. By the mid-19th century the firm was recognised as the leading British silk manufacturers, and  employed between 200 and 300 people. The firm produced silk furnishings for a number of important commissions, including Windsor Castle and Buckingham Palace. It was taken over by Warner & Sons in 1894.\n\nIn  1845 the House of Commons granted œ150,000  to enlarge Buckingham Palace, which was considered inadequate for royal entertaining. Between 1851 and 1856 a new suite of entertaining rooms was built on the south side of the Palace.  This included a ballroom designed by Ludwig Gruner. Prince Albert had significant control over the scheme, which showed his interest in Raphael and Italianate design.   The Queen's 'fine new room' was opened with a ball on 8 May 1856; both she and Prince Albert were delighted with it."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0> .
+
+<http://data.silknow.org/production/0e2f520e-89cf-3d73-b014-9c0287760df1/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/e26012c4-4148-3cae-9e6a-1dbd5e2530eb> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Furnishing fabric"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/602f0dd7-bf31-3832-8c94-5189fdd87c2c> .
+
+<http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "British Galleries" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0> .
+
+<http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Height: 139 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "139"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/ecef2e23-e561-33c5-8778-cb2a48be9c48>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006BF1191" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O79800_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006BF/2006BF1191.jpg> .
+
+<http://data.silknow.org/image/45e7953a-09e6-3336-b6b5-0c311ad4939e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AT5512" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O79800_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AT/2006AT5512.jpg> .
+
+<http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0/observation/4>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "British Galleries:\nThis is an example of a very high quality jacquard-woven fabric. It was selected in 1855 for a prestigious commission - the Ballroom at Buckingham Palace, London, the main royal residence. Prince Albert, who was always interested in new and revolutionary manufacturing methods, may have helped design this fabric. [27/03/2003]"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0> .
+
+<https://sws.geonames.org/2654938/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/0f559df6-8c6f-345b-a639-dcbd5fd8b978>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/28474854-576a-39d2-8132-28e4540640d0> .

@@ -1,0 +1,130 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/3d59fc40-3852-34f8-95a3-9df23540e3f8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/f690f269-db73-385b-87c3-8805146dd49d> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Alison Bolton" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef> .
+
+<https://sws.geonames.org/1857910/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/06a06339-4c14-394b-9275-4d8fbb3e4f6d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef> ;
+        ecrm:P126_employed      "Polychrome woven silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1857910/> .
+
+<http://data.silknow.org/image/49d56d7f-5c0a-308d-b201-929837cd6ddd>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017JX3627" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O124356_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017JX/2017JX3627.jpg> .
+
+<http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 65 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "65"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/3102b9cb-15bd-35a1-862f-525b574c7b40>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O124356" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/domain/1> , <http://data.silknow.org/collection/40c1ba84-e159-31aa-b354-ea24905da05f> , <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef> , <http://data.silknow.org/image/49d56d7f-5c0a-308d-b201-929837cd6ddd> , <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/observation/1> , <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/observation/3> , <http://data.silknow.org/image/29ec9f2a-f4fd-3c1c-9564-2378c72fd625> , <http://data.silknow.org/image/6fbc5ddb-7cf2-3668-aad0-849f32e67203> , <http://data.silknow.org/production/06a06339-4c14-394b-9275-4d8fbb3e4f6d> , <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/observation/2> , <http://data.silknow.org/event/3d59fc40-3852-34f8-95a3-9df23540e3f8> , <http://data.silknow.org/image/29d0a9f3-2d8b-3ecd-8b3b-133c3b7de9a6> ;
+        dc:identifier       "O124356.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Length" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef> .
+
+<http://data.silknow.org/actor/f690f269-db73-385b-87c3-8805146dd49d>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Alison Bolton" ;
+        ecrm:P1_is_identified_by  "Given by Alison Bolton" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "This unusual length of Japanese fabric is a wonderful example of a very sophisticated type of weaving.  It was probably created for use in a costume worn by a member of the imperial court.  It is mounted on paper bearing an inscription which suggests that it was presented as a gift perhaps to a temple or shrine."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef> .
+
+<http://data.silknow.org/image/6fbc5ddb-7cf2-3668-aad0-849f32e67203>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017JX3624" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O124356_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017JX/2017JX3624.jpg> .
+
+<http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef> .
+
+<http://data.silknow.org/image/29ec9f2a-f4fd-3c1c-9564-2378c72fd625>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017JX3628" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O124356_2.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017JX/2017JX3628.jpg> .
+
+<http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 203 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "203"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Length of silk woven with roundels of wisteria in red, cream and gold against a purple lattice ('basket') pattern on a gold ground.  Ends mounted on paper bearing ink inscriptions."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3102b9cb-15bd-35a1-862f-525b574c7b40> .
+
+<http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Length of silk woven with roundels of wisteria in red, cream and gold against a purple lattice ('basket') pattern on a gold ground.  Ends mounted on paper bearing ink inscriptions."@en , "This unusual length of Japanese fabric is a wonderful example of a very sophisticated type of weaving.  It was probably created for use in a costume worn by a member of the imperial court.  It is mounted on paper bearing an inscription which suggests that it was presented as a gift perhaps to a temple or shrine."@en , "Length of silk, wisteria roundels against a lattice pattern on gold ground, ink-inscribed paper end mounts, probably made in Kyoto, 1750-1800."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/29d0a9f3-2d8b-3ecd-8b3b-133c3b7de9a6> , <http://data.silknow.org/image/49d56d7f-5c0a-308d-b201-929837cd6ddd> , <http://data.silknow.org/image/6fbc5ddb-7cf2-3668-aad0-849f32e67203> , <http://data.silknow.org/image/29ec9f2a-f4fd-3c1c-9564-2378c72fd625> ;
+        ecrm:P3_has_note               "Length of silk woven with roundels of wisteria in red, cream and gold against a purple lattice ('basket') pattern on a gold ground.  Ends mounted on paper bearing ink inscriptions."@en , "This unusual length of Japanese fabric is a wonderful example of a very sophisticated type of weaving.  It was probably created for use in a costume worn by a member of the imperial court.  It is mounted on paper bearing an inscription which suggests that it was presented as a gift perhaps to a temple or shrine."@en , "Length of silk, wisteria roundels against a lattice pattern on gold ground, ink-inscribed paper end mounts, probably made in Kyoto, 1750-1800."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/dimension/2> , <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/dimension/1> ;
+        dc:identifier                  "FE.14-2006" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O124356> .
+
+<http://data.silknow.org/image/29d0a9f3-2d8b-3ecd-8b3b-133c3b7de9a6>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017JX3629" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O124356_3.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017JX/2017JX3629.jpg> .
+
+<http://data.silknow.org/collection/40c1ba84-e159-31aa-b354-ea24905da05f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef> ;
+        ecrm:P78_is_identified_by  "East Asia Collection" .
+
+<http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Length of silk, wisteria roundels against a lattice pattern on gold ground, ink-inscribed paper end mounts, probably made in Kyoto, 1750-1800."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/76b206f6-2fe9-3476-a763-ae315d9595ef> .

@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/place/e48e1e87-8695-3f80-99d2-636aa94d55d8>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "italiana (Venezia o Genova)" ;
+        ecrm:P87_is_identified_by  "italiana (Venezia o Genova)" .
+
+<http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        ecrm:P1_is_identified_by  "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122951649> , <https://viaf.org/viaf/147524313> .
+
+<http://data.silknow.org/object/95abf973-5d88-3b74-bab3-085dfac4a345/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "21"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/be059b89-ec8a-3504-a4f1-02f09b2562bf>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1600768108_52" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1600767009039_0.jpg> .
+
+<http://data.silknow.org/object/3485c97a-1b95-3f85-8afa-52b21a9c02ae>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Elisabetta Bazzani, scheda n. 52, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, p. 141"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/95abf973-5d88-3b74-bab3-085dfac4a345> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Elisabetta Bazzani, scheda n. 52, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, p. 141"@it .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/35e97cb5-cf22-3563-93d1-0910dd3fbc80> .
+
+<http://data.silknow.org/event/595b6eb9-3382-3330-8b3a-21507d4e7c77>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/95abf973-5d88-3b74-bab3-085dfac4a345> .
+
+<http://data.silknow.org/object/95abf973-5d88-3b74-bab3-085dfac4a345>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Seconda metà del XV secolo"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/be059b89-ec8a-3504-a4f1-02f09b2562bf> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/95abf973-5d88-3b74-bab3-085dfac4a345/dimension/2> , <http://data.silknow.org/object/95abf973-5d88-3b74-bab3-085dfac4a345/dimension/1> ;
+        dc:identifier                  "1600767009039" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/95abf973-5d88-3b74-bab3-085dfac4a345/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/95abf973-5d88-3b74-bab3-085dfac4a345> ;
+        ecrm:P42_assigned    "Frammento" .
+
+<http://data.silknow.org/production/54ea1484-246a-3fd9-ba38-f6f991becb2d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/95abf973-5d88-3b74-bab3-085dfac4a345> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/457> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1451_1500> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/e48e1e87-8695-3f80-99d2-636aa94d55d8> .
+
+<http://data.silknow.org/object/35e97cb5-cf22-3563-93d1-0910dd3fbc80>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1600767009039" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/595b6eb9-3382-3330-8b3a-21507d4e7c77> , <http://data.silknow.org/image/be059b89-ec8a-3504-a4f1-02f09b2562bf> , <http://data.silknow.org/object/95abf973-5d88-3b74-bab3-085dfac4a345> , <http://data.silknow.org/object/3485c97a-1b95-3f85-8afa-52b21a9c02ae> , <http://data.silknow.org/object/95abf973-5d88-3b74-bab3-085dfac4a345/type/1> , <http://data.silknow.org/production/54ea1484-246a-3fd9-ba38-f6f991becb2d> ;
+        dc:identifier       "1600767009039.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/object/95abf973-5d88-3b74-bab3-085dfac4a345/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

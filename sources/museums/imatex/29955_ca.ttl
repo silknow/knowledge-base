@@ -1,0 +1,75 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1b0329c4-a351-3fd0-b894-eeb9fd3076a0> .
+
+<http://data.silknow.org/event/681779bf-8fc0-37d6-9f6d-172acebfd8a3>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/1805f2dd-8b9e-386b-a2e6-f8b0942e15fb> .
+
+<http://data.silknow.org/actor/01779f01-62cc-33c5-b47e-478275c927d3>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "... sense confirmar - / Tórtola Valencia, Carmen" ;
+        ecrm:P1_is_identified_by  "... sense confirmar - / Tórtola Valencia, Carmen" .
+
+<http://data.silknow.org/event/be4b2b09-ab8d-33d4-acab-c0302af563ef>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "... sense confirmar -  / compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/01779f01-62cc-33c5-b47e-478275c927d3> ;
+        ecrm:P23_transferred_title_from
+                "... sense confirmar -  / Tórtola Valencia, Carmen" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1805f2dd-8b9e-386b-a2e6-f8b0942e15fb> ;
+        ecrm:P3_has_note               "... sense confirmar -  / compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/object/1805f2dd-8b9e-386b-a2e6-f8b0942e15fb>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/56ca93ad-9b33-38fb-8488-fe200ffafae2> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/abf15a4c-e057-3dc9-8c2c-3d2fea903e33> ;
+        dc:identifier                  "22265" .
+
+<http://data.silknow.org/object/1805f2dd-8b9e-386b-a2e6-f8b0942e15fb/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1805f2dd-8b9e-386b-a2e6-f8b0942e15fb> .
+
+<http://data.silknow.org/image/abf15a4c-e057-3dc9-8c2c-3d2fea903e33>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "fulles"@ca ;
+        ecrm:P3_has_note  "fulles"@ca .
+
+<http://data.silknow.org/production/c216311e-be76-31ab-beae-6f0d50b0bf0f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1805f2dd-8b9e-386b-a2e6-f8b0942e15fb> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/215> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1901_1925> .
+
+<http://data.silknow.org/image/56ca93ad-9b33-38fb-8488-fe200ffafae2>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035852" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29955_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000035852.jpg> .
+
+<http://data.silknow.org/object/1b0329c4-a351-3fd0-b894-eeb9fd3076a0>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29955" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/56ca93ad-9b33-38fb-8488-fe200ffafae2> , <http://data.silknow.org/object/1805f2dd-8b9e-386b-a2e6-f8b0942e15fb> , <http://data.silknow.org/event/681779bf-8fc0-37d6-9f6d-172acebfd8a3> , <http://data.silknow.org/object/1805f2dd-8b9e-386b-a2e6-f8b0942e15fb/domain/1> , <http://data.silknow.org/object/1805f2dd-8b9e-386b-a2e6-f8b0942e15fb/category/1> , <http://data.silknow.org/event/be4b2b09-ab8d-33d4-acab-c0302af563ef> , <http://data.silknow.org/production/c216311e-be76-31ab-beae-6f0d50b0bf0f> ;
+        dc:identifier       "29955.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/1805f2dd-8b9e-386b-a2e6-f8b0942e15fb/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1805f2dd-8b9e-386b-a2e6-f8b0942e15fb> .

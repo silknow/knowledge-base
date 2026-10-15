@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/cf2ee8ec-6fb9-3728-a991-c717e8c57a0f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cf2ee8ec-6fb9-3728-a991-c717e8c57a0f> .
+
+<http://data.silknow.org/object/cf2ee8ec-6fb9-3728-a991-c717e8c57a0f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1740-1750, Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/34367151-af60-3163-9818-35324d6bec3e> ;
+        dc:identifier                  "18111" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910707> .
+
+<http://data.silknow.org/object/789655e3-5ddd-3090-acf3-ee820cd037c3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 18111" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/cf2ee8ec-6fb9-3728-a991-c717e8c57a0f/category/1> , <http://data.silknow.org/event/c37692bc-876f-3720-b61f-2b80197d8e1f> , <http://data.silknow.org/image/34367151-af60-3163-9818-35324d6bec3e> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/d53bb3b3-8739-3023-ac93-fc4c204321f7> , <http://data.silknow.org/object/cf2ee8ec-6fb9-3728-a991-c717e8c57a0f> ;
+        dc:identifier       "910707.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/34367151-af60-3163-9818-35324d6bec3e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910707_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/f0e8458f-b6ae-40ba-8be6-2beea9126117.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/789655e3-5ddd-3090-acf3-ee820cd037c3> .
+
+<http://data.silknow.org/production/d53bb3b3-8739-3023-ac93-fc4c204321f7>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1740-1750, Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/cf2ee8ec-6fb9-3728-a991-c717e8c57a0f> ;
+        ecrm:P126_employed      "Gros de Tours, 1 lat de liseré, broché soie polychrome et métal, sans liage"@fr ;
+        ecrm:P3_has_note        "France, 1740-1750, Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1740_1750> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/cf2ee8ec-6fb9-3728-a991-c717e8c57a0f> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/event/c37692bc-876f-3720-b61f-2b80197d8e1f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Arthur Martin, 1911" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/cf2ee8ec-6fb9-3728-a991-c717e8c57a0f> .

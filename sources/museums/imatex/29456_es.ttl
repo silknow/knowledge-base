@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2e7e52bc-9fd7-3044-95e2-5a4d415c370e> .
+
+<http://data.silknow.org/object/17e97bd4-f186-3099-b996-4cc4e92a4ec0/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/17e97bd4-f186-3099-b996-4cc4e92a4ec0> .
+
+<http://data.silknow.org/production/c011699d-65d6-3d9a-bc60-62e88113d2de>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/17e97bd4-f186-3099-b996-4cc4e92a4ec0> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/event/1003e4d4-9d14-3dce-bf43-353c5b1b3326>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/17e97bd4-f186-3099-b996-4cc4e92a4ec0> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/object/17e97bd4-f186-3099-b996-4cc4e92a4ec0>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e36556dd-06ac-30a5-b2d3-2bb0e498d509> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> ;
+        dc:identifier                  "4888" .
+
+<http://data.silknow.org/image/e36556dd-06ac-30a5-b2d3-2bb0e498d509>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035234" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29456_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000035234.jpg> .
+
+<http://data.silknow.org/object/2e7e52bc-9fd7-3044-95e2-5a4d415c370e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29456" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/e36556dd-06ac-30a5-b2d3-2bb0e498d509> , <http://data.silknow.org/object/17e97bd4-f186-3099-b996-4cc4e92a4ec0/domain/1> , <http://data.silknow.org/object/17e97bd4-f186-3099-b996-4cc4e92a4ec0> , <http://data.silknow.org/production/c011699d-65d6-3d9a-bc60-62e88113d2de> , <http://data.silknow.org/event/1003e4d4-9d14-3dce-bf43-353c5b1b3326> , <http://data.silknow.org/event/02de678c-a892-381b-99b4-3d0bf275c338> , <http://data.silknow.org/object/17e97bd4-f186-3099-b996-4cc4e92a4ec0/category/1> ;
+        dc:identifier       "29456.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/02de678c-a892-381b-99b4-3d0bf275c338>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/17e97bd4-f186-3099-b996-4cc4e92a4ec0> .
+
+<http://data.silknow.org/object/17e97bd4-f186-3099-b996-4cc4e92a4ec0/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/17e97bd4-f186-3099-b996-4cc4e92a4ec0> .

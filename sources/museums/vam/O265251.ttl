@@ -1,0 +1,113 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa> .
+
+<http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa> .
+
+<http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Textile fragment of yellow silk woven in plain 2/1 twill and stamped with part of a floral design. The fragment has been cut from a chair seat."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Textile fragment of yellow silk woven in plain 2/1 twill and stamped with part of a floral design. The fragment has been cut from a chair seat."@en , "Textile fragment of silk, France, 1750-1799"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e573c91e-19e7-33bd-a832-e0caba2ec647> ;
+        ecrm:P3_has_note               "Textile fragment of silk, France, 1750-1799"@en , "Textile fragment of yellow silk woven in plain 2/1 twill and stamped with part of a floral design. The fragment has been cut from a chair seat."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/dimension/2> , <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/dimension/1> ;
+        dc:identifier                  "T.109-1961" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O265251> .
+
+<http://data.silknow.org/image/e573c91e-19e7-33bd-a832-e0caba2ec647>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MR5787" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O265251_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2020MR/2020MR5787.jpg> .
+
+<http://data.silknow.org/production/3d0a5add-e16e-3dab-af80-c0dcdfcf0a05>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa> ;
+        ecrm:P126_employed      "Silk, stamped"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1799> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 1 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "2.54"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/42918953-b6a6-3781-ac32-b6ceaab800c9>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by the Henry Francis du Pont Winterthur Museum" ;
+        ecrm:P1_is_identified_by  "Given by the Henry Francis du Pont Winterthur Museum" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Interiors" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa> .
+
+<http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Textile fragment of silk, France, 1750-1799"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa> .
+
+<http://data.silknow.org/object/b01ea6b9-8b14-361a-bf73-b087c63d5ffb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O265251" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/observation/1> , <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/observation/2> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/production/3d0a5add-e16e-3dab-af80-c0dcdfcf0a05> , <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/domain/2> , <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/domain/1> , <http://data.silknow.org/event/f8df8a30-390b-3588-aecd-4fc5ae91edcc> , <http://data.silknow.org/image/e573c91e-19e7-33bd-a832-e0caba2ec647> , <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa> ;
+        dc:identifier       "O265251.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/event/f8df8a30-390b-3588-aecd-4fc5ae91edcc>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/42918953-b6a6-3781-ac32-b6ceaab800c9> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by the Henry Francis du Pont Winterthur Museum" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b01ea6b9-8b14-361a-bf73-b087c63d5ffb> .
+
+<http://data.silknow.org/object/454bc40c-8463-3a5b-9f4d-fe8b295522fa/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Height: 6.5 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "16.51"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

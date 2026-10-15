@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/2990999/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/e8b1ebfa-0047-351e-a0ab-f3ca0a5feccf/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e8b1ebfa-0047-351e-a0ab-f3ca0a5feccf> .
+
+<http://data.silknow.org/production/8fe2135b-0e5e-3178-8d16-1caf1d1e1b85>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Majorelle frères, Nancy, 20e siècle (1ère moitié), 1903 (avant)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e8b1ebfa-0047-351e-a0ab-f3ca0a5feccf> ;
+        ecrm:P126_employed      "Velours beige frappé à dessin de pommes de pin, brodé soie jaune et rose au point de chaînette.; poil couché vers le bas à droite."@fr ;
+        ecrm:P3_has_note        "Majorelle frères, Nancy, 20e siècle (1ère moitié), 1903 (avant)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1901_1950> , <http://data.silknow.org/timespan/76e78070-767e-36dc-b780-32da57d8b679> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2990999/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/56e4192e-0ec5-311d-8017-3ca23ac1cb3c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "don Majorelle frères, 1903" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e8b1ebfa-0047-351e-a0ab-f3ca0a5feccf> .
+
+<http://data.silknow.org/object/e8b1ebfa-0047-351e-a0ab-f3ca0a5feccf>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Majorelle frères, Nancy, 20e siècle (1ère moitié), 1903 (avant)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0d3db00f-0c7b-3ffc-b23b-966035d38228> ;
+        dc:identifier                  "10707" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/917293> .
+
+<http://data.silknow.org/image/0d3db00f-0c7b-3ffc-b23b-966035d38228>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/917293_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/90214869-34fe-4509-ab6a-0bc3f5ec2c6c.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1fbee64f-a409-382b-980d-b1129ae2d381> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/e8b1ebfa-0047-351e-a0ab-f3ca0a5feccf> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/1fbee64f-a409-382b-980d-b1129ae2d381>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10707" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e8b1ebfa-0047-351e-a0ab-f3ca0a5feccf/category/1> , <http://data.silknow.org/object/e8b1ebfa-0047-351e-a0ab-f3ca0a5feccf> , <http://data.silknow.org/image/0d3db00f-0c7b-3ffc-b23b-966035d38228> , <http://data.silknow.org/event/56e4192e-0ec5-311d-8017-3ca23ac1cb3c> , <http://data.silknow.org/production/8fe2135b-0e5e-3178-8d16-1caf1d1e1b85> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> ;
+        dc:identifier       "917293.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

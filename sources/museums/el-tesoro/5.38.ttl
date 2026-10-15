@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/07468419-6ed4-3d03-b23f-9a947bcf2ad1> .
+
+<http://data.silknow.org/production/ca5c39c8-1b38-34a6-981b-1beccf96852e/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/assessment/f069dffd-26f3-3509-884d-6130d6b538a0/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .
+
+<http://data.silknow.org/image/e4de92d4-0800-36fa-99ee-e8364e17461c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.38" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.38_0.jpg> .
+
+<http://data.silknow.org/object/07468419-6ed4-3d03-b23f-9a947bcf2ad1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.38" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/83c9ce2d-b9f9-3c1e-b408-2ffbfcb16768> , <http://data.silknow.org/object/83c9ce2d-b9f9-3c1e-b408-2ffbfcb16768/type/1> , <http://data.silknow.org/production/ca5c39c8-1b38-34a6-981b-1beccf96852e> , <http://data.silknow.org/image/e4de92d4-0800-36fa-99ee-e8364e17461c> , <http://data.silknow.org/object/83c9ce2d-b9f9-3c1e-b408-2ffbfcb16768/observation/1> , <http://data.silknow.org/assessment/f069dffd-26f3-3509-884d-6130d6b538a0> ;
+        dc:identifier       "5.38.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/object/83c9ce2d-b9f9-3c1e-b408-2ffbfcb16768>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Perteneció a la Archicofradía del Corazón de María."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "“ARCHICOFRADÍA DEL CORAZÓN DE MARÍA”"@es ;
+                                         ecrm:P3_has_note  "“ARCHICOFRADÍA DEL CORAZÓN DE MARÍA”"@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e4de92d4-0800-36fa-99ee-e8364e17461c> ;
+        ecrm:P3_has_note               "*Perteneció a la Archicofradía del Corazón de María."@es ;
+        dc:identifier                  "5.38" .
+
+<http://data.silknow.org/production/ca5c39c8-1b38-34a6-981b-1beccf96852e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/83c9ce2d-b9f9-3c1e-b408-2ffbfcb16768> ;
+        ecrm:P126_employed      "Raso de seda. Hilo de seda. Fleco."@es ;
+        ecrm:P32_used_general_technique
+                "Bordado y pintado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/ca5c39c8-1b38-34a6-981b-1beccf96852e/activity/1> .
+
+<http://data.silknow.org/object/83c9ce2d-b9f9-3c1e-b408-2ffbfcb16768/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/83c9ce2d-b9f9-3c1e-b408-2ffbfcb16768> ;
+        ecrm:P42_assigned    "Estandarte" .
+
+<http://data.silknow.org/assessment/f069dffd-26f3-3509-884d-6130d6b538a0>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/83c9ce2d-b9f9-3c1e-b408-2ffbfcb16768> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/f069dffd-26f3-3509-884d-6130d6b538a0/condition/1> .
+
+<http://data.silknow.org/object/83c9ce2d-b9f9-3c1e-b408-2ffbfcb16768/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Perteneció a la Archicofradía del Corazón de María."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/83c9ce2d-b9f9-3c1e-b408-2ffbfcb16768> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .

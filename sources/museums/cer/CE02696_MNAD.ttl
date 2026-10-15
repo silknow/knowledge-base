@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/c8240b92-ee6c-393f-afeb-b632a914e144>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/production/2b6b2953-46b7-3074-9619-d9727b159ae6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/488> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/366> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1600> .
+
+<http://data.silknow.org/image/e82a332b-7663-3e0a-87a6-a9037630a323>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE02696" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE02696_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE02696&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269> .
+
+<http://data.silknow.org/object/e5fcd8b3-e8bf-3bf8-81da-8e3b7e2b11a9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE02696" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/e82a332b-7663-3e0a-87a6-a9037630a323> , <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269/observation/2> , <http://data.silknow.org/event/d694fcf6-0468-3b9b-a201-92c31ac45368> , <http://data.silknow.org/production/2b6b2953-46b7-3074-9619-d9727b159ae6> , <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269/category/1> , <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269/domain/1> , <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269> , <http://data.silknow.org/event/c8240b92-ee6c-393f-afeb-b632a914e144> , <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269/observation/1> ;
+        dc:identifier       "CE02696_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "191" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "191"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "243" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "243"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e5fcd8b3-e8bf-3bf8-81da-8e3b7e2b11a9> .
+
+<http://data.silknow.org/event/d694fcf6-0468-3b9b-a201-92c31ac45368>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Brocatel de fondo amarillo mezclado con filadir verde; está formado por cuatro tiras. El fondo es de color amarillo y la decoración es azul. La decoración está realizada a partir de la repetición de un jarrón flanqueado por dos pavos reales afrontados que vuelven la cabeza y llevan una rama en el pico. El borde remata en sus cuatro lados en un fleco corto realizado en amarillo y azul. Está forrada."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269> .
+
+<http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Colgadura" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269> .
+
+<http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Brocatel de fondo amarillo mezclado con filadir verde; está formado por cuatro tiras. El fondo es de color amarillo y la decoración es azul. La decoración está realizada a partir de la repetición de un jarrón flanqueado por dos pavos reales afrontados que vuelven la cabeza y llevan una rama en el pico. El borde remata en sus cuatro lados en un fleco corto realizado en amarillo y azul. Está forrada."@es , "Edad Moderna"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e82a332b-7663-3e0a-87a6-a9037630a323> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Brocatel de fondo amarillo mezclado con filadir verde; está formado por cuatro tiras. El fondo es de color amarillo y la decoración es azul. La decoración está realizada a partir de la repetición de un jarrón flanqueado por dos pavos reales afrontados que vuelven la cabeza y llevan una rama en el pico. El borde remata en sus cuatro lados en un fleco corto realizado en amarillo y azul. Está forrada."@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269/dimension/1> , <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269/dimension/2> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/754> ;
+        dc:identifier                  "CE02696" .
+
+<http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/62a999dd-e84d-312c-84e4-ee421a740269> .

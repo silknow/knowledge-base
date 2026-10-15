@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/de295ca5-7f83-3a55-8f5e-2ca608ba3eec>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/994615f5-42f6-3d99-9fcf-bb223bae4e23> .
+
+<https://sws.geonames.org/1643084/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/994615f5-42f6-3d99-9fcf-bb223bae4e23>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e5e2bcc6-82b7-361a-b849-60a33120bcaf> ;
+        dc:identifier                  "67.462" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-67462> .
+
+<http://data.silknow.org/object/fd3460e9-6269-36aa-9bad-1e26e9b913b9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 67.462" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/8cdb83ef-14e5-39fa-bc6e-047a1f76c42e> , <http://data.silknow.org/object/82e23fb2-3ba1-3989-b9b6-43d30c3b1960> , <http://data.silknow.org/image/e5e2bcc6-82b7-361a-b849-60a33120bcaf> , <http://data.silknow.org/object/994615f5-42f6-3d99-9fcf-bb223bae4e23/category/1> , <http://data.silknow.org/event/de295ca5-7f83-3a55-8f5e-2ca608ba3eec> , <http://data.silknow.org/event/511bcf22-6d03-3367-90ac-9963ee7ecfcc> , <http://data.silknow.org/object/994615f5-42f6-3d99-9fcf-bb223bae4e23/domain/1> , <http://data.silknow.org/object/994615f5-42f6-3d99-9fcf-bb223bae4e23> ;
+        dc:identifier       "971306.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/994615f5-42f6-3d99-9fcf-bb223bae4e23/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/994615f5-42f6-3d99-9fcf-bb223bae4e23> .
+
+<http://data.silknow.org/image/e5e2bcc6-82b7-361a-b849-60a33120bcaf>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/971306_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/11746.jpg> .
+
+<http://data.silknow.org/actor/72da5844-9563-3b1a-902a-81402320eb16>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Bequest of Martha B. Lisle" ;
+        ecrm:P1_is_identified_by  "Bequest of Martha B. Lisle" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fd3460e9-6269-36aa-9bad-1e26e9b913b9> .
+
+<http://data.silknow.org/event/511bcf22-6d03-3367-90ac-9963ee7ecfcc>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/72da5844-9563-3b1a-902a-81402320eb16> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Bequest of Martha B. Lisle" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/994615f5-42f6-3d99-9fcf-bb223bae4e23> .
+
+<http://data.silknow.org/object/82e23fb2-3ba1-3989-b9b6-43d30c3b1960>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "A World of Costume and Textiles" , "September 22 - November 12, 1989" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/994615f5-42f6-3d99-9fcf-bb223bae4e23> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "A World of Costume and Textiles" , "September 22 - November 12, 1989" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/world-costume-and-textiles> .
+
+<http://data.silknow.org/object/994615f5-42f6-3d99-9fcf-bb223bae4e23/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/994615f5-42f6-3d99-9fcf-bb223bae4e23> .
+
+<http://data.silknow.org/production/8cdb83ef-14e5-39fa-bc6e-047a1f76c42e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/994615f5-42f6-3d99-9fcf-bb223bae4e23> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "supplementary weft patterning"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1876_1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1643084/> .

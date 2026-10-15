@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3038780/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/5fcac24e-1561-3bd7-8c9f-7b6829ce8608>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "René Gabriel, 1930-1935, l'Abeille" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/530981bb-6085-3482-b2be-c8ccb0b19a78> ;
+        ecrm:P126_employed      "Percale de coton glacée, impression"@fr ;
+        ecrm:P3_has_note        "René Gabriel, 1930-1935, l'Abeille" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1930_1935> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3038780/> .
+
+<http://data.silknow.org/image/9e5a3a11-1b33-303b-b58f-fb591d5e358f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909365_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/33b90c8c-543d-4217-88c7-1fcb74828a8e.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/90011f2c-1438-3f19-b3ce-864f955120f4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 44381.A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/5fcac24e-1561-3bd7-8c9f-7b6829ce8608> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/530981bb-6085-3482-b2be-c8ccb0b19a78/category/1> , <http://data.silknow.org/event/5c0a3aea-3036-327a-9d81-d698442db434> , <http://data.silknow.org/object/530981bb-6085-3482-b2be-c8ccb0b19a78> , <http://data.silknow.org/image/9e5a3a11-1b33-303b-b58f-fb591d5e358f> ;
+        dc:identifier       "909365.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/530981bb-6085-3482-b2be-c8ccb0b19a78/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/530981bb-6085-3482-b2be-c8ccb0b19a78> .
+
+<http://data.silknow.org/object/530981bb-6085-3482-b2be-c8ccb0b19a78>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, René Gabriel, 1930-1935, l'Abeille"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9e5a3a11-1b33-303b-b58f-fb591d5e358f> ;
+        dc:identifier                  "44381.A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909365> .
+
+<http://data.silknow.org/event/5c0a3aea-3036-327a-9d81-d698442db434>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Renée Gabriel, 1973" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/530981bb-6085-3482-b2be-c8ccb0b19a78> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/90011f2c-1438-3f19-b3ce-864f955120f4> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/530981bb-6085-3482-b2be-c8ccb0b19a78> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

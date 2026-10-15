@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/c15f7790-af3c-357b-bb36-01b490000f06>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Lyon, 1735-1740, Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4579c501-eef0-307d-a575-49dd1a8ccad1> ;
+        dc:identifier                  "2001.135.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910248> .
+
+<http://data.silknow.org/object/617f3cfb-4bc6-3c9d-ade2-cc2c784b2ef3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2001.135.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c15f7790-af3c-357b-bb36-01b490000f06> , <http://data.silknow.org/event/c78d83b7-8c80-303d-b577-f76b6d3a8237> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/4579c501-eef0-307d-a575-49dd1a8ccad1> , <http://data.silknow.org/production/b83e80c5-1f5d-355c-b18c-1429cef14886> , <http://data.silknow.org/object/c15f7790-af3c-357b-bb36-01b490000f06/category/1> ;
+        dc:identifier       "910248.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/4579c501-eef0-307d-a575-49dd1a8ccad1>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910248_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/a8a9563c-e8e1-4402-b792-01aa0c730800.jpg> .
+
+<http://data.silknow.org/event/c78d83b7-8c80-303d-b577-f76b6d3a8237>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Fondation Abegg-Stiftung en souvenir de Margaret et Werner Abegg, 2001" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c15f7790-af3c-357b-bb36-01b490000f06> .
+
+<http://data.silknow.org/production/b83e80c5-1f5d-355c-b18c-1429cef14886>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Lyon, 1735-1740, Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c15f7790-af3c-357b-bb36-01b490000f06> ;
+        ecrm:P126_employed      "Lampas de soie fond satin, lancé et broché de soie et métal"@fr ;
+        ecrm:P3_has_note        "Lyon, 1735-1740, Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1735_1740> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2996944/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/617f3cfb-4bc6-3c9d-ade2-cc2c784b2ef3> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/c15f7790-af3c-357b-bb36-01b490000f06> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/c15f7790-af3c-357b-bb36-01b490000f06/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c15f7790-af3c-357b-bb36-01b490000f06> .

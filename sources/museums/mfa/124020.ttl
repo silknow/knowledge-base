@@ -1,0 +1,98 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/dcbb3635-1dc4-39f4-923d-fb132f4c58f5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a> .
+
+<http://data.silknow.org/object/46bf32ac-eef1-3ab6-8344-ecb2328a5047>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 50.3223a" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/dcbb3635-1dc4-39f4-923d-fb132f4c58f5> , <http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a/observation/1> , <http://data.silknow.org/image/d457dca0-f20d-3699-ad94-92de8accab71> , <http://data.silknow.org/production/922b9b08-506f-3e8c-a44b-95a1361b9359> , <http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a/domain/1> , <http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a/category/1> , <http://data.silknow.org/image/41ee6dbc-ecc5-3fb7-a0c1-8bf47129c71d> ;
+        dc:identifier       "124020.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Petit point panel with shaped upper edge"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a> .
+
+<http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "88.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "88.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/41ee6dbc-ecc5-3fb7-a0c1-8bf47129c71d>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "584997" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/124020_1.jpg> , <https://collections.mfa.org/internal/media/dispatcher/584997/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/922b9b08-506f-3e8c-a44b-95a1361b9359>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a> ;
+        ecrm:P126_employed      "Linen tabby with wool and silk embroidery"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1735> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "54.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "54.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Chairback or polescreen panel: Jepthah Greeting His Daughter" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/46bf32ac-eef1-3ab6-8344-ecb2328a5047> .
+
+<http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a> .
+
+<http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Petit point panel with shaped upper edge"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/41ee6dbc-ecc5-3fb7-a0c1-8bf47129c71d> , <http://data.silknow.org/image/d457dca0-f20d-3699-ad94-92de8accab71> ;
+        ecrm:P3_has_note               "Petit point panel with shaped upper edge"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a/dimension/2> , <http://data.silknow.org/object/8d8e2271-6777-3a0e-9c3f-211141b9336a/dimension/1> ;
+        dc:identifier                  "50.3223a" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/124020> .
+
+<http://data.silknow.org/image/d457dca0-f20d-3699-ad94-92de8accab71>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "817852" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/124020_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/817852/resize%3Aformat%3Dfull> .

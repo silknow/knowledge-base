@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/d97bd469-6a93-318b-8752-b04712ce7562>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b> ;
+        ecrm:P126_employed      "silk damask"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/168> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1600_1650> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/event/7921e458-22df-3c5d-aae6-0854b6bce417>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "brocaded damask, 1600s, Italian; Lion, staff, star, bird, mitre, sword, gold white; One selvedge; Pieced"@en , "Three lengths of green silk damask sewn together to form an ogival pattern of scrolls and compartments containing crowns, stars and plants."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/174ced62-2ea4-36b7-a361-2e8abc2b5e85> ;
+        ecrm:P3_has_note               "brocaded damask, 1600s, Italian; Lion, staff, star, bird, mitre, sword, gold white; One selvedge; Pieced"@en , "Three lengths of green silk damask sewn together to form an ogival pattern of scrolls and compartments containing crowns, stars and plants."@en ;
+        dc:identifier                  "628-1890" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O225659> .
+
+<http://data.silknow.org/object/6311aed3-cab5-3c04-85f1-f73b146a29fb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O225659" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b/observation/2> , <http://data.silknow.org/production/d97bd469-6a93-318b-8752-b04712ce7562> , <http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b/domain/1> , <http://data.silknow.org/image/174ced62-2ea4-36b7-a361-2e8abc2b5e85> , <http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b/observation/1> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/event/7921e458-22df-3c5d-aae6-0854b6bce417> , <http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b> ;
+        dc:identifier       "O225659.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/image/174ced62-2ea4-36b7-a361-2e8abc2b5e85>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AN1118" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O225659_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AN/2006AN1118.jpg> .
+
+<http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Three lengths of green silk damask sewn together to form an ogival pattern of scrolls and compartments containing crowns, stars and plants."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b> .
+
+<http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/4> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6311aed3-cab5-3c04-85f1-f73b146a29fb> .
+
+<http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b> .
+
+<http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "brocaded damask, 1600s, Italian; Lion, staff, star, bird, mitre, sword, gold white; One selvedge; Pieced"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/50ed4401-fb1d-33ac-9553-28d5a140fc5b> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .

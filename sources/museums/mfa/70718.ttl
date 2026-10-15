@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/50cae19b-48af-3871-a2ae-4c7de81f720c>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f> .
+
+<http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Corded pink silk ground, faded to yellow; waving ribbons of the same color partially outlined by foliage of tarnished metal. Arranged diagonally and in rows are bunches of double and single flowers."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ef4dde52-7b16-3f7a-b802-3b8097183a23> ;
+        ecrm:P3_has_note               "Corded pink silk ground, faded to yellow; waving ribbons of the same color partially outlined by foliage of tarnished metal. Arranged diagonally and in rows are bunches of double and single flowers."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f/dimension/2> , <http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f/dimension/1> ;
+        dc:identifier                  "96.401" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/70718> .
+
+<http://data.silknow.org/image/ef4dde52-7b16-3f7a-b802-3b8097183a23>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "817992" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/70718_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/817992/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Corded pink silk ground, faded to yellow; waving ribbons of the same color partially outlined by foliage of tarnished metal. Arranged diagonally and in rows are bunches of double and single flowers."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f> .
+
+<http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "67.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "67.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "46.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "46.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/production/a5db6dd8-97cf-3134-a41d-2f2f9ae34f39>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f> ;
+        ecrm:P126_employed      "Silk and silver-colored metallic wrapped on silk core thread with silver-colored flat strip metal brocade"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of brocade" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3cd7f30d-091d-3af3-a790-2314eea6fb24> .
+
+<http://data.silknow.org/object/3cd7f30d-091d-3af3-a790-2314eea6fb24>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 96.401" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/50cae19b-48af-3871-a2ae-4c7de81f720c> , <http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f> , <http://data.silknow.org/image/ef4dde52-7b16-3f7a-b802-3b8097183a23> , <http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f/category/1> , <http://data.silknow.org/production/a5db6dd8-97cf-3134-a41d-2f2f9ae34f39> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f/observation/1> , <http://data.silknow.org/object/2121d388-0eb7-3765-9811-bb4405fe430f/domain/1> ;
+        dc:identifier       "70718.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

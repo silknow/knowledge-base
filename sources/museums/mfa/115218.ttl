@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/1e3e35f7-0c88-35ee-866c-2e87cfeb6320>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a> .
+
+<http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a> .
+
+<http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "207" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "207"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/d7f2bbb5-15d0-3cf9-9a60-d297b987131b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a> ;
+        ecrm:P126_employed      "Cotton print"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/d67c2140-386d-3d79-a470-10fb908cccdd> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "130" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "130"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Panel made of two lengths; duplicate. Natural cotton ground, printed with block and roller. Reddish-brown block printed ground. On central vertical axis, a row of short fluted column sections, each with a capital showing volutes, acanthus leaves, and a cluster of fruits and flowers. At left and right, rows of baskets containing fruits and flowers. Motifs printed with block in blue, with stippled roller in shades or red and in black. A few small holes; one repair. Cotton browned."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Printed panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f5287d96-934f-3408-be24-1cc3a2b45efe> .
+
+<http://data.silknow.org/image/7e38c592-78bd-3b81-8a94-418f6287c2ba>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "895202" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/115218_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/895202/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Panel made of two lengths; duplicate. Natural cotton ground, printed with block and roller. Reddish-brown block printed ground. On central vertical axis, a row of short fluted column sections, each with a capital showing volutes, acanthus leaves, and a cluster of fruits and flowers. At left and right, rows of baskets containing fruits and flowers. Motifs printed with block in blue, with stippled roller in shades or red and in black. A few small holes; one repair. Cotton browned."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7e38c592-78bd-3b81-8a94-418f6287c2ba> ;
+        ecrm:P3_has_note               "Panel made of two lengths; duplicate. Natural cotton ground, printed with block and roller. Reddish-brown block printed ground. On central vertical axis, a row of short fluted column sections, each with a capital showing volutes, acanthus leaves, and a cluster of fruits and flowers. At left and right, rows of baskets containing fruits and flowers. Motifs printed with block in blue, with stippled roller in shades or red and in black. A few small holes; one repair. Cotton browned."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a/dimension/2> , <http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a/dimension/1> ;
+        dc:identifier                  "59.220" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/115218> .
+
+<http://data.silknow.org/object/f5287d96-934f-3408-be24-1cc3a2b45efe>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 59.220" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a> , <http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a/category/1> , <http://data.silknow.org/production/d7f2bbb5-15d0-3cf9-9a60-d297b987131b> , <http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a/observation/1> , <http://data.silknow.org/object/c69fc1e5-1b75-3e75-adaa-50ea2b29f06a/domain/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/7e38c592-78bd-3b81-8a94-418f6287c2ba> , <http://data.silknow.org/event/1e3e35f7-0c88-35ee-866c-2e87cfeb6320> ;
+        dc:identifier       "115218.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

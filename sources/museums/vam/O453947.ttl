@@ -1,0 +1,116 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/5498c3af-3304-36cc-b21e-e0b40e393602>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2014HA0064" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O453947_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2014HA/2014HA0064.jpg> .
+
+<http://data.silknow.org/event/d6a9f81a-71a9-39e8-b25d-7a811feb8b9e>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "Transferred from India Museum 1879."@en ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d> ;
+        ecrm:P3_has_note               "Transferred from India Museum 1879."@en .
+
+<https://sws.geonames.org/1254661/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d> .
+
+<http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Textile, woven shot silk, Thana, Maharashtra, ca. 1867"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d> .
+
+<http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 46 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "46"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Parasol Foundation Trust Indian Textiles Cataloguing Project" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d> .
+
+<http://data.silknow.org/production/367d9a19-281a-37bf-b636-4716d0fde1ba>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d> ;
+        ecrm:P126_employed      "Woven silk"@en , "silk (textile)"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/dc3cc26d-8243-3306-b5dc-087347468546> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1254661/> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "South & South East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d> ;
+        ecrm:P78_is_identified_by  "South & South East Asia Collection" .
+
+<http://data.silknow.org/object/1d5c03e3-975a-3404-9e41-88eb6b4cb64c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O453947" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/domain/2> , <http://data.silknow.org/production/367d9a19-281a-37bf-b636-4716d0fde1ba> , <http://data.silknow.org/event/d6a9f81a-71a9-39e8-b25d-7a811feb8b9e> , <http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217> , <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/observation/1> , <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/domain/3> , <http://data.silknow.org/image/5498c3af-3304-36cc-b21e-e0b40e393602> , <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/domain/1> , <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d> , <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/observation/2> ;
+        dc:identifier       "O453947.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/domain/3>
+        a                    silk:T19 ;
+        silk:L4              "India Museum" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1d5c03e3-975a-3404-9e41-88eb6b4cb64c> .
+
+<http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Fragment of silk textile, blue and dark pink figured weave, with small geometric repeat."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d> .
+
+<http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Textile, woven shot silk, Thana, Maharashtra, ca. 1867"@en , "Fragment of silk textile, blue and dark pink figured weave, with small geometric repeat."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5498c3af-3304-36cc-b21e-e0b40e393602> ;
+        ecrm:P3_has_note               "Textile, woven shot silk, Thana, Maharashtra, ca. 1867"@en , "Fragment of silk textile, blue and dark pink figured weave, with small geometric repeat."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/dimension/2> , <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/dimension/1> ;
+        dc:identifier                  "7145(IS)" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O453947> .
+
+<http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "maximum" ;
+        rdfs:label          "Length: 285 cm  maximum" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "maximum" ;
+        ecrm:P90_has_value  "285"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/03d79555-27c6-353f-ad1e-18b67848eb1d> .

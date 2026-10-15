@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/6b2539df-9bcc-3a9b-9467-d111c0c314e5>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Atelier Martine, 1912, Paul Poiret" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ba06b00a-dc75-3553-bfa0-1196db6ecb8f> ;
+        ecrm:P126_employed      "Toile de lin imprimé à la planche de bois, 5 couleurs sur fond écru"@fr ;
+        ecrm:P3_has_note        "Atelier Martine, 1912, Paul Poiret" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1912> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/427a5436-0f9c-38f8-b165-e2b4acb28842>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910382_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/5470fdab-6537-473d-aa74-bb8a2070868b.jpg> .
+
+<http://data.silknow.org/object/ba06b00a-dc75-3553-bfa0-1196db6ecb8f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Atelier Martine, 1912, Paul Poiret"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/427a5436-0f9c-38f8-b165-e2b4acb28842> ;
+        dc:identifier                  "2005.37.13.4" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910382> .
+
+<http://data.silknow.org/object/c4008bdc-014b-3a15-96e9-49d5ab501838>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2005.37.13.4" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/427a5436-0f9c-38f8-b165-e2b4acb28842> , <http://data.silknow.org/event/a6671b0e-afda-3f4d-a54a-6417e42216f1> , <http://data.silknow.org/object/ba06b00a-dc75-3553-bfa0-1196db6ecb8f> , <http://data.silknow.org/object/ba06b00a-dc75-3553-bfa0-1196db6ecb8f/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/6b2539df-9bcc-3a9b-9467-d111c0c314e5> ;
+        dc:identifier       "910382.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/ba06b00a-dc75-3553-bfa0-1196db6ecb8f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ba06b00a-dc75-3553-bfa0-1196db6ecb8f> .
+
+<http://data.silknow.org/event/a6671b0e-afda-3f4d-a54a-6417e42216f1>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat grâce au fonds du patrimoine, avec le concours du mécénat de Michel et Hélène David-Weill, 2005" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ba06b00a-dc75-3553-bfa0-1196db6ecb8f> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c4008bdc-014b-3a15-96e9-49d5ab501838> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ba06b00a-dc75-3553-bfa0-1196db6ecb8f> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

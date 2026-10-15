@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/c5a85fc0-0c90-3ba1-a594-31f42c4b515a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Beauvais et Cie, Lyon, 1820"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/69b489bc-6ff2-3647-831e-59761a8a1a8f> ;
+        dc:identifier                  "PR 2009.77.2" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/902914> .
+
+<http://data.silknow.org/event/1278e292-9100-3614-9279-3d9b912abdf4>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "PR 2009.77" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c5a85fc0-0c90-3ba1-a594-31f42c4b515a> .
+
+<http://data.silknow.org/object/74cd037a-0761-3071-8d26-406201d9ae94>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record PR 2009.77.2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/7417df0f-7896-326b-a7e6-2a4d5739c476> , <http://data.silknow.org/event/1278e292-9100-3614-9279-3d9b912abdf4> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/69b489bc-6ff2-3647-831e-59761a8a1a8f> , <http://data.silknow.org/object/c5a85fc0-0c90-3ba1-a594-31f42c4b515a> ;
+        dc:identifier       "902914.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/7417df0f-7896-326b-a7e6-2a4d5739c476>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Beauvais et Cie, Lyon, 1820" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c5a85fc0-0c90-3ba1-a594-31f42c4b515a> ;
+        ecrm:P126_employed      "Peluche de soie façonnée"@fr ;
+        ecrm:P3_has_note        "Beauvais et Cie, Lyon, 1820" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1820> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2996944/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/74cd037a-0761-3071-8d26-406201d9ae94> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/c5a85fc0-0c90-3ba1-a594-31f42c4b515a> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/69b489bc-6ff2-3647-831e-59761a8a1a8f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/902914_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/eb8289b5-91aa-4e47-9c06-258a999be12c.jpg> .

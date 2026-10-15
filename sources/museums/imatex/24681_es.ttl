@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/660be2d6-72d1-3cf5-8f75-8353486f48b3> .
+
+<http://data.silknow.org/production/6ae7d6db-c679-3fd5-9f50-83e8b0bc1eb6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/96ab1cdc-27ca-3e04-8008-3155259f2a14> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/96ab1cdc-27ca-3e04-8008-3155259f2a14/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/96ab1cdc-27ca-3e04-8008-3155259f2a14> .
+
+<http://data.silknow.org/image/6a54f440-7491-311d-9b81-06b7753ace3c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000029065" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/24681_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000029065.jpg> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/event/bed91fba-2895-396a-9c9b-a8b25dc5da4f>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/96ab1cdc-27ca-3e04-8008-3155259f2a14> .
+
+<http://data.silknow.org/object/96ab1cdc-27ca-3e04-8008-3155259f2a14/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/96ab1cdc-27ca-3e04-8008-3155259f2a14> .
+
+<http://data.silknow.org/object/96ab1cdc-27ca-3e04-8008-3155259f2a14>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6a54f440-7491-311d-9b81-06b7753ace3c> ;
+        dc:identifier                  "21447" .
+
+<http://data.silknow.org/object/660be2d6-72d1-3cf5-8f75-8353486f48b3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 24681" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/96ab1cdc-27ca-3e04-8008-3155259f2a14> , <http://data.silknow.org/event/4291eb66-cdf9-3218-aefc-9d9803a099bf> , <http://data.silknow.org/image/6a54f440-7491-311d-9b81-06b7753ace3c> , <http://data.silknow.org/object/96ab1cdc-27ca-3e04-8008-3155259f2a14/category/1> , <http://data.silknow.org/production/6ae7d6db-c679-3fd5-9f50-83e8b0bc1eb6> , <http://data.silknow.org/event/bed91fba-2895-396a-9c9b-a8b25dc5da4f> , <http://data.silknow.org/object/96ab1cdc-27ca-3e04-8008-3155259f2a14/domain/1> ;
+        dc:identifier       "24681.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/4291eb66-cdf9-3218-aefc-9d9803a099bf>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/96ab1cdc-27ca-3e04-8008-3155259f2a14> .

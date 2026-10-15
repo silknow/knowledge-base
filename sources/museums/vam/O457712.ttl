@@ -1,0 +1,109 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Chair cover" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd> .
+
+<http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 160 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "160"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Chair cover of red cut-pile velvet, China, 1800-1882"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/image/85be58a7-4e2d-3f70-ae8a-3e45f9985c0f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2011EY9492" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O457712_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2011EY/2011EY9492.jpg> .
+
+<http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 51 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "51"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/f6756136-b6c4-3918-afd7-432589022cea>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd> ;
+        ecrm:P126_employed      "Cut-pile silk velvet"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/168> , <http://data.silknow.org/vocabulary/526> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1882> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<http://data.silknow.org/image/ee48d76c-668f-3826-9376-a91e231c0690>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017KC8354" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O457712_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017KC/2017KC8354.jpg> .
+
+<http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd> .
+
+<http://data.silknow.org/event/871b9482-8528-3e80-8311-f014293d15be>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "Purchased from Myers & Son, 179 New Bond Street, on 21 July 1882."@en ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd> ;
+        ecrm:P3_has_note               "Purchased from Myers & Son, 179 New Bond Street, on 21 July 1882."@en .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a33a6611-df3b-3f90-9454-2265b69e1aa1> .
+
+<http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Chair cover, rectangular, crimson silk velvet."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd> .
+
+<http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Chair cover of red cut-pile velvet, China, 1800-1882"@en , "Chair cover, rectangular, crimson silk velvet."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/85be58a7-4e2d-3f70-ae8a-3e45f9985c0f> , <http://data.silknow.org/image/ee48d76c-668f-3826-9376-a91e231c0690> ;
+        ecrm:P3_has_note               "Chair cover, rectangular, crimson silk velvet."@en , "Chair cover of red cut-pile velvet, China, 1800-1882"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd/dimension/2> , <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd/dimension/1> ;
+        dc:identifier                  "429&A-1882" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O457712> .
+
+<http://data.silknow.org/collection/40c1ba84-e159-31aa-b354-ea24905da05f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd> ;
+        ecrm:P78_is_identified_by  "East Asia Collection" .
+
+<http://data.silknow.org/object/a33a6611-df3b-3f90-9454-2265b69e1aa1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O457712" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/85be58a7-4e2d-3f70-ae8a-3e45f9985c0f> , <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd/domain/1> , <http://data.silknow.org/image/ee48d76c-668f-3826-9376-a91e231c0690> , <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd> , <http://data.silknow.org/event/871b9482-8528-3e80-8311-f014293d15be> , <http://data.silknow.org/collection/40c1ba84-e159-31aa-b354-ea24905da05f> , <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd/observation/1> , <http://data.silknow.org/object/3d7f888f-6b32-3229-bf92-2d62e08e68fd/observation/2> , <http://data.silknow.org/production/f6756136-b6c4-3918-afd7-432589022cea> ;
+        dc:identifier       "O457712.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .

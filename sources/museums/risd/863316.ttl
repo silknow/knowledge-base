@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/ffbd4f16-f70b-36f1-b403-90450f4983b7>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bd8a889f-33ec-3adf-a5ac-fadec2a8fe28> ;
+        dc:identifier                  "55.562.3" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/towel-555623> .
+
+<http://data.silknow.org/object/ffbd4f16-f70b-36f1-b403-90450f4983b7/category/1>
+        a                    silk:T35 ;
+        silk:L1              "towel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ffbd4f16-f70b-36f1-b403-90450f4983b7> .
+
+<http://data.silknow.org/production/9b3a5820-bc9b-3911-b844-853ddc890333>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ffbd4f16-f70b-36f1-b403-90450f4983b7> ;
+        ecrm:P126_employed      "linen"@en , "linen; silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/298795/> .
+
+<http://data.silknow.org/object/ffbd4f16-f70b-36f1-b403-90450f4983b7/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ffbd4f16-f70b-36f1-b403-90450f4983b7> .
+
+<http://data.silknow.org/event/158a2d28-d51b-3865-b3b3-c48233031a01>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/7dd0bdea-1180-3516-abe6-2f9a54992d4c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Bequest of Miss Lucy T. Aldrich" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ffbd4f16-f70b-36f1-b403-90450f4983b7> .
+
+<https://sws.geonames.org/298795/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/7dd0bdea-1180-3516-abe6-2f9a54992d4c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Bequest of Miss Lucy T. Aldrich" ;
+        ecrm:P1_is_identified_by  "Bequest of Miss Lucy T. Aldrich" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b77178f0-019e-3992-b146-7d248e8ea65e> .
+
+<http://data.silknow.org/object/b77178f0-019e-3992-b146-7d248e8ea65e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 55.562.3" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/1282d75b-88ca-3b70-87fb-8f839e045914> , <http://data.silknow.org/event/158a2d28-d51b-3865-b3b3-c48233031a01> , <http://data.silknow.org/object/ffbd4f16-f70b-36f1-b403-90450f4983b7> , <http://data.silknow.org/production/9b3a5820-bc9b-3911-b844-853ddc890333> , <http://data.silknow.org/image/bd8a889f-33ec-3adf-a5ac-fadec2a8fe28> , <http://data.silknow.org/object/ffbd4f16-f70b-36f1-b403-90450f4983b7/category/1> , <http://data.silknow.org/object/ffbd4f16-f70b-36f1-b403-90450f4983b7/domain/1> ;
+        dc:identifier       "863316.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/event/1282d75b-88ca-3b70-87fb-8f839e045914>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ffbd4f16-f70b-36f1-b403-90450f4983b7> .
+
+<http://data.silknow.org/image/bd8a889f-33ec-3adf-a5ac-fadec2a8fe28>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/863316_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/11691.jpg> .

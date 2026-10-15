@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b2a1e692-e1ed-3a99-8c67-3c3ec403e9b5> .
+
+<http://data.silknow.org/object/37693065-a7de-342d-ab0c-716cc6f85ab4/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37693065-a7de-342d-ab0c-716cc6f85ab4> .
+
+<https://sws.geonames.org/3176959/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/9b0a9ee2-116c-3b83-be0f-dccb9155f28f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/37693065-a7de-342d-ab0c-716cc6f85ab4> ;
+        ecrm:P126_employed      "fil metàl·lic"@ca ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "vellut tallat llavorat"@ca , "teixit llavorat"@ca , "brocat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404465> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> , <https://sws.geonames.org/3176959/> .
+
+<http://data.silknow.org/event/5d39c945-fd91-3610-af08-7d726fd99a81>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f> ;
+        ecrm:P23_transferred_title_from
+                "Viñas Geis, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/37693065-a7de-342d-ab0c-716cc6f85ab4> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/image/4439ac96-0370-3b69-ad6c-2d929884fdf2>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "pinyes"@ca ;
+        ecrm:P3_has_note  "pinyes"@ca .
+
+<http://data.silknow.org/event/e3b219b0-6af7-349b-9579-dbf786df5906>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/37693065-a7de-342d-ab0c-716cc6f85ab4> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/37693065-a7de-342d-ab0c-716cc6f85ab4>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ef0d8383-6f72-3ab2-ac01-a9b7e18cd54d> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/36a9dabe-6c2a-3b0e-9f58-6cd14755706d> , <http://data.silknow.org/image/6b40f54d-1a4f-3ef1-84c3-d64d6d4a0f56> , <http://data.silknow.org/image/4439ac96-0370-3b69-ad6c-2d929884fdf2> ;
+        dc:identifier                  "3990" .
+
+<http://data.silknow.org/image/ef0d8383-6f72-3ab2-ac01-a9b7e18cd54d>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000030135" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/25611_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000030135.jpg> .
+
+<http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas Geis, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas Geis, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/160946453> , <https://isni.org/isni/0000000108433220> .
+
+<http://data.silknow.org/object/b2a1e692-e1ed-3a99-8c67-3c3ec403e9b5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 25611" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/ef0d8383-6f72-3ab2-ac01-a9b7e18cd54d> , <http://data.silknow.org/production/9b0a9ee2-116c-3b83-be0f-dccb9155f28f> , <http://data.silknow.org/event/e3b219b0-6af7-349b-9579-dbf786df5906> , <http://data.silknow.org/object/37693065-a7de-342d-ab0c-716cc6f85ab4> , <http://data.silknow.org/event/5d39c945-fd91-3610-af08-7d726fd99a81> , <http://data.silknow.org/object/37693065-a7de-342d-ab0c-716cc6f85ab4/category/1> , <http://data.silknow.org/object/37693065-a7de-342d-ab0c-716cc6f85ab4/domain/1> ;
+        dc:identifier       "25611.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/36a9dabe-6c2a-3b0e-9f58-6cd14755706d>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "motius vegetals"@ca ;
+        ecrm:P3_has_note  "motius vegetals"@ca .
+
+<http://data.silknow.org/image/6b40f54d-1a4f-3ef1-84c3-d64d6d4a0f56>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "magranes"@ca ;
+        ecrm:P3_has_note  "magranes"@ca .
+
+<http://data.silknow.org/object/37693065-a7de-342d-ab0c-716cc6f85ab4/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37693065-a7de-342d-ab0c-716cc6f85ab4> .

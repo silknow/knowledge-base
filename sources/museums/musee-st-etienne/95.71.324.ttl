@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/9d87657e-5404-3c06-8c3d-07dd84c8142b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.324_0.jpg> .
+
+<http://data.silknow.org/image/87869bbf-5db2-3036-aee3-d8c3f76f47ab>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "bayadère"@fr ;
+        ecrm:P3_has_note  "bayadère"@fr .
+
+<http://data.silknow.org/assessment/cfa6cb93-2b44-3687-a24a-d2d180b6ffe3/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "pas de défaut d'intégrité"@fr ;
+        ecrm:P2_has_type  "Intégrité" ;
+        ecrm:P3_has_note  "pas de défaut d'intégrité"@fr .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/object/f01c19c1-b1ae-3eb6-9cc5-7bd4e19c7db1>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.324.JPG"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/05944a74-c1ee-3138-938d-7ecdd0c30c11> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.324.JPG"@fr .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1a1b95d5-84c6-31d0-b465-2a645c4b5a00> .
+
+<http://data.silknow.org/object/05944a74-c1ee-3138-938d-7ecdd0c30c11/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/05944a74-c1ee-3138-938d-7ecdd0c30c11> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/event/7dbad66f-ae2d-3307-8513-c8198d6d8723>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/05944a74-c1ee-3138-938d-7ecdd0c30c11> .
+
+<http://data.silknow.org/production/63180e01-1e2c-3c05-b538-d42865a4a3fd>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/05944a74-c1ee-3138-938d-7ecdd0c30c11> .
+
+<http://data.silknow.org/object/05944a74-c1ee-3138-938d-7ecdd0c30c11/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/05944a74-c1ee-3138-938d-7ecdd0c30c11> ;
+        ecrm:P42_assigned    "Rayures bayadères" .
+
+<http://data.silknow.org/assessment/cfa6cb93-2b44-3687-a24a-d2d180b6ffe3>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/05944a74-c1ee-3138-938d-7ecdd0c30c11> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/cfa6cb93-2b44-3687-a24a-d2d180b6ffe3/condition/1> .
+
+<http://data.silknow.org/object/05944a74-c1ee-3138-938d-7ecdd0c30c11>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Rayures bayadères"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9d87657e-5404-3c06-8c3d-07dd84c8142b> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/87869bbf-5db2-3036-aee3-d8c3f76f47ab> ;
+        dc:identifier                  "95.71.324" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/1a1b95d5-84c6-31d0-b465-2a645c4b5a00>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.324" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/05944a74-c1ee-3138-938d-7ecdd0c30c11/type/1> , <http://data.silknow.org/event/7dbad66f-ae2d-3307-8513-c8198d6d8723> , <http://data.silknow.org/image/9d87657e-5404-3c06-8c3d-07dd84c8142b> , <http://data.silknow.org/object/05944a74-c1ee-3138-938d-7ecdd0c30c11> , <http://data.silknow.org/object/f01c19c1-b1ae-3eb6-9cc5-7bd4e19c7db1> , <http://data.silknow.org/production/63180e01-1e2c-3c05-b538-d42865a4a3fd> , <http://data.silknow.org/object/05944a74-c1ee-3138-938d-7ecdd0c30c11/right> , <http://data.silknow.org/assessment/cfa6cb93-2b44-3687-a24a-d2d180b6ffe3> ;
+        dc:identifier       "95.71.324.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .

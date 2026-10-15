@@ -1,0 +1,64 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9dbfd1bf-6f5d-3ff2-9cff-10a35a5cbc8a> .
+
+<http://data.silknow.org/event/ffbd90ff-191b-324f-a9c6-96879ff2e53d>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5f33165e-9bd9-34f0-8c0b-2ee120facd64> .
+
+<http://data.silknow.org/object/5f33165e-9bd9-34f0-8c0b-2ee120facd64>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/28700e7f-0f53-3e2f-9451-187eeb6c84d9> ;
+        dc:identifier                  "15822" .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/5f33165e-9bd9-34f0-8c0b-2ee120facd64/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5f33165e-9bd9-34f0-8c0b-2ee120facd64> .
+
+<http://data.silknow.org/production/c97d8515-9095-3052-8637-9bd1ec46f2ed>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5f33165e-9bd9-34f0-8c0b-2ee120facd64> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca .
+
+<http://data.silknow.org/object/9dbfd1bf-6f5d-3ff2-9cff-10a35a5cbc8a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27059" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/037ef8f9-24f6-3215-8f3c-60d7d26826d6> , <http://data.silknow.org/object/5f33165e-9bd9-34f0-8c0b-2ee120facd64/category/1> , <http://data.silknow.org/object/5f33165e-9bd9-34f0-8c0b-2ee120facd64/domain/1> , <http://data.silknow.org/image/28700e7f-0f53-3e2f-9451-187eeb6c84d9> , <http://data.silknow.org/object/5f33165e-9bd9-34f0-8c0b-2ee120facd64> , <http://data.silknow.org/production/c97d8515-9095-3052-8637-9bd1ec46f2ed> , <http://data.silknow.org/event/ffbd90ff-191b-324f-a9c6-96879ff2e53d> ;
+        dc:identifier       "27059.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/037ef8f9-24f6-3215-8f3c-60d7d26826d6>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5f33165e-9bd9-34f0-8c0b-2ee120facd64> .
+
+<http://data.silknow.org/image/28700e7f-0f53-3e2f-9451-187eeb6c84d9>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000032695" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27059_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000032695.jpg> .
+
+<http://data.silknow.org/object/5f33165e-9bd9-34f0-8c0b-2ee120facd64/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5f33165e-9bd9-34f0-8c0b-2ee120facd64> .

@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/b6b47995-a687-3f3e-909c-f32f03a1e053>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/280295_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT51g4JXwoymT%2fWKfQ6RbXUdJ7U4agc6OjT1g0OfkP8kCUWZaLiJiziqxEuvVPQMvfjO7cpFU3e5oy84l3%2bGdhvv1roxQtAhkIstvvmdSfsFUCwMlR8XNk0fA%3d%3d> .
+
+<http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Lampasso liseré broccato"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f> .
+
+<http://data.silknow.org/event/bebeee04-8163-3e1d-b266-e6e697dc532e>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f> .
+
+<http://data.silknow.org/production/b8749d3a-7d00-3d3c-8206-1a58adfe5951>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1799> .
+
+<http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f> .
+
+<http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "39.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "39.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7998b179-9cb9-3628-beb0-4f7dc15f916f> .
+
+<http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Lampasso liseré broccato"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b6b47995-a687-3f3e-909c-f32f03a1e053> ;
+        ecrm:P3_has_note               "Lampasso liseré broccato"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f/dimension/1> , <http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 1203" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/280295/?WEB=MuseiVE> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/7998b179-9cb9-3628-beb0-4f7dc15f916f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 280295" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/b6b47995-a687-3f3e-909c-f32f03a1e053> , <http://data.silknow.org/event/bebeee04-8163-3e1d-b266-e6e697dc532e> , <http://data.silknow.org/production/b8749d3a-7d00-3d3c-8206-1a58adfe5951> , <http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f/domain/1> , <http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f> , <http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f/observation/1> , <http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f/category/1> ;
+        dc:identifier       "280295.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/43f2fccc-f4b9-3064-9482-378d3a229b1f/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "8.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "8.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

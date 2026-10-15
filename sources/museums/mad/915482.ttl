@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/cb1297f1-5943-3ff5-8992-a9c75b467c3a>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Sonia Delaunay, 1924, manufacture Ferret, Saint-Denis" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c3b9375f-8396-3cc7-beb2-ea10e8ccc76d> ;
+        ecrm:P126_employed      "Crêpe de Chine imprimée à la planche de bois, 3 couleurs"@fr ;
+        ecrm:P3_has_note        "Sonia Delaunay, 1924, manufacture Ferret, Saint-Denis" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1924> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/935264/> .
+
+<http://data.silknow.org/object/c3b9375f-8396-3cc7-beb2-ea10e8ccc76d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "échantillon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c3b9375f-8396-3cc7-beb2-ea10e8ccc76d> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/e266864a-e63d-3b5b-a15a-52d037e9dcf4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 40400.A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/c3b9375f-8396-3cc7-beb2-ea10e8ccc76d/category/1> , <http://data.silknow.org/image/8225ef7a-e664-323d-b309-a7c84915dc18> , <http://data.silknow.org/object/c3b9375f-8396-3cc7-beb2-ea10e8ccc76d> , <http://data.silknow.org/event/e8f4f202-89ea-3990-a056-054aa4c8bceb> , <http://data.silknow.org/production/cb1297f1-5943-3ff5-8992-a9c75b467c3a> ;
+        dc:identifier       "915482.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/e8f4f202-89ea-3990-a056-054aa4c8bceb>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Sonia Delaunay, 1966" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c3b9375f-8396-3cc7-beb2-ea10e8ccc76d> .
+
+<http://data.silknow.org/object/c3b9375f-8396-3cc7-beb2-ea10e8ccc76d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "échantillon, Sonia Delaunay, 1924, manufacture Ferret, Saint-Denis"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8225ef7a-e664-323d-b309-a7c84915dc18> ;
+        dc:identifier                  "40400.A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/915482> .
+
+<https://sws.geonames.org/935264/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e266864a-e63d-3b5b-a15a-52d037e9dcf4> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/c3b9375f-8396-3cc7-beb2-ea10e8ccc76d> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/image/8225ef7a-e664-323d-b309-a7c84915dc18>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/915482_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/e4d097d9-7398-40f9-84a2-94cad638e3ba.jpg> .

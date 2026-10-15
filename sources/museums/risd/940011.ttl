@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/920df41c-f1bd-3341-a68a-30092e29b974>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/5eaa592e-0dc0-3388-81a9-23a9b9544857> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Elliott L. Dow in memory of Emma Eliza Aborn Dow" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/259d3633-e21f-3557-b94c-a219f0b310e3> .
+
+<http://data.silknow.org/actor/5eaa592e-0dc0-3388-81a9-23a9b9544857>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Elliott L. Dow in memory of Emma Eliza Aborn Dow" ;
+        ecrm:P1_is_identified_by  "Gift of Elliott L. Dow in memory of Emma Eliza Aborn Dow" .
+
+<http://data.silknow.org/object/09770fe7-227f-3bc3-9fa5-99009a09a2c0>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "These Golden Arts" , "June 18 - August 14, 1993" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/259d3633-e21f-3557-b94c-a219f0b310e3> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "These Golden Arts" , "June 18 - August 14, 1993" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/these-golden-arts> .
+
+<http://data.silknow.org/object/259d3633-e21f-3557-b94c-a219f0b310e3/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Sampler" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/259d3633-e21f-3557-b94c-a219f0b310e3> .
+
+<http://data.silknow.org/object/259d3633-e21f-3557-b94c-a219f0b310e3/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/259d3633-e21f-3557-b94c-a219f0b310e3> .
+
+<http://data.silknow.org/object/259d3633-e21f-3557-b94c-a219f0b310e3>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "34.790" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/sampler-34790> .
+
+<http://data.silknow.org/production/01ade97e-97aa-30ca-b558-ae7f432eeefa/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/ff3c533e-b380-38a1-94e4-db6a5b4b9759> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/actor/ff3c533e-b380-38a1-94e4-db6a5b4b9759>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Martha Hurst" ;
+        ecrm:P1_is_identified_by  "Martha Hurst" .
+
+<http://data.silknow.org/object/34f06b65-0b6a-347e-9e64-6552ef0e47f0>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 34.790" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/01ade97e-97aa-30ca-b558-ae7f432eeefa> , <http://data.silknow.org/event/5e557197-a3b7-3027-9eca-728c22e87d00> , <http://data.silknow.org/event/920df41c-f1bd-3341-a68a-30092e29b974> , <http://data.silknow.org/object/259d3633-e21f-3557-b94c-a219f0b310e3/domain/1> , <http://data.silknow.org/object/09770fe7-227f-3bc3-9fa5-99009a09a2c0> , <http://data.silknow.org/object/259d3633-e21f-3557-b94c-a219f0b310e3> , <http://data.silknow.org/object/259d3633-e21f-3557-b94c-a219f0b310e3/category/1> ;
+        dc:identifier       "940011.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/production/01ade97e-97aa-30ca-b558-ae7f432eeefa>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/259d3633-e21f-3557-b94c-a219f0b310e3> ;
+        ecrm:P126_employed      "silk; linen"@en , "linen"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> , <http://data.silknow.org/vocabulary/88> , <http://data.silknow.org/vocabulary/236> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1829> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/01ade97e-97aa-30ca-b558-ae7f432eeefa/activity/1> .
+
+<http://data.silknow.org/event/5e557197-a3b7-3027-9eca-728c22e87d00>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/259d3633-e21f-3557-b94c-a219f0b310e3> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/34f06b65-0b6a-347e-9e64-6552ef0e47f0> .

@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "58.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "58.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/0fdcc2f5-55fc-3275-96bb-7a312b670077>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1815_1835> , <http://data.silknow.org/timespan/1835> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/3cb81344-a2a3-3e21-a18b-b59a43952c12> , <https://sws.geonames.org/3017382/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/a138eca4-b547-3b82-a71f-a94a38e3418f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1926.863" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/0fdcc2f5-55fc-3275-96bb-7a312b670077> , <http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3/category/1> , <http://data.silknow.org/event/867d801f-09f4-390c-bf0e-b35dac589fbb> , <http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3/observation/1> , <http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3> , <http://data.silknow.org/image/6454ec89-d046-3141-8d1f-0e181647490b> ;
+        dc:identifier       "29908.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/image/6454ec89-d046-3141-8d1f-0e181647490b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/29908_0.jpg> , <https://www.artic.edu/iiif/2/a560bc14-4cc1-b9e5-16a0-df7273c20630/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, plain weaves and silk, satin weaves; pieced; lined with cotton, plain weave, sized; padded with cotton batting; mounted to cotton, plain weave, sized"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6454ec89-d046-3141-8d1f-0e181647490b> ;
+        ecrm:P3_has_note               "Silk, plain weaves and silk, satin weaves; pieced; lined with cotton, plain weave, sized; padded with cotton batting; mounted to cotton, plain weave, sized"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3/dimension/1> , <http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3/dimension/2> ;
+        dc:identifier                  "1926.863" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/29908/sample-dress-trimming> .
+
+<http://data.silknow.org/event/867d801f-09f4-390c-bf0e-b35dac589fbb>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c5664947-3e6b-3f26-a12b-57361db54f36> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Emily Crane Chadbourne" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3> .
+
+<http://data.silknow.org/place/3cb81344-a2a3-3e21-a18b-b59a43952c12>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "England or France" ;
+        ecrm:P87_is_identified_by  "England or France" .
+
+<http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Sample (Dress Trimming)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3> .
+
+<http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, plain weaves and silk, satin weaves; pieced; lined with cotton, plain weave, sized; padded with cotton batting; mounted to cotton, plain weave, sized"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3> .
+
+<http://data.silknow.org/object/d536cc44-990b-3579-9c30-98bff3c369b3/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "55.25" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "55.25"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a138eca4-b547-3b82-a71f-a94a38e3418f> .
+
+<http://data.silknow.org/actor/c5664947-3e6b-3f26-a12b-57361db54f36>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Emily Crane Chadbourne" ;
+        ecrm:P1_is_identified_by  "Gift of Emily Crane Chadbourne" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000003297576X> .

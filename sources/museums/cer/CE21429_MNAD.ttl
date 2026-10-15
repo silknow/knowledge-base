@@ -1,0 +1,98 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/image/45aa2f75-f3fc-31e3-96ef-0d1128f06655>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE21429" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE21429_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE21429&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "28" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "28"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fragmento de tejido de forma rectangular. Fondo de canutillo rojo entretejido con hilos de plata. Motivos decorativos ejecutados con hilo de plata sobre hilo de seda amarillos, en sombreado."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6> .
+
+<http://data.silknow.org/object/4ffeb216-cb5f-3c24-bd3d-04b163ae7061>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "ARTIÑANO; GALDÁCANO, Pedro Miguel de. Catálogo de la exposición de tejidos españoles anteriores a la introducción del Jacquard. Madrid: 1917. p. 243/ lam. 44; Sociedad Española de Amigos del Arte.  \nMadrid: Artes Gráficas Mateu, [1917]."@es ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "ARTIÑANO; GALDÁCANO, Pedro Miguel de. Catálogo de la exposición de tejidos españoles anteriores a la introducción del Jacquard. Madrid: 1917. p. 243/ lam. 44; Sociedad Española de Amigos del Arte.  \nMadrid: Artes Gráficas Mateu, [1917]."@es .
+
+<http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "21"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragmento de tejido" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6> .
+
+<http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6> .
+
+<http://data.silknow.org/event/943f6532-b623-32e1-bc2d-4e9371e8cf5d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6> .
+
+<http://data.silknow.org/object/a58310d3-7050-3667-b358-d367f9ee2bdc>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE21429" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4ffeb216-cb5f-3c24-bd3d-04b163ae7061> , <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6/observation/2> , <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6/category/1> , <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6/observation/1> , <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6> , <http://data.silknow.org/image/45aa2f75-f3fc-31e3-96ef-0d1128f06655> , <http://data.silknow.org/production/854cbe1d-21a7-3229-949f-cc82217a4623> , <http://data.silknow.org/event/943f6532-b623-32e1-bc2d-4e9371e8cf5d> , <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6/domain/1> , <http://data.silknow.org/event/71a8a7f6-1e19-3124-a64d-698989054143> ;
+        dc:identifier       "CE21429_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/production/854cbe1d-21a7-3229-949f-cc82217a4623>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6> ;
+        ecrm:P126_employed      "Hilo metálico [entorchado dorado.]  Seda [granate]  Lámina metálica [dorada]"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1601_1700> .
+
+<http://data.silknow.org/event/71a8a7f6-1e19-3124-a64d-698989054143>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6> .
+
+<http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Fragmento de tejido de forma rectangular. Fondo de canutillo rojo entretejido con hilos de plata. Motivos decorativos ejecutados con hilo de plata sobre hilo de seda amarillos, en sombreado."@es , "Edad Moderna"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/45aa2f75-f3fc-31e3-96ef-0d1128f06655> ;
+        ecrm:P3_has_note               "Fragmento de tejido de forma rectangular. Fondo de canutillo rojo entretejido con hilos de plata. Motivos decorativos ejecutados con hilo de plata sobre hilo de seda amarillos, en sombreado."@es , "Edad Moderna"@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6/dimension/2> , <http://data.silknow.org/object/3ebbf3c2-79f4-36ba-8638-9a081b6487a6/dimension/1> ;
+        dc:identifier                  "CE21429" .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a58310d3-7050-3667-b358-d367f9ee2bdc> .

@@ -1,0 +1,62 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/e57fea45-e3ed-32cd-804c-63cca00c369e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record BAD 3768 (FF 4.4)" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/423139a2-eff1-3288-b868-f97587f54de8> , <http://data.silknow.org/event/1e73f2a1-a4fa-3ae5-a4a0-ebd62bb140b8> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/03384202-44fa-3286-a340-da87e1b7565a> , <http://data.silknow.org/object/05036804-d1bd-3229-82b2-a15b1eafd5c1> ;
+        dc:identifier       "908885.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/image/03384202-44fa-3286-a340-da87e1b7565a>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908885_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/0aaf775b-8e71-4842-87a9-d1433741d29d.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/2990969/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/423139a2-eff1-3288-b868-f97587f54de8>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Favre-Petitpierre, Nantes, 1772, 1822" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/05036804-d1bd-3229-82b2-a15b1eafd5c1> ;
+        ecrm:P3_has_note        "Favre-Petitpierre, Nantes, 1772, 1822" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1772> , <http://data.silknow.org/timespan/1822> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2990969/> .
+
+<http://data.silknow.org/event/1e73f2a1-a4fa-3ae5-a4a0-ebd62bb140b8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Provenance inconnue, reversement de la Bibliothèque des Arts Décoratifs, 2010" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/05036804-d1bd-3229-82b2-a15b1eafd5c1> .
+
+<http://data.silknow.org/object/05036804-d1bd-3229-82b2-a15b1eafd5c1>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Favre-Petitpierre, Nantes, 1772, 1822"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/03384202-44fa-3286-a340-da87e1b7565a> ;
+        dc:identifier                  "BAD 3768 (FF 4.4)" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908885> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e57fea45-e3ed-32cd-804c-63cca00c369e> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/05036804-d1bd-3229-82b2-a15b1eafd5c1> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

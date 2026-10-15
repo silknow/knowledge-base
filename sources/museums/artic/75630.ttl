@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/2918dd14-2223-390f-80e3-fb02ec0f88e8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://data.silknow.org/timespan/1600> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/actor/505961ac-d362-303c-b3ce-8a161b257f1e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Textile Study Room Sundry Account" ;
+        ecrm:P1_is_identified_by  "Textile Study Room Sundry Account" .
+
+<http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk and gilt-metal-strip-wrapped silk, 4:1 satin damask weave with supplementary brocading wefts"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/718f8b61-931c-3b4c-98f8-c1c0ca3284e8> ;
+        ecrm:P3_has_note               "Silk and gilt-metal-strip-wrapped silk, 4:1 satin damask weave with supplementary brocading wefts"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54/dimension/1> , <http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54/dimension/2> ;
+        dc:identifier                  "1951.252" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/75630/panel> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/event/786ab9ec-4d1e-35cb-b962-8d64e7247252>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/505961ac-d362-303c-b3ce-8a161b257f1e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Textile Study Room Sundry Account" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54> .
+
+<http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "84.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "84.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54> .
+
+<http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "66" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "66"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk and gilt-metal-strip-wrapped silk, 4:1 satin damask weave with supplementary brocading wefts"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54> .
+
+<http://data.silknow.org/image/718f8b61-931c-3b4c-98f8-c1c0ca3284e8>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/75630_0.jpg> , <https://www.artic.edu/iiif/2/7483224f-bb58-9fac-6436-89e4f3a9bf49/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/13b1766c-3e3c-3a14-9d89-051311cdff76> .
+
+<http://data.silknow.org/object/13b1766c-3e3c-3a14-9d89-051311cdff76>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1951.252" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54/observation/1> , <http://data.silknow.org/image/718f8b61-931c-3b4c-98f8-c1c0ca3284e8> , <http://data.silknow.org/event/786ab9ec-4d1e-35cb-b962-8d64e7247252> , <http://data.silknow.org/production/2918dd14-2223-390f-80e3-fb02ec0f88e8> , <http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54> , <http://data.silknow.org/object/2c280534-68f8-3977-a0a3-f8006bf45b54/category/1> ;
+        dc:identifier       "75630.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .

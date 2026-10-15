@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/6d5f42a1-a240-3ed8-bb76-337fb941db59>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "don Leah Liber, 2011" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/dcc85673-1db8-38de-9d73-494e7fb5d860> .
+
+<http://data.silknow.org/object/dcc85673-1db8-38de-9d73-494e7fb5d860>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "France, 1935"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/20ecd342-8da9-39ca-8d5b-989f491e3847> ;
+        dc:identifier                  "2011.132.2.1-4" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909265> .
+
+<http://data.silknow.org/image/20ecd342-8da9-39ca-8d5b-989f491e3847>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909265_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/d98e9851-3e78-414a-ada8-5ba705886e87.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/f6fd71ea-6088-3773-8d0d-95088caccf1a>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1935" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/dcc85673-1db8-38de-9d73-494e7fb5d860> ;
+        ecrm:P126_employed      "Jersey de laine, boucle en ivoire"@fr ;
+        ecrm:P3_has_note        "France, 1935" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1935> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8ffdb037-58b1-35e3-9462-a9e25d3b7136> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/dcc85673-1db8-38de-9d73-494e7fb5d860> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/8ffdb037-58b1-35e3-9462-a9e25d3b7136>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2011.132.2.1-4" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/f6fd71ea-6088-3773-8d0d-95088caccf1a> , <http://data.silknow.org/event/6d5f42a1-a240-3ed8-bb76-337fb941db59> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/20ecd342-8da9-39ca-8d5b-989f491e3847> , <http://data.silknow.org/object/dcc85673-1db8-38de-9d73-494e7fb5d860> ;
+        dc:identifier       "909265.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

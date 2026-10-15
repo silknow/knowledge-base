@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "printed, dyed & painted textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0> .
+
+<http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0> .
+
+<http://data.silknow.org/actor/ee282172-f1aa-32aa-bdb9-7d32a305e5f8>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Henry Sloane" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Henry Sloane" .
+
+<http://data.silknow.org/production/badb0811-fe1b-3f23-b861-d3f6cf7f32e7>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0> ;
+        ecrm:P126_employed      "silk"@en ;
+        ecrm:P32_used_general_technique
+                "resist printed in warp (chiné)"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1876_1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/event/78e38a7b-fb33-3fb1-83a8-00372a6837d5>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/ee282172-f1aa-32aa-bdb9-7d32a305e5f8> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Henry Sloane" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0> .
+
+<http://data.silknow.org/event/72a0780c-5fc7-3715-a7a8-df79315e1358>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/37ea643f-5eec-3966-a9d3-1472994598f6> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/37ea643f-5eec-3966-a9d3-1472994598f6>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1896-21-1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/72a0780c-5fc7-3715-a7a8-df79315e1358> , <http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0> , <http://data.silknow.org/event/78e38a7b-fb33-3fb1-83a8-00372a6837d5> , <http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0/domain/1> , <http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0/category/1> , <http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0/observation/1> , <http://data.silknow.org/image/29405eaa-eac1-39a6-ac6b-28bc2595679c> , <http://data.silknow.org/production/badb0811-fe1b-3f23-b861-d3f6cf7f32e7> ;
+        dc:identifier       "chndm_1896-21-1.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/image/29405eaa-eac1-39a6-ac6b-28bc2595679c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1896-21-1_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-D526770838122-000001> .
+
+<http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Polychrome bouquet of flowers in oval medallion on a yellow and white woven fabric. Fragment probably part of a dress flounce."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/29405eaa-eac1-39a6-ac6b-28bc2595679c> ;
+        ecrm:P3_has_note               "Polychrome bouquet of flowers in oval medallion on a yellow and white woven fabric. Fragment probably part of a dress flounce."@en ;
+        dc:identifier                  "chndm_1896-21-1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1896-21-1> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Polychrome bouquet of flowers in oval medallion on a yellow and white woven fabric. Fragment probably part of a dress flounce."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e5421948-8721-3d4f-afc7-09c9bdb87eb0> .

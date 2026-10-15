@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/2240d756-1010-3b7b-b239-51854f6df6b2>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Jean Beaumont, 1924-1925, Cornille et Cie" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3ab513ef-2e0f-3a90-858b-768a29d9190c> ;
+        ecrm:P126_employed      "Damas bicolore en rayonne jaune et coton ? noir (fil épais et irrégulier)"@fr ;
+        ecrm:P3_has_note        "Jean Beaumont, 1924-1925, Cornille et Cie" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1924_1925> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/46f9743b-6190-3781-bed7-afbdf2365946>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Cornille et Cie, 1926" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3ab513ef-2e0f-3a90-858b-768a29d9190c> .
+
+<http://data.silknow.org/image/7a72ba5b-d7b5-3785-9de7-6fb8c3342182>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/914093_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/028e2268-c808-4917-92f1-a75f5e5a8cb8.jpg> .
+
+<http://data.silknow.org/object/3ab513ef-2e0f-3a90-858b-768a29d9190c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Jean Beaumont, 1924-1925, Cornille et Cie"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7a72ba5b-d7b5-3785-9de7-6fb8c3342182> ;
+        dc:identifier                  "25169" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/914093> .
+
+<http://data.silknow.org/object/3ab513ef-2e0f-3a90-858b-768a29d9190c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3ab513ef-2e0f-3a90-858b-768a29d9190c> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/49e078fc-3013-3b7a-99dc-5a2cb902643c> .
+
+<http://data.silknow.org/object/49e078fc-3013-3b7a-99dc-5a2cb902643c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 25169" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3ab513ef-2e0f-3a90-858b-768a29d9190c> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/2240d756-1010-3b7b-b239-51854f6df6b2> , <http://data.silknow.org/object/3ab513ef-2e0f-3a90-858b-768a29d9190c/category/1> , <http://data.silknow.org/image/7a72ba5b-d7b5-3785-9de7-6fb8c3342182> , <http://data.silknow.org/event/46f9743b-6190-3781-bed7-afbdf2365946> ;
+        dc:identifier       "914093.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/3ab513ef-2e0f-3a90-858b-768a29d9190c> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

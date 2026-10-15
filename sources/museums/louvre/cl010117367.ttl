@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "textile divers" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a> .
+
+<http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Description / Décor" ;
+        ecrm:P3_has_note    "Franges à torsades. Velours de soie cramoisi brodé."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a> .
+
+<http://data.silknow.org/image/0f25cefc-4f7e-3e7e-9b89-36a09021f58c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/louvre/cl010117367_0.jpg> , <https://collections.louvre.fr/media/cache/large/0000000021/0000117367/0000249375_OG.JPG> .
+
+<http://data.silknow.org/production/dc36ae6d-bed2-3b2c-a423-c4339fdb49e2/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/8dbd81b5-e04d-30be-b3e5-fc4a60743f06> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/actor/8dbd81b5-e04d-30be-b3e5-fc4a60743f06>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anonyme" ;
+        ecrm:P1_is_identified_by  "Anonyme" .
+
+<http://data.silknow.org/object/b9b7bfa6-b042-3123-831a-5c61343eea62>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record cl010117367" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a/type/1> , <http://data.silknow.org/production/dc36ae6d-bed2-3b2c-a423-c4339fdb49e2> , <http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a> , <http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a/domain/2> , <http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a/observation/1> , <http://data.silknow.org/collection/b6ebad22-373c-39f2-8cbc-fe59c06527c7> , <http://data.silknow.org/image/0f25cefc-4f7e-3e7e-9b89-36a09021f58c> , <http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a/domain/1> ;
+        dc:identifier       "cl010117367.json" ;
+        dc:publisher        "http://data.silknow.org/organization/louvre" .
+
+<http://data.silknow.org/collection/b6ebad22-373c-39f2-8cbc-fe59c06527c7>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Département des Objets d'art du Moyen Age, de la Renaissance et des temps modernes" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a> ;
+        ecrm:P78_is_identified_by  "Département des Objets d'art du Moyen Age, de la Renaissance et des temps modernes" .
+
+<http://data.silknow.org/production/dc36ae6d-bed2-3b2c-a423-c4339fdb49e2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a> ;
+        ecrm:P126_employed      "techniques textile"@fr , "velours broderie (techniques textile->tissu façonné->velours façonné)"@fr ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1870> , <http://data.silknow.org/timespan/d91feca5-5a7c-325f-aa34-ad02332dad2e> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/dc36ae6d-bed2-3b2c-a423-c4339fdb49e2/activity/1> .
+
+<http://data.silknow.org/louvre>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b9b7bfa6-b042-3123-831a-5c61343eea62> .
+
+<http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Catégorie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a> ;
+        ecrm:P42_assigned    "textile divers" .
+
+<http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "textile divers" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a> .
+
+<http://data.silknow.org/object/4d52b3f0-fa32-35c1-b57f-d14f5b6ca53a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Franges à torsades. Velours de soie cramoisi brodé."@fr ;
+        rdfs:label                     "Grand lambrequin."@fr ;
+        ecrm:P102_has_title            "Grand lambrequin."@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0f25cefc-4f7e-3e7e-9b89-36a09021f58c> ;
+        ecrm:P3_has_note               "Franges à torsades. Velours de soie cramoisi brodé."@fr ;
+        dc:identifier                  "Numéro principal : OA 11473" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.louvre.fr/ark:/53355/cl010117367> .

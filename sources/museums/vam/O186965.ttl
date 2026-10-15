@@ -1,0 +1,104 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "maximum" ;
+        rdfs:label          "Length: 50 cm maximum" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "maximum" ;
+        ecrm:P90_has_value  "50"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/b61a900f-c52b-3845-8f07-16d2a2b24983>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356> .
+
+<http://data.silknow.org/object/12c5e355-a20d-3b56-b7ea-9b662afc4c48>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O186965" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/b61a900f-c52b-3845-8f07-16d2a2b24983> , <http://data.silknow.org/image/fc5f9044-8ca4-3d7f-92fe-347670a5325d> , <http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356/observation/1> , <http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356> , <http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356/observation/2> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/image/33656ace-28d1-3e00-a9aa-45d52413c795> , <http://data.silknow.org/production/0338e69e-3248-3a80-8be5-7e5ed03ff7eb> ;
+        dc:identifier       "O186965.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "embroidered leather, 1840-1869, Persian"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "maximum when open" ;
+        rdfs:label          "Width: 32.5 cm maximum when open" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "maximum when open" ;
+        ecrm:P90_has_value  "32.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/33656ace-28d1-3e00-a9aa-45d52413c795>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2009CR5333" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O186965_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2009CR/2009CR5333.jpg> .
+
+<http://data.silknow.org/production/0338e69e-3248-3a80-8be5-7e5ed03ff7eb>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356> ;
+        ecrm:P126_employed      "leather, copper, silk thread, weaving, embroidering, sewing"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1880> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/image/fc5f9044-8ca4-3d7f-92fe-347670a5325d>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2009CR5325" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O186965_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2009CR/2009CR5325.jpg> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/12c5e355-a20d-3b56-b7ea-9b662afc4c48> .
+
+<http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "embroidered leather, 1840-1869, Persian"@en , "Right-hand gauntlet, of the type probably used for hawing, leather with silk velvet, metal studs, applied velvet and trimmed with silk tablet-woven braid, fastening with metal buckles.\nDescribed open; the inside shows it is made from one piece of leather.  The central area can best be described like the sole of a large shoe - curved at the top [like the heel of a shoe] and pointed at the bottom [like the toes of a shoe].  There is a small section at the top right which is curved at the top and straight at the bottom.  A horizontal strap of leather has been attached across it to secure the wearer's thumb and a broader strap is in the curved part of the main section for the fingers. Half way down the left hand side the piece extends to form a rectangular flap.  There are 4 metal buckles along its edge and 4 leather straps along the right hand side. The edges are bound with tablet-woven silk braid with three stripes: black and white undulations, fine pink and green bands and brown and yellow dots.\nThe front is black silk velvet with a scale-like design worked in copper-headed nails which have been hammered in - some have worked loose along the horizontal red bar which runs across the width about a third of the way down.  This bar is formed by a thick cotton cord wrapped in leather and then reed velvet.  Black circles of velvet have been secured beneath four nails. Small red velvet circles have been secured in the same way in the border which divides the scale pattern into three sections."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/33656ace-28d1-3e00-a9aa-45d52413c795> , <http://data.silknow.org/image/fc5f9044-8ca4-3d7f-92fe-347670a5325d> ;
+        ecrm:P3_has_note               "Right-hand gauntlet, of the type probably used for hawing, leather with silk velvet, metal studs, applied velvet and trimmed with silk tablet-woven braid, fastening with metal buckles.\nDescribed open; the inside shows it is made from one piece of leather.  The central area can best be described like the sole of a large shoe - curved at the top [like the heel of a shoe] and pointed at the bottom [like the toes of a shoe].  There is a small section at the top right which is curved at the top and straight at the bottom.  A horizontal strap of leather has been attached across it to secure the wearer's thumb and a broader strap is in the curved part of the main section for the fingers. Half way down the left hand side the piece extends to form a rectangular flap.  There are 4 metal buckles along its edge and 4 leather straps along the right hand side. The edges are bound with tablet-woven silk braid with three stripes: black and white undulations, fine pink and green bands and brown and yellow dots.\nThe front is black silk velvet with a scale-like design worked in copper-headed nails which have been hammered in - some have worked loose along the horizontal red bar which runs across the width about a third of the way down.  This bar is formed by a thick cotton cord wrapped in leather and then reed velvet.  Black circles of velvet have been secured beneath four nails. Small red velvet circles have been secured in the same way in the border which divides the scale pattern into three sections."@en , "embroidered leather, 1840-1869, Persian"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356/dimension/1> , <http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356/dimension/2> ;
+        dc:identifier                  "536B-1888" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O186965> .
+
+<http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Gauntlet" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356> .
+
+<http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Right-hand gauntlet, of the type probably used for hawing, leather with silk velvet, metal studs, applied velvet and trimmed with silk tablet-woven braid, fastening with metal buckles.\nDescribed open; the inside shows it is made from one piece of leather.  The central area can best be described like the sole of a large shoe - curved at the top [like the heel of a shoe] and pointed at the bottom [like the toes of a shoe].  There is a small section at the top right which is curved at the top and straight at the bottom.  A horizontal strap of leather has been attached across it to secure the wearer's thumb and a broader strap is in the curved part of the main section for the fingers. Half way down the left hand side the piece extends to form a rectangular flap.  There are 4 metal buckles along its edge and 4 leather straps along the right hand side. The edges are bound with tablet-woven silk braid with three stripes: black and white undulations, fine pink and green bands and brown and yellow dots.\nThe front is black silk velvet with a scale-like design worked in copper-headed nails which have been hammered in - some have worked loose along the horizontal red bar which runs across the width about a third of the way down.  This bar is formed by a thick cotton cord wrapped in leather and then reed velvet.  Black circles of velvet have been secured beneath four nails. Small red velvet circles have been secured in the same way in the border which divides the scale pattern into three sections."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356> .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/181c33e1-e12b-3bbb-93d5-19a7ce27d356> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .

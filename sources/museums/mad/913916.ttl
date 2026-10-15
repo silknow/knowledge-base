@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/76af8110-65cb-3081-8ef9-e8109c9331be>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/913916_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/74f43b34-1a74-4be7-b9ef-5713f6087a42.jpg> .
+
+<http://data.silknow.org/object/586e5884-27d7-3476-acf7-67b452b8383f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Félix Aubert, 1900 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/76af8110-65cb-3081-8ef9-e8109c9331be> ;
+        dc:identifier                  "10696" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/913916> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/c14619cc-a83c-3b4f-a252-9d3aa64702f0>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Félix Aubert, 1900 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/586e5884-27d7-3476-acf7-67b452b8383f> ;
+        ecrm:P126_employed      "Velours ciselé fond satin."@fr ;
+        ecrm:P3_has_note        "Félix Aubert, 1900 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/dc4b0a3f-7e03-3a58-a6ee-2687e672a33e> .
+
+<http://data.silknow.org/object/dcd59a9c-ce34-3102-abd9-658df48e1a97>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10696" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/586e5884-27d7-3476-acf7-67b452b8383f/category/1> , <http://data.silknow.org/production/c14619cc-a83c-3b4f-a252-9d3aa64702f0> , <http://data.silknow.org/image/76af8110-65cb-3081-8ef9-e8109c9331be> , <http://data.silknow.org/event/fae46b2a-f7a9-34c4-a85c-7a78dbc03430> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/586e5884-27d7-3476-acf7-67b452b8383f> ;
+        dc:identifier       "913916.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/event/fae46b2a-f7a9-34c4-a85c-7a78dbc03430>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1903" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/586e5884-27d7-3476-acf7-67b452b8383f> .
+
+<http://data.silknow.org/object/586e5884-27d7-3476-acf7-67b452b8383f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/586e5884-27d7-3476-acf7-67b452b8383f> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dcd59a9c-ce34-3102-abd9-658df48e1a97> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/586e5884-27d7-3476-acf7-67b452b8383f> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

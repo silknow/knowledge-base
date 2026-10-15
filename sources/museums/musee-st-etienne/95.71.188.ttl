@@ -1,0 +1,97 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/image/f73f379c-555b-3c40-8e4c-0e53a567e811>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.188_0.jpg> .
+
+<http://data.silknow.org/assessment/90e71b32-dc7a-3daf-bf4a-3ed243693d6c/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "pas de défaut d'intégrité"@fr ;
+        ecrm:P2_has_type  "Intégrité" ;
+        ecrm:P3_has_note  "pas de défaut d'intégrité"@fr .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f6a9c3a9-0355-3db1-a9f0-c0144dc12979> .
+
+<http://data.silknow.org/object/4d8d8a32-a5b2-3567-92ac-f03916c3f276>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/cdfc50fc-551f-3684-99ff-8406b22b0fc7> .
+
+<http://data.silknow.org/event/63986a51-50a7-3f3c-80c0-4d0bf81749d7>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71> .
+
+<http://data.silknow.org/object/d1fc0389-0c34-3b4b-b517-ddd84c8a6602>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/8789572d-394b-3490-b31c-fd78db7cc2bd> .
+
+<http://data.silknow.org/assessment/90e71b32-dc7a-3daf-bf4a-3ed243693d6c>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/90e71b32-dc7a-3daf-bf4a-3ed243693d6c/condition/1> .
+
+<http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71> ;
+        ecrm:P42_assigned    "Feuillage" .
+
+<http://data.silknow.org/object/764ddaed-033b-38d9-8679-8fbff8ee6634>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Saint-Etienne\", Edition Gakken, Japon, 1981, 221 pages,"@fr , "Studio Caterin"@fr , "95.71.188.JPG"@fr , "Rubans français au Musée d'Art et d'Industrie de"@fr , "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Saint-Etienne\", Edition Gakken, Japon, 1981, 221 pages,"@fr , "95.71.188.JPG"@fr , "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Rubans français au Musée d'Art et d'Industrie de"@fr , "Studio Caterin"@fr .
+
+<http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/object/34f0e608-54e0-347a-9849-940e798f53b3>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/df2068b6-e670-3f51-a6bc-633552c0ff93> .
+
+<http://data.silknow.org/object/f6a9c3a9-0355-3db1-a9f0-c0144dc12979>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.188" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/764ddaed-033b-38d9-8679-8fbff8ee6634> , <http://data.silknow.org/assessment/90e71b32-dc7a-3daf-bf4a-3ed243693d6c> , <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71/type/1> , <http://data.silknow.org/production/e5f11970-1fa0-3d82-8c7f-c5a3f0617ef2> , <http://data.silknow.org/object/4d8d8a32-a5b2-3567-92ac-f03916c3f276> , <http://data.silknow.org/object/e5ece184-9319-3cbe-a42f-685816315b6b> , <http://data.silknow.org/event/63986a51-50a7-3f3c-80c0-4d0bf81749d7> , <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71/right> , <http://data.silknow.org/image/f73f379c-555b-3c40-8e4c-0e53a567e811> , <http://data.silknow.org/object/34f0e608-54e0-347a-9849-940e798f53b3> , <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71> , <http://data.silknow.org/object/d1fc0389-0c34-3b4b-b517-ddd84c8a6602> ;
+        dc:identifier       "95.71.188.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/object/e5ece184-9319-3cbe-a42f-685816315b6b>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/e67f1128-ac68-3d02-b339-aa64307ab4bc> .
+
+<http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Feuillage"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f73f379c-555b-3c40-8e4c-0e53a567e811> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/763> ;
+        dc:identifier                  "95.71.188" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/production/e5f11970-1fa0-3d82-8c7f-c5a3f0617ef2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0359a4a4-01d2-3c21-8cc3-deaa27f3aa71> .

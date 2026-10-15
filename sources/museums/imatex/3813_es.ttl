@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6570ba3a-a664-3ff9-b9f1-3b752b9aed54> .
+
+<http://data.silknow.org/object/9f27b3e2-a79f-351b-ab6e-d0a3c81cdf58/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9f27b3e2-a79f-351b-ab6e-d0a3c81cdf58> .
+
+<http://data.silknow.org/actor/94c96fbe-920b-3d40-81f0-62d41e8bad0b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Rocamora Vidal, Manel" ;
+        ecrm:P1_is_identified_by  "Rocamora Vidal, Manel" .
+
+<http://data.silknow.org/object/9f27b3e2-a79f-351b-ab6e-d0a3c81cdf58/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9f27b3e2-a79f-351b-ab6e-d0a3c81cdf58> .
+
+<http://data.silknow.org/production/5cbdcea7-2274-3af4-979f-8edd4156a88f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9f27b3e2-a79f-351b-ab6e-d0a3c81cdf58> ;
+        ecrm:P126_employed      "... sin confirmar"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/214> ;
+        ecrm:P32_used_general_technique
+                "trama llançada"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/103> , <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1551_1600> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> , <https://sws.geonames.org/2510769/> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/5794c3e7-707d-3ba7-b232-a0e8ad3648d7>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9f27b3e2-a79f-351b-ab6e-d0a3c81cdf58> .
+
+<http://data.silknow.org/image/e834f512-14b3-3f59-b1bb-dd895dcabd3e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000000868" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/3813_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000000868.jpg> .
+
+<http://data.silknow.org/object/6570ba3a-a664-3ff9-b9f1-3b752b9aed54>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 3813" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/6a59bc3a-636b-35bf-89cc-86c79b7461e2> , <http://data.silknow.org/object/9f27b3e2-a79f-351b-ab6e-d0a3c81cdf58/domain/1> , <http://data.silknow.org/object/9f27b3e2-a79f-351b-ab6e-d0a3c81cdf58> , <http://data.silknow.org/image/e834f512-14b3-3f59-b1bb-dd895dcabd3e> , <http://data.silknow.org/event/5794c3e7-707d-3ba7-b232-a0e8ad3648d7> , <http://data.silknow.org/production/5cbdcea7-2274-3af4-979f-8edd4156a88f> , <http://data.silknow.org/event/ffee8774-23ea-3572-af19-54d5e43f3219> , <http://data.silknow.org/object/9f27b3e2-a79f-351b-ab6e-d0a3c81cdf58/category/1> ;
+        dc:identifier       "3813.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/event/ffee8774-23ea-3572-af19-54d5e43f3219>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/94c96fbe-920b-3d40-81f0-62d41e8bad0b> ;
+        ecrm:P23_transferred_title_from
+                "Rocamora Vidal, Manel" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9f27b3e2-a79f-351b-ab6e-d0a3c81cdf58> ;
+        ecrm:P3_has_note               "donacions" .
+
+<http://data.silknow.org/image/6a59bc3a-636b-35bf-89cc-86c79b7461e2>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000000869" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/3813_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000000869.jpg> .
+
+<http://data.silknow.org/object/9f27b3e2-a79f-351b-ab6e-d0a3c81cdf58>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6a59bc3a-636b-35bf-89cc-86c79b7461e2> , <http://data.silknow.org/image/e834f512-14b3-3f59-b1bb-dd895dcabd3e> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/e92f096f-a383-3968-ab1c-aaad319abda0> , <http://data.silknow.org/vocabulary/750> ;
+        dc:identifier                  "7428" .
+
+<http://data.silknow.org/image/e92f096f-a383-3968-ab1c-aaad319abda0>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "decoración vegetal estilizada"@es ;
+        ecrm:P3_has_note  "decoración vegetal estilizada"@es .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

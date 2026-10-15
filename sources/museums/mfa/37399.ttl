@@ -1,0 +1,106 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/4c446566-5a62-3a05-800b-73c195dc01ed>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562> .
+
+<http://data.silknow.org/production/4cd6ba89-0e73-3725-b36e-6e1df8d1c161>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562> ;
+        ecrm:P126_employed      "Wool and silk tapestry"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3034006/> .
+
+<http://data.silknow.org/event/9b0dfb24-fd29-3287-99b1-8e81c160478d>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/5e8268e2-110c-3636-8fd2-4a0274b6ee96> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "France, Beauvais / Bequest of Mrs. Harriet J. Bradbury" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562> .
+
+<https://sws.geonames.org/3034006/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "South wall, left panel. Tapestry woven panel is one of four panels previously installed in the Salon (Gal D15) prior to its restoration in 1996. The panels had been displayed since the gallery opened in 1924. Four panels ( 30.479-82) were deinstalled in March 1996.  This panel depicts several figures, including a woman driving sheep, a man with a bundle on his back, and a horse laden with baskets. Foliage frames the scene, and a trophy of a basket of flowers hangs from a ribbon, descending between garlands at the top center of the panel. Tapestry has wool and silk wefts woven on wool warps. Silk wefts are used for the expanse of sky and highlights throughout the scene."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e566a663-6812-3432-b5a5-aa152fb20df7> ;
+        ecrm:P3_has_note               "South wall, left panel. Tapestry woven panel is one of four panels previously installed in the Salon (Gal D15) prior to its restoration in 1996. The panels had been displayed since the gallery opened in 1924. Four panels ( 30.479-82) were deinstalled in March 1996.  This panel depicts several figures, including a woman driving sheep, a man with a bundle on his back, and a horse laden with baskets. Foliage frames the scene, and a trophy of a basket of flowers hangs from a ribbon, descending between garlands at the top center of the panel. Tapestry has wool and silk wefts woven on wool warps. Silk wefts are used for the expanse of sky and highlights throughout the scene."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562/dimension/2> , <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562/dimension/1> ;
+        dc:identifier                  "30.481" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/37399> .
+
+<http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "243.84" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "243.84"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/5e8268e2-110c-3636-8fd2-4a0274b6ee96>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "France, Beauvais / Bequest of Mrs. Harriet J. Bradbury" ;
+        ecrm:P1_is_identified_by  "France, Beauvais / Bequest of Mrs. Harriet J. Bradbury" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/image/e566a663-6812-3432-b5a5-aa152fb20df7>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "822020" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/37399_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/822020/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "154.94" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "154.94"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "South wall, left panel. Tapestry woven panel is one of four panels previously installed in the Salon (Gal D15) prior to its restoration in 1996. The panels had been displayed since the gallery opened in 1924. Four panels ( 30.479-82) were deinstalled in March 1996.  This panel depicts several figures, including a woman driving sheep, a man with a bundle on his back, and a horse laden with baskets. Foliage frames the scene, and a trophy of a basket of flowers hangs from a ribbon, descending between garlands at the top center of the panel. Tapestry has wool and silk wefts woven on wool warps. Silk wefts are used for the expanse of sky and highlights throughout the scene."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d7e96b76-d07e-32d4-8daa-c23aadde06fa> .
+
+<http://data.silknow.org/object/d7e96b76-d07e-32d4-8daa-c23aadde06fa>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 30.481" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562> , <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562/category/1> , <http://data.silknow.org/event/4c446566-5a62-3a05-800b-73c195dc01ed> , <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562/domain/1> , <http://data.silknow.org/production/4cd6ba89-0e73-3725-b36e-6e1df8d1c161> , <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562/observation/1> , <http://data.silknow.org/event/9b0dfb24-fd29-3287-99b1-8e81c160478d> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/e566a663-6812-3432-b5a5-aa152fb20df7> ;
+        dc:identifier       "37399.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Shepherds in Landscape" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562> .
+
+<http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/99e7745d-0a20-3497-9d76-7a261cc2d562> .

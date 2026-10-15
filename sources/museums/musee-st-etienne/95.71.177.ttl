@@ -1,0 +1,64 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/event/68ce1781-af4e-3602-9a9b-8e73bb2768c1>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/81d1eafc-fcde-3f1d-a735-e8e9f0dfe255> .
+
+<http://data.silknow.org/object/81d1eafc-fcde-3f1d-a735-e8e9f0dfe255/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/81d1eafc-fcde-3f1d-a735-e8e9f0dfe255> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4e701105-2956-34b8-bab4-686a6f7afdeb> .
+
+<http://data.silknow.org/object/81d1eafc-fcde-3f1d-a735-e8e9f0dfe255>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/783f4104-6eda-3fd0-b5a1-3410dcd56f9f> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/750> , <http://data.silknow.org/image/3c2234e1-174e-3976-bdec-137d051842ad> , <http://data.silknow.org/vocabulary/785> ;
+        dc:identifier                  "95.71.177" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/production/420363c0-6138-3578-800e-4e76664446a7>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/81d1eafc-fcde-3f1d-a735-e8e9f0dfe255> .
+
+<http://data.silknow.org/object/aee326e1-b787-392a-b935-92408d312245>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "Saint-Etienne\", Edition Gakken, Japon, 1981, 221 pages,"@fr , "Rubans français au Musée d'Art et d'Industrie de"@fr , "95.71.177.jpg"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/81d1eafc-fcde-3f1d-a735-e8e9f0dfe255> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Saint-Etienne\", Edition Gakken, Japon, 1981, 221 pages,"@fr , "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "95.71.177.jpg"@fr , "Rubans français au Musée d'Art et d'Industrie de"@fr , "Studio Caterin"@fr .
+
+<http://data.silknow.org/image/783f4104-6eda-3fd0-b5a1-3410dcd56f9f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.177_0.jpg> .
+
+<http://data.silknow.org/object/4e701105-2956-34b8-bab4-686a6f7afdeb>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.177" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/aee326e1-b787-392a-b935-92408d312245> , <http://data.silknow.org/object/81d1eafc-fcde-3f1d-a735-e8e9f0dfe255/right> , <http://data.silknow.org/event/68ce1781-af4e-3602-9a9b-8e73bb2768c1> , <http://data.silknow.org/production/420363c0-6138-3578-800e-4e76664446a7> , <http://data.silknow.org/image/783f4104-6eda-3fd0-b5a1-3410dcd56f9f> , <http://data.silknow.org/object/81d1eafc-fcde-3f1d-a735-e8e9f0dfe255> ;
+        dc:identifier       "95.71.177.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/image/3c2234e1-174e-3976-bdec-137d051842ad>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "bouton (fleur en)"@fr ;
+        ecrm:P3_has_note  "bouton (fleur en)"@fr .

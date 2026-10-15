@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/005e19f9-0ba4-3084-873f-4576aa3c3eca>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1500_1599> .
+
+<http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "200" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "200"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/3141ff28-36c7-33f0-8b8b-33d48410791e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/9696_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5izEmtoZHHXl320eSuhIoNYT7l1Ail2gJMUD2LU5sRa6LWybGhteGz10hpQxrWNGalyGiWcQXWM4y1nJ4EDs%2bDOX2KTXMHkFD3yw58y0gDtw9Wn0wY5X%2f6w%3d%3d> .
+
+<http://data.silknow.org/object/15a58ebc-cd07-3330-9731-7cf829791ffd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 9696" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/005e19f9-0ba4-3084-873f-4576aa3c3eca> , <http://data.silknow.org/event/a904ad1f-bfed-3753-9ce7-4807160e1fc4> , <http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6/category/1> , <http://data.silknow.org/image/3141ff28-36c7-33f0-8b8b-33d48410791e> , <http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6/domain/1> , <http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6> , <http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6/observation/1> ;
+        dc:identifier       "9696.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/event/a904ad1f-bfed-3753-9ce7-4807160e1fc4>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6> .
+
+<http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6> .
+
+<http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto operato" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6> .
+
+<http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Laminato. Su fondo verde motivo vegetale fittissimo e minuto a piccolo \"fiorone\" o palmetta centrale con quattro elementi geometrici, formanti losanga, in oro."@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/15a58ebc-cd07-3330-9731-7cf829791ffd> .
+
+<http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Laminato. Su fondo verde motivo vegetale fittissimo e minuto a piccolo \"fiorone\" o palmetta centrale con quattro elementi geometrici, formanti losanga, in oro."@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3141ff28-36c7-33f0-8b8b-33d48410791e> ;
+        ecrm:P3_has_note               "Laminato. Su fondo verde motivo vegetale fittissimo e minuto a piccolo \"fiorone\" o palmetta centrale con quattro elementi geometrici, formanti losanga, in oro."@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6/dimension/1> , <http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6/dimension/2> ;
+        dc:identifier                  "0698" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/9696/?WEB=MuseiVE> .
+
+<http://data.silknow.org/object/169cae10-b982-35f8-a018-84e421369bb6/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "160" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "160"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .

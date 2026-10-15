@@ -1,0 +1,108 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/dfb1e6cb-e4c4-374d-84f8-897d479d7163>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c> ;
+        ecrm:P126_employed      "Fringe, silk, braid"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 9.25 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "23.495"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Fringe of plain silk, 3-ply, cut from pale blue braid of 2/10\" deep. With a sparse cover of 'fly' fringe tied on a more vivid blue silk, sewn through the braid."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Depth: 2.75 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/depth> ;
+        ecrm:P90_has_value  "6.985"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Blue silk fringe, France, 18th century"@en , "Fringe of plain silk, 3-ply, cut from pale blue braid of 2/10\" deep. With a sparse cover of 'fly' fringe tied on a more vivid blue silk, sewn through the braid."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6c9f27ff-b1de-3f32-b77f-5d6e9a45e444> ;
+        ecrm:P3_has_note               "Blue silk fringe, France, 18th century"@en , "Fringe of plain silk, 3-ply, cut from pale blue braid of 2/10\" deep. With a sparse cover of 'fly' fringe tied on a more vivid blue silk, sewn through the braid."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c/dimension/1> , <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c/dimension/2> ;
+        dc:identifier                  "T.165-1970" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O357835> .
+
+<http://data.silknow.org/actor/157f1e34-768c-3bb8-bb68-bb139843612c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Mr J. B. Fowler" ;
+        ecrm:P1_is_identified_by  "Given by Mr J. B. Fowler" .
+
+<http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c> .
+
+<http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fringe" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c> .
+
+<http://data.silknow.org/image/6c9f27ff-b1de-3f32-b77f-5d6e9a45e444>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019LM0937" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O357835_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2019LM/2019LM0937.jpg> .
+
+<http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Blue silk fringe, France, 18th century"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f77fa597-b580-322f-8a98-e51fa0d6f7b9> .
+
+<http://data.silknow.org/object/f77fa597-b580-322f-8a98-e51fa0d6f7b9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O357835" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c/domain/1> , <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c> , <http://data.silknow.org/production/dfb1e6cb-e4c4-374d-84f8-897d479d7163> , <http://data.silknow.org/image/6c9f27ff-b1de-3f32-b77f-5d6e9a45e444> , <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c/observation/2> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/event/7c3c85a7-2ba3-3660-81d0-a2025794a968> , <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c/observation/1> ;
+        dc:identifier       "O357835.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/event/7c3c85a7-2ba3-3660-81d0-a2025794a968>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/157f1e34-768c-3bb8-bb68-bb139843612c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Mr J. B. Fowler." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7f1dd251-636a-3277-acb1-280e8d85369c> .

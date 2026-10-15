@@ -1,0 +1,110 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/fb66445a-5bff-3368-9a78-da58ad2f2578>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb> ;
+        ecrm:P126_employed      "cotton; silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/617> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1982> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/fb66445a-5bff-3368-9a78-da58ad2f2578/activity/1> .
+
+<http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "69.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "69.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb> .
+
+<http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "259.1" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "259.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/f8a43676-bf15-34a9-bc6f-16f75b710b4f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/877241_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/18867.jpg> .
+
+<http://data.silknow.org/object/4574ba01-1c18-3846-a261-2817b9460ed5>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Contemporary Decorative Arts from the Permanent Collection" , "July 7 - October 22, 1995" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "Contemporary Decorative Arts from the Permanent Collection" , "July 7 - October 22, 1995" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/contemporary-decorative-arts-permanent-collection> .
+
+<http://data.silknow.org/production/fb66445a-5bff-3368-9a78-da58ad2f2578/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/878218a9-421d-3629-8c55-9ff3264a69c7> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/event/708dee9e-05af-3bf3-9960-e7d98d9c6770>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb> .
+
+<http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Seascape" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/378aa452-d222-329e-8d35-a5ba2d8f6845> .
+
+<http://data.silknow.org/event/235f8f09-77b8-3c38-96b6-15ef9d4d3ab8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/d71bb637-05ee-37c7-ab57-5b24c4a001a8> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Maria Tulokas" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb> .
+
+<http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f8a43676-bf15-34a9-bc6f-16f75b710b4f> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb/dimension/2> , <http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb/dimension/1> ;
+        dc:identifier                  "1990.068" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/seascape-1990068> .
+
+<http://data.silknow.org/object/378aa452-d222-329e-8d35-a5ba2d8f6845>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1990.068" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/708dee9e-05af-3bf3-9960-e7d98d9c6770> , <http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb> , <http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb/domain/1> , <http://data.silknow.org/image/f8a43676-bf15-34a9-bc6f-16f75b710b4f> , <http://data.silknow.org/object/9a1ec321-068b-30e9-a1eb-711792d818bb/category/1> , <http://data.silknow.org/production/fb66445a-5bff-3368-9a78-da58ad2f2578> , <http://data.silknow.org/event/235f8f09-77b8-3c38-96b6-15ef9d4d3ab8> , <http://data.silknow.org/object/4574ba01-1c18-3846-a261-2817b9460ed5> ;
+        dc:identifier       "877241.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/d71bb637-05ee-37c7-ab57-5b24c4a001a8>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Maria Tulokas" ;
+        ecrm:P1_is_identified_by  "Gift of Maria Tulokas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000084439387> .
+
+<http://data.silknow.org/actor/878218a9-421d-3629-8c55-9ff3264a69c7>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Maria Tulokas" ;
+        ecrm:P1_is_identified_by  "Maria Tulokas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000084439387> .

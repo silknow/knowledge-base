@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/701187be-0322-3ecf-b0ae-2e4c4990886e>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff> .
+
+<http://data.silknow.org/production/0d2833e4-935d-3d32-9f3d-2c81b30ef38d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff> ;
+        ecrm:P126_employed      "silk"@en ;
+        ecrm:P32_used_general_technique
+                "warp-faced plain weave with supplementary warp floats (background) and supplementary weft"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1825> .
+
+<http://data.silknow.org/image/65d02477-6860-327e-97d2-82dd7fdee11b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1968-87-5_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-9CED356167DB2-000001> .
+
+<http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Nineteenth century machine-made copy of Louis XV-style fabric. Cream ribbed silk with wavy S-shaped ribbons and brocaded floral clusters in several color combinations: red, pink and green; yellow, cream and brown; and yellow and white. Scattered buds throughout in yellow and coral."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff> .
+
+<http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/aeae37f8-08eb-35dd-b8d6-c0dc520dc055> .
+
+<http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff> .
+
+<http://data.silknow.org/object/aeae37f8-08eb-35dd-b8d6-c0dc520dc055>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1968-87-5" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/0d2833e4-935d-3d32-9f3d-2c81b30ef38d> , <http://data.silknow.org/event/701187be-0322-3ecf-b0ae-2e4c4990886e> , <http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff> , <http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff/observation/1> , <http://data.silknow.org/event/da8ff453-0b1f-3a12-aebc-35fdeaaaab19> , <http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff/category/1> , <http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff/domain/1> , <http://data.silknow.org/image/65d02477-6860-327e-97d2-82dd7fdee11b> ;
+        dc:identifier       "chndm_1968-87-5.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/actor/a6e52294-cdd7-3f8d-b94a-b31bff3e67ed>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Harvey Smith" ;
+        ecrm:P1_is_identified_by  "Gift of Harvey Smith" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Harvey_S._Ladew> , <https://viaf.org/viaf/95696163> , <https://isni.org/isni/0000000122136572> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Harvey_S._Ladew> .
+
+<http://data.silknow.org/event/da8ff453-0b1f-3a12-aebc-35fdeaaaab19>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a6e52294-cdd7-3f8d-b94a-b31bff3e67ed> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Harvey Smith" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/77a5e39a-fd63-3054-b8d0-27e54be551ff>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Nineteenth century machine-made copy of Louis XV-style fabric. Cream ribbed silk with wavy S-shaped ribbons and brocaded floral clusters in several color combinations: red, pink and green; yellow, cream and brown; and yellow and white. Scattered buds throughout in yellow and coral."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/65d02477-6860-327e-97d2-82dd7fdee11b> ;
+        ecrm:P3_has_note               "Nineteenth century machine-made copy of Louis XV-style fabric. Cream ribbed silk with wavy S-shaped ribbons and brocaded floral clusters in several color combinations: red, pink and green; yellow, cream and brown; and yellow and white. Scattered buds throughout in yellow and coral."@en ;
+        dc:identifier                  "chndm_1968-87-5" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1968-87-5> .

@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/256a257c-b722-3c82-84a2-37149568d34f>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1700-1730, Louis XIV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a43358e1-884c-3a70-8c6b-266dc5adee4c> ;
+        ecrm:P126_employed      "Lampas fond satin, liseré, broché soie, et filé argent"@fr ;
+        ecrm:P3_has_note        "France, 1700-1730, Louis XIV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1700_1730> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/ff3bfe30-4f13-3b9d-bf01-c36779f0f10a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 15834" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/7c7361b9-2883-3a6d-acc7-71da0696dbc5> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/a43358e1-884c-3a70-8c6b-266dc5adee4c/category/1> , <http://data.silknow.org/production/256a257c-b722-3c82-84a2-37149568d34f> , <http://data.silknow.org/object/a43358e1-884c-3a70-8c6b-266dc5adee4c> , <http://data.silknow.org/image/b65c7f9d-2734-3b9b-92b9-f0ab6411e2da> ;
+        dc:identifier       "910043.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/a43358e1-884c-3a70-8c6b-266dc5adee4c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1700-1730, Louis XIV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b65c7f9d-2734-3b9b-92b9-f0ab6411e2da> ;
+        dc:identifier                  "15834" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910043> .
+
+<http://data.silknow.org/image/b65c7f9d-2734-3b9b-92b9-f0ab6411e2da>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910043_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/fb7710c4-11e7-409b-91f4-7b4438f020b5.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ff3bfe30-4f13-3b9d-bf01-c36779f0f10a> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/a43358e1-884c-3a70-8c6b-266dc5adee4c> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/event/7c7361b9-2883-3a6d-acc7-71da0696dbc5>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don MM. Charnoz et Amouroux, 1909" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a43358e1-884c-3a70-8c6b-266dc5adee4c> .
+
+<http://data.silknow.org/object/a43358e1-884c-3a70-8c6b-266dc5adee4c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a43358e1-884c-3a70-8c6b-266dc5adee4c> .

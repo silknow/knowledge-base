@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/407de85e-1786-3e4c-bada-9494cee577d7/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/407de85e-1786-3e4c-bada-9494cee577d7> ;
+        ecrm:P42_assigned    "Escapulario" .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8b03295f-36c0-3b66-8984-1e1cff83fa39> .
+
+<http://data.silknow.org/production/bb1e87dc-3959-31f4-96d5-c222ad16f104>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/407de85e-1786-3e4c-bada-9494cee577d7> ;
+        ecrm:P126_employed      "Terciopelo. Hilo de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Bordado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/bb1e87dc-3959-31f4-96d5-c222ad16f104/activity/1> .
+
+<http://data.silknow.org/image/76fbb710-70ce-3d92-973d-a8599a2d0d90>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.205" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.205_0.jpg> .
+
+<http://data.silknow.org/assessment/d4ba5adc-1af2-362f-87be-edbd3a9dbed8>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/407de85e-1786-3e4c-bada-9494cee577d7> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/d4ba5adc-1af2-362f-87be-edbd3a9dbed8/condition/1> .
+
+<http://data.silknow.org/assessment/d4ba5adc-1af2-362f-87be-edbd3a9dbed8/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .
+
+<http://data.silknow.org/object/407de85e-1786-3e4c-bada-9494cee577d7/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Pertenece a la imagen de Ntra. Sra. del Carmen de la Iglesia de San Agustín."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/407de85e-1786-3e4c-bada-9494cee577d7> .
+
+<http://data.silknow.org/object/407de85e-1786-3e4c-bada-9494cee577d7>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Pertenece a la imagen de Ntra. Sra. del Carmen de la Iglesia de San Agustín."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Escudo carmelita."@es ;
+                                         ecrm:P3_has_note  "Escudo carmelita."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/76fbb710-70ce-3d92-973d-a8599a2d0d90> ;
+        ecrm:P3_has_note               "*Pertenece a la imagen de Ntra. Sra. del Carmen de la Iglesia de San Agustín."@es ;
+        dc:identifier                  "5.205" .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .
+
+<http://data.silknow.org/production/bb1e87dc-3959-31f4-96d5-c222ad16f104/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/8b03295f-36c0-3b66-8984-1e1cff83fa39>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.205" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/407de85e-1786-3e4c-bada-9494cee577d7> , <http://data.silknow.org/object/407de85e-1786-3e4c-bada-9494cee577d7/type/1> , <http://data.silknow.org/image/76fbb710-70ce-3d92-973d-a8599a2d0d90> , <http://data.silknow.org/object/407de85e-1786-3e4c-bada-9494cee577d7/observation/1> , <http://data.silknow.org/production/bb1e87dc-3959-31f4-96d5-c222ad16f104> , <http://data.silknow.org/assessment/d4ba5adc-1af2-362f-87be-edbd3a9dbed8> ;
+        dc:identifier       "5.205.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .

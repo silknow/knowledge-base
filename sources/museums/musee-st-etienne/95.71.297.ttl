@@ -1,0 +1,73 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/77df8cd7-8fb7-3473-9800-3c9b2d78263f/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/77df8cd7-8fb7-3473-9800-3c9b2d78263f> ;
+        ecrm:P42_assigned    "Roses" .
+
+<http://data.silknow.org/object/31eaac9a-6e3f-3fb5-b602-a04d96a6d447>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.297.JPG"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/77df8cd7-8fb7-3473-9800-3c9b2d78263f> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.297.JPG"@fr .
+
+<http://data.silknow.org/event/ed88abb1-2b14-3020-ac74-454ef1bf7039>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/77df8cd7-8fb7-3473-9800-3c9b2d78263f> .
+
+<http://data.silknow.org/object/77df8cd7-8fb7-3473-9800-3c9b2d78263f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Roses"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/16e93393-a99e-39c8-aa73-795fbbee3d41> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/785> , <http://data.silknow.org/image/3c2234e1-174e-3976-bdec-137d051842ad> ;
+        dc:identifier                  "95.71.297" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/709edfc2-f46f-323c-92f7-8e429cd6e064> .
+
+<http://data.silknow.org/production/8e9bcf29-26f1-3a33-9428-cf38b3b03358>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/77df8cd7-8fb7-3473-9800-3c9b2d78263f> ;
+        ecrm:P32_used_general_technique
+                "imprimé sur chaîne"@fr .
+
+<http://data.silknow.org/image/16e93393-a99e-39c8-aa73-795fbbee3d41>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.297_0.jpg> .
+
+<http://data.silknow.org/object/709edfc2-f46f-323c-92f7-8e429cd6e064>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.297" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/31eaac9a-6e3f-3fb5-b602-a04d96a6d447> , <http://data.silknow.org/object/77df8cd7-8fb7-3473-9800-3c9b2d78263f/type/1> , <http://data.silknow.org/image/16e93393-a99e-39c8-aa73-795fbbee3d41> , <http://data.silknow.org/event/ed88abb1-2b14-3020-ac74-454ef1bf7039> , <http://data.silknow.org/object/77df8cd7-8fb7-3473-9800-3c9b2d78263f> , <http://data.silknow.org/object/77df8cd7-8fb7-3473-9800-3c9b2d78263f/right> , <http://data.silknow.org/production/8e9bcf29-26f1-3a33-9428-cf38b3b03358> ;
+        dc:identifier       "95.71.297.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/object/77df8cd7-8fb7-3473-9800-3c9b2d78263f/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/77df8cd7-8fb7-3473-9800-3c9b2d78263f> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/image/3c2234e1-174e-3976-bdec-137d051842ad>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "bouton (fleur en)"@fr ;
+        ecrm:P3_has_note  "bouton (fleur en)"@fr .

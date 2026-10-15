@@ -1,0 +1,101 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/7f5477ee-2c97-3467-8684-de3623ddf18d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1401_1425> , <http://data.silknow.org/timespan/1425> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, warp-float faced 4:1 satin weave with two-color supplementary pile warps forming cut, voided velvet"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8f3cf242-6ce8-383f-a9e6-072b35ec2955> ;
+        ecrm:P3_has_note               "Silk, warp-float faced 4:1 satin weave with two-color supplementary pile warps forming cut, voided velvet"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2/dimension/2> , <http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2/dimension/1> ;
+        dc:identifier                  "1979.300" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/56122/panel> .
+
+<http://data.silknow.org/object/b9508e7f-de94-35bc-8c28-3e34d03ed79c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1979.300" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9bc31992-fa54-3f35-8972-59246936de10> , <http://data.silknow.org/production/7f5477ee-2c97-3467-8684-de3623ddf18d> , <http://data.silknow.org/object/9ab2acf8-2fb2-3bbd-9a7a-25450aad85fd> , <http://data.silknow.org/event/d8dbf138-3da7-3781-9ab7-f3c77734d2e1> , <http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2/category/1> , <http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2/observation/1> , <http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2> , <http://data.silknow.org/image/8f3cf242-6ce8-383f-a9e6-072b35ec2955> ;
+        dc:identifier       "56122.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/event/d8dbf138-3da7-3781-9ab7-f3c77734d2e1>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/9b5ab715-4957-34c2-869d-41933623c01e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Grace R. Smith Textile Endowment" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2> .
+
+<http://data.silknow.org/image/8f3cf242-6ce8-383f-a9e6-072b35ec2955>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/56122_0.jpg> , <https://www.artic.edu/iiif/2/74fb3645-ad1a-89cf-9ac5-93f56df64c90/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "147" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "147"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/9b5ab715-4957-34c2-869d-41933623c01e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Grace R. Smith Textile Endowment" ;
+        ecrm:P1_is_identified_by  "Grace R. Smith Textile Endowment" .
+
+<http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "50.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "50.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, warp-float faced 4:1 satin weave with two-color supplementary pile warps forming cut, voided velvet"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2> .
+
+<http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2> .
+
+<http://data.silknow.org/object/9ab2acf8-2fb2-3bbd-9a7a-25450aad85fd>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "The Art Institute of Chicago, Sumptuous Velvets from the Permanent Collection, March 1–June 1, 1980"@en ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2> ;
+        ecrm:P2_has_type    "Exhibition History"@en ;
+        ecrm:P3_has_note    "The Art Institute of Chicago, Sumptuous Velvets from the Permanent Collection, March 1–June 1, 1980"@en .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b9508e7f-de94-35bc-8c28-3e34d03ed79c> .
+
+<http://data.silknow.org/object/9bc31992-fa54-3f35-8972-59246936de10>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "The Art Institute of Chicago, Elizabeth F. Cheney and Agnes Allerton Textile Galleries, Renaissance Velvets and Silks, December 18, 2002–April 13, 2003"@en ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/ec31572f-19d2-30ec-941a-25bd136eadc2> ;
+        ecrm:P2_has_type    "Exhibition History"@en ;
+        ecrm:P3_has_note    "The Art Institute of Chicago, Elizabeth F. Cheney and Agnes Allerton Textile Galleries, Renaissance Velvets and Silks, December 18, 2002–April 13, 2003"@en .

@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/650e865d-b3de-31f7-833a-58a72e93c57c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "733025" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/66885_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/733025/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/602e673b-fb6f-3ee7-a3e1-bfaec719d8a2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c> ;
+        ecrm:P126_employed      "Linen ground with silk embroidery"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_2000> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Ground: cream colored linen woven with geometric pattern. Design: a conventionalized fruit form with leaves powdered over surface, worked, in cross-stitch, with yellow and grayish green silk."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c> .
+
+<http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "81.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "81.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "36" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "36"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Ground: cream colored linen woven with geometric pattern. Design: a conventionalized fruit form with leaves powdered over surface, worked, in cross-stitch, with yellow and grayish green silk."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/650e865d-b3de-31f7-833a-58a72e93c57c> ;
+        ecrm:P3_has_note               "Ground: cream colored linen woven with geometric pattern. Design: a conventionalized fruit form with leaves powdered over surface, worked, in cross-stitch, with yellow and grayish green silk."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c/dimension/2> , <http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c/dimension/1> ;
+        dc:identifier                  "28.85" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/66885> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/2> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/849e2f3e-dc21-344b-8732-4bac4f829682> .
+
+<http://data.silknow.org/event/a78ecd23-9b08-3645-9e7e-03cc53f732f4>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c> .
+
+<http://data.silknow.org/object/849e2f3e-dc21-344b-8732-4bac4f829682>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 28.85" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/602e673b-fb6f-3ee7-a3e1-bfaec719d8a2> , <http://data.silknow.org/image/650e865d-b3de-31f7-833a-58a72e93c57c> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c/domain/1> , <http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c/category/1> , <http://data.silknow.org/event/a78ecd23-9b08-3645-9e7e-03cc53f732f4> , <http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c/observation/1> , <http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c> ;
+        dc:identifier       "66885.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/97bf276a-cb52-3bab-ab95-a94bb74d507c> .

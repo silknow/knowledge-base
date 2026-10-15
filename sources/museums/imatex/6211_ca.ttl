@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/138fa854-81b8-3f09-bad6-bbc1bec98503> .
+
+<http://data.silknow.org/object/46f83b4b-13b9-3ac1-ac40-105f2e27eccb/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/46f83b4b-13b9-3ac1-ac40-105f2e27eccb> .
+
+<http://data.silknow.org/event/6f24494d-0b8d-3d7c-a543-e1147405014b>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/46f83b4b-13b9-3ac1-ac40-105f2e27eccb> .
+
+<http://data.silknow.org/production/c207f2db-3a69-3506-9c4a-4724810a1dee>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/46f83b4b-13b9-3ac1-ac40-105f2e27eccb> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "tècnica de calada"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2219875/> .
+
+<http://data.silknow.org/object/46f83b4b-13b9-3ac1-ac40-105f2e27eccb/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/46f83b4b-13b9-3ac1-ac40-105f2e27eccb> .
+
+<http://data.silknow.org/image/2ceb7dcd-d9d0-3099-a722-666d59dab9f8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000003333" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/6211_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000003333.jpg> .
+
+<http://data.silknow.org/image/76041b29-ea3f-3247-9c83-cd570c9b0489>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "disposició en franges"@ca ;
+        ecrm:P3_has_note  "disposició en franges"@ca .
+
+<http://data.silknow.org/object/138fa854-81b8-3f09-bad6-bbc1bec98503>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 6211" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/6f24494d-0b8d-3d7c-a543-e1147405014b> , <http://data.silknow.org/object/46f83b4b-13b9-3ac1-ac40-105f2e27eccb> , <http://data.silknow.org/image/2ceb7dcd-d9d0-3099-a722-666d59dab9f8> , <http://data.silknow.org/production/c207f2db-3a69-3506-9c4a-4724810a1dee> , <http://data.silknow.org/event/3de2b318-6cbb-34bc-822e-73d3f18d4dba> , <http://data.silknow.org/object/46f83b4b-13b9-3ac1-ac40-105f2e27eccb/domain/1> , <http://data.silknow.org/object/46f83b4b-13b9-3ac1-ac40-105f2e27eccb/category/1> ;
+        dc:identifier       "6211.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Biosca, Josep" ;
+        ecrm:P1_is_identified_by  "Biosca, Josep" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Josep_Huguet_i_Biosca> , <https://viaf.org/viaf/95599143> , <https://isni.org/isni/000000007829170X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Josep_Huguet_i_Biosca> .
+
+<http://data.silknow.org/object/46f83b4b-13b9-3ac1-ac40-105f2e27eccb>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2ceb7dcd-d9d0-3099-a722-666d59dab9f8> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/76041b29-ea3f-3247-9c83-cd570c9b0489> , <http://data.silknow.org/image/865902fc-eec7-37af-9327-2aca66445b33> ;
+        dc:identifier                  "2526" .
+
+<https://sws.geonames.org/2219875/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/865902fc-eec7-37af-9327-2aca66445b33>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "motius geomètrics"@ca ;
+        ecrm:P3_has_note  "motius geomètrics"@ca .
+
+<http://data.silknow.org/event/3de2b318-6cbb-34bc-822e-73d3f18d4dba>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2> ;
+        ecrm:P23_transferred_title_from
+                "Biosca, Josep" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/46f83b4b-13b9-3ac1-ac40-105f2e27eccb> ;
+        ecrm:P3_has_note               "donacions" .

@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/3ab3967a-58cb-3883-a31c-08fe8e6d7f91>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2014GX0356" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O1113340_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2014GX/2014GX0356.jpg> .
+
+<http://data.silknow.org/collection/4d5eb4be-51a1-3b4b-b061-6688e54a3c37>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Theatre and Performance Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2f6b482f-49c1-30c4-ba85-50964bfd0a7b> ;
+        ecrm:P78_is_identified_by  "Theatre and Performance Collection" .
+
+<http://data.silknow.org/event/caf52e82-fc06-3cb3-8455-361ff501b0a2>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2f6b482f-49c1-30c4-ba85-50964bfd0a7b> .
+
+<http://data.silknow.org/object/18b0e183-8ca0-3179-b4f7-3eacf79c0155>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O1113340" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/3ab3967a-58cb-3883-a31c-08fe8e6d7f91> , <http://data.silknow.org/production/06ecc49e-8790-3909-929a-2c2b56a9cca2> , <http://data.silknow.org/object/2f6b482f-49c1-30c4-ba85-50964bfd0a7b/observation/1> , <http://data.silknow.org/object/2f6b482f-49c1-30c4-ba85-50964bfd0a7b> , <http://data.silknow.org/event/caf52e82-fc06-3cb3-8455-361ff501b0a2> , <http://data.silknow.org/collection/4d5eb4be-51a1-3b4b-b061-6688e54a3c37> ;
+        dc:identifier       "O1113340.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/production/06ecc49e-8790-3909-929a-2c2b56a9cca2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2f6b482f-49c1-30c4-ba85-50964bfd0a7b> ;
+        ecrm:P126_employed      "Printed silk"@en , "silk (textile)"@en , "ink"@en ;
+        ecrm:P32_used_general_technique
+                "printed"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1888_04_07> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/2f6b482f-49c1-30c4-ba85-50964bfd0a7b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Silk programme" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2f6b482f-49c1-30c4-ba85-50964bfd0a7b> .
+
+<http://data.silknow.org/object/2f6b482f-49c1-30c4-ba85-50964bfd0a7b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk programme on cream silk in dark green typography.  Produced for 'Christina', Olympic Theatre, 7th April 1888."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3ab3967a-58cb-3883-a31c-08fe8e6d7f91> ;
+        ecrm:P3_has_note               "Silk programme on cream silk in dark green typography.  Produced for 'Christina', Olympic Theatre, 7th April 1888."@en ;
+        dc:identifier                  "S.229-1981" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O1113340> .
+
+<http://data.silknow.org/object/2f6b482f-49c1-30c4-ba85-50964bfd0a7b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Silk programme on cream silk in dark green typography.  Produced for 'Christina', Olympic Theatre, 7th April 1888."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2f6b482f-49c1-30c4-ba85-50964bfd0a7b> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/18b0e183-8ca0-3179-b4f7-3eacf79c0155> .

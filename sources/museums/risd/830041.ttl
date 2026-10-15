@@ -1,0 +1,110 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/e59e93b8-528f-3d53-bd66-a51e9a361953>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Mary Greene" ;
+        ecrm:P1_is_identified_by  "Mary Greene" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000052471999> , <https://viaf.org/viaf/17158837> , <http://dbpedia.org/resource/Mary_Sheppard_Greene> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Mary_Sheppard_Greene> .
+
+<http://data.silknow.org/image/4e58a404-22c3-3e3f-92e0-cce0b149a25e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/830041_2.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/37441.jpg> .
+
+<http://data.silknow.org/production/2bde2b77-4731-3d99-bf00-89fb8649891a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9> ;
+        ecrm:P126_employed      "linen"@en , "Linen ground with silk embroidery"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1813> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/2bde2b77-4731-3d99-bf00-89fb8649891a/activity/1> .
+
+<http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8a76366a-d8b5-3a7e-9337-9bc191337f89> , <http://data.silknow.org/image/569aff61-2148-3398-bdb9-b390103b4a51> , <http://data.silknow.org/image/4e58a404-22c3-3e3f-92e0-cce0b149a25e> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9/dimension/1> , <http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9/dimension/2> ;
+        dc:identifier                  "19.097" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/sampler-19097> .
+
+<http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "38.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "38.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/8a76366a-d8b5-3a7e-9337-9bc191337f89>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/830041_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/290883.jpg> .
+
+<http://data.silknow.org/image/569aff61-2148-3398-bdb9-b390103b4a51>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/830041_1.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/290884.jpg> .
+
+<http://data.silknow.org/event/4b3308c4-1157-3aa5-9743-0ab628a50340>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/1d4c6d73-164f-38b2-8391-96ee4d9dd096> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Dr. Jeannie O. Arnold" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9> .
+
+<http://data.silknow.org/object/c40cb002-a77f-36ba-97f0-d30280f8dbad>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 19.097" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/4e58a404-22c3-3e3f-92e0-cce0b149a25e> , <http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9/category/1> , <http://data.silknow.org/image/8a76366a-d8b5-3a7e-9337-9bc191337f89> , <http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9> , <http://data.silknow.org/production/2bde2b77-4731-3d99-bf00-89fb8649891a> , <http://data.silknow.org/image/569aff61-2148-3398-bdb9-b390103b4a51> , <http://data.silknow.org/event/4b3308c4-1157-3aa5-9743-0ab628a50340> , <http://data.silknow.org/event/653ac95c-5802-3e28-ab59-18297d77d6b0> , <http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9/domain/1> ;
+        dc:identifier       "830041.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "41.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "41.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/1d4c6d73-164f-38b2-8391-96ee4d9dd096>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Dr. Jeannie O. Arnold" ;
+        ecrm:P1_is_identified_by  "Gift of Dr. Jeannie O. Arnold" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9> .
+
+<http://data.silknow.org/event/653ac95c-5802-3e28-ab59-18297d77d6b0>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9> .
+
+<http://data.silknow.org/production/2bde2b77-4731-3d99-bf00-89fb8649891a/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/e59e93b8-528f-3d53-bd66-a51e9a361953> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c40cb002-a77f-36ba-97f0-d30280f8dbad> .
+
+<http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Sampler" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d8c9dbc6-b5df-3117-961f-ce55a9d929c9> .

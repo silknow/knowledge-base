@@ -1,0 +1,79 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/37a1395a-d700-3e03-a714-cf8cc4f43e46>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ed712c87-557d-3bba-bbe7-bf1333cd9c66> .
+
+<http://data.silknow.org/object/ed712c87-557d-3bba-bbe7-bf1333cd9c66/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ed712c87-557d-3bba-bbe7-bf1333cd9c66> .
+
+<http://data.silknow.org/actor/d88a67ea-d6e7-3052-9018-b704a4b94c47>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Sofie Lachaert & Luc d'Hanis" ;
+        ecrm:P1_is_identified_by  "Sofie Lachaert & Luc d'Hanis" .
+
+<http://data.silknow.org/actor/a9ed56f7-da70-340a-89fd-0c8f7c5129d9>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of John W. Smith" ;
+        ecrm:P1_is_identified_by  "Gift of John W. Smith" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/108854813> , <https://isni.org/isni/0000000110322925> .
+
+<http://data.silknow.org/object/ed712c87-557d-3bba-bbe7-bf1333cd9c66/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Saved by Droog Project series: \"Sad Hankies\"" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ed712c87-557d-3bba-bbe7-bf1333cd9c66> .
+
+<http://data.silknow.org/object/ed712c87-557d-3bba-bbe7-bf1333cd9c66>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "2015.10" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/saved-droog-project-series-sad-hankies-201510> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/production/0b367b5b-bfbb-369a-9539-91ca44208c28>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ed712c87-557d-3bba-bbe7-bf1333cd9c66> ;
+        ecrm:P126_employed      "Silkscreen print on cotton plain weave"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/2010> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/0b367b5b-bfbb-369a-9539-91ca44208c28/activity/1> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/32101ae9-ac7b-39ff-b37d-d8bc46b5dfb2> .
+
+<http://data.silknow.org/production/0b367b5b-bfbb-369a-9539-91ca44208c28/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/d88a67ea-d6e7-3052-9018-b704a4b94c47> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/32101ae9-ac7b-39ff-b37d-d8bc46b5dfb2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2015.10" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/0b367b5b-bfbb-369a-9539-91ca44208c28> , <http://data.silknow.org/object/ed712c87-557d-3bba-bbe7-bf1333cd9c66> , <http://data.silknow.org/event/37a1395a-d700-3e03-a714-cf8cc4f43e46> , <http://data.silknow.org/object/ed712c87-557d-3bba-bbe7-bf1333cd9c66/category/1> , <http://data.silknow.org/object/ed712c87-557d-3bba-bbe7-bf1333cd9c66/domain/1> , <http://data.silknow.org/event/4d244767-a26b-3b9e-bd93-e268c861128f> ;
+        dc:identifier       "1132601.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/event/4d244767-a26b-3b9e-bd93-e268c861128f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a9ed56f7-da70-340a-89fd-0c8f7c5129d9> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of John W. Smith" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ed712c87-557d-3bba-bbe7-bf1333cd9c66> .

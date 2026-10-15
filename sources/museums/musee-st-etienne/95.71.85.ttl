@@ -1,0 +1,79 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/9cf68c6c-a10d-3f9b-9b55-c1f8e6ae6c49>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.85_0.jpg> .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/event/14c4dd50-022e-3d76-88d0-454b135c78a6>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6a417648-5661-3f8e-936a-6112d7151602> .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1271439a-c637-32b5-88d1-8b543fd0f716> .
+
+<http://data.silknow.org/object/6a417648-5661-3f8e-936a-6112d7151602/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/6a417648-5661-3f8e-936a-6112d7151602> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/assessment/5ccb0002-63fc-3c27-be37-fc24e7ce7137/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "pas de défaut d'intégrité"@fr ;
+        ecrm:P2_has_type  "Intégrité" ;
+        ecrm:P3_has_note  "pas de défaut d'intégrité"@fr .
+
+<http://data.silknow.org/object/6a417648-5661-3f8e-936a-6112d7151602>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Fleurs des champs"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9cf68c6c-a10d-3f9b-9b55-c1f8e6ae6c49> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/836> , <http://data.silknow.org/vocabulary/765> ;
+        dc:identifier                  "95.71.85" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/1271439a-c637-32b5-88d1-8b543fd0f716>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.85" ;
+        ecrm:P129_is_about  <http://data.silknow.org/assessment/5ccb0002-63fc-3c27-be37-fc24e7ce7137> , <http://data.silknow.org/image/9cf68c6c-a10d-3f9b-9b55-c1f8e6ae6c49> , <http://data.silknow.org/object/6a417648-5661-3f8e-936a-6112d7151602/type/1> , <http://data.silknow.org/event/14c4dd50-022e-3d76-88d0-454b135c78a6> , <http://data.silknow.org/object/fe08e369-e7f5-31f6-9dd6-573f1dc86aad> , <http://data.silknow.org/object/6a417648-5661-3f8e-936a-6112d7151602/right> , <http://data.silknow.org/object/6a417648-5661-3f8e-936a-6112d7151602> , <http://data.silknow.org/production/6e143bbf-7493-3241-80c9-b65ca8880e04> ;
+        dc:identifier       "95.71.85.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/assessment/5ccb0002-63fc-3c27-be37-fc24e7ce7137>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/6a417648-5661-3f8e-936a-6112d7151602> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/5ccb0002-63fc-3c27-be37-fc24e7ce7137/condition/1> .
+
+<http://data.silknow.org/object/fe08e369-e7f5-31f6-9dd6-573f1dc86aad>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.85.JPG"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6a417648-5661-3f8e-936a-6112d7151602> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.85.JPG"@fr .
+
+<http://data.silknow.org/production/6e143bbf-7493-3241-80c9-b65ca8880e04>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6a417648-5661-3f8e-936a-6112d7151602> ;
+        ecrm:P32_used_general_technique
+                "gaze"@fr .
+
+<http://data.silknow.org/object/6a417648-5661-3f8e-936a-6112d7151602/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6a417648-5661-3f8e-936a-6112d7151602> ;
+        ecrm:P42_assigned    "Fleurs des champs" .

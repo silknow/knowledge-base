@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/26bdcedc-1336-32f4-b7dd-d86243f36b70/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/26bdcedc-1336-32f4-b7dd-d86243f36b70> .
+
+<http://data.silknow.org/production/30532f0f-842b-3bce-a3a7-58de1c18ea22>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/26bdcedc-1336-32f4-b7dd-d86243f36b70> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "hand screen printed"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/236> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1949> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/30532f0f-842b-3bce-a3a7-58de1c18ea22/activity/1> .
+
+<http://data.silknow.org/event/5f048766-70a6-3cda-8544-63d9fe7909c8>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/26bdcedc-1336-32f4-b7dd-d86243f36b70> .
+
+<http://data.silknow.org/image/9da25346-9c36-3656-8c08-d7c97544c597>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1083486_1.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/27967.jpg> .
+
+<http://data.silknow.org/production/30532f0f-842b-3bce-a3a7-58de1c18ea22/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/3c20b85e-6edf-3534-8561-1046ca0b873c> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/26bdcedc-1336-32f4-b7dd-d86243f36b70/category/1>
+        a                    silk:T35 ;
+        silk:L1              "scarf" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/26bdcedc-1336-32f4-b7dd-d86243f36b70> .
+
+<http://data.silknow.org/event/ba3f09da-7220-39f5-8cfa-061d5098f060>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/bd7ea272-7bc8-3384-8379-65c3a03663cb> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Ms. Dee De Roche" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/26bdcedc-1336-32f4-b7dd-d86243f36b70> .
+
+<http://data.silknow.org/object/26bdcedc-1336-32f4-b7dd-d86243f36b70>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/34d586e3-cdd9-3acb-acb2-4b0d9cfa869f> , <http://data.silknow.org/image/9da25346-9c36-3656-8c08-d7c97544c597> ;
+        dc:identifier                  "2003.126" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/scarf-2003126> .
+
+<http://data.silknow.org/actor/3c20b85e-6edf-3534-8561-1046ca0b873c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Mad of New York" ;
+        ecrm:P1_is_identified_by  "Mad of New York" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000121558829> , <https://viaf.org/viaf/129486027> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/bd7ea272-7bc8-3384-8379-65c3a03663cb>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Ms. Dee De Roche" ;
+        ecrm:P1_is_identified_by  "Gift of Ms. Dee De Roche" .
+
+<http://data.silknow.org/image/34d586e3-cdd9-3acb-acb2-4b0d9cfa869f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1083486_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/40702.jpg> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2ad8d16f-64a5-35d7-9faf-3fa403a3b1dd> .
+
+<http://data.silknow.org/object/2ad8d16f-64a5-35d7-9faf-3fa403a3b1dd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2003.126" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/26bdcedc-1336-32f4-b7dd-d86243f36b70/domain/1> , <http://data.silknow.org/event/ba3f09da-7220-39f5-8cfa-061d5098f060> , <http://data.silknow.org/production/30532f0f-842b-3bce-a3a7-58de1c18ea22> , <http://data.silknow.org/image/34d586e3-cdd9-3acb-acb2-4b0d9cfa869f> , <http://data.silknow.org/object/26bdcedc-1336-32f4-b7dd-d86243f36b70> , <http://data.silknow.org/object/26bdcedc-1336-32f4-b7dd-d86243f36b70/category/1> , <http://data.silknow.org/event/5f048766-70a6-3cda-8544-63d9fe7909c8> , <http://data.silknow.org/image/9da25346-9c36-3656-8c08-d7c97544c597> ;
+        dc:identifier       "1083486.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

@@ -1,0 +1,105 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Dress fabric of brocaded silk, Turkey, ca. 1870."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51> .
+
+<http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 6.75 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "17.145"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/e736f450-7c87-36ef-add0-5d5ed2bc7924>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018LF0197" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O264518_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018LF/2018LF0197.jpg> .
+
+<https://sws.geonames.org/298795/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/21d3fcd7-625b-3183-9f3e-aaeeffc42a48>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O264518" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51> , <http://data.silknow.org/image/e736f450-7c87-36ef-add0-5d5ed2bc7924> , <http://data.silknow.org/production/cd022a7e-bafb-31d7-b31a-64ea1604050a> , <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/domain/2> , <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/observation/2> , <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/observation/1> , <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/domain/1> , <http://data.silknow.org/event/0b5cbefb-92ca-3265-b6ab-3ac091aeb7b4> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> ;
+        dc:identifier       "O264518.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/production/cd022a7e-bafb-31d7-b31a-64ea1604050a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51> ;
+        ecrm:P126_employed      "Brocaded silk, gold strip"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/d0a3a751-2d33-3ddc-8eea-134f159dfa28> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/298795/> .
+
+<http://data.silknow.org/event/0b5cbefb-92ca-3265-b6ab-3ac091aeb7b4>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51> .
+
+<http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dress fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51> .
+
+<http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51> .
+
+<http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Dress fabric of purple silk ground brocaded with flower motifs in green, purple and gold strip twisted with yellw silk."@en , "Dress fabric of brocaded silk, Turkey, ca. 1870."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e736f450-7c87-36ef-add0-5d5ed2bc7924> ;
+        ecrm:P3_has_note               "Dress fabric of purple silk ground brocaded with flower motifs in green, purple and gold strip twisted with yellw silk."@en , "Dress fabric of brocaded silk, Turkey, ca. 1870."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/dimension/1> , <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/dimension/2> ;
+        dc:identifier                  "T.6-1976" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O264518> .
+
+<http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 5.375 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "13.6525"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Dress fabric of purple silk ground brocaded with flower motifs in green, purple and gold strip twisted with yellw silk."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/21d3fcd7-625b-3183-9f3e-aaeeffc42a48> .
+
+<http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51> .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/fee0b2d9-2fe9-33bf-9ab2-5d882982bd51> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .

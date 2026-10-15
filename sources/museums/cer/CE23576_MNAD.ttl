@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Pañoleta de lino bordada en algodón y seda de color rojo, con ligeros toques de amarillo. Tiene amplias cenefas en dos de los lados con elementos florales y cruces. En el ángulo, un corazón y clavelinas. En los extremos y junto al borde, pequeños corazones."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Contemporánea"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8> .
+
+<http://data.silknow.org/image/d6c58d8d-cc55-3e7c-a8a7-a11a0882e391>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE23576" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE23576_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE23576&txt_id_imagen=1> .
+
+<http://data.silknow.org/event/9917e1c5-c2f7-361a-87fb-b2dcec7ae7bf>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8> .
+
+<http://data.silknow.org/production/2d5fd319-0707-3f95-9bc7-9ab9eb263067>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/488> , <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P32_used_general_technique
+                "Bordado a realce"@es , "Bordado de hilos contados"@es , "Pespunte"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/0097d5bf-a035-3300-be89-52694a07c663>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE23576" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/2d5fd319-0707-3f95-9bc7-9ab9eb263067> , <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8/observation/2> , <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8/observation/1> , <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8/category/1> , <http://data.silknow.org/event/9917e1c5-c2f7-361a-87fb-b2dcec7ae7bf> , <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8> , <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8/domain/2> , <http://data.silknow.org/event/9907aa38-5845-34c1-9255-03a35d7e2da1> , <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8/domain/1> , <http://data.silknow.org/image/d6c58d8d-cc55-3e7c-a8a7-a11a0882e391> ;
+        dc:identifier       "CE23576_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Contemporánea"@es , "Pañoleta de lino bordada en algodón y seda de color rojo, con ligeros toques de amarillo. Tiene amplias cenefas en dos de los lados con elementos florales y cruces. En el ángulo, un corazón y clavelinas. En los extremos y junto al borde, pequeños corazones."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d6c58d8d-cc55-3e7c-a8a7-a11a0882e391> ;
+        ecrm:P3_has_note               "Edad Contemporánea"@es , "Pañoleta de lino bordada en algodón y seda de color rojo, con ligeros toques de amarillo. Tiene amplias cenefas en dos de los lados con elementos florales y cruces. En el ángulo, un corazón y clavelinas. En los extremos y junto al borde, pequeños corazones."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/200076a5-5d28-3cf6-83fe-b6b1ae7e670c> ;
+        dc:identifier                  "CE23576" .
+
+<http://data.silknow.org/image/200076a5-5d28-3cf6-83fe-b6b1ae7e670c>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Motivos florales; Corazón; Cruz; Clavelina"@es ;
+        ecrm:P3_has_note  "Motivos florales; Corazón; Cruz; Clavelina"@es .
+
+<http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8> .
+
+<http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Pañoleta" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8> .
+
+<http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/43> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/169669de-e8a0-3563-866c-8e698e7bc6b8> .
+
+<http://data.silknow.org/event/9907aa38-5845-34c1-9255-03a35d7e2da1>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0097d5bf-a035-3300-be89-52694a07c663> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

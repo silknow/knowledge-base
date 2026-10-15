@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/a6aca7ef-5500-3f62-9bf3-f318527e1cb4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 25124" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/16563fb8-f1f4-3de7-ad80-fd3fc29d793a/category/1> , <http://data.silknow.org/production/89acdffb-c8d3-3d03-9501-25246d8b8fe5> , <http://data.silknow.org/image/e9697e82-12d9-3e27-bada-740e05358abb> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/8ad80515-8276-34cb-b31e-fc5298125cb9> , <http://data.silknow.org/object/16563fb8-f1f4-3de7-ad80-fd3fc29d793a> ;
+        dc:identifier       "917276.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/8ad80515-8276-34cb-b31e-fc5298125cb9>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "don François Ducharne, 1925" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/16563fb8-f1f4-3de7-ad80-fd3fc29d793a> .
+
+<http://data.silknow.org/object/16563fb8-f1f4-3de7-ad80-fd3fc29d793a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Henriette Reynaud, 1925, François Ducharne, Lyon, 1925"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e9697e82-12d9-3e27-bada-740e05358abb> ;
+        dc:identifier                  "25124" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/917276> .
+
+<http://data.silknow.org/image/e9697e82-12d9-3e27-bada-740e05358abb>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/917276_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/6bc5ff44-860c-4f8e-96ef-006878c2261f.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a6aca7ef-5500-3f62-9bf3-f318527e1cb4> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/16563fb8-f1f4-3de7-ad80-fd3fc29d793a> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/16563fb8-f1f4-3de7-ad80-fd3fc29d793a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/16563fb8-f1f4-3de7-ad80-fd3fc29d793a> .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/89acdffb-c8d3-3d03-9501-25246d8b8fe5>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Henriette Reynaud, 1925, François Ducharne, Lyon, 1925" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/16563fb8-f1f4-3de7-ad80-fd3fc29d793a> ;
+        ecrm:P126_employed      "Crêpe de soie noir lamé argent."@fr ;
+        ecrm:P3_has_note        "Henriette Reynaud, 1925, François Ducharne, Lyon, 1925" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1925> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2996944/> .

@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/PM>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ff69d383-7256-3c91-9271-4b77c6df26c6> .
+
+<http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tapisserie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705> .
+
+<http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Tapisserie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705> .
+
+<http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "269 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "269 cm" ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Arts décoratifs" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705> .
+
+<https://sws.geonames.org/3036295/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "154 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "154 cm" ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/fd6a236c-5ea0-3f9f-8667-e1e6e92f92a1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705> ;
+        ecrm:P126_employed      "Tapisserie (Technique)"@fr ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/644> , <http://data.silknow.org/vocabulary/369> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1774> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3036295/> , <https://sws.geonames.org/3034006/> .
+
+<http://data.silknow.org/event/ef319281-b0a5-3e8c-96bd-8c2fdf7a4554>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/79756b8e-9c88-3f11-ae1b-1c91db6fb5db> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705> .
+
+<http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/iconographical-observation> ;
+        ecrm:P3_has_note    "Sur cette tapisserie décorative figure un décor de semis de grands bouquets entre des cadres moulurés simulés autour desquel s'enroulent des guirlandes de roses."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705> .
+
+<https://sws.geonames.org/3034006/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/ff69d383-7256-3c91-9271-4b77c6df26c6>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record J 1002" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705/domain/1> , <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705/domain/2> , <http://data.silknow.org/production/fd6a236c-5ea0-3f9f-8667-e1e6e92f92a1> , <http://data.silknow.org/event/ef319281-b0a5-3e8c-96bd-8c2fdf7a4554> , <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705> , <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705/observation/1> , <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705/category/1> ;
+        dc:identifier       "186226.json" ;
+        dc:publisher        "http://data.silknow.org/organization/PM" .
+
+<http://data.silknow.org/actor/79756b8e-9c88-3f11-ae1b-1c91db6fb5db>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée Cognacq-Jay, le goût du XVIIIe" ;
+        ecrm:P1_is_identified_by  "Musée Cognacq-Jay, le goût du XVIIIe" .
+
+<http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705>
+        a                       ecrm:E22_Man-Made_Object ;
+        rdfs:comment            "Sur cette tapisserie décorative figure un décor de semis de grands bouquets entre des cadres moulurés simulés autour desquel s'enroulent des guirlandes de roses."@fr ;
+        rdfs:label              "Tapisserie à décor de semis de bouquets et de cadres"@fr ;
+        ecrm:P102_has_title     "Tapisserie à décor de semis de bouquets et de cadres"@fr ;
+        ecrm:P3_has_note        "Sur cette tapisserie décorative figure un décor de semis de grands bouquets entre des cadres moulurés simulés autour desquel s'enroulent des guirlandes de roses."@fr ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705/dimension/1> , <http://data.silknow.org/object/2a4c8e06-32da-3ff7-81df-be5319856705/dimension/2> ;
+        dc:identifier           "J 1002" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://parismuseescollections.paris.fr/node/186226> .

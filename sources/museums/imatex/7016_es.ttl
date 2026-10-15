@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9ba4e1d9-f973-3d9c-825a-939bdf0052e1> .
+
+<http://data.silknow.org/production/f3580c03-5847-37e0-a739-bce730e7bbb6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "trama llançada"@es , "tafetán"@es , "técnica de calada"@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404504> , <http://vocab.getty.edu/aat/300404505> , <http://data.silknow.org/timespan/middle_ages> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/34788e52-c904-311c-872e-c89af879a0d0> , <https://sws.geonames.org/3123622/> .
+
+<http://data.silknow.org/event/766e6ada-a062-30a3-9681-37bdb9357587>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<https://sws.geonames.org/3123622/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/9ba4e1d9-f973-3d9c-825a-939bdf0052e1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 7016" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71/domain/1> , <http://data.silknow.org/image/72d69904-5fc2-3bdb-90c5-76bb37a90ddf> , <http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71/category/1> , <http://data.silknow.org/event/766e6ada-a062-30a3-9681-37bdb9357587> , <http://data.silknow.org/event/fd082734-1358-3616-9557-e6ec91eeb6e2> , <http://data.silknow.org/production/f3580c03-5847-37e0-a739-bce730e7bbb6> , <http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71/observation/1> , <http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71> ;
+        dc:identifier       "7016.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/72d69904-5fc2-3bdb-90c5-76bb37a90ddf>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000004143" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/7016_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000004143.jpg> .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "conserva un dels voravius"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/72d69904-5fc2-3bdb-90c5-76bb37a90ddf> ;
+        ecrm:P3_has_note               "conserva un dels voravius"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/042c8cde-80ac-3877-8d15-96784dc793ed> ;
+        dc:identifier                  "5976" .
+
+<http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "conserva un dels voravius"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71> .
+
+<http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71> .
+
+<http://data.silknow.org/place/34788e52-c904-311c-872e-c89af879a0d0>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Al-Andalus" ;
+        ecrm:P87_is_identified_by  "Al-Andalus" .
+
+<http://data.silknow.org/event/fd082734-1358-3616-9557-e6ec91eeb6e2>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71> .
+
+<http://data.silknow.org/image/042c8cde-80ac-3877-8d15-96784dc793ed>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "franges de color"@es ;
+        ecrm:P3_has_note  "franges de color"@es .
+
+<http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c720b723-bd12-3f35-8647-968b142f7a71> .

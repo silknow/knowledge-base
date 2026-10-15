@@ -1,0 +1,103 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<https://sws.geonames.org/2509954/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/ff3a542b-6f65-326a-ab38-32875bb12898>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4> .
+
+<http://data.silknow.org/image/095eed79-cb76-35e4-8542-6a4af0e65f66>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE05417" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE05417_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE05417&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Moderna"@es , "Agremán dorado y plateado. Hecha con brocado de seda y plata de decoración distinta en la cenefa y otro para las tallas. La seda brochada con pequeños ramos y flores sueltas en colores. En la cenefa iguales motivos pero dispuestos en una guirnalda vertical con pequeñas estrellas de lamina metódica."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/095eed79-cb76-35e4-8542-6a4af0e65f66> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Agremán dorado y plateado. Hecha con brocado de seda y plata de decoración distinta en la cenefa y otro para las tallas. La seda brochada con pequeños ramos y flores sueltas en colores. En la cenefa iguales motivos pero dispuestos en una guirnalda vertical con pequeñas estrellas de lamina metódica."@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/dimension/1> , <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/dimension/2> ;
+        dc:identifier                  "CE05417" .
+
+<http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "121" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "121"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4> .
+
+<http://data.silknow.org/object/c89ac6b4-9572-3d2f-8022-760ff53e21b8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE05417" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/observation/1> , <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/category/1> , <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/observation/2> , <http://data.silknow.org/production/26190b4c-e554-3f42-9290-d8e87fa2a71f> , <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4> , <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/domain/1> , <http://data.silknow.org/image/095eed79-cb76-35e4-8542-6a4af0e65f66> , <http://data.silknow.org/event/ff3a542b-6f65-326a-ab38-32875bb12898> , <http://data.silknow.org/event/cac61664-ea05-3311-8416-99e20c813497> , <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/domain/2> ;
+        dc:identifier       "CE05417_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/97> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4> .
+
+<http://data.silknow.org/production/26190b4c-e554-3f42-9290-d8e87fa2a71f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4> ;
+        ecrm:P126_employed      "Hilo metálico [plateado.]  Seda [plateado.]"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/97> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2509954/> .
+
+<http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Agremán dorado y plateado. Hecha con brocado de seda y plata de decoración distinta en la cenefa y otro para las tallas. La seda brochada con pequeños ramos y flores sueltas en colores. En la cenefa iguales motivos pero dispuestos en una guirnalda vertical con pequeñas estrellas de lamina metódica."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4> .
+
+<http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "69" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "69"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/12> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4> .
+
+<http://data.silknow.org/event/cac61664-ea05-3311-8416-99e20c813497>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4798ee82-879a-3e37-9453-d2dbcb4252c4> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c89ac6b4-9572-3d2f-8022-760ff53e21b8> .

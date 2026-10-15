@@ -1,0 +1,83 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/8133598/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/b5238fdc-1e25-3bc8-8b2a-c213305a5789>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2> .
+
+<http://data.silknow.org/object/91ac3f71-f7ca-3df1-a46b-d41f0e9ee6c6>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 31.404" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/b5238fdc-1e25-3bc8-8b2a-c213305a5789> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2> , <http://data.silknow.org/image/40a77915-9d48-3717-92cd-55b0894c9faa> , <http://data.silknow.org/image/1bd91377-4703-3f59-bac3-d294e735f8fb> , <http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2/category/1> , <http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2/domain/1> , <http://data.silknow.org/production/4a4a6f9d-6cdb-3f50-b17a-1274e166d7f5> , <http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2/observation/1> ;
+        dc:identifier       "66462.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/production/4a4a6f9d-6cdb-3f50-b17a-1274e166d7f5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2> ;
+        ecrm:P126_employed      "Linen embroidered with silk"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/8133598/> .
+
+<http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment of a border" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2> .
+
+<http://data.silknow.org/image/1bd91377-4703-3f59-bac3-d294e735f8fb>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "756258" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/66462_1.jpg> , <https://collections.mfa.org/internal/media/dispatcher/756258/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/image/40a77915-9d48-3717-92cd-55b0894c9faa>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "727230" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/66462_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/727230/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/91ac3f71-f7ca-3df1-a46b-d41f0e9ee6c6> .
+
+<http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Ground: fine light neutral colored linen. Design: worked in many colored silks, horizontal band bordered by geometric pinks worked in crimson green, blue and cream silk through the center of the band is a row of hexagonal compartments connected by straight lines and squares enclosing stars, worked in satin stitch with crimson silk. Conventionalized angular trees, grow up and down from hexagonal and square compartments. Pairs of angular conventionalized birds perch on alternate trees.  Jars with conventionalized plants in the spaces between. Colors: crimson, blue, neutral blue, greenish blue, green, neutral yellow, brown, cream, and a little dark violet. Stitches: darn, satin, cross, plait, and chain. Pieced."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1bd91377-4703-3f59-bac3-d294e735f8fb> , <http://data.silknow.org/image/40a77915-9d48-3717-92cd-55b0894c9faa> ;
+        ecrm:P3_has_note               "Ground: fine light neutral colored linen. Design: worked in many colored silks, horizontal band bordered by geometric pinks worked in crimson green, blue and cream silk through the center of the band is a row of hexagonal compartments connected by straight lines and squares enclosing stars, worked in satin stitch with crimson silk. Conventionalized angular trees, grow up and down from hexagonal and square compartments. Pairs of angular conventionalized birds perch on alternate trees.  Jars with conventionalized plants in the spaces between. Colors: crimson, blue, neutral blue, greenish blue, green, neutral yellow, brown, cream, and a little dark violet. Stitches: darn, satin, cross, plait, and chain. Pieced."@en ;
+        dc:identifier                  "31.404" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/66462> .
+
+<http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Ground: fine light neutral colored linen. Design: worked in many colored silks, horizontal band bordered by geometric pinks worked in crimson green, blue and cream silk through the center of the band is a row of hexagonal compartments connected by straight lines and squares enclosing stars, worked in satin stitch with crimson silk. Conventionalized angular trees, grow up and down from hexagonal and square compartments. Pairs of angular conventionalized birds perch on alternate trees.  Jars with conventionalized plants in the spaces between. Colors: crimson, blue, neutral blue, greenish blue, green, neutral yellow, brown, cream, and a little dark violet. Stitches: darn, satin, cross, plait, and chain. Pieced."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2> .
+
+<http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0bc4f244-9e08-3ffb-bd8a-c353f92b75b2> .

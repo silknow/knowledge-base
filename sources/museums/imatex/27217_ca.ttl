@@ -1,0 +1,90 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9e9a9670-cc4b-36cd-b900-412ce76fefdd> .
+
+<http://data.silknow.org/event/4e6ec4c8-72b6-3f4f-8ea6-eed0c5805002>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e6e25908-6bd2-3750-9431-d80a23b7d1e6> .
+
+<http://data.silknow.org/image/22c9f9bc-fcc2-38d3-9fc6-26119b9a6e51>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000032880" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27217_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000032880.jpg> .
+
+<http://data.silknow.org/object/e6e25908-6bd2-3750-9431-d80a23b7d1e6/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e6e25908-6bd2-3750-9431-d80a23b7d1e6> .
+
+<http://data.silknow.org/object/9e9a9670-cc4b-36cd-b900-412ce76fefdd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27217" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d87eaef4-fd2d-3dff-907f-1aa15c252008> , <http://data.silknow.org/object/e6e25908-6bd2-3750-9431-d80a23b7d1e6/domain/1> , <http://data.silknow.org/event/d485b421-1e70-3dff-96c2-c212b859c1f2> , <http://data.silknow.org/object/e6e25908-6bd2-3750-9431-d80a23b7d1e6/category/1> , <http://data.silknow.org/event/4e6ec4c8-72b6-3f4f-8ea6-eed0c5805002> , <http://data.silknow.org/object/e6e25908-6bd2-3750-9431-d80a23b7d1e6> , <http://data.silknow.org/image/22c9f9bc-fcc2-38d3-9fc6-26119b9a6e51> , <http://data.silknow.org/production/fa5264a6-7932-3422-8bae-0fefc0612d59> ;
+        dc:identifier       "27217.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/e6e25908-6bd2-3750-9431-d80a23b7d1e6>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/22c9f9bc-fcc2-38d3-9fc6-26119b9a6e51> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/c052d61c-4dd0-3619-abc9-87d45457a5df> ;
+        dc:identifier                  "15909" .
+
+<http://data.silknow.org/event/d485b421-1e70-3dff-96c2-c212b859c1f2>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f> ;
+        ecrm:P23_transferred_title_from
+                "Viñas Geis, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e6e25908-6bd2-3750-9431-d80a23b7d1e6> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas Geis, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas Geis, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/160946453> , <https://isni.org/isni/0000000108433220> .
+
+<http://data.silknow.org/production/fa5264a6-7932-3422-8bae-0fefc0612d59>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e6e25908-6bd2-3750-9431-d80a23b7d1e6> ;
+        ecrm:P126_employed      "fil metàl·lic"@ca ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "acanalat"@ca , "coltellat"@ca , "teixit llavorat"@ca ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/471> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/e6e25908-6bd2-3750-9431-d80a23b7d1e6/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e6e25908-6bd2-3750-9431-d80a23b7d1e6> .
+
+<http://data.silknow.org/object/d87eaef4-fd2d-3dff-907f-1aa15c252008>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "\"The Bulletin of the Needle and Bobin Club\", vol.29,p. 7: peça igual a la nostra en el mateix color i amb el mateix disseny."@ca ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e6e25908-6bd2-3750-9431-d80a23b7d1e6> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "\"The Bulletin of the Needle and Bobin Club\", vol.29,p. 7: peça igual a la nostra en el mateix color i amb el mateix disseny."@ca .
+
+<http://data.silknow.org/image/c052d61c-4dd0-3619-abc9-87d45457a5df>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "imitació blonda"@ca ;
+        ecrm:P3_has_note  "imitació blonda"@ca .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

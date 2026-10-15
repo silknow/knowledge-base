@@ -1,0 +1,58 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/fe7306d5-8212-3fb5-abce-2635ea9af5b6>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1903" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6d294747-6666-3b42-9fde-afeb8c112a92> .
+
+<http://data.silknow.org/production/0660bd22-5cf3-3efd-9c46-58a3b8c936e6>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Ier Empire, 1810-1814" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6d294747-6666-3b42-9fde-afeb8c112a92> ;
+        ecrm:P126_employed      "lin"@fr ;
+        ecrm:P3_has_note        "Ier Empire, 1810-1814" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1810_1814> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/42389490-bbce-3ee7-aaf6-8c6ab591cdb5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10760" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/0660bd22-5cf3-3efd-9c46-58a3b8c936e6> , <http://data.silknow.org/event/fe7306d5-8212-3fb5-abce-2635ea9af5b6> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/2fff0eaa-171c-389c-b39c-c560c0dddc7c> , <http://data.silknow.org/object/6d294747-6666-3b42-9fde-afeb8c112a92> ;
+        dc:identifier       "910845.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/6d294747-6666-3b42-9fde-afeb8c112a92>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Ier Empire, 1810-1814"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2fff0eaa-171c-389c-b39c-c560c0dddc7c> ;
+        dc:identifier                  "10760" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910845> .
+
+<http://data.silknow.org/image/2fff0eaa-171c-389c-b39c-c560c0dddc7c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910845_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/33e59e5c-e9bc-4281-a414-4d099a0978eb.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/42389490-bbce-3ee7-aaf6-8c6ab591cdb5> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6d294747-6666-3b42-9fde-afeb8c112a92> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

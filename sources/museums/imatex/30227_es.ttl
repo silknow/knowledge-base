@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ec3a1ed5-92b0-3042-bbad-27d6ecc09194> .
+
+<http://data.silknow.org/object/a43b2704-b6ec-3157-8ba9-a3876566f2ee>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8ae158b4-9683-383e-a909-008877b3ab54> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/e92f096f-a383-3968-ab1c-aaad319abda0> ;
+        dc:identifier                  "22342" .
+
+<https://sws.geonames.org/1269750/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/9e550e82-37c1-399a-a8a9-1cbdf2331b05>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a43b2704-b6ec-3157-8ba9-a3876566f2ee> .
+
+<http://data.silknow.org/event/82174d3a-ffae-3e76-8b00-d230d15a02d4>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a43b2704-b6ec-3157-8ba9-a3876566f2ee> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/a43b2704-b6ec-3157-8ba9-a3876566f2ee/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a43b2704-b6ec-3157-8ba9-a3876566f2ee> .
+
+<http://data.silknow.org/production/aac6927f-4b25-38ce-b526-72d3ceeffd5c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a43b2704-b6ec-3157-8ba9-a3876566f2ee> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                "técnica de bordado"@es , "bordado manual"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/366> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1269750/> .
+
+<http://data.silknow.org/image/e92f096f-a383-3968-ab1c-aaad319abda0>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "decoración vegetal estilizada"@es ;
+        ecrm:P3_has_note  "decoración vegetal estilizada"@es .
+
+<http://data.silknow.org/object/a43b2704-b6ec-3157-8ba9-a3876566f2ee/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a43b2704-b6ec-3157-8ba9-a3876566f2ee> .
+
+<http://data.silknow.org/image/8ae158b4-9683-383e-a909-008877b3ab54>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035953" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/30227_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000035953.jpg> .
+
+<http://data.silknow.org/object/ec3a1ed5-92b0-3042-bbad-27d6ecc09194>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 30227" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a43b2704-b6ec-3157-8ba9-a3876566f2ee/domain/1> , <http://data.silknow.org/event/9e550e82-37c1-399a-a8a9-1cbdf2331b05> , <http://data.silknow.org/object/a43b2704-b6ec-3157-8ba9-a3876566f2ee/category/1> , <http://data.silknow.org/production/aac6927f-4b25-38ce-b526-72d3ceeffd5c> , <http://data.silknow.org/image/8ae158b4-9683-383e-a909-008877b3ab54> , <http://data.silknow.org/object/a43b2704-b6ec-3157-8ba9-a3876566f2ee> , <http://data.silknow.org/event/82174d3a-ffae-3e76-8b00-d230d15a02d4> ;
+        dc:identifier       "30227.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

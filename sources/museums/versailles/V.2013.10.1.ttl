@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb> ;
+        ecrm:P42_assigned    "serviette" .
+
+<http://data.silknow.org/image/af818129-5242-3814-99f1-e98f5b45ae00>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Louis XV"@fr ;
+        ecrm:P3_has_note  "Louis XV"@fr .
+
+<http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Don Azzedine Alaïa, 2013."@fr ;
+        rdfs:label                     "Bataille de Fontenoy, 11 mai 1745"@fr ;
+        ecrm:P102_has_title            "Bataille de Fontenoy, 11 mai 1745"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/90a7253e-ceb1-35fc-b8ea-0cc0ae74deb6> ;
+        ecrm:P3_has_note               "Don Azzedine Alaïa, 2013."@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb/dimension/2> , <http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb/dimension/1> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/af818129-5242-3814-99f1-e98f5b45ae00> ;
+        dc:identifier                  "V.2013.10.1" .
+
+<http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "78.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "78.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/versailles>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2af1798b-5c64-37e9-944b-968f9baba578> .
+
+<http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Don Azzedine Alaïa, 2013."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb> .
+
+<http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "98" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "98"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb> .
+
+<http://data.silknow.org/object/2af1798b-5c64-37e9-944b-968f9baba578>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record V.2013.10.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb> , <http://data.silknow.org/production/c8966246-ce75-3646-a107-5a485ef6f9fa> , <http://data.silknow.org/image/90a7253e-ceb1-35fc-b8ea-0cc0ae74deb6> , <http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb/domain/1> , <http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb/type/1> , <http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb/observation/1> ;
+        dc:identifier       "V.2013.10.1.json" ;
+        dc:publisher        "http://data.silknow.org/organization/versailles" .
+
+<http://data.silknow.org/production/c8966246-ce75-3646-a107-5a485ef6f9fa>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e2400696-d99e-3890-bebe-fd7f18da70bb> ;
+        ecrm:P126_employed      "Damas de lin"@fr ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/4eec4468-6fac-3e4c-a61f-12b83d625e08> .
+
+<http://data.silknow.org/image/90a7253e-ceb1-35fc-b8ea-0cc0ae74deb6>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/versailles/V.2013.10.1_0.jpg> , <http://collections.chateauversailles.fr/cc/imageproxy.aspx?server=10.0.10.13&port=14456&filename=objectimages%2FV.2013.10.1_001.cci> .

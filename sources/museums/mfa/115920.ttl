@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/8b1497d8-1997-36d4-ab08-aaa349a0665e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf> ;
+        ecrm:P126_employed      "Silk satin woven"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/e7941da7-c1b9-31c3-a1cd-fee1b8cf4a58>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 53.2316" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf/category/1> , <http://data.silknow.org/production/8b1497d8-1997-36d4-ab08-aaa349a0665e> , <http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf/domain/1> , <http://data.silknow.org/image/7b8f7add-d462-35e3-bcdc-0c8f6a67d069> , <http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf> , <http://data.silknow.org/event/224b0961-03cc-3d02-9e25-5f665a28969f> , <http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf/observation/1> ;
+        dc:identifier       "115920.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of ribbon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf> .
+
+<http://data.silknow.org/image/7b8f7add-d462-35e3-bcdc-0c8f6a67d069>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "753819" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/115920_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/753819/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "4.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "4.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/224b0961-03cc-3d02-9e25-5f665a28969f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e7941da7-c1b9-31c3-a1cd-fee1b8cf4a58> .
+
+<http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "34.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "34.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Piece of ribbon; pale pink satin ground (white warp, pink weft) with morning glory serpentine in weft floats; picot edges; much stiffened."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7b8f7add-d462-35e3-bcdc-0c8f6a67d069> ;
+        ecrm:P3_has_note               "Piece of ribbon; pale pink satin ground (white warp, pink weft) with morning glory serpentine in weft floats; picot edges; much stiffened."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf/dimension/2> , <http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf/dimension/1> ;
+        dc:identifier                  "53.2316" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/115920> .
+
+<http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Piece of ribbon; pale pink satin ground (white warp, pink weft) with morning glory serpentine in weft floats; picot edges; much stiffened."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/bec4a708-d79d-3ba4-aa0d-51c8938424bf> .

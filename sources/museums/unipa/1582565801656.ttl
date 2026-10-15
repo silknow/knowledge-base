@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/1c52c6cf-8efc-323e-b53e-8b9c997067ab>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "1760 circa"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7805bbfe-0fcf-3683-9754-81d957f06282> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/1c52c6cf-8efc-323e-b53e-8b9c997067ab/dimension/2> , <http://data.silknow.org/object/1c52c6cf-8efc-323e-b53e-8b9c997067ab/dimension/1> ;
+        dc:identifier                  "1582565801656" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/a14967e6-8783-3dfe-b044-52513d3b4ffc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1c52c6cf-8efc-323e-b53e-8b9c997067ab> ;
+        ecrm:P32_used_general_technique
+                "Taffetas liseré broccato"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/4f47e6f3-e0c7-347d-a701-f4520325346d> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/1c52c6cf-8efc-323e-b53e-8b9c997067ab/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "73" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "73"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/7805bbfe-0fcf-3683-9754-81d957f06282>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1582566230_caltanissetta256" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1582565801656_0.jpg> .
+
+<http://data.silknow.org/event/c7c9fab2-c6ae-33f1-a71b-f7c3fb4bc4df>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/5fabb663-8af7-3cfe-b52f-2ead0fc802d2> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/1c52c6cf-8efc-323e-b53e-8b9c997067ab> .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dc01386f-ffc4-321c-b9a2-cb7acfa95c7e> .
+
+<http://data.silknow.org/object/1c52c6cf-8efc-323e-b53e-8b9c997067ab/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "97" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "97"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/bf87ef2b-a501-3b6f-93a9-efe99a13fc29>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "R. Civiletto, n. 256, in Il Museo Diocesano di Caltanissetta, a cura di S. Rizzo, F. Brucchieri, F. Ciancimino, Palermo - Caltanissetta 2001, p. 282."@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/1c52c6cf-8efc-323e-b53e-8b9c997067ab> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "R. Civiletto, n. 256, in Il Museo Diocesano di Caltanissetta, a cura di S. Rizzo, F. Brucchieri, F. Ciancimino, Palermo - Caltanissetta 2001, p. 282."@it .
+
+<http://data.silknow.org/object/dc01386f-ffc4-321c-b9a2-cb7acfa95c7e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1582565801656" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/1c52c6cf-8efc-323e-b53e-8b9c997067ab/type/1> , <http://data.silknow.org/production/a14967e6-8783-3dfe-b044-52513d3b4ffc> , <http://data.silknow.org/object/1c52c6cf-8efc-323e-b53e-8b9c997067ab> , <http://data.silknow.org/object/bf87ef2b-a501-3b6f-93a9-efe99a13fc29> , <http://data.silknow.org/image/7805bbfe-0fcf-3683-9754-81d957f06282> , <http://data.silknow.org/event/c7c9fab2-c6ae-33f1-a71b-f7c3fb4bc4df> ;
+        dc:identifier       "1582565801656.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/object/1c52c6cf-8efc-323e-b53e-8b9c997067ab/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1c52c6cf-8efc-323e-b53e-8b9c997067ab> ;
+        ecrm:P42_assigned    "Pianeta" .
+
+<http://data.silknow.org/actor/5fabb663-8af7-3cfe-b52f-2ead0fc802d2>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Caltanissetta, Museo Diocesano \"Monsignor Giovanni Speciale\"" ;
+        ecrm:P1_is_identified_by  "Caltanissetta, Museo Diocesano \"Monsignor Giovanni Speciale\"" .

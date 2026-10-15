@@ -1,0 +1,105 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/86c25ead-fe29-3d36-8ab7-6e330812b0e0>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2> ;
+        ecrm:P126_employed      "Woven silk, gold thread"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/d0a3a751-2d33-3ddc-8eea-134f159dfa28> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/298795/> .
+
+<http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2> .
+
+<http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Dress fabric of woven silk, Turkey, ca. 1870."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2> .
+
+<https://sws.geonames.org/298795/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/18b086b7-81ed-3872-860e-159b7b4f5caf>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O264513" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/domain/2> , <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/domain/1> , <http://data.silknow.org/production/86c25ead-fe29-3d36-8ab7-6e330812b0e0> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/observation/2> , <http://data.silknow.org/image/342103f2-9e79-348b-945b-df23c516ca81> , <http://data.silknow.org/event/9ba70c48-9dd5-37c8-9a19-97dcc6b5e152> , <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/observation/1> , <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2> ;
+        dc:identifier       "O264513.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/image/342103f2-9e79-348b-945b-df23c516ca81>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018LF0202" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O264513_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018LF/2018LF0202.jpg> .
+
+<http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 6.75 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "17.145"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/9ba70c48-9dd5-37c8-9a19-97dcc6b5e152>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2> .
+
+<http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dress fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2> .
+
+<http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Dress fabric of cream silk ground. There are two vertical stripes comprising of yellow and cream zigzag pattern, with a thin stripe in yellow silk and gold thread in the centre, and a border of broader green triangular motif stripe to either side."@en , "Dress fabric of woven silk, Turkey, ca. 1870."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/342103f2-9e79-348b-945b-df23c516ca81> ;
+        ecrm:P3_has_note               "Dress fabric of cream silk ground. There are two vertical stripes comprising of yellow and cream zigzag pattern, with a thin stripe in yellow silk and gold thread in the centre, and a border of broader green triangular motif stripe to either side."@en , "Dress fabric of woven silk, Turkey, ca. 1870."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/dimension/1> , <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/dimension/2> ;
+        dc:identifier                  "T.12-1976" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O264513> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/18b086b7-81ed-3872-860e-159b7b4f5caf> .
+
+<http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2> .
+
+<http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Dress fabric of cream silk ground. There are two vertical stripes comprising of yellow and cream zigzag pattern, with a thin stripe in yellow silk and gold thread in the centre, and a border of broader green triangular motif stripe to either side."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2> .
+
+<http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 6 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "15.24"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/c5dcea1b-0478-3b00-8538-671238ecddc2> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .

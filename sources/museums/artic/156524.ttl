@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/ade66e77-c0b4-3129-84ad-6d161be6a23f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/156524_0.jpg> , <https://www.artic.edu/iiif/2/2dcb6db4-b401-7410-c866-02e89aae11ae/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/production/7734db66-0759-33fd-8834-8d24f586d9c4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://data.silknow.org/timespan/1600> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk and gold gilt strip wound around silk fiber core, warp-faced plain weave with extended ground wefts loop fringe"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ade66e77-c0b4-3129-84ad-6d161be6a23f> ;
+        ecrm:P3_has_note               "Silk and gold gilt strip wound around silk fiber core, warp-faced plain weave with extended ground wefts loop fringe"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc/dimension/1> , <http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc/dimension/2> ;
+        dc:identifier                  "1984.1549" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/156524/renaissance-fringe> .
+
+<http://data.silknow.org/actor/3377b9c3-2271-3aae-b1f2-f2c0304b5dc2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mr. and Mrs. William J. Robertson" ;
+        ecrm:P1_is_identified_by  "Gift of Mr. and Mrs. William J. Robertson" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "16.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "16.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "2.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "2.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc/category/1>
+        a                    silk:T35 ;
+        silk:L1              "“Renaissance” Fringe" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc> .
+
+<http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk and gold gilt strip wound around silk fiber core, warp-faced plain weave with extended ground wefts loop fringe"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc> .
+
+<http://data.silknow.org/event/da005ca8-045c-3ee5-a2f2-c5ff99f3f9b2>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/3377b9c3-2271-3aae-b1f2-f2c0304b5dc2> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mr. and Mrs. William J. Robertson" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a39b9791-062c-36ea-b2ac-e217209a68fd> .
+
+<http://data.silknow.org/object/a39b9791-062c-36ea-b2ac-e217209a68fd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1984.1549" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/ade66e77-c0b4-3129-84ad-6d161be6a23f> , <http://data.silknow.org/production/7734db66-0759-33fd-8834-8d24f586d9c4> , <http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc/category/1> , <http://data.silknow.org/event/da005ca8-045c-3ee5-a2f2-c5ff99f3f9b2> , <http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc> , <http://data.silknow.org/object/353035fa-f896-3cb5-86a5-e07c73f45cfc/observation/1> ;
+        dc:identifier       "156524.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .

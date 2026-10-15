@@ -1,0 +1,96 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/7402a47b-b287-3fa4-aad9-8a23579d7f4d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/image/1fb3f96d-43be-3e0d-8ac3-8217036d6fa7>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE01945" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE01945_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE01945&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Contemporánea"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461> .
+
+<http://data.silknow.org/event/f6f6307e-d6b1-38b5-afe8-6305667a9626>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/image/835acc63-9dbc-3918-b0db-8791f628a577>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "En el centro de la tapadera.: Flor"@es ;
+        ecrm:P3_has_note  "En el centro de la tapadera.: Flor"@es .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7e1f1e50-8454-35dd-bcdb-a0fb60221fa0> .
+
+<http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tabaquera" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461> .
+
+<http://data.silknow.org/object/7e1f1e50-8454-35dd-bcdb-a0fb60221fa0>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE01945" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461> , <http://data.silknow.org/image/1fb3f96d-43be-3e0d-8ac3-8217036d6fa7> , <http://data.silknow.org/production/d25d8d4d-4431-3708-8f0e-293ab8235b43> , <http://data.silknow.org/event/7402a47b-b287-3fa4-aad9-8a23579d7f4d> , <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461/observation/3> , <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461/domain/1> , <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461/category/1> , <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461/observation/1> , <http://data.silknow.org/event/f6f6307e-d6b1-38b5-afe8-6305667a9626> , <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461/domain/2> , <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461/observation/2> ;
+        dc:identifier       "CE01945_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "La aplicación de lacado en las tabaqueras y cajas de cartón y de concha se remonta a los años inmediatamente anteriores a la mitad del siglo XVIII. Este procedimiento, en el caso del francés, fue enseguida perfeccionado por Gosse y Wolff y, sobre todo, por la dinastía de los Hartin.   \nLa época de mayor difusión de este tipo de decoración corresponde a la 1ª mitad del siglo XIX cuando el cartón (papier maché) y la concha van sustituyendo paulatinamente al oro en la fabricación de estas cajas, debido a su menor coste."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461> .
+
+<http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/44> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461> .
+
+<http://data.silknow.org/production/d25d8d4d-4431-3708-8f0e-293ab8235b43>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461> ;
+        ecrm:P126_employed      "Nácar"@es , "Plata"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "Cartón piedra"@es , "Laca (madera)"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/560dd408-3f95-3fd7-9991-75ecb99f4560> .
+
+<http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "La aplicación de lacado en las tabaqueras y cajas de cartón y de concha se remonta a los años inmediatamente anteriores a la mitad del siglo XVIII. Este procedimiento, en el caso del francés, fue enseguida perfeccionado por Gosse y Wolff y, sobre todo, por la dinastía de los Hartin.   \nLa época de mayor difusión de este tipo de decoración corresponde a la 1ª mitad del siglo XIX cuando el cartón (papier maché) y la concha van sustituyendo paulatinamente al oro en la fabricación de estas cajas, debido a su menor coste."@es , "Edad Contemporánea"@es , "Forma rectangular con tapadera abatible unida con charnela metálica. Interior en color marrón. Decorada con un ramo de flores enmarcado por una cenefa de tallo sinuosos con roleos y flores, en nácar y plata entre dos filetes de plata, uno recto y el otro de ondas."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1fb3f96d-43be-3e0d-8ac3-8217036d6fa7> ;
+        ecrm:P3_has_note               "Forma rectangular con tapadera abatible unida con charnela metálica. Interior en color marrón. Decorada con un ramo de flores enmarcado por una cenefa de tallo sinuosos con roleos y flores, en nácar y plata entre dos filetes de plata, uno recto y el otro de ondas."@es , "Edad Contemporánea"@es , "La aplicación de lacado en las tabaqueras y cajas de cartón y de concha se remonta a los años inmediatamente anteriores a la mitad del siglo XVIII. Este procedimiento, en el caso del francés, fue enseguida perfeccionado por Gosse y Wolff y, sobre todo, por la dinastía de los Hartin.   \nLa época de mayor difusión de este tipo de decoración corresponde a la 1ª mitad del siglo XIX cuando el cartón (papier maché) y la concha van sustituyendo paulatinamente al oro en la fabricación de estas cajas, debido a su menor coste."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/835acc63-9dbc-3918-b0db-8791f628a577> ;
+        dc:identifier                  "CE01945" .
+
+<http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Forma rectangular con tapadera abatible unida con charnela metálica. Interior en color marrón. Decorada con un ramo de flores enmarcado por una cenefa de tallo sinuosos con roleos y flores, en nácar y plata entre dos filetes de plata, uno recto y el otro de ondas."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461> .
+
+<http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Platería" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f1094c86-a85a-3be5-8446-e2193db38461> .

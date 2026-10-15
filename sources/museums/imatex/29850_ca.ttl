@@ -1,0 +1,83 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0789f506-1888-3c97-a891-04b534a13da8> .
+
+<http://data.silknow.org/image/be70deed-058f-34e4-beb2-048cb60ac6e8>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "flors"@ca ;
+        ecrm:P3_has_note  "flors"@ca .
+
+<http://data.silknow.org/event/dc5d4bc3-6ab6-36fc-aae9-ec3c5e2de9e8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/41a3e312-35f8-3304-bcb4-999decffa358> .
+
+<http://data.silknow.org/object/41a3e312-35f8-3304-bcb4-999decffa358/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/41a3e312-35f8-3304-bcb4-999decffa358> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/41a3e312-35f8-3304-bcb4-999decffa358/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/41a3e312-35f8-3304-bcb4-999decffa358> .
+
+<http://data.silknow.org/event/ee592900-d220-307d-9d51-daa06530fd71>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/41a3e312-35f8-3304-bcb4-999decffa358> .
+
+<http://data.silknow.org/object/41a3e312-35f8-3304-bcb4-999decffa358>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/474a1a9c-16ee-3707-854a-c2440dd8b196> , <http://data.silknow.org/image/9c8307cf-0c87-334b-8fea-f64dee5a2613> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/9694a745-4cca-3980-b238-dc2b1d7aee54> , <http://data.silknow.org/image/be70deed-058f-34e4-beb2-048cb60ac6e8> ;
+        dc:identifier                  "22013" .
+
+<http://data.silknow.org/production/c7afcd46-b61d-39ad-87e1-cb5e5c29af22>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/41a3e312-35f8-3304-bcb4-999decffa358> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "acanalat"@ca , "ordit a disposició"@ca , "teixit llavorat"@ca ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/471> , <http://data.silknow.org/vocabulary/361> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1776_1800> .
+
+<http://data.silknow.org/image/474a1a9c-16ee-3707-854a-c2440dd8b196>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035727" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29850_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000035727.jpg> .
+
+<http://data.silknow.org/image/9694a745-4cca-3980-b238-dc2b1d7aee54>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "llistes verticals"@ca ;
+        ecrm:P3_has_note  "llistes verticals"@ca .
+
+<http://data.silknow.org/image/9c8307cf-0c87-334b-8fea-f64dee5a2613>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035726" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29850_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000035726.jpg> .
+
+<http://data.silknow.org/object/0789f506-1888-3c97-a891-04b534a13da8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29850" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/ee592900-d220-307d-9d51-daa06530fd71> , <http://data.silknow.org/object/41a3e312-35f8-3304-bcb4-999decffa358/domain/1> , <http://data.silknow.org/event/dc5d4bc3-6ab6-36fc-aae9-ec3c5e2de9e8> , <http://data.silknow.org/image/9c8307cf-0c87-334b-8fea-f64dee5a2613> , <http://data.silknow.org/object/41a3e312-35f8-3304-bcb4-999decffa358/category/1> , <http://data.silknow.org/object/41a3e312-35f8-3304-bcb4-999decffa358> , <http://data.silknow.org/image/474a1a9c-16ee-3707-854a-c2440dd8b196> , <http://data.silknow.org/production/c7afcd46-b61d-39ad-87e1-cb5e5c29af22> ;
+        dc:identifier       "29850.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

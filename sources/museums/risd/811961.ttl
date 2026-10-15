@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/295a229c-80f5-3304-8d0c-07bd7d29416d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0a6601c1-3f4d-398f-9b1b-baf32f0f4dfb> .
+
+<http://data.silknow.org/image/d95d6285-a0eb-386f-ad7b-0ad053c9ceba>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/811961_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/26607.jpg> .
+
+<http://data.silknow.org/object/93eb0b54-d2b6-3b88-9716-9fb7cc99a5ad>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1999.7.11" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0a6601c1-3f4d-398f-9b1b-baf32f0f4dfb/category/1> , <http://data.silknow.org/image/d95d6285-a0eb-386f-ad7b-0ad053c9ceba> , <http://data.silknow.org/event/c3722db1-b0b6-3e41-b0fc-4c02d41a0a1c> , <http://data.silknow.org/object/0a6601c1-3f4d-398f-9b1b-baf32f0f4dfb> , <http://data.silknow.org/event/295a229c-80f5-3304-8d0c-07bd7d29416d> , <http://data.silknow.org/object/0a6601c1-3f4d-398f-9b1b-baf32f0f4dfb/domain/1> , <http://data.silknow.org/production/f4b807fc-6640-3d2f-8c86-8dcf2a05c29b> ;
+        dc:identifier       "811961.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/0a6601c1-3f4d-398f-9b1b-baf32f0f4dfb/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0a6601c1-3f4d-398f-9b1b-baf32f0f4dfb> .
+
+<http://data.silknow.org/object/0a6601c1-3f4d-398f-9b1b-baf32f0f4dfb/category/1>
+        a                    silk:T35 ;
+        silk:L1              "fabric length; textile length" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0a6601c1-3f4d-398f-9b1b-baf32f0f4dfb> .
+
+<http://data.silknow.org/event/c3722db1-b0b6-3e41-b0fc-4c02d41a0a1c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a2f3ae6a-0486-36d3-860a-2c3d9b6a17a3> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Dr. Louis J. Cella, Jr." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0a6601c1-3f4d-398f-9b1b-baf32f0f4dfb> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/93eb0b54-d2b6-3b88-9716-9fb7cc99a5ad> .
+
+<http://data.silknow.org/actor/a2f3ae6a-0486-36d3-860a-2c3d9b6a17a3>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Dr. Louis J. Cella, Jr" ;
+        ecrm:P1_is_identified_by  "Gift of Dr. Louis J. Cella, Jr" .
+
+<http://data.silknow.org/actor/719f879d-0497-3ff8-bc75-03392c043b87>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "J. Remond & Cie" ;
+        ecrm:P1_is_identified_by  "J. Remond & Cie" .
+
+<http://data.silknow.org/production/f4b807fc-6640-3d2f-8c86-8dcf2a05c29b/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/719f879d-0497-3ff8-bc75-03392c043b87> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/production/f4b807fc-6640-3d2f-8c86-8dcf2a05c29b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0a6601c1-3f4d-398f-9b1b-baf32f0f4dfb> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1930_1939> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/f4b807fc-6640-3d2f-8c86-8dcf2a05c29b/activity/1> .
+
+<http://data.silknow.org/object/0a6601c1-3f4d-398f-9b1b-baf32f0f4dfb>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d95d6285-a0eb-386f-ad7b-0ad053c9ceba> ;
+        dc:identifier                  "1999.7.11" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/fabric-length-textile-length-1999711> .

@@ -1,0 +1,79 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/4478c6b3-becb-3461-9c93-f82fcb9f4e98>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6848892d-1855-3e79-8730-fc9fe05cc5ec> ;
+        dc:identifier                  "14.503" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/pincushion-14503> .
+
+<http://data.silknow.org/image/6848892d-1855-3e79-8730-fc9fe05cc5ec>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1039716_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/27159.jpg> .
+
+<http://data.silknow.org/object/4478c6b3-becb-3461-9c93-f82fcb9f4e98/category/1>
+        a                    silk:T35 ;
+        silk:L1              "pincushion" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4478c6b3-becb-3461-9c93-f82fcb9f4e98> .
+
+<http://data.silknow.org/actor/71450646-c490-3791-862d-ec1b6e8db2af>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Elizabeth W. Brown" ;
+        ecrm:P1_is_identified_by  "Gift of Elizabeth W. Brown" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/42089325> , <https://isni.org/isni/0000000041102223> .
+
+<http://data.silknow.org/event/f2cee104-586a-3956-82e0-82e7266ab929>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/4478c6b3-becb-3461-9c93-f82fcb9f4e98> .
+
+<http://data.silknow.org/object/4478c6b3-becb-3461-9c93-f82fcb9f4e98/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4478c6b3-becb-3461-9c93-f82fcb9f4e98> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<https://sws.geonames.org/6252001/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/dc5662c4-3644-3492-bd3d-8747a8d93bd3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 14.503" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/f2cee104-586a-3956-82e0-82e7266ab929> , <http://data.silknow.org/object/4478c6b3-becb-3461-9c93-f82fcb9f4e98> , <http://data.silknow.org/production/50fe3250-c4e2-3536-93f4-b2e1dff2895e> , <http://data.silknow.org/object/4478c6b3-becb-3461-9c93-f82fcb9f4e98/category/1> , <http://data.silknow.org/image/6848892d-1855-3e79-8730-fc9fe05cc5ec> , <http://data.silknow.org/object/4478c6b3-becb-3461-9c93-f82fcb9f4e98/domain/1> , <http://data.silknow.org/event/4689e364-c747-3f3b-8493-1e8e1adc7a0c> ;
+        dc:identifier       "1039716.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/production/50fe3250-c4e2-3536-93f4-b2e1dff2895e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4478c6b3-becb-3461-9c93-f82fcb9f4e98> ;
+        ecrm:P126_employed      "wool; silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/644> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6252001/> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dc5662c4-3644-3492-bd3d-8747a8d93bd3> .
+
+<http://data.silknow.org/event/4689e364-c747-3f3b-8493-1e8e1adc7a0c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/71450646-c490-3791-862d-ec1b6e8db2af> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Elizabeth W. Brown" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/4478c6b3-becb-3461-9c93-f82fcb9f4e98> .

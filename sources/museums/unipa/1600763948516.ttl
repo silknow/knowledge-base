@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/524ca733-3397-3980-b66f-f34b50810465>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Elisabetta Bazzani, scheda n. 45, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, pp. 138-139"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b345bb08-38ac-389d-8c31-a39c574075ed> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Elisabetta Bazzani, scheda n. 45, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, pp. 138-139"@it .
+
+<http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        ecrm:P1_is_identified_by  "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122951649> , <https://viaf.org/viaf/147524313> .
+
+<http://data.silknow.org/object/b365fbc4-cb3c-3883-bd33-81166df1487b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1600763948516" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/524ca733-3397-3980-b66f-f34b50810465> , <http://data.silknow.org/event/bd9acd6c-fb40-3b67-8ee0-6908929a7625> , <http://data.silknow.org/image/5d711235-8da2-347e-9f89-0ebc3022ef18> , <http://data.silknow.org/object/b345bb08-38ac-389d-8c31-a39c574075ed> , <http://data.silknow.org/production/7208fad2-83f0-3831-98a5-336663ff8f37> , <http://data.silknow.org/object/b345bb08-38ac-389d-8c31-a39c574075ed/type/1> ;
+        dc:identifier       "1600763948516.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/production/7208fad2-83f0-3831-98a5-336663ff8f37>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b345bb08-38ac-389d-8c31-a39c574075ed> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/457> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1401_1450> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3164602/> .
+
+<http://data.silknow.org/object/b345bb08-38ac-389d-8c31-a39c574075ed>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "prima metà del XV secolo"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5d711235-8da2-347e-9f89-0ebc3022ef18> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b345bb08-38ac-389d-8c31-a39c574075ed/dimension/2> , <http://data.silknow.org/object/b345bb08-38ac-389d-8c31-a39c574075ed/dimension/1> ;
+        dc:identifier                  "1600763948516" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<https://sws.geonames.org/3164602/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/bd9acd6c-fb40-3b67-8ee0-6908929a7625>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b345bb08-38ac-389d-8c31-a39c574075ed> .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b365fbc4-cb3c-3883-bd33-81166df1487b> .
+
+<http://data.silknow.org/object/b345bb08-38ac-389d-8c31-a39c574075ed/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "20" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "20"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/b345bb08-38ac-389d-8c31-a39c574075ed/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b345bb08-38ac-389d-8c31-a39c574075ed> ;
+        ecrm:P42_assigned    "Frammento composto da tre pezzi incollati su stoffa" .
+
+<http://data.silknow.org/image/5d711235-8da2-347e-9f89-0ebc3022ef18>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1600764893_45" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1600763948516_0.jpg> .
+
+<http://data.silknow.org/object/b345bb08-38ac-389d-8c31-a39c574075ed/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "19" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "19"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Jacob wrestling the angel."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/45eb14ac-1039-30af-804c-4171ee741ad7> ;
+        ecrm:P3_has_note               "Jacob wrestling the angel."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad/dimension/2> , <http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad/dimension/1> ;
+        dc:identifier                  "59.640" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/116619> .
+
+<http://data.silknow.org/event/b311563f-d9c3-34a2-9063-da20081538d5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad> .
+
+<http://data.silknow.org/production/eb38079c-6f3c-346d-a472-128336ba8465>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad> ;
+        ecrm:P126_employed      "Needlepoint lace: linen yarns and seed pearls"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1600_1650> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Jacob wrestling the angel."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad> .
+
+<http://data.silknow.org/image/45eb14ac-1039-30af-804c-4171ee741ad7>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "741273" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/116619_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/741273/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Lace: \"Jacob Wrestling with the Angel\"" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad> .
+
+<http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/530fd5d0-a1fe-3a6c-9947-39197755a128>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 59.640" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad> , <http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad/observation/1> , <http://data.silknow.org/event/b311563f-d9c3-34a2-9063-da20081538d5> , <http://data.silknow.org/image/45eb14ac-1039-30af-804c-4171ee741ad7> , <http://data.silknow.org/production/eb38079c-6f3c-346d-a472-128336ba8465> , <http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad/domain/1> ;
+        dc:identifier       "116619.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/530fd5d0-a1fe-3a6c-9947-39197755a128> .
+
+<http://data.silknow.org/object/01409a8b-914a-37a1-b8bc-8011d88683ad/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

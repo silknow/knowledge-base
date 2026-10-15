@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/8ed11132-0e69-3874-9d41-6a5b9e1c559e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O62411" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/bd0e7477-5105-34b1-9025-0d7781badba5> , <http://data.silknow.org/production/a6027568-6865-34aa-8852-47e56ed0f80f> , <http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217> , <http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a> , <http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a/observation/1> , <http://data.silknow.org/event/1cfe375a-e782-31f7-9387-3148cf1dfccc> , <http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a/observation/2> ;
+        dc:identifier       "O62411.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/production/a6027568-6865-34aa-8852-47e56ed0f80f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a> ;
+        ecrm:P126_employed      "Purple silk."@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1826_1875> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1269750/> .
+
+<https://sws.geonames.org/1269750/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dress" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Child's dress of purple silk from North India dating from the mid nineteenth century."@en , "Dress-shaped object of purple silk."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bd0e7477-5105-34b1-9025-0d7781badba5> ;
+        ecrm:P3_has_note               "Child's dress of purple silk from North India dating from the mid nineteenth century."@en , "Dress-shaped object of purple silk."@en ;
+        dc:identifier                  "IS.85-2001" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O62411> .
+
+<http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Dress-shaped object of purple silk."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a> .
+
+<http://data.silknow.org/collection/ed3dbc7c-4540-320d-a055-6841c02cc217>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "South & South East Asia Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a> ;
+        ecrm:P78_is_identified_by  "South & South East Asia Collection" .
+
+<http://data.silknow.org/actor/c12113ff-641a-35f7-9ddd-a7989b798c9d>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Elizabeth McKee" ;
+        ecrm:P1_is_identified_by  "Given by Elizabeth McKee" .
+
+<http://data.silknow.org/event/1cfe375a-e782-31f7-9387-3148cf1dfccc>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c12113ff-641a-35f7-9ddd-a7989b798c9d> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Elizabeth McKee" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8ed11132-0e69-3874-9d41-6a5b9e1c559e> .
+
+<http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Child's dress of purple silk from North India dating from the mid nineteenth century."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/6c0be589-7def-30a3-b548-79ee49a5234a> .
+
+<http://data.silknow.org/image/bd0e7477-5105-34b1-9025-0d7781badba5>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AH2346" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O62411_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AH/2006AH2346.jpg> .

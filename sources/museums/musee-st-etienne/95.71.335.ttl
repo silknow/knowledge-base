@@ -1,0 +1,60 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/29deff0d-d932-36e7-8f41-94943fcc5023>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "stylisé"@fr ;
+        ecrm:P3_has_note  "stylisé"@fr .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/image/4372fcec-b545-33cc-967a-84d0b6fd111f>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "guirlande orn"@fr ;
+        ecrm:P3_has_note  "guirlande orn"@fr .
+
+<http://data.silknow.org/object/9d025eb8-48da-382e-ae8f-741cb5a65ce9>
+        a                           ecrm:E22_Man-Made_Object ;
+        rdfs:label                  "Palmettes"@fr ;
+        ecrm:P65_shows_visual_item  <http://data.silknow.org/image/4372fcec-b545-33cc-967a-84d0b6fd111f> , <http://data.silknow.org/image/29deff0d-d932-36e7-8f41-94943fcc5023> ;
+        dc:identifier               "95.71.335" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/70ae97c9-74a6-39b0-b3b0-16c94345e9bc> .
+
+<http://data.silknow.org/event/5b965a2d-a18a-395c-8681-3ab1d7936096>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9d025eb8-48da-382e-ae8f-741cb5a65ce9> .
+
+<http://data.silknow.org/production/858e49f1-25f3-3037-a479-55594f98ac2a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9d025eb8-48da-382e-ae8f-741cb5a65ce9> ;
+        ecrm:P32_used_general_technique
+                "tissu = tissé"@fr .
+
+<http://data.silknow.org/object/9d025eb8-48da-382e-ae8f-741cb5a65ce9/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9d025eb8-48da-382e-ae8f-741cb5a65ce9> ;
+        ecrm:P42_assigned    "Palmettes" .
+
+<http://data.silknow.org/object/70ae97c9-74a6-39b0-b3b0-16c94345e9bc>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.335" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/858e49f1-25f3-3037-a479-55594f98ac2a> , <http://data.silknow.org/event/5b965a2d-a18a-395c-8681-3ab1d7936096> , <http://data.silknow.org/object/9d025eb8-48da-382e-ae8f-741cb5a65ce9/type/1> , <http://data.silknow.org/object/9d025eb8-48da-382e-ae8f-741cb5a65ce9> ;
+        dc:identifier       "95.71.335.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .

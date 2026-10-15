@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/a8f0c78c-7510-3c07-9cba-5dab8f0ec273>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241> .
+
+<http://data.silknow.org/object/dc1b2391-bb0a-3169-9c1d-d7b90da027b4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 63.1023" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/ac632053-4ad0-3855-b689-848ed2197bf0> , <http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241> , <http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241/domain/1> , <http://data.silknow.org/event/a8f0c78c-7510-3c07-9cba-5dab8f0ec273> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241/category/1> , <http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241/observation/1> , <http://data.silknow.org/production/67a10f1d-aca3-30a1-b5ea-0c6a245010ff> ;
+        dc:identifier       "115561.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241> .
+
+<http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Wide bed curtain (one of a set of two narrow and two wide)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241> .
+
+<https://sws.geonames.org/2728709/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/67a10f1d-aca3-30a1-b5ea-0c6a245010ff>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241> ;
+        ecrm:P126_employed      "Linen and cotton twill ground with wool embroidery"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1725> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2728709/> .
+
+<http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Red, orange, brown and shades of yellow crewels worked with a variety of stitches, including stem, seed, buttonhole, lattice work, French knots, bullion, etc., on a linen-and-cotton weft twill ground fabric. The design shows bizarre flowers, exotic fruits and tree islands. Condition: Good. See matching valance (63.1027) and chair seat covers (63.1028-.1034) and chair seat covers (63.1028-.1034)"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dc1b2391-bb0a-3169-9c1d-d7b90da027b4> .
+
+<http://data.silknow.org/object/de9a304d-3264-3a73-8b9f-7a6c51b9f241>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Red, orange, brown and shades of yellow crewels worked with a variety of stitches, including stem, seed, buttonhole, lattice work, French knots, bullion, etc., on a linen-and-cotton weft twill ground fabric. The design shows bizarre flowers, exotic fruits and tree islands. Condition: Good. See matching valance (63.1027) and chair seat covers (63.1028-.1034) and chair seat covers (63.1028-.1034)"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ac632053-4ad0-3855-b689-848ed2197bf0> ;
+        ecrm:P3_has_note               "Red, orange, brown and shades of yellow crewels worked with a variety of stitches, including stem, seed, buttonhole, lattice work, French knots, bullion, etc., on a linen-and-cotton weft twill ground fabric. The design shows bizarre flowers, exotic fruits and tree islands. Condition: Good. See matching valance (63.1027) and chair seat covers (63.1028-.1034) and chair seat covers (63.1028-.1034)"@en ;
+        dc:identifier                  "63.1023" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/115561> .
+
+<http://data.silknow.org/image/ac632053-4ad0-3855-b689-848ed2197bf0>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "781860" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/115561_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/781860/resize%3Aformat%3Dfull> .

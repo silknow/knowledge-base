@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a32e0f21-b47d-3a02-bbe8-617b8b52d12c> .
+
+<http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "55" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "55"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd> .
+
+<http://data.silknow.org/production/e2ce5b1b-285a-3a2c-8ca7-463d3cd8ae00>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                "patterned fabric"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/event/5c62481f-85b3-3844-acb3-fe1ab0cbff55>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd> .
+
+<http://data.silknow.org/image/f81d252d-3de9-3dfb-9808-6e207db15a45>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000034535" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/28811_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000034535.jpg> .
+
+<http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Biosca, Josep" ;
+        ecrm:P1_is_identified_by  "Biosca, Josep" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Josep_Huguet_i_Biosca> , <https://viaf.org/viaf/95599143> , <https://isni.org/isni/000000007829170X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Josep_Huguet_i_Biosca> .
+
+<http://data.silknow.org/object/a32e0f21-b47d-3a02-bbe8-617b8b52d12c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 28811" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd/category/1> , <http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd/domain/1> , <http://data.silknow.org/image/f81d252d-3de9-3dfb-9808-6e207db15a45> , <http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd> , <http://data.silknow.org/event/5c62481f-85b3-3844-acb3-fe1ab0cbff55> , <http://data.silknow.org/event/9e3da06c-4c80-3638-8291-892982a3a97f> , <http://data.silknow.org/production/e2ce5b1b-285a-3a2c-8ca7-463d3cd8ae00> ;
+        dc:identifier       "28811.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .
+
+<http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f81d252d-3de9-3dfb-9808-6e207db15a45> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd/dimension/1> , <http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd/dimension/2> ;
+        dc:identifier                  "837" .
+
+<http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd> .
+
+<http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "46" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "46"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/9e3da06c-4c80-3638-8291-892982a3a97f>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "Biosca, Josep" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/db631b43-d96a-310b-9607-1095c48562bd> ;
+        ecrm:P3_has_note               "donacions" .

@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/2bcc9c66-c895-3f14-8945-ea32a988e635/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2bcc9c66-c895-3f14-8945-ea32a988e635> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/868286d2-902b-3c10-b9fd-12fce9bff7b1>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/911187_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/333f3d78-f120-4867-a7c1-6a345d48fdca.jpg> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/2bcc9c66-c895-3f14-8945-ea32a988e635>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, 1775-1790, Louis XVI (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/868286d2-902b-3c10-b9fd-12fce9bff7b1> ;
+        dc:identifier                  "43842" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/911187> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/eea855dd-0d9b-3390-a1f6-101256bc6507> .
+
+<http://data.silknow.org/production/e159a3d2-ada0-380c-8a2c-7de99c9970e9>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1775-1790, Louis XVI (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2bcc9c66-c895-3f14-8945-ea32a988e635> ;
+        ecrm:P126_employed      "Taffetas chiné à la branche"@fr ;
+        ecrm:P3_has_note        "France, 1775-1790, Louis XVI (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1775_1790> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2bcc9c66-c895-3f14-8945-ea32a988e635> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/event/993a81f8-ff78-35f1-8a1c-f1a069f5a96f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Jansen, 1971" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2bcc9c66-c895-3f14-8945-ea32a988e635> .
+
+<http://data.silknow.org/object/eea855dd-0d9b-3390-a1f6-101256bc6507>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 43842" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2bcc9c66-c895-3f14-8945-ea32a988e635> , <http://data.silknow.org/production/e159a3d2-ada0-380c-8a2c-7de99c9970e9> , <http://data.silknow.org/object/2bcc9c66-c895-3f14-8945-ea32a988e635/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/868286d2-902b-3c10-b9fd-12fce9bff7b1> , <http://data.silknow.org/event/993a81f8-ff78-35f1-8a1c-f1a069f5a96f> ;
+        dc:identifier       "911187.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

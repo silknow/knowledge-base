@@ -1,0 +1,99 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/image/f4fa4d0d-6e4d-3335-b3dd-996e2759219e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE02015" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE02015_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE02015&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "36" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "36"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/26b9256c-da36-375b-8017-83211bcf2df2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/488> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "Punto de cruz"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1800> .
+
+<http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "29" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "29"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/41902f5f-512a-319f-9631-506c36d8ae6c>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd> .
+
+<http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7d4ff5fb-2a03-3ea4-bc41-f28089d2edba> .
+
+<http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Paño bordado en sedas de colores. Aparece un gran rectángulo en el centro y dos cenefas añadidas recosidas que parecen más antiguas.  \nDecoración a base de motivos geométricos muy coloristas; en el recuadro central, flores de lis muy estilizadas."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd> .
+
+<http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Paño" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd> .
+
+<http://data.silknow.org/event/ad230824-2489-36c0-8b99-021a494ad3f6>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/7d4ff5fb-2a03-3ea4-bc41-f28089d2edba>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE02015" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd/observation/2> , <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd/observation/1> , <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd> , <http://data.silknow.org/event/41902f5f-512a-319f-9631-506c36d8ae6c> , <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd/domain/1> , <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd/category/1> , <http://data.silknow.org/production/26b9256c-da36-375b-8017-83211bcf2df2> , <http://data.silknow.org/image/f4fa4d0d-6e4d-3335-b3dd-996e2759219e> , <http://data.silknow.org/event/ad230824-2489-36c0-8b99-021a494ad3f6> ;
+        dc:identifier       "CE02015_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd> .
+
+<http://data.silknow.org/image/e28d375d-457d-3993-ab07-f7b8765b5396>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Flor de lis; Motivos geométricos"@es ;
+        ecrm:P3_has_note  "Flor de lis; Motivos geométricos"@es .
+
+<http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Paño bordado en sedas de colores. Aparece un gran rectángulo en el centro y dos cenefas añadidas recosidas que parecen más antiguas.  \nDecoración a base de motivos geométricos muy coloristas; en el recuadro central, flores de lis muy estilizadas."@es , "Edad Moderna"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f4fa4d0d-6e4d-3335-b3dd-996e2759219e> ;
+        ecrm:P3_has_note               "Paño bordado en sedas de colores. Aparece un gran rectángulo en el centro y dos cenefas añadidas recosidas que parecen más antiguas.  \nDecoración a base de motivos geométricos muy coloristas; en el recuadro central, flores de lis muy estilizadas."@es , "Edad Moderna"@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd/dimension/1> , <http://data.silknow.org/object/f74b4078-ae14-3956-ae6e-c20df9a46edd/dimension/2> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/e28d375d-457d-3993-ab07-f7b8765b5396> ;
+        dc:identifier                  "CE02015" .

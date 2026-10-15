@@ -1,0 +1,80 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/ae092993-880e-312c-add9-c25d864ce8e0>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3f9f0baa-3d0d-39fe-ba9b-396b385796cb> .
+
+<http://data.silknow.org/actor/f6f0191b-abce-3548-ae9e-5e808190866c>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Harold P. Waterman" ;
+        ecrm:P1_is_identified_by  "Gift of Harold P. Waterman" .
+
+<http://data.silknow.org/image/e1418c64-7a83-34e3-8904-83da259aba3e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/814886_1.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/14828.jpg> .
+
+<http://data.silknow.org/object/3f9f0baa-3d0d-39fe-ba9b-396b385796cb/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Mourning Shawl" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3f9f0baa-3d0d-39fe-ba9b-396b385796cb> .
+
+<http://data.silknow.org/event/ccbd2aa7-6025-3168-936e-090c5bdf1d9e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/f6f0191b-abce-3548-ae9e-5e808190866c> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Harold P. Waterman" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3f9f0baa-3d0d-39fe-ba9b-396b385796cb> .
+
+<http://data.silknow.org/production/a9e9fcd0-f097-33b1-abfb-0e9cad81bf7f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3f9f0baa-3d0d-39fe-ba9b-396b385796cb> ;
+        ecrm:P126_employed      "Silk twill weave"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1826_1875> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6252001/> .
+
+<http://data.silknow.org/image/487792b4-a467-3250-ad35-d2503a316385>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/814886_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/314410.jpg> .
+
+<http://data.silknow.org/object/3f9f0baa-3d0d-39fe-ba9b-396b385796cb>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/487792b4-a467-3250-ad35-d2503a316385> , <http://data.silknow.org/image/e1418c64-7a83-34e3-8904-83da259aba3e> ;
+        dc:identifier                  "10.021" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/mourning-shawl-10021> .
+
+<http://data.silknow.org/object/3f9f0baa-3d0d-39fe-ba9b-396b385796cb/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3f9f0baa-3d0d-39fe-ba9b-396b385796cb> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<https://sws.geonames.org/6252001/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/b72ea45e-b8e9-31da-876c-a1de373e62a6>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10.021" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/e1418c64-7a83-34e3-8904-83da259aba3e> , <http://data.silknow.org/object/3f9f0baa-3d0d-39fe-ba9b-396b385796cb/category/1> , <http://data.silknow.org/event/ae092993-880e-312c-add9-c25d864ce8e0> , <http://data.silknow.org/object/3f9f0baa-3d0d-39fe-ba9b-396b385796cb/domain/1> , <http://data.silknow.org/production/a9e9fcd0-f097-33b1-abfb-0e9cad81bf7f> , <http://data.silknow.org/image/487792b4-a467-3250-ad35-d2503a316385> , <http://data.silknow.org/event/ccbd2aa7-6025-3168-936e-090c5bdf1d9e> , <http://data.silknow.org/object/3f9f0baa-3d0d-39fe-ba9b-396b385796cb> ;
+        dc:identifier       "814886.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b72ea45e-b8e9-31da-876c-a1de373e62a6> .

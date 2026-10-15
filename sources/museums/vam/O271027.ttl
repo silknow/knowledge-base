@@ -1,0 +1,116 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/0d9a85a9-f09e-33fd-81a6-f35a7a2996a1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa> ;
+        ecrm:P126_employed      "Woven wool and silk"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1877> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2635167/> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/0d9a85a9-f09e-33fd-81a6-f35a7a2996a1/activity/1> .
+
+<http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 11.5 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "29.21"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/2635167/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Furnishing fabric 'Swivel' of double cloth woven in wool and silk, designed by William Morris for Morris & Co., Great Britain, 1877"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa> .
+
+<http://data.silknow.org/production/0d9a85a9-f09e-33fd-81a6-f35a7a2996a1/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/3e5943aa-c5c5-3e04-95df-c21872056d96> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/12bbc76d-af1e-364c-931c-30562c68f687>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O271027" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/observation/2> , <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa> , <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/domain/1> , <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/observation/1> , <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/domain/2> , <http://data.silknow.org/event/f0cb1337-e9d5-36df-bd55-499c4ca0ab77> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/production/0d9a85a9-f09e-33fd-81a6-f35a7a2996a1> , <http://data.silknow.org/image/875835b9-f228-3b11-af1b-9e19c3e29242> ;
+        dc:identifier       "O271027.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/image/875835b9-f228-3b11-af1b-9e19c3e29242>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2011FC5491" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O271027_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2011FC/2011FC5491.jpg> .
+
+<http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 48 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "121.92"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Furnishing fabric of double cloth. It consists of a small scale symmetrical arrangement of leaf forms within ogival compartments formed of stems, flanked by a bulbous stem containing more compressed leaf ornament. The sample has selvedges on both sides, and contains six repeats (7.875 inches) of pattern in the width of the material. There is no repeat in the height.\n\nThe warps of the double cloth are of dark blue and white silk, and the wefts of dark blue and olive green wool. The blues are woven together."@en , "Furnishing fabric 'Swivel' of double cloth woven in wool and silk, designed by William Morris for Morris & Co., Great Britain, 1877"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/875835b9-f228-3b11-af1b-9e19c3e29242> ;
+        ecrm:P3_has_note               "Furnishing fabric 'Swivel' of double cloth woven in wool and silk, designed by William Morris for Morris & Co., Great Britain, 1877"@en , "Furnishing fabric of double cloth. It consists of a small scale symmetrical arrangement of leaf forms within ogival compartments formed of stems, flanked by a bulbous stem containing more compressed leaf ornament. The sample has selvedges on both sides, and contains six repeats (7.875 inches) of pattern in the width of the material. There is no repeat in the height.\n\nThe warps of the double cloth are of dark blue and white silk, and the wefts of dark blue and olive green wool. The blues are woven together."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/dimension/2> , <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/dimension/1> ;
+        dc:identifier                  "T.21-1968" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O271027> .
+
+<http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Interiors" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa> .
+
+<http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/4> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa> .
+
+<http://data.silknow.org/event/f0cb1337-e9d5-36df-bd55-499c4ca0ab77>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/12bbc76d-af1e-364c-931c-30562c68f687> .
+
+<http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Furnishing fabric of double cloth. It consists of a small scale symmetrical arrangement of leaf forms within ogival compartments formed of stems, flanked by a bulbous stem containing more compressed leaf ornament. The sample has selvedges on both sides, and contains six repeats (7.875 inches) of pattern in the width of the material. There is no repeat in the height.\n\nThe warps of the double cloth are of dark blue and white silk, and the wefts of dark blue and olive green wool. The blues are woven together."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/73400dc6-3b10-3f31-bcc7-b424c708f2fa> .
+
+<http://data.silknow.org/actor/3e5943aa-c5c5-3e04-95df-c21872056d96>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Morris, William" ;
+        ecrm:P1_is_identified_by  "Morris, William" .

@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5b7f9303-f59b-35eb-9b8d-728c9a52ca37> .
+
+<http://data.silknow.org/event/dba21719-18ce-391a-a1bf-f39855c0da1a>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0c574888-4d27-3e75-89f8-64781491fda3> .
+
+<http://data.silknow.org/production/b4a4bb36-450b-30a3-bfe2-0e48660ffb2b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0c574888-4d27-3e75-89f8-64781491fda3> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/object/5b7f9303-f59b-35eb-9b8d-728c9a52ca37>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27231" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0c574888-4d27-3e75-89f8-64781491fda3/category/1> , <http://data.silknow.org/event/dba21719-18ce-391a-a1bf-f39855c0da1a> , <http://data.silknow.org/object/0c574888-4d27-3e75-89f8-64781491fda3> , <http://data.silknow.org/event/cc05eebb-c2bd-3cdc-8c28-c2a703c175e1> , <http://data.silknow.org/production/b4a4bb36-450b-30a3-bfe2-0e48660ffb2b> , <http://data.silknow.org/image/7d676200-9c7f-33f3-a817-2bb597b33b6f> , <http://data.silknow.org/object/0c574888-4d27-3e75-89f8-64781491fda3/domain/1> ;
+        dc:identifier       "27231.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/0c574888-4d27-3e75-89f8-64781491fda3/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0c574888-4d27-3e75-89f8-64781491fda3> .
+
+<http://data.silknow.org/event/cc05eebb-c2bd-3cdc-8c28-c2a703c175e1>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0c574888-4d27-3e75-89f8-64781491fda3> .
+
+<http://data.silknow.org/image/7d676200-9c7f-33f3-a817-2bb597b33b6f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000032894" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27231_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000032894.jpg> .
+
+<http://data.silknow.org/object/0c574888-4d27-3e75-89f8-64781491fda3/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0c574888-4d27-3e75-89f8-64781491fda3> .
+
+<http://data.silknow.org/object/0c574888-4d27-3e75-89f8-64781491fda3>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7d676200-9c7f-33f3-a817-2bb597b33b6f> ;
+        dc:identifier                  "15923" .

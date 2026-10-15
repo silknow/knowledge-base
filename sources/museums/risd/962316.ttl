@@ -1,0 +1,100 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/b29fe19d-2266-3bdb-9e6a-e32bff362e79>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad> .
+
+<http://data.silknow.org/production/38a775e8-c0ce-30db-ac74-1a681e941b65>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad> ;
+        ecrm:P126_employed      "silk; cotton"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/617> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "supplementary weft patterning"@en , "satin weave"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/456> , <http://data.silknow.org/vocabulary/457> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1502_1608> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/298795/> .
+
+<http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad> .
+
+<http://data.silknow.org/object/e3aa9468-d090-354d-aa96-475323e57e28>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Ottoman Turkish Art" , "September 25, 1987 - January 24, 1988" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "Ottoman Turkish Art" , "September 25, 1987 - January 24, 1988" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/ottoman-turkish-art> .
+
+<http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "16.003" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/cushion-cover-16003> .
+
+<http://data.silknow.org/object/5161bb17-c78b-3ad2-9f20-b6cc4a9fa304>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 16.003" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e3aa9468-d090-354d-aa96-475323e57e28> , <http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad/category/1> , <http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad/domain/1> , <http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad> , <http://data.silknow.org/object/82e23fb2-3ba1-3989-b9b6-43d30c3b1960> , <http://data.silknow.org/event/b29fe19d-2266-3bdb-9e6a-e32bff362e79> , <http://data.silknow.org/event/a41fd246-95e6-30dc-b41d-a774b7811334> , <http://data.silknow.org/production/38a775e8-c0ce-30db-ac74-1a681e941b65> , <http://data.silknow.org/object/4f9e93fb-82db-31e2-8c12-d1f18880181e> ;
+        dc:identifier       "962316.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad/category/1>
+        a                    silk:T35 ;
+        silk:L1              "cushion cover" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad> .
+
+<http://data.silknow.org/event/a41fd246-95e6-30dc-b41d-a774b7811334>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad> .
+
+<https://sws.geonames.org/298795/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Gustav Radeke" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5161bb17-c78b-3ad2-9f20-b6cc4a9fa304> .
+
+<http://data.silknow.org/object/4f9e93fb-82db-31e2-8c12-d1f18880181e>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Cloth of Kings" , "January 25 - February 24, 1985" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "Cloth of Kings" , "January 25 - February 24, 1985" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/cloth-kings> .
+
+<http://data.silknow.org/object/82e23fb2-3ba1-3989-b9b6-43d30c3b1960>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "A World of Costume and Textiles" , "A Handbook of the Collection" , "September 22 - November 12, 1989" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/51a261c4-86ec-377e-8938-4fe11f6db6ad> ;
+        ecrm:P2_has_type    "Publication" , "Exhibition" ;
+        ecrm:P3_has_note    "A Handbook of the Collection" , "A World of Costume and Textiles" , "September 22 - November 12, 1989" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/world-costume-and-textiles> , <https://risdmuseum.org/art-design/projects-publications/publications/world-costume-and-textiles> .

@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/af099774-e668-30b3-adbd-25ad1b8d4a5a/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "25" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "25"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/af099774-e668-30b3-adbd-25ad1b8d4a5a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "XVII secolo"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/059249bc-7ad6-30ce-bc5f-be94326caace> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/af099774-e668-30b3-adbd-25ad1b8d4a5a/dimension/2> , <http://data.silknow.org/object/af099774-e668-30b3-adbd-25ad1b8d4a5a/dimension/1> ;
+        dc:identifier                  "1601213798302" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/production/e6e44d8e-77f8-375d-be14-6b7f56a1d305>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/af099774-e668-30b3-adbd-25ad1b8d4a5a> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        ecrm:P1_is_identified_by  "Modena, Museo Civico D'Arte, Collezione Gandini" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122951649> , <https://viaf.org/viaf/147524313> .
+
+<http://data.silknow.org/object/af099774-e668-30b3-adbd-25ad1b8d4a5a/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/677790ee-0f3d-3e93-b2ad-435efe93364e>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/9ebd12df-3c25-36e5-957c-2f2cd04ac840> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/af099774-e668-30b3-adbd-25ad1b8d4a5a> .
+
+<http://data.silknow.org/object/af099774-e668-30b3-adbd-25ad1b8d4a5a/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "name" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/af099774-e668-30b3-adbd-25ad1b8d4a5a> ;
+        ecrm:P42_assigned    "Frammento" .
+
+<http://data.silknow.org/object/61857937-7934-304d-9ecd-58cb0e922d03>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Giacinto Cambini, scheda n. 277, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, p. 259"@it ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/af099774-e668-30b3-adbd-25ad1b8d4a5a> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Giacinto Cambini, scheda n. 277, in La Collezione Gandini. Tessuti del Medioevo e del Rinascimento, a cura di M. Cuoghi Costantini e I. Silvestri, Bologna 2010, p. 259"@it .
+
+<http://data.silknow.org/object/3e77b594-306b-340e-90a9-f36ca648f4ad>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1601213798302" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/677790ee-0f3d-3e93-b2ad-435efe93364e> , <http://data.silknow.org/object/61857937-7934-304d-9ecd-58cb0e922d03> , <http://data.silknow.org/image/059249bc-7ad6-30ce-bc5f-be94326caace> , <http://data.silknow.org/object/af099774-e668-30b3-adbd-25ad1b8d4a5a/type/1> , <http://data.silknow.org/production/e6e44d8e-77f8-375d-be14-6b7f56a1d305> , <http://data.silknow.org/object/af099774-e668-30b3-adbd-25ad1b8d4a5a> ;
+        dc:identifier       "1601213798302.json" ;
+        dc:publisher        "http://data.silknow.org/organization/unipa" .
+
+<http://data.silknow.org/unipa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3e77b594-306b-340e-90a9-f36ca648f4ad> .
+
+<http://data.silknow.org/image/059249bc-7ad6-30ce-bc5f-be94326caace>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1601214697_277" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/unipa/1601213798302_0.jpg> .

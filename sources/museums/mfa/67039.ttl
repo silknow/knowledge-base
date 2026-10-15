@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/249ac4c0-bffb-3e81-a608-593bf147f5d5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22> ;
+        ecrm:P126_employed      "Copper plate engraving on cotton"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1825> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Printed cotton with scenes from the story of Joseph" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22> .
+
+<http://data.silknow.org/event/6c4bb4b3-0b27-32c6-84e9-b4236590bf6a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22> .
+
+<http://data.silknow.org/object/f99380cc-5155-3e25-adb8-9fb8c51f31d3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 26.171" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22/category/1> , <http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22/domain/1> , <http://data.silknow.org/image/4c317d64-8f52-391f-bdd4-d14ae1d47b99> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/event/6c4bb4b3-0b27-32c6-84e9-b4236590bf6a> , <http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22/observation/1> , <http://data.silknow.org/production/249ac4c0-bffb-3e81-a608-593bf147f5d5> , <http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22> ;
+        dc:identifier       "67039.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22> .
+
+<http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "70.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "70.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f99380cc-5155-3e25-adb8-9fb8c51f31d3> .
+
+<http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Printed with reddish violet. Scenes from the story of Joseph, with the subjects printed under each scene - \"JOSEPH VENDU PAR SES FRERES\"  \"LES FRERES DE JOSEPH ENVOIENT SA ROBE A JACOB\"  \"JOSEPH EXPLIANT LES SONGES DE PHARAON\"  \"JOSEPH SE FAIT RECONNAITRE DE SES FRERES\". Pieced and torn."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22> .
+
+<http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "64.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "64.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Printed with reddish violet. Scenes from the story of Joseph, with the subjects printed under each scene - \"JOSEPH VENDU PAR SES FRERES\"  \"LES FRERES DE JOSEPH ENVOIENT SA ROBE A JACOB\"  \"JOSEPH EXPLIANT LES SONGES DE PHARAON\"  \"JOSEPH SE FAIT RECONNAITRE DE SES FRERES\". Pieced and torn."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4c317d64-8f52-391f-bdd4-d14ae1d47b99> ;
+        ecrm:P3_has_note               "Printed with reddish violet. Scenes from the story of Joseph, with the subjects printed under each scene - \"JOSEPH VENDU PAR SES FRERES\"  \"LES FRERES DE JOSEPH ENVOIENT SA ROBE A JACOB\"  \"JOSEPH EXPLIANT LES SONGES DE PHARAON\"  \"JOSEPH SE FAIT RECONNAITRE DE SES FRERES\". Pieced and torn."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22/dimension/2> , <http://data.silknow.org/object/e47bb7d8-a145-3a8e-af63-f898d0604d22/dimension/1> ;
+        dc:identifier                  "26.171" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/67039> .
+
+<http://data.silknow.org/image/4c317d64-8f52-391f-bdd4-d14ae1d47b99>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "745507" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/67039_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/745507/resize%3Aformat%3Dfull> .

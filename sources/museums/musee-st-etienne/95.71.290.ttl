@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/bd789009-e606-32e4-94f2-916a1b72e5df>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "coq de bruyère"@fr ;
+        ecrm:P3_has_note  "coq de bruyère"@fr .
+
+<http://data.silknow.org/event/b72a7974-44fa-3252-8310-9bb345f89221>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863> .
+
+<http://data.silknow.org/assessment/7e27c5f7-bbf9-362d-988a-da6d75a0411a/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "pas de défaut d'intégrité"@fr ;
+        ecrm:P2_has_type  "Intégrité" ;
+        ecrm:P3_has_note  "pas de défaut d'intégrité"@fr .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/image/e57266f7-3197-37a5-8c8a-8d44a85767d0>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.290_0.jpg> .
+
+<http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "coq de bruyère"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e57266f7-3197-37a5-8c8a-8d44a85767d0> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/1b85834f-9c3d-3fa2-b924-f0b1f1f4c01d> , <http://data.silknow.org/image/bd789009-e606-32e4-94f2-916a1b72e5df> ;
+        dc:identifier                  "95.71.290" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2c85bccc-8142-39e5-a097-3f75ba7ad975> .
+
+<http://data.silknow.org/object/71d39e89-4179-3428-a497-b61718fc78a4>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.290.JPG"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.290.JPG"@fr .
+
+<http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863> ;
+        ecrm:P42_assigned    "coq de bruyère" .
+
+<http://data.silknow.org/assessment/7e27c5f7-bbf9-362d-988a-da6d75a0411a>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/7e27c5f7-bbf9-362d-988a-da6d75a0411a/condition/1> .
+
+<http://data.silknow.org/object/2c85bccc-8142-39e5-a097-3f75ba7ad975>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.290" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863/type/1> , <http://data.silknow.org/image/e57266f7-3197-37a5-8c8a-8d44a85767d0> , <http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863/right> , <http://data.silknow.org/object/cf178a72-a848-3884-9529-827a0756a9a0> , <http://data.silknow.org/assessment/7e27c5f7-bbf9-362d-988a-da6d75a0411a> , <http://data.silknow.org/production/2957aedc-8707-3960-bca2-46e5e3ad6e41> , <http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863> , <http://data.silknow.org/event/b72a7974-44fa-3252-8310-9bb345f89221> , <http://data.silknow.org/object/71d39e89-4179-3428-a497-b61718fc78a4> ;
+        dc:identifier       "95.71.290.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/image/1b85834f-9c3d-3fa2-b924-f0b1f1f4c01d>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "plante"@fr ;
+        ecrm:P3_has_note  "plante"@fr .
+
+<http://data.silknow.org/production/2957aedc-8707-3960-bca2-46e5e3ad6e41>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863> ;
+        ecrm:P32_used_general_technique
+                "imprimé sur chaîne"@fr .
+
+<http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/object/cf178a72-a848-3884-9529-827a0756a9a0>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/33e9886d-3b28-3dfd-9d8c-b82711c44863> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/a19afa58-91d0-38c9-bda0-32264e1c8104> .

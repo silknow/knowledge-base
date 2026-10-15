@@ -1,0 +1,112 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/5c1834c6-6944-3d2a-ab44-539bde2bed17>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f> ;
+        ecrm:P126_employed      "cotton yarn, silk thread, metal thread, weaving, velvet"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1880> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/event/5f58a529-e404-3d2f-bbcb-4c699319f857>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f> .
+
+<http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "velvet, 1800s, Persian"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f> .
+
+<http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 156 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "156"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Velvet panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/dd57f42a-b82f-3f86-b802-90a88b083af1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O158552" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f/domain/1> , <http://data.silknow.org/image/89025567-c66a-31c2-9fe5-4a8dbefbe2c1> , <http://data.silknow.org/image/4615bedd-ee07-38c7-a359-cdaa632c58e5> , <http://data.silknow.org/production/5c1834c6-6944-3d2a-ab44-539bde2bed17> , <http://data.silknow.org/event/5f58a529-e404-3d2f-bbcb-4c699319f857> , <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f/observation/2> , <http://data.silknow.org/image/ec9cedd4-ed97-35b7-a5d9-b34ba9eb4ed8> , <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f> , <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f/observation/1> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> ;
+        dc:identifier       "O158552.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/image/89025567-c66a-31c2-9fe5-4a8dbefbe2c1>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2016JR4225" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O158552_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2016JR/2016JR4225.jpg> .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Furnishing  or dress fabric, cut voided silk  and cotton velvet with metal thread.\nDisplayed behind glass. \nFoundation Warp: yellow silk\nPile Warp: faded purple silk\nFoundation Weft: yellow cotton\nPile Weft: yellow silk and silver strip which is bound by every 3rd foundation warp.\nSelvedge: blue and white silk plain weave.\nRepeating pattern of a floral spray: lobed trefoil base with 2 flowers outlined in pile and one flower in solid pile, with leaves.  In the lowest row the spray leans to the left with the solid flower on the left, but this is reversed in the row above and the sprays are offset. There is a small leaf between the sprays."@en , "velvet, 1800s, Persian"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/89025567-c66a-31c2-9fe5-4a8dbefbe2c1> , <http://data.silknow.org/image/4615bedd-ee07-38c7-a359-cdaa632c58e5> , <http://data.silknow.org/image/ec9cedd4-ed97-35b7-a5d9-b34ba9eb4ed8> ;
+        ecrm:P3_has_note               "velvet, 1800s, Persian"@en , "Furnishing  or dress fabric, cut voided silk  and cotton velvet with metal thread.\nDisplayed behind glass. \nFoundation Warp: yellow silk\nPile Warp: faded purple silk\nFoundation Weft: yellow cotton\nPile Weft: yellow silk and silver strip which is bound by every 3rd foundation warp.\nSelvedge: blue and white silk plain weave.\nRepeating pattern of a floral spray: lobed trefoil base with 2 flowers outlined in pile and one flower in solid pile, with leaves.  In the lowest row the spray leans to the left with the solid flower on the left, but this is reversed in the row above and the sprays are offset. There is a small leaf between the sprays."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f/dimension/2> , <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f/dimension/1> ;
+        dc:identifier                  "952-1889" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O158552> .
+
+<http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "selvedge to selvedge" ;
+        rdfs:label          "Width: 51 cm selvedge to selvedge" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "selvedge to selvedge" ;
+        ecrm:P90_has_value  "51"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/4615bedd-ee07-38c7-a359-cdaa632c58e5>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2016JR4226" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O158552_2.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2016JR/2016JR4226.jpg> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/dd57f42a-b82f-3f86-b802-90a88b083af1> .
+
+<http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Furnishing  or dress fabric, cut voided silk  and cotton velvet with metal thread.\nDisplayed behind glass. \nFoundation Warp: yellow silk\nPile Warp: faded purple silk\nFoundation Weft: yellow cotton\nPile Weft: yellow silk and silver strip which is bound by every 3rd foundation warp.\nSelvedge: blue and white silk plain weave.\nRepeating pattern of a floral spray: lobed trefoil base with 2 flowers outlined in pile and one flower in solid pile, with leaves.  In the lowest row the spray leans to the left with the solid flower on the left, but this is reversed in the row above and the sprays are offset. There is a small leaf between the sprays."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f> .
+
+<http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f> .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/65e3bf2a-22a2-3abb-99ad-318b44d9964f> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .
+
+<http://data.silknow.org/image/ec9cedd4-ed97-35b7-a5d9-b34ba9eb4ed8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2011ER9465" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O158552_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2011ER/2011ER9465.jpg> .

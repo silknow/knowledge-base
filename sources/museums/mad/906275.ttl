@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/6953f48f-1ca1-31cd-ad7b-f9fd6921680d>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/906275_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/438740bf-26c6-4141-891d-820bd96dcce0.jpg> .
+
+<http://data.silknow.org/event/69088e56-07ed-373c-8ebe-a251332b9ca4>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Marguerite Binz, 2004" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ff8f91fa-4159-346a-bd60-07c37f044694> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/92599514-1aea-3a5e-9740-3f9dd3c88d10>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Brossin de Méré, Paris, 1952 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ff8f91fa-4159-346a-bd60-07c37f044694> ;
+        ecrm:P126_employed      "Satin cuir imprimé au cadre"@fr ;
+        ecrm:P3_has_note        "Brossin de Méré, Paris, 1952 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/9d42671a-fe1c-3273-a1bf-803e3f10edcd> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2988507/> .
+
+<http://data.silknow.org/object/ff8f91fa-4159-346a-bd60-07c37f044694/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ff8f91fa-4159-346a-bd60-07c37f044694> .
+
+<http://data.silknow.org/object/c4b0f18e-53b3-3903-9654-4a44baf7f400>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2004.14.205" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/6953f48f-1ca1-31cd-ad7b-f9fd6921680d> , <http://data.silknow.org/object/ff8f91fa-4159-346a-bd60-07c37f044694/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/ff8f91fa-4159-346a-bd60-07c37f044694> , <http://data.silknow.org/production/92599514-1aea-3a5e-9740-3f9dd3c88d10> , <http://data.silknow.org/event/69088e56-07ed-373c-8ebe-a251332b9ca4> ;
+        dc:identifier       "906275.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c4b0f18e-53b3-3903-9654-4a44baf7f400> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ff8f91fa-4159-346a-bd60-07c37f044694> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/ff8f91fa-4159-346a-bd60-07c37f044694>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Brossin de Méré, Paris, 1952 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6953f48f-1ca1-31cd-ad7b-f9fd6921680d> ;
+        dc:identifier                  "2004.14.205" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/906275> .
+
+<https://sws.geonames.org/2988507/>
+        a       ecrm:E53_Place .

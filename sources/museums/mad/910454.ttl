@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/914392c4-8361-3aef-9d9b-6297fd3878cb>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, Oberkampf, Jouy-en-Josas, 1808 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8740073a-a65f-39ac-9109-b04e6d1a8a46> ;
+        dc:identifier                  "18248" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/910454> .
+
+<http://data.silknow.org/event/4b8c162d-be04-301c-8604-bea28e874803>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1911" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/914392c4-8361-3aef-9d9b-6297fd3878cb> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/914392c4-8361-3aef-9d9b-6297fd3878cb/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/914392c4-8361-3aef-9d9b-6297fd3878cb> .
+
+<https://sws.geonames.org/5527541/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/8740073a-a65f-39ac-9109-b04e6d1a8a46>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/910454_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/4f7835bd-c771-4492-9fdd-d26c88cabb4c.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c2ed9e20-6749-3e87-a8bd-4d7bf93557b0> .
+
+<http://data.silknow.org/object/c2ed9e20-6749-3e87-a8bd-4d7bf93557b0>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 18248" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/914392c4-8361-3aef-9d9b-6297fd3878cb/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/a638eebe-58b9-34dd-bcee-808f4c6fa5e5> , <http://data.silknow.org/image/8740073a-a65f-39ac-9109-b04e6d1a8a46> , <http://data.silknow.org/event/4b8c162d-be04-301c-8604-bea28e874803> , <http://data.silknow.org/object/914392c4-8361-3aef-9d9b-6297fd3878cb> ;
+        dc:identifier       "910454.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/914392c4-8361-3aef-9d9b-6297fd3878cb> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/production/a638eebe-58b9-34dd-bcee-808f4c6fa5e5>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Oberkampf, Jouy-en-Josas, 1808 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/914392c4-8361-3aef-9d9b-6297fd3878cb> ;
+        ecrm:P126_employed      "Toile de coton imprimée au rouleau de cuivre (?)"@fr ;
+        ecrm:P3_has_note        "Oberkampf, Jouy-en-Josas, 1808 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/b76fb1ba-44b1-38a1-8836-9d5b811831f1> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/5527541/> , <https://sws.geonames.org/3012165/> .
+
+<https://sws.geonames.org/3012165/>
+        a       ecrm:E53_Place .

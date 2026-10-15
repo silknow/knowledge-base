@@ -1,0 +1,98 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392> .
+
+<http://data.silknow.org/event/9700522d-8d33-3b9e-b77c-b66a853ea462>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392> .
+
+<http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "83.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "83.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "48.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "48.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/3754cf73-5d07-3cf3-b66a-3d98735c0641>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "708924" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/46014_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/708924/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/production/dc377701-57a9-37e8-be42-4a98e6d43501>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392> ;
+        ecrm:P126_employed      "Brocade; ground, white satin"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/actor/d02aef3b-39cb-3560-8b0a-444bf480cbe5>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Acquired by the donor in Mexico. / Gift of Dr. Alfred M. Tozzer" ;
+        ecrm:P1_is_identified_by  "Acquired by the donor in Mexico. / Gift of Dr. Alfred M. Tozzer" .
+
+<http://data.silknow.org/object/ab9e36c5-e173-31a0-999b-f76db912aef1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 35.1154" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/event/9700522d-8d33-3b9e-b77c-b66a853ea462> , <http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392/category/1> , <http://data.silknow.org/event/6101f5e4-e7e8-36c7-a1d2-2ad84ab71e55> , <http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392/domain/1> , <http://data.silknow.org/image/3754cf73-5d07-3cf3-b66a-3d98735c0641> , <http://data.silknow.org/production/dc377701-57a9-37e8-be42-4a98e6d43501> ;
+        dc:identifier       "46014.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3754cf73-5d07-3cf3-b66a-3d98735c0641> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392/dimension/2> , <http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392/dimension/1> ;
+        dc:identifier                  "35.1154" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/46014> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/event/6101f5e4-e7e8-36c7-a1d2-2ad84ab71e55>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/d02aef3b-39cb-3560-8b0a-444bf480cbe5> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "Acquired by the donor in Mexico. / Gift of Dr. Alfred M. Tozzer" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2fc120a8-76a8-3968-bb08-03ecfea20392> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ab9e36c5-e173-31a0-999b-f76db912aef1> .

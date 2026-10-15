@@ -1,0 +1,133 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/0fa9c42e-fea6-377c-bf1e-37d2c95520a0>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Miss B. Hinton" ;
+        ecrm:P1_is_identified_by  "Given by Miss B. Hinton" .
+
+<http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/dimension/pattern/1>
+        a                       silk:T24 ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/dimension/3> .
+
+<http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Ribbon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a> .
+
+<http://data.silknow.org/event/e3cd3584-414e-37b2-9938-de048c912002>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/0fa9c42e-fea6-377c-bf1e-37d2c95520a0> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Miss B. Hinton" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Ribbon of lilac silk with a white silk rib at intervals of about an inch, scattered with mauve and purple flowers with green leaves, printed in chiné. The ends of the ribbon are cut in a ^ shape."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a> .
+
+<http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a> .
+
+<http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 10.2 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "10.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/image/612bc7cd-be6f-33d8-a68d-92f2aada27aa>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017JY9100" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O291869_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017JY/2017JY9100.jpg> .
+
+<http://data.silknow.org/object/0d6e252b-d60a-3d5d-b0df-52c9b25aecda>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O291869" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/event/e3cd3584-414e-37b2-9938-de048c912002> , <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a> , <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/domain/1> , <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/domain/2> , <http://data.silknow.org/production/e2fa9c19-eb7a-3140-adaa-39619ee1d8a9> , <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/observation/1> , <http://data.silknow.org/image/0c1023cc-c1ee-3c01-a16d-23c3b86a712b> , <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/observation/2> , <http://data.silknow.org/image/612bc7cd-be6f-33d8-a68d-92f2aada27aa> ;
+        dc:identifier       "O291869.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Ribbon of silk, chiné, made in England, 1840-1850"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a> .
+
+<http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Ribbon of silk, chiné, made in England, 1840-1850"@en , "Ribbon of lilac silk with a white silk rib at intervals of about an inch, scattered with mauve and purple flowers with green leaves, printed in chiné. The ends of the ribbon are cut in a ^ shape."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/612bc7cd-be6f-33d8-a68d-92f2aada27aa> , <http://data.silknow.org/image/0c1023cc-c1ee-3c01-a16d-23c3b86a712b> ;
+        ecrm:P3_has_note               "Ribbon of silk, chiné, made in England, 1840-1850"@en , "Ribbon of lilac silk with a white silk rib at intervals of about an inch, scattered with mauve and purple flowers with green leaves, printed in chiné. The ends of the ribbon are cut in a ^ shape."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/dimension/3> , <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/dimension/1> , <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/dimension/2> ;
+        ecrm:P58_has_section_definition
+                <http://data.silknow.org/vocabulary/444> , <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/dimension/pattern/1> ;
+        dc:identifier                  "T.144-1971" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O291869> .
+
+<http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/43> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0d6e252b-d60a-3d5d-b0df-52c9b25aecda> .
+
+<http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "repeat" ;
+        rdfs:label          "Length: 26 cm repeat" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P3_has_note    "repeat" ;
+        ecrm:P90_has_value  "26"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/e2fa9c19-eb7a-3140-adaa-39619ee1d8a9>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a> ;
+        ecrm:P126_employed      "Silk and chiné print"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1840_1850> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/image/0c1023cc-c1ee-3c01-a16d-23c3b86a712b>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017JY9099" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O291869_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017JY/2017JY9099.jpg> .
+
+<http://data.silknow.org/object/5d85d71e-0d2c-3129-b245-b8b1b81b7a1a/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 259 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "259"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

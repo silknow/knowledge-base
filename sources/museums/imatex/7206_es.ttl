@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/10af2164-df35-3da3-8d8a-81bc94765bf0> .
+
+<http://data.silknow.org/image/a7592006-0b42-37a9-b416-97c178ea9a3a>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000004333" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/7206_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000004333.jpg> .
+
+<http://data.silknow.org/object/b0a9e36d-e7eb-3735-9ddb-d3b530e63474>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a7592006-0b42-37a9-b416-97c178ea9a3a> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/042c8cde-80ac-3877-8d15-96784dc793ed> ;
+        dc:identifier                  "6369" .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/production/a8e0be12-0ad8-3a73-a102-5f4403afc675>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b0a9e36d-e7eb-3735-9ddb-d3b530e63474> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/627> , <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                "trama llançada"@es , "tafetán"@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404505> , <http://vocab.getty.edu/aat/300404504> , <http://data.silknow.org/timespan/middle_ages> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/34788e52-c904-311c-872e-c89af879a0d0> .
+
+<http://data.silknow.org/place/34788e52-c904-311c-872e-c89af879a0d0>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Al-Andalus" ;
+        ecrm:P87_is_identified_by  "Al-Andalus" .
+
+<http://data.silknow.org/object/b0a9e36d-e7eb-3735-9ddb-d3b530e63474/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b0a9e36d-e7eb-3735-9ddb-d3b530e63474> .
+
+<http://data.silknow.org/image/042c8cde-80ac-3877-8d15-96784dc793ed>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "franges de color"@es ;
+        ecrm:P3_has_note  "franges de color"@es .
+
+<http://data.silknow.org/object/10af2164-df35-3da3-8d8a-81bc94765bf0>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 7206" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b0a9e36d-e7eb-3735-9ddb-d3b530e63474> , <http://data.silknow.org/event/82a83c6d-51e8-3c5e-b1e3-5d5898cd6835> , <http://data.silknow.org/production/a8e0be12-0ad8-3a73-a102-5f4403afc675> , <http://data.silknow.org/event/afe73c22-9312-3696-b819-318530f13903> , <http://data.silknow.org/object/b0a9e36d-e7eb-3735-9ddb-d3b530e63474/category/1> , <http://data.silknow.org/object/b0a9e36d-e7eb-3735-9ddb-d3b530e63474/domain/1> , <http://data.silknow.org/image/a7592006-0b42-37a9-b416-97c178ea9a3a> ;
+        dc:identifier       "7206.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/b0a9e36d-e7eb-3735-9ddb-d3b530e63474/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b0a9e36d-e7eb-3735-9ddb-d3b530e63474> .
+
+<http://data.silknow.org/event/afe73c22-9312-3696-b819-318530f13903>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b0a9e36d-e7eb-3735-9ddb-d3b530e63474> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/event/82a83c6d-51e8-3c5e-b1e3-5d5898cd6835>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b0a9e36d-e7eb-3735-9ddb-d3b530e63474> .

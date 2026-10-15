@@ -1,0 +1,113 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/afbb704d-3b55-3e62-ad0c-7b1b69242209>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Peter Miall Esq" ;
+        ecrm:P1_is_identified_by  "Given by Peter Miall Esq" .
+
+<http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 91 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "231.14000000000001"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/4cd852d1-e373-3141-a89c-a8ef707d89f1>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019LM2685" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O360439_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2019LM/2019LM2685.jpg> .
+
+<https://sws.geonames.org/2635167/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Curtain of woven cotton, wool, silk and metal, British, ca. 1870-1880"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862> .
+
+<http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/event/9cc5907f-ace1-36bc-b5de-58dd411a7284>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/afbb704d-3b55-3e62-ad0c-7b1b69242209> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Peter Miall Esq." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862> .
+
+<http://data.silknow.org/production/e8a5784a-e0c6-3ee6-bcf8-713242da2f69>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862> ;
+        ecrm:P126_employed      "Woven cotton, wool, silk and metallic threads on a satin ground"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/0b2a85f6-8453-3ec7-99b7-9417644e7b71> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2635167/> .
+
+<http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Curtain" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 28 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "71.12"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Interiors" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862> .
+
+<http://data.silknow.org/object/b179ff8c-023c-3ea6-abca-c03d27c486b6>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O360439" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/9cc5907f-ace1-36bc-b5de-58dd411a7284> , <http://data.silknow.org/image/4cd852d1-e373-3141-a89c-a8ef707d89f1> , <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/domain/1> , <http://data.silknow.org/production/e8a5784a-e0c6-3ee6-bcf8-713242da2f69> , <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/domain/2> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862> , <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/observation/1> , <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/observation/2> ;
+        dc:identifier       "O360439.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Curtain of woven cotton, wool, silk and metal, British, ca. 1870-1880"@en , "Part of a curtain of woven cotton, wool, silk and metallic threads. On a dark, blue-green satin finish ground, the repeating design consists of wide vertical bands in metallic threads decorated with diagonal stripes and, in drop repeat formation, large radiated motifs (possibly pineapple) in peach and yellow hues with cream, black and worn gilt stripes. Small fleur-de-lys motifs are arranged in a spot pattern over the main repeat."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4cd852d1-e373-3141-a89c-a8ef707d89f1> ;
+        ecrm:P3_has_note               "Part of a curtain of woven cotton, wool, silk and metallic threads. On a dark, blue-green satin finish ground, the repeating design consists of wide vertical bands in metallic threads decorated with diagonal stripes and, in drop repeat formation, large radiated motifs (possibly pineapple) in peach and yellow hues with cream, black and worn gilt stripes. Small fleur-de-lys motifs are arranged in a spot pattern over the main repeat."@en , "Curtain of woven cotton, wool, silk and metal, British, ca. 1870-1880"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/dimension/2> , <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/dimension/1> ;
+        dc:identifier                  "T.406-1976" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O360439> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b179ff8c-023c-3ea6-abca-c03d27c486b6> .
+
+<http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Part of a curtain of woven cotton, wool, silk and metallic threads. On a dark, blue-green satin finish ground, the repeating design consists of wide vertical bands in metallic threads decorated with diagonal stripes and, in drop repeat formation, large radiated motifs (possibly pineapple) in peach and yellow hues with cream, black and worn gilt stripes. Small fleur-de-lys motifs are arranged in a spot pattern over the main repeat."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/17328e66-5867-3d1f-8618-f211d889d862> .

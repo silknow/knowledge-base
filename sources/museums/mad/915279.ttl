@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/3ac1512f-9a80-3c96-bd79-8092ff329bbc>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Raoul Dufy, France, 1919-1922, Bianchini-Férier" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/acf99e2e-49f6-3912-98d9-e3dacc11318b> ;
+        ecrm:P3_has_note        "Raoul Dufy, France, 1919-1922, Bianchini-Férier" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1919_1922> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/acf99e2e-49f6-3912-98d9-e3dacc11318b/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "131" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "131"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/acf99e2e-49f6-3912-98d9-e3dacc11318b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/acf99e2e-49f6-3912-98d9-e3dacc11318b> .
+
+<http://data.silknow.org/image/1a41f0ac-bcda-328e-8887-9c1651b32c34>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/915279_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/12176d2a-62b5-47d1-b600-340b1a5f9b3e.jpg> .
+
+<http://data.silknow.org/object/acf99e2e-49f6-3912-98d9-e3dacc11318b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Raoul Dufy, France, 1919-1922, Bianchini-Férier"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/1a41f0ac-bcda-328e-8887-9c1651b32c34> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/acf99e2e-49f6-3912-98d9-e3dacc11318b/dimension/2> , <http://data.silknow.org/object/acf99e2e-49f6-3912-98d9-e3dacc11318b/dimension/1> ;
+        dc:identifier                  "2008.56.140" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/915279> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/1cefb124-9f42-3218-b3f2-3456fd118637>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat de l'Etat ; attribution à l'établissement d'utilité publique dit Les Arts Décoratifs en 2008." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/acf99e2e-49f6-3912-98d9-e3dacc11318b> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/acf99e2e-49f6-3912-98d9-e3dacc11318b> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f847d33f-1ed0-37d1-8e15-daf37421d1d8> .
+
+<http://data.silknow.org/object/acf99e2e-49f6-3912-98d9-e3dacc11318b/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "126" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "126"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/f847d33f-1ed0-37d1-8e15-daf37421d1d8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2008.56.140" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/acf99e2e-49f6-3912-98d9-e3dacc11318b/category/1> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/1cefb124-9f42-3218-b3f2-3456fd118637> , <http://data.silknow.org/image/1a41f0ac-bcda-328e-8887-9c1651b32c34> , <http://data.silknow.org/production/3ac1512f-9a80-3c96-bd79-8092ff329bbc> , <http://data.silknow.org/object/acf99e2e-49f6-3912-98d9-e3dacc11318b> ;
+        dc:identifier       "915279.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

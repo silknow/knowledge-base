@@ -1,0 +1,62 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/2c50ac65-a4bb-39d1-9c7b-efe471f3d2cd>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/917385_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/c391d68b-be9f-435f-a606-48c348104c6d.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/a81354d2-7c64-3192-8de5-6fc4d8510666>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 45273" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/e0268ff7-4714-38b3-ae3d-8a13cfe2a490> , <http://data.silknow.org/event/1f262841-cd52-3c46-80ee-a20e8a18c20f> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/2c50ac65-a4bb-39d1-9c7b-efe471f3d2cd> , <http://data.silknow.org/object/46796fb2-aeb5-36aa-aee4-5976bfcb12d6> ;
+        dc:identifier       "917385.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/e0268ff7-4714-38b3-ae3d-8a13cfe2a490>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Chine, 19e siècle" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/46796fb2-aeb5-36aa-aee4-5976bfcb12d6> ;
+        ecrm:P3_has_note        "Chine, 19e siècle" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a81354d2-7c64-3192-8de5-6fc4d8510666> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/46796fb2-aeb5-36aa-aee4-5976bfcb12d6> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/event/1f262841-cd52-3c46-80ee-a20e8a18c20f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Legs Laura Dreyfus-Barney, 1979" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/46796fb2-aeb5-36aa-aee4-5976bfcb12d6> .
+
+<http://data.silknow.org/object/46796fb2-aeb5-36aa-aee4-5976bfcb12d6>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Chine, 19e siècle"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2c50ac65-a4bb-39d1-9c7b-efe471f3d2cd> ;
+        dc:identifier                  "45273" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/917385> .

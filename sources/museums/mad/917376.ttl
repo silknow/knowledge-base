@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/353c27de-76d0-3caa-bf29-9ac9b541a420>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 20717" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/2814f5ab-b0d1-3692-aae4-48394c7e44cb> , <http://data.silknow.org/production/46808c5c-6889-380e-92db-456061ab89ab> , <http://data.silknow.org/image/6b95c4da-6bc5-3b34-ac38-a2715b440534> , <http://data.silknow.org/object/c634ca4f-cee5-31cb-bab7-b0842887e8ed/category/1> , <http://data.silknow.org/object/c634ca4f-cee5-31cb-bab7-b0842887e8ed> ;
+        dc:identifier       "917376.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/46808c5c-6889-380e-92db-456061ab89ab>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1917 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c634ca4f-cee5-31cb-bab7-b0842887e8ed> ;
+        ecrm:P3_has_note        "France, 1917 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/54444675-f89d-3afc-a1ff-814a40555408> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/2814f5ab-b0d1-3692-aae4-48394c7e44cb>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "achat, 1917" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c634ca4f-cee5-31cb-bab7-b0842887e8ed> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/6b95c4da-6bc5-3b34-ac38-a2715b440534>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/917376_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/7df3b75d-bf8c-4d07-8736-6fda424cf9c7.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/353c27de-76d0-3caa-bf29-9ac9b541a420> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/c634ca4f-cee5-31cb-bab7-b0842887e8ed> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/c634ca4f-cee5-31cb-bab7-b0842887e8ed/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c634ca4f-cee5-31cb-bab7-b0842887e8ed> .
+
+<http://data.silknow.org/object/c634ca4f-cee5-31cb-bab7-b0842887e8ed>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1917 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6b95c4da-6bc5-3b34-ac38-a2715b440534> ;
+        dc:identifier                  "20717" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/917376> .

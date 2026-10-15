@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/5551830b-b50c-37e0-a05d-35476c176858>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/8cf7c822-935f-32c1-a6fd-c8e2dcb3bb51> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of John Pierpont Morgan" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b> .
+
+<http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/8cf7c822-935f-32c1-a6fd-c8e2dcb3bb51>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of John Pierpont Morgan" ;
+        ecrm:P1_is_identified_by  "Gift of John Pierpont Morgan" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/J._P._Morgan> , <https://viaf.org/viaf/57410770> , <https://isni.org/isni/000000008385399X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/J._P._Morgan> .
+
+<http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b> .
+
+<http://data.silknow.org/production/bc3a53c6-6be4-3383-b910-30ae5f5b0a17>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b> ;
+        ecrm:P126_employed      "silk"@en ;
+        ecrm:P32_used_general_technique
+                "two interconnected fabric structures"@en , "plain weave and plain weave"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404506> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5bf3ed4a-14b6-307a-a0a2-7131b734ae7c> .
+
+<http://data.silknow.org/object/5bf3ed4a-14b6-307a-a0a2-7131b734ae7c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1902-1-254-a_b" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/85434d89-c251-36e8-9e3a-c1897b012a2c> , <http://data.silknow.org/production/bc3a53c6-6be4-3383-b910-30ae5f5b0a17> , <http://data.silknow.org/event/bdf86d83-b73f-3704-8ff7-736788a6c973> , <http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b/category/1> , <http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b/observation/1> , <http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b> , <http://data.silknow.org/event/5551830b-b50c-37e0-a05d-35476c176858> , <http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b/domain/1> ;
+        dc:identifier       "chndm_1902-1-254-a_b.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/event/bdf86d83-b73f-3704-8ff7-736788a6c973>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b> .
+
+<http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Dark red ground with a design in yellow-green; design is reversible. Ground divided into wide vertical bands, alternately with symmetrical scrolling vine design, and lozenges, which enclose alternately a griffon (or basilisk) and a bird."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b> .
+
+<http://data.silknow.org/image/85434d89-c251-36e8-9e3a-c1897b012a2c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1902-1-254-a_b_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-E16166E7C6D62-000001> .
+
+<http://data.silknow.org/object/78d2852e-7b93-3daa-8bf2-9c02fb0e6a6b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Dark red ground with a design in yellow-green; design is reversible. Ground divided into wide vertical bands, alternately with symmetrical scrolling vine design, and lozenges, which enclose alternately a griffon (or basilisk) and a bird."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/85434d89-c251-36e8-9e3a-c1897b012a2c> ;
+        ecrm:P3_has_note               "Dark red ground with a design in yellow-green; design is reversible. Ground divided into wide vertical bands, alternately with symmetrical scrolling vine design, and lozenges, which enclose alternately a griffon (or basilisk) and a bird."@en ;
+        dc:identifier                  "chndm_1902-1-254-a_b" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1902-1-254-a_b> .

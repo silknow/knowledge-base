@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9fa94ae4-e1b4-3375-b82d-adbcfa483569> .
+
+<http://data.silknow.org/event/6c0b20f8-4b2f-3d91-8378-9c53ab039007>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0ebb17ef-f402-3c94-a5da-9a2b3f4424fe> .
+
+<http://data.silknow.org/object/0ebb17ef-f402-3c94-a5da-9a2b3f4424fe/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0ebb17ef-f402-3c94-a5da-9a2b3f4424fe> .
+
+<http://data.silknow.org/production/315dacb6-3b68-379d-b3fb-00ce8cf27dbc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0ebb17ef-f402-3c94-a5da-9a2b3f4424fe> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca , "vellut"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> .
+
+<http://data.silknow.org/image/3434976e-7a4d-37d3-a508-1f9c95fce28d>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033591" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/27871_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033591.jpg> .
+
+<http://data.silknow.org/object/0ebb17ef-f402-3c94-a5da-9a2b3f4424fe/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0ebb17ef-f402-3c94-a5da-9a2b3f4424fe> .
+
+<http://data.silknow.org/event/112145ce-61ae-3c85-b615-d8d44d81ae17>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0ebb17ef-f402-3c94-a5da-9a2b3f4424fe> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/0ebb17ef-f402-3c94-a5da-9a2b3f4424fe>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3434976e-7a4d-37d3-a508-1f9c95fce28d> ;
+        dc:identifier                  "16548" .
+
+<http://data.silknow.org/object/9fa94ae4-e1b4-3375-b82d-adbcfa483569>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 27871" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0ebb17ef-f402-3c94-a5da-9a2b3f4424fe/domain/1> , <http://data.silknow.org/production/315dacb6-3b68-379d-b3fb-00ce8cf27dbc> , <http://data.silknow.org/object/0ebb17ef-f402-3c94-a5da-9a2b3f4424fe> , <http://data.silknow.org/event/6c0b20f8-4b2f-3d91-8378-9c53ab039007> , <http://data.silknow.org/event/112145ce-61ae-3c85-b615-d8d44d81ae17> , <http://data.silknow.org/image/3434976e-7a4d-37d3-a508-1f9c95fce28d> , <http://data.silknow.org/object/0ebb17ef-f402-3c94-a5da-9a2b3f4424fe/category/1> ;
+        dc:identifier       "27871.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .

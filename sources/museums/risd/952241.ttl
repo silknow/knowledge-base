@@ -1,0 +1,84 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/2ff324d4-bcdc-3c64-8118-9b2faa4f6700>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a4febdfd-25fc-3dc6-8607-6f9452f164ae> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Mary B Jackson Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7327144a-f190-3f20-9852-433aa0d52a00> .
+
+<http://data.silknow.org/production/cf14c0c2-593a-3042-8b1b-b4e767d67c34>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7327144a-f190-3f20-9852-433aa0d52a00> ;
+        ecrm:P126_employed      "linen"@en , "Linen plain-weave ground, silk embroidery"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/390903/> .
+
+<http://data.silknow.org/object/7327144a-f190-3f20-9852-433aa0d52a00>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f16ef4ef-f951-389c-b4bb-1cd620714ab9> ;
+        dc:identifier                  "41.079" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/embroidered-textile-length-41079> .
+
+<http://data.silknow.org/actor/a4febdfd-25fc-3dc6-8607-6f9452f164ae>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Mary B Jackson Fund" ;
+        ecrm:P1_is_identified_by  "Mary B Jackson Fund" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/image/f16ef4ef-f951-389c-b4bb-1cd620714ab9>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/952241_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/313085.jpg> .
+
+<http://data.silknow.org/object/f019fc54-7658-3f52-b3fe-d3f83877354c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 41.079" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/cf14c0c2-593a-3042-8b1b-b4e767d67c34> , <http://data.silknow.org/object/7327144a-f190-3f20-9852-433aa0d52a00> , <http://data.silknow.org/object/7327144a-f190-3f20-9852-433aa0d52a00/category/1> , <http://data.silknow.org/object/7327144a-f190-3f20-9852-433aa0d52a00/domain/1> , <http://data.silknow.org/object/f33bd772-6a1f-397b-b7d4-0e49130147c5> , <http://data.silknow.org/image/f16ef4ef-f951-389c-b4bb-1cd620714ab9> , <http://data.silknow.org/event/d6bfcd5f-e0c3-378e-9eea-7162a5625281> , <http://data.silknow.org/event/2ff324d4-bcdc-3c64-8118-9b2faa4f6700> ;
+        dc:identifier       "952241.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/f33bd772-6a1f-397b-b7d4-0e49130147c5>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "October 5, 2018 - August 25, 2019" , "Lost in the Museum" , "1997: Labeled as “Found in Collection” S1997.024\n2003: Labeled as unknown donor\nINV2003.242\nNow: Mary B Jackson Fund 41.079" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/7327144a-f190-3f20-9852-433aa0d52a00> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "Lost in the Museum" , "October 5, 2018 - August 25, 2019" , "1997: Labeled as “Found in Collection” S1997.024\n2003: Labeled as unknown donor\nINV2003.242\nNow: Mary B Jackson Fund 41.079" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/lost-museum> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f019fc54-7658-3f52-b3fe-d3f83877354c> .
+
+<http://data.silknow.org/event/d6bfcd5f-e0c3-378e-9eea-7162a5625281>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/7327144a-f190-3f20-9852-433aa0d52a00> .
+
+<http://data.silknow.org/object/7327144a-f190-3f20-9852-433aa0d52a00/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7327144a-f190-3f20-9852-433aa0d52a00> .
+
+<http://data.silknow.org/object/7327144a-f190-3f20-9852-433aa0d52a00/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Embroidered Textile Length" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7327144a-f190-3f20-9852-433aa0d52a00> .
+
+<https://sws.geonames.org/390903/>
+        a       ecrm:E53_Place .

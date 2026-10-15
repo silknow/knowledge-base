@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/bde6b45c-49e7-38ab-9f01-5786e5eaab8c/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/853d39fa-98db-31b3-b257-02d0a814071e> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/05035420-24c4-3469-8440-f5c251c4937c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Gobelins Tapestry" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/05035420-24c4-3469-8440-f5c251c4937c> .
+
+<http://data.silknow.org/production/bde6b45c-49e7-38ab-9f01-5786e5eaab8c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/05035420-24c4-3469-8440-f5c251c4937c> ;
+        ecrm:P126_employed      "wool; silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/644> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1766_1789> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/bde6b45c-49e7-38ab-9f01-5786e5eaab8c/activity/1> .
+
+<http://data.silknow.org/object/05035420-24c4-3469-8440-f5c251c4937c>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "37.105" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/gobelins-tapestry-37105> .
+
+<http://data.silknow.org/event/c4af4aea-8f3b-3681-b921-5ce7f9acf605>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/05035420-24c4-3469-8440-f5c251c4937c> .
+
+<http://data.silknow.org/actor/853d39fa-98db-31b3-b257-02d0a814071e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Pierre François Cozette" ;
+        ecrm:P1_is_identified_by  "Pierre François Cozette" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000067077003> , <https://viaf.org/viaf/61402116> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/event/40fd5104-d6df-3ea9-af84-28af720ce3cd>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/2454f081-f57e-32af-8891-298fd9f945bc> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Museum Appropriation Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/05035420-24c4-3469-8440-f5c251c4937c> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c08f777b-dd70-32bc-930b-fec2cdc74de7> .
+
+<http://data.silknow.org/object/c08f777b-dd70-32bc-930b-fec2cdc74de7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 37.105" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/bde6b45c-49e7-38ab-9f01-5786e5eaab8c> , <http://data.silknow.org/object/05035420-24c4-3469-8440-f5c251c4937c/category/1> , <http://data.silknow.org/event/40fd5104-d6df-3ea9-af84-28af720ce3cd> , <http://data.silknow.org/object/82e23fb2-3ba1-3989-b9b6-43d30c3b1960> , <http://data.silknow.org/event/c4af4aea-8f3b-3681-b921-5ce7f9acf605> , <http://data.silknow.org/object/05035420-24c4-3469-8440-f5c251c4937c/domain/1> , <http://data.silknow.org/object/05035420-24c4-3469-8440-f5c251c4937c> ;
+        dc:identifier       "763496.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/82e23fb2-3ba1-3989-b9b6-43d30c3b1960>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "A World of Costume and Textiles" , "A Handbook of the Collection" , "September 22 - November 12, 1989" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/05035420-24c4-3469-8440-f5c251c4937c> ;
+        ecrm:P2_has_type    "Publication" , "Exhibition" ;
+        ecrm:P3_has_note    "A Handbook of the Collection" , "A World of Costume and Textiles" , "September 22 - November 12, 1989" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/world-costume-and-textiles> , <https://risdmuseum.org/art-design/projects-publications/publications/world-costume-and-textiles> .
+
+<http://data.silknow.org/actor/2454f081-f57e-32af-8891-298fd9f945bc>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Museum Appropriation Fund" ;
+        ecrm:P1_is_identified_by  "Museum Appropriation Fund" .
+
+<http://data.silknow.org/object/05035420-24c4-3469-8440-f5c251c4937c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/05035420-24c4-3469-8440-f5c251c4937c> .

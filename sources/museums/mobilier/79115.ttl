@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b> .
+
+<http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tissu précieux" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b> .
+
+<http://data.silknow.org/production/7a8cb5a4-9358-38dd-b232-9c1970bd8694>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> , <http://data.silknow.org/vocabulary/857> .
+
+<http://data.silknow.org/image/20dda818-25fa-320b-9b3a-ac1daa21ad05>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mobilier/79115_1.jpg> , <https://collection.mobiliernational.culture.gouv.fr/media/xl/VALS/2020/01/gmmp-1660-009_001-2019-1.JPG> .
+
+<http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "SOIERIE" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b> .
+
+<http://data.silknow.org/mobilier>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b23f50c6-0973-3631-96cf-1a1def59d714> .
+
+<http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Elément de bordure de tenture. Section rectangulaire. Lampas fond sergé, soie. Composition forale : petits tableaux répétitifs d'ensembles de roses et feuillages verts, 2 liserés bleus avec frises de palmettes stylisées."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b> .
+
+<http://data.silknow.org/object/b23f50c6-0973-3631-96cf-1a1def59d714>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record GMMP-1660-009" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b> , <http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b/observation/1> , <http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b/category/1> , <http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b/domain/1> , <http://data.silknow.org/image/20dda818-25fa-320b-9b3a-ac1daa21ad05> , <http://data.silknow.org/image/198bb860-498f-379e-a735-bc3cec2de9c1> , <http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b/domain/2> , <http://data.silknow.org/production/7a8cb5a4-9358-38dd-b232-9c1970bd8694> ;
+        dc:identifier       "79115.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mobilier" .
+
+<http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Elément de bordure de tenture. Section rectangulaire. Lampas fond sergé, soie. Composition forale : petits tableaux répétitifs d'ensembles de roses et feuillages verts, 2 liserés bleus avec frises de palmettes stylisées."@fr ;
+        rdfs:label                     "Elément de tenture, lampas sergé à petits tableaux répétitifs d'ensembles de roses et feuillages"@fr ;
+        ecrm:P102_has_title            "Elément de tenture, lampas sergé à petits tableaux répétitifs d'ensembles de roses et feuillages"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/198bb860-498f-379e-a735-bc3cec2de9c1> , <http://data.silknow.org/image/20dda818-25fa-320b-9b3a-ac1daa21ad05> ;
+        ecrm:P3_has_note               "Elément de bordure de tenture. Section rectangulaire. Lampas fond sergé, soie. Composition forale : petits tableaux répétitifs d'ensembles de roses et feuillages verts, 2 liserés bleus avec frises de palmettes stylisées."@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b/dimension/1> , <http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b/dimension/2> ;
+        dc:identifier                  "GMMP-1660-009" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collection.mobiliernational.culture.gouv.fr/objet/GMMP-1660-009> .
+
+<http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b/dimension/2>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/height> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/object/5fbd7028-d44a-3998-aaa9-53d3fe78fc1b/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "0.51" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "0.51"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/198bb860-498f-379e-a735-bc3cec2de9c1>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mobilier/79115_0.jpg> , <https://collection.mobiliernational.culture.gouv.fr/media/xl/DIVERS/2020/Google-Lab/gmmp-1660-009_2019-1.jpg> .

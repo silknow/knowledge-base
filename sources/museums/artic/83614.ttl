@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, 4:1 satin damask weave"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/da7b89f6-bdd9-3d23-856c-2786debcf828> ;
+        ecrm:P3_has_note               "Silk, 4:1 satin damask weave"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03/dimension/1> , <http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03/dimension/2> ;
+        dc:identifier                  "1955.480a-c" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/83614/three-panels> .
+
+<http://data.silknow.org/image/da7b89f6-bdd9-3d23-856c-2786debcf828>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/83614_0.jpg> , <https://www.artic.edu/iiif/2/d73daef5-19e8-8e4e-e01c-8d8fb57ce2cb/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, 4:1 satin damask weave"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03> .
+
+<http://data.silknow.org/production/0a92a75f-179f-35d1-a598-8ff06dfe089f>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> , <http://data.silknow.org/timespan/1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "222.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "222.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/f5ac9613-9752-32c1-85a0-15c55648a154>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1955.480a-c" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/da7b89f6-bdd9-3d23-856c-2786debcf828> , <http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03/category/1> , <http://data.silknow.org/event/7f826869-5d0d-3738-92f8-a67cb901d356> , <http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03/observation/1> , <http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03> , <http://data.silknow.org/production/0a92a75f-179f-35d1-a598-8ff06dfe089f> ;
+        dc:identifier       "83614.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/event/7f826869-5d0d-3738-92f8-a67cb901d356>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c26d9579-7dbd-3998-9402-42b4527d0b89> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. George Voevodsky in memory of Mary Crane Russell" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03> .
+
+<http://data.silknow.org/actor/c26d9579-7dbd-3998-9402-42b4527d0b89>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. George Voevodsky in memory of Mary Crane Russell" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. George Voevodsky in memory of Mary Crane Russell" .
+
+<http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "111.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "111.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Three Panels" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4ca79bda-6fe6-3fcb-99d0-bec81f7d7b03> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f5ac9613-9752-32c1-85a0-15c55648a154> .

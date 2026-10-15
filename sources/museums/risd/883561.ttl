@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/5fe36fb0-2922-3559-bc1b-63c6e1711bb5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/4bacfde3-42a0-3a7c-a71c-0fc4c2c111e7> .
+
+<http://data.silknow.org/actor/44f363ac-597d-3ba6-adcb-7e05cde91318>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of L. J. Cella III" ;
+        ecrm:P1_is_identified_by  "Gift of L. J. Cella III" .
+
+<http://data.silknow.org/event/41df76af-0ccc-3718-823d-2c48ec18c846>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/44f363ac-597d-3ba6-adcb-7e05cde91318> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of L. J. Cella III" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/4bacfde3-42a0-3a7c-a71c-0fc4c2c111e7> .
+
+<http://data.silknow.org/image/bbebe4ed-5c18-3232-ae8b-dc6de7860f1b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/883561_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/279552.jpg> .
+
+<http://data.silknow.org/object/04459d66-7226-30d8-97bf-8d6d9d2f3a0e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1990.129.39B" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/b2c8dbe6-e645-370e-81b8-a7d0ad67acbf> , <http://data.silknow.org/event/5fe36fb0-2922-3559-bc1b-63c6e1711bb5> , <http://data.silknow.org/object/4bacfde3-42a0-3a7c-a71c-0fc4c2c111e7> , <http://data.silknow.org/event/41df76af-0ccc-3718-823d-2c48ec18c846> , <http://data.silknow.org/image/bbebe4ed-5c18-3232-ae8b-dc6de7860f1b> , <http://data.silknow.org/production/6baa0282-024c-34db-a5d3-c38533b7601d> , <http://data.silknow.org/object/4bacfde3-42a0-3a7c-a71c-0fc4c2c111e7/category/1> , <http://data.silknow.org/image/afaac613-c3bc-3746-b75f-6a68032be7ec> , <http://data.silknow.org/object/4bacfde3-42a0-3a7c-a71c-0fc4c2c111e7/domain/1> ;
+        dc:identifier       "883561.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/b2c8dbe6-e645-370e-81b8-a7d0ad67acbf>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Manual / Issue 5" , "Unfinished" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4bacfde3-42a0-3a7c-a71c-0fc4c2c111e7> ;
+        ecrm:P2_has_type    "Publication" ;
+        ecrm:P3_has_note    "Manual / Issue 5" , "Unfinished" ;
+        schema:contentUrl   <https://risdmuseum.org/art-design/projects-publications/publications/manual-issue-5> .
+
+<http://data.silknow.org/object/4bacfde3-42a0-3a7c-a71c-0fc4c2c111e7/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4bacfde3-42a0-3a7c-a71c-0fc4c2c111e7> .
+
+<http://data.silknow.org/production/6baa0282-024c-34db-a5d3-c38533b7601d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4bacfde3-42a0-3a7c-a71c-0fc4c2c111e7> ;
+        ecrm:P126_employed      "faux pearls"@en , "Silk velvet embellished with glass beads, faux pearls, glass stones, and silk and metallic-thread embroidery"@en , "glass beads"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/497> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "embellishing"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/3715027c-aac1-3498-abe4-23974c89b573> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/4bacfde3-42a0-3a7c-a71c-0fc4c2c111e7/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dress panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4bacfde3-42a0-3a7c-a71c-0fc4c2c111e7> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/04459d66-7226-30d8-97bf-8d6d9d2f3a0e> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/4bacfde3-42a0-3a7c-a71c-0fc4c2c111e7>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/afaac613-c3bc-3746-b75f-6a68032be7ec> , <http://data.silknow.org/image/bbebe4ed-5c18-3232-ae8b-dc6de7860f1b> ;
+        dc:identifier                  "1990.129.39B" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/dress-panel-199012939b> .
+
+<http://data.silknow.org/image/afaac613-c3bc-3746-b75f-6a68032be7ec>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/883561_1.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/26620.jpg> .

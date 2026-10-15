@@ -1,0 +1,100 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/720c9734-481f-3c7b-a261-91bfcc428716> .
+
+<http://data.silknow.org/actor/23589403-050e-3c93-a74b-3fc03989c6f4>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "unknown" ;
+        ecrm:P1_is_identified_by  "unknown" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://musicbrainz.org/artist/b446f5da-ae7d-4b90-9259-0acfd77fb0e8> , <https://isni.org/isni/0000000493780674> .
+
+<http://data.silknow.org/event/1a2015fd-fc9f-3524-be4c-93815185b4f5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397> .
+
+<http://data.silknow.org/image/8e61bbd3-8856-3471-9be7-9fded3e9b936>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000038343" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/31114_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000038343.jpg> .
+
+<http://data.silknow.org/event/f475fbf1-c741-37b9-beeb-756cf9ab3802>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/23589403-050e-3c93-a74b-3fc03989c6f4> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf> ;
+        ecrm:P23_transferred_title_from
+                "unknown" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397> .
+
+<http://data.silknow.org/production/58a8c466-6bc2-3576-a4c0-74e076bd01ce>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "mechanical lace"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Fragment de teixit que segurament era un complement, tipus mocador. Fons de malla amb grans motius florals. Presenta un tall recta en la seva meitat potser per poder utilitzar-lo com a llaç."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8e61bbd3-8856-3471-9be7-9fded3e9b936> ;
+        ecrm:P3_has_note               "Fragment de teixit que segurament era un complement, tipus mocador. Fons de malla amb grans motius florals. Presenta un tall recta en la seva meitat potser per poder utilitzar-lo com a llaç."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397/dimension/1> , <http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397/dimension/2> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> ;
+        dc:identifier                  "22683" .
+
+<http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "38" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "38"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/720c9734-481f-3c7b-a261-91bfcc428716>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 31114" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/8e61bbd3-8856-3471-9be7-9fded3e9b936> , <http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397/observation/1> , <http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397/domain/1> , <http://data.silknow.org/event/1a2015fd-fc9f-3524-be4c-93815185b4f5> , <http://data.silknow.org/event/f475fbf1-c741-37b9-beeb-756cf9ab3802> , <http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397/category/1> , <http://data.silknow.org/production/58a8c466-6bc2-3576-a4c0-74e076bd01ce> , <http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397> ;
+        dc:identifier       "31114.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397> .
+
+<http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397> .
+
+<http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "57" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "57"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fragment de teixit que segurament era un complement, tipus mocador. Fons de malla amb grans motius florals. Presenta un tall recta en la seva meitat potser per poder utilitzar-lo com a llaç."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/91455251-a0c0-30f1-afb2-51162d96d397> .
+
+<http://data.silknow.org/actor/a69ae084-440e-3fe3-ae77-8a6d37b1ecbf>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        ecrm:P1_is_identified_by  "Centre de Documentació i Museu Tèxtil - CDMT" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000122968889> , <https://viaf.org/viaf/153826693> .

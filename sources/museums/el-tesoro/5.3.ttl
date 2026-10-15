@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/e1bd2582-fe60-3bd5-9b28-5d41a7e32585>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.3" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.3_0.jpg> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c3f166ac-c58c-3dad-aace-b7d7dedbcd1a> .
+
+<http://data.silknow.org/object/70233cab-b979-369c-aab3-e08c858c0e03/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/70233cab-b979-369c-aab3-e08c858c0e03> ;
+        ecrm:P42_assigned    <http://data.silknow.org/category/97> .
+
+<http://data.silknow.org/production/bada4a7f-881d-3a22-8dc1-6e3a6e7b987b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/70233cab-b979-369c-aab3-e08c858c0e03> ;
+        ecrm:P126_employed      "Raso de seda morado. Hilo de plata. Lentejuelas. Cordoncillo. Cristales."@es ;
+        ecrm:P32_used_general_technique
+                "Bordado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/bada4a7f-881d-3a22-8dc1-6e3a6e7b987b/activity/1> .
+
+<http://data.silknow.org/assessment/f090f3f1-c943-3025-84e3-fcadfa738ce8/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .
+
+<http://data.silknow.org/object/c3f166ac-c58c-3dad-aace-b7d7dedbcd1a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.3" ;
+        ecrm:P129_is_about  <http://data.silknow.org/assessment/f090f3f1-c943-3025-84e3-fcadfa738ce8> , <http://data.silknow.org/production/bada4a7f-881d-3a22-8dc1-6e3a6e7b987b> , <http://data.silknow.org/image/e1bd2582-fe60-3bd5-9b28-5d41a7e32585> , <http://data.silknow.org/object/70233cab-b979-369c-aab3-e08c858c0e03/type/1> , <http://data.silknow.org/object/70233cab-b979-369c-aab3-e08c858c0e03> , <http://data.silknow.org/object/70233cab-b979-369c-aab3-e08c858c0e03/observation/1> ;
+        dc:identifier       "5.3.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/production/bada4a7f-881d-3a22-8dc1-6e3a6e7b987b/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/70233cab-b979-369c-aab3-e08c858c0e03>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Se compone de manípulo, cubre cáliz, bolsa de corporales, palia y estola."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e1bd2582-fe60-3bd5-9b28-5d41a7e32585> ;
+        ecrm:P3_has_note               "*Se compone de manípulo, cubre cáliz, bolsa de corporales, palia y estola."@es ;
+        dc:identifier                  "5.3" .
+
+<http://data.silknow.org/assessment/f090f3f1-c943-3025-84e3-fcadfa738ce8>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/70233cab-b979-369c-aab3-e08c858c0e03> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/f090f3f1-c943-3025-84e3-fcadfa738ce8/condition/1> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .
+
+<http://data.silknow.org/object/70233cab-b979-369c-aab3-e08c858c0e03/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Se compone de manípulo, cubre cáliz, bolsa de corporales, palia y estola."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/70233cab-b979-369c-aab3-e08c858c0e03> .

@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/PM>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/30a0a75b-ee2a-3264-a05c-46ebf95af4a0> .
+
+<http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "15.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "15.5 cm" ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/a2418c81-016c-36c2-a0a0-d991cf887f86>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "530027" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ParisMusees/186714_1.jpg> , <https://www.parismuseescollections.paris.fr/sites/default/files/styles/pm_diaporama/public/atoms/images/GAL/gal1970.91.9_2.jpg?itok=d7OmdN-q> .
+
+<http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Eventail brisé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91> .
+
+<http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/iconographical-observation> ;
+        ecrm:P3_has_note    "Bouquets de fleurs bleues sur chaque brin."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91> .
+
+<http://data.silknow.org/event/1daf7a35-6b94-3808-90a2-deb6a3cf60ca>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f4f677e1-0fb0-381b-a311-e59780a8f445> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91> .
+
+<http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91/dimension/1>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/width> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/image/d59a76ac-ed46-31fb-b98d-accc1b260b51>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "530026" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ParisMusees/186714_0.jpg> , <https://www.parismuseescollections.paris.fr/sites/default/files/styles/pm_diaporama/public/atoms/images/GAL/gal1970.91.9_1.jpg?itok=b0mfCpke> .
+
+<http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Vêtements et accessoires de vêtement" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91> .
+
+<http://data.silknow.org/actor/f4f677e1-0fb0-381b-a311-e59780a8f445>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Palais Galliera, musée de la Mode de la Ville de Paris" ;
+        ecrm:P1_is_identified_by  "Palais Galliera, musée de la Mode de la Ville de Paris" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/62f23cef-38af-3ee9-a810-3c3cf9f36e56>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91> ;
+        ecrm:P126_employed      "Reperçage"@fr ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1820> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/30a0a75b-ee2a-3264-a05c-46ebf95af4a0>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1970.91.9" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91/observation/1> , <http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91/category/1> , <http://data.silknow.org/event/1daf7a35-6b94-3808-90a2-deb6a3cf60ca> , <http://data.silknow.org/production/62f23cef-38af-3ee9-a810-3c3cf9f36e56> , <http://data.silknow.org/image/d59a76ac-ed46-31fb-b98d-accc1b260b51> , <http://data.silknow.org/image/a2418c81-016c-36c2-a0a0-d991cf887f86> , <http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91/domain/1> , <http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91> ;
+        dc:identifier       "186714.json" ;
+        dc:publisher        "http://data.silknow.org/organization/PM" .
+
+<http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Bouquets de fleurs bleues sur chaque brin."@fr ;
+        rdfs:label                     "Eventail brisé"@fr ;
+        ecrm:P102_has_title            "Eventail brisé"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a2418c81-016c-36c2-a0a0-d991cf887f86> , <http://data.silknow.org/image/d59a76ac-ed46-31fb-b98d-accc1b260b51> ;
+        ecrm:P3_has_note               "Bouquets de fleurs bleues sur chaque brin."@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91/dimension/1> , <http://data.silknow.org/object/968a1fae-675a-3106-a6b3-0b6fb3b63d91/dimension/2> ;
+        dc:identifier                  "1970.91.9" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://parismuseescollections.paris.fr/node/186714> .

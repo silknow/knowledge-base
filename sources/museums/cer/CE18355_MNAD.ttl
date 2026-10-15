@@ -1,0 +1,109 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/production/2ef7354e-e509-3896-a566-ffc78104a33e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e> ;
+        ecrm:P126_employed      "Libro: Papel [rosa y azul]"@es , "Lomo (encuadernación): Seda rojo"@es , "Tapa: Nácar blanco"@es , "Forro: Seda rosa"@es , "Lapicero: Madera"@es ;
+        ecrm:P32_used_general_technique
+                "Forro: Moaré"@es , "Lomo (encuadernación): Terciopelo"@es , "Tapa: Embutido"@es , "Tapa: Grabado"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1854> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/1c092908-9b88-3483-aeb6-028da7b0f20f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE18355" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/observation/2> , <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/observation/1> , <http://data.silknow.org/production/2ef7354e-e509-3896-a566-ffc78104a33e> , <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e> , <http://data.silknow.org/image/25d08696-42e6-36ca-b8d2-b53c6d54b11e> , <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/category/1> , <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/domain/1> , <http://data.silknow.org/event/5c732e49-2232-3b73-ab38-9dedd0bea5ec> , <http://data.silknow.org/event/66a76e41-3be0-34dc-8207-372c3f1ac5a7> , <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/domain/2> ;
+        dc:identifier       "CE18355_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Carné de baile con tapas de nácar, la posterior lisa y la anterior grabada con hojas, con línea en negro; en el centro, cerco de metal dorado oval bajo vidrio, escena fluvial pintada en papel. Libro de notas, semanario doble y calendario iluminado, en francés, del año 1854. Forro de moaré rosa. Lapicero de madera con remate de nácar."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e> .
+
+<http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "10" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "10"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/0540a8a1-8ed5-3c7b-a30c-f0933673b2f4>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "En la tapa.: Paisaje fluvial"@es ;
+        ecrm:P3_has_note  "En la tapa.: Paisaje fluvial"@es .
+
+<http://data.silknow.org/event/66a76e41-3be0-34dc-8207-372c3f1ac5a7>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e> .
+
+<http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Carné de baile con tapas de nácar, la posterior lisa y la anterior grabada con hojas, con línea en negro; en el centro, cerco de metal dorado oval bajo vidrio, escena fluvial pintada en papel. Libro de notas, semanario doble y calendario iluminado, en francés, del año 1854. Forro de moaré rosa. Lapicero de madera con remate de nácar."@es , "Edad Contemporánea"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/25d08696-42e6-36ca-b8d2-b53c6d54b11e> ;
+        ecrm:P3_has_note               "Carné de baile con tapas de nácar, la posterior lisa y la anterior grabada con hojas, con línea en negro; en el centro, cerco de metal dorado oval bajo vidrio, escena fluvial pintada en papel. Libro de notas, semanario doble y calendario iluminado, en francés, del año 1854. Forro de moaré rosa. Lapicero de madera con remate de nácar."@es , "Edad Contemporánea"@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/dimension/1> , <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/dimension/2> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/0540a8a1-8ed5-3c7b-a30c-f0933673b2f4> ;
+        dc:identifier                  "CE18355" .
+
+<http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Carné de baile" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e> .
+
+<http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Contemporánea"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e> .
+
+<http://data.silknow.org/image/25d08696-42e6-36ca-b8d2-b53c6d54b11e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE18355" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE18355_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE18355&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/44> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Concha" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fb805370-2cee-3f4f-bb62-6136bfe9f31e> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1c092908-9b88-3483-aeb6-028da7b0f20f> .
+
+<http://data.silknow.org/event/5c732e49-2232-3b73-ab38-9dedd0bea5ec>
+        a       ecrm:E8_Acquisition .

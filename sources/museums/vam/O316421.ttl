@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Fashion" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b> .
+
+<http://data.silknow.org/event/ab1481c2-ef18-38b2-8c4c-fd63f2f0c2c8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b/domain/4>
+        a                    silk:T19 ;
+        silk:L4              "Europeana Fashion Project" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b> .
+
+<http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/36> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b> .
+
+<http://data.silknow.org/object/cf0779df-234c-3837-a1bf-37903a0ad7af>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O316421" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b/domain/3> , <http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b/domain/4> , <http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b/domain/1> , <http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b/domain/2> , <http://data.silknow.org/image/fe3084f6-a2fe-3aec-bfca-21c811ad5563> , <http://data.silknow.org/image/dadd49a4-9caf-34ac-a895-0cd53612d339> , <http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b> , <http://data.silknow.org/production/562d8795-ed77-30d3-ba66-a55653aaae1b> , <http://data.silknow.org/event/ab1481c2-ef18-38b2-8c4c-fd63f2f0c2c8> ;
+        dc:identifier       "O316421.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/image/dadd49a4-9caf-34ac-a895-0cd53612d339>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MU2084" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O316421_0.jpg> , <https://framemark.vam.ac.uk/collections/2020MU2084/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/cf0779df-234c-3837-a1bf-37903a0ad7af> .
+
+<http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/dadd49a4-9caf-34ac-a895-0cd53612d339> , <http://data.silknow.org/image/fe3084f6-a2fe-3aec-bfca-21c811ad5563> ;
+        dc:identifier                  "T.13&A-1971" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O316421> .
+
+<http://data.silknow.org/production/562d8795-ed77-30d3-ba66-a55653aaae1b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b> ;
+        ecrm:P126_employed      "fringe"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/379> , <http://data.silknow.org/vocabulary/526> .
+
+<http://data.silknow.org/image/fe3084f6-a2fe-3aec-bfca-21c811ad5563>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006BB4595" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O316421_1.jpg> , <https://framemark.vam.ac.uk/collections/2006BB4595/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b/domain/3>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/42> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/22c95f68-e248-3dc9-9317-03a2d63be45b> .

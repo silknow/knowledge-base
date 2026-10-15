@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/f0e1ffae-fc3e-3a83-8f63-c1f69b446ae9>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/29460b76-980d-3927-97cd-f1d89b30b247> .
+
+<http://data.silknow.org/production/4eb3ed5f-d26d-316f-b70e-8bfd296de64e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/29460b76-980d-3927-97cd-f1d89b30b247> ;
+        ecrm:P126_employed      "silk warp print"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/object/29460b76-980d-3927-97cd-f1d89b30b247/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Ribbon fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/29460b76-980d-3927-97cd-f1d89b30b247> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/29460b76-980d-3927-97cd-f1d89b30b247>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c460be64-67ad-397f-80a4-b933dbe3fe07> ;
+        dc:identifier                  "53.361" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/ribbon-fragment-53361> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/29460b76-980d-3927-97cd-f1d89b30b247/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/29460b76-980d-3927-97cd-f1d89b30b247> .
+
+<http://data.silknow.org/image/c460be64-67ad-397f-80a4-b933dbe3fe07>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/793421_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/38694.jpg> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e14d58f7-b4ae-336e-b85d-85c698df04dc> .
+
+<http://data.silknow.org/event/e9b2db9d-f09b-3dcd-8ea4-d191ef8c84ab>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/0f64271d-bf82-33d3-a687-866f6cd0c2e1> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mary C. Whitlock" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/29460b76-980d-3927-97cd-f1d89b30b247> .
+
+<http://data.silknow.org/actor/0f64271d-bf82-33d3-a687-866f6cd0c2e1>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mary C. Whitlock" ;
+        ecrm:P1_is_identified_by  "Gift of Mary C. Whitlock" .
+
+<http://data.silknow.org/object/e14d58f7-b4ae-336e-b85d-85c698df04dc>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 53.361" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/e9b2db9d-f09b-3dcd-8ea4-d191ef8c84ab> , <http://data.silknow.org/production/4eb3ed5f-d26d-316f-b70e-8bfd296de64e> , <http://data.silknow.org/object/29460b76-980d-3927-97cd-f1d89b30b247> , <http://data.silknow.org/image/c460be64-67ad-397f-80a4-b933dbe3fe07> , <http://data.silknow.org/object/29460b76-980d-3927-97cd-f1d89b30b247/domain/1> , <http://data.silknow.org/object/29460b76-980d-3927-97cd-f1d89b30b247/category/1> , <http://data.silknow.org/event/f0e1ffae-fc3e-3a83-8f63-c1f69b446ae9> ;
+        dc:identifier       "793421.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

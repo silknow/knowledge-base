@@ -1,0 +1,98 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/aca7159e-2ba6-37cc-a358-fe7ef3f87382>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8> ;
+        ecrm:P126_employed      "Silk weaving"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1826_1875> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8> .
+
+<http://data.silknow.org/object/00b3584a-ad61-34bf-a4ab-25cd2a7a851c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 52.658" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8> , <http://data.silknow.org/event/4cc12267-c0f9-3f87-afe6-73ba50e07b95> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8/category/1> , <http://data.silknow.org/production/aca7159e-2ba6-37cc-a358-fe7ef3f87382> , <http://data.silknow.org/image/8ea62737-fd53-39f4-8896-ba7d7c438c80> , <http://data.silknow.org/event/2ef3be95-3de5-3ef3-a5da-5ac39dbf2ee1> , <http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8/domain/1> ;
+        dc:identifier       "109146.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/image/8ea62737-fd53-39f4-8896-ba7d7c438c80>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "753193" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/109146_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/753193/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "14.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "14.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/51a080a5-1629-3501-8440-0f16219b8586>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "By 1952, F. & G. Staack, Camden, ME; purchased from Staack by the MFA [see note 1] (Accession date: June 12) NOTES: [1] Accession numbers 52.614 - 52.949 were purchased together as a group for $57.50. / Samuel Putnam Avery Fund" ;
+        ecrm:P1_is_identified_by  "By 1952, F. & G. Staack, Camden, ME; purchased from Staack by the MFA [see note 1] (Accession date: June 12) NOTES: [1] Accession numbers 52.614 - 52.949 were purchased together as a group for $57.50. / Samuel Putnam Avery Fund" .
+
+<http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/8ea62737-fd53-39f4-8896-ba7d7c438c80> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8/dimension/2> , <http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8/dimension/1> ;
+        dc:identifier                  "52.658" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/109146> .
+
+<http://data.silknow.org/event/2ef3be95-3de5-3ef3-a5da-5ac39dbf2ee1>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8> .
+
+<http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "23" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "23"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/00b3584a-ad61-34bf-a4ab-25cd2a7a851c> .
+
+<http://data.silknow.org/event/4cc12267-c0f9-3f87-afe6-73ba50e07b95>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/51a080a5-1629-3501-8440-0f16219b8586> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "By 1952, F. & G. Staack, Camden, ME; purchased from Staack by the MFA [see note 1] (Accession date: June 12, 1952) \n\nNOTES: \n[1] Accession numbers 52.614 - 52.949 were purchased together as a group for $57.50. / Samuel Putnam Avery Fund" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8> .
+
+<http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9c6eba30-d553-321d-b5cb-38f17274eee8> .

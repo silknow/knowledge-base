@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/28588c65-1f58-3ddb-b55f-00c760d0afc1>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Georges Le Manach SA, 2002" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c205e2c2-614e-375c-aa5b-7e4c8bb646ce> .
+
+<http://data.silknow.org/object/c205e2c2-614e-375c-aa5b-7e4c8bb646ce>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé reconstitué, Tours, 18e siècle (2de moitié), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9b95445b-ce6c-3655-a550-86d0c339ca4b> ;
+        dc:identifier                  "2002.137.6.2" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908714> .
+
+<http://data.silknow.org/object/c205e2c2-614e-375c-aa5b-7e4c8bb646ce/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé reconstitué" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c205e2c2-614e-375c-aa5b-7e4c8bb646ce> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/9b95445b-ce6c-3655-a550-86d0c339ca4b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908714_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/4e26f7c8-97df-4fa3-9f1c-6357c083bb22.jpg> .
+
+<http://data.silknow.org/object/57fd9c79-4c03-399f-ba79-22b2a165bdf7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2002.137.6.2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c205e2c2-614e-375c-aa5b-7e4c8bb646ce> , <http://data.silknow.org/object/c205e2c2-614e-375c-aa5b-7e4c8bb646ce/category/1> , <http://data.silknow.org/production/028d2fb0-b3dd-3ecc-8201-5264d7fa5efc> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/9b95445b-ce6c-3655-a550-86d0c339ca4b> , <http://data.silknow.org/event/28588c65-1f58-3ddb-b55f-00c760d0afc1> ;
+        dc:identifier       "908714.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/production/028d2fb0-b3dd-3ecc-8201-5264d7fa5efc>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Tours, 18e siècle (2de moitié), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c205e2c2-614e-375c-aa5b-7e4c8bb646ce> ;
+        ecrm:P126_employed      "Soie et métal ; damas gros de Tours, broché soie polychrome et or"@fr ;
+        ecrm:P3_has_note        "Tours, 18e siècle (2de moitié), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1751_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3012219/> .
+
+<https://sws.geonames.org/3012219/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/57fd9c79-4c03-399f-ba79-22b2a165bdf7> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/c205e2c2-614e-375c-aa5b-7e4c8bb646ce> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

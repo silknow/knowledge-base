@@ -1,0 +1,90 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/3c0a1227-0411-3f87-a597-c334aabc7818>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/f58102bd-bf0b-3d00-a9bb-5aac9ad804e1> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of the estate of Lucy Truman Aldrich" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd> .
+
+<http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "cover (closure)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd> .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "261.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "261.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/e12a108e-5d16-37b5-a74f-814ac00c2ebb>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/production/997f22bb-bd8d-35e9-b883-49099cfcbf81>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1662_1722> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "81.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "81.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/f3c8bbf0-5251-3d6b-b7db-50e694715835>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 56.077" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd/category/1> , <http://data.silknow.org/event/e12a108e-5d16-37b5-a74f-814ac00c2ebb> , <http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd> , <http://data.silknow.org/event/3c0a1227-0411-3f87-a597-c334aabc7818> , <http://data.silknow.org/production/997f22bb-bd8d-35e9-b883-49099cfcbf81> , <http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd/domain/1> ;
+        dc:identifier       "893596.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/f58102bd-bf0b-3d00-a9bb-5aac9ad804e1>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of the estate of Lucy Truman Aldrich" ;
+        ecrm:P1_is_identified_by  "Gift of the estate of Lucy Truman Aldrich" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Lucy_Aldrich> , <https://viaf.org/viaf/6031430> , <https://isni.org/isni/0000000026055166> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Lucy_Aldrich> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f3c8bbf0-5251-3d6b-b7db-50e694715835> .
+
+<http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd> .
+
+<http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd>
+        a                       ecrm:E22_Man-Made_Object ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd/dimension/1> , <http://data.silknow.org/object/36ccb6f9-2b7d-3165-8aaa-e0e80336eecd/dimension/2> ;
+        dc:identifier           "56.077" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/cover-closure-56077> .

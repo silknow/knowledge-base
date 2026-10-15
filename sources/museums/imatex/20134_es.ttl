@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/e3abee96-5bd6-31d1-b40d-d1048ef96c9e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e3abee96-5bd6-31d1-b40d-d1048ef96c9e> .
+
+<http://data.silknow.org/event/0656aa90-6873-3ff5-89ab-22db965f1dd9>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e3abee96-5bd6-31d1-b40d-d1048ef96c9e> .
+
+<http://data.silknow.org/event/8a295868-75a4-3304-8729-4c1f10ff785b>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b> ;
+        ecrm:P23_transferred_title_from
+                "Tórtola Valencia, Carmen" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e3abee96-5bd6-31d1-b40d-d1048ef96c9e> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Tórtola Valencia, Carmen" ;
+        ecrm:P1_is_identified_by  "Tórtola Valencia, Carmen" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Carmen_Tórtola_Valencia> , <https://viaf.org/viaf/47896092> , <https://isni.org/isni/0000000038570077> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Carmen_Tórtola_Valencia> .
+
+<http://data.silknow.org/object/e3abee96-5bd6-31d1-b40d-d1048ef96c9e>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/84d96a51-bcc5-38a2-8e7c-1b93911f03d1> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/456a870d-caad-34f5-9c33-024ca0cc8b74> , <http://data.silknow.org/vocabulary/743> , <http://data.silknow.org/vocabulary/745> ;
+        dc:identifier                  "18413" .
+
+<http://data.silknow.org/image/456a870d-caad-34f5-9c33-024ca0cc8b74>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "disposición en medallones"@es ;
+        ecrm:P3_has_note  "disposición en medallones"@es .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/51a9a27c-49ae-39ba-af80-e87c982a5e57> .
+
+<http://data.silknow.org/production/a678b67d-de29-3e35-bc60-694f7b20e374>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e3abee96-5bd6-31d1-b40d-d1048ef96c9e> ;
+        ecrm:P126_employed      "lámina de papel plateada"@es , "lámina de papel dorada"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/8d401042-5429-309c-8425-1afa42f650f2> , <https://sws.geonames.org/1861060/> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/84d96a51-bcc5-38a2-8e7c-1b93911f03d1>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000017267" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/20134_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000017267.jpg> .
+
+<http://data.silknow.org/object/51a9a27c-49ae-39ba-af80-e87c982a5e57>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 20134" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e3abee96-5bd6-31d1-b40d-d1048ef96c9e> , <http://data.silknow.org/object/e3abee96-5bd6-31d1-b40d-d1048ef96c9e/category/1> , <http://data.silknow.org/event/0656aa90-6873-3ff5-89ab-22db965f1dd9> , <http://data.silknow.org/event/8a295868-75a4-3304-8729-4c1f10ff785b> , <http://data.silknow.org/object/e3abee96-5bd6-31d1-b40d-d1048ef96c9e/domain/1> , <http://data.silknow.org/production/a678b67d-de29-3e35-bc60-694f7b20e374> , <http://data.silknow.org/image/84d96a51-bcc5-38a2-8e7c-1b93911f03d1> ;
+        dc:identifier       "20134.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/place/8d401042-5429-309c-8425-1afa42f650f2>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Extremo Oriente" ;
+        ecrm:P87_is_identified_by  "Extremo Oriente" .
+
+<http://data.silknow.org/object/e3abee96-5bd6-31d1-b40d-d1048ef96c9e/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e3abee96-5bd6-31d1-b40d-d1048ef96c9e> .

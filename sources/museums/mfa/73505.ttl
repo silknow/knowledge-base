@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/54d5d485-09b4-39cc-b84d-214924c83da4>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "843956" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/73505_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/843956/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Gold lace. This piece is worn like the type of metal lace that resembles passementrie but has no special character."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec> .
+
+<http://data.silknow.org/collection/1b56f8d9-e308-3933-b55c-5e8ad8065047>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Contemporary Art, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec> ;
+        ecrm:P78_is_identified_by  "Europe, Contemporary Art, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "2.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "2.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Gold lace. This piece is worn like the type of metal lace that resembles passementrie but has no special character."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/54d5d485-09b4-39cc-b84d-214924c83da4> ;
+        ecrm:P3_has_note               "Gold lace. This piece is worn like the type of metal lace that resembles passementrie but has no special character."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec/dimension/2> , <http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec/dimension/1> ;
+        dc:identifier                  "02.854" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/73505> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "32" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "32"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/40ad806e-5726-3fa8-af50-d35be6ff7f0f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b2ad6980-c87a-361e-bee5-9060c72926d3> .
+
+<http://data.silknow.org/object/b2ad6980-c87a-361e-bee5-9060c72926d3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 02.854" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/54d5d485-09b4-39cc-b84d-214924c83da4> , <http://data.silknow.org/event/40ad806e-5726-3fa8-af50-d35be6ff7f0f> , <http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec/category/1> , <http://data.silknow.org/production/b2f732ed-626c-3304-8f8c-c0776c04b4b5> , <http://data.silknow.org/collection/1b56f8d9-e308-3933-b55c-5e8ad8065047> , <http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec/observation/1> , <http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec> , <http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec/domain/1> ;
+        dc:identifier       "73505.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec> .
+
+<http://data.silknow.org/production/b2f732ed-626c-3304-8f8c-c0776c04b4b5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec> ;
+        ecrm:P126_employed      "Bobbin; lace"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1601_2000> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Bobbin lace" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ea3ed79e-81a8-3413-aab6-0e0730f165ec> .

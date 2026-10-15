@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/2714e6b6-ca8b-300a-bc68-7b9c3b41347e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, 1765 (vers), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/144d2ef4-39f1-39aa-a3ad-4c4a75c80ecb> ;
+        dc:identifier                  "3168" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/911064> .
+
+<http://data.silknow.org/event/e9e47747-f852-34ff-a1ac-f91e1534a302>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1886" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/2714e6b6-ca8b-300a-bc68-7b9c3b41347e> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/144d2ef4-39f1-39aa-a3ad-4c4a75c80ecb>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/911064_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/f8b7106d-dbc2-4144-b546-3517ee65b12a.jpg> .
+
+<http://data.silknow.org/object/7cca31d6-77dd-3750-bd86-4dd6721e2b0a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 3168" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/144d2ef4-39f1-39aa-a3ad-4c4a75c80ecb> , <http://data.silknow.org/object/2714e6b6-ca8b-300a-bc68-7b9c3b41347e> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/e9e47747-f852-34ff-a1ac-f91e1534a302> , <http://data.silknow.org/object/2714e6b6-ca8b-300a-bc68-7b9c3b41347e/category/1> , <http://data.silknow.org/production/a85345ff-5609-3d0c-b58d-82d464d95f1f> ;
+        dc:identifier       "911064.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/2714e6b6-ca8b-300a-bc68-7b9c3b41347e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/2714e6b6-ca8b-300a-bc68-7b9c3b41347e> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7cca31d6-77dd-3750-bd86-4dd6721e2b0a> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/2714e6b6-ca8b-300a-bc68-7b9c3b41347e> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/production/a85345ff-5609-3d0c-b58d-82d464d95f1f>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1765 (vers), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/2714e6b6-ca8b-300a-bc68-7b9c3b41347e> ;
+        ecrm:P126_employed      "Lampas fond taffetas changeant, liseré, lancé, moiré"@fr ;
+        ecrm:P3_has_note        "France, 1765 (vers), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/19578d8c-9f7c-3731-bd91-a326334f6271> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .

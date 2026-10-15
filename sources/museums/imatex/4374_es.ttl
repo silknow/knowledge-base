@@ -1,0 +1,105 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d7bdb8a8-f9ce-3c07-8bd3-665bf36a0a58> .
+
+<http://data.silknow.org/production/630dc77d-44c7-3438-b121-da391d4efd7e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/497> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "terciopelo alluciolado"@es , "trama llançada"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/854> , <http://data.silknow.org/vocabulary/97> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1476_1500> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> , <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- vellut tallat llavorat, de 1 cos, brocat\n- conserva 1 voraviu"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960> .
+
+<http://data.silknow.org/event/cf05a5d7-ada3-35a0-b2dc-d8bf38b85fce>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960> .
+
+<http://data.silknow.org/image/a94760d7-71f2-3955-b15f-c0f8247d2917>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "flores"@es ;
+        ecrm:P3_has_note  "flores"@es .
+
+<http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/4baa381f-6bb5-37d9-96a1-c7f33db7e2cb>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "flor del cardo"@es ;
+        ecrm:P3_has_note  "flor del cardo"@es .
+
+<http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960> .
+
+<http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Biosca, Josep" ;
+        ecrm:P1_is_identified_by  "Biosca, Josep" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Josep_Huguet_i_Biosca> , <https://viaf.org/viaf/95599143> , <https://isni.org/isni/000000007829170X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Josep_Huguet_i_Biosca> .
+
+<http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "vellut tallat llavorat, de 1 cos, brocat\n- conserva 1 voraviu"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b6999ad2-b800-3bee-aedd-8f09cb3c830c> ;
+        ecrm:P3_has_note               "vellut tallat llavorat, de 1 cos, brocat\n- conserva 1 voraviu"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/a94760d7-71f2-3955-b15f-c0f8247d2917> , <http://data.silknow.org/vocabulary/750> , <http://data.silknow.org/image/4baa381f-6bb5-37d9-96a1-c7f33db7e2cb> , <http://data.silknow.org/image/e92f096f-a383-3968-ab1c-aaad319abda0> , <http://data.silknow.org/vocabulary/753> ;
+        dc:identifier                  "3275" .
+
+<http://data.silknow.org/image/e92f096f-a383-3968-ab1c-aaad319abda0>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "decoración vegetal estilizada"@es ;
+        ecrm:P3_has_note  "decoración vegetal estilizada"@es .
+
+<http://data.silknow.org/image/b6999ad2-b800-3bee-aedd-8f09cb3c830c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000001090" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/4374_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000001090.jpg> .
+
+<http://data.silknow.org/event/b7f08b54-01a3-35db-a560-2b1136e10ed8>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "donacions" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dfd3507a-7909-3bd1-9c68-2dc3b09563d2> ;
+        ecrm:P23_transferred_title_from
+                "Biosca, Josep" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960> ;
+        ecrm:P3_has_note               "donacions" .
+
+<http://data.silknow.org/object/d7bdb8a8-f9ce-3c07-8bd3-665bf36a0a58>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 4374" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/b7f08b54-01a3-35db-a560-2b1136e10ed8> , <http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960/category/1> , <http://data.silknow.org/production/630dc77d-44c7-3438-b121-da391d4efd7e> , <http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960> , <http://data.silknow.org/image/b6999ad2-b800-3bee-aedd-8f09cb3c830c> , <http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960/observation/1> , <http://data.silknow.org/object/ff944da2-486b-36b5-93be-49d4bd495960/domain/1> , <http://data.silknow.org/event/cf05a5d7-ada3-35a0-b2dc-d8bf38b85fce> ;
+        dc:identifier       "4374.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

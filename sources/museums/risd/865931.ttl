@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/3ff060a1-f348-3ec4-aa7a-e2b1e251798e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3ff060a1-f348-3ec4-aa7a-e2b1e251798e> .
+
+<http://data.silknow.org/object/83fda79b-b7bd-35d2-ac19-259539702289>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 35.556" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/5c67541e-71a7-3560-bc51-153aceba1901> , <http://data.silknow.org/event/7a3c7f48-e585-3fbd-8869-d3c59f090c79> , <http://data.silknow.org/object/3ff060a1-f348-3ec4-aa7a-e2b1e251798e/domain/1> , <http://data.silknow.org/object/3ff060a1-f348-3ec4-aa7a-e2b1e251798e> , <http://data.silknow.org/object/3ff060a1-f348-3ec4-aa7a-e2b1e251798e/category/1> , <http://data.silknow.org/production/3567d381-a32d-3f93-9227-bda2183d1219> , <http://data.silknow.org/image/33dcd754-20e6-3a94-b819-ec7c3a80adaf> ;
+        dc:identifier       "865931.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/3ff060a1-f348-3ec4-aa7a-e2b1e251798e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "hood (headgear)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3ff060a1-f348-3ec4-aa7a-e2b1e251798e> .
+
+<http://data.silknow.org/actor/cf1b19d2-fac5-36bf-a9af-c99bd4925e98>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Howard Sturges" ;
+        ecrm:P1_is_identified_by  "Gift of Howard Sturges" .
+
+<http://data.silknow.org/object/3ff060a1-f348-3ec4-aa7a-e2b1e251798e>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/33dcd754-20e6-3a94-b819-ec7c3a80adaf> ;
+        dc:identifier                  "35.556" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/hood-headgear-35556> .
+
+<http://data.silknow.org/production/3567d381-a32d-3f93-9227-bda2183d1219>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3ff060a1-f348-3ec4-aa7a-e2b1e251798e> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/83fda79b-b7bd-35d2-ac19-259539702289> .
+
+<http://data.silknow.org/event/7a3c7f48-e585-3fbd-8869-d3c59f090c79>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3ff060a1-f348-3ec4-aa7a-e2b1e251798e> .
+
+<http://data.silknow.org/event/5c67541e-71a7-3560-bc51-153aceba1901>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/cf1b19d2-fac5-36bf-a9af-c99bd4925e98> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Howard Sturges" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3ff060a1-f348-3ec4-aa7a-e2b1e251798e> .
+
+<http://data.silknow.org/image/33dcd754-20e6-3a94-b819-ec7c3a80adaf>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/865931_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/23414.jpg> .

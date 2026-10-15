@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/bf7849d1-4820-325f-8af2-b620fe515218/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bf7849d1-4820-325f-8af2-b620fe515218> .
+
+<http://data.silknow.org/event/3bb36a3d-1765-337a-a425-59126ef0c58f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/bf7849d1-4820-325f-8af2-b620fe515218> .
+
+<http://data.silknow.org/object/af91c833-9acf-30f4-a2c8-106afc0efba7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2019.34" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/3bb36a3d-1765-337a-a425-59126ef0c58f> , <http://data.silknow.org/production/1ca55960-89ee-39b5-ba90-4837469d3e12> , <http://data.silknow.org/object/bf7849d1-4820-325f-8af2-b620fe515218> , <http://data.silknow.org/object/bf7849d1-4820-325f-8af2-b620fe515218/category/1> , <http://data.silknow.org/event/67ba940d-cd63-382c-843b-88880719a87a> , <http://data.silknow.org/object/bf7849d1-4820-325f-8af2-b620fe515218/domain/1> ;
+        dc:identifier       "1149351.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/event/67ba940d-cd63-382c-843b-88880719a87a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/5587b009-66b3-32e4-9785-c27cc96273d8> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Cecile and Arthur Mark" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/bf7849d1-4820-325f-8af2-b620fe515218> .
+
+<http://data.silknow.org/object/bf7849d1-4820-325f-8af2-b620fe515218/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Table Covering" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/bf7849d1-4820-325f-8af2-b620fe515218> .
+
+<http://data.silknow.org/actor/5587b009-66b3-32e4-9785-c27cc96273d8>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Cecile and Arthur Mark" ;
+        ecrm:P1_is_identified_by  "Gift of Cecile and Arthur Mark" .
+
+<http://data.silknow.org/production/1ca55960-89ee-39b5-ba90-4837469d3e12>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/bf7849d1-4820-325f-8af2-b620fe515218> ;
+        ecrm:P126_employed      "Silk embroidery on silk ground and crocheted metallic-wrapped threads"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1929> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2782113/> .
+
+<https://sws.geonames.org/2782113/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/af91c833-9acf-30f4-a2c8-106afc0efba7> .
+
+<http://data.silknow.org/object/bf7849d1-4820-325f-8af2-b620fe515218>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "2019.34" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/table-covering-201934> .

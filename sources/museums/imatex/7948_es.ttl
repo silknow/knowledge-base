@@ -1,0 +1,91 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f0425fba-4287-33e6-81b5-43df69790889> .
+
+<http://data.silknow.org/event/d1e11f77-c835-3e26-b084-e4a497d4d06c>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b> ;
+        ecrm:P23_transferred_title_from
+                "Tórtola Valencia, Carmen" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .
+
+<http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8> .
+
+<http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Mussolina anglesa decorada amb motius florals treballats en brodat directe i brodat aplicat de petits fragments de teixit de vellut."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8> .
+
+<http://data.silknow.org/production/14a7485c-e2eb-3c54-bfb8-7eaac6f3683c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "bordado aplicado"@es , "bordado manual"@es , "técnica de calada"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/355> .
+
+<http://data.silknow.org/image/90ee96f7-1db1-3c9e-aa40-e16675f8f59e>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "motivos de inspiración floral"@es ;
+        ecrm:P3_has_note  "motivos de inspiración floral"@es .
+
+<http://data.silknow.org/image/089b7a2b-ac74-3272-8329-68440b792416>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000022587" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/7948_1.jpg> , <http://imatex.cdmt.cat/fotografies/0000022587.jpg> .
+
+<http://data.silknow.org/event/5c6a6032-5c6d-38d5-9141-30e47caa86a2>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8> .
+
+<http://data.silknow.org/image/48ddebb1-48f3-30f5-8d27-6dff48e4c467>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000005075" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/7948_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000005075.jpg> .
+
+<http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Tórtola Valencia, Carmen" ;
+        ecrm:P1_is_identified_by  "Tórtola Valencia, Carmen" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Carmen_Tórtola_Valencia> , <https://viaf.org/viaf/47896092> , <https://isni.org/isni/0000000038570077> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Carmen_Tórtola_Valencia> .
+
+<http://data.silknow.org/object/f0425fba-4287-33e6-81b5-43df69790889>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 7948" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8/observation/1> , <http://data.silknow.org/event/5c6a6032-5c6d-38d5-9141-30e47caa86a2> , <http://data.silknow.org/image/089b7a2b-ac74-3272-8329-68440b792416> , <http://data.silknow.org/event/d1e11f77-c835-3e26-b084-e4a497d4d06c> , <http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8> , <http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8/category/1> , <http://data.silknow.org/production/14a7485c-e2eb-3c54-bfb8-7eaac6f3683c> , <http://data.silknow.org/image/48ddebb1-48f3-30f5-8d27-6dff48e4c467> , <http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8/domain/1> ;
+        dc:identifier       "7948.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8> .
+
+<http://data.silknow.org/object/53a9550d-ae42-3e8f-b1d4-7afd71d06bd8>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Mussolina anglesa decorada amb motius florals treballats en brodat directe i brodat aplicat de petits fragments de teixit de vellut."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/48ddebb1-48f3-30f5-8d27-6dff48e4c467> , <http://data.silknow.org/image/089b7a2b-ac74-3272-8329-68440b792416> ;
+        ecrm:P3_has_note               "Mussolina anglesa decorada amb motius florals treballats en brodat directe i brodat aplicat de petits fragments de teixit de vellut."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/90ee96f7-1db1-3c9e-aa40-e16675f8f59e> ;
+        dc:identifier                  "8367" .

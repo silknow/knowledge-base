@@ -1,0 +1,116 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/9cdf0aec-1d07-32a2-bb66-486762325920>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Stevens, Thomas" ;
+        ecrm:P1_is_identified_by  "Stevens, Thomas" .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/object/3bbc9733-ee2e-3fc3-9a7d-39409e899762>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O318768" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/observation/1> , <http://data.silknow.org/event/c5f1d0f0-6524-30ef-87b7-21c4f705251f> , <http://data.silknow.org/image/2f514d53-464d-360d-9113-135a2e2366d0> , <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f> , <http://data.silknow.org/production/d404a484-cf1b-37a9-8ee5-43047ef3daf6> , <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/domain/2> , <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/domain/1> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/observation/2> ;
+        dc:identifier       "O318768.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/43> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f> .
+
+<http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Stevengraph picture 'For Life Or Death' of woven silk and mounted on card, designed and made by Thomas Stevens, Coventry, 1850s-1870s"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f> .
+
+<http://data.silknow.org/production/d404a484-cf1b-37a9-8ee5-43047ef3daf6>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f> ;
+        ecrm:P126_employed      "Woven in silk and mounted on card"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1850_1879> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2652221/> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/d404a484-cf1b-37a9-8ee5-43047ef3daf6/activity/1> .
+
+<https://sws.geonames.org/2652221/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 13.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "13.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/d404a484-cf1b-37a9-8ee5-43047ef3daf6/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/9cdf0aec-1d07-32a2-bb66-486762325920> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Stevengraph picture of woven silk and mounted on card."@en , "Stevengraph picture 'For Life Or Death' of woven silk and mounted on card, designed and made by Thomas Stevens, Coventry, 1850s-1870s"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2f514d53-464d-360d-9113-135a2e2366d0> ;
+        ecrm:P3_has_note               "Stevengraph picture 'For Life Or Death' of woven silk and mounted on card, designed and made by Thomas Stevens, Coventry, 1850s-1870s"@en , "Stevengraph picture of woven silk and mounted on card."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/dimension/2> , <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/dimension/1> ;
+        dc:identifier                  "CIRC.593-1976" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O318768> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3bbc9733-ee2e-3fc3-9a7d-39409e899762> .
+
+<http://data.silknow.org/event/c5f1d0f0-6524-30ef-87b7-21c4f705251f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f> .
+
+<http://data.silknow.org/image/2f514d53-464d-360d-9113-135a2e2366d0>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017JY7077" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O318768_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017JY/2017JY7077.jpg> .
+
+<http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f> .
+
+<http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Stevengraph picture of woven silk and mounted on card."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f> .
+
+<http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Stevengraph" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f> .
+
+<http://data.silknow.org/object/37c6bf92-8217-37e6-b017-10fbe866839f/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 20.6 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "20.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

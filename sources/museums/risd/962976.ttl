@@ -1,0 +1,91 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506> .
+
+<http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c4f56326-efa0-38fe-ba10-2d06c3682c15> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506/dimension/1> , <http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506/dimension/2> ;
+        dc:identifier                  "1989.042.4" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/fabric-length-textile-length-19890424> .
+
+<http://data.silknow.org/image/c4f56326-efa0-38fe-ba10-2d06c3682c15>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/962976_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/13807.jpg> .
+
+<http://data.silknow.org/object/e45239df-bfe2-326b-8a93-b1c3b1e99187>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1989.042.4" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506/domain/1> , <http://data.silknow.org/production/8d965079-ceb3-3143-b4ff-bcafcce3b245> , <http://data.silknow.org/event/7fd9938e-111a-302b-a4b3-6a807c423cbf> , <http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506/category/1> , <http://data.silknow.org/image/c4f56326-efa0-38fe-ba10-2d06c3682c15> , <http://data.silknow.org/event/ea7ca357-a620-383f-a68b-72884dbb745a> , <http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506> ;
+        dc:identifier       "962976.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506/category/1>
+        a                    silk:T35 ;
+        silk:L1              "fabric length; textile length" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506> .
+
+<http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "101.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "101.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "73.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "73.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/de08ca7b-bd6a-3f55-8dcd-da8c4c06bac5>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of William and Nancy Wells" ;
+        ecrm:P1_is_identified_by  "Gift of William and Nancy Wells" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e45239df-bfe2-326b-8a93-b1c3b1e99187> .
+
+<http://data.silknow.org/event/ea7ca357-a620-383f-a68b-72884dbb745a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506> .
+
+<http://data.silknow.org/event/7fd9938e-111a-302b-a4b3-6a807c423cbf>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/de08ca7b-bd6a-3f55-8dcd-da8c4c06bac5> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of William and Nancy Wells" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/8d965079-ceb3-3143-b4ff-bcafcce3b245>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6b6d8dd3-d75a-36cd-936b-5609ecb60506> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .

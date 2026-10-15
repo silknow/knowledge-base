@@ -1,0 +1,57 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/6d5dfc94-0eb6-32ee-b7ea-d009456f50db>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2017.162.69.2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/67ad898f-0885-3d34-8b72-afd03ac2cac5> , <http://data.silknow.org/event/ae4abfbc-de95-36fd-9f56-ac7ba40b8742> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/d69fd77b-4d88-30c4-bff6-533e1cee2222> , <http://data.silknow.org/object/ca5b46e8-2d39-32b7-8e4d-84b117fc4460> ;
+        dc:identifier       "934245.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/image/d69fd77b-4d88-30c4-bff6-533e1cee2222>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934245_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/aec1948b-c99d-46e2-9172-4d1fd116945e.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/ae4abfbc-de95-36fd-9f56-ac7ba40b8742>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "don Ambre, 2017" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ca5b46e8-2d39-32b7-8e4d-84b117fc4460> .
+
+<http://data.silknow.org/object/ca5b46e8-2d39-32b7-8e4d-84b117fc4460>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Renaud Pellegrino, 1999"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d69fd77b-4d88-30c4-bff6-533e1cee2222> ;
+        dc:identifier                  "2017.162.69.2" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934245> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6d5dfc94-0eb6-32ee-b7ea-d009456f50db> .
+
+<http://data.silknow.org/production/67ad898f-0885-3d34-8b72-afd03ac2cac5>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Renaud Pellegrino, 1999" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ca5b46e8-2d39-32b7-8e4d-84b117fc4460> ;
+        ecrm:P3_has_note        "Renaud Pellegrino, 1999" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1999> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ca5b46e8-2d39-32b7-8e4d-84b117fc4460> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

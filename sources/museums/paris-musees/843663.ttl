@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/e42d6ac1-4359-336b-aa70-dbe36bd39109>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400> ;
+        ecrm:P126_employed      "Bois (matériau)"@fr ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1850> .
+
+<http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400/dimension/1>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/width> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/event/9df8b83f-e42c-3406-a949-fe35276adb0d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71bc961b-31ff-325b-bce8-4f127dd51e4c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400> .
+
+<http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "29.5 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "29.5 cm" ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/2f5314a4-f786-396e-a6ed-7f6fb4e60005>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "736426" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ParisMusees/843663_0.jpg> , <https://www.parismuseescollections.paris.fr/sites/default/files/styles/pm_diaporama/public/atoms/images/CAR/lpdp_99072-6.jpg?itok=CYrUT8-P> .
+
+<http://data.silknow.org/actor/71bc961b-31ff-325b-bce8-4f127dd51e4c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée Carnavalet, Histoire de Paris" ;
+        ecrm:P1_is_identified_by  "Musée Carnavalet, Histoire de Paris" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000123235994> , <https://viaf.org/viaf/129111217> .
+
+<http://data.silknow.org/object/7c8edbe2-22a9-323e-8392-eaeeff827a31>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record EV0430" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/9df8b83f-e42c-3406-a949-fe35276adb0d> , <http://data.silknow.org/production/e42d6ac1-4359-336b-aa70-dbe36bd39109> , <http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400/category/1> , <http://data.silknow.org/image/cba98f72-cd99-39ff-ac59-89f338bf1652> , <http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400> , <http://data.silknow.org/image/2f5314a4-f786-396e-a6ed-7f6fb4e60005> , <http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400/domain/1> ;
+        dc:identifier       "843663.json" ;
+        dc:publisher        "http://data.silknow.org/organization/PM" .
+
+<http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Eventail à palettes de soie dentelée"@fr ;
+        ecrm:P102_has_title            "Eventail à palettes de soie dentelée"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2f5314a4-f786-396e-a6ed-7f6fb4e60005> , <http://data.silknow.org/image/cba98f72-cd99-39ff-ac59-89f338bf1652> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400/dimension/1> , <http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400/dimension/2> ;
+        dc:identifier                  "EV0430" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://parismuseescollections.paris.fr/node/843663> .
+
+<http://data.silknow.org/PM>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7c8edbe2-22a9-323e-8392-eaeeff827a31> .
+
+<http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Eventail" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400> .
+
+<http://data.silknow.org/image/cba98f72-cd99-39ff-ac59-89f338bf1652>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "736429" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ParisMusees/843663_1.jpg> , <https://www.parismuseescollections.paris.fr/sites/default/files/styles/pm_diaporama/public/atoms/images/CAR/lpdp_99072-7.jpg?itok=JlwNWttS> .
+
+<http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Vêtements et accessoires de vêtement" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5d740aa3-0bae-3c35-83d1-d725ef41c400> .

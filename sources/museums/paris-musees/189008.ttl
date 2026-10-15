@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021/dimension/2>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/height> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/production/08691d71-1ec5-3435-a96c-894260acd996>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021> ;
+        ecrm:P126_employed      "Cuir = peau"@fr ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/87> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1610> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/PM>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/abfecaa4-17bf-3464-9661-e32588920e4d> .
+
+<http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Veste" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021> .
+
+<http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021/dimension/1>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/width> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021>
+        a                       ecrm:E22_Man-Made_Object ;
+        rdfs:label              "Pourpoint espagnol du 17e siècle"@fr ;
+        ecrm:P102_has_title     "Pourpoint espagnol du 17e siècle"@fr ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021/dimension/1> , <http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021/dimension/2> ;
+        dc:identifier           "1920.1.355" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://parismuseescollections.paris.fr/node/189008> .
+
+<http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Vêtements et accessoires de vêtement" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021> .
+
+<http://data.silknow.org/event/14b8d876-6284-34d8-864f-bdeb3a48dcaa>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f4f677e1-0fb0-381b-a311-e59780a8f445> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021> .
+
+<http://data.silknow.org/actor/f4f677e1-0fb0-381b-a311-e59780a8f445>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Palais Galliera, musée de la Mode de la Ville de Paris" ;
+        ecrm:P1_is_identified_by  "Palais Galliera, musée de la Mode de la Ville de Paris" .
+
+<http://data.silknow.org/object/abfecaa4-17bf-3464-9661-e32588920e4d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1920.1.355" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/14b8d876-6284-34d8-864f-bdeb3a48dcaa> , <http://data.silknow.org/production/08691d71-1ec5-3435-a96c-894260acd996> , <http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021/category/1> , <http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021> , <http://data.silknow.org/object/b72f9d8c-d7bb-3246-87f2-96a2ba129021/domain/1> ;
+        dc:identifier       "189008.json" ;
+        dc:publisher        "http://data.silknow.org/organization/PM" .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

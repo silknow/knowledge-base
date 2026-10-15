@@ -1,0 +1,62 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/c47a8831-7d39-37b4-9642-7778fe86e933>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat grâce au legs de Madame Veuve Rigaud, 1922" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9a002b29-c109-3e4e-a494-d0c3217e1b53> .
+
+<http://data.silknow.org/production/155af3d5-1582-34fe-bd41-1d67202d0a10>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Chine, 19e siècle (2de moitié), Quing (dyn.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9a002b29-c109-3e4e-a494-d0c3217e1b53> ;
+        ecrm:P3_has_note        "Chine, 19e siècle (2de moitié), Quing (dyn.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1851_1900> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1814991/> .
+
+<http://data.silknow.org/image/23f4137a-3160-3c91-bf5c-640a2c0aa01a>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/917351_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/b14bec80-161c-420b-a403-83cfbb7fb570.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<https://sws.geonames.org/1814991/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d1e60f5b-8f3e-3d81-a607-9d0f4f8e8761> .
+
+<http://data.silknow.org/object/9a002b29-c109-3e4e-a494-d0c3217e1b53>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Chine, 19e siècle (2de moitié), Quing (dyn.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/23f4137a-3160-3c91-bf5c-640a2c0aa01a> ;
+        dc:identifier                  "22608.A-F" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/917351> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/9a002b29-c109-3e4e-a494-d0c3217e1b53> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/d1e60f5b-8f3e-3d81-a607-9d0f4f8e8761>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 22608.A-F" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/155af3d5-1582-34fe-bd41-1d67202d0a10> , <http://data.silknow.org/event/c47a8831-7d39-37b4-9642-7778fe86e933> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/23f4137a-3160-3c91-bf5c-640a2c0aa01a> , <http://data.silknow.org/object/9a002b29-c109-3e4e-a494-d0c3217e1b53> ;
+        dc:identifier       "917351.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

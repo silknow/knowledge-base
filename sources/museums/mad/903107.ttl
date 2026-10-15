@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/c4c2f837-b2f9-3997-9e6a-a9e4252d59e8>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/903107_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/5f069d7b-adbe-4d7d-8519-89e8162375df.jpg> .
+
+<http://data.silknow.org/object/d1452fdc-7c6b-339c-a633-b63c979fc55d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Brossin de Méré, 1952-1953"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c4c2f837-b2f9-3997-9e6a-a9e4252d59e8> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/d1452fdc-7c6b-339c-a633-b63c979fc55d/dimension/2> , <http://data.silknow.org/object/d1452fdc-7c6b-339c-a633-b63c979fc55d/dimension/1> ;
+        dc:identifier                  "2004.14.10" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/903107> .
+
+<http://data.silknow.org/event/1176ecb8-f7b0-3d0b-aa56-7afc5e1ff386>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Marguerite Binz, 2004" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d1452fdc-7c6b-339c-a633-b63c979fc55d> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/d1452fdc-7c6b-339c-a633-b63c979fc55d/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "90" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "90"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/018bbf0b-341a-3fd8-9a45-6a3703425e59>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Brossin de Méré, 1952-1953" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d1452fdc-7c6b-339c-a633-b63c979fc55d> ;
+        ecrm:P126_employed      "Voile de soie imprimée au cadre"@fr ;
+        ecrm:P3_has_note        "Brossin de Méré, 1952-1953" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1952_1953> .
+
+<http://data.silknow.org/object/d1452fdc-7c6b-339c-a633-b63c979fc55d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d1452fdc-7c6b-339c-a633-b63c979fc55d> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5eb44f83-94a7-37bd-bb2e-8598448d0189> .
+
+<http://data.silknow.org/object/d1452fdc-7c6b-339c-a633-b63c979fc55d/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "133" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "133"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/d1452fdc-7c6b-339c-a633-b63c979fc55d> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/5eb44f83-94a7-37bd-bb2e-8598448d0189>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2004.14.10" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d1452fdc-7c6b-339c-a633-b63c979fc55d> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/c4c2f837-b2f9-3997-9e6a-a9e4252d59e8> , <http://data.silknow.org/production/018bbf0b-341a-3fd8-9a45-6a3703425e59> , <http://data.silknow.org/event/1176ecb8-f7b0-3d0b-aa56-7afc5e1ff386> , <http://data.silknow.org/object/d1452fdc-7c6b-339c-a633-b63c979fc55d/category/1> ;
+        dc:identifier       "903107.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

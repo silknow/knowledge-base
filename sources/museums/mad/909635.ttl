@@ -1,0 +1,83 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/dfe855f5-98a4-3e7f-9fea-43f49f6db37b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/909635_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/52699d06-5d42-4a5a-9ed3-aa1551c2a80f.jpg> .
+
+<http://data.silknow.org/object/24fa1856-0867-3b96-a220-e058408aead6>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, France, 1770-1780, Louis XV (époq.), Louis XVI (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/dfe855f5-98a4-3e7f-9fea-43f49f6db37b> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/24fa1856-0867-3b96-a220-e058408aead6/dimension/2> , <http://data.silknow.org/object/24fa1856-0867-3b96-a220-e058408aead6/dimension/1> ;
+        dc:identifier                  "13254.AB" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/909635> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/24fa1856-0867-3b96-a220-e058408aead6/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "49" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "49"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/3b0b0b4e-31cc-3f29-8e4d-97b9b2725945>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1770-1780, Louis XV (époq.), Louis XVI (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/24fa1856-0867-3b96-a220-e058408aead6> ;
+        ecrm:P126_employed      "Lampas fond satin, 2 lats de liseré, effet taffetas"@fr ;
+        ecrm:P3_has_note        "France, 1770-1780, Louis XV (époq.), Louis XVI (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1770_1780> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/66546691-6f2b-31a1-96d0-3432f3b227c3>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13254.AB" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/3b0b0b4e-31cc-3f29-8e4d-97b9b2725945> , <http://data.silknow.org/image/dfe855f5-98a4-3e7f-9fea-43f49f6db37b> , <http://data.silknow.org/event/7818ad64-2739-336c-97d7-306d9b79cf19> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/24fa1856-0867-3b96-a220-e058408aead6> , <http://data.silknow.org/object/24fa1856-0867-3b96-a220-e058408aead6/category/1> ;
+        dc:identifier       "909635.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/object/24fa1856-0867-3b96-a220-e058408aead6/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/24fa1856-0867-3b96-a220-e058408aead6> .
+
+<http://data.silknow.org/event/7818ad64-2739-336c-97d7-306d9b79cf19>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don monsieur Marquereau, 1907" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/24fa1856-0867-3b96-a220-e058408aead6> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/66546691-6f2b-31a1-96d0-3432f3b227c3> .
+
+<http://data.silknow.org/object/24fa1856-0867-3b96-a220-e058408aead6/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "160" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "160"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/24fa1856-0867-3b96-a220-e058408aead6> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

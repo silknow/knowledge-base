@@ -1,0 +1,83 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/336021e0-3c49-39d5-bebe-77ec49873fa6>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908700_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/0dc3dcd8-d64a-4f20-9cc9-73e13395c023.jpg> .
+
+<http://data.silknow.org/object/6cef0f64-0a1f-35df-9458-c5fb6a38e595/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "62" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "62"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/c1f5206c-70a1-3bdc-8adf-bc8a57c119af>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 21338. ABC" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/89e31e66-fcf1-3e61-81c5-920f6908f5d4> , <http://data.silknow.org/image/336021e0-3c49-39d5-bebe-77ec49873fa6> , <http://data.silknow.org/production/cdc60f43-07fb-3725-9a35-5c6f222e1373> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/6cef0f64-0a1f-35df-9458-c5fb6a38e595/category/1> , <http://data.silknow.org/object/6cef0f64-0a1f-35df-9458-c5fb6a38e595> ;
+        dc:identifier       "908700.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/object/6cef0f64-0a1f-35df-9458-c5fb6a38e595>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "ensemble de morceaux de tissu, France, 1750 (vers), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/336021e0-3c49-39d5-bebe-77ec49873fa6> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/6cef0f64-0a1f-35df-9458-c5fb6a38e595/dimension/2> , <http://data.silknow.org/object/6cef0f64-0a1f-35df-9458-c5fb6a38e595/dimension/1> ;
+        dc:identifier                  "21338. ABC" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908700> .
+
+<http://data.silknow.org/object/6cef0f64-0a1f-35df-9458-c5fb6a38e595/category/1>
+        a                    silk:T35 ;
+        silk:L1              "ensemble de morceaux de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6cef0f64-0a1f-35df-9458-c5fb6a38e595> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/6cef0f64-0a1f-35df-9458-c5fb6a38e595/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "57" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "57"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/89e31e66-fcf1-3e61-81c5-920f6908f5d4>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Legs mademoiselle Denouille, 1919" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6cef0f64-0a1f-35df-9458-c5fb6a38e595> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c1f5206c-70a1-3bdc-8adf-bc8a57c119af> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6cef0f64-0a1f-35df-9458-c5fb6a38e595> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/production/cdc60f43-07fb-3725-9a35-5c6f222e1373>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1750 (vers), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6cef0f64-0a1f-35df-9458-c5fb6a38e595> ;
+        ecrm:P126_employed      "Satin de 8, liseré, broché"@fr ;
+        ecrm:P3_has_note        "France, 1750 (vers), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/223dc152-e388-36a9-a6f8-2410abe2a50b> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .

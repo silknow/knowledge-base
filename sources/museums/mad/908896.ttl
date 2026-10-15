@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/407b54ae-1659-3fe5-9f7b-74b22de9a62b>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, 1735 (vers), Louis XV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6c36d68f-908c-3767-9e65-64b63b176cd3> ;
+        ecrm:P126_employed      "Satin de 8, 2 lats de liseré, broché soie polychrome, effet de berclé"@fr ;
+        ecrm:P3_has_note        "France, 1735 (vers), Louis XV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/57f680a0-7c72-37b7-b943-578eb036094e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/f87934d9-8c25-3d53-9136-b4afe9b93ab2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 21340 A-D" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/production/407b54ae-1659-3fe5-9f7b-74b22de9a62b> , <http://data.silknow.org/object/6c36d68f-908c-3767-9e65-64b63b176cd3> , <http://data.silknow.org/object/6c36d68f-908c-3767-9e65-64b63b176cd3/category/1> , <http://data.silknow.org/image/b36719a5-174e-3e94-a436-9bae637b8471> , <http://data.silknow.org/event/29786265-54a8-3b88-8ec9-086d8de57279> ;
+        dc:identifier       "908896.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/b36719a5-174e-3e94-a436-9bae637b8471>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908896_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/76189011-64a8-49ba-bf4c-d88ad709f81c.jpg> .
+
+<http://data.silknow.org/event/29786265-54a8-3b88-8ec9-086d8de57279>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "legs Adèle Denouille, 1923" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6c36d68f-908c-3767-9e65-64b63b176cd3> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/6c36d68f-908c-3767-9e65-64b63b176cd3/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6c36d68f-908c-3767-9e65-64b63b176cd3> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f87934d9-8c25-3d53-9136-b4afe9b93ab2> .
+
+<http://data.silknow.org/object/6c36d68f-908c-3767-9e65-64b63b176cd3>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, 1735 (vers), Louis XV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b36719a5-174e-3e94-a436-9bae637b8471> ;
+        dc:identifier                  "21340 A-D" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908896> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/6c36d68f-908c-3767-9e65-64b63b176cd3> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

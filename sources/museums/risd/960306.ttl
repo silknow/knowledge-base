@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/6fe048d2-24e2-3986-9fb4-050734c786f8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6fe048d2-24e2-3986-9fb4-050734c786f8> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/6fe048d2-24e2-3986-9fb4-050734c786f8/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/6fe048d2-24e2-3986-9fb4-050734c786f8> .
+
+<http://data.silknow.org/event/d79688b6-e31d-305d-982f-8926e323dbcd>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/6fe048d2-24e2-3986-9fb4-050734c786f8> .
+
+<http://data.silknow.org/production/4fcadfd5-98fb-30ab-bcbd-7cfa190c6103>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/6fe048d2-24e2-3986-9fb4-050734c786f8> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/6fe048d2-24e2-3986-9fb4-050734c786f8>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "07.160A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-07160a> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Gustav Radeke" .
+
+<http://data.silknow.org/object/e7e4f837-73b5-3fb5-b88e-c9d978e08f33>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 07.160A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/4fcadfd5-98fb-30ab-bcbd-7cfa190c6103> , <http://data.silknow.org/event/d79688b6-e31d-305d-982f-8926e323dbcd> , <http://data.silknow.org/object/6fe048d2-24e2-3986-9fb4-050734c786f8/domain/1> , <http://data.silknow.org/object/6fe048d2-24e2-3986-9fb4-050734c786f8> , <http://data.silknow.org/event/1304406a-e30d-3cd9-b24e-a255f4008456> , <http://data.silknow.org/object/6fe048d2-24e2-3986-9fb4-050734c786f8/category/1> ;
+        dc:identifier       "960306.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/event/1304406a-e30d-3cd9-b24e-a255f4008456>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/17d403c6-6612-31a4-867e-43b42221a6ff> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Gustav Radeke" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/6fe048d2-24e2-3986-9fb4-050734c786f8> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e7e4f837-73b5-3fb5-b88e-c9d978e08f33> .

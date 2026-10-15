@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/ffe30886-4455-3dcb-a307-fdb191fb3da5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e> ;
+        ecrm:P126_employed      "filo metallico"@it ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1700_1799> .
+
+<http://data.silknow.org/image/d2a5bba7-f0a3-3b17-a610-2440eeff17c1>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/278288_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5buXVwcWVEj8UrHle7LXYB9svpoRsHS6%2fgrte8kLPKcSDU6OJCJWPTPn2HhqGxkeyuVULP5k%2bj7LgL02X7z%2b8%2fLzxFzvwKrV%2bprGPzm16ZU4MJGEgreAa9w%3d%3d> .
+
+<http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e> .
+
+<http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Raso lanciato laminato"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d2a5bba7-f0a3-3b17-a610-2440eeff17c1> ;
+        ecrm:P3_has_note               "Raso lanciato laminato"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e/dimension/1> , <http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 1164" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/278288/?WEB=MuseiVE> .
+
+<http://data.silknow.org/object/e97fed06-f29c-335f-8cf2-61114861d380>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 278288" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e/domain/1> , <http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e/observation/1> , <http://data.silknow.org/image/d2a5bba7-f0a3-3b17-a610-2440eeff17c1> , <http://data.silknow.org/event/2e7dfbea-aff0-36b8-8902-7dae3231d173> , <http://data.silknow.org/production/ffe30886-4455-3dcb-a307-fdb191fb3da5> , <http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e/category/1> , <http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e> ;
+        dc:identifier       "278288.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "10.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "10.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Raso lanciato laminato"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e> .
+
+<http://data.silknow.org/event/2e7dfbea-aff0-36b8-8902-7dae3231d173>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e> .
+
+<http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e97fed06-f29c-335f-8cf2-61114861d380> .
+
+<http://data.silknow.org/object/e6f2ba21-fe94-36ff-9a4a-e73fb46ee79e/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "34.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "34.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .

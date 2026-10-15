@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/990f77b1-4f50-3487-9255-7429f1331e12>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7e3fcfdc-dc61-37d3-93b8-497cbe2ed34e> .
+
+<http://data.silknow.org/assessment/5f221f9f-b9b5-3dce-b25c-1d7e0d590b07/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "pas de défaut d'intégrité"@fr ;
+        ecrm:P2_has_type  "Intégrité" ;
+        ecrm:P3_has_note  "pas de défaut d'intégrité"@fr .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/81d77b67-c10c-379d-8805-8d85b800a6a8> .
+
+<http://data.silknow.org/object/6dc57a75-584e-3e27-a3c2-eb358846bcb2>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.187.JPG"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/7e3fcfdc-dc61-37d3-93b8-497cbe2ed34e> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.187.JPG"@fr .
+
+<http://data.silknow.org/object/7e3fcfdc-dc61-37d3-93b8-497cbe2ed34e/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/7e3fcfdc-dc61-37d3-93b8-497cbe2ed34e> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/object/7e3fcfdc-dc61-37d3-93b8-497cbe2ed34e/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7e3fcfdc-dc61-37d3-93b8-497cbe2ed34e> ;
+        ecrm:P42_assigned    "Fleurs" .
+
+<http://data.silknow.org/event/f5bdac89-577a-3714-91d3-e9386655be6c>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7e3fcfdc-dc61-37d3-93b8-497cbe2ed34e> .
+
+<http://data.silknow.org/image/2896cb5e-129f-3e86-94d7-c2d88d928716>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.187_0.jpg> .
+
+<http://data.silknow.org/object/7e3fcfdc-dc61-37d3-93b8-497cbe2ed34e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Fleurs"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2896cb5e-129f-3e86-94d7-c2d88d928716> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/811> ;
+        dc:identifier                  "95.71.187" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/assessment/5f221f9f-b9b5-3dce-b25c-1d7e0d590b07>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/7e3fcfdc-dc61-37d3-93b8-497cbe2ed34e> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/5f221f9f-b9b5-3dce-b25c-1d7e0d590b07/condition/1> .
+
+<http://data.silknow.org/object/81d77b67-c10c-379d-8805-8d85b800a6a8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.187" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/7e3fcfdc-dc61-37d3-93b8-497cbe2ed34e/type/1> , <http://data.silknow.org/assessment/5f221f9f-b9b5-3dce-b25c-1d7e0d590b07> , <http://data.silknow.org/object/6dc57a75-584e-3e27-a3c2-eb358846bcb2> , <http://data.silknow.org/object/7e3fcfdc-dc61-37d3-93b8-497cbe2ed34e> , <http://data.silknow.org/image/2896cb5e-129f-3e86-94d7-c2d88d928716> , <http://data.silknow.org/object/7e3fcfdc-dc61-37d3-93b8-497cbe2ed34e/right> , <http://data.silknow.org/event/f5bdac89-577a-3714-91d3-e9386655be6c> , <http://data.silknow.org/production/990f77b1-4f50-3487-9255-7429f1331e12> ;
+        dc:identifier       "95.71.187.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .

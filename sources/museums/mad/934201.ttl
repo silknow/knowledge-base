@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/2e21b3d3-b687-317a-87ed-1a52b36d3a36>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Sonia Delaunay, France, 1924 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9974e47c-0f39-3ca3-b382-d69c84640614> ;
+        ecrm:P126_employed      "Broderie au passé sur fond de crêpe georgette. Soie, métal (or)."@fr ;
+        ecrm:P3_has_note        "Sonia Delaunay, France, 1924 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/15b88ef7-858f-3fc7-b3fd-d5f9953cc49e> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/2997f074-81e8-3383-a372-82db0be2e771>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934201_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/ba17e34b-d089-44c5-bdfb-652f7a49e98a.jpg> .
+
+<http://data.silknow.org/event/3559636f-d127-35cd-bbf7-085f041562c8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don de Monsieur Delaunay, en souvenir de sa mère, madame Sonia Delaunay, 1981" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9974e47c-0f39-3ca3-b382-d69c84640614> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/9974e47c-0f39-3ca3-b382-d69c84640614/category/1>
+        a                    silk:T35 ;
+        silk:L1              "échantillon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9974e47c-0f39-3ca3-b382-d69c84640614> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8f40695e-985c-3fbf-a0b0-dc83e7740f30> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/9974e47c-0f39-3ca3-b382-d69c84640614> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/9974e47c-0f39-3ca3-b382-d69c84640614>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "échantillon, Sonia Delaunay, France, 1924 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2997f074-81e8-3383-a372-82db0be2e771> ;
+        dc:identifier                  "47723.C" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934201> .
+
+<http://data.silknow.org/object/8f40695e-985c-3fbf-a0b0-dc83e7740f30>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 47723.C" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/2997f074-81e8-3383-a372-82db0be2e771> , <http://data.silknow.org/object/9974e47c-0f39-3ca3-b382-d69c84640614/category/1> , <http://data.silknow.org/production/2e21b3d3-b687-317a-87ed-1a52b36d3a36> , <http://data.silknow.org/event/3559636f-d127-35cd-bbf7-085f041562c8> , <http://data.silknow.org/object/9974e47c-0f39-3ca3-b382-d69c84640614> ;
+        dc:identifier       "934201.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

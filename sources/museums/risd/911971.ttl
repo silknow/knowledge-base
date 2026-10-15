@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/e2624cf3-84fd-3543-be5b-e678552903f3>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0e570729-f00a-3a57-b3a4-fff3ecdcc8d9> ;
+        ecrm:P126_employed      "silk; metallic yarn; metal; mirror"@en , "mirror"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/497> ;
+        ecrm:P32_used_general_technique
+                "mirrorwork"@en , "satin weave"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/88> , <http://data.silknow.org/vocabulary/87> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1809111/> .
+
+<http://data.silknow.org/event/4e96bba2-1857-3195-87b3-00eb150939f5>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0e570729-f00a-3a57-b3a4-fff3ecdcc8d9> .
+
+<https://sws.geonames.org/1809111/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/0e570729-f00a-3a57-b3a4-fff3ecdcc8d9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "banner" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0e570729-f00a-3a57-b3a4-fff3ecdcc8d9> .
+
+<http://data.silknow.org/object/0e570729-f00a-3a57-b3a4-fff3ecdcc8d9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0e570729-f00a-3a57-b3a4-fff3ecdcc8d9> .
+
+<http://data.silknow.org/object/0e570729-f00a-3a57-b3a4-fff3ecdcc8d9>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "67.471B" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/banner-67471b> .
+
+<http://data.silknow.org/object/f87d566f-68d3-36b7-8e47-0572de66f7f9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 67.471B" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0e570729-f00a-3a57-b3a4-fff3ecdcc8d9/category/1> , <http://data.silknow.org/object/0e570729-f00a-3a57-b3a4-fff3ecdcc8d9/domain/1> , <http://data.silknow.org/object/0e570729-f00a-3a57-b3a4-fff3ecdcc8d9> , <http://data.silknow.org/event/8f4dc047-b96e-3d33-966d-01e9e723c10b> , <http://data.silknow.org/production/e2624cf3-84fd-3543-be5b-e678552903f3> , <http://data.silknow.org/event/4e96bba2-1857-3195-87b3-00eb150939f5> ;
+        dc:identifier       "911971.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/d9ffb70e-f8fa-374b-b86a-e6fe2dcd9d44>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of the Lisle estate" ;
+        ecrm:P1_is_identified_by  "Gift of the Lisle estate" .
+
+<http://data.silknow.org/event/8f4dc047-b96e-3d33-966d-01e9e723c10b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/d9ffb70e-f8fa-374b-b86a-e6fe2dcd9d44> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of the Lisle estate" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0e570729-f00a-3a57-b3a4-fff3ecdcc8d9> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/f87d566f-68d3-36b7-8e47-0572de66f7f9> .

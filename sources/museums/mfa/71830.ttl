@@ -1,0 +1,94 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65> .
+
+<http://data.silknow.org/event/f7d84e13-0768-34fc-84e2-37cb4b6e6b52>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65> .
+
+<http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "75" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "75"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "The ground and the design of an ogival frame-work of stems and heart-shaped leaves enclosing a cone-like device are both of red silk."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "54" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "54"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "The ground and the design of an ogival frame-work of stems and heart-shaped leaves enclosing a cone-like device are both of red silk."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4e12d0b8-daf4-3e68-8857-de31bba77630> ;
+        ecrm:P3_has_note               "The ground and the design of an ogival frame-work of stems and heart-shaped leaves enclosing a cone-like device are both of red silk."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65/dimension/2> , <http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65/dimension/1> ;
+        dc:identifier                  "93.543" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/71830> .
+
+<http://data.silknow.org/image/4e12d0b8-daf4-3e68-8857-de31bba77630>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "901591" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/71830_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/901591/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4baa60ea-b79e-39da-ad3c-69a8e1f65130> .
+
+<http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of damask" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65> .
+
+<http://data.silknow.org/production/1dfc5049-d7ba-309d-8a40-0710f183401b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/168> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1501_1700> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/4baa60ea-b79e-39da-ad3c-69a8e1f65130>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 93.543" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65/category/1> , <http://data.silknow.org/production/1dfc5049-d7ba-309d-8a40-0710f183401b> , <http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65/domain/1> , <http://data.silknow.org/event/f7d84e13-0768-34fc-84e2-37cb4b6e6b52> , <http://data.silknow.org/image/4e12d0b8-daf4-3e68-8857-de31bba77630> , <http://data.silknow.org/object/e483691e-c1c3-3a2d-a0d2-672808476e65/observation/1> ;
+        dc:identifier       "71830.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

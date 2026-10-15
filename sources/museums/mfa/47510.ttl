@@ -1,0 +1,85 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/21da9504-79dd-3f7a-a207-b1a493d5d968>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58> ;
+        ecrm:P126_employed      "Cotton and linen print"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "67.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "67.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "77" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "77"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58> .
+
+<http://data.silknow.org/image/dd2f6e0d-1cf2-3ee1-88f9-5ab7c7446f5d>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "751879" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/47510_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/751879/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/event/c3beb342-10de-381b-9e48-f85a851d5662>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58> .
+
+<http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of printed cotton (linen warp)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e338e3a8-8890-385f-a2e2-55ac921830e8> .
+
+<http://data.silknow.org/object/e338e3a8-8890-385f-a2e2-55ac921830e8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 42.499" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/c3beb342-10de-381b-9e48-f85a851d5662> , <http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58/category/1> , <http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/dd2f6e0d-1cf2-3ee1-88f9-5ab7c7446f5d> , <http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58/domain/1> , <http://data.silknow.org/production/21da9504-79dd-3f7a-a207-b1a493d5d968> ;
+        dc:identifier       "47510.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/dd2f6e0d-1cf2-3ee1-88f9-5ab7c7446f5d> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58/dimension/2> , <http://data.silknow.org/object/611e2da0-7458-32ca-88cc-30b8ff654a58/dimension/1> ;
+        dc:identifier                  "42.499" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/47510> .

@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/b40998c8-323e-3f21-9b61-e93f2ed87630>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881> .
+
+<http://data.silknow.org/place/0fdbea3b-f22e-382e-92bf-854c11b5d3e7>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "italiana o francese" ;
+        ecrm:P87_is_identified_by  "italiana o francese" .
+
+<http://data.silknow.org/object/8ab0cad9-f572-328a-aa22-97161ae0cee2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 254799" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881/category/1> , <http://data.silknow.org/event/b40998c8-323e-3f21-9b61-e93f2ed87630> , <http://data.silknow.org/production/39a48d78-7413-3caf-b74d-5e0c5286fa52> , <http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881/domain/1> , <http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881/observation/1> , <http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881> , <http://data.silknow.org/image/3a207115-03f9-3a6d-ad7e-7123d41a22af> ;
+        dc:identifier       "254799.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/image/3a207115-03f9-3a6d-ad7e-7123d41a22af>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/254799_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5AcRMRHGQD8RcPHqOT9pOyVLpiKu%2bcPAxu9Xz33w4zS5n1PANusYCPsJXTxRwi%2b4fZUXs1x%2ftHxnlKTlSsRRSsPafMjUvbtQYP8PnGT8gYVVqeVVAAniPvw%3d%3d> .
+
+<http://data.silknow.org/production/39a48d78-7413-3caf-b74d-5e0c5286fa52>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881> ;
+        ecrm:P126_employed      "Raso da 5"@it ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1890_1920> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/0fdbea3b-f22e-382e-92bf-854c11b5d3e7> .
+
+<http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881/dimension/1>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/width> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881> .
+
+<http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Armatura di fondo in raso da 5 prodotta da un ordito di fondo in seta crema (due capi, torsione S) e una trama di fondo con variazione di colore di seta marrone e crema."@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3a207115-03f9-3a6d-ad7e-7123d41a22af> ;
+        ecrm:P3_has_note               "Armatura di fondo in raso da 5 prodotta da un ordito di fondo in seta crema (due capi, torsione S) e una trama di fondo con variazione di colore di seta marrone e crema."@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881/dimension/1> , <http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881/dimension/2> ;
+        dc:identifier                  "Cl. XXIV n. 1780" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/254799/?WEB=MuseiVE> .
+
+<http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Armatura di fondo in raso da 5 prodotta da un ordito di fondo in seta crema (due capi, torsione S) e una trama di fondo con variazione di colore di seta marrone e crema."@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8ab0cad9-f572-328a-aa22-97161ae0cee2> .
+
+<http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "31.5 alla vita" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "31.5 alla vita" ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Abito" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/48e58ebe-1869-3a01-a52f-6cb109b50881> .

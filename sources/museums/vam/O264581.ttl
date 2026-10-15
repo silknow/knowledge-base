@@ -1,0 +1,109 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/163843/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 3.25 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "8.255"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5> .
+
+<http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5> .
+
+<http://data.silknow.org/event/d233a829-b66e-30d6-96ff-0a5330bf85fa>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 6.375 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "16.1925"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Fabric of buff silk ground figured with vertical stripes of chevrons in grey-blue and red, edged with yellow."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5> .
+
+<http://data.silknow.org/image/b96edcca-6aba-3592-8e1f-81918f250d06>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018LF9458" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O264581_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018LF/2018LF9458.jpg> .
+
+<http://data.silknow.org/production/102a2434-e185-3e99-a5d5-78098aae94e4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5> ;
+        ecrm:P126_employed      "Woven silk"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/d0a3a751-2d33-3ddc-8eea-134f159dfa28> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/163843/> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/24938a17-1967-32d3-9271-2157dad09958> .
+
+<http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Fabric of woven silk, Syria, ca. 1870."@en , "Fabric of buff silk ground figured with vertical stripes of chevrons in grey-blue and red, edged with yellow."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b96edcca-6aba-3592-8e1f-81918f250d06> ;
+        ecrm:P3_has_note               "Fabric of woven silk, Syria, ca. 1870."@en , "Fabric of buff silk ground figured with vertical stripes of chevrons in grey-blue and red, edged with yellow."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/dimension/2> , <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/dimension/1> , <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/dimension/3> ;
+        dc:identifier                  "T.27-1976" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O264581> .
+
+<http://data.silknow.org/object/24938a17-1967-32d3-9271-2157dad09958>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O264581" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/observation/2> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/event/d233a829-b66e-30d6-96ff-0a5330bf85fa> , <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5> , <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/observation/1> , <http://data.silknow.org/image/b96edcca-6aba-3592-8e1f-81918f250d06> , <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/domain/1> , <http://data.silknow.org/production/102a2434-e185-3e99-a5d5-78098aae94e4> ;
+        dc:identifier       "O264581.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "stripes" ;
+        rdfs:label          "Width: 0.25 in stripes" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "stripes" ;
+        ecrm:P90_has_value  "0.635"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .
+
+<http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fabric of woven silk, Syria, ca. 1870."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a0e39ba2-8f7c-308c-bcbe-927637b2a2e5> .

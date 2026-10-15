@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/2750405/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Flemish, Brabant? Flemish, Louis XIV."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/f60b5c10-fc5a-3f12-a719-9abce210858c> ;
+        ecrm:P3_has_note               "Flemish, Brabant? Flemish, Louis XIV."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff/dimension/2> , <http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff/dimension/1> ;
+        dc:identifier                  "95.900" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/71278> .
+
+<http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff> .
+
+<http://data.silknow.org/event/621ad0eb-d4dc-376a-b0ee-9622cfe6a159>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff> .
+
+<http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "81.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "81.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Flemish, Brabant? Flemish, Louis XIV."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff> .
+
+<http://data.silknow.org/image/f60b5c10-fc5a-3f12-a719-9abce210858c>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "729731" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/71278_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/729731/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Bobbin lace" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7580bef6-27d2-3a0e-9e97-41ee01f893c1> .
+
+<http://data.silknow.org/object/7580bef6-27d2-3a0e-9e97-41ee01f893c1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.900" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/621ad0eb-d4dc-376a-b0ee-9622cfe6a159> , <http://data.silknow.org/image/f60b5c10-fc5a-3f12-a719-9abce210858c> , <http://data.silknow.org/production/675d5b67-5602-325d-96cc-783aa36efc0e> , <http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff/observation/1> , <http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff/domain/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff> , <http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff/category/1> ;
+        dc:identifier       "71278.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/production/675d5b67-5602-325d-96cc-783aa36efc0e>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/304d104d-6b9a-3711-a073-b28afe68c6ff> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2750405/> .

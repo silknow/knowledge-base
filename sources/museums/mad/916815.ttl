@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/834e926d-9159-3351-b17a-18d576be8928>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Sonia Delaunay, 1924, manufacture Ferret, Saint-Denis" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/88dd4e70-70c6-348e-b4b9-4339324e3e32> ;
+        ecrm:P126_employed      "Crêpe de Chine imprimé à la planche"@fr ;
+        ecrm:P3_has_note        "Sonia Delaunay, 1924, manufacture Ferret, Saint-Denis" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1924> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/935264/> .
+
+<http://data.silknow.org/event/0575c9c9-27a2-387c-97f2-cc3c496d1520>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Sonia Delaunay, 1966" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/88dd4e70-70c6-348e-b4b9-4339324e3e32> .
+
+<http://data.silknow.org/object/88dd4e70-70c6-348e-b4b9-4339324e3e32>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "échantillon, Sonia Delaunay, 1924, manufacture Ferret, Saint-Denis"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/cc6c063f-1dd1-3397-819a-ed148a415866> ;
+        dc:identifier                  "40401.D" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/916815> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/cc6c063f-1dd1-3397-819a-ed148a415866>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/916815_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/ad5462a1-012c-4613-9a91-6fa66ca25229.jpg> .
+
+<https://sws.geonames.org/935264/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/88dd4e70-70c6-348e-b4b9-4339324e3e32/category/1>
+        a                    silk:T35 ;
+        silk:L1              "échantillon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/88dd4e70-70c6-348e-b4b9-4339324e3e32> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7cdd0aa8-f497-37ee-a6d9-87b4ca309e4b> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/88dd4e70-70c6-348e-b4b9-4339324e3e32> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/7cdd0aa8-f497-37ee-a6d9-87b4ca309e4b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 40401.D" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/88dd4e70-70c6-348e-b4b9-4339324e3e32/category/1> , <http://data.silknow.org/image/cc6c063f-1dd1-3397-819a-ed148a415866> , <http://data.silknow.org/production/834e926d-9159-3351-b17a-18d576be8928> , <http://data.silknow.org/event/0575c9c9-27a2-387c-97f2-cc3c496d1520> , <http://data.silknow.org/object/88dd4e70-70c6-348e-b4b9-4339324e3e32> ;
+        dc:identifier       "916815.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

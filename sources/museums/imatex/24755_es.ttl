@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/63c99e5b-b65b-3877-a06b-21b2e8c1db66> .
+
+<http://data.silknow.org/object/15517f62-b8e2-3049-8599-8ffd04b180a4/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/15517f62-b8e2-3049-8599-8ffd04b180a4> .
+
+<http://data.silknow.org/image/853f0e47-0048-32f5-96fe-b09553a94c76>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000029149" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/24755_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000029149.jpg> .
+
+<http://data.silknow.org/object/15517f62-b8e2-3049-8599-8ffd04b180a4/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/15517f62-b8e2-3049-8599-8ffd04b180a4> .
+
+<http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/51698276> , <https://isni.org/isni/0000000081297491> .
+
+<http://data.silknow.org/event/28da313d-cdc3-3338-98eb-8f3c375d8107>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/15517f62-b8e2-3049-8599-8ffd04b180a4> .
+
+<http://data.silknow.org/production/976138da-466d-392b-b385-d492ad2e0fc5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/15517f62-b8e2-3049-8599-8ffd04b180a4> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> , <http://data.silknow.org/vocabulary/379> .
+
+<http://data.silknow.org/object/63c99e5b-b65b-3877-a06b-21b2e8c1db66>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 24755" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/15517f62-b8e2-3049-8599-8ffd04b180a4/domain/1> , <http://data.silknow.org/production/976138da-466d-392b-b385-d492ad2e0fc5> , <http://data.silknow.org/image/853f0e47-0048-32f5-96fe-b09553a94c76> , <http://data.silknow.org/event/28da313d-cdc3-3338-98eb-8f3c375d8107> , <http://data.silknow.org/event/6d15da86-b8eb-3e13-a286-01cc2aa10947> , <http://data.silknow.org/object/15517f62-b8e2-3049-8599-8ffd04b180a4/category/1> , <http://data.silknow.org/object/15517f62-b8e2-3049-8599-8ffd04b180a4> ;
+        dc:identifier       "24755.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/15517f62-b8e2-3049-8599-8ffd04b180a4>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/853f0e47-0048-32f5-96fe-b09553a94c76> ;
+        dc:identifier                  "4093" .
+
+<http://data.silknow.org/event/6d15da86-b8eb-3e13-a286-01cc2aa10947>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compras - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/661754c3-d2b1-3320-a6b8-707b54137698> ;
+        ecrm:P23_transferred_title_from
+                "Viñas, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/15517f62-b8e2-3049-8599-8ffd04b180a4> ;
+        ecrm:P3_has_note               "compras - Diputació de Barcelona" .

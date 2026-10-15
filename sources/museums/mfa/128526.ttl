@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/1ef76fea-21d5-395f-aea3-c74c2ec04615/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Carpet:  OrientedRug" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1ef76fea-21d5-395f-aea3-c74c2ec04615> .
+
+<http://data.silknow.org/object/1526fcaa-5fbe-3b4d-9226-78a5a93578c2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1999.103" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/1ef76fea-21d5-395f-aea3-c74c2ec04615> , <http://data.silknow.org/event/9c998c52-59a4-3158-868d-c1fc65e23ba3> , <http://data.silknow.org/collection/1b56f8d9-e308-3933-b55c-5e8ad8065047> , <http://data.silknow.org/object/1ef76fea-21d5-395f-aea3-c74c2ec04615/category/1> , <http://data.silknow.org/object/1ef76fea-21d5-395f-aea3-c74c2ec04615/domain/1> , <http://data.silknow.org/image/e23a8769-e6a0-3072-9b95-f03ddfeeee82> , <http://data.silknow.org/production/34b80aa9-313c-3e7f-aa3d-37399574b882> ;
+        dc:identifier       "128526.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/production/34b80aa9-313c-3e7f-aa3d-37399574b882>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1ef76fea-21d5-395f-aea3-c74c2ec04615> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/644> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1980> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3173435/> .
+
+<http://data.silknow.org/collection/1b56f8d9-e308-3933-b55c-5e8ad8065047>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Contemporary Art, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/1ef76fea-21d5-395f-aea3-c74c2ec04615> ;
+        ecrm:P78_is_identified_by  "Europe, Contemporary Art, Textiles and Fashion Arts" .
+
+<https://sws.geonames.org/3173435/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/9c998c52-59a4-3158-868d-c1fc65e23ba3>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/1ef76fea-21d5-395f-aea3-c74c2ec04615> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/1ef76fea-21d5-395f-aea3-c74c2ec04615>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e23a8769-e6a0-3072-9b95-f03ddfeeee82> ;
+        dc:identifier                  "1999.103" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/128526> .
+
+<http://data.silknow.org/image/e23a8769-e6a0-3072-9b95-f03ddfeeee82>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "743766" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/128526_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/743766/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/1526fcaa-5fbe-3b4d-9226-78a5a93578c2> .
+
+<http://data.silknow.org/object/1ef76fea-21d5-395f-aea3-c74c2ec04615/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1ef76fea-21d5-395f-aea3-c74c2ec04615> .

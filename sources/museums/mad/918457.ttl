@@ -1,0 +1,63 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/8f3195bf-06cb-3389-bf97-5ffdabcb409c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "antependium, 17e siècle"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/06b074e7-f3ad-3213-90b7-263396611334> ;
+        dc:identifier                  "CLUNY 2328.A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/918457> .
+
+<http://data.silknow.org/event/2c4aabc5-200c-3a8a-b461-6ef6fbe1b374>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Dépôt musée de Cluny" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/8f3195bf-06cb-3389-bf97-5ffdabcb409c> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/06b074e7-f3ad-3213-90b7-263396611334>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/918457_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/07d3c1e2-dbc1-4e62-b516-e0a3b8f23ebd.jpg> .
+
+<http://data.silknow.org/object/8f3195bf-06cb-3389-bf97-5ffdabcb409c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "antependium" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/8f3195bf-06cb-3389-bf97-5ffdabcb409c> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4591f8d0-94fb-3c0d-9de8-170c816f8eea> .
+
+<http://data.silknow.org/production/cd9cd7c7-48cf-33f5-8ceb-dd880e94a32b>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "17e siècle" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/8f3195bf-06cb-3389-bf97-5ffdabcb409c> ;
+        ecrm:P126_employed      "Mentionné \"tapisserie au point\" sur l'inventaire du musée national du Moyen Age - hôtel et thermes de Cluny (RL12/02/2007)."@fr ;
+        ecrm:P3_has_note        "17e siècle" ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/8f3195bf-06cb-3389-bf97-5ffdabcb409c> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/4591f8d0-94fb-3c0d-9de8-170c816f8eea>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CLUNY 2328.A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/2c4aabc5-200c-3a8a-b461-6ef6fbe1b374> , <http://data.silknow.org/image/06b074e7-f3ad-3213-90b7-263396611334> , <http://data.silknow.org/object/8f3195bf-06cb-3389-bf97-5ffdabcb409c/category/1> , <http://data.silknow.org/production/cd9cd7c7-48cf-33f5-8ceb-dd880e94a32b> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/8f3195bf-06cb-3389-bf97-5ffdabcb409c> ;
+        dc:identifier       "918457.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/0da6ee96-2b97-3c60-bff7-a1ffa4f6166d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce> .
+
+<http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Man on horseback carrying a quiver, about to hurl a spear at a crouching lion. Large-scale parrot, stripes, fantastic foliage and architectural forms. Fabric was originally entirely faced with metallic threads, gold and silver."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce> .
+
+<http://data.silknow.org/image/2a25a2c4-d884-3ab1-b318-1c1bf67774dc>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1902-1-443-a_c_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-11626_01-000001> .
+
+<http://data.silknow.org/actor/8cf7c822-935f-32c1-a6fd-c8e2dcb3bb51>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of John Pierpont Morgan" ;
+        ecrm:P1_is_identified_by  "Gift of John Pierpont Morgan" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/J._P._Morgan> , <https://viaf.org/viaf/57410770> , <https://isni.org/isni/000000008385399X> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/J._P._Morgan> .
+
+<http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce> .
+
+<http://data.silknow.org/event/4e7b9255-b16d-3b12-80cd-27de9333b319>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/8cf7c822-935f-32c1-a6fd-c8e2dcb3bb51> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Gift of John Pierpont Morgan" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce> .
+
+<http://data.silknow.org/object/4a2cbb07-dd8d-3b8f-933d-3ca6c5c2f3ba>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1902-1-443-a_c" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/a317fb87-9b48-3be3-958b-5313cf888e68> , <http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce> , <http://data.silknow.org/event/4e7b9255-b16d-3b12-80cd-27de9333b319> , <http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce/category/1> , <http://data.silknow.org/event/0da6ee96-2b97-3c60-bff7-a1ffa4f6166d> , <http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce/observation/1> , <http://data.silknow.org/image/2a25a2c4-d884-3ab1-b318-1c1bf67774dc> , <http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce/domain/1> ;
+        dc:identifier       "chndm_1902-1-443-a_c.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Man on horseback carrying a quiver, about to hurl a spear at a crouching lion. Large-scale parrot, stripes, fantastic foliage and architectural forms. Fabric was originally entirely faced with metallic threads, gold and silver."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/2a25a2c4-d884-3ab1-b318-1c1bf67774dc> ;
+        ecrm:P3_has_note               "Man on horseback carrying a quiver, about to hurl a spear at a crouching lion. Large-scale parrot, stripes, fantastic foliage and architectural forms. Fabric was originally entirely faced with metallic threads, gold and silver."@en ;
+        dc:identifier                  "chndm_1902-1-443-a_c" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1902-1-443-a_c> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4a2cbb07-dd8d-3b8f-933d-3ca6c5c2f3ba> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce> .
+
+<http://data.silknow.org/production/a317fb87-9b48-3be3-958b-5313cf888e68>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0e6cecdd-7e67-36af-b652-e4dab49af2ce> ;
+        ecrm:P126_employed      "metallic"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "7&1 satin patterned by weft floats"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1676_1700> .

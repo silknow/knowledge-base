@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/ac2132f0-1d6d-3a7d-af22-8ae1df6b7fa8>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Design Laboratory, the Brooklyn Museum" ;
+        ecrm:P1_is_identified_by  "Gift of Design Laboratory, the Brooklyn Museum" .
+
+<http://data.silknow.org/image/13a46d6b-7489-3114-8818-9f3e64c1f66f>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/799091_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/13944.jpg> .
+
+<http://data.silknow.org/object/891a93c5-10de-3370-95fd-339f83c635fa>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/13a46d6b-7489-3114-8818-9f3e64c1f66f> ;
+        dc:identifier                  "61.095.22A" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-6109522a> .
+
+<http://data.silknow.org/event/c6548321-e6bd-3f5f-8dee-7d24e8907947>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/891a93c5-10de-3370-95fd-339f83c635fa> .
+
+<http://data.silknow.org/object/891a93c5-10de-3370-95fd-339f83c635fa/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/891a93c5-10de-3370-95fd-339f83c635fa> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/de0a31f3-9c63-37a2-8929-be9447d5a098>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 61.095.22A" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/891a93c5-10de-3370-95fd-339f83c635fa/domain/1> , <http://data.silknow.org/event/db36d2e7-af04-34a9-a294-6c39532957bf> , <http://data.silknow.org/image/13a46d6b-7489-3114-8818-9f3e64c1f66f> , <http://data.silknow.org/object/891a93c5-10de-3370-95fd-339f83c635fa/category/1> , <http://data.silknow.org/production/84edcab5-6339-33ee-b65b-2ec2da4b0bb3> , <http://data.silknow.org/event/c6548321-e6bd-3f5f-8dee-7d24e8907947> , <http://data.silknow.org/object/891a93c5-10de-3370-95fd-339f83c635fa> ;
+        dc:identifier       "799091.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/de0a31f3-9c63-37a2-8929-be9447d5a098> .
+
+<http://data.silknow.org/object/891a93c5-10de-3370-95fd-339f83c635fa/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/891a93c5-10de-3370-95fd-339f83c635fa> .
+
+<http://data.silknow.org/event/db36d2e7-af04-34a9-a294-6c39532957bf>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/ac2132f0-1d6d-3a7d-af22-8ae1df6b7fa8> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Design Laboratory, the Brooklyn Museum" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/891a93c5-10de-3370-95fd-339f83c635fa> .
+
+<http://data.silknow.org/production/84edcab5-6339-33ee-b65b-2ec2da4b0bb3>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/891a93c5-10de-3370-95fd-339f83c635fa> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1726_1775> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .

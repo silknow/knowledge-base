@@ -1,0 +1,160 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/be4bfd9a-5350-3f51-ab16-3580b3f30c9e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Miss M. Brown" ;
+        ecrm:P1_is_identified_by  "Given by Miss M. Brown" .
+
+<http://data.silknow.org/production/3ddad569-394f-33fa-a57d-bff5d5eece15/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/2263ddda-dcdb-34af-870a-23389a837b26> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/9c9fd149-fcfa-38fa-a319-44589002dd67>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AT7501" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O70333_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AT/2006AT7501.jpg> .
+
+<http://data.silknow.org/image/ba6e3d34-8bdd-346d-99f2-6e6837623a73>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2006AP0184" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O70333_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2006AP/2006AP0184.jpg> .
+
+<http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Linen sampler by Hannah Haynes, embroidered with silk; English; second quarter 18th century."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777> .
+
+<http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Height: 20.3 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "20.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/73358152-301a-324e-bc91-4377666cfedd>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/be4bfd9a-5350-3f51-ab16-3580b3f30c9e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Miss M. Brown" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/production/3ddad569-394f-33fa-a57d-bff5d5eece15>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777> ;
+        ecrm:P126_employed      "Linen, embroidered with silk"@en , "linen"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/88> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1725_1750> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/3ddad569-394f-33fa-a57d-bff5d5eece15/activity/1> .
+
+<http://data.silknow.org/image/41c93f81-4f07-3e97-836f-46f25cf7dc8a>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2013GA7172" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O70333_3.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2013GA/2013GA7172.jpg> .
+
+<http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/54> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777> .
+
+<http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Linen sampler by Hannah Haynes, embroidered with silk; English; second quarter 18th century."@en , "Linen, embroidered with silk in back, cross, satin and rococo stitch, with cutwork and hollie stitch, and with knots."@en , "In England and elsewhere in Europe in the 17th century, samplers had developed from personal reference works for embroiderers into a method of instruction and practice for girls learning needlework. The central area of this sampler was worked in a needle lace stitch called hollie point, most examples of which date from the second quarter of the 18th century. Hollie point was a practical stitch to learn, used particularly for decorative insertions into baby clothes and occasionally adult garments, and exact counterparts of the patterns worked in hollie-point samplers can be found in surviving clothing.\n\nThe embroidery is worked with silk in back, cross, satin and rococo stitch, with cutwork and hollie stitch, and with knots."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ba6e3d34-8bdd-346d-99f2-6e6837623a73> , <http://data.silknow.org/image/9c9fd149-fcfa-38fa-a319-44589002dd67> , <http://data.silknow.org/image/4549b6c4-409d-36ea-9504-51e419cec3cd> , <http://data.silknow.org/image/41c93f81-4f07-3e97-836f-46f25cf7dc8a> , <http://data.silknow.org/image/88e26b26-5aba-3ec5-a0e2-1f8b0f3d1ac5> ;
+        ecrm:P3_has_note               "Linen, embroidered with silk in back, cross, satin and rococo stitch, with cutwork and hollie stitch, and with knots."@en , "Linen sampler by Hannah Haynes, embroidered with silk; English; second quarter 18th century."@en , "In England and elsewhere in Europe in the 17th century, samplers had developed from personal reference works for embroiderers into a method of instruction and practice for girls learning needlework. The central area of this sampler was worked in a needle lace stitch called hollie point, most examples of which date from the second quarter of the 18th century. Hollie point was a practical stitch to learn, used particularly for decorative insertions into baby clothes and occasionally adult garments, and exact counterparts of the patterns worked in hollie-point samplers can be found in surviving clothing.\n\nThe embroidery is worked with silk in back, cross, satin and rococo stitch, with cutwork and hollie stitch, and with knots."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/dimension/2> , <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/dimension/1> ;
+        dc:identifier                  "T.22-1944" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O70333> .
+
+<http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "In England and elsewhere in Europe in the 17th century, samplers had developed from personal reference works for embroiderers into a method of instruction and practice for girls learning needlework. The central area of this sampler was worked in a needle lace stitch called hollie point, most examples of which date from the second quarter of the 18th century. Hollie point was a practical stitch to learn, used particularly for decorative insertions into baby clothes and occasionally adult garments, and exact counterparts of the patterns worked in hollie-point samplers can be found in surviving clothing.\n\nThe embroidery is worked with silk in back, cross, satin and rococo stitch, with cutwork and hollie stitch, and with knots."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777> .
+
+<http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 20.3 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "20.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/88e26b26-5aba-3ec5-a0e2-1f8b0f3d1ac5>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2011ER8472" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O70333_2.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2011ER/2011ER8472.jpg> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e1671d38-895e-3f45-a266-9e3339f6a532> .
+
+<http://data.silknow.org/image/4549b6c4-409d-36ea-9504-51e419cec3cd>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2018KW7504" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O70333_4.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2018KW/2018KW7504.jpg> .
+
+<http://data.silknow.org/object/0b0f7438-5ec7-3c0d-9035-e1625eba6eeb>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Browne, Clare and Jennifer Wearden, eds. <font u>Samplers from the Victoria and Albert Museum</font u>. London : V&A Publications, 1999. 144 p., ill. ISBN 1851773096."@en ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Browne, Clare and Jennifer Wearden, eds. <font u>Samplers from the Victoria and Albert Museum</font u>. London : V&A Publications, 1999. 144 p., ill. ISBN 1851773096."@en .
+
+<http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Linen, embroidered with silk in back, cross, satin and rococo stitch, with cutwork and hollie stitch, and with knots."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777> .
+
+<http://data.silknow.org/object/e1671d38-895e-3f45-a266-9e3339f6a532>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O70333" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/observation/2> , <http://data.silknow.org/object/0b0f7438-5ec7-3c0d-9035-e1625eba6eeb> , <http://data.silknow.org/event/73358152-301a-324e-bc91-4377666cfedd> , <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/observation/3> , <http://data.silknow.org/image/41c93f81-4f07-3e97-836f-46f25cf7dc8a> , <http://data.silknow.org/image/88e26b26-5aba-3ec5-a0e2-1f8b0f3d1ac5> , <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/observation/1> , <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777> , <http://data.silknow.org/production/3ddad569-394f-33fa-a57d-bff5d5eece15> , <http://data.silknow.org/image/9c9fd149-fcfa-38fa-a319-44589002dd67> , <http://data.silknow.org/image/4549b6c4-409d-36ea-9504-51e419cec3cd> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/domain/1> , <http://data.silknow.org/image/ba6e3d34-8bdd-346d-99f2-6e6837623a73> , <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/domain/2> ;
+        dc:identifier       "O70333.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777> .
+
+<http://data.silknow.org/actor/2263ddda-dcdb-34af-870a-23389a837b26>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Haynes, Hannah" ;
+        ecrm:P1_is_identified_by  "Haynes, Hannah" .
+
+<http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Sampler" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/0ad15a49-2b6e-375a-8acb-30cdafedf777> .

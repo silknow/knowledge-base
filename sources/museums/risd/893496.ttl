@@ -1,0 +1,100 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "88.9" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "88.9"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/cfe43389-ee63-3931-9818-71e01f58f633>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078> ;
+        ecrm:P126_employed      "Silk and metallic thread; jacquard weave"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/3715027c-aac1-3498-abe4-23974c89b573> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Length with Pacific Islands Motifs" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078> .
+
+<http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078> .
+
+<http://data.silknow.org/event/3ca13022-a659-3356-81af-43b598a5f22b>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078> .
+
+<http://data.silknow.org/event/66b38e3a-4a67-348e-8960-2d7f8b3bf19f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/6448874d-f16d-303f-945e-39286c2be756> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of L. J. Cella" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078> .
+
+<http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e8fb9294-9dd8-3c3e-b2eb-af6c9969b62c> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078/dimension/2> , <http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078/dimension/1> ;
+        dc:identifier                  "1991.123.53" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/length-pacific-islands-motifs-199112353> .
+
+<http://data.silknow.org/object/faba9080-9dfa-3e3d-a771-516b864f49c5>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "From Paris to Providence" , "January 12 - April 8, 2001" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "From Paris to Providence" , "January 12 - April 8, 2001" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/paris-providence> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/627fa269-0e43-3492-99dc-4443b0846b39> .
+
+<http://data.silknow.org/object/627fa269-0e43-3492-99dc-4443b0846b39>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1991.123.53" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/e8fb9294-9dd8-3c3e-b2eb-af6c9969b62c> , <http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078> , <http://data.silknow.org/object/faba9080-9dfa-3e3d-a771-516b864f49c5> , <http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078/category/1> , <http://data.silknow.org/event/66b38e3a-4a67-348e-8960-2d7f8b3bf19f> , <http://data.silknow.org/event/3ca13022-a659-3356-81af-43b598a5f22b> , <http://data.silknow.org/production/cfe43389-ee63-3931-9818-71e01f58f633> , <http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078/domain/1> ;
+        dc:identifier       "893496.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/image/e8fb9294-9dd8-3c3e-b2eb-af6c9969b62c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/893496_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/28380.jpg> .
+
+<http://data.silknow.org/object/f369d3fa-0ee3-346c-80e6-25ef5ecad078/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "274.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "274.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/6448874d-f16d-303f-945e-39286c2be756>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of L. J. Cella" ;
+        ecrm:P1_is_identified_by  "Gift of L. J. Cella" .

@@ -1,0 +1,72 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/0a6eb781-c3e4-36e6-93e7-60cda50657b5>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "floral"@en ;
+        ecrm:P3_has_note  "floral"@en .
+
+<http://data.silknow.org/image/3aa486cc-92ec-39f6-89ec-aea6085feba7>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "sprigs"@en ;
+        ecrm:P3_has_note  "sprigs"@en .
+
+<http://data.silknow.org/object/fb323610-1760-3941-b1cf-b1ea64738137/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/fb323610-1760-3941-b1cf-b1ea64738137> .
+
+<http://data.silknow.org/production/e25d0b33-b3e6-3cb3-8eaa-cde384d10540>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/fb323610-1760-3941-b1cf-b1ea64738137> ;
+        ecrm:P126_employed      "silk (textile)"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/192> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/fd890a0a-1363-3200-854d-69d916a489aa>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O89678" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/e25d0b33-b3e6-3cb3-8eaa-cde384d10540> , <http://data.silknow.org/image/82f96b72-bc6b-391f-919e-36c9be1a5b21> , <http://data.silknow.org/event/b0b29e8e-9134-3b9c-b833-05996033e3ac> , <http://data.silknow.org/object/fb323610-1760-3941-b1cf-b1ea64738137/domain/1> , <http://data.silknow.org/object/fb323610-1760-3941-b1cf-b1ea64738137> ;
+        dc:identifier       "O89678.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/image/4110d837-5270-3b6a-8042-9703dcdec29d>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "strips"@en ;
+        ecrm:P3_has_note  "strips"@en .
+
+<http://data.silknow.org/object/fb323610-1760-3941-b1cf-b1ea64738137>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/82f96b72-bc6b-391f-919e-36c9be1a5b21> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/4110d837-5270-3b6a-8042-9703dcdec29d> , <http://data.silknow.org/image/3aa486cc-92ec-39f6-89ec-aea6085feba7> , <http://data.silknow.org/image/0a6eb781-c3e4-36e6-93e7-60cda50657b5> ;
+        dc:identifier                  "T.141-1986" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O89678> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/fd890a0a-1363-3200-854d-69d916a489aa> .
+
+<http://data.silknow.org/image/82f96b72-bc6b-391f-919e-36c9be1a5b21>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MU4924" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O89678_0.jpg> , <https://framemark.vam.ac.uk/collections/2020MU4924/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/event/b0b29e8e-9134-3b9c-b833-05996033e3ac>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/fb323610-1760-3941-b1cf-b1ea64738137> .

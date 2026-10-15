@@ -1,0 +1,60 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/b086d0df-ae75-346c-b394-2f3f537413f5>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Vve Jq Jérosme et Fils Aîné (transcription), Amiens"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/fa24c23e-fdcc-3c34-9ab2-8ad8f9041e53> ;
+        dc:identifier                  "21511" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934280> .
+
+<http://data.silknow.org/image/fa24c23e-fdcc-3c34-9ab2-8ad8f9041e53>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934280_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/fc7b7894-644e-45f5-8edf-0d474096ae27.jpg> .
+
+<http://data.silknow.org/production/cf91cad0-2f04-3453-8313-0c023a763a2d>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Vve Jq Jérosme et Fils Aîné (transcription), Amiens" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b086d0df-ae75-346c-b394-2f3f537413f5> ;
+        ecrm:P126_employed      "Velours de coton imprimé, à motifs géométriques."@fr ;
+        ecrm:P3_has_note        "Vve Jq Jérosme et Fils Aîné (transcription), Amiens" ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3037854/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/83588d68-c5ec-3e79-a592-2efa89f4fa6a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b086d0df-ae75-346c-b394-2f3f537413f5> .
+
+<http://data.silknow.org/object/45cffe5e-263d-36d9-9707-730e3756e707>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 21511" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/cf91cad0-2f04-3453-8313-0c023a763a2d> , <http://data.silknow.org/event/83588d68-c5ec-3e79-a592-2efa89f4fa6a> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/image/fa24c23e-fdcc-3c34-9ab2-8ad8f9041e53> , <http://data.silknow.org/object/b086d0df-ae75-346c-b394-2f3f537413f5> ;
+        dc:identifier       "934280.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<https://sws.geonames.org/3037854/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/45cffe5e-263d-36d9-9707-730e3756e707> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/b086d0df-ae75-346c-b394-2f3f537413f5> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .

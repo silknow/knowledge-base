@@ -1,0 +1,96 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/aa958c01-d693-36b6-b17e-f8d274eea4ca>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Harry Angelo Co" ;
+        ecrm:P1_is_identified_by  "Harry Angelo Co" .
+
+<http://data.silknow.org/image/c6f6c126-fc6c-3b53-aba2-70cf3994a781>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/939426_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/26628.jpg> .
+
+<http://data.silknow.org/event/b9dde358-2934-32d5-88a3-dd31db33eff4>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/299ff4f8-8714-3916-b17a-8802b4224e26> .
+
+<http://data.silknow.org/object/299ff4f8-8714-3916-b17a-8802b4224e26/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/299ff4f8-8714-3916-b17a-8802b4224e26> .
+
+<http://data.silknow.org/object/299ff4f8-8714-3916-b17a-8802b4224e26/category/1>
+        a                    silk:T35 ;
+        silk:L1              "\"Robe\"" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/299ff4f8-8714-3916-b17a-8802b4224e26> .
+
+<http://data.silknow.org/event/8353a77d-ae7c-301e-9fa4-6625b3148e78>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/44f363ac-597d-3ba6-adcb-7e05cde91318> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of L. J. Cella III" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/299ff4f8-8714-3916-b17a-8802b4224e26> .
+
+<http://data.silknow.org/actor/44f363ac-597d-3ba6-adcb-7e05cde91318>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of L. J. Cella III" ;
+        ecrm:P1_is_identified_by  "Gift of L. J. Cella III" .
+
+<http://data.silknow.org/object/faba9080-9dfa-3e3d-a771-516b864f49c5>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "From Paris to Providence" , "January 12 - April 8, 2001" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/299ff4f8-8714-3916-b17a-8802b4224e26> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "From Paris to Providence" , "January 12 - April 8, 2001" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/paris-providence> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/299ff4f8-8714-3916-b17a-8802b4224e26>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c6f6c126-fc6c-3b53-aba2-70cf3994a781> ;
+        dc:identifier                  "1990.129.37" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/robe-199012937> .
+
+<http://data.silknow.org/production/76439c14-0d5c-39d7-9cc2-a20089f5cd73>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/299ff4f8-8714-3916-b17a-8802b4224e26> ;
+        ecrm:P126_employed      "Silk; appliquéd and embroidered"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1929> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/76439c14-0d5c-39d7-9cc2-a20089f5cd73/activity/1> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/583f2c4c-58ce-310d-b79e-0613b8c48d63> .
+
+<http://data.silknow.org/production/76439c14-0d5c-39d7-9cc2-a20089f5cd73/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/aa958c01-d693-36b6-b17e-f8d274eea4ca> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/583f2c4c-58ce-310d-b79e-0613b8c48d63>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1990.129.37" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/8353a77d-ae7c-301e-9fa4-6625b3148e78> , <http://data.silknow.org/object/299ff4f8-8714-3916-b17a-8802b4224e26/domain/1> , <http://data.silknow.org/object/299ff4f8-8714-3916-b17a-8802b4224e26/category/1> , <http://data.silknow.org/production/76439c14-0d5c-39d7-9cc2-a20089f5cd73> , <http://data.silknow.org/object/faba9080-9dfa-3e3d-a771-516b864f49c5> , <http://data.silknow.org/image/c6f6c126-fc6c-3b53-aba2-70cf3994a781> , <http://data.silknow.org/object/299ff4f8-8714-3916-b17a-8802b4224e26> , <http://data.silknow.org/event/b9dde358-2934-32d5-88a3-dd31db33eff4> ;
+        dc:identifier       "939426.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

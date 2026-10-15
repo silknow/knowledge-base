@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/46fc52de-8be9-39bf-a4fe-8fe1e517a0d3>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b95d4729-4a40-3eee-b246-a00a29a9c4c1> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1825> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/b95d4729-4a40-3eee-b246-a00a29a9c4c1/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b95d4729-4a40-3eee-b246-a00a29a9c4c1> .
+
+<http://data.silknow.org/object/b95d4729-4a40-3eee-b246-a00a29a9c4c1/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Printed cotton textile" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b95d4729-4a40-3eee-b246-a00a29a9c4c1> .
+
+<http://data.silknow.org/event/475df584-761b-3b5f-b5a2-f1773bbc3166>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b95d4729-4a40-3eee-b246-a00a29a9c4c1> .
+
+<http://data.silknow.org/object/c705468e-27bc-3988-9492-5c8e7f929130>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 35.1664" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/e76ce1df-3e7c-3c73-8e51-7a17d126a8c9> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/production/46fc52de-8be9-39bf-a4fe-8fe1e517a0d3> , <http://data.silknow.org/object/b95d4729-4a40-3eee-b246-a00a29a9c4c1/domain/1> , <http://data.silknow.org/object/b95d4729-4a40-3eee-b246-a00a29a9c4c1> , <http://data.silknow.org/event/475df584-761b-3b5f-b5a2-f1773bbc3166> , <http://data.silknow.org/object/b95d4729-4a40-3eee-b246-a00a29a9c4c1/category/1> ;
+        dc:identifier       "46057.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/b95d4729-4a40-3eee-b246-a00a29a9c4c1> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/image/e76ce1df-3e7c-3c73-8e51-7a17d126a8c9>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "708955" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/46057_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/708955/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/c705468e-27bc-3988-9492-5c8e7f929130> .
+
+<http://data.silknow.org/object/b95d4729-4a40-3eee-b246-a00a29a9c4c1>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e76ce1df-3e7c-3c73-8e51-7a17d126a8c9> ;
+        dc:identifier                  "35.1664" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/46057> .

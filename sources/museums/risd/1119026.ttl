@@ -1,0 +1,83 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/image/c19d5241-34f4-3de5-9077-ee04d142a61c>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1119026_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/163933.jpg> .
+
+<http://data.silknow.org/object/a74bbbef-f82d-3142-aef0-3aba1a53855d/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/2> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a74bbbef-f82d-3142-aef0-3aba1a53855d> .
+
+<http://data.silknow.org/production/845f6983-38a0-3344-96d3-6187e5ecd5b2>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a74bbbef-f82d-3142-aef0-3aba1a53855d> ;
+        ecrm:P126_employed      "Designs of sequins on silk chiffon."@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1940_1970> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/845f6983-38a0-3344-96d3-6187e5ecd5b2/activity/1> .
+
+<http://data.silknow.org/actor/17564f44-9a33-3708-87d2-8b3e73ebd0d9>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Miss Anea (pseudonym of Anea Tonnegotti)" ;
+        ecrm:P1_is_identified_by  "Miss Anea (pseudonym of Anea Tonnegotti)" .
+
+<http://data.silknow.org/event/50e8e206-716a-3e21-9e03-5ab04926dd8f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/a74bbbef-f82d-3142-aef0-3aba1a53855d> .
+
+<http://data.silknow.org/object/a74bbbef-f82d-3142-aef0-3aba1a53855d/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a74bbbef-f82d-3142-aef0-3aba1a53855d> .
+
+<http://data.silknow.org/object/48ddfb8f-0ba2-3a4c-b4e9-6464c57691a7>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2008.73.226" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a74bbbef-f82d-3142-aef0-3aba1a53855d> , <http://data.silknow.org/image/c19d5241-34f4-3de5-9077-ee04d142a61c> , <http://data.silknow.org/object/a74bbbef-f82d-3142-aef0-3aba1a53855d/domain/1> , <http://data.silknow.org/event/50e8e206-716a-3e21-9e03-5ab04926dd8f> , <http://data.silknow.org/production/845f6983-38a0-3344-96d3-6187e5ecd5b2> , <http://data.silknow.org/object/a74bbbef-f82d-3142-aef0-3aba1a53855d/category/1> , <http://data.silknow.org/event/d4e9289e-2408-3c28-8556-d62030b49108> ;
+        dc:identifier       "1119026.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/production/845f6983-38a0-3344-96d3-6187e5ecd5b2/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/17564f44-9a33-3708-87d2-8b3e73ebd0d9> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/event/d4e9289e-2408-3c28-8556-d62030b49108>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/37454670-09c7-33c6-8d00-b39e3d4200ba> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Hope Grayson and John Simon" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/a74bbbef-f82d-3142-aef0-3aba1a53855d> .
+
+<http://data.silknow.org/object/a74bbbef-f82d-3142-aef0-3aba1a53855d>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c19d5241-34f4-3de5-9077-ee04d142a61c> ;
+        dc:identifier                  "2008.73.226" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/embroidery-sample-200873226> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/48ddfb8f-0ba2-3a4c-b4e9-6464c57691a7> .
+
+<http://data.silknow.org/actor/37454670-09c7-33c6-8d00-b39e3d4200ba>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Hope Grayson and John Simon" ;
+        ecrm:P1_is_identified_by  "Gift of Hope Grayson and John Simon" .

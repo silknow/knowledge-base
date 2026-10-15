@@ -1,0 +1,106 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/63cf6ee2-0585-3bec-8f06-11be5204ebe8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/47b2c824-4e96-3aab-b5f8-d117cfe2f52e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "Miss Ellen A. Stone; Gift to the MFA, June, 1901 / Gift of Miss Ellen A. Stone" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63> .
+
+<http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "64.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "64.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/a9523424-5f8b-3a14-98d9-85b780740d1c>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63> .
+
+<http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Floral stripe pattern with brown, drab yellow, and white roses and poppies with green leaves, ground pattern with brown leaves in leafy trellis; two pieces sewn together"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63> .
+
+<http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/17> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63> .
+
+<http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Floral stripe pattern with brown, drab yellow, and white roses and poppies with green leaves, ground pattern with brown leaves in leafy trellis; two pieces sewn together"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/032b0e90-effe-3723-a25f-a2ec6fc6f423> ;
+        ecrm:P3_has_note               "Floral stripe pattern with brown, drab yellow, and white roses and poppies with green leaves, ground pattern with brown leaves in leafy trellis; two pieces sewn together"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63/dimension/2> , <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63/dimension/1> ;
+        dc:identifier                  "01.6211" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/73851> .
+
+<http://data.silknow.org/actor/47b2c824-4e96-3aab-b5f8-d117cfe2f52e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Miss Ellen A. Stone; Gift to the MFA, June / Gift of Miss Ellen A. Stone" ;
+        ecrm:P1_is_identified_by  "Miss Ellen A. Stone; Gift to the MFA, June / Gift of Miss Ellen A. Stone" .
+
+<http://data.silknow.org/production/f11816ec-199a-310f-8a19-dbe96d6bef0a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63> ;
+        ecrm:P126_employed      "Block-printed cotton plain weave, overprinted or penciled blue"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1820_1829> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63> .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/94ea01b2-0afd-3338-a9c6-066812512197> .
+
+<http://data.silknow.org/image/032b0e90-effe-3723-a25f-a2ec6fc6f423>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "733022" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/73851_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/733022/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "31" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "31"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/94ea01b2-0afd-3338-a9c6-066812512197>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 01.6211" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63/domain/1> , <http://data.silknow.org/event/63cf6ee2-0585-3bec-8f06-11be5204ebe8> , <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63/observation/1> , <http://data.silknow.org/event/a9523424-5f8b-3a14-98d9-85b780740d1c> , <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63/category/1> , <http://data.silknow.org/production/f11816ec-199a-310f-8a19-dbe96d6bef0a> , <http://data.silknow.org/object/625400af-9ca9-366a-8414-5d812b51ec63> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/image/032b0e90-effe-3723-a25f-a2ec6fc6f423> ;
+        dc:identifier       "73851.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

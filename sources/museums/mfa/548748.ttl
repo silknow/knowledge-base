@@ -1,0 +1,106 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Garlands, flowers and photographic images celebrating VE Day (March 8, 1945); white ground."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316> .
+
+<http://data.silknow.org/event/7042e194-fbab-3511-b7b6-02efe1a6d14c>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316> .
+
+<http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "87.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "87.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "85" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "85"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/3f07ff57-2b52-3492-b86c-e87bff43d98b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1945> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/image/ff3d8798-3652-3e4b-abc0-0ddd11a5ab63>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "1165686" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/548748_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/1165686/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/object/089a45b1-57ae-30b7-be2d-8b2bdeac4814>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2011.2415" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316/category/1> , <http://data.silknow.org/image/ff3d8798-3652-3e4b-abc0-0ddd11a5ab63> , <http://data.silknow.org/event/7042e194-fbab-3511-b7b6-02efe1a6d14c> , <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316/domain/1> , <http://data.silknow.org/event/cfe3e77d-4600-3e86-96db-9e5d15326b1a> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316/observation/1> , <http://data.silknow.org/production/3f07ff57-2b52-3492-b86c-e87bff43d98b> , <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316> ;
+        dc:identifier       "548748.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/b3c8bdc6-60e8-3f7d-9ac0-000f3d4af5d7>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "By 2011, with Chris Saunders of Sotherans, London; 2011, sold by Saunders to Jean and Frederic Sharf, Chestnut Hill, MA; 2011, year-end gift of the Sharfs to the MFA. (Accession date: January 25) / Gift of Jean S. and Frederic A. Sharf" ;
+        ecrm:P1_is_identified_by  "By 2011, with Chris Saunders of Sotherans, London; 2011, sold by Saunders to Jean and Frederic Sharf, Chestnut Hill, MA; 2011, year-end gift of the Sharfs to the MFA. (Accession date: January 25) / Gift of Jean S. and Frederic A. Sharf" .
+
+<http://data.silknow.org/event/cfe3e77d-4600-3e86-96db-9e5d15326b1a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/b3c8bdc6-60e8-3f7d-9ac0-000f3d4af5d7> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "By 2011, with Chris Saunders of Sotherans, London; 2011, sold by Saunders to Jean and Frederic Sharf, Chestnut Hill, MA; 2011, year-end gift of the Sharfs to the MFA. (Accession date: January 25, 2012) / Gift of Jean S. and Frederic A. Sharf" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316> .
+
+<http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Woman's scarf: VE Day" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/089a45b1-57ae-30b7-be2d-8b2bdeac4814> .
+
+<http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Garlands, flowers and photographic images celebrating VE Day (March 8, 1945); white ground."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ff3d8798-3652-3e4b-abc0-0ddd11a5ab63> ;
+        ecrm:P3_has_note               "Garlands, flowers and photographic images celebrating VE Day (March 8, 1945); white ground."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316/dimension/2> , <http://data.silknow.org/object/3e324d06-9674-3e83-926f-cd6996450316/dimension/1> ;
+        dc:identifier                  "2011.2415" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/548748> .

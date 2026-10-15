@@ -1,0 +1,79 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/96194536-a409-3310-b0ed-630079df5474> .
+
+<http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b> .
+
+<http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b> .
+
+<http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- conserva els 2 voravius"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b> .
+
+<http://data.silknow.org/image/46af1b6e-e179-398d-a61d-f378d462c1da>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035669" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29805_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000035669.jpg> .
+
+<http://data.silknow.org/event/fbcadf7d-c111-328a-b7d8-a428c320f601>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b> .
+
+<http://data.silknow.org/event/d6ce6194-3edc-35eb-9845-6f6dcbbab442>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "conserva els 2 voravius"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/46af1b6e-e179-398d-a61d-f378d462c1da> ;
+        ecrm:P3_has_note               "conserva els 2 voravius"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/e92f096f-a383-3968-ab1c-aaad319abda0> ;
+        dc:identifier                  "22089" .
+
+<http://data.silknow.org/object/96194536-a409-3310-b0ed-630079df5474>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29805" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/d6ce6194-3edc-35eb-9845-6f6dcbbab442> , <http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b/category/1> , <http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b> , <http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b/observation/1> , <http://data.silknow.org/image/46af1b6e-e179-398d-a61d-f378d462c1da> , <http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b/domain/1> , <http://data.silknow.org/production/59a26a85-14ad-36f6-bcac-83ce80837181> , <http://data.silknow.org/event/fbcadf7d-c111-328a-b7d8-a428c320f601> ;
+        dc:identifier       "29805.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/e92f096f-a383-3968-ab1c-aaad319abda0>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "decoración vegetal estilizada"@es ;
+        ecrm:P3_has_note  "decoración vegetal estilizada"@es .
+
+<http://data.silknow.org/production/59a26a85-14ad-36f6-bcac-83ce80837181>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/1dcc1941-0861-3461-b449-b08310fe779b> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/497> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/903> , <http://data.silknow.org/vocabulary/366> , <http://data.silknow.org/vocabulary/97> , <http://data.silknow.org/vocabulary/471> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> , <http://vocab.getty.edu/aat/300404511> .

@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/95b69f09-fb2b-3b36-8baf-8c066d530a33> .
+
+<http://data.silknow.org/production/bc49d6a4-02d4-3ded-b416-4ca3b6d36d6a/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/4c82fa92-eae6-3732-99f2-e4ea2c99922e> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/95b69f09-fb2b-3b36-8baf-8c066d530a33>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.161" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/bc49d6a4-02d4-3ded-b416-4ca3b6d36d6a> , <http://data.silknow.org/object/b9a630b7-f19a-3c49-a95b-ac2ecf86244d> , <http://data.silknow.org/assessment/d0aa8bd4-570e-32aa-982a-c3167c7deba6> , <http://data.silknow.org/image/86025a0a-d5f9-3239-ad11-c56c6aea803f> , <http://data.silknow.org/object/b9a630b7-f19a-3c49-a95b-ac2ecf86244d/type/1> ;
+        dc:identifier       "5.161.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/production/bc49d6a4-02d4-3ded-b416-4ca3b6d36d6a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b9a630b7-f19a-3c49-a95b-ac2ecf86244d> ;
+        ecrm:P126_employed      "Hilo de oro y seda. Galón de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Brocado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/bc49d6a4-02d4-3ded-b416-4ca3b6d36d6a/activity/1> .
+
+<http://data.silknow.org/assessment/d0aa8bd4-570e-32aa-982a-c3167c7deba6/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Malo. No se recomienda su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Malo. No se recomienda su uso."@es .
+
+<http://data.silknow.org/object/b9a630b7-f19a-3c49-a95b-ac2ecf86244d/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b9a630b7-f19a-3c49-a95b-ac2ecf86244d> ;
+        ecrm:P42_assigned    "Capa pluvial" .
+
+<http://data.silknow.org/image/86025a0a-d5f9-3239-ad11-c56c6aea803f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.161" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.161_0.jpg> .
+
+<http://data.silknow.org/object/b9a630b7-f19a-3c49-a95b-ac2ecf86244d>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/86025a0a-d5f9-3239-ad11-c56c6aea803f> ;
+        dc:identifier                  "5.161" .
+
+<http://data.silknow.org/assessment/d0aa8bd4-570e-32aa-982a-c3167c7deba6>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/b9a630b7-f19a-3c49-a95b-ac2ecf86244d> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/d0aa8bd4-570e-32aa-982a-c3167c7deba6/condition/1> .
+
+<http://data.silknow.org/actor/4c82fa92-eae6-3732-99f2-e4ea2c99922e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Ornamentos Burillo (?)" ;
+        ecrm:P1_is_identified_by  "Ornamentos Burillo (?)" .

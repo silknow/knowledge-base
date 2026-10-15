@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/image/314faf14-6ae2-3ac8-ac30-b2de7260c874>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE23518" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE23518_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE23518&txt_id_imagen=1> .
+
+<http://data.silknow.org/event/b7633f0c-60c3-3798-9219-cab726cd985d>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05> .
+
+<http://data.silknow.org/event/2bcd0eeb-4f05-3df1-aa56-c6afdbeec798>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/production/22aec890-400a-3dfe-90b1-e6b3cb711ec3>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/488> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "Bordado de hilos contados"@es , "Punto de cruz"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_2000> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Bordado popular español."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05> .
+
+<http://data.silknow.org/object/782f4ec8-e903-39d3-9d04-4029370a4f03>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE23518" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/2bcd0eeb-4f05-3df1-aa56-c6afdbeec798> , <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05> , <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05/observation/3> , <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05/category/1> , <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05/observation/2> , <http://data.silknow.org/image/314faf14-6ae2-3ac8-ac30-b2de7260c874> , <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05/domain/1> , <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05/observation/1> , <http://data.silknow.org/production/22aec890-400a-3dfe-90b1-e6b3cb711ec3> , <http://data.silknow.org/event/b7633f0c-60c3-3798-9219-cab726cd985d> ;
+        dc:identifier       "CE23518_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/image/a5227ec3-4312-3745-ae84-b29cc762ba2b>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Motivos florales; Ciervo; Pájaros; Corona de flores; Mariposa; Casa; Figura humana"@es ;
+        ecrm:P3_has_note  "Motivos florales; Ciervo; Pájaros; Corona de flores; Mariposa; Casa; Figura humana"@es .
+
+<http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Dechado de lino bordado en sedas de diferentes colores. Remata en dobladillo dos lados y los otros dos presentan la orilla original. Las grecas de las orillas laterales presentan coronas florales, diferentes animales, una casa y un danzarín. El bordado más importante está formado por una gran casa rodeada de arbolado. Letras en el ángulo inferior. El bordado está incompleto, sin concluir."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05> .
+
+<http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Contemporánea"@es , "Bordado popular español."@es , "Dechado de lino bordado en sedas de diferentes colores. Remata en dobladillo dos lados y los otros dos presentan la orilla original. Las grecas de las orillas laterales presentan coronas florales, diferentes animales, una casa y un danzarín. El bordado más importante está formado por una gran casa rodeada de arbolado. Letras en el ángulo inferior. El bordado está incompleto, sin concluir."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/314faf14-6ae2-3ac8-ac30-b2de7260c874> ;
+        ecrm:P3_has_note               "Edad Contemporánea"@es , "Dechado de lino bordado en sedas de diferentes colores. Remata en dobladillo dos lados y los otros dos presentan la orilla original. Las grecas de las orillas laterales presentan coronas florales, diferentes animales, una casa y un danzarín. El bordado más importante está formado por una gran casa rodeada de arbolado. Letras en el ángulo inferior. El bordado está incompleto, sin concluir."@es , "Bordado popular español."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/a5227ec3-4312-3745-ae84-b29cc762ba2b> ;
+        dc:identifier                  "CE23518" .
+
+<http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05> .
+
+<http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Contemporánea"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05> .
+
+<http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dechado" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9d555862-ebe6-35c3-b2f2-3ea74ff2dd05> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/782f4ec8-e903-39d3-9d04-4029370a4f03> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

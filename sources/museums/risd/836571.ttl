@@ -1,0 +1,77 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/90ef0c34-4aa5-3ecd-8310-1ba77541a816>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b080d386-4879-3e62-a06b-d4d980247944> .
+
+<http://data.silknow.org/production/963cd7a2-aab5-3087-ae3f-ef580f8a19ad>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b080d386-4879-3e62-a06b-d4d980247944> ;
+        ecrm:P126_employed      "linen"@en , "linen; cotton; silk"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1901_1925> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6255148/> .
+
+<http://data.silknow.org/event/6a87928f-a747-39b0-8aba-6c7310b87d59>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/046a326a-584e-322e-99db-661c5335afa8> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mrs. Barbara Deering Danielson" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/b080d386-4879-3e62-a06b-d4d980247944> .
+
+<http://data.silknow.org/object/b080d386-4879-3e62-a06b-d4d980247944>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ed4e2035-8b78-34bb-939d-11052266f71e> ;
+        dc:identifier                  "82.308.35" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-8230835> .
+
+<https://sws.geonames.org/6255148/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/046a326a-584e-322e-99db-661c5335afa8>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mrs. Barbara Deering Danielson" ;
+        ecrm:P1_is_identified_by  "Gift of Mrs. Barbara Deering Danielson" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/107dd8d5-e432-3ff6-a675-cdc11d89633d> .
+
+<http://data.silknow.org/image/ed4e2035-8b78-34bb-939d-11052266f71e>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/836571_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/48710.jpg> .
+
+<http://data.silknow.org/object/107dd8d5-e432-3ff6-a675-cdc11d89633d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 82.308.35" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/963cd7a2-aab5-3087-ae3f-ef580f8a19ad> , <http://data.silknow.org/event/6a87928f-a747-39b0-8aba-6c7310b87d59> , <http://data.silknow.org/object/b080d386-4879-3e62-a06b-d4d980247944> , <http://data.silknow.org/object/b080d386-4879-3e62-a06b-d4d980247944/domain/1> , <http://data.silknow.org/image/ed4e2035-8b78-34bb-939d-11052266f71e> , <http://data.silknow.org/event/90ef0c34-4aa5-3ecd-8310-1ba77541a816> , <http://data.silknow.org/object/b080d386-4879-3e62-a06b-d4d980247944/category/1> ;
+        dc:identifier       "836571.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/b080d386-4879-3e62-a06b-d4d980247944/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b080d386-4879-3e62-a06b-d4d980247944> .
+
+<http://data.silknow.org/object/b080d386-4879-3e62-a06b-d4d980247944/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b080d386-4879-3e62-a06b-d4d980247944> .

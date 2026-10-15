@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/076023ff-8f59-3308-9e61-d68d4dc14bda>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d770b00f-45b7-3320-8876-2cf755768a48> ;
+        ecrm:P126_employed      "Hilo de seda carmesí. Galón. Fleco. Borlas. Hilo de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Terciopelo y bordado."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/076023ff-8f59-3308-9e61-d68d4dc14bda/activity/1> .
+
+<http://data.silknow.org/image/4511ff90-f3cc-3465-8e46-68bf7f5e79df>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.91" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.91_0.jpg> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b54d8b50-f23d-388f-8afd-e7883b33ca19> .
+
+<http://data.silknow.org/object/d770b00f-45b7-3320-8876-2cf755768a48/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Su uso se destinaba a los entierros de los hermanos del Santísimo Sacramento."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/d770b00f-45b7-3320-8876-2cf755768a48> .
+
+<http://data.silknow.org/assessment/962cc034-0dfd-39ff-b91f-a563e7a49d6a/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Regular. No se recomienda su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Regular. No se recomienda su uso."@es .
+
+<http://data.silknow.org/object/b54d8b50-f23d-388f-8afd-e7883b33ca19>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.91" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/d770b00f-45b7-3320-8876-2cf755768a48> , <http://data.silknow.org/production/076023ff-8f59-3308-9e61-d68d4dc14bda> , <http://data.silknow.org/object/d770b00f-45b7-3320-8876-2cf755768a48/type/1> , <http://data.silknow.org/object/d770b00f-45b7-3320-8876-2cf755768a48/observation/1> , <http://data.silknow.org/image/4511ff90-f3cc-3465-8e46-68bf7f5e79df> , <http://data.silknow.org/assessment/962cc034-0dfd-39ff-b91f-a563e7a49d6a> ;
+        dc:identifier       "5.91.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/object/d770b00f-45b7-3320-8876-2cf755768a48>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Su uso se destinaba a los entierros de los hermanos del Santísimo Sacramento."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4511ff90-f3cc-3465-8e46-68bf7f5e79df> ;
+        ecrm:P3_has_note               "*Su uso se destinaba a los entierros de los hermanos del Santísimo Sacramento."@es ;
+        dc:identifier                  "5.91" .
+
+<http://data.silknow.org/object/d770b00f-45b7-3320-8876-2cf755768a48/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d770b00f-45b7-3320-8876-2cf755768a48> ;
+        ecrm:P42_assigned    "Cojín" .
+
+<http://data.silknow.org/assessment/962cc034-0dfd-39ff-b91f-a563e7a49d6a>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/d770b00f-45b7-3320-8876-2cf755768a48> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/962cc034-0dfd-39ff-b91f-a563e7a49d6a/condition/1> .
+
+<http://data.silknow.org/production/076023ff-8f59-3308-9e61-d68d4dc14bda/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .

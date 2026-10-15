@@ -1,0 +1,105 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/359f7bdd-7eff-36cb-a050-27d268ebd995>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE04773" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/e19c02f3-b213-349c-8fd8-0c6189f99e83> , <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/domain/1> , <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/category/1> , <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/observation/1> , <http://data.silknow.org/production/407610f7-6e4e-3750-8853-6bfdcf006452> , <http://data.silknow.org/image/7ff2d0e8-5346-318d-9eef-67b30b6126f3> , <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c> , <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/observation/2> , <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/domain/2> , <http://data.silknow.org/event/516c3032-a957-3ff3-b6f4-8b119b889e23> ;
+        dc:identifier       "CE04773_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/97> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c> .
+
+<http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/359f7bdd-7eff-36cb-a050-27d268ebd995> .
+
+<http://data.silknow.org/event/516c3032-a957-3ff3-b6f4-8b119b889e23>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c> .
+
+<http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/12> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c> .
+
+<http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "128" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "128"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "De damasco blanco con motivo de ramos con granada, sueltos y enfilados, con inclinación alterna en cada fila. La cenefa de delantero y espada de brocatel rojo, con amarillo y blanco. Motivo de florones con coronas. Forro de lienzo antiguo."@es , "Edad Moderna"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7ff2d0e8-5346-318d-9eef-67b30b6126f3> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "De damasco blanco con motivo de ramos con granada, sueltos y enfilados, con inclinación alterna en cada fila. La cenefa de delantero y espada de brocatel rojo, con amarillo y blanco. Motivo de florones con coronas. Forro de lienzo antiguo."@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/dimension/1> , <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/dimension/2> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/ee388a7b-8c0b-3917-9ac1-85e27af3a2aa> ;
+        dc:identifier                  "CE04773" .
+
+<http://data.silknow.org/image/ee388a7b-8c0b-3917-9ac1-85e27af3a2aa>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Corona; Motivos florales; Granada (fruto)"@es ;
+        ecrm:P3_has_note  "Corona; Motivos florales; Granada (fruto)"@es .
+
+<http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "80" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "80"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/e19c02f3-b213-349c-8fd8-0c6189f99e83>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/production/407610f7-6e4e-3750-8853-6bfdcf006452>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c> ;
+        ecrm:P126_employed      "Lino [?]"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/168> , <http://data.silknow.org/vocabulary/103> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1601_1700> .
+
+<http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "De damasco blanco con motivo de ramos con granada, sueltos y enfilados, con inclinación alterna en cada fila. La cenefa de delantero y espada de brocatel rojo, con amarillo y blanco. Motivo de florones con coronas. Forro de lienzo antiguo."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/b956209a-5734-3283-8361-69cde44b2f5c> .
+
+<http://data.silknow.org/image/7ff2d0e8-5346-318d-9eef-67b30b6126f3>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE04773" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE04773_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE04773&txt_id_imagen=1> .

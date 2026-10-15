@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/bb9aab08-9d02-3f6d-aaee-2e27a5812baa>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "753066" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/49922_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/753066/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/event/4d52ac70-d6fd-31f5-8f2f-57042534dcce>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3> .
+
+<http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of printed cotton" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3> .
+
+<http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3> .
+
+<http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Piece, quilted and printed.  Polychrome floral design."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bb9aab08-9d02-3f6d-aaee-2e27a5812baa> ;
+        ecrm:P3_has_note               "Piece, quilted and printed.  Polychrome floral design."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3/dimension/2> , <http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3/dimension/1> ;
+        dc:identifier                  "49.322" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/49922> .
+
+<http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Piece, quilted and printed.  Polychrome floral design."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3> .
+
+<http://data.silknow.org/object/7f09e9cd-e332-34d6-9809-ee70a4b9575e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 49.322" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/bb9aab08-9d02-3f6d-aaee-2e27a5812baa> , <http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3> , <http://data.silknow.org/production/1776c5a7-df14-34af-9448-f9810d2216db> , <http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3/category/1> , <http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3/domain/1> , <http://data.silknow.org/event/4d52ac70-d6fd-31f5-8f2f-57042534dcce> , <http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3/observation/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "49922.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "49.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "49.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/7f09e9cd-e332-34d6-9809-ee70a4b9575e> .
+
+<http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "80" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "80"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/production/1776c5a7-df14-34af-9448-f9810d2216db>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/07ae8038-3058-3668-984a-00c282f5dcc3> ;
+        ecrm:P126_employed      "Quilted cotton print"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .

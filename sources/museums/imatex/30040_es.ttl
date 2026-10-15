@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b7b70d7f-d5f9-3337-997a-001549b41a8a> .
+
+<http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932> .
+
+<http://data.silknow.org/production/6cf26f71-10f0-309f-a2dd-d4e9de737309>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "trama llançada"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/168> , <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> .
+
+<http://data.silknow.org/image/a962c15b-fb6b-3246-bbac-719de6e7b772>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035970" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/30040_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000035970.jpg> .
+
+<http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "conserva 1 voraviu"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a962c15b-fb6b-3246-bbac-719de6e7b772> ;
+        ecrm:P3_has_note               "conserva 1 voraviu"@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/743> ;
+        dc:identifier                  "22359" .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- conserva 1 voraviu"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932> .
+
+<http://data.silknow.org/event/cd6e19f7-541a-3f30-a7bc-0ee4ea0e056e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932> .
+
+<http://data.silknow.org/object/b7b70d7f-d5f9-3337-997a-001549b41a8a>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 30040" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932/observation/1> , <http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932> , <http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932/domain/1> , <http://data.silknow.org/event/2ca51766-effa-395c-bfad-518a86a3db53> , <http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932/category/1> , <http://data.silknow.org/event/cd6e19f7-541a-3f30-a7bc-0ee4ea0e056e> , <http://data.silknow.org/production/6cf26f71-10f0-309f-a2dd-d4e9de737309> , <http://data.silknow.org/image/a962c15b-fb6b-3246-bbac-719de6e7b772> ;
+        dc:identifier       "30040.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932> .
+
+<http://data.silknow.org/event/2ca51766-effa-395c-bfad-518a86a3db53>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9d67a62a-4e7e-37f7-974a-a39f3b8f8932> .

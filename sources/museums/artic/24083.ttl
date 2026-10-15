@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/272443cd-a6d8-3811-87e3-ae089dfda121>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/87d864b2-b2c1-3af4-98ac-e384c01e7edc> , <http://data.silknow.org/timespan/1736> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/7d442969-e2f3-35c9-8373-60589c653d1b> , <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "103.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "103.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/f2ddd1cc-aac3-301d-8275-faa0b4e366cf>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/f091ad03-a643-3304-bdc1-9b31e8f9ccfb> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Jennie Hodge Schmidt" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d> .
+
+<http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "48.0" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "48.0"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, warp-float faced 7:1 satin weave with supplementary patterning and brocading wefts and self-patterning ground wefts tied by supplementary binding warps in plain interlacing"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d> .
+
+<http://data.silknow.org/place/7d442969-e2f3-35c9-8373-60589c653d1b>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "France, provincial, Tours, England or Netherlands" ;
+        ecrm:P87_is_identified_by  "France, provincial, Tours, England or Netherlands" .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/image/3a5c719e-f8c7-3401-a8fb-200d5b4c7835>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/24083_0.jpg> , <https://www.artic.edu/iiif/2/e48ab824-613f-9ab7-8875-94bf8f7c1e3a/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d> .
+
+<http://data.silknow.org/object/e44703cc-f243-3cde-8838-bfcacd965c74>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1965.731" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d/observation/1> , <http://data.silknow.org/image/3a5c719e-f8c7-3401-a8fb-200d5b4c7835> , <http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d/category/1> , <http://data.silknow.org/production/272443cd-a6d8-3811-87e3-ae089dfda121> , <http://data.silknow.org/event/f2ddd1cc-aac3-301d-8275-faa0b4e366cf> , <http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d> ;
+        dc:identifier       "24083.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/actor/f091ad03-a643-3304-bdc1-9b31e8f9ccfb>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Jennie Hodge Schmidt" ;
+        ecrm:P1_is_identified_by  "Gift of Jennie Hodge Schmidt" .
+
+<http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk, warp-float faced 7:1 satin weave with supplementary patterning and brocading wefts and self-patterning ground wefts tied by supplementary binding warps in plain interlacing"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/3a5c719e-f8c7-3401-a8fb-200d5b4c7835> ;
+        ecrm:P3_has_note               "Silk, warp-float faced 7:1 satin weave with supplementary patterning and brocading wefts and self-patterning ground wefts tied by supplementary binding warps in plain interlacing"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d/dimension/1> , <http://data.silknow.org/object/3569ddbb-860a-346e-acd9-3760efd8aa0d/dimension/2> ;
+        dc:identifier                  "1965.731" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/24083/panel> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e44703cc-f243-3cde-8838-bfcacd965c74> .

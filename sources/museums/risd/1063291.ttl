@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/58d1cd0e-bf7d-3df8-8329-21e45e30d8d0>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/76cad8cb-61b8-392e-bb23-64c61135596a> ;
+        dc:identifier                  "65.027" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-65027> .
+
+<https://sws.geonames.org/6255146/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/76cad8cb-61b8-392e-bb23-64c61135596a>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1063291_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/13214.jpg> .
+
+<http://data.silknow.org/production/200b4935-ddd0-3c94-9de3-de62d0acf694>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/58d1cd0e-bf7d-3df8-8329-21e45e30d8d0> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/b6075529-439e-367c-9e1b-f091ad874ac1> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6255146/> .
+
+<http://data.silknow.org/object/58d1cd0e-bf7d-3df8-8329-21e45e30d8d0/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/58d1cd0e-bf7d-3df8-8329-21e45e30d8d0> .
+
+<http://data.silknow.org/event/f4271602-6517-3dc1-b4fa-a5586a8e3865>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c7325d4b-6643-35d3-b403-52922254cb76> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Carrie L. Farren" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/58d1cd0e-bf7d-3df8-8329-21e45e30d8d0> .
+
+<http://data.silknow.org/object/a177a255-a2ed-357c-90e5-19ac8c575eb5>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 65.027" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/58d1cd0e-bf7d-3df8-8329-21e45e30d8d0> , <http://data.silknow.org/event/048a0df9-13f3-3854-906c-8fd24329f712> , <http://data.silknow.org/object/58d1cd0e-bf7d-3df8-8329-21e45e30d8d0/category/1> , <http://data.silknow.org/object/58d1cd0e-bf7d-3df8-8329-21e45e30d8d0/domain/1> , <http://data.silknow.org/image/76cad8cb-61b8-392e-bb23-64c61135596a> , <http://data.silknow.org/production/200b4935-ddd0-3c94-9de3-de62d0acf694> , <http://data.silknow.org/event/f4271602-6517-3dc1-b4fa-a5586a8e3865> ;
+        dc:identifier       "1063291.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/58d1cd0e-bf7d-3df8-8329-21e45e30d8d0/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/58d1cd0e-bf7d-3df8-8329-21e45e30d8d0> .
+
+<http://data.silknow.org/event/048a0df9-13f3-3854-906c-8fd24329f712>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/58d1cd0e-bf7d-3df8-8329-21e45e30d8d0> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a177a255-a2ed-357c-90e5-19ac8c575eb5> .
+
+<http://data.silknow.org/actor/c7325d4b-6643-35d3-b403-52922254cb76>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Carrie L. Farren" ;
+        ecrm:P1_is_identified_by  "Gift of Carrie L. Farren" .

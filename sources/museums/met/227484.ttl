@@ -1,0 +1,125 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Upholstery passementerie" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e> .
+
+<http://data.silknow.org/production/549fd5e2-b996-321a-8de8-9f5a7d571b54>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e> ;
+        ecrm:P126_employed      "Passementerie"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/857> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1751_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/4921870c-bc55-30c4-aff2-b8488d6981ea> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e/dimension/2> , <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e/dimension/1> ;
+        dc:identifier                  "50.8c" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.metmuseum.org/art/collection/search/227484> .
+
+<http://data.silknow.org/object/dbbf2f1c-ec29-3c40-8137-23750f50e1c7>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/7a77484d-9c98-35aa-b7b0-b7e4a44c9d0e> .
+
+<http://data.silknow.org/event/60cd11c7-20ba-3135-918c-83d16a1525ac>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e> .
+
+<http://data.silknow.org/actor/2f47a8f2-31d4-3a79-bde1-c18791884875>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Rogers Fund" ;
+        ecrm:P1_is_identified_by  "Rogers Fund" .
+
+<http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "European Sculpture and Decorative Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e> ;
+        ecrm:P78_is_identified_by  "European Sculpture and Decorative Arts" .
+
+<http://data.silknow.org/event/e90e45ca-3339-33ed-91de-81e19c7855be>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/2f47a8f2-31d4-3a79-bde1-c18791884875> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Rogers Fund, 1950" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e> .
+
+<http://data.silknow.org/image/4921870c-bc55-30c4-aff2-b8488d6981ea>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/227484_0.jpg> , <https://collectionapi.metmuseum.org/api/collection/v1/iiif/227484/454874/main-image> .
+
+<http://data.silknow.org/object/e5710cf0-de59-3e56-9ca1-20d8a0dd350c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 227484" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/549fd5e2-b996-321a-8de8-9f5a7d571b54> , <http://data.silknow.org/event/60cd11c7-20ba-3135-918c-83d16a1525ac> , <http://data.silknow.org/event/e90e45ca-3339-33ed-91de-81e19c7855be> , <http://data.silknow.org/image/4921870c-bc55-30c4-aff2-b8488d6981ea> , <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e/category/1> , <http://data.silknow.org/object/0d717dbe-c7a3-30e0-a141-fb3b421d1293> , <http://data.silknow.org/object/4af6b044-3df7-31e2-ad74-58f906972437> , <http://data.silknow.org/object/68fdd574-a5a6-3008-b834-bcbeaa36d03f> , <http://data.silknow.org/object/dbbf2f1c-ec29-3c40-8137-23750f50e1c7> , <http://data.silknow.org/object/6336380b-0862-3c11-864d-b3d5a71f16eb> , <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e> , <http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5> ;
+        dc:identifier       "227484.json" ;
+        dc:publisher        "http://data.silknow.org/organization/met" .
+
+<http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/15> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e> .
+
+<http://data.silknow.org/object/0d717dbe-c7a3-30e0-a141-fb3b421d1293>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/6f4e2593-dafe-3669-bde6-304fa5b1a5e9> .
+
+<http://data.silknow.org/object/6336380b-0862-3c11-864d-b3d5a71f16eb>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/ae639985-84bd-3d35-a602-293f10f5975f> .
+
+<http://data.silknow.org/met>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/e5710cf0-de59-3e56-9ca1-20d8a0dd350c> .
+
+<http://data.silknow.org/object/4af6b044-3df7-31e2-ad74-58f906972437>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/78fe9386-3f45-3e16-bb2e-a49ffc066b36> .
+
+<http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "3.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "3.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/68fdd574-a5a6-3008-b834-bcbeaa36d03f>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/e5bf5f8c-4a2a-3322-817a-02086f3ea19c> .
+
+<http://data.silknow.org/object/3bd1bedd-9e80-3a11-b359-b4599c54966e/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "609.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "609.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

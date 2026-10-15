@@ -1,0 +1,88 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/9a07ab63-c17f-3aeb-9e87-02119569cc7d>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Bequest of Elinor Merrell" ;
+        ecrm:P1_is_identified_by  "Bequest of Elinor Merrell" .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/767c84eb-6293-38c9-abd1-75a0c89ec73f> .
+
+<http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Solid green fabric. Faded so that one side is bluer than the other."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/c4265bba-39d5-3e09-9b73-e8fd09e5e36d> ;
+        ecrm:P3_has_note               "Solid green fabric. Faded so that one side is bluer than the other."@en ;
+        dc:identifier                  "chndm_1995-50-346" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1995-50-346> .
+
+<http://data.silknow.org/object/767c84eb-6293-38c9-abd1-75a0c89ec73f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1995-50-346" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/c4265bba-39d5-3e09-9b73-e8fd09e5e36d> , <http://data.silknow.org/production/346c7fdc-eef0-3096-91c4-a81aafb7f725> , <http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c/domain/1> , <http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c> , <http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c/category/1> , <http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c/observation/1> , <http://data.silknow.org/event/8ce67cf5-bf81-3d02-b848-b9b5ef27e411> , <http://data.silknow.org/event/187a3663-f352-3e44-bf5d-1fd845e88392> ;
+        dc:identifier       "chndm_1995-50-346.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<https://sws.geonames.org/6255148/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/8ce67cf5-bf81-3d02-b848-b9b5ef27e411>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c> .
+
+<http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Solid green fabric. Faded so that one side is bluer than the other."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c> .
+
+<http://data.silknow.org/event/187a3663-f352-3e44-bf5d-1fd845e88392>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/9a07ab63-c17f-3aeb-9e87-02119569cc7d> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P23_transferred_title_from
+                "Bequest of Elinor Merrell" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c> .
+
+<http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c> .
+
+<http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c> .
+
+<http://data.silknow.org/image/c4265bba-39d5-3e09-9b73-e8fd09e5e36d>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1995-50-346_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-A48BD92A3A4E2-000001> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/production/346c7fdc-eef0-3096-91c4-a81aafb7f725>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/550a120b-b56e-3722-b194-e57acdd4b92c> ;
+        ecrm:P126_employed      "silk"@en ;
+        ecrm:P32_used_general_technique
+                "woven plain weave moiré"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404512> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6255148/> .

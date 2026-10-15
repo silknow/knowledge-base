@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/44c67b36-1fec-3ade-8e17-3146bd03e4e6>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Bequeathed by Mr E. W. Mynott" ;
+        ecrm:P1_is_identified_by  "Bequeathed by Mr E. W. Mynott" .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Skirt holder" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59> .
+
+<http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Skirt holder made from polished white metal and consists of a pair of tongs with the rondels lined with composition help in position by a cast sphinx head which slides up and down the handles. A black silk cord with a loop at the end is attached to an eyelet in the head of the sphinx."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59> .
+
+<http://data.silknow.org/object/d4aba58e-4566-3f29-8dbd-e5d39384d5f1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O315251" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59/observation/1> , <http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59/observation/2> , <http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59/domain/1> , <http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59> , <http://data.silknow.org/production/2ddafad6-1c25-31bc-b235-bf58e067c244> , <http://data.silknow.org/event/29b57aa1-5c96-3964-8daf-062624063bc8> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> ;
+        dc:identifier       "O315251.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59>
+        a                 ecrm:E22_Man-Made_Object ;
+        rdfs:comment      "Skirt holder, England, ca. 1870"@en , "Skirt holder made from polished white metal and consists of a pair of tongs with the rondels lined with composition help in position by a cast sphinx head which slides up and down the handles. A black silk cord with a loop at the end is attached to an eyelet in the head of the sphinx."@en ;
+        ecrm:P3_has_note  "Skirt holder, England, ca. 1870"@en , "Skirt holder made from polished white metal and consists of a pair of tongs with the rondels lined with composition help in position by a cast sphinx head which slides up and down the handles. A black silk cord with a loop at the end is attached to an eyelet in the head of the sphinx."@en ;
+        dc:identifier     "T.68-1980" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O315251> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d4aba58e-4566-3f29-8dbd-e5d39384d5f1> .
+
+<http://data.silknow.org/production/2ddafad6-1c25-31bc-b235-bf58e067c244>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59> ;
+        ecrm:P126_employed      "Polished metal and silk"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/d0a3a751-2d33-3ddc-8eea-134f159dfa28> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/event/29b57aa1-5c96-3964-8daf-062624063bc8>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/44c67b36-1fec-3ade-8e17-3146bd03e4e6> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Bequeathed by Mr E. W. Mynott" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59> .
+
+<http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59> .
+
+<http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Skirt holder, England, ca. 1870"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/cd376ef9-bcee-3e43-a091-a2985cdb3c59> .

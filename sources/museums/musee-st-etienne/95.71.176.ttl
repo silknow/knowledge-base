@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b5301136-52bd-3ee7-84d6-f6ba4fa5d373> .
+
+<http://data.silknow.org/production/f58dc62e-b08b-3a4c-975a-1b545e0212e9>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/991d5b1f-d742-3ee7-81b4-c99d69a3cc56> .
+
+<http://data.silknow.org/assessment/1b1aaef6-805f-3a72-bddb-0b1a6fb253e7/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "pas de défaut d'intégrité"@fr ;
+        ecrm:P2_has_type  "Intégrité" ;
+        ecrm:P3_has_note  "pas de défaut d'intégrité"@fr .
+
+<http://data.silknow.org/image/fe34cb73-2576-3de5-bfbe-508e6d7605c0>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "branche"@fr ;
+        ecrm:P3_has_note  "branche"@fr .
+
+<http://data.silknow.org/object/278a25f8-a22d-38af-8102-905aba128eb9>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Rubans français au Musée d'Art et d'Industrie de"@fr , "Saint-Etienne\", Edition Gakken, Japon, 1981, 221 pages,"@fr , "Studio Caterin"@fr , "95.71.176.jpg"@fr , "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/991d5b1f-d742-3ee7-81b4-c99d69a3cc56> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "Studio Caterin"@fr , "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Saint-Etienne\", Edition Gakken, Japon, 1981, 221 pages,"@fr , "95.71.176.jpg"@fr , "Rubans français au Musée d'Art et d'Industrie de"@fr .
+
+<http://data.silknow.org/event/6948ca24-2532-34fd-805d-7d9ddfef767a>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/991d5b1f-d742-3ee7-81b4-c99d69a3cc56> .
+
+<http://data.silknow.org/object/b5301136-52bd-3ee7-84d6-f6ba4fa5d373>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.176" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/991d5b1f-d742-3ee7-81b4-c99d69a3cc56/right> , <http://data.silknow.org/image/5476fc53-30d8-39e3-b3a3-31e2db88c6eb> , <http://data.silknow.org/event/6948ca24-2532-34fd-805d-7d9ddfef767a> , <http://data.silknow.org/production/f58dc62e-b08b-3a4c-975a-1b545e0212e9> , <http://data.silknow.org/object/991d5b1f-d742-3ee7-81b4-c99d69a3cc56/type/1> , <http://data.silknow.org/assessment/1b1aaef6-805f-3a72-bddb-0b1a6fb253e7> , <http://data.silknow.org/object/991d5b1f-d742-3ee7-81b4-c99d69a3cc56> , <http://data.silknow.org/object/278a25f8-a22d-38af-8102-905aba128eb9> ;
+        dc:identifier       "95.71.176.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/object/991d5b1f-d742-3ee7-81b4-c99d69a3cc56/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/991d5b1f-d742-3ee7-81b4-c99d69a3cc56> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/object/991d5b1f-d742-3ee7-81b4-c99d69a3cc56/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/991d5b1f-d742-3ee7-81b4-c99d69a3cc56> ;
+        ecrm:P42_assigned    "Roses" .
+
+<http://data.silknow.org/assessment/1b1aaef6-805f-3a72-bddb-0b1a6fb253e7>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/991d5b1f-d742-3ee7-81b4-c99d69a3cc56> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/1b1aaef6-805f-3a72-bddb-0b1a6fb253e7/condition/1> .
+
+<http://data.silknow.org/object/991d5b1f-d742-3ee7-81b4-c99d69a3cc56>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Roses"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5476fc53-30d8-39e3-b3a3-31e2db88c6eb> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/fe34cb73-2576-3de5-bfbe-508e6d7605c0> , <http://data.silknow.org/vocabulary/785> ;
+        dc:identifier                  "95.71.176" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/image/5476fc53-30d8-39e3-b3a3-31e2db88c6eb>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.176_0.jpg> .

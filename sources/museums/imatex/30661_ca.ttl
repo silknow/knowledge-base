@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/05792cbe-a077-33c3-a6d2-344e866cc6ee> .
+
+<http://data.silknow.org/event/6d7885c2-7dc6-341d-b8a7-76f65b331961>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ad042e0b-1aa3-3745-9429-9866ede1ce17> .
+
+<http://data.silknow.org/production/714d4df8-26ad-3319-9304-a242f29b2cec>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ad042e0b-1aa3-3745-9429-9866ede1ce17> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1810_1820> .
+
+<http://data.silknow.org/image/99a65b25-2039-34e6-834b-57fe636a5953>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000037002" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/30661_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000037002.jpg> .
+
+<http://data.silknow.org/event/4bb39c46-b448-3949-8904-bfa79dde96c0>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b> ;
+        ecrm:P23_transferred_title_from
+                "Tórtola Valencia, Carmen" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ad042e0b-1aa3-3745-9429-9866ede1ce17> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/actor/dc70c74a-ee14-3f87-a537-f408bc34945b>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Tórtola Valencia, Carmen" ;
+        ecrm:P1_is_identified_by  "Tórtola Valencia, Carmen" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Carmen_Tórtola_Valencia> , <https://viaf.org/viaf/47896092> , <https://isni.org/isni/0000000038570077> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Carmen_Tórtola_Valencia> .
+
+<http://data.silknow.org/object/ad042e0b-1aa3-3745-9429-9866ede1ce17/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ad042e0b-1aa3-3745-9429-9866ede1ce17> .
+
+<http://data.silknow.org/object/05792cbe-a077-33c3-a6d2-344e866cc6ee>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 30661" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/714d4df8-26ad-3319-9304-a242f29b2cec> , <http://data.silknow.org/object/ad042e0b-1aa3-3745-9429-9866ede1ce17/category/1> , <http://data.silknow.org/object/ad042e0b-1aa3-3745-9429-9866ede1ce17/domain/1> , <http://data.silknow.org/image/99a65b25-2039-34e6-834b-57fe636a5953> , <http://data.silknow.org/object/ad042e0b-1aa3-3745-9429-9866ede1ce17> , <http://data.silknow.org/event/4bb39c46-b448-3949-8904-bfa79dde96c0> , <http://data.silknow.org/event/6d7885c2-7dc6-341d-b8a7-76f65b331961> ;
+        dc:identifier       "30661.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/ad042e0b-1aa3-3745-9429-9866ede1ce17/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ad042e0b-1aa3-3745-9429-9866ede1ce17> .
+
+<http://data.silknow.org/object/ad042e0b-1aa3-3745-9429-9866ede1ce17>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/99a65b25-2039-34e6-834b-57fe636a5953> ;
+        dc:identifier                  "18504" .

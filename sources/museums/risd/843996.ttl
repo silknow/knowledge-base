@@ -1,0 +1,80 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/f2ff1a34-1b61-3e5a-8849-8846faa1ec5c/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f2ff1a34-1b61-3e5a-8849-8846faa1ec5c> .
+
+<http://data.silknow.org/object/f2ff1a34-1b61-3e5a-8849-8846faa1ec5c>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/59ac9a92-4846-3e8e-aa76-0a332ca55052> ;
+        dc:identifier                  "1990.028.1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/pidan-ceremonial-hanging-or-cover-19900281> .
+
+<http://data.silknow.org/actor/9048479b-18ce-3c0d-8515-5df20a785d0e>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Mr. and Mrs. Ellis J. Green" ;
+        ecrm:P1_is_identified_by  "Gift of Mr. and Mrs. Ellis J. Green" .
+
+<http://data.silknow.org/event/1b2f9d52-2524-37bb-90c7-8e2daeed724c>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f2ff1a34-1b61-3e5a-8849-8846faa1ec5c> .
+
+<http://data.silknow.org/image/59ac9a92-4846-3e8e-aa76-0a332ca55052>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/843996_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/11782.jpg> .
+
+<https://sws.geonames.org/1831722/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/f2ff1a34-1b61-3e5a-8849-8846faa1ec5c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Pidan (ceremonial hanging or cover)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f2ff1a34-1b61-3e5a-8849-8846faa1ec5c> .
+
+<http://data.silknow.org/object/9c37b913-d3fa-3b06-bb97-aa9a18a1a648>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1990.028.1" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/59ac9a92-4846-3e8e-aa76-0a332ca55052> , <http://data.silknow.org/event/1b2f9d52-2524-37bb-90c7-8e2daeed724c> , <http://data.silknow.org/event/d01dacf9-6439-367e-bd19-a8254d8071c6> , <http://data.silknow.org/object/f2ff1a34-1b61-3e5a-8849-8846faa1ec5c/category/1> , <http://data.silknow.org/object/f2ff1a34-1b61-3e5a-8849-8846faa1ec5c/domain/1> , <http://data.silknow.org/production/05f52a84-0e6a-364f-ae38-f940ad434ee9> , <http://data.silknow.org/object/f2ff1a34-1b61-3e5a-8849-8846faa1ec5c> ;
+        dc:identifier       "843996.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/production/05f52a84-0e6a-364f-ae38-f940ad434ee9>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f2ff1a34-1b61-3e5a-8849-8846faa1ec5c> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "weft ikat"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/238> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/0fe274b2-fe8a-3986-b008-f3dcc5cca24b> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1831722/> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9c37b913-d3fa-3b06-bb97-aa9a18a1a648> .
+
+<http://data.silknow.org/event/d01dacf9-6439-367e-bd19-a8254d8071c6>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/9048479b-18ce-3c0d-8515-5df20a785d0e> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Mr. and Mrs. Ellis J. Green" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f2ff1a34-1b61-3e5a-8849-8846faa1ec5c> .

@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/90fa720c-98a2-3d24-8f7b-a9d7352ed855>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7ef5b453-ca3a-3024-9eaa-fcbed736bcef> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/37cac8e8-9e38-375f-b419-4ade3dba0520> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/image/a562c0c0-d2d8-3800-b6bd-af2146accb20>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1049706_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/36811.jpg> .
+
+<http://data.silknow.org/object/7ef5b453-ca3a-3024-9eaa-fcbed736bcef/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7ef5b453-ca3a-3024-9eaa-fcbed736bcef> .
+
+<http://data.silknow.org/object/0a14df99-2e15-333f-b830-223f7f79317b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1993.011.2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/a562c0c0-d2d8-3800-b6bd-af2146accb20> , <http://data.silknow.org/production/90fa720c-98a2-3d24-8f7b-a9d7352ed855> , <http://data.silknow.org/object/7ef5b453-ca3a-3024-9eaa-fcbed736bcef/category/1> , <http://data.silknow.org/object/7ef5b453-ca3a-3024-9eaa-fcbed736bcef> , <http://data.silknow.org/event/a83650de-9f96-345d-a384-9be1813b53b2> , <http://data.silknow.org/event/7d7fe67a-31f7-34ad-967b-67bdc7d9ca4a> , <http://data.silknow.org/object/7ef5b453-ca3a-3024-9eaa-fcbed736bcef/domain/1> ;
+        dc:identifier       "1049706.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/7ef5b453-ca3a-3024-9eaa-fcbed736bcef/category/1>
+        a                    silk:T35 ;
+        silk:L1              "border (ornament area)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7ef5b453-ca3a-3024-9eaa-fcbed736bcef> .
+
+<http://data.silknow.org/object/7ef5b453-ca3a-3024-9eaa-fcbed736bcef>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a562c0c0-d2d8-3800-b6bd-af2146accb20> ;
+        dc:identifier                  "1993.011.2" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/border-ornament-area-19930112> .
+
+<http://data.silknow.org/actor/76ad6d58-6c67-3ca5-8c58-6150d955dfd5>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Edward and Cassandra Stone" ;
+        ecrm:P1_is_identified_by  "Gift of Edward and Cassandra Stone" .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0a14df99-2e15-333f-b830-223f7f79317b> .
+
+<http://data.silknow.org/event/a83650de-9f96-345d-a384-9be1813b53b2>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/76ad6d58-6c67-3ca5-8c58-6150d955dfd5> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Edward and Cassandra Stone" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/7ef5b453-ca3a-3024-9eaa-fcbed736bcef> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/7d7fe67a-31f7-34ad-967b-67bdc7d9ca4a>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/7ef5b453-ca3a-3024-9eaa-fcbed736bcef> .

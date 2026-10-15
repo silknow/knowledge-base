@@ -1,0 +1,93 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/d8d4da2a-83ac-3477-8b38-4f9b24b5503d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59> ;
+        ecrm:P126_employed      "Reperçage"@fr ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/369> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1815> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .
+
+<http://data.silknow.org/PM>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/128f5d0f-3cc6-373f-ac20-9ba699aafb16> .
+
+<http://data.silknow.org/event/39b90397-fd9a-393a-952d-0fe058338306>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f4f677e1-0fb0-381b-a311-e59780a8f445> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59> .
+
+<http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Eventail brisé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59> .
+
+<http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "15.7 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "15.7 cm" ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f4f677e1-0fb0-381b-a311-e59780a8f445>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Palais Galliera, musée de la Mode de la Ville de Paris" ;
+        ecrm:P1_is_identified_by  "Palais Galliera, musée de la Mode de la Ville de Paris" .
+
+<http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59/dimension/1>
+        a                  ecrm:E54_Dimension ;
+        ecrm:P2_has_type   <http://data.silknow.org/dimension/width> ;
+        ecrm:P91_has_unit  "cm" .
+
+<http://data.silknow.org/object/128f5d0f-3cc6-373f-ac20-9ba699aafb16>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1985.84.6" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59> , <http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59/observation/1> , <http://data.silknow.org/event/39b90397-fd9a-393a-952d-0fe058338306> , <http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59/domain/1> , <http://data.silknow.org/image/75c394cd-86e7-30c8-830b-adc8e77faa13> , <http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59/category/1> , <http://data.silknow.org/production/d8d4da2a-83ac-3477-8b38-4f9b24b5503d> , <http://data.silknow.org/image/f6a70ea3-d160-3249-8c28-89d5a25c2821> ;
+        dc:identifier       "198049.json" ;
+        dc:publisher        "http://data.silknow.org/organization/PM" .
+
+<http://data.silknow.org/image/75c394cd-86e7-30c8-830b-adc8e77faa13>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "529961" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ParisMusees/198049_0.jpg> , <https://www.parismuseescollections.paris.fr/sites/default/files/styles/pm_diaporama/public/atoms/images/GAL/gal1985.84.6_1.jpg?itok=PvGLeLwI> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Guirlandes de fleurs rouges."@fr ;
+        rdfs:label                     "Eventail brisé"@fr ;
+        ecrm:P102_has_title            "Eventail brisé"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/75c394cd-86e7-30c8-830b-adc8e77faa13> , <http://data.silknow.org/image/f6a70ea3-d160-3249-8c28-89d5a25c2821> ;
+        ecrm:P3_has_note               "Guirlandes de fleurs rouges."@fr ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59/dimension/1> , <http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59/dimension/2> ;
+        dc:identifier                  "1985.84.6" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://parismuseescollections.paris.fr/node/198049> .
+
+<http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/iconographical-observation> ;
+        ecrm:P3_has_note    "Guirlandes de fleurs rouges."@fr ;
+        crmsci:O8_observed  <http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59> .
+
+<http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Vêtements et accessoires de vêtement" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4b9c6f66-b4dd-3309-8714-1881ea6dfe59> .
+
+<http://data.silknow.org/image/f6a70ea3-d160-3249-8c28-89d5a25c2821>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "529962" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ParisMusees/198049_1.jpg> , <https://www.parismuseescollections.paris.fr/sites/default/files/styles/pm_diaporama/public/atoms/images/GAL/gal1985.84.6_2.jpg?itok=RwZTpJ-f> .

@@ -1,0 +1,74 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d4ce7517-b4aa-3484-8fa4-b83dc30b1a49> .
+
+<http://data.silknow.org/production/9bb4a1f8-6ef9-3e76-b63e-5a05d2aa9604/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/assessment/6ae6761c-b4f7-3260-88af-654bd0368f35>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/7585223e-51e9-3ddb-b1dd-887165617181> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/6ae6761c-b4f7-3260-88af-654bd0368f35/condition/1> .
+
+<http://data.silknow.org/production/9bb4a1f8-6ef9-3e76-b63e-5a05d2aa9604>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/7585223e-51e9-3ddb-b1dd-887165617181> ;
+        ecrm:P126_employed      "Tul."@es ;
+        ecrm:P32_used_general_technique
+                "Croché."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404514> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/9bb4a1f8-6ef9-3e76-b63e-5a05d2aa9604/activity/1> .
+
+<http://data.silknow.org/assessment/6ae6761c-b4f7-3260-88af-654bd0368f35/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. No apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. No apto para su uso."@es .
+
+<http://data.silknow.org/object/7585223e-51e9-3ddb-b1dd-887165617181>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7661f548-0cea-374b-a441-99660d3a0c16> ;
+        dc:identifier                  "5.166" .
+
+<http://data.silknow.org/image/7661f548-0cea-374b-a441-99660d3a0c16>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.166" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.166_0.jpg> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .
+
+<http://data.silknow.org/object/d4ce7517-b4aa-3484-8fa4-b83dc30b1a49>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.166" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/9bb4a1f8-6ef9-3e76-b63e-5a05d2aa9604> , <http://data.silknow.org/object/7585223e-51e9-3ddb-b1dd-887165617181> , <http://data.silknow.org/assessment/6ae6761c-b4f7-3260-88af-654bd0368f35> , <http://data.silknow.org/image/7661f548-0cea-374b-a441-99660d3a0c16> , <http://data.silknow.org/object/7585223e-51e9-3ddb-b1dd-887165617181/type/1> ;
+        dc:identifier       "5.166.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/object/7585223e-51e9-3ddb-b1dd-887165617181/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/7585223e-51e9-3ddb-b1dd-887165617181> ;
+        ecrm:P42_assigned    "Alba" .

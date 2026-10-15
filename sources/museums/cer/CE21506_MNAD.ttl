@@ -1,0 +1,79 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2> .
+
+<http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragmento de tejido" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2> .
+
+<http://data.silknow.org/object/bee282c7-0dad-3829-855c-2896f8bda981>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE21506" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2/observation/2> , <http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2/domain/1> , <http://data.silknow.org/event/c4854016-5ed5-39b7-b73d-32cd0fc3f894> , <http://data.silknow.org/event/282edd0f-00e5-30b5-8aa1-11f79d4adcda> , <http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2/observation/1> , <http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2> , <http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2/category/1> , <http://data.silknow.org/production/f8835ba0-08c8-3cb9-aa83-905b675fc808> , <http://data.silknow.org/image/d14eb03f-b4a4-3c00-9db1-991f76d77f79> ;
+        dc:identifier       "CE21506_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/event/282edd0f-00e5-30b5-8aa1-11f79d4adcda>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/image/d14eb03f-b4a4-3c00-9db1-991f76d77f79>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE21506" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE21506_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE21506&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2> .
+
+<http://data.silknow.org/event/c4854016-5ed5-39b7-b73d-32cd0fc3f894>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2> .
+
+<http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Moderna"@es , "Brocado amarillo y rojo con hilos de plata, tendidos y anillados. Decoración muy incompleta, se reconoce parte de un lazo. Doble urdimbre de seda roja y amarilla, doble trama, de hilo grueso de seda anaranjada formado por muchas hebras sin torsionar y la suplementaria de seda lasa amarilla e hilos metálicos formados por laminilla que envuelve hilo de seda, ligamento de raso con largas bastas de trama suplementaria en tafetán largo."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d14eb03f-b4a4-3c00-9db1-991f76d77f79> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Brocado amarillo y rojo con hilos de plata, tendidos y anillados. Decoración muy incompleta, se reconoce parte de un lazo. Doble urdimbre de seda roja y amarilla, doble trama, de hilo grueso de seda anaranjada formado por muchas hebras sin torsionar y la suplementaria de seda lasa amarilla e hilos metálicos formados por laminilla que envuelve hilo de seda, ligamento de raso con largas bastas de trama suplementaria en tafetán largo."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/753> ;
+        dc:identifier                  "CE21506" .
+
+<http://data.silknow.org/production/f8835ba0-08c8-3cb9-aa83-905b675fc808>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/103> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1601_1700> .
+
+<http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Brocado amarillo y rojo con hilos de plata, tendidos y anillados. Decoración muy incompleta, se reconoce parte de un lazo. Doble urdimbre de seda roja y amarilla, doble trama, de hilo grueso de seda anaranjada formado por muchas hebras sin torsionar y la suplementaria de seda lasa amarilla e hilos metálicos formados por laminilla que envuelve hilo de seda, ligamento de raso con largas bastas de trama suplementaria en tafetán largo."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/31d79955-8e01-3581-b050-96d38675a4d2> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bee282c7-0dad-3829-855c-2896f8bda981> .

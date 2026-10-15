@@ -1,0 +1,83 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d641dd99-6188-3a35-993d-80908a24f27c> .
+
+<http://data.silknow.org/event/c5be6cd9-bd09-32e6-95cc-6d21b4199988>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd> .
+
+<http://data.silknow.org/event/d1246b03-2a5c-3281-b133-7eb66ba5e749>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd> .
+
+<http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "conserva 1 dels voravius"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/bb76d5b9-6d9d-3a7e-9ad1-6c7e1ca2084d> ;
+        ecrm:P3_has_note               "conserva 1 dels voravius"@es ;
+        dc:identifier                  "19230" .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/d641dd99-6188-3a35-993d-80908a24f27c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 4065" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd/category/1> , <http://data.silknow.org/event/d1246b03-2a5c-3281-b133-7eb66ba5e749> , <http://data.silknow.org/production/b4a1d325-6103-375c-93db-048d36606cb0> , <http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd> , <http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd/domain/1> , <http://data.silknow.org/event/c5be6cd9-bd09-32e6-95cc-6d21b4199988> , <http://data.silknow.org/image/bb76d5b9-6d9d-3a7e-9ad1-6c7e1ca2084d> , <http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd/observation/1> ;
+        dc:identifier       "4065.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/production/b4a1d325-6103-375c-93db-048d36606cb0>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "efecto de bastas por trama de fondo (trama liseré)"@es ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/366> , <http://data.silknow.org/vocabulary/903> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> , <http://vocab.getty.edu/aat/300404510> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> , <https://sws.geonames.org/2510769/> .
+
+<http://data.silknow.org/image/bb76d5b9-6d9d-3a7e-9ad1-6c7e1ca2084d>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000001549" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/4065_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000001549.jpg> .
+
+<http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "- conserva 1 dels voravius"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/084d91c0-6068-3c82-88e5-ff2d386ecbdd> .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

@@ -1,0 +1,76 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9> .
+
+<http://data.silknow.org/event/e628dd3b-aaff-3268-8b8b-d07a06fd7a04>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9> .
+
+<http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "woven textiles" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9> .
+
+<http://data.silknow.org/smiths>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/97741b82-dbda-367c-8d0e-baf0d9365ec4> .
+
+<http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Fabric, possibly for a man's garment, of sheer white cotton with narrow side border stripes in black silk and gold metallic thread. Ends have broader stripes in black and red silk and gold metallic thread."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/aa0ee1b7-05bc-38a2-ac2b-d04f14d223b7> ;
+        ecrm:P3_has_note               "Fabric, possibly for a man's garment, of sheer white cotton with narrow side border stripes in black silk and gold metallic thread. Ends have broader stripes in black and red silk and gold metallic thread."@en ;
+        dc:identifier                  "chndm_1937-35-34" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.si.edu/object/chndm_1937-35-34> .
+
+<http://data.silknow.org/production/7f3757d8-59e4-36f7-ab70-ebb90f4dc5a4>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9> ;
+        ecrm:P126_employed      "silk"@en , "metallic thread"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/617> ;
+        ecrm:P32_used_general_technique
+                "plain weave"@en ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1269750/> .
+
+<http://data.silknow.org/actor/b63b5fc1-3c18-3bd8-8638-49d1cedc39c9>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Cooper Hewitt, Smithsonian Design Museum" ;
+        ecrm:P1_is_identified_by  "Cooper Hewitt, Smithsonian Design Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/0000000406043167> , <https://viaf.org/viaf/156924364> .
+
+<http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Fabric, possibly for a man's garment, of sheer white cotton with narrow side border stripes in black silk and gold metallic thread. Ends have broader stripes in black and red silk and gold metallic thread."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9> .
+
+<http://data.silknow.org/image/aa0ee1b7-05bc-38a2-ac2b-d04f14d223b7>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/smithsonian/chndm_1937-35-34_0.jpg> , <https://ids.si.edu/ids/deliveryService?max_w=800&id=CHSDM-D9C1C239433D2-000001> .
+
+<http://data.silknow.org/object/97741b82-dbda-367c-8d0e-baf0d9365ec4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record chndm_1937-35-34" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9/category/1> , <http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9> , <http://data.silknow.org/event/e628dd3b-aaff-3268-8b8b-d07a06fd7a04> , <http://data.silknow.org/production/7f3757d8-59e4-36f7-ab70-ebb90f4dc5a4> , <http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9/observation/1> , <http://data.silknow.org/image/aa0ee1b7-05bc-38a2-ac2b-d04f14d223b7> , <http://data.silknow.org/object/988ee3ea-78d3-3137-a26e-705f4fbca2b9/domain/1> ;
+        dc:identifier       "chndm_1937-35-34.json" ;
+        dc:publisher        "http://data.silknow.org/organization/smiths" .
+
+<https://sws.geonames.org/1269750/>
+        a       ecrm:E53_Place .

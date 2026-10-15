@@ -1,0 +1,115 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:comment        "maximum" ;
+        rdfs:label          "Width: 30 in  maximum" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P3_has_note    "maximum" ;
+        ecrm:P90_has_value  "76.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<https://sws.geonames.org/2635167/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Rectangular dress fabric of figured silk, Great Britain, ca. 1866"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/actor/2e0b0de5-cc13-36d6-ae97-8f685a053883>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by Miss M. Frobisher" ;
+        ecrm:P1_is_identified_by  "Given by Miss M. Frobisher" .
+
+<http://data.silknow.org/image/e4ca001d-e7b8-398e-9e96-9acba34053a9>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019LJ4382" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O262678_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2019LJ/2019LJ4382.jpg> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Rectangular dress fabric of figured silk. Vertical stripes in blue with a chiné pattern border banding a panel of grey-blue with narrow black stripes. A quadrilateral cut from the narrow end."@en , "Rectangular dress fabric of figured silk, Great Britain, ca. 1866"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e4ca001d-e7b8-398e-9e96-9acba34053a9> ;
+        ecrm:P3_has_note               "Rectangular dress fabric of figured silk, Great Britain, ca. 1866"@en , "Rectangular dress fabric of figured silk. Vertical stripes in blue with a chiné pattern border banding a panel of grey-blue with narrow black stripes. A quadrilateral cut from the narrow end."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/dimension/1> , <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/dimension/2> ;
+        dc:identifier                  "T.174B-1965" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O262678> .
+
+<http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dress fabric" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e> .
+
+<http://data.silknow.org/event/9c9eef3c-664c-35f2-b23a-fa275da0171e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/2e0b0de5-cc13-36d6-ae97-8f685a053883> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by Miss M. Frobisher" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e> .
+
+<http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e> .
+
+<http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 25 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "63.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/cc1b1010-7cee-3402-a6d9-cb32106830ea> .
+
+<http://data.silknow.org/object/cc1b1010-7cee-3402-a6d9-cb32106830ea>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O262678" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/observation/2> , <http://data.silknow.org/image/e4ca001d-e7b8-398e-9e96-9acba34053a9> , <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/observation/1> , <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e> , <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/domain/1> , <http://data.silknow.org/event/9c9eef3c-664c-35f2-b23a-fa275da0171e> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/domain/2> , <http://data.silknow.org/production/6a806071-79bd-362e-bcf1-95ee4871f595> ;
+        dc:identifier       "O262678.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Rectangular dress fabric of figured silk. Vertical stripes in blue with a chiné pattern border banding a panel of grey-blue with narrow black stripes. A quadrilateral cut from the narrow end."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e> .
+
+<http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e> .
+
+<http://data.silknow.org/production/6a806071-79bd-362e-bcf1-95ee4871f595>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/591c1e7b-9bd1-3ad7-ba83-05e7f0b1db4e> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/63ca1145-c14a-3177-af2c-7d7ec0517477> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2635167/> .

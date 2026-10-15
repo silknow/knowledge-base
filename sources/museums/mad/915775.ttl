@@ -1,0 +1,62 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/e47a4742-ac70-308b-9f9c-c7e89df9fb81/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/e47a4742-ac70-308b-9f9c-c7e89df9fb81> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/1fb4ff18-c458-3668-9810-db33fecde2e6>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Cornille Frères, 1900" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/e47a4742-ac70-308b-9f9c-c7e89df9fb81> ;
+        ecrm:P3_has_note        "Cornille Frères, 1900" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1900> .
+
+<http://data.silknow.org/object/e47a4742-ac70-308b-9f9c-c7e89df9fb81>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, Cornille Frères, 1900"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/fe9a608d-3a7b-3657-bf7e-90d5268f53d3> ;
+        dc:identifier                  "9392.B" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/915775> .
+
+<http://data.silknow.org/event/526dce3b-13c2-3c1f-b1d8-88f7536ade2f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat Cornille Frères à l'Exposition Universelle de Paris de1900" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/e47a4742-ac70-308b-9f9c-c7e89df9fb81> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/42e8ddc0-5509-3063-ace3-cd58520a130b> .
+
+<http://data.silknow.org/object/42e8ddc0-5509-3063-ace3-cd58520a130b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 9392.B" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/e47a4742-ac70-308b-9f9c-c7e89df9fb81> , <http://data.silknow.org/event/526dce3b-13c2-3c1f-b1d8-88f7536ade2f> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/e47a4742-ac70-308b-9f9c-c7e89df9fb81/category/1> , <http://data.silknow.org/production/1fb4ff18-c458-3668-9810-db33fecde2e6> , <http://data.silknow.org/image/fe9a608d-3a7b-3657-bf7e-90d5268f53d3> ;
+        dc:identifier       "915775.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/e47a4742-ac70-308b-9f9c-c7e89df9fb81> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/image/fe9a608d-3a7b-3657-bf7e-90d5268f53d3>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/915775_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/ceb802cc-4293-4ce0-b7c1-512ea2fca109.jpg> .

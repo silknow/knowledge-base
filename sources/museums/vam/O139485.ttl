@@ -1,0 +1,108 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Silk plush" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87> .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/5bb9938b-7603-382b-b1e7-009d951cdf4f>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2015HR7932" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O139485_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2015HR/2015HR7932.jpg> .
+
+<http://data.silknow.org/image/09f33591-0bc2-379a-998f-daf191d156d8>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2019LX1078" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O139485_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2019LX/2019LX1078.jpg> .
+
+<http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Textiles and Fashion Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87> ;
+        ecrm:P78_is_identified_by  "Textiles and Fashion Collection" .
+
+<http://data.silknow.org/production/5fd59270-947d-372e-b9bb-fa7e31c9d137>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87> ;
+        ecrm:P126_employed      "silk plush"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1851> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/5fd59270-947d-372e-b9bb-fa7e31c9d137/activity/1> .
+
+<http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Black plush"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/actor/c38f580e-6ddb-394e-bcdc-bc31b97335d1>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Mafsing Freres Huber et Cie" ;
+        ecrm:P1_is_identified_by  "Mafsing Freres Huber et Cie" .
+
+<http://data.silknow.org/production/5fd59270-947d-372e-b9bb-fa7e31c9d137/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/c38f580e-6ddb-394e-bcdc-bc31b97335d1> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
+
+<http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Black plush"@en , "Piece of black silk plush"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/d7b5d7f0-1cbc-3aec-a1e9-746ae8c34fa0> , <http://data.silknow.org/image/09f33591-0bc2-379a-998f-daf191d156d8> , <http://data.silknow.org/image/5bb9938b-7603-382b-b1e7-009d951cdf4f> ;
+        ecrm:P3_has_note               "Piece of black silk plush"@en , "Black plush"@en ;
+        dc:identifier                  "AP.373:1" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O139485> .
+
+<http://data.silknow.org/event/b6fd2453-44f0-3147-b41e-74c697e31138>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/9f754a5e-c7d0-330f-911a-d302bc51b71e> .
+
+<http://data.silknow.org/object/9f754a5e-c7d0-330f-911a-d302bc51b71e>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O139485" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/5fd59270-947d-372e-b9bb-fa7e31c9d137> , <http://data.silknow.org/collection/461f5c7a-9b6a-38ab-ab63-fe453c1336b3> , <http://data.silknow.org/image/5bb9938b-7603-382b-b1e7-009d951cdf4f> , <http://data.silknow.org/event/b6fd2453-44f0-3147-b41e-74c697e31138> , <http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87/observation/1> , <http://data.silknow.org/image/09f33591-0bc2-379a-998f-daf191d156d8> , <http://data.silknow.org/image/d7b5d7f0-1cbc-3aec-a1e9-746ae8c34fa0> , <http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87/observation/2> , <http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87> , <http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87/domain/1> ;
+        dc:identifier       "O139485.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/image/d7b5d7f0-1cbc-3aec-a1e9-746ae8c34fa0>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2015HR7933" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O139485_2.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2015HR/2015HR7933.jpg> .
+
+<http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87> .
+
+<http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Piece of black silk plush"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/20a9c9bc-086a-3aa2-9b81-669eda078d87> .

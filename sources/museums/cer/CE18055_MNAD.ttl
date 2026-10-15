@@ -1,0 +1,90 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Contemporánea   Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f> .
+
+<http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Nacimientos" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f> .
+
+<http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Figura de Nacimiento" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f> .
+
+<http://data.silknow.org/event/e4cfdc25-1ffb-3d24-88e9-c3d6446b3497>
+        a       ecrm:E8_Acquisition .
+
+<https://sws.geonames.org/3172395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/a52b79a0-52e3-376b-9cdf-63318624d40f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f> .
+
+<http://data.silknow.org/image/ff4ab1a1-a83e-3463-90a1-eef68dd3923e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE18055" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE18055_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE18055&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/df145486-cd35-3a01-8340-9fafe6921334>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE18055" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/e4cfdc25-1ffb-3d24-88e9-c3d6446b3497> , <http://data.silknow.org/event/a52b79a0-52e3-376b-9cdf-63318624d40f> , <http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f/domain/1> , <http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f/observation/2> , <http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f> , <http://data.silknow.org/image/ff4ab1a1-a83e-3463-90a1-eef68dd3923e> , <http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f/category/1> , <http://data.silknow.org/production/21f19260-503e-32a5-8a64-0d468672b757> , <http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f/observation/1> ;
+        dc:identifier       "CE18055_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/production/21f19260-503e-32a5-8a64-0d468672b757>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f> ;
+        ecrm:P126_employed      "Madera"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/488> , <http://data.silknow.org/vocabulary/214> , <http://data.silknow.org/vocabulary/617> , <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "Pintado"@es , "Tafetán"@es , "Sarga"@es , "Serrado"@es , "Talla (madera)"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3172395/> .
+
+<http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Edad Contemporánea   Edad Moderna"@es , "Figura masculina de madera policromada atornillada a una base de madera que parece sentada sobre un rollo de soga. Se encuentra vestida con una chaqueta de tafetán de fibra vegetal en su color natural tostado, las partes delanteras van forradas en tafetán de algodón estampado con motivos geométricos en blanco y amarillo sobre fondo marrón oscuro. Las faldillas traseras van forradas en tafetán de algodón a rayas azules, la espalda no se encuentra forrada. Posee una camisa de tafetán de lino de color crudo, sin mangas con cuello recto y botón. Aparece una faja en la cintura de sarga de seda en color rojo. Pantalón en tafetán de lino de color gris, anudado por debajo de las rodillas con cintas de seda de color crudo, tiene abertura delantera y trasera que se cierran con costura. Medias de punto de media en algodón de color blanco. Alpargatas de yute con cordón trenzado en espiguilla de algodón de color negro."@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ff4ab1a1-a83e-3463-90a1-eef68dd3923e> ;
+        ecrm:P3_has_note               "Edad Contemporánea   Edad Moderna"@es , "Figura masculina de madera policromada atornillada a una base de madera que parece sentada sobre un rollo de soga. Se encuentra vestida con una chaqueta de tafetán de fibra vegetal en su color natural tostado, las partes delanteras van forradas en tafetán de algodón estampado con motivos geométricos en blanco y amarillo sobre fondo marrón oscuro. Las faldillas traseras van forradas en tafetán de algodón a rayas azules, la espalda no se encuentra forrada. Posee una camisa de tafetán de lino de color crudo, sin mangas con cuello recto y botón. Aparece una faja en la cintura de sarga de seda en color rojo. Pantalón en tafetán de lino de color gris, anudado por debajo de las rodillas con cintas de seda de color crudo, tiene abertura delantera y trasera que se cierran con costura. Medias de punto de media en algodón de color blanco. Alpargatas de yute con cordón trenzado en espiguilla de algodón de color negro."@es ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/349181c3-ba25-30bd-b3ab-00b6686931c0> ;
+        dc:identifier                  "CE18055" .
+
+<http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Figura masculina de madera policromada atornillada a una base de madera que parece sentada sobre un rollo de soga. Se encuentra vestida con una chaqueta de tafetán de fibra vegetal en su color natural tostado, las partes delanteras van forradas en tafetán de algodón estampado con motivos geométricos en blanco y amarillo sobre fondo marrón oscuro. Las faldillas traseras van forradas en tafetán de algodón a rayas azules, la espalda no se encuentra forrada. Posee una camisa de tafetán de lino de color crudo, sin mangas con cuello recto y botón. Aparece una faja en la cintura de sarga de seda en color rojo. Pantalón en tafetán de lino de color gris, anudado por debajo de las rodillas con cintas de seda de color crudo, tiene abertura delantera y trasera que se cierran con costura. Medias de punto de media en algodón de color blanco. Alpargatas de yute con cordón trenzado en espiguilla de algodón de color negro."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/821f599d-581c-360c-abab-52cd7f5d581f> .
+
+<http://data.silknow.org/image/349181c3-ba25-30bd-b3ab-00b6686931c0>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "Figura masculina"@es ;
+        ecrm:P3_has_note  "Figura masculina"@es .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/df145486-cd35-3a01-8340-9fafe6921334> .

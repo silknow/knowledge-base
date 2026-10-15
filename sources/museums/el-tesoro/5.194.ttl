@@ -1,0 +1,78 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/632a0fe8-14d2-3059-9aba-5e88ce58a432> .
+
+<http://data.silknow.org/production/a76bc2d1-a491-3fbc-992b-64d73adc72b9>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/a14d00d8-446e-3a9d-8fa3-712be574c4d7> ;
+        ecrm:P126_employed      "Hilo de seda. Tafetán. Piel. Encaje de tul."@es ;
+        ecrm:P32_used_general_technique
+                "Labores de costura."@es ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/a76bc2d1-a491-3fbc-992b-64d73adc72b9/activity/1> .
+
+<http://data.silknow.org/object/632a0fe8-14d2-3059-9aba-5e88ce58a432>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.194" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/a14d00d8-446e-3a9d-8fa3-712be574c4d7> , <http://data.silknow.org/production/a76bc2d1-a491-3fbc-992b-64d73adc72b9> , <http://data.silknow.org/assessment/c2bea345-3a13-3aa2-9b29-a47fc2b5c3b7> , <http://data.silknow.org/object/a14d00d8-446e-3a9d-8fa3-712be574c4d7/type/1> , <http://data.silknow.org/image/796692fd-36b5-3aca-b294-37a1c8d32755> , <http://data.silknow.org/object/a14d00d8-446e-3a9d-8fa3-712be574c4d7/observation/1> ;
+        dc:identifier       "5.194.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/actor/ec16016d-fa72-33f4-b5f1-d01e26029fdf>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo. Madrid" ;
+        ecrm:P1_is_identified_by  "Anónimo. Madrid" .
+
+<http://data.silknow.org/object/a14d00d8-446e-3a9d-8fa3-712be574c4d7/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/a14d00d8-446e-3a9d-8fa3-712be574c4d7> ;
+        ecrm:P42_assigned    "Traje" .
+
+<http://data.silknow.org/assessment/c2bea345-3a13-3aa2-9b29-a47fc2b5c3b7>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/a14d00d8-446e-3a9d-8fa3-712be574c4d7> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/c2bea345-3a13-3aa2-9b29-a47fc2b5c3b7/condition/1> .
+
+<http://data.silknow.org/object/a14d00d8-446e-3a9d-8fa3-712be574c4d7/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    "Otros datos de interés" ;
+        ecrm:P3_has_note    "*Procedente de colección particular."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/a14d00d8-446e-3a9d-8fa3-712be574c4d7> .
+
+<http://data.silknow.org/assessment/c2bea345-3a13-3aa2-9b29-a47fc2b5c3b7/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Regular. No se recomienda su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Regular. No se recomienda su uso."@es .
+
+<http://data.silknow.org/image/796692fd-36b5-3aca-b294-37a1c8d32755>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "5.194" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/el-tesoro/5.194_0.jpg> .
+
+<http://data.silknow.org/object/a14d00d8-446e-3a9d-8fa3-712be574c4d7>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "*Procedente de colección particular."@es ;
+        ecrm:P128_carries              [ a                 ecrm:E34_Inscription ;
+                                         rdfs:comment      "Ninguna."@es ;
+                                         ecrm:P3_has_note  "Ninguna."@es
+                                       ] ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/796692fd-36b5-3aca-b294-37a1c8d32755> ;
+        ecrm:P3_has_note               "*Procedente de colección particular."@es ;
+        dc:identifier                  "5.194" .
+
+<http://data.silknow.org/production/a76bc2d1-a491-3fbc-992b-64d73adc72b9/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/ec16016d-fa72-33f4-b5f1-d01e26029fdf> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .

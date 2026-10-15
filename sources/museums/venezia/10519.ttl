@@ -1,0 +1,81 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/362ab225-70ce-3109-8f36-a17ab1931a1f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240> .
+
+<http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "49" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "49"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240> .
+
+<http://data.silknow.org/production/64fa309e-8269-30b2-a6a5-049b5f2edb53>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1780_1799> .
+
+<http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/578a038a-1888-3c69-b866-2ab485922f20> .
+
+<http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "21"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Armatura di raso/disegno per trame broccate in giallo, blu, azzurro, verde e bianco.\nSu fondo rosa disegno a delicati motivi floreali di eriche e garofani"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240> .
+
+<http://data.silknow.org/image/ff1d73c4-82a6-388a-87dc-0672f1f06be7>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/10519_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5NBYVeE4CB4ol%2fet6t%2bD13UQliMFI3GnbscAh2TGA%2b4VPt06KVBk1ZUU%2bXoD2GnrIvFr6EHG4Vj7AGAHeezHsBXYtExCv79FwQfmswUbzlocM%2fungedlMeA%3d%3d> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Armatura di raso/disegno per trame broccate in giallo, blu, azzurro, verde e bianco.\nSu fondo rosa disegno a delicati motivi floreali di eriche e garofani"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/ff1d73c4-82a6-388a-87dc-0672f1f06be7> ;
+        ecrm:P3_has_note               "Armatura di raso/disegno per trame broccate in giallo, blu, azzurro, verde e bianco.\nSu fondo rosa disegno a delicati motivi floreali di eriche e garofani"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240/dimension/1> , <http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 0685" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/10519/?WEB=MuseiVE> .
+
+<http://data.silknow.org/object/578a038a-1888-3c69-b866-2ab485922f20>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 10519" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240/observation/1> , <http://data.silknow.org/event/362ab225-70ce-3109-8f36-a17ab1931a1f> , <http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240> , <http://data.silknow.org/image/ff1d73c4-82a6-388a-87dc-0672f1f06be7> , <http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240/domain/1> , <http://data.silknow.org/object/46bde8c0-4972-37e4-85e1-d41378b30240/category/1> , <http://data.silknow.org/production/64fa309e-8269-30b2-a6a5-049b5f2edb53> ;
+        dc:identifier       "10519.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .

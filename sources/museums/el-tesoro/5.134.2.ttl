@@ -1,0 +1,68 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/el-tesoro>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4f279479-90c6-35d2-9e28-61024d35e3f2> .
+
+<http://data.silknow.org/assessment/2951b8b6-25f4-347c-81a4-5dc47587f6bd/condition/1>
+        a                 ecrm:E3_Condition_State ;
+        rdfs:comment      "Bueno. Apto para su uso."@es ;
+        ecrm:P2_has_type  "Estado de conservación" ;
+        ecrm:P3_has_note  "Bueno. Apto para su uso."@es .
+
+<http://data.silknow.org/object/dd26964c-48b2-3235-82f3-0db2b40435fc/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Denominación" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/dd26964c-48b2-3235-82f3-0db2b40435fc> ;
+        ecrm:P42_assigned    "Terno (Planetas)" .
+
+<http://data.silknow.org/object/dd26964c-48b2-3235-82f3-0db2b40435fc>
+        a                  ecrm:E22_Man-Made_Object ;
+        ecrm:P128_carries  [ a                 ecrm:E34_Inscription ;
+                             rdfs:comment      "Ninguna."@es ;
+                             ecrm:P3_has_note  "Ninguna."@es
+                           ] ;
+        dc:identifier      "5.134.2" .
+
+<http://data.silknow.org/object/4f279479-90c6-35d2-9e28-61024d35e3f2>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5.134.2" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/4edf2ccf-a0bc-3042-b069-3babf33a1e8a> , <http://data.silknow.org/object/dd26964c-48b2-3235-82f3-0db2b40435fc> , <http://data.silknow.org/assessment/2951b8b6-25f4-347c-81a4-5dc47587f6bd> , <http://data.silknow.org/object/dd26964c-48b2-3235-82f3-0db2b40435fc/type/1> ;
+        dc:identifier       "5.134.2.json" ;
+        dc:publisher        "http://data.silknow.org/organization/el-tesoro" .
+
+<http://data.silknow.org/assessment/2951b8b6-25f4-347c-81a4-5dc47587f6bd>
+        a                        ecrm:E14_Condition_Assessment ;
+        ecrm:P34_concerned       <http://data.silknow.org/object/dd26964c-48b2-3235-82f3-0db2b40435fc> ;
+        ecrm:P35_has_identified  <http://data.silknow.org/assessment/2951b8b6-25f4-347c-81a4-5dc47587f6bd/condition/1> .
+
+<http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Anónimo" ;
+        ecrm:P1_is_identified_by  "Anónimo" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045302644X> , <https://viaf.org/viaf/79121930> , <http://dbpedia.org/resource/Longinus_(literature)> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Longinus_(literature)> .
+
+<http://data.silknow.org/production/4edf2ccf-a0bc-3042-b069-3babf33a1e8a>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/dd26964c-48b2-3235-82f3-0db2b40435fc> ;
+        ecrm:P126_employed      "Hilo de seda morado. Galón de oro."@es ;
+        ecrm:P32_used_general_technique
+                "Terciopelo."@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1791> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/4edf2ccf-a0bc-3042-b069-3babf33a1e8a/activity/1> .
+
+<http://data.silknow.org/production/4edf2ccf-a0bc-3042-b069-3babf33a1e8a/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/89f254ca-56e8-325f-b240-c9ec3aaf71b2> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .

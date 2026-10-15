@@ -1,0 +1,75 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<https://sws.geonames.org/1861060/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/469a7255-5c85-3991-a6e6-ec42e4167828>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/d8740d3a-48b4-3422-8eb5-932bb0a9e64e> .
+
+<http://data.silknow.org/event/c9b87228-c37d-30b6-9b78-94960dfc4229>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/94c4710b-032a-30b9-9a32-b03613549296> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Winthrop W. Aldrich" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/d8740d3a-48b4-3422-8eb5-932bb0a9e64e> .
+
+<http://data.silknow.org/object/d8740d3a-48b4-3422-8eb5-932bb0a9e64e>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "64.073" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-64073> .
+
+<http://data.silknow.org/actor/94c4710b-032a-30b9-9a32-b03613549296>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Winthrop W. Aldrich" ;
+        ecrm:P1_is_identified_by  "Gift of Winthrop W. Aldrich" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Winthrop_W._Aldrich> , <https://viaf.org/viaf/67928752> , <https://isni.org/isni/0000000025562852> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Winthrop_W._Aldrich> .
+
+<http://data.silknow.org/object/d8740d3a-48b4-3422-8eb5-932bb0a9e64e/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d8740d3a-48b4-3422-8eb5-932bb0a9e64e> .
+
+<http://data.silknow.org/object/d8740d3a-48b4-3422-8eb5-932bb0a9e64e/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/d8740d3a-48b4-3422-8eb5-932bb0a9e64e> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/production/0e4e274f-46bf-38fd-b353-efe45e3ce495>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/d8740d3a-48b4-3422-8eb5-932bb0a9e64e> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1725> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/1861060/> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/bad52851-e328-321a-8252-dc3cb40b5be8> .
+
+<http://data.silknow.org/object/bad52851-e328-321a-8252-dc3cb40b5be8>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 64.073" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/c9b87228-c37d-30b6-9b78-94960dfc4229> , <http://data.silknow.org/production/0e4e274f-46bf-38fd-b353-efe45e3ce495> , <http://data.silknow.org/object/d8740d3a-48b4-3422-8eb5-932bb0a9e64e/category/1> , <http://data.silknow.org/event/469a7255-5c85-3991-a6e6-ec42e4167828> , <http://data.silknow.org/object/d8740d3a-48b4-3422-8eb5-932bb0a9e64e/domain/1> , <http://data.silknow.org/object/d8740d3a-48b4-3422-8eb5-932bb0a9e64e> ;
+        dc:identifier       "1054126.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .

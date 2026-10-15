@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/c4d91f26-7d67-3e0c-9462-b75d0d81f196>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don François Lesage, 2001" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5509e261-08ee-32fd-bf54-cfabbcc186c9> .
+
+<http://data.silknow.org/object/5509e261-08ee-32fd-bf54-cfabbcc186c9>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "échantillon, Lesage, Paris, 1968, collection printemps-été, Pierre Balmain, collection été, 1968"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/414b0fba-9106-3d09-b39c-711227e0b011> ;
+        dc:identifier                  "2001.144.37" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908431> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/image/414b0fba-9106-3d09-b39c-711227e0b011>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908431_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/b579755d-18cc-4a4f-a3fe-7b1f7c6afcaa.jpg> .
+
+<http://data.silknow.org/production/32a3c320-62de-3157-ab2d-5375a6a3694c>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "Lesage, Paris, 1968, collection printemps-été, Pierre Balmain, collection été, 1968" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5509e261-08ee-32fd-bf54-cfabbcc186c9> ;
+        ecrm:P126_employed      "Organdi, broderie allover de perles de bois, tubes et strass."@fr ;
+        ecrm:P3_has_note        "Lesage, Paris, 1968, collection printemps-été, Pierre Balmain, collection été, 1968" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1968> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6052725/> , <https://sws.geonames.org/2988507/> .
+
+<https://sws.geonames.org/6052725/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/5509e261-08ee-32fd-bf54-cfabbcc186c9/category/1>
+        a                    silk:T35 ;
+        silk:L1              "échantillon" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5509e261-08ee-32fd-bf54-cfabbcc186c9> .
+
+<http://data.silknow.org/object/4e1028a8-bef9-395c-94d3-80649eecb55b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2001.144.37" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/414b0fba-9106-3d09-b39c-711227e0b011> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/5509e261-08ee-32fd-bf54-cfabbcc186c9> , <http://data.silknow.org/production/32a3c320-62de-3157-ab2d-5375a6a3694c> , <http://data.silknow.org/event/c4d91f26-7d67-3e0c-9462-b75d0d81f196> , <http://data.silknow.org/object/5509e261-08ee-32fd-bf54-cfabbcc186c9/category/1> ;
+        dc:identifier       "908431.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/4e1028a8-bef9-395c-94d3-80649eecb55b> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/5509e261-08ee-32fd-bf54-cfabbcc186c9> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<https://sws.geonames.org/2988507/>
+        a       ecrm:E53_Place .

@@ -1,0 +1,129 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/8a57a573-bd2b-305f-8681-cf6dc6dbf121>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663> .
+
+<http://data.silknow.org/actor/1a4cb0bb-56b1-38a0-8232-26bf102c1152>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Nanette B. Kelekian, in honor of Olga Raggio" ;
+        ecrm:P1_is_identified_by  "Gift of Nanette B. Kelekian, in honor of Olga Raggio" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/Olga_Raggio> , <https://viaf.org/viaf/31995288> , <https://isni.org/isni/0000000083690908> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/Olga_Raggio> .
+
+<http://data.silknow.org/production/0c42267c-a8e0-3364-9f35-30bcc512d518>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663> ;
+        ecrm:P126_employed      "Silk, metal thread"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> , <http://data.silknow.org/vocabulary/857> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/bd020424-99b0-3ab9-98ff-0d64f20dd628> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2750405/> .
+
+<http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "European Sculpture and Decorative Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663> ;
+        ecrm:P78_is_identified_by  "European Sculpture and Decorative Arts" .
+
+<https://sws.geonames.org/2750405/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "14.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "14.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tapestry fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663> .
+
+<http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a15deb37-1b15-34ce-8fe2-f2a36b2e5af4> ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663/dimension/2> , <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663/dimension/1> ;
+        dc:identifier                  "2002.494.622" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.metmuseum.org/art/collection/search/230643> .
+
+<http://data.silknow.org/image/a15deb37-1b15-34ce-8fe2-f2a36b2e5af4>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/met-museum/230643_0.jpg> , <https://collectionapi.metmuseum.org/api/collection/v1/iiif/230643/446081/main-image> .
+
+<http://data.silknow.org/object/d8c29a1a-9637-3063-8200-f9f1436bf4a9>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 230643" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/0c42267c-a8e0-3364-9f35-30bcc512d518> , <http://data.silknow.org/image/a15deb37-1b15-34ce-8fe2-f2a36b2e5af4> , <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663/category/1> , <http://data.silknow.org/event/7039f9eb-e34d-3a67-b576-bdefa0079d36> , <http://data.silknow.org/object/4bec50d3-4e4f-37ac-9e6d-459ca01c7f24> , <http://data.silknow.org/object/98d0f8c4-849d-3987-9525-860f0520a56d> , <http://data.silknow.org/collection/ec0f9a6f-7b69-31c4-80a6-c0a9cde663a5> , <http://data.silknow.org/event/8a57a573-bd2b-305f-8681-cf6dc6dbf121> , <http://data.silknow.org/object/dff60f6e-aa16-3c72-9eb0-c9623d34f09e> , <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663> , <http://data.silknow.org/object/90b93732-db4f-3857-a9aa-abc4133aec28> , <http://data.silknow.org/object/bcf552b0-0f22-3626-b6ee-677ddbdfc1ab> ;
+        dc:identifier       "230643.json" ;
+        dc:publisher        "http://data.silknow.org/organization/met" .
+
+<http://data.silknow.org/object/4bec50d3-4e4f-37ac-9e6d-459ca01c7f24>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/a7aa9f95-0091-32aa-8d49-302cd03a2059> .
+
+<http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/3> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663> .
+
+<http://data.silknow.org/object/bcf552b0-0f22-3626-b6ee-677ddbdfc1ab>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/dee7545e-c076-393f-a0fc-45ba11b183d2> .
+
+<http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21.3" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "21.3"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/met>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d8c29a1a-9637-3063-8200-f9f1436bf4a9> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/event/7039f9eb-e34d-3a67-b576-bdefa0079d36>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/1a4cb0bb-56b1-38a0-8232-26bf102c1152> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Nanette B. Kelekian, in honor of Olga Raggio, 2002" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663> .
+
+<http://data.silknow.org/object/90b93732-db4f-3857-a9aa-abc4133aec28>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/f5ad2f3f-8dd0-392b-9078-973879de1ae1> .
+
+<http://data.silknow.org/object/98d0f8c4-849d-3987-9525-860f0520a56d>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/97f785cd-a4a8-3724-850b-25dbe2d7ec5e> .
+
+<http://data.silknow.org/object/dff60f6e-aa16-3c72-9eb0-c9623d34f09e>
+        a                   ecrm:E89_Propositional_Object ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/f2c49704-5265-3e9e-b060-5adbae554663> ;
+        ecrm:P67_refers_to  <http://data.silknow.org/object/6e3a3a6a-7f16-33b5-bbcd-7cd62f1aceac> .

@@ -1,0 +1,73 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/5e489f9a-6e4f-37fe-bbbe-2741c2d23707> .
+
+<http://data.silknow.org/event/5254ab5a-bf48-3e0c-b0e1-513d6df72fb8>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/70ef1fde-4dd8-30c6-bb53-ee8364ce666a> .
+
+<http://data.silknow.org/object/70ef1fde-4dd8-30c6-bb53-ee8364ce666a/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/70ef1fde-4dd8-30c6-bb53-ee8364ce666a> .
+
+<http://data.silknow.org/object/70ef1fde-4dd8-30c6-bb53-ee8364ce666a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/70ef1fde-4dd8-30c6-bb53-ee8364ce666a> .
+
+<http://data.silknow.org/event/549f6117-8c53-37d6-bb7f-dc07926bca57>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/70ef1fde-4dd8-30c6-bb53-ee8364ce666a> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/image/a6211991-923d-3c4f-93f5-2e795d6392ac>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000002472" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/5151_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000002472.jpg> .
+
+<http://data.silknow.org/object/5e489f9a-6e4f-37fe-bbbe-2741c2d23707>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 5151" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/a6211991-923d-3c4f-93f5-2e795d6392ac> , <http://data.silknow.org/object/70ef1fde-4dd8-30c6-bb53-ee8364ce666a/domain/1> , <http://data.silknow.org/production/bdc76bed-e32f-3206-8313-cc4f18cbe550> , <http://data.silknow.org/event/549f6117-8c53-37d6-bb7f-dc07926bca57> , <http://data.silknow.org/object/70ef1fde-4dd8-30c6-bb53-ee8364ce666a> , <http://data.silknow.org/object/70ef1fde-4dd8-30c6-bb53-ee8364ce666a/category/1> , <http://data.silknow.org/event/5254ab5a-bf48-3e0c-b0e1-513d6df72fb8> ;
+        dc:identifier       "5151.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/production/bdc76bed-e32f-3206-8313-cc4f18cbe550>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/70ef1fde-4dd8-30c6-bb53-ee8364ce666a> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://vocab.getty.edu/aat/300404511> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2510769/> , <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/object/70ef1fde-4dd8-30c6-bb53-ee8364ce666a>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a6211991-923d-3c4f-93f5-2e795d6392ac> ;
+        dc:identifier                  "21387" .
+
+<https://sws.geonames.org/2510769/>
+        a       ecrm:E53_Place .

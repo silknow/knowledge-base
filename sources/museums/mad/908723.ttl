@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/5136470f-993d-3de3-ab16-e52363717bae>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "pente de lit, France, Louis XIV (époq.)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/472f6c96-f64b-352f-8a36-c7fa83dc4352> ;
+        dc:identifier                  "56955.D" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/908723> .
+
+<http://data.silknow.org/object/5136470f-993d-3de3-ab16-e52363717bae/category/1>
+        a                    silk:T35 ;
+        silk:L1              "pente de lit" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5136470f-993d-3de3-ab16-e52363717bae> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/fa1471c6-622d-3c68-a369-2a83c1562af1>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Achat, 1986" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5136470f-993d-3de3-ab16-e52363717bae> .
+
+<http://data.silknow.org/object/2cfc7d44-9a58-3970-8d6b-f28de2e59515>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 56955.D" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/event/fa1471c6-622d-3c68-a369-2a83c1562af1> , <http://data.silknow.org/production/e5930f8d-024c-3750-82fc-d65d067330cf> , <http://data.silknow.org/object/5136470f-993d-3de3-ab16-e52363717bae/category/1> , <http://data.silknow.org/object/5136470f-993d-3de3-ab16-e52363717bae> , <http://data.silknow.org/image/472f6c96-f64b-352f-8a36-c7fa83dc4352> ;
+        dc:identifier       "908723.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/2cfc7d44-9a58-3970-8d6b-f28de2e59515> .
+
+<http://data.silknow.org/image/472f6c96-f64b-352f-8a36-c7fa83dc4352>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/908723_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/eaeffa57-692e-4577-a617-40ef248cf5b8.jpg> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/5136470f-993d-3de3-ab16-e52363717bae> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/production/e5930f8d-024c-3750-82fc-d65d067330cf>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, Louis XIV (époq.)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5136470f-993d-3de3-ab16-e52363717bae> ;
+        ecrm:P3_has_note        "France, Louis XIV (époq.)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/2bf3472f-deb9-3be0-8763-bf0f09040200> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> .

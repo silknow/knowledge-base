@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/705b161e-6864-35e8-a3ca-6a98e1b87e54/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/705b161e-6864-35e8-a3ca-6a98e1b87e54> .
+
+<http://data.silknow.org/object/705b161e-6864-35e8-a3ca-6a98e1b87e54/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/705b161e-6864-35e8-a3ca-6a98e1b87e54> .
+
+<http://data.silknow.org/actor/81a96f38-7b2b-3ae3-8230-512a54df0f28>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Hellmuth Wallach" ;
+        ecrm:P1_is_identified_by  "Gift of Hellmuth Wallach" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/45093467> , <https://isni.org/isni/0000000014030498> .
+
+<http://data.silknow.org/event/3bc2508e-bee3-377a-8c94-2046b6366a37>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/81a96f38-7b2b-3ae3-8230-512a54df0f28> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Hellmuth Wallach" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/705b161e-6864-35e8-a3ca-6a98e1b87e54> .
+
+<http://data.silknow.org/object/705b161e-6864-35e8-a3ca-6a98e1b87e54>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "48.028" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-48028> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/production/aa86f71a-34ad-332f-997a-93af35069a58>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/705b161e-6864-35e8-a3ca-6a98e1b87e54> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/858f7ad8-8682-37d6-8b5f-c22b844f5a6b> .
+
+<http://data.silknow.org/object/858f7ad8-8682-37d6-8b5f-c22b844f5a6b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 48.028" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/705b161e-6864-35e8-a3ca-6a98e1b87e54/domain/1> , <http://data.silknow.org/object/705b161e-6864-35e8-a3ca-6a98e1b87e54> , <http://data.silknow.org/event/3bc2508e-bee3-377a-8c94-2046b6366a37> , <http://data.silknow.org/production/aa86f71a-34ad-332f-997a-93af35069a58> , <http://data.silknow.org/event/d3b3ab5d-cb64-38ac-86ae-cb514dd2724e> , <http://data.silknow.org/object/705b161e-6864-35e8-a3ca-6a98e1b87e54/category/1> ;
+        dc:identifier       "1036586.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/event/d3b3ab5d-cb64-38ac-86ae-cb514dd2724e>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/705b161e-6864-35e8-a3ca-6a98e1b87e54> .

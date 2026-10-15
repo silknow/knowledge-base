@@ -1,0 +1,65 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/df20d2a6-ab06-3016-a1c2-c88df5c78c65> .
+
+<http://data.silknow.org/production/44300842-2956-3e7f-b335-93ca1c8a5bfe>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/28a42f87-c8e2-36f3-aee5-ed7b74d40563> ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "teixit llavorat"@ca , "vellut"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404511> .
+
+<http://data.silknow.org/object/28a42f87-c8e2-36f3-aee5-ed7b74d40563/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/28a42f87-c8e2-36f3-aee5-ed7b74d40563> .
+
+<http://data.silknow.org/object/28a42f87-c8e2-36f3-aee5-ed7b74d40563/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/28a42f87-c8e2-36f3-aee5-ed7b74d40563> .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/object/df20d2a6-ab06-3016-a1c2-c88df5c78c65>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 28104" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/28a42f87-c8e2-36f3-aee5-ed7b74d40563/category/1> , <http://data.silknow.org/production/44300842-2956-3e7f-b335-93ca1c8a5bfe> , <http://data.silknow.org/event/d7ecb236-ea68-3095-883a-5c08d6cab217> , <http://data.silknow.org/event/e7109e47-22b4-313d-a374-5e26aab5f8d5> , <http://data.silknow.org/object/28a42f87-c8e2-36f3-aee5-ed7b74d40563> , <http://data.silknow.org/image/e530e8b6-2d16-3a5b-acd0-59f35a7d9e40> , <http://data.silknow.org/object/28a42f87-c8e2-36f3-aee5-ed7b74d40563/domain/1> ;
+        dc:identifier       "28104.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/image/e530e8b6-2d16-3a5b-acd0-59f35a7d9e40>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000033844" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/28104_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000033844.jpg> .
+
+<http://data.silknow.org/event/e7109e47-22b4-313d-a374-5e26aab5f8d5>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/28a42f87-c8e2-36f3-aee5-ed7b74d40563> .
+
+<http://data.silknow.org/event/d7ecb236-ea68-3095-883a-5c08d6cab217>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/28a42f87-c8e2-36f3-aee5-ed7b74d40563> .
+
+<http://data.silknow.org/object/28a42f87-c8e2-36f3-aee5-ed7b74d40563>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/e530e8b6-2d16-3a5b-acd0-59f35a7d9e40> ;
+        dc:identifier                  "16568" .

@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/4e830a35-1f6a-3847-ae38-592f0b62be70/right>
+        a                      ecrm:E30_Right ;
+        rdfs:comment           "Besson Sylvain"@fr ;
+        ecrm:P104i_applies_to  <http://data.silknow.org/object/4e830a35-1f6a-3847-ae38-592f0b62be70> ;
+        ecrm:P3_has_note       "Besson Sylvain"@fr .
+
+<http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée d'Art et d'Industrie" ;
+        ecrm:P1_is_identified_by  "Musée d'Art et d'Industrie" .
+
+<http://data.silknow.org/musee-st-etienne>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/3ce4a622-186a-3f70-b165-ca727c972e47> .
+
+<http://data.silknow.org/object/4e830a35-1f6a-3847-ae38-592f0b62be70>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "Palmettes"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/79acfd30-215e-3438-a468-92faa85850c2> ;
+        dc:identifier                  "95.71.200" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <> .
+
+<http://data.silknow.org/object/3ce4a622-186a-3f70-b165-ca727c972e47>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 95.71.200" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/79acfd30-215e-3438-a468-92faa85850c2> , <http://data.silknow.org/production/ac7fd000-9eee-3dc5-9383-359ccbc6a0bb> , <http://data.silknow.org/event/b72881c4-b772-3e5d-827c-d530807b05bb> , <http://data.silknow.org/object/058d204e-7a3d-3552-a553-c11325cee85c> , <http://data.silknow.org/object/4e830a35-1f6a-3847-ae38-592f0b62be70/type/1> , <http://data.silknow.org/object/4e830a35-1f6a-3847-ae38-592f0b62be70/right> , <http://data.silknow.org/object/4e830a35-1f6a-3847-ae38-592f0b62be70> ;
+        dc:identifier       "95.71.200.json" ;
+        dc:publisher        "http://data.silknow.org/organization/musee-st-etienne" .
+
+<http://data.silknow.org/image/79acfd30-215e-3438-a468-92faa85850c2>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/st-etienne/95.71.200_0.jpg> .
+
+<http://data.silknow.org/event/b72881c4-b772-3e5d-827c-d530807b05bb>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/61063e61-00b8-3e89-8b95-8847ffa7ec51> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/4e830a35-1f6a-3847-ae38-592f0b62be70> .
+
+<http://data.silknow.org/object/058d204e-7a3d-3552-a553-c11325cee85c>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.200.JPG"@fr ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/4e830a35-1f6a-3847-ae38-592f0b62be70> ;
+        ecrm:P2_has_type    <http://data.silknow.org/information/bibliography> ;
+        ecrm:P3_has_note    "© Studio Caterin, Musée d'Art et d'Industrie (42)"@fr , "Studio Caterin"@fr , "95.71.200.JPG"@fr .
+
+<http://data.silknow.org/object/4e830a35-1f6a-3847-ae38-592f0b62be70/type/1>
+        a                    ecrm:E17_Type_Assignment ;
+        ecrm:P2_has_type     "Désignation du bien" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/4e830a35-1f6a-3847-ae38-592f0b62be70> ;
+        ecrm:P42_assigned    "Palmettes" .
+
+<http://data.silknow.org/production/ac7fd000-9eee-3dc5-9383-359ccbc6a0bb>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/4e830a35-1f6a-3847-ae38-592f0b62be70> ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/366> .

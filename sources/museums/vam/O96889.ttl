@@ -1,0 +1,66 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/3f181e9f-86af-3107-964a-c84cbe1fc3dd>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/619b33eb-8ed7-3b4f-9c49-bf39cf17248a> ;
+        ecrm:P126_employed      "silk (textile)"@en ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/526> .
+
+<http://data.silknow.org/object/619b33eb-8ed7-3b4f-9c49-bf39cf17248a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/619b33eb-8ed7-3b4f-9c49-bf39cf17248a> .
+
+<http://data.silknow.org/image/5da815b0-4deb-3522-ae70-064704072494>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MU4920" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O96889_0.jpg> , <https://framemark.vam.ac.uk/collections/2020MU4920/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/0de35daf-a2fc-3835-8cd8-cc6e0a90fc5f>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O96889" ;
+        ecrm:P129_is_about  <http://data.silknow.org/image/5da815b0-4deb-3522-ae70-064704072494> , <http://data.silknow.org/event/41d5ff38-340c-3372-a21d-775098016d9b> , <http://data.silknow.org/object/619b33eb-8ed7-3b4f-9c49-bf39cf17248a/domain/2> , <http://data.silknow.org/image/693f44db-9cfb-3f46-a71f-46a94bdda0c6> , <http://data.silknow.org/production/3f181e9f-86af-3107-964a-c84cbe1fc3dd> , <http://data.silknow.org/object/619b33eb-8ed7-3b4f-9c49-bf39cf17248a> , <http://data.silknow.org/object/619b33eb-8ed7-3b4f-9c49-bf39cf17248a/domain/1> ;
+        dc:identifier       "O96889.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/image/693f44db-9cfb-3f46-a71f-46a94bdda0c6>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2020MU4921" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O96889_1.jpg> , <https://framemark.vam.ac.uk/collections/2020MU4921/full/2200,/0/default.jpg> .
+
+<http://data.silknow.org/object/619b33eb-8ed7-3b4f-9c49-bf39cf17248a/domain/2>
+        a                    silk:T19 ;
+        silk:L4              "Interiors" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/619b33eb-8ed7-3b4f-9c49-bf39cf17248a> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0de35daf-a2fc-3835-8cd8-cc6e0a90fc5f> .
+
+<http://data.silknow.org/event/41d5ff38-340c-3372-a21d-775098016d9b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/619b33eb-8ed7-3b4f-9c49-bf39cf17248a> .
+
+<http://data.silknow.org/object/619b33eb-8ed7-3b4f-9c49-bf39cf17248a>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/5da815b0-4deb-3522-ae70-064704072494> , <http://data.silknow.org/image/693f44db-9cfb-3f46-a71f-46a94bdda0c6> ;
+        dc:identifier                  "T.12-1988" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O96889> .

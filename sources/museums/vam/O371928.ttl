@@ -1,0 +1,139 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/df42596f-25b6-314d-a619-4d3aa2f3d6a1>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Given by John Garwood" ;
+        ecrm:P1_is_identified_by  "Given by John Garwood" .
+
+<http://data.silknow.org/collection/778d4b14-23f7-37f4-b6c4-95e93b3fecc5>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Furniture and Woodwork Collection" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b> ;
+        ecrm:P78_is_identified_by  "Furniture and Woodwork Collection" .
+
+<https://sws.geonames.org/6269131/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/event/f07eb29e-ca90-33e6-8bfc-6c26042be863>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/df42596f-25b6-314d-a619-4d3aa2f3d6a1> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P23_transferred_title_from
+                "Given by John Garwood." ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b> .
+
+<http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Height: 30 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "76.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Work table" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b> .
+
+<http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/observation/3>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "On loan to Bath Preservation Trust at 1 Royal Crescent, Bath."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b> .
+
+<http://data.silknow.org/production/cecb0523-b7df-3d7e-9b3f-03584cf5a13d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b> ;
+        ecrm:P126_employed      "Satinwood with mahogany stringing and brass handles, leather top and silk features."@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "inlay"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1785_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6269131/> .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/30cd5685-df64-33e5-9396-b61402db2311>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O371928" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/observation/1> , <http://data.silknow.org/event/f07eb29e-ca90-33e6-8bfc-6c26042be863> , <http://data.silknow.org/image/83ebdf86-6606-34b5-8d2d-48b9211e761e> , <http://data.silknow.org/production/cecb0523-b7df-3d7e-9b3f-03584cf5a13d> , <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/observation/2> , <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b> , <http://data.silknow.org/image/b7534945-4f5c-37c3-a461-3a2ba1622187> , <http://data.silknow.org/image/7cdd8631-1c51-3b08-af43-4657be3510da> , <http://data.silknow.org/image/5ca9e52c-833c-354d-81af-553a37b458af> , <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/observation/3> , <http://data.silknow.org/collection/778d4b14-23f7-37f4-b6c4-95e93b3fecc5> , <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/domain/1> ;
+        dc:identifier       "O371928.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/image/83ebdf86-6606-34b5-8d2d-48b9211e761e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2015HR2570" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O371928_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2015HR/2015HR2570.jpg> .
+
+<http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/4> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b> .
+
+<http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Work table of satinwood with mahogany stringing lines. A screen with a panel of silk draws up at the back, and below the leather-covered top a slide is hinged at either end. A drawer fitted with small compartments for writing pulls out at one side and on the other there is a work bag of silk attached to a satinwood frame. The frieze is in the form of a false drawer with brass ring handles. The legs are tapered."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b> .
+
+<http://data.silknow.org/image/7cdd8631-1c51-3b08-af43-4657be3510da>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2013GV4824" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O371928_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2013GV/2013GV4824.jpg> .
+
+<http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 19.75 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "50.165"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/5ca9e52c-833c-354d-81af-553a37b458af>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2017KA7096" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O371928_3.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2017KA/2017KA7096.jpg> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/30cd5685-df64-33e5-9396-b61402db2311> .
+
+<http://data.silknow.org/image/b7534945-4f5c-37c3-a461-3a2ba1622187>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2013GV4825" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O371928_2.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2013GV/2013GV4825.jpg> .
+
+<http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Satinwood and mahogany, with silk screen, English, 1785-1800. RF:70/1613"@en , "On loan to Bath Preservation Trust at 1 Royal Crescent, Bath."@en , "Work table of satinwood with mahogany stringing lines. A screen with a panel of silk draws up at the back, and below the leather-covered top a slide is hinged at either end. A drawer fitted with small compartments for writing pulls out at one side and on the other there is a work bag of silk attached to a satinwood frame. The frieze is in the form of a false drawer with brass ring handles. The legs are tapered."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/83ebdf86-6606-34b5-8d2d-48b9211e761e> , <http://data.silknow.org/image/5ca9e52c-833c-354d-81af-553a37b458af> , <http://data.silknow.org/image/b7534945-4f5c-37c3-a461-3a2ba1622187> , <http://data.silknow.org/image/7cdd8631-1c51-3b08-af43-4657be3510da> ;
+        ecrm:P3_has_note               "Work table of satinwood with mahogany stringing lines. A screen with a panel of silk draws up at the back, and below the leather-covered top a slide is hinged at either end. A drawer fitted with small compartments for writing pulls out at one side and on the other there is a work bag of silk attached to a satinwood frame. The frieze is in the form of a false drawer with brass ring handles. The legs are tapered."@en , "On loan to Bath Preservation Trust at 1 Royal Crescent, Bath."@en , "Satinwood and mahogany, with silk screen, English, 1785-1800. RF:70/1613"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/dimension/2> , <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/dimension/3> , <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/dimension/1> ;
+        dc:identifier                  "W.59-1927" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O371928> .
+
+<http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Satinwood and mahogany, with silk screen, English, 1785-1800. RF:70/1613"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b> .
+
+<http://data.silknow.org/object/982f9081-d3ab-3e95-892e-bd8b4f015a3b/dimension/3>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Depth: 15 in" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/depth> ;
+        ecrm:P90_has_value  "38.1"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .

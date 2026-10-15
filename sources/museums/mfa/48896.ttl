@@ -1,0 +1,80 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/ca2ebb5c-c8ff-3f8b-8baf-0023bf1f4bf3>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b> .
+
+<http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b> .
+
+<http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Piece of narrow flounce."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/6e749e67-9490-3a7a-9658-e235f7819718> ;
+        ecrm:P3_has_note               "Piece of narrow flounce."@en ;
+        dc:identifier                  "46.370" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/48896> .
+
+<http://data.silknow.org/image/6e749e67-9490-3a7a-9658-e235f7819718>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "732610" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/48896_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/732610/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Piece of narrow lace flounce" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/production/d3a36ab9-1711-3210-a20b-6914afafd2dc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b> ;
+        ecrm:P126_employed      "Lace"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1801_1825> ;
+        ecrm:P8_took_place_on_or_within
+                <http://data.silknow.org/place/1c23ae65-0c4b-30ae-99f8-445c580d7e4f> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Piece of narrow flounce."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b> .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ab6496ed-0742-3efc-a754-8d2cfb74cf8b> .
+
+<http://data.silknow.org/object/ab6496ed-0742-3efc-a754-8d2cfb74cf8b>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 46.370" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b/observation/1> , <http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b> , <http://data.silknow.org/image/6e749e67-9490-3a7a-9658-e235f7819718> , <http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b/category/1> , <http://data.silknow.org/production/d3a36ab9-1711-3210-a20b-6914afafd2dc> , <http://data.silknow.org/object/93d33e11-809a-3718-a823-cc948fc5b03b/domain/1> , <http://data.silknow.org/event/ca2ebb5c-c8ff-3f8b-8baf-0023bf1f4bf3> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> ;
+        dc:identifier       "48896.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/place/1c23ae65-0c4b-30ae-99f8-445c580d7e4f>
+        a                          ecrm:E53_Place ;
+        rdfs:label                 "Flemish (Mechlin)" ;
+        ecrm:P87_is_identified_by  "Flemish (Mechlin)" .

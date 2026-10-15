@@ -1,0 +1,87 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Silk and linen, compound weave"@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b1c43db6-3853-3705-9d3b-d97e05661d01> ;
+        ecrm:P3_has_note               "Silk and linen, compound weave"@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e/dimension/1> , <http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e/dimension/2> ;
+        dc:identifier                  "1914.661" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/70339/fragment-from-an-orphrey-band> .
+
+<http://data.silknow.org/object/596a3991-74b8-376e-8169-6a6e544eefce>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1914.661" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/33a68f3f-add0-3ca4-8390-75bf086e825f> , <http://data.silknow.org/image/b1c43db6-3853-3705-9d3b-d97e05661d01> , <http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e> , <http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e/observation/1> , <http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e/category/1> , <http://data.silknow.org/production/f9b98fcf-dd02-33dc-a527-941960b2d6f1> ;
+        dc:identifier       "70339.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragment (From an Orphrey Band)" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e> .
+
+<http://data.silknow.org/production/f9b98fcf-dd02-33dc-a527-941960b2d6f1>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404465> , <http://data.silknow.org/timespan/1500> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/image/b1c43db6-3853-3705-9d3b-d97e05661d01>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/artic/70339_0.jpg> , <https://www.artic.edu/iiif/2/c28b2569-aa5c-1641-24b9-49b03f2dd401/full/600,/0/default.jpg> .
+
+<http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "114.4" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "114.4"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/33a68f3f-add0-3ca4-8390-75bf086e825f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/319aae60-0654-343c-b87a-80a0d47f36f0> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Martin A. Ryerson through the Antiquarian Society" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e> .
+
+<http://data.silknow.org/actor/319aae60-0654-343c-b87a-80a0d47f36f0>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Martin A. Ryerson through the Antiquarian Society" ;
+        ecrm:P1_is_identified_by  "Gift of Martin A. Ryerson through the Antiquarian Society" .
+
+<http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21.6" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "21.6"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk and linen, compound weave"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/51d9d57d-9ad5-34c6-8bcf-41c466ac0d9e> .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/596a3991-74b8-376e-8169-6a6e544eefce> .

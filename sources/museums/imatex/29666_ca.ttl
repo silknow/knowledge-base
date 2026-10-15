@@ -1,0 +1,89 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/0091fdf4-f819-37d8-9a14-f78363011586> .
+
+<http://data.silknow.org/object/59982894-c1b4-3fce-b59b-d66d436a2925/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/59982894-c1b4-3fce-b59b-d66d436a2925> .
+
+<http://data.silknow.org/event/25e2f99a-5f4f-30c9-9b03-0175862d8d30>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703> ;
+        ecrm:P23_transferred_title_from
+                "fons antic" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/59982894-c1b4-3fce-b59b-d66d436a2925> .
+
+<http://data.silknow.org/event/cc68e86a-1d5f-3db7-89c7-0026e5098594>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/59982894-c1b4-3fce-b59b-d66d436a2925> .
+
+<http://data.silknow.org/image/94fbee11-37da-3637-8e50-741f7cb9c007>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "bandes ondulants"@ca ;
+        ecrm:P3_has_note  "bandes ondulants"@ca .
+
+<http://data.silknow.org/image/904dd456-2e0d-3cae-8299-098f7651c3b0>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000035479" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29666_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000035479.jpg> .
+
+<http://data.silknow.org/object/0091fdf4-f819-37d8-9a14-f78363011586>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29666" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/59982894-c1b4-3fce-b59b-d66d436a2925/domain/1> , <http://data.silknow.org/event/25e2f99a-5f4f-30c9-9b03-0175862d8d30> , <http://data.silknow.org/event/cc68e86a-1d5f-3db7-89c7-0026e5098594> , <http://data.silknow.org/image/904dd456-2e0d-3cae-8299-098f7651c3b0> , <http://data.silknow.org/production/5668024b-1626-38b6-9a58-24ae37a0949d> , <http://data.silknow.org/object/59982894-c1b4-3fce-b59b-d66d436a2925/category/1> , <http://data.silknow.org/object/59982894-c1b4-3fce-b59b-d66d436a2925> ;
+        dc:identifier       "29666.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/actor/4cae0a3d-2a49-31ea-b8bd-287ff96ff703>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "fons antic" ;
+        ecrm:P1_is_identified_by  "fons antic" .
+
+<http://data.silknow.org/image/cac570e7-0870-37bc-987e-9a92a0c27c08>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "poms de flors"@ca ;
+        ecrm:P3_has_note  "poms de flors"@ca .
+
+<http://data.silknow.org/object/59982894-c1b4-3fce-b59b-d66d436a2925/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/59982894-c1b4-3fce-b59b-d66d436a2925> .
+
+<http://data.silknow.org/production/5668024b-1626-38b6-9a58-24ae37a0949d>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/59982894-c1b4-3fce-b59b-d66d436a2925> ;
+        ecrm:P126_employed      "fil frisé"@ca ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "ordit a disposició"@ca , "efecte de bastes per trama de fons (trama liseré)"@ca , "teixit llavorat"@ca ;
+        ecrm:P32_used_general_technique
+                <http://data.silknow.org/vocabulary/471> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1776_1800> .
+
+<http://data.silknow.org/image/9694a745-4cca-3980-b238-dc2b1d7aee54>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "llistes verticals"@ca ;
+        ecrm:P3_has_note  "llistes verticals"@ca .
+
+<http://data.silknow.org/image/c052d61c-4dd0-3619-abc9-87d45457a5df>
+        a                 ecrm:E36_Visual_Item ;
+        rdfs:comment      "imitació blonda"@ca ;
+        ecrm:P3_has_note  "imitació blonda"@ca .
+
+<http://data.silknow.org/object/59982894-c1b4-3fce-b59b-d66d436a2925>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/904dd456-2e0d-3cae-8299-098f7651c3b0> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/image/c052d61c-4dd0-3619-abc9-87d45457a5df> , <http://data.silknow.org/image/94fbee11-37da-3637-8e50-741f7cb9c007> , <http://data.silknow.org/image/9694a745-4cca-3980-b238-dc2b1d7aee54> , <http://data.silknow.org/image/cac570e7-0870-37bc-987e-9a92a0c27c08> ;
+        dc:identifier                  "21898" .

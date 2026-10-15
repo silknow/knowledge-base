@@ -1,0 +1,86 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/a017f959-e17a-3e16-bda6-80ac44499a81>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Russell Tyson" ;
+        ecrm:P1_is_identified_by  "Gift of Russell Tyson" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://dbpedia.org/resource/John_R._Tyson> , <https://viaf.org/viaf/39183364> , <https://isni.org/isni/0000000051364200> ;
+        <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>
+                <https://en.wikipedia.org/wiki/John_R._Tyson> .
+
+<http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd>
+        a                       ecrm:E22_Man-Made_Object ;
+        rdfs:comment            "Silk, satin damask weave"@en ;
+        ecrm:P3_has_note        "Silk, satin damask weave"@en ;
+        ecrm:P43_has_dimension  <http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd/dimension/1> , <http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd/dimension/2> ;
+        dc:identifier           "1950.1115b" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://www.artic.edu/artworks/180785/panel> .
+
+<http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Silk, satin damask weave"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd> .
+
+<http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Panel" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd> .
+
+<http://data.silknow.org/object/8efd5763-a95b-3d9e-8bb0-569256ca2a11>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1950.1115b" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/311c06b8-45f7-3361-958b-a423516201ce> , <http://data.silknow.org/event/5f8e3174-6367-3d89-8b96-95a639800a1b> , <http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd> , <http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd/observation/1> , <http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd/category/1> ;
+        dc:identifier       "180785.json" ;
+        dc:publisher        "http://data.silknow.org/organization/artic" .
+
+<https://sws.geonames.org/3175395/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Art Institute of Chicago (ARTIC)" ;
+        ecrm:P1_is_identified_by  "Art Institute of Chicago (ARTIC)" .
+
+<http://data.silknow.org/production/311c06b8-45f7-3361-958b-a423516201ce>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd> ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404510> , <http://data.silknow.org/timespan/1600> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3175395/> .
+
+<http://data.silknow.org/event/5f8e3174-6367-3d89-8b96-95a639800a1b>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/a017f959-e17a-3e16-bda6-80ac44499a81> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/2f2affb1-1e17-3749-86fa-7acc6847c5b7> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Russell Tyson" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd> .
+
+<http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "203.8" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "203.8"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/5b40b59a-d111-3c8f-bf89-55f2fb0f99fd/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "50.2" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "50.2"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/artic>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/8efd5763-a95b-3d9e-8bb0-569256ca2a11> .

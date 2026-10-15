@@ -1,0 +1,71 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/event/7fa4a2b5-98d5-38b1-97a2-67dccef50092>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don Atelier Forrer, 2017" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ae29962d-27da-3138-947e-907b082cc52c> .
+
+<https://sws.geonames.org/2990969/>
+        a       ecrm:E53_Place .
+
+<https://sws.geonames.org/3017382/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/production/a637c1d4-91fd-3a6a-a97f-b1466e5ff8d2>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "France, Nantes, 18e siècle (fin)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ae29962d-27da-3138-947e-907b082cc52c> ;
+        ecrm:P126_employed      "Toile de coton imprimée à la planche de bois"@fr ;
+        ecrm:P3_has_note        "France, Nantes, 18e siècle (fin)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1776_1800> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/3017382/> , <https://sws.geonames.org/2990969/> .
+
+<http://data.silknow.org/object/ae29962d-27da-3138-947e-907b082cc52c/category/1>
+        a                    silk:T35 ;
+        silk:L1              "morceau de tissu" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ae29962d-27da-3138-947e-907b082cc52c> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ae29962d-27da-3138-947e-907b082cc52c> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/image/57e5f233-0a98-3d11-a462-86ccbd12e38b>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/934239_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/4060cc4f-dfa7-43ee-b272-57b55f2dc376.jpg> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/818ad99f-a0f0-3b24-bc2f-957c9bc76b7c> .
+
+<http://data.silknow.org/object/ae29962d-27da-3138-947e-907b082cc52c>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "morceau de tissu, France, Nantes, 18e siècle (fin)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/57e5f233-0a98-3d11-a462-86ccbd12e38b> ;
+        dc:identifier                  "2017.160.23" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/934239> .
+
+<http://data.silknow.org/object/818ad99f-a0f0-3b24-bc2f-957c9bc76b7c>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 2017.160.23" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/a637c1d4-91fd-3a6a-a97f-b1466e5ff8d2> , <http://data.silknow.org/image/57e5f233-0a98-3d11-a462-86ccbd12e38b> , <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/ae29962d-27da-3138-947e-907b082cc52c/category/1> , <http://data.silknow.org/event/7fa4a2b5-98d5-38b1-97a2-67dccef50092> , <http://data.silknow.org/object/ae29962d-27da-3138-947e-907b082cc52c> ;
+        dc:identifier       "934239.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .

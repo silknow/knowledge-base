@@ -1,0 +1,85 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/00899c11-564f-3462-b602-90e951f8e35e>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/46efb4a0-58cd-3acb-af4e-30b28cb41ca6> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Katherine C. S. Downs" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff> .
+
+<http://data.silknow.org/event/ef4b7e08-43b0-3048-9dbe-ff62cd46503f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff> .
+
+<http://data.silknow.org/production/be61f911-ac31-3093-852c-c83fcc093b15>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff> ;
+        ecrm:P126_employed      "Silk; jacquard"@en ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/24eea633-bb3a-3913-acf5-3219b72780c4> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/6252001/> .
+
+<http://data.silknow.org/object/6d0875b1-5d95-3dcf-b7e2-b7746f46c5dd>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 1992.117" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff/domain/1> , <http://data.silknow.org/object/555369dd-e425-3cf7-97fa-b9c5d8bccb89> , <http://data.silknow.org/production/be61f911-ac31-3093-852c-c83fcc093b15> , <http://data.silknow.org/event/00899c11-564f-3462-b602-90e951f8e35e> , <http://data.silknow.org/event/ef4b7e08-43b0-3048-9dbe-ff62cd46503f> , <http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff/category/1> , <http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff> , <http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff/domain/2> ;
+        dc:identifier       "787116.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/object/555369dd-e425-3cf7-97fa-b9c5d8bccb89>
+        a                   ecrm:E73_Information_Object ;
+        rdfs:comment        "Dress, Art, and Society" , "September 13, 1996 - January 5, 1997" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff> ;
+        ecrm:P2_has_type    "Exhibition" ;
+        ecrm:P3_has_note    "Dress, Art, and Society" , "September 13, 1996 - January 5, 1997" ;
+        schema:contentUrl   <https://risdmuseum.org/exhibitions-events/exhibitions/dress-art-and-society> .
+
+<http://data.silknow.org/actor/46efb4a0-58cd-3acb-af4e-30b28cb41ca6>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Katherine C. S. Downs" ;
+        ecrm:P1_is_identified_by  "Gift of Katherine C. S. Downs" .
+
+<http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff>
+        a              ecrm:E22_Man-Made_Object ;
+        dc:identifier  "1992.117" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/dress-1992117> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<https://sws.geonames.org/6252001/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff/domain/2>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/7> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/6d0875b1-5d95-3dcf-b7e2-b7746f46c5dd> .
+
+<http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Dress" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff> .
+
+<http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Fashion" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/37cfb51c-f0a9-39f4-914a-04886b81bbff> .

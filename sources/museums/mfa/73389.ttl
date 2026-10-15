@@ -1,0 +1,92 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "189" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "189"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "A long strip of drawn work with lions, birds, plants, eagle, angels, etc. Separated from 83.224."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/0c6fe07c-a86f-30fa-9c24-af78ed75192e> ;
+        ecrm:P3_has_note               "A long strip of drawn work with lions, birds, plants, eagle, angels, etc. Separated from 83.224."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a/dimension/2> , <http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a/dimension/1> ;
+        dc:identifier                  "83.223" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/73389> .
+
+<http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a/category/1>
+        a                    silk:T35 ;
+        silk:L1              "DrawnworkLace" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a> .
+
+<http://data.silknow.org/production/d0f544f0-6b05-31ec-a5f1-5e44aedf48dc>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1576_1600> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2523118/> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "A long strip of drawn work with lions, birds, plants, eagle, angels, etc. Separated from 83.224."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a> .
+
+<http://data.silknow.org/image/0c6fe07c-a86f-30fa-9c24-af78ed75192e>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "730224" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/73389_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/730224/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/event/0b8f374a-a856-3fea-abab-8c15ca59cc8f>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a> .
+
+<http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a> .
+
+<https://sws.geonames.org/2523118/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/d4f8ee3e-b9b8-3278-8e29-33127557ea41> .
+
+<http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "21.5" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "21.5"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/d4f8ee3e-b9b8-3278-8e29-33127557ea41>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 83.223" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a/domain/1> , <http://data.silknow.org/image/0c6fe07c-a86f-30fa-9c24-af78ed75192e> , <http://data.silknow.org/event/0b8f374a-a856-3fea-abab-8c15ca59cc8f> , <http://data.silknow.org/production/d0f544f0-6b05-31ec-a5f1-5e44aedf48dc> , <http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a/observation/1> , <http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a/category/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/9e716efe-0df7-3836-b994-01f80d36f23a> ;
+        dc:identifier       "73389.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .

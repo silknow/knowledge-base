@@ -1,0 +1,106 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/a01d76ad-a41a-3e9f-93cb-5be1a65e8374>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6> ;
+        ecrm:P126_employed      "Silk satin damask brocaded with silk and metal wrapped thread"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/d6d64483-0875-3ee1-9a3d-eaf7bb41437f> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2750405/> .
+
+<https://sws.geonames.org/2750405/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "17.7" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "17.7"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/c289c894-c76f-3962-9a15-ee85594a1dd6>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Collection of Denman Waldo Ross; Gift to the MFA / Denman Waldo Ross Collection" ;
+        ecrm:P1_is_identified_by  "Collection of Denman Waldo Ross; Gift to the MFA / Denman Waldo Ross Collection" .
+
+<http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "White satin damask ground with a design of balustrades and vases of flowers brocaded with white, pink, blue, green and yellow silk and gold thread."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/7c9edc1f-1bd6-3d1a-8cc2-234c546ae4b2> ;
+        ecrm:P3_has_note               "White satin damask ground with a design of balustrades and vases of flowers brocaded with white, pink, blue, green and yellow silk and gold thread."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6/dimension/2> , <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6/dimension/1> ;
+        dc:identifier                  "96.420g" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.mfa.org/objects/371713> .
+
+<http://data.silknow.org/event/c87fdf19-6a1f-387b-9a81-a107a7a2fd08>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6> .
+
+<http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "27" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "27"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/7c9edc1f-1bd6-3d1a-8cc2-234c546ae4b2>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "815974" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/mfa-boston/371713_0.jpg> , <https://collections.mfa.org/internal/media/dispatcher/815974/resize%3Aformat%3Dfull> .
+
+<http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile fragment" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6> .
+
+<http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Europe, Textiles and Fashion Arts" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6> ;
+        ecrm:P78_is_identified_by  "Europe, Textiles and Fashion Arts" .
+
+<http://data.silknow.org/event/7f89107f-4c1d-3e2f-81b1-c3aeb709da8f>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/c289c894-c76f-3962-9a15-ee85594a1dd6> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776> ;
+        ecrm:P23_transferred_title_from
+                "Collection of Denman Waldo Ross; Gift to the MFA, 1896 / Denman Waldo Ross Collection" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6> .
+
+<http://data.silknow.org/actor/08368b92-58b0-35a3-a2d4-e47628403776>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "MFA Boston" ;
+        ecrm:P1_is_identified_by  "MFA Boston" .
+
+<http://data.silknow.org/object/73ba9b19-1720-35b9-a175-f75f222a1059>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 96.420g" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/c87fdf19-6a1f-387b-9a81-a107a7a2fd08> , <http://data.silknow.org/event/7f89107f-4c1d-3e2f-81b1-c3aeb709da8f> , <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6/category/1> , <http://data.silknow.org/production/a01d76ad-a41a-3e9f-93cb-5be1a65e8374> , <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6/observation/1> , <http://data.silknow.org/collection/ea88f538-91f9-3d9f-aa56-b191ba89e918> , <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6> , <http://data.silknow.org/image/7c9edc1f-1bd6-3d1a-8cc2-234c546ae4b2> , <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6/domain/1> ;
+        dc:identifier       "371713.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mfa" .
+
+<http://data.silknow.org/mfa>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/73ba9b19-1720-35b9-a175-f75f222a1059> .
+
+<http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6> .
+
+<http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "White satin damask ground with a design of balustrades and vases of flowers brocaded with white, pink, blue, green and yellow silk and gold thread."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/3bdf5c37-9cbe-3603-bc52-de0f32edffd6> .

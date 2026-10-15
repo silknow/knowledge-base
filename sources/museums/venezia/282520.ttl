@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/event/28afbba5-963a-3704-9382-7c9c8f465935>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62> .
+
+<http://data.silknow.org/production/928e3ec6-1cdb-3d8d-9452-4ffb9fa9dfd8>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62> ;
+        ecrm:P126_employed      "filo metallico"@it ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1750_1799> .
+
+<http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Tessuto" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62> .
+
+<http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "62" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "62"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/b8aad632-25bd-3eb2-9b30-ecaba77328da>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 282520" ;
+        ecrm:P129_is_about  <http://data.silknow.org/event/28afbba5-963a-3704-9382-7c9c8f465935> , <http://data.silknow.org/image/95f8f538-7440-303f-be46-7a0572bb9c45> , <http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62/category/1> , <http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62/observation/1> , <http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62> , <http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62/domain/1> , <http://data.silknow.org/production/928e3ec6-1cdb-3d8d-9452-4ffb9fa9dfd8> ;
+        dc:identifier       "282520.json" ;
+        dc:publisher        "http://data.silknow.org/organization/venezia" .
+
+<http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Lampasso laminato broccato"@it ;
+        crmsci:O8_observed  <http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62> .
+
+<http://data.silknow.org/venezia>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b8aad632-25bd-3eb2-9b30-ecaba77328da> .
+
+<http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "53" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "53"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/image/95f8f538-7440-303f-be46-7a0572bb9c45>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/venezia/282520_0.jpg> , <http://www.archiviodellacomunicazione.it/sicap/ThumbJpeg.ashx?1SSg9yXS6ege1tCLoEAzTg9ucbjAq2yVGsfcqmi%2brYxKiD8EbxwypJBfeso4pfT5AyGCmfN26VTOy1ahxH%2fUy2bj5Ulf5TgevZ95VOurm50X5i2dpxWj3mz9oSjPpkYnLhEtyaX2nRZ8wUlt0Zw9Ja8SGJQESX90SM%2fIxPl8PrLjX8WZ%2fyJ0yA%3d%3d> .
+
+<http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Lampasso laminato broccato"@it ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/95f8f538-7440-303f-be46-7a0572bb9c45> ;
+        ecrm:P3_has_note               "Lampasso laminato broccato"@it ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62/dimension/1> , <http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62/dimension/2> ;
+        dc:identifier                  "Cl. XXIII n. 1329" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://www.archiviodellacomunicazione.it/sicap/OpereArte/282520/?WEB=MuseiVE> .
+
+<http://data.silknow.org/actor/f601ff1a-e33c-3b1b-bc61-9f1cdd9fec2c>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Centro Studi di Storia del Tessuto, del Costume e del Profumo" ;
+        ecrm:P1_is_identified_by  "Centro Studi di Storia del Tessuto, del Costume e del Profumo" .
+
+<http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62/domain/1>
+        a                    silk:T19 ;
+        silk:L4              "Tessuti" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ac8b8452-da57-30d1-9d91-7f81b3c89e62> .

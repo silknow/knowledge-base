@@ -1,0 +1,95 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Museo Nacional de Artes Decorativas" ;
+        ecrm:P1_is_identified_by  "Museo Nacional de Artes Decorativas" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000012166930X> , <https://viaf.org/viaf/137864315> .
+
+<http://data.silknow.org/image/b3757bbb-8a11-3616-9c3f-930b1fd67f96>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "CE24396" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/ceres-mcu/CE24396_MNAD_0.jpg> , <http://ceres.mcu.es/pages/Viewer?accion=42&AMuseo=MNAD&Ninv=CE24396&txt_id_imagen=1> .
+
+<http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "Tres fragmentos textiles de forma irregular de seda lampás con ligamento base de tafetán de seda en su color. El fragmento mayor tiene tres costuras y forro de algodón amarillo. Decoración vegetal con grandes flores, hojas y frutos en color: amarillo, naranja, verde, malva."@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2> .
+
+<http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Fragmento de tejido" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2> .
+
+<http://data.silknow.org/event/391e3745-0ff7-3df7-9192-6d5080b4b6fe>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/cd33bfdf-4ad1-3bf2-9bb0-625185eb7e0a> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2> .
+
+<http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/historical-observation> ;
+        ecrm:P3_has_note    "Edad Moderna"@es ;
+        crmsci:O8_observed  <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2> .
+
+<http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "105" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/height> ;
+        ecrm:P90_has_value  "105"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/event/e8ffd5ec-f8d2-332a-9189-60f95d12e4ac>
+        a       ecrm:E8_Acquisition .
+
+<http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "40" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "40"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2> .
+
+<http://data.silknow.org/object/ff9b4a08-9482-35fb-8fa4-1a365d5cecd1>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record CE24396" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2> , <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2/category/1> , <http://data.silknow.org/production/177651ff-1d1f-3f34-93da-a6817bef2d2c> , <http://data.silknow.org/image/b3757bbb-8a11-3616-9c3f-930b1fd67f96> , <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2/observation/2> , <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2/observation/1> , <http://data.silknow.org/event/391e3745-0ff7-3df7-9192-6d5080b4b6fe> , <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2/domain/1> , <http://data.silknow.org/event/e8ffd5ec-f8d2-332a-9189-60f95d12e4ac> ;
+        dc:identifier       "CE24396_MNAD.json" ;
+        dc:publisher        "http://data.silknow.org/organization/cer" .
+
+<http://data.silknow.org/production/177651ff-1d1f-3f34-93da-a6817bef2d2c>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2> ;
+        ecrm:P126_employed      "Forro: Algodón"@es ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "Tafetán [Ligamento]  Lampás"@es ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1701_1800> .
+
+<http://data.silknow.org/cer>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/ff9b4a08-9482-35fb-8fa4-1a365d5cecd1> .
+
+<http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "Tres fragmentos textiles de forma irregular de seda lampás con ligamento base de tafetán de seda en su color. El fragmento mayor tiene tres costuras y forro de algodón amarillo. Decoración vegetal con grandes flores, hojas y frutos en color: amarillo, naranja, verde, malva."@es , "Edad Moderna"@es ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/b3757bbb-8a11-3616-9c3f-930b1fd67f96> ;
+        ecrm:P3_has_note               "Edad Moderna"@es , "Tres fragmentos textiles de forma irregular de seda lampás con ligamento base de tafetán de seda en su color. El fragmento mayor tiene tres costuras y forro de algodón amarillo. Decoración vegetal con grandes flores, hojas y frutos en color: amarillo, naranja, verde, malva."@es ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2/dimension/2> , <http://data.silknow.org/object/08ead7bc-cc87-3556-9b45-ecff42cd6af2/dimension/1> ;
+        ecrm:P65_shows_visual_item     <http://data.silknow.org/vocabulary/744> ;
+        dc:identifier                  "CE24396" .

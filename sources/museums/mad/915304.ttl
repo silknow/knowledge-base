@@ -1,0 +1,67 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/ab7a8f07-636e-3998-9cac-f081fe383714/category/1>
+        a                    silk:T35 ;
+        silk:L1              "lé" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/ab7a8f07-636e-3998-9cac-f081fe383714> .
+
+<http://data.silknow.org/object/ab7a8f07-636e-3998-9cac-f081fe383714>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:label                     "lé, E. Bouvart et Cie, Lyon, 1901 (vers)"@fr ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/a666d977-68fd-3d33-a9ce-f3cf97b38619> ;
+        dc:identifier                  "13788" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://collections.lesartsdecoratifs.fr/print/915304> .
+
+<http://data.silknow.org/image/a666d977-68fd-3d33-a9ce-f3cf97b38619>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/les-arts-decoratifs/915304_0.jpg> , <http://collections.lesartsdecoratifs.fr/sites/default/files/styles/node/public/ee37d242-8702-4f4a-96df-57702d10fb5a.jpg> .
+
+<http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Musée des arts décoratifs" ;
+        ecrm:P1_is_identified_by  "Musée des arts décoratifs" .
+
+<http://data.silknow.org/production/f3ea7189-7e73-38d4-9d42-8d31ef944f69>
+        a                       ecrm:E12_Production ;
+        rdfs:comment            "E. Bouvart et Cie, Lyon, 1901 (vers)" ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/ab7a8f07-636e-3998-9cac-f081fe383714> ;
+        ecrm:P3_has_note        "E. Bouvart et Cie, Lyon, 1901 (vers)" ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/5d815f5b-8598-37ff-8832-37872a557c1b> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/2996944/> .
+
+<http://data.silknow.org/mad>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a71e78ed-c4c7-3bc5-8e3b-cc3d7476130d> .
+
+<http://data.silknow.org/event/3de7db89-d1be-318a-beb5-ca09539906de>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/abc1c9c2-d7b4-305f-b988-54aa36dae450> ;
+        ecrm:P23_transferred_title_from
+                "Don E.Bouvart et Cie, 1908" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/ab7a8f07-636e-3998-9cac-f081fe383714> .
+
+<http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Mode et textile" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/ab7a8f07-636e-3998-9cac-f081fe383714> ;
+        ecrm:P78_is_identified_by  "Mode et textile" .
+
+<http://data.silknow.org/object/a71e78ed-c4c7-3bc5-8e3b-cc3d7476130d>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 13788" ;
+        ecrm:P129_is_about  <http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f> , <http://data.silknow.org/object/ab7a8f07-636e-3998-9cac-f081fe383714> , <http://data.silknow.org/image/a666d977-68fd-3d33-a9ce-f3cf97b38619> , <http://data.silknow.org/object/ab7a8f07-636e-3998-9cac-f081fe383714/category/1> , <http://data.silknow.org/event/3de7db89-d1be-318a-beb5-ca09539906de> , <http://data.silknow.org/production/f3ea7189-7e73-38d4-9d42-8d31ef944f69> ;
+        dc:identifier       "915304.json" ;
+        dc:publisher        "http://data.silknow.org/organization/mad" .
+
+<https://sws.geonames.org/2996944/>
+        a       ecrm:E53_Place .

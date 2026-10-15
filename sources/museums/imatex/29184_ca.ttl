@@ -1,0 +1,70 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/object/32d445fd-d172-362e-831a-624b7649a2ca/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/32d445fd-d172-362e-831a-624b7649a2ca> .
+
+<http://data.silknow.org/imatex>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/a72e8abd-12b5-33fb-bd7a-256c06247537> .
+
+<http://data.silknow.org/image/87023e7a-6d34-3347-a763-d05557b93ad5>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "0000034904" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/imatex/29184_0.jpg> , <http://imatex.cdmt.cat/fotografies/0000034904.jpg> .
+
+<http://data.silknow.org/event/59f16c58-137d-3cef-a4da-d51b8ed57697>
+        a       ecrm:E10_Transfer_of_Custody ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/32d445fd-d172-362e-831a-624b7649a2ca> .
+
+<http://data.silknow.org/event/533616d9-1474-36d5-afcd-673a951100d5>
+        a                              ecrm:E8_Acquisition ;
+        rdfs:comment                   "compres - Diputació de Barcelona" ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f> ;
+        ecrm:P23_transferred_title_from
+                "Viñas Geis, Ricard" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/32d445fd-d172-362e-831a-624b7649a2ca> ;
+        ecrm:P3_has_note               "compres - Diputació de Barcelona" .
+
+<http://data.silknow.org/object/a72e8abd-12b5-33fb-bd7a-256c06247537>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 29184" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/32d445fd-d172-362e-831a-624b7649a2ca> , <http://data.silknow.org/production/37472ac7-1bc9-3e34-baf2-d767d39a3df7> , <http://data.silknow.org/object/32d445fd-d172-362e-831a-624b7649a2ca/category/1> , <http://data.silknow.org/event/533616d9-1474-36d5-afcd-673a951100d5> , <http://data.silknow.org/object/32d445fd-d172-362e-831a-624b7649a2ca/domain/1> , <http://data.silknow.org/event/59f16c58-137d-3cef-a4da-d51b8ed57697> , <http://data.silknow.org/image/87023e7a-6d34-3347-a763-d05557b93ad5> ;
+        dc:identifier       "29184.json" ;
+        dc:publisher        "http://data.silknow.org/organization/imatex" .
+
+<http://data.silknow.org/object/32d445fd-d172-362e-831a-624b7649a2ca>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/87023e7a-6d34-3347-a763-d05557b93ad5> ;
+        dc:identifier                  "4794" .
+
+<http://data.silknow.org/object/32d445fd-d172-362e-831a-624b7649a2ca/category/1>
+        a                    silk:T35 ;
+        silk:L1              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/32d445fd-d172-362e-831a-624b7649a2ca> .
+
+<http://data.silknow.org/actor/723bb5c3-d167-35be-92f0-7abdba78393f>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Viñas Geis, Ricard" ;
+        ecrm:P1_is_identified_by  "Viñas Geis, Ricard" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://viaf.org/viaf/160946453> , <https://isni.org/isni/0000000108433220> .
+
+<http://data.silknow.org/production/37472ac7-1bc9-3e34-baf2-d767d39a3df7>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/32d445fd-d172-362e-831a-624b7649a2ca> ;
+        ecrm:P126_employed      "fil metàl·lic"@ca ;
+        ecrm:P126_employed      <http://data.silknow.org/vocabulary/900> ;
+        ecrm:P32_used_general_technique
+                "brocat"@ca , "teixit llavorat"@ca ;
+        ecrm:P4_has_time-span   <http://vocab.getty.edu/aat/300404513> .

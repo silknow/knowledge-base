@@ -1,0 +1,100 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/production/3be5fa30-0f06-31cd-abd6-02262bdc984b>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf> ;
+        ecrm:P126_employed      "cotton yarn, silk thread, metal thread, weaving, embroidering, sewing"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1800_1880> ;
+        ecrm:P8_took_place_on_or_within
+                <https://sws.geonames.org/130758/> .
+
+<http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf/dimension/2>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Width: 11 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/width> ;
+        ecrm:P90_has_value  "11"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Victoria and Albert Museum" ;
+        ecrm:P1_is_identified_by  "Victoria and Albert Museum" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://isni.org/isni/000000045904354X> , <https://viaf.org/viaf/128776887> .
+
+<http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf/observation/1>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/technical-observation> ;
+        ecrm:P3_has_note    "Bag, cotton embroidered with silk and metal thread in straight stitch, buttonhole edging, needleweaving and pulled thread work lined with woven silk.\nDisplayed behind glass.\nThe cotton fabric is folded along the bottom of the bag, so the border appears only on 3 sides.  It is needleweaving with silver metal thread in a pattern of X-motifs alternating with stepped lozenges.\nThe main panel of the bag is pulled thread work using silver metal thread to form a square grid with a rosette in each square. A lining of red silk can be seen through the grid. There are traces of dark silk used as a fine border either side of the needlewoven border.\nThere is a white cotton [?] drawstring threaded round the open edge; there is some silver metal thread wound around the end."@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf> .
+
+<http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Bag" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf> .
+
+<https://sws.geonames.org/130758/>
+        a       ecrm:E53_Place .
+
+<http://data.silknow.org/image/95876e69-e247-3521-b414-bb4bdca7bb78>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2011ER9333" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O157301_1.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2011ER/2011ER9333.jpg> .
+
+<http://data.silknow.org/image/21db212c-0424-398e-8bae-6923c183ec92>
+        a                  ecrm:E38_Image ;
+        dc:identifier      "2010CT4506" ;
+        schema:contentUrl  <https://silknow.org/silknow/media/vam/O157301_0.jpg> , <http://media.vam.ac.uk/media/thira/collection_images/2010CT/2010CT4506.jpg> .
+
+<http://data.silknow.org/vam>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/59a74308-6b40-3966-aa69-b398543f50f4> .
+
+<http://data.silknow.org/event/25a28b28-1654-3868-a7f6-781c840c3246>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/f0577f91-f887-3019-bf88-f9e5ba019390> ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf> .
+
+<http://data.silknow.org/object/59a74308-6b40-3966-aa69-b398543f50f4>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record O157301" ;
+        ecrm:P129_is_about  <http://data.silknow.org/production/3be5fa30-0f06-31cd-abd6-02262bdc984b> , <http://data.silknow.org/image/21db212c-0424-398e-8bae-6923c183ec92> , <http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10> , <http://data.silknow.org/image/95876e69-e247-3521-b414-bb4bdca7bb78> , <http://data.silknow.org/event/25a28b28-1654-3868-a7f6-781c840c3246> , <http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf/observation/2> , <http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf/observation/1> , <http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf> ;
+        dc:identifier       "O157301.json" ;
+        dc:publisher        "http://data.silknow.org/organization/vam" .
+
+<http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf>
+        a                              ecrm:E22_Man-Made_Object ;
+        rdfs:comment                   "embroidered, 1770-1850, Persian"@en , "Bag, cotton embroidered with silk and metal thread in straight stitch, buttonhole edging, needleweaving and pulled thread work lined with woven silk.\nDisplayed behind glass.\nThe cotton fabric is folded along the bottom of the bag, so the border appears only on 3 sides.  It is needleweaving with silver metal thread in a pattern of X-motifs alternating with stepped lozenges.\nThe main panel of the bag is pulled thread work using silver metal thread to form a square grid with a rosette in each square. A lining of red silk can be seen through the grid. There are traces of dark silk used as a fine border either side of the needlewoven border.\nThere is a white cotton [?] drawstring threaded round the open edge; there is some silver metal thread wound around the end."@en ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/21db212c-0424-398e-8bae-6923c183ec92> , <http://data.silknow.org/image/95876e69-e247-3521-b414-bb4bdca7bb78> ;
+        ecrm:P3_has_note               "embroidered, 1770-1850, Persian"@en , "Bag, cotton embroidered with silk and metal thread in straight stitch, buttonhole edging, needleweaving and pulled thread work lined with woven silk.\nDisplayed behind glass.\nThe cotton fabric is folded along the bottom of the bag, so the border appears only on 3 sides.  It is needleweaving with silver metal thread in a pattern of X-motifs alternating with stepped lozenges.\nThe main panel of the bag is pulled thread work using silver metal thread to form a square grid with a rosette in each square. A lining of red silk can be seen through the grid. There are traces of dark silk used as a fine border either side of the needlewoven border.\nThere is a white cotton [?] drawstring threaded round the open edge; there is some silver metal thread wound around the end."@en ;
+        ecrm:P43_has_dimension         <http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf/dimension/2> , <http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf/dimension/1> ;
+        dc:identifier                  "263-1884" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://collections.vam.ac.uk/item/O157301> .
+
+<http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf/observation/2>
+        a                   crmsci:S4_Observation ;
+        ecrm:P2_has_type    <http://data.silknow.org/observation/general-observation> ;
+        ecrm:P3_has_note    "embroidered, 1770-1850, Persian"@en ;
+        crmsci:O8_observed  <http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf> .
+
+<http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf/dimension/1>
+        a                   ecrm:E54_Dimension ;
+        rdfs:label          "Length: 13 cm" ;
+        ecrm:P2_has_type    <http://data.silknow.org/dimension/length> ;
+        ecrm:P90_has_value  "13"^^xsd:float ;
+        ecrm:P91_has_unit   "cm" .
+
+<http://data.silknow.org/collection/f1b581d5-f5db-3fdb-a086-5aac64d11a10>
+        a                          ecrm:E78_Collection ;
+        rdfs:label                 "Middle East Section" ;
+        ecrm:P106_is_composed_of   <http://data.silknow.org/object/61dffbaa-c109-37e1-9443-495d7d3ffdcf> ;
+        ecrm:P78_is_identified_by  "Middle East Section" .

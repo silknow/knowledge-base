@@ -1,0 +1,82 @@
+@prefix silk:  <http://data.silknow.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://data.silknow.org/actor/3769a542-7e85-3c05-8c73-f1d3a4f6b135>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Arnold Print Works" ;
+        ecrm:P1_is_identified_by  "Arnold Print Works" .
+
+<http://data.silknow.org/actor/6c5c6fe2-56a3-3f79-a79e-a8606bcaca8a>
+        a                         ecrm:E39_Actor ;
+        rdfs:label                "Gift of Jacob Ziskind, the Crescent Corporation" ;
+        ecrm:P1_is_identified_by  "Gift of Jacob Ziskind, the Crescent Corporation" .
+
+<http://data.silknow.org/object/b67d33ce-b926-372b-9e51-9b814b2b5082>
+        a                   crmdig:D1_Digital_Object ;
+        rdfs:label          "Record 49.369.30.4" ;
+        ecrm:P129_is_about  <http://data.silknow.org/object/c62e9cc4-e0c3-3dbe-9388-368fdda524e8/category/1> , <http://data.silknow.org/production/69d41fd9-b838-3592-a3a4-c1504b71bcd5> , <http://data.silknow.org/event/790215ba-fcd0-3036-bb6c-4c62a3f850d1> , <http://data.silknow.org/object/c62e9cc4-e0c3-3dbe-9388-368fdda524e8/domain/1> , <http://data.silknow.org/image/9b671643-572e-3a6d-8e8b-488333ae1dc6> , <http://data.silknow.org/event/f537aa33-5ee8-370d-9078-86f3c9eea266> , <http://data.silknow.org/object/c62e9cc4-e0c3-3dbe-9388-368fdda524e8> ;
+        dc:identifier       "1132201.json" ;
+        dc:publisher        "http://data.silknow.org/organization/risd" .
+
+<http://data.silknow.org/event/f537aa33-5ee8-370d-9078-86f3c9eea266>
+        a                              ecrm:E8_Acquisition ;
+        ecrm:P14_carried_out_by        <http://data.silknow.org/actor/6c5c6fe2-56a3-3f79-a79e-a8606bcaca8a> ;
+        ecrm:P22_transferred_title_to  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P23_transferred_title_from
+                "Gift of Jacob Ziskind, the Crescent Corporation" ;
+        ecrm:P24_transferred_title_of  <http://data.silknow.org/object/c62e9cc4-e0c3-3dbe-9388-368fdda524e8> .
+
+<http://data.silknow.org/event/790215ba-fcd0-3036-bb6c-4c62a3f850d1>
+        a                             ecrm:E10_Transfer_of_Custody ;
+        ecrm:P29_custody_received_by  <http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829> ;
+        ecrm:P30_transferred_custody_of
+                <http://data.silknow.org/object/c62e9cc4-e0c3-3dbe-9388-368fdda524e8> .
+
+<http://data.silknow.org/object/c62e9cc4-e0c3-3dbe-9388-368fdda524e8/category/1>
+        a                    silk:T35 ;
+        silk:L1              "Textile swatch" ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c62e9cc4-e0c3-3dbe-9388-368fdda524e8> .
+
+<http://data.silknow.org/image/9b671643-572e-3a6d-8e8b-488333ae1dc6>
+        a                  ecrm:E38_Image ;
+        schema:contentUrl  <https://silknow.org/silknow/media/risd-museum/1132201_0.jpg> , <https://risdmuseum.org/sites/default/files/museumplus/271794.jpg> .
+
+<http://data.silknow.org/production/69d41fd9-b838-3592-a3a4-c1504b71bcd5>
+        a                       ecrm:E12_Production ;
+        ecrm:P108_has_produced  <http://data.silknow.org/object/c62e9cc4-e0c3-3dbe-9388-368fdda524e8> ;
+        ecrm:P126_employed      "Printed silk"@en ;
+        ecrm:P4_has_time-span   <http://data.silknow.org/timespan/1900> ;
+        ecrm:P9_consists_of     <http://data.silknow.org/production/69d41fd9-b838-3592-a3a4-c1504b71bcd5/activity/1> .
+
+<http://data.silknow.org/actor/71458ff1-a6f4-380a-a613-3dc6d7a9d829>
+        a                         ecrm:E39_Actor , ecrm:E40_Legal_Body ;
+        rdfs:label                "Rhode Island School of Design" ;
+        ecrm:P1_is_identified_by  "Rhode Island School of Design" .
+
+<http://data.silknow.org/object/c62e9cc4-e0c3-3dbe-9388-368fdda524e8/domain/1>
+        a                    silk:T19 ;
+        silk:L4              <http://data.silknow.org/category/1> ;
+        ecrm:P41_classified  <http://data.silknow.org/object/c62e9cc4-e0c3-3dbe-9388-368fdda524e8> .
+
+<http://data.silknow.org/object/c62e9cc4-e0c3-3dbe-9388-368fdda524e8>
+        a                              ecrm:E22_Man-Made_Object ;
+        ecrm:P138i_has_representation  <http://data.silknow.org/image/9b671643-572e-3a6d-8e8b-488333ae1dc6> ;
+        dc:identifier                  "49.369.30.4" ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <https://risdmuseum.org/art-design/collection/textile-swatch-49369304> .
+
+<http://data.silknow.org/risd>
+        ecrm:P106_is_composed_of  <http://data.silknow.org/object/b67d33ce-b926-372b-9e51-9b814b2b5082> .
+
+<http://data.silknow.org/production/69d41fd9-b838-3592-a3a4-c1504b71bcd5/activity/1>
+        a                        ecrm:E7_Activity ;
+        ecrm:P14_carried_out_by  <http://data.silknow.org/actor/3769a542-7e85-3c05-8c73-f1d3a4f6b135> ;
+        ecrm:P2_has_type         <http://data.silknow.org/activity/designer> .
