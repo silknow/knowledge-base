@@ -1,173 +1,86 @@
-# SILKNOW Knowledge Base
+# SILKNOW Knowledge Graph
 
-This repository contains scripts to deploy the Knowledge Base for project SILKNOW.
+This repository contains the RDF sources, vocabularies, QLever configuration,
+and patches used to deploy the knowledge graph at <https://data.silknow.org>.
+The graph describes European silk heritage objects from the 15th to the 19th
+century in CIDOC-CRM (ecrm). The
+[silknow/converter](https://github.com/silknow/converter) converts the museum
+collection records into ecrm and adds vocabulary alignments and property
+predictions.
 
+[QLever](https://github.com/ad-freiburg/qlever) serves SPARQL queries and RDF
+dereferencing. [RDF Workbench](https://github.com/ehrhart/rdf-workbench)
+provides the web interface.
 
-## Initializing the Knowledge Base
+- SPARQL endpoint and query console: <https://data.silknow.org/sparql>
+- Resource dereferencing: `https://data.silknow.org/<path>/<id>`
+- Explorer: <https://ada.silknow.org/>
+- Thesaurus browser: <https://skosmos.silknow.org/>
 
-This section covers the steps required to set up a new Knowlede Base for the first time.
+## Graphs
 
-1. Clone [D2KLab/docker-virtuoso](https://github.com/D2KLab/docker-virtuoso) repository.
-
-    ```bash
-    git clone https://github.com/D2KLab/docker-virtuoso.git
-    cd docker-virtuoso
-    ```
-
-2. Build the docker image.
-
-    ```bash
-    docker build -t d2klab/virtuoso .
-    ```
-
-3. Run the docker image.
-
-    **Note:** make sure to replace `/var/docker/virtuoso/silknow/data` with the volume path where you want the Virtuoso database to be stored. It is also the path which will be used to copy the RDF files you wish to load into the Knowledge Base.
-
-    ```bash
-    docker run --name silknow_virtuoso \
-      -p 8890:8890 -p 1111:1111 \
-      -e DBA_PASSWORD=myDbaPassword \
-      -e SPARQL_UPDATE=true \
-      -e VIRT_SPARQL_ResultSetMaxRows=-1 \
-      -e VIRT_SPARQL_MaxQueryCostEstimationTime=-1 \
-      -e VIRT_SPARQL_MaxQueryExecutionTime=-1 \
-      -v /var/docker/virtuoso/silknow/data:/data \
-      -d d2klab/virtuoso
-    ```
-
-## Loading data into the Knowledge base
-
-1. Copy all your RDF files into the `dumps` folder inside the data directory (e.g., `/var/docker/virtuoso/silknow/data/dumps`).
-
-    Directory structure example:
-
-    - `/var/docker/virtuoso/silknow/data/dumps/`
-      - `vocabularies/`
-        - `aat/*.ttl`
-        - `category/*.ttl`
-        - `commons/*.ttl`
-        - `observation/*.ttl`
-        - `temp/*.ttl`
-        - `vocabulary/*.ttl`
-      - `museums/`
-        - `garin/*.ttl`
-          - `geonames/*.rdf`
-        - `imatex/*.ttl`
-          - `geonames/*.rdf`
-        - `vam/*.ttl`
-          - `geonames/*.rdf`
-        - etc.
-
-2. Run the following scripts to load the commons vocabularies, and/or the museum sources into the Knowledge Base.
-
-### Commons
-
-The script [load_commons.sh](scripts/load_commons.sh) will load the folders which have been placed inside the `vocabularies` directory (see Step 1.)
-
-```bash
-cd scripts
-./load_commons.sh
-```
-
-### Dump
-
-The script [load_dump.sh](scripts/load_dump.sh) will load a specific source (e.g., garin, vam, risd, ...) into the Knowledge Base, including:
-
-* any .ttl file inside the source folder.
-* any .rdf file inside the `geonames` directory in the source folder.
-
-Examples:
-
-```bash
-cd scripts
-./load_dump.sh imatex
-./load_dump.sh mad
-./load_dump.sh mfa
-./load_dump.sh risd
-./load_dump.sh unipa
-./load_dump.sh cer
-./load_dump.sh garin
-./load_dump.sh joconde
-./load_dump.sh met
-./load_dump.sh mtmad
-./load_dump.sh vam
-```
-
-## Removing a single museum or graph
-
-When you want to remove a single museum / dataset or graph just run the following command and replace "museumname" accordingly:
-```
-docker exec -i silknow_virtuoso sh -c "isql-v -U dba -P \${DBA_PASSWORD} exec='sparql CLEAR SILENT GRAPH <http://data.silknow.org/graph/museumname>;'"
-```
-
-
-### Patches
-
-The script [load_patches.sh](scripts/load_patches.sh) will load all execute all SPARQL queries files which have been placed inside the `patches` directory.
-
-## List of RDF namespaces
-
-These prefixes are commonly used on this project:
-
-| Prefix | URI |
+| graph | source |
 | - | - |
-| aat | http://vocab.getty.edu/aat/
-| crmdig | http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/ |
-| crmsci | http://www.ics.forth.gr/isl/CRMsci/ |
-| ecrm | http://erlangen-crm.org/current/ |
-| efrbroo | http://erlangen-crm.org/efrbroo/ |
-| time | http://www.w3.org/2006/time# |
-| schema | http://schema.org/ |
-| silk | http://data.silknow.org/ontology/ |
+| `http://data.silknow.org/graph/<museum>` | `sources/museums/<museum>/*.ttl` and `sources/museums/<museum>/*/*.ttl` |
+| `http://data.silknow.org/graph/<museum>` (geonames) | `sources/geonames/<museum>-geonames.nt` |
+| `http://data.silknow.org/predictions` | `vocabularies/predictions/*.ttl.gz` |
+| `http://data.silknow.org/aat` | `vocabularies/aat/*.ttl` |
+| `http://data.silknow.org/vocabulary` | `vocabularies/vocabulary/*.ttl` |
+| `http://data.silknow.org/commons` | `vocabularies/commons/*.nt` |
+| `http://data.silknow.org/category` | `vocabularies/category/*.ttl` |
+| `http://data.silknow.org/ontology` | `vocabularies/ontology/*.ttl` |
+| `http://data.silknow.org/assignment` | `vocabularies/assignment/*.ttl` |
+| `http://data.silknow.org/dimension` | `vocabularies/dimension/*.ttl` |
+| `http://data.silknow.org/observation` | `vocabularies/observation/*.ttl` |
 
-They can be imported into Virtuoso through the isql interface:
+Museums: `artic`, `cer`, `el-tesoro`, `europeana`, `imatex`, `joconde`,
+`louvre`, `mad`, `met`, `mfa`, `mobilier`, `mtmad`, `musee-st-etienne`,
+`paris-musees`, `risd`, `smithsonian`, `unipa`, `vam`, `venezia`,
+`versailles`.
 
-```
-DB.DBA.XML_SET_NS_DECL ('aat', 'http://vocab.getty.edu/aat/', 2);
-DB.DBA.XML_SET_NS_DECL ('crmdig', 'http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/', 2);
-DB.DBA.XML_SET_NS_DECL ('crmsci', 'http://www.ics.forth.gr/isl/CRMsci/', 2);
-DB.DBA.XML_SET_NS_DECL ('ecrm', 'http://erlangen-crm.org/current/', 2);
-DB.DBA.XML_SET_NS_DECL ('efrbroo', 'http://erlangen-crm.org/efrbroo/', 2);
-DB.DBA.XML_SET_NS_DECL ('time', 'http://www.w3.org/2006/time#', 2);
-DB.DBA.XML_SET_NS_DECL ('silk', 'http://data.silknow.org/ontology/', 2);
-```
+The SPARQL UPDATEs in `patches/` run after every index build. `01` constructs
+labels for objects whose source carries none. `02` removes europeana records
+that duplicate a museum record.
 
 ## Dereferencing
 
-The list of path to be dereferenced is in `dereferencing/config.yml`.
+The `DEREFERENCE_PATHS` variable in `.env` lists the IRI path prefixes that
+the workbench serves as HTML and as RDF:
 
-For exporting the apache config and the script for adding them to Virtuoso, run:
+| path | example |
+| - | - |
+| activity | `http://data.silknow.org/activity/designer` |
+| actor | `http://data.silknow.org/actor/SILKNOW` |
+| assessment | `http://data.silknow.org/assessment/c25143ac-5a86-3b80-8586-4541c060b42c` |
+| assignment | |
+| category | `http://data.silknow.org/category/25` |
+| collection | `http://data.silknow.org/collection/4153c6b7-fe05-3202-ae6f-153f33b2283f` |
+| dimension | `http://data.silknow.org/dimension/width` |
+| event | `http://data.silknow.org/event/0cc00b89-05da-3bc6-98c6-f72e75d32453` |
+| image | `http://data.silknow.org/image/15f57b81-ac41-38d7-a365-6566796ad6ad` |
+| inscription | `http://data.silknow.org/inscription/895bc1c3-c33d-3047-9cb6-4243f62b83ad` |
+| object | `http://data.silknow.org/object/1bbc9317-de8f-3fc4-921b-d5c4e6d1ab86` |
+| ontology | `http://data.silknow.org/ontology/T10` |
+| organization | `http://data.silknow.org/organization/unipa` |
+| place | `http://data.silknow.org/place/92ffc1ec-baa4-3fb1-babe-daf1fdbc038a` |
+| production | `http://data.silknow.org/production/7b80de21-2112-3972-a53a-e56319ba46a2` |
+| statement | `http://data.silknow.org/statement/74d5e4ac-6197-5a26-85b8-c724e4d21cc8` |
+| timespan | `http://data.silknow.org/timespan/periods` |
+| vocabulary | `http://data.silknow.org/vocabulary/facet` |
 
-```
-cd dereferencing
-npx list2dereference config.yml
-docker cp "insert_vhost.sql" "silknow_virtuoso:/insert_vhost.sql"
-docker exec -i "silknow_virtuoso" sh -c "isql-v -U dba -P \${DBA_PASSWORD} < /insert_vhost.sql"
-```
+## Deploy
 
-**Note:** the apache2 configuration file has to be manually updated on the server. Fortunately, list2dereference also generates a file which contains the rules of the new VirtualHost. Copy the new rules to the existing configuration file (default location: `/etc/apache2/sites-available/data.silknow.org.conf`), then reload apache2 (ie. with `service apache2 reload`).
+1. Copy `.env.example` to `.env` and set `QLEVER_ACCESS_TOKEN` (generate one
+   with `openssl rand -hex 24`) and `WORKBENCH_ADMIN_PASSWORD`. Protect the
+   file with `chmod 600 .env`.
 
-Read more at https://github.com/pasqLisena/list2dereference
+2. Run `docker compose up -d`. On a fresh volume the first start builds the
+   index and blocks until it finishes.
 
-## URL Shortening
+3. Run `bash qlever/deploy.sh` to force-rebuild the index and apply
+   `patches/`.
 
-The service can be accessed at https://data.silknow.org/c/.
+## Data refresh
 
-To install the URL shortening service, run the following commands:
-
-```
-cd scripts
-docker cp "c_uri_dav.vad" "silknow_virtuoso:/usr/local/virtuoso-opensource/share/virtuoso/vad/c_uri_dav.vad"
-docker exec -i "silknow_virtuoso" sh -c "isql-v -U dba -P \${DBA_PASSWORD} exec=\"DB.DBA.VAD_INSTALL('/usr/local/virtuoso-opensource/share/virtuoso/vad/c_uri_dav.vad');\""
-```
-
-The service is hosted on the route `/c`. You may have to update the apache2 Virtual Host configuration to map the route, for example:
-
-```
-<Location /c>
-    ProxyPreserveHost On
-    ProxyPass http://localhost:8890/c
-    ProxyPassReverse http://localhost:8890/c
-</Location>
-```
+The index inputs live under `sources/` and `vocabularies/`. Edit them, commit,
+and run `bash qlever/deploy.sh` to rebuild.

@@ -1,3 +1,8 @@
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+
 INSERT {
   GRAPH ?g {
     ?object rdfs:label ?constructedLabel .
@@ -11,35 +16,35 @@ WHERE {
     ?production ecrm:P108_has_produced ?object .
 
     OPTIONAL {
-      SELECT DISTINCT ?object (GROUP_CONCAT(DISTINCT ?assignedLabel; separator=", ") AS ?assignmentLabel) WHERE {
+      SELECT ?object (GROUP_CONCAT(DISTINCT ?assignedLabel; separator=", ") AS ?assignmentLabel) WHERE {
         ?assignment ecrm:P41_classified ?object .
         ?assignment ecrm:P2_has_type <http://data.silknow.org/has_type_P2/1> .
         { ?assignment ecrm:P42_assigned ?assignedLabel . }
         UNION
         { ?assignment ecrm:P42_assigned ?assigned . GRAPH ?x { ?assigned skos:prefLabel ?assignedLabel . } }
         FILTER(ISLITERAL(?assignedLabel))
-      }
+      } GROUP BY ?object
     }
     OPTIONAL {
-      SELECT DISTINCT ?production (GROUP_CONCAT(DISTINCT ?timeSpanLabel; separator=", ") AS ?timeLabel) WHERE {
+      SELECT ?production (GROUP_CONCAT(DISTINCT ?timeSpanLabel; separator=", ") AS ?timeLabel) WHERE {
         ?production ecrm:P4_has_time-span/skos:prefLabel ?timeSpanLabel .
         FILTER(ISLITERAL(?timeSpanLabel) && (LANG(?timeSpanLabel) = "en" || LANG(?timeSpanLabel) = ""))
-      }
+      } GROUP BY ?production
     }
     OPTIONAL {
-      SELECT DISTINCT ?production (GROUP_CONCAT(DISTINCT ?placeLabel; separator=", ") AS ?placeLabel) WHERE {
-        ?production ecrm:P8_took_place_on_or_within/geonames:name ?placeLabel .
-        FILTER(ISLITERAL(?placeLabel))
-      }
+      SELECT ?production (GROUP_CONCAT(DISTINCT ?placeName; separator=", ") AS ?placeLabel) WHERE {
+        ?production ecrm:P8_took_place_on_or_within/geonames:name ?placeName .
+        FILTER(ISLITERAL(?placeName))
+      } GROUP BY ?production
     }
 
     BIND(
       CONCAT(
-        ?assignmentLabel,
-        IF(BOUND(?assignmentLabel) AND BOUND(?timeLabel), ", ", ""),
-        ?timeLabel,
-        IF(BOUND(?placeLabel) AND (BOUND(?assignmentLabel) OR BOUND(?timeLabel)), ", ", ""),
-        ?placeLabel
+        COALESCE(?assignmentLabel, ""),
+        IF(BOUND(?assignmentLabel) && BOUND(?timeLabel), ", ", ""),
+        COALESCE(?timeLabel, ""),
+        IF(BOUND(?placeLabel) && (BOUND(?assignmentLabel) || BOUND(?timeLabel)), ", ", ""),
+        COALESCE(?placeLabel, "")
       )
       AS ?constructedLabel
     )
